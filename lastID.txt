@@ -1,0 +1,4 @@
+last ID used is MS:1002575
+If you edit the psi-ms.obo file adding new terms please ensure your ID MANAGER PLUGIN is set
+he following DEFAULT RULE : 
+MS:$sequence(7,(lastID+1),9999999)$

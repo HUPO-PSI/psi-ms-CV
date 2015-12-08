@@ -1,0 +1,297 @@
+List of MS-related abbreviations:
+=================================
+    ABRF Association of Biomolecular Resource Facilities
+    ABSI Atomic Beam Surface Ionization
+    ABSI Appearance Energy
+    AGHIS All-Glass Heated Inlet System
+    AIF All Ion Fragmentation
+    AIMS Accurate Inclusion Mass Screening
+    AMEx Accurate Mass Exclusion
+    AMS Accelerator Mass Spectrometry
+    AMT Accurate Mass and Retention Time; Accurate Mass Tag
+    ANDI ANalytical Data Interchange protocol
+    ASAP-Ratio Automated Statistical Analysis of Protein Ratio
+    ASMS American Society for Mass Spectrometry
+    APEX Absolute Protein Expression Index
+    APCI Atmospheric Pressure Chemical Ionization
+    API Atmospheric Pressure Ionization
+    APPI Atmospheric Pressure Photo-Ionization
+    APS Active Pixel Sensor
+    ASMS American Society for Mass Spectrometry
+    AQUA Absolute QUAntification (of proteins)
+    BFP Blue Flourescent Protein
+    BIRD Blackbody Infrared Radiative Dissociation
+    BPC Base Peak Chromatogram
+    BPI Base Peak Intensity chromatogram
+    ChEBI CHemical Entities of Biological Interest
+    CA Collisional Activation
+    CAD Collisionally Activated Dissociation
+    CAI Codon Adaption Index
+    CAM CarbAmidoMethyl
+    CDA Chemical Detector Array
+    CDIT Culture Derived Isotope Tag
+    CD Cytoplasmic Domain (immunology)
+    CE-CI Charge Exchange Chemical Ionization
+    CEI Charge Exchange Ionization
+    CEM Channel Electron Multiplier
+    CEMA Channel Electron Multiplier Array
+    CF-FAB Continuous-Flow Fast Atom Bombardment
+    CI Chemical ionization
+    CID Collision Induced Dissociation
+    CODACON CODed Anode Converter
+    COFRADIC COmbined FRActional DIagonal Chromatography
+    CPAS Computational Proteomics Analysis System
+    CPTAC Clinical Proteomic Tumor Analysis Consortium
+    CPM Continuous Profile Mode
+    cps counts per second
+    CRC Collision Reaction Cell
+    CRD Charged-Residue Model
+    CRF Charge Remote Fragmentation
+    CRM Certified reference Material / Charged-Residue Model / Consecutive Reaction Monitoring
+    CSR Charge Stripping Reaction
+    CTIA Charge-TransImpediance Amplifier
+    CZE Capillary Zone Electrophoresis
+    DADI Directed Analysis of Daughter Ions
+    DAPCI Desorption Atmospheric Pressure Chemical Ionization
+    DART Direct Analysis in Real Time
+    DCI Desorption Chemical Ionization
+    DDA Data Dependent Analysis
+    DDDT Data Dependent Decision Tree (CAD, ETD)
+    DE Delayed Extraction
+    DEI Direct Electron Ionization
+    DEP Direct Exposure Probe
+    DESI Desorption ElectroSpray Ionization
+    DGMS Deutsche Gesellschaft für MassenSpektrometrie
+    DIA Data Independent Acquisition
+    DIOS Desorption Ionization On Silicon
+    DIP Direct Insertion Probe
+    DIGE DIfference Gel Electrophoresis
+    DIT Digital Ion Trap
+    DLI Direct Liquid Introduction
+    DMS Differential Mobility Spectrometry
+    DSIMS Dynamic Secondary Ion Mass Spectrometry
+    DTA Differential Thermal Analysis
+    EASI Easy Sonic Spray Ionization
+    ECD Electron Capture Dissociation
+    EDD Electron Detachment Dissociation
+    EESI Extractive ElectroSpray Ionization
+    EI Electron Ionization (also known as Electron Impact Ionization)
+    EIC Extracted Ion Current
+    ELDI Electrospray-Assisted Laser Desorption / Ionization
+    EM Electron Multiplier
+    EMA European Medicines Agency
+    emPAI exponentially modified Protein Abundance Index (10^PAI - 1)
+    EOID Electro-Optical Imaging Detector
+    ESI ElectroSpray Ionization
+    EST Expressed Sequence Tag
+    ETD Electron Transfer Dissociation
+    ETCaD Electron-Transfer Collisionally-activated Dissociation
+    EThcD Electron-Transfer/Higher-energy Collision Dissociation
+    FAB Fast Atom Bombardment
+    FACS Fluorescence Activated Cell Sorting
+    FAIMS Field Asymmetric Ion Mobility Spectrometry
+    FASP Filter-Aided Sample Preparation
+    FDR False Discovery Rate
+    FFPE Formalin-Fixed Paraffin Embedded
+    FFR Field Free Region
+    FID Flame Ionization Detector
+    FLR False Localization Rate
+    FNR False Negative Rate
+    FPC Focal Plane Camera
+    FPKM Fragments Per Kilobase of transcript per Million mapped reads
+    FPR False Positive Rate
+    FT-ICR Fourier Transform Ion Cyclotron Resonance
+    FTMS Fourier Transform Mass Spectropmetry
+    FuGE Functional Genomics Experiment
+    FWER Family-Wise Error Rate
+    FWHM Full Width at Half Maximum
+    GFP Green Flourescent Protein
+    HCD High-energy Collision-induced Dissociation; High-energy C-trap Dissociation
+    HCT High Capacity ion Trap
+    HILIC Hydrophilic interaction Chromatography
+    H-PINS Halogenated-Peptides as INternal Standards
+    HPLC High Performance (Pressure) Liquid Chromatography
+    HRM Hyper Reaction monitoring
+    HSA Human Serum Albumin
+    iBAC Intensity Based Absolute Quantification
+    ICAT Isotope Coded Affinity Tag
+    ICR Ion Cyclotron Resonance
+    ICP Inductively Coupled Plasma
+    ICPL Isotope Coded Protein Label(ing)
+    IDA Isotope Dilution Analysis
+    IDMS Isotope Dilution Mass Spectrometry
+    IEF IsoElectric Focusing
+    IEM Ion Evaporation Model
+    IMAC Immobilized Metal Affinity Chromatography
+    IMS Imaging Mass Spectrometry / Ion Mobility Spectrometry
+    IRMPD InfraRed Multi-Photon Dissociation
+    ISD In Source Decay
+    ITA Ion Trap Array
+    ITMS Ion Trap Mass Spectrometry
+    IPD Isotope Pattern Deconvolution
+    IPI International Protein Index
+    IPTL Isobaric Peptide Termini Labeling
+    IRMPD InfraRed MultiPhoton Dissociation
+    IRMS Isotope Ratio Mass Spectrometry
+    iTRAQ isobaric Tag for Relative and Absolute Quantitation
+    LAESI Laser Ablation ElectroSpray Ionization
+    LCC Liquid Chromatography Combustion
+    LCD Laser Capture Microdissection
+    LFQ Label Free Quantification
+    LID Laser Induced Dissociation
+    LIFDI Liquid Injection Field Desorption
+    LIFT Linear Flight Time / Linear Inverse Fourier Transform ?
+    LIMS Laboratory Information Management System
+    LIT Linear Ion Trap
+    LLOQ Lower Limit Of Quantification
+    LOB Limit Of Blank
+    LOD Limit Of Detection
+    LOQ Limit Of Quantification
+    LTQ Linear Trap Quadrupole
+    MALDI Matrix Assisted Laser Desorption and Ionisation
+    MATI Mass-Analyzed Threshold Ionization
+    MBSI Molecular Beam Surface Ionization
+    MCL Maximum Contaminant Level
+    MCP Micro Channel Plate
+    MeCAT Metal-Coded Affinity Tag
+    MELDI Material Enhanced Laser Desorption Ionization
+    MFCA Micromachined Faraday Cup Array
+    MIAPE Minimum Information about A Proteomics Experiment
+    MIC Multi Ion Counting
+    MIDAS (MR)Monitoring-Initiated Detection And Sequencing
+    MIKES Mass-analyzed Ion Kinetic Energy Spectrometry
+    MIPA MInimally Permutated Analogs
+    MOWSE MOlecular Weight SEarch
+    MPD Multi Photon Dissociation
+    MPF Mobile Proton Factor
+    MRM Multiple Reaction Monitoring
+    MS/MS Tandem Mass Spectrometry
+    MSE Combination of MS and MS/MS in one single run (exact mass mode), [Plumb et al., 2006]
+    MSP MicroSphere Plate
+    MudPIT MUltiDimensional Protein Identification Technology (2D-LC)
+    NALDI Nano Assisted Laser Desorption Ionization
+    NICI Negative Ion Chemical Ionization
+    NMC Number of Missed Cleavages
+    NSAF Normalized Spectral Abundance Factor
+    NSD Nozzle-Skimmer Dissociation
+    NTT Number of Tryptic Termini / Number of enzymatically Tolerable Termini
+    oa-ToF orthogonal acceleration TOF
+    OBI-WARP Ordered Bijective Interpolated WARPing (chromatographic alignment)
+    Oi value correction factor used in APEX scoring
+    OLS Ontology Look-up Service
+    OMSSA Open Mass Spectrometry Search Algorithm
+    P3 Proteotypic Peptide Profiling
+    PAGE Polyacryl Amide gel Electrophoresis
+    PAI Protein Abundance Index
+    PAR Protein Affinity Reagent
+    PATRIC Position And Time Resolved Ion Collector
+    PCER Per-Comparison Error Rate
+    PCS Peptide-Concatenated Standard
+    PDA Photo Diode Array
+    PFER Per-Family Error Rate (PCER = FWER = PFER)
+    PFF Peptide Fragment Fingerprinting
+    PFP Peptide Fragmentation Pathway
+    PICI Positive Ion Chemical Ionization
+    PICR Protein Identifier Cross-reference Service
+    PIE Pulsed Ion Extraction
+    PIT Percentage of Incorrect Target matches
+    PMF Peptide Mass Fingerprinting / Proton Mobility Factor
+    PMSS Peptide Match Score Summation
+    POI Protein Of Interest (in TDA approaches)
+    PQD Pulsed Q Collision-induced Dissociation
+    PRM Parallel Raection Monitoring
+    PSAQ Protein Standard Absolute Quantification
+    PSD Post Source Decay
+    PSI Proteomics Standards Initiative
+    PSICQUIC PSI Common Query InterfaCe
+    PSM Peptide Spectrum Match
+    PSMS Plasma Source Mass Spectrometry
+    PSP Proteomics Signature Profiling
+    PST Peptide Sequence Tag
+    PTH PhenylThioHydantoin (Edman-Abbau)
+    PTM Post Translational Modification
+    PTP ProteoTypic Peptide
+    PTR Proton Transfer Reaction
+    QconCat Quantification-conCATamere of tryptic Q-peptides
+    QET Quasi Equilibrium Theory
+    QITL Quantitation by Isobaric Terminal Labelling
+    reISD reflector mode In Source Decay
+    REMPI Resonance Enhanced Multiphoton Ionization
+    RFD RadioFlow Detection
+    RIC Reconstructed Ion Chromatogram
+    RMM Relative Molecular Mass
+    RMS Reaction Mass Spectrometry
+    ROC Receiver Operating Characteristic
+    RP-HPLC Reverse Phase-High Performance Liquid Chromatography
+    RPKM Reads Per Kilobase of transcript per Million mapped reads
+    SAM Significance Analysis of Microarrays
+    SCX Strong Cation eXchange
+    SDS Sodium Dodecyl Sulfate
+    SEC Size Exclusion Chromatography
+    SELDI Surface Enhanced Laser Desorption and Ionization
+    SFC Supercritical Fluid Chromatography
+    SFMS Sector-Field Mass Spectrometer
+    SIC Single Ion Current
+    SID Surface-Induced Dissociation
+    SID-SRM Stable Isotopic Dilution - SRM (Selected Reaction Monitoring)
+    SIDT Single Ion in Droplet Theory
+    SIFT Selected Ion Flow Tube
+    SILAC Stable Isotope Labeling with Amino acids in Cell culture
+    SILAM Stable Isotope Labeling with Amino acids in Mouse
+    SILAP Stable Isotope LAbeled Proteome
+    SIM Selected Ion Monitoring (only precursor)
+    SIMS Secondary Ion Mass Spectrometry
+    SILAP Stable Isotope Labeled Proteome
+    SILE Stable Isotope Labelling Experiment
+    SIM Single Ion Monitoring
+    SIMS Secondary Ion Mass Spectrometry
+    SIS Stable Isotope-labeled Standard peptide
+    SISCAPA Stable Isotope Standards and Capture by AntiPeptide antibodies
+    SLoMo Site Localization of Modifications
+    SNAP Sophisticated Numerical Annotation Procedure
+    SNR Signal-to-Noise Ratio
+    SNOC S-NitrosOCystein
+    SORI Sustained Off-Resonance Irradiation
+    SPC Shared Peak Count
+    SPS Shotgun Protein Sequencing
+    SPMDB Standard Protein Mix DataBase
+    SQID SeQuence IDentification (a peptide score)
+    SQMS Scanning Quadrupole Mass Spectrometry
+    SORI-CID Sustained Off-Resonance Irradiation Collision-Induced Dissociation
+    SRM Single / Selected Reaction Monitoring (precursor and product)
+    SS-MS Spark Source Mass Spectrometry
+    SSI Sonic Spray ionization
+    STED Stimulated Emission Depletion
+    STS Sequence Tagged Search
+    SWATH Sequential Windowed Aquisition of All Theoretical Ions; a DIA (Data Independent Aquisition) method; means a series of isolation windows
+    SWIFT Stored Waveform Inverse Fourier Transform
+    TAILS Terminal Amine Isotopic Labeling of Substrates
+    TAP Tandem Affinity Purification
+    TDA Target Dependent Acquisition (SRM / MRM)
+    Th 1 Thomson = 1U / 1e
+    TIC Total Ion Current / Chromatogram
+    TIMS Thermal Ionization Mass Spectrometry
+    TIQAM Targeted Identification for Quantitative Analysis by MRM
+    TLF Time Lag Focussing
+    TMT Tandem Mass Tag
+    TOF Time Of Flight
+    TOPP OpenMS Proteomic Pipeline
+    TPP Trans Proteomic Pipeline
+    TQMS Triple Quadrupole Mass Spectrometry
+    TWIG Travelling Wave Ion Guide
+    TWIMS Travelling Wave Ion Mobility Spectrometer
+    UHPLC Ultra High Pressure Liquid Chromatography
+    ULOQ Upper Limit Of Quantification
+    UPLC Ultra Performance Liquid Chromatography
+    VOC Volatile Organic Compound
+    WAX Weak Anion Exchange
+    XIC eXtracted Ion Chromatogram 
+
+Look also at the following mass spectrometry acronym lists:
+===========================================================
+Wikipedia at http://en.wikipedia.org/wiki/List_of_mass_spectrometry_acronyms
+Little encyclopedia of mass spectrometry, Uni HD at http://www.rzuser.uni-heidelberg.de/~bl5/encyclopedia.html
+Wiley (Proteomics) collection of abbreviations at http://onlinelibrary.wiley.com/doi/10.1002/pmic.201370055/pdf
+IUPAC MS terms at http://mass-spec.lsu.edu/msterms/index.php/Main_Page
+Standard definitions of terms relating to mass spectrometry at http://www.iupac.org/nc/home/projects/project-db/project-details.html?tx_wfqbe_pi1%5bproject_nr%5d=2003-056-2-500
+Definitions of terms relating to mass spectrometry (IUPAC Recommendations 2013) at http://www.mssj.jp/8507x1515.pdf

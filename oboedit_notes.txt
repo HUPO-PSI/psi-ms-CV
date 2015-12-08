@@ -1,0 +1,80 @@
+Notes on using OBO-Edit (Updated by G. Mayer July 2014, OBO-Edit version 2.3)
+=======================
+
+Before checking in psi-ms.obo, please verify the following:
+1) contains the import statements 
+2) contains the MS relationships (e.g. part_of, has_units)
+
+psi-ms.obo imports the Unit Ontology (unit.obo) and quality.obo
+via an import statement at the top of the file:
+import: http://pato.googlecode.com/svn/trunk/quality.obo
+import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
+...
+ontology: pato
+ontology: uo
+
+
+We have not figured out yet how to accomplish #1 from within OBO-Edit, so the whole header
+must be added manually after saving with OBO-Edit.
+
+To save only the MS terms from OBO-Edit:
+========================================
+1) File/Save As
+2) Select Advanced...
+3) Select "OBO_1_2" for "Output Type"
+4) + (add new "Stored adapter settings" profile)
+5) "Save path:" (with browse button) for the output psi-ms.obo file
+6) Check "Filter terms"
+7) In "Object filtering" choose -> Find terms that:"have" a:"Namespace" that:"contains" the value:"MS"
+8) check "Allow dangling parents" (allows has_units UO:xxxxxxx)  
+9) check "include is_a closure for cross-referenced terms" 
+  (allows the terms from unit.obo to be included 
+   as relationship, e.g.: has_units UO:0000166 ! parts per notation)
+10) Root selection algorithm :"GREEDY"
+11) ID Rules: "Don't write ID rules"
+12) Press Ok
+13) Once the new obo file is generated, delete the complete header (everything before the first [Term])
+    and paste the Header Template (below) with the correct information instead of the XXXXXX
+
+Notes on versioning of the CV:
+-------------------------------
+Versions of the CV will be revioned: x.y.z
+  z means no new term (editing of names or definitions or other minor changes)
+  y means new term or obsoletion
+  x means change in root level terms (impacts mapping file)
+
+
+HEADER TEMPLATE FOR COPY-PASTE (Change the XXXXXX values!)
+-----------------------------------------------------------
+format-version: 1.2
+data-version: X.XX.X
+date: DD:MM:YYYY HH:MM
+saved-by: XXXXXXXXX
+auto-generated-by: OBO-Edit 2.3
+import: http://pato.googlecode.com/svn/trunk/quality.obo
+import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
+default-namespace: MS
+namespace-id-rule: * MS:$sequence(7,0,9999999)$
+remark: namespace: MS
+remark: version: X.XX.X
+remark: release date: YYYY-MM-DD
+remark: coverage: Mass spectrometer output files and spectra interpretation
+remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
+remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
+remark: creator: Marius Kallhardt <Marius.Kallhardt <-at-> bdal.de>
+remark: creator: Eric Deutsch <edeutsch <-at-> systemsbiology.org>
+remark: creator: Fredrik Levander <fredrik.levander <-at-> immun.lth.se>
+remark: creator: Pierre-Alain Binz <pierre-alain.binz <-at-> chuv.ch>
+remark: creator: Gerhard Mayer <mayerg97 <-at-> rub.de>
+remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
+remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
+remark: This work is licensed under the Creative Commons Attribution 3.0 Unported License.
+remark: To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+ontology: pato
+ontology: uo
+
+In the dbxref lists the official "http://www.geneontology.org/cgi-bin/xrefs.cgi"
+should be used as defined in http://www.geneontology.org/cgi-bin/xrefs.cgi
+
+An online validator for the OBO format can be found at the BioPortal website:
+http://bioportal.bioontology.org/validate_ontology_file
