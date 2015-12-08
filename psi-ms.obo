@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.80.0_rc1
-date: 08:12:2015 13:35
+data-version: 3.80
+date: 08:12:2015 14:40
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,7 +8,7 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.80.0_rc1
+remark: version: 3.80.0
 remark: release date: 2015-12-08
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
