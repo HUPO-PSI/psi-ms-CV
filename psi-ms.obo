@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.80
-date: 08:12:2015 14:40
+data-version: 3.81.0
+date: 14:12:2015 16:03
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.80.0
-remark: release date: 2015-12-08
+remark: version: 3.81.0
+remark: release date: 2015-12-14
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -9346,7 +9346,7 @@ is_a: MS:1001040 ! intermediate analysis format
 id: MS:1001466
 name: MS2 format
 def: "MS2 file format for MS2 spectral data." [PMID:15317041, DOI:10.1002/rcm.1603, http://fields.scripps.edu/sequest/SQTFormat.html]
-is_a: MS:1001040 ! intermediate analysis format
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:1001467
@@ -12493,6 +12493,7 @@ is_a: MS:1000878 ! external reference identifier
 id: MS:1001922
 name: Digital Object Identifier (DOI)
 def: "DOI unique identifier of a publication." [PSI:PI, http://dx.doi.org]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 synonym: "doi" EXACT []
 is_a: MS:1000878 ! external reference identifier
 relationship: has_regexp MS:1002480 ! (10[.][0-9]\{4,\}(?:[.][0-9]+)*/(?:(?![\"&\'<>])[^ \t\\r\n\\v\\f])+)
@@ -17070,5 +17071,17 @@ is_a: MS:1000121 ! SCIEX instrument model
 [Term]
 id: MS:1002596
 name: ProLuCID
-def: "The name of the ProLuCID search engine." [PSI:PI]
+def: "The SEQUEST-like sequence search engine ProLuCID, developed in the Yates Lab at the Scripps Research Institute." [PMID:26171723]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002597
+name: MS1 format
+def: "MS1 file format for MS1 spectral data." [PMID:15317041, DOI:10.1002/rcm.1603]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002598
+name: DTASelect
+def: "Analysis software designed to reassemble the SEQUEST peptide identifications and to highlight the most significant matches." [PMID:12643522, http://fields.scripps.edu/DTASelect/]
 is_a: MS:1001456 ! analysis software
