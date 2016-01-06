@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.81.0
-date: 14:12:2015 16:03
+data-version: 3.82.0
+date: 06:01:2016 14:40
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.81.0
-remark: release date: 2015-12-14
+remark: version: 3.82.0
+remark: release date: 2016-01-06
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -17085,3 +17085,10 @@ id: MS:1002598
 name: DTASelect
 def: "Analysis software designed to reassemble the SEQUEST peptide identifications and to highlight the most significant matches." [PMID:12643522, http://fields.scripps.edu/DTASelect/]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002599
+name: splash key
+def: "The Splash, is an unique identifier for Spectra, as the InChI Key is an unique identifier for chemical compounds." [http://splash.fiehnlab.ucdavis.edu/]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1001405 ! spectrum identification result details
