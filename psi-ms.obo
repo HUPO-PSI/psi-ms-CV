@@ -17271,3 +17271,10 @@ id: MS:1002630
 name: iTRAQ reagent 121
 def: "The name of the sample labelled with the iTRAQ reagent 121." [PSI:PI]
 is_a: MS:1002622 ! iTRAQ reagent
+
+[Term]
+id: MS:1002631
+name: Electron-Transfer/Higher-Energy Collision Dissociation (EThcD)
+def: "A dissociation process combining electron-transfer and higher-energy collision dissociation (EThcD). It combines ETD (reaction time) followed by HCD (activation energy)" [PSI:MS]
+synonym: "EThcD" EXACT []
+is_a: MS:1000044 ! dissociation method
