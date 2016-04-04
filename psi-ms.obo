@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.83.0
-date: 22:03:2016 11:06
+data-version: 3.84.0
+date: 04:04:2016 16:30
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.83.0
-remark: release date: 2016-03-22
+remark: version: 3.84.0
+remark: release date: 2016-04-04
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -6648,6 +6648,7 @@ id: MS:1001031
 name: spectral library search
 def: "A search using a library of spectra." [PSI:PI]
 is_a: MS:1001080 ! search type
+is_a: MS:1002489 ! special processing
 
 [Term]
 id: MS:1001032
@@ -8978,6 +8979,7 @@ name: search tolerance plus value
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
+relationship: has_units UO:0000169 ! parts per million
 relationship: has_units UO:0000187 ! percent
 relationship: has_units UO:0000221 ! dalton
 
@@ -8987,6 +8989,7 @@ name: search tolerance minus value
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
+relationship: has_units UO:0000169 ! parts per million
 relationship: has_units UO:0000187 ! percent
 relationship: has_units UO:0000221 ! dalton
 
@@ -16197,6 +16200,7 @@ is_a: MS:1002345 ! PSM-level result details
 id: MS:1002466
 name: PeptideShaker PSM score
 def: "The probability based PeptideShaker PSM score." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 is_a: MS:1001143 ! search engine specific score for PSMs
 relationship: has_order MS:1002108 ! higher score better
@@ -16205,6 +16209,7 @@ relationship: has_order MS:1002108 ! higher score better
 id: MS:1002467
 name: PeptideShaker PSM confidence
 def: "The probability based PeptideShaker PSM confidence." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 is_a: MS:1001143 ! search engine specific score for PSMs
 relationship: has_order MS:1002108 ! higher score better
@@ -16213,6 +16218,7 @@ relationship: has_order MS:1002108 ! higher score better
 id: MS:1002468
 name: PeptideShaker peptide score
 def: "The probability based PeptideShaker peptide score." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 is_a: MS:1002358 ! search engine specific score for distinct peptides
 relationship: has_order MS:1002108 ! higher score better
@@ -16221,6 +16227,7 @@ relationship: has_order MS:1002108 ! higher score better
 id: MS:1002469
 name: PeptideShaker peptide confidence
 def: "The probability based PeptideShaker peptide confidence." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 relationship: has_order MS:1002108 ! higher score better
 
@@ -16228,6 +16235,7 @@ relationship: has_order MS:1002108 ! higher score better
 id: MS:1002470
 name: PeptideShaker protein group score
 def: "The probability based PeptideShaker protein group score." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 is_a: MS:1002368 ! search engine specific score for protein groups
 relationship: has_order MS:1002108 ! higher score better
@@ -16236,6 +16244,7 @@ relationship: has_order MS:1002108 ! higher score better
 id: MS:1002471
 name: PeptideShaker protein group confidence
 def: "The probability based PeptideShaker protein group confidence." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001153 ! search engine specific score
 relationship: has_order MS:1002108 ! higher score better
 
@@ -17271,3 +17280,105 @@ id: MS:1002630
 name: iTRAQ reagent 121
 def: "The name of the sample labelled with the iTRAQ reagent 121." [PSI:PI]
 is_a: MS:1002622 ! iTRAQ reagent
+
+[Term]
+id: MS:1002631
+name: Electron-Transfer/Higher-Energy Collision Dissociation (EThcD)
+def: "A dissociation process combining electron-transfer and higher-energy collision dissociation (EThcD). It combines ETD (reaction time) followed by HCD (activation energy)." [PSI:PI]
+synonym: "EThcD" EXACT []
+is_a: MS:1000044 ! dissociation method
+
+[Term]
+id: MS:1002632
+name: jPOST dataset identifier
+def: "Dataset identifier issued by the jPOST repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002633
+name: jPOST dataset URI
+def: "URI that allows the access to one dataset in the jPOST repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+xref: value-type:xsd\:anyURI "The allowed value-type for this CV term."
+is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002634
+name: Q Exactive Plus
+def: "Thermo Scientific Q Exactive Plus." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002635
+name: proteogenomics search
+def: "Proteogenomics search performed." [PSI:PI]
+is_a: MS:1002489 ! special processing
+
+[Term]
+id: MS:1002636
+name: proteogenomics attribute
+def: "Proteogenomics attribute." [PSI:PI]
+is_a: MS:1001105 ! peptide result details
+
+[Term]
+id: MS:1002637
+name: chromosome name
+def: "The name or number of the chromosome to which a given peptide has been mapped." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002638
+name: chromosome strand
+def: "The strand (+ or -) to which the peptide has been mapped." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002639
+name: peptide start on chromosome
+def: "The overall start position on the chromosome to which a peptide has been mapped i.e. the position of the first base of the first codon, using a zero-based counting system." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002640
+name: peptide end on chromosome
+def: "The overall end position on the chromosome to which a peptide has been mapped i.e. the position of the third base of the last codon, using a zero-based counting system." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002641
+name: peptide exon count
+def: "The number of exons to which the peptide has been mapped." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002642
+name: peptide exon nucleotide sizes
+def: "A comma separated list of the number of DNA bases within each exon to which a peptide has been mapped. Assuming standard operation of a search engine, the peptide exon sizes should sum to exactly three times the peptide length." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002643
+name: peptide start positions on chromosome
+def: "A comma separated list of start positions within exons to which the peptide has been mapped, relative to peptide-chromosome start." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002644
+name: genome reference version
+def: "The reference genome and versioning string as used for mapping. All coordinates are within this frame of reference." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002645
+name: MSDK
+def: "Mass Spectrometry Development Kit (MSDK) is a Java library of algorithms for processing of mass spectrometry data." [PSI:PI, http://msdk.github.io/]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
