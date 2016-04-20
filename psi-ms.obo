@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 3.85.0
+data-version: 3.85.1
 date: 20:04:2016 12:40
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
@@ -8,7 +8,7 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.85.0
+remark: version: 3.85.1
 remark: release date: 2016-04-20
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
@@ -16409,19 +16409,19 @@ is_a: MS:1002489 ! special processing
 id: MS:1002496
 name: group PSMs by sequence
 def: "Group PSMs by distinct peptide sequence ignoring modifications." [PSI:PI]
-is_a: MS:1002657 ! identification parameter
+is_a: MS:1002658 ! identification parameter
 
 [Term]
 id: MS:1002497
 name: group PSMs by sequence with modifications
 def: "Group PSMs by distinct peptide sequence with taking modifications into account." [PSI:PI]
-is_a: MS:1002657 ! identification parameter
+is_a: MS:1002658 ! identification parameter
 
 [Term]
 id: MS:1002498
 name: group PSMs by sequence with modifications and charge
 def: "Group PSMs by distinct peptide sequence with taking modifications and charge into account." [PSI:PI]
-is_a: MS:1002657 ! identification parameter
+is_a: MS:1002658 ! identification parameter
 
 [Term]
 id: MS:1002499
