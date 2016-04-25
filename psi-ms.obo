@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.85.2
-date: 20:04:2016 14:54
+data-version: 3.85.3
+date: 25:04:2016 16:35
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.85.2
-remark: release date: 2016-04-20
+remark: version: 3.85.3
+remark: release date: 2016-04-25
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -17368,7 +17368,7 @@ is_a: MS:1002636 ! proteogenomics attribute
 [Term]
 id: MS:1002643
 name: peptide start positions on chromosome
-def: "A comma separated list of start positions within exons to which the peptide has been mapped, relative to peptide-chromosome start." [PSI:PI]
+def: "A comma separated list of start positions within exons to which the peptide has been mapped, relative to peptide-chromosome start, assuming a zero-based counting system. The first value MUST match the value in peptide start on chromosome." [PSI:PI]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002636 ! proteogenomics attribute
 
