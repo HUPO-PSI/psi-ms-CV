@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.86.0
-date: 26:04:2016 15:15
+data-version: 3.86.1
+date: 27:04:2016 13:34
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.86.0
-remark: release date: 2016-04-26
+remark: version: 3.86.1
+remark: release date: 2016-04-27
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -6271,6 +6271,7 @@ id: MS:1000904
 name: product ion m/z delta
 def: "The difference in m/z of the predicted m/z based on the assigned product ion minus the actual observed peak m/z." [PSI:PI]
 is_a: MS:1001221 ! fragmentation information
+relationship: has_units MS:1000040 ! m/z
 
 [Term]
 id: MS:1000905
@@ -7823,6 +7824,10 @@ name: product ion intensity
 def: "The intensity of a single product ion." [PSI:PI]
 synonym: "fragment ion intensity" EXACT []
 is_a: MS:1001221 ! fragmentation information
+relationship: has_units MS:1000131 ! number of detector counts
+relationship: has_units MS:1000132 ! percent of base peak
+relationship: has_units MS:1000814 ! counts per second
+relationship: has_units MS:1000905 ! percent of base peak times 100
 
 [Term]
 id: MS:1001227
@@ -16301,7 +16306,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 [Term]
 id: MS:1002480
 name: regular expression for a digital object identifier (DOI)
-def: "(10[.][0-9]\{4,\}(?:[.][0-9]+)*/(?:(?![\"&\'<>])[^ \t\\r\n\\v\\f])+)." [PSI:PI, http://dx.doi.org/]
+def: "(10[.][0-9]\{4,\}(?:[.][0-9]+)*/(?:(?![\"&\'<>])[^ \t\\r\n\\v\\f])+)" [PSI:PI, http://dx.doi.org/]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -16458,7 +16463,7 @@ is_a: MS:1001055 ! modification parameters
 [Term]
 id: MS:1002505
 name: regular expression for modification localization scoring
-def: "([:digit:]+:[0|1]\{1\}.[:digit:]+:[:digit:]+[|]\{1\}[:digit:]+:(true|false)\{1\})" [PSI:PI]
+def: "([:digit:]+:[0|1]\{1\}.[:digit:]+[Ee]{0,1}[+-]{0,1}[:digit:]+:[:digit:]+[|]\{1\}[:digit:]+:(true|false)\{1\})" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17389,30 +17394,35 @@ relationship: part_of MS:1000577 ! raw data file
 id: MS:1002647
 name: Thermo nativeID format, combined spectra
 def: "Thermo comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
 id: MS:1002648
 name: Waters nativeID format, combined spectra
 def: "Waters comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
 id: MS:1002649
 name: WIFF nativeID format, combined spectra
 def: "WIFF comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
 id: MS:1002650
 name: Bruker/Agilent YEP nativeID format, combined spectra
 def: "Bruker/Agilent comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
 id: MS:1002651
 name: Bruker BAF nativeID format, combined spectra
 def: "Bruker BAF comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17420,6 +17430,7 @@ id: MS:1002652
 name: Bruker FID nativeID format, combined spectra
 def: "Bruker FID comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: The nativeID must be the same as the source file ID.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17427,6 +17438,7 @@ id: MS:1002653
 name: multiple peak list nativeID format, combined spectra
 def: "Comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: Used for conversion of peak list files with multiple spectra, i.e. MGF, PKL, merged DTA files. Index is the spectrum number in the file, starting from 0.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17434,6 +17446,7 @@ id: MS:1002654
 name: single peak list nativeID format, combined spectra
 def: "Comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: The nativeID must be the same as the source file ID. Used for conversion of peak list files with one spectrum per file, typically folder of PKL or DTAs, each sourceFileRef is different.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17441,6 +17454,7 @@ id: MS:1002655
 name: scan number only nativeID format, combined spectra
 def: "Comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: Used for conversion from mzXML, or DTA folder where native scan numbers can be derived.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17448,6 +17462,7 @@ id: MS:1002656
 name: spectrum identifier nativeID format, combined spectra
 def: "Comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: Used for conversion from mzData. The spectrum id attribute is referenced.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
@@ -17455,6 +17470,7 @@ id: MS:1002657
 name: mzML unique identifier, combined spectra
 def: "Comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 comment: A unique identifier of a spectrum stored in an mzML file.
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 
 [Term]
