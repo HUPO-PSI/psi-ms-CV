@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.86.1
-date: 27:04:2016 13:34
+data-version: 3.86.2
+date: 29:04:2016 11:08
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.86.1
-remark: release date: 2016-04-27
+remark: version: 3.86.2
+remark: release date: 2016-04-29
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -14524,12 +14524,20 @@ id: MS:1002225
 name: average product ion intensity
 def: "Average value of product ion intensity in a collection of identified spectra." [PSI:PI]
 is_a: MS:1001226 ! product ion intensity
+relationship: has_units MS:1000131 ! number of detector counts
+relationship: has_units MS:1000132 ! percent of base peak
+relationship: has_units MS:1000814 ! counts per second
+relationship: has_units MS:1000905 ! percent of base peak times 100
 
 [Term]
 id: MS:1002226
 name: product ion intensity standard deviation
 def: "Standard deviation of product ion intensity in a collection of identified spectra." [PSI:PI]
 is_a: MS:1001226 ! product ion intensity
+relationship: has_units MS:1000131 ! number of detector counts
+relationship: has_units MS:1000132 ! percent of base peak
+relationship: has_units MS:1000814 ! counts per second
+relationship: has_units MS:1000905 ! percent of base peak times 100
 
 [Term]
 id: MS:1002227
@@ -16463,7 +16471,7 @@ is_a: MS:1001055 ! modification parameters
 [Term]
 id: MS:1002505
 name: regular expression for modification localization scoring
-def: "([:digit:]+:[0|1]\{1\}.[:digit:]+[Ee]{0,1}[+-]{0,1}[:digit:]+:[:digit:]+[|]\{1\}[:digit:]+:(true|false)\{1\})" [PSI:PI]
+def: "([:digit:]+:[0|1]\{1\}.[:digit:]+[Ee]{0,1}[+-]{0,1}[:digit:]*:[:digit:]+[|]\{1\}[:digit:]+:(true|false)\{1\})" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -16495,8 +16503,8 @@ is_a: MS:1002508 ! cross-linking attribute
 
 [Term]
 id: MS:1002510
-name: cross-link receiver
-def: "Cross-linking receiver, assigned according to the following rules: the export software SHOULD use the following rules to choose the cross-link donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
+name: cross-link acceptor
+def: "Cross-linking acceptor, assigned according to the following rules: the export software SHOULD use the following rules to choose the cross-link donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002508 ! cross-linking attribute
 
