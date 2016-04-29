@@ -1,10 +1,10 @@
 format-version: 1.2
 data-version: 3.86.2
-date: 29:04:2016 11:08
+date: 29:04:2016 11:18
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
-import: http://pato.googlecode.com/svn/trunk/quality.obo
-import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
+import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
+import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
@@ -21,7 +21,7 @@ remark: creator: Gerhard Mayer <mayerg97 <-at-> rub.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
-remark: URL: http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo
+remark: URL: https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo
 remark: This work is licensed under the Creative Commons Attribution 3.0 Unported License.
 remark: To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 ontology: ms
