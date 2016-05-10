@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.86.2
-date: 29:04:2016 11:18
+data-version: 3.87.0
+date: 10:05:2016 14:31
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
@@ -8,8 +8,8 @@ import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontol
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.86.2
-remark: release date: 2016-04-29
+remark: version: 3.87.0
+remark: release date: 2016-05-10
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -17107,6 +17107,7 @@ id: MS:1002600
 name: PRIDE XML
 def: "Internal data and submission format of the PRIDE database." [http://ftp.pride.ebi.ac.uk/pride/resources/schema/pride/pride.xsd]
 is_a: MS:1002130 ! identification file format
+is_a: MS:1001405 ! spectrum identification result details
 
 [Term]
 id: MS:1002601
@@ -17345,9 +17346,11 @@ is_a: MS:1002636 ! proteogenomics attribute
 [Term]
 id: MS:1002639
 name: peptide start on chromosome
-def: "The overall start position on the chromosome to which a peptide has been mapped i.e. the position of the first base of the first codon, using a zero-based counting system." [PSI:PI]
+def: "OBSOLETE The overall start position on the chromosome to which a peptide has been mapped i.e. the position of the first base of the first codon, using a zero-based counting system." [PSI:PI]
+comment: This term was obsoleted because it contains redundant info contained in term MS:1002643 - peptide start positions on chromosome.
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_a: MS:1002636 ! proteogenomics attribute
+is_obsolete: true
 
 [Term]
 id: MS:1002640
@@ -17486,3 +17489,56 @@ id: MS:1002658
 name: identification parameter
 def: "Identification parameter for the search engine run." [PSI:PI]
 relationship: part_of MS:1001000 ! spectrum interpretation
+
+[Term]
+id: MS:1002659
+name: UniProtKB text sequence format
+def: "Text-based format used by UniProtKB for sequence entries." [PSI:PI]
+xref: SWO:http://edamontology.org/format_2187
+is_a: MS:1001347 ! database file formats
+
+[Term]
+id: MS:1002660
+name: UniProtKB XML sequence format
+def: "XML-based format used by UniProtKB for sequence entries." [PSI:PI]
+is_a: MS:1001347 ! database file formats
+
+[Term]
+id: MS:1002661
+name: Morpheus
+def: "Morpheus search engine." [PMID:23323968]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002662
+name: Morpheus:Morpheus score
+def: "Morpheus score for PSMs." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+is_a: MS:1001405 ! spectrum identification result details
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002663
+name: Morpheus:summed Morpheus score
+def: "Summed Morpheus score for protein groups." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002368 ! search engine specific score for protein groups
+is_a: MS:1001153 ! search engine specific score
+is_a: MS:1001147 ! protein ambiguity group result details
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002664
+name: protein interaction scores derived from cross-linking
+def: "Parent term for protein interaction scores derived from cross-linking." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002508 ! cross-linking attribute
+relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\})
+
+[Term]
+id: MS:1002665
+name: regular expression for protein interaction scores derived from cross-linking
+def: "([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\})" [PSI:PI]
+is_a: MS:1002479 ! regular expression
