@@ -1,15 +1,15 @@
 format-version: 1.2
-data-version: 3.87.0
-date: 10:05:2016 14:31
+data-version: 3.88.0
+date: 13:05:2016 11:33
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
-import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
-import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/unit.obo
+import: http://purl.obolibrary.org/obo/pato.owl
+import: http://purl.obolibrary.org/obo/uo.owl
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.87.0
-remark: release date: 2016-05-10
+remark: version: 3.88.0
+remark: release date: 2016-05-13
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -15693,6 +15693,7 @@ id: MS:1002389
 name: PIA workflow parameter
 def: "A parameter set for a single PIA analysis." [PSI:PI]
 is_a: MS:1002105 ! software specific input parameter
+is_a: MS:1001302 ! search engine specific input parameter
 
 [Term]
 id: MS:1002390
@@ -17542,3 +17543,15 @@ id: MS:1002665
 name: regular expression for protein interaction scores derived from cross-linking
 def: "([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\})" [PSI:PI]
 is_a: MS:1002479 ! regular expression
+
+[Term]
+id: MS:1002666
+name: impact II
+def: "Bruker Daltonics' impact II." [PSI:MS]
+is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
+
+[Term]
+id: MS:1002667
+name: impact HD
+def: "Bruker Daltonics' impact HD." [PSI:MS]
+is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
