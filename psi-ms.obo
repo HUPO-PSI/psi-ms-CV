@@ -1,15 +1,15 @@
 format-version: 1.2
-data-version: 3.88.0
-date: 13:05:2016 11:33
+data-version: 3.88.1
+date: 18:05:2016 16:04
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
-import: http://purl.obolibrary.org/obo/pato.owl
-import: http://purl.obolibrary.org/obo/uo.owl
+import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
+import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.88.0
-remark: release date: 2016-05-13
+remark: version: 3.88.1
+remark: release date: 2016-05-18
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
