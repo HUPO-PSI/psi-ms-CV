@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.88.1
-date: 18:05:2016 16:04
+data-version: 3.89.0
+date: 06:06:2016 11:12
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
@@ -8,8 +8,8 @@ import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontol
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.88.1
-remark: release date: 2016-05-18
+remark: version: 3.89.0
+remark: release date: 2016-06-06
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -1455,7 +1455,7 @@ is_a: MS:1000231 ! peak
 [Term]
 id: MS:1000211
 name: OBSOLETE charge number
-def: "OBSOLETE. The total charge on an ion divided by the electron charge e. OBSOLETED 2009-10-27 since this was viewed as a duplication of 00041 charge state." [PSI:MS]
+def: "OBSOLETE The total charge on an ion divided by the electron charge e. OBSOLETED 2009-10-27 since this was viewed as a duplication of 00041 charge state." [PSI:MS]
 synonym: "z" EXACT []
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_obsolete: true
@@ -2375,7 +2375,8 @@ is_obsolete: true
 [Term]
 id: MS:1000336
 name: neutral loss
-def: "The loss of an uncharged species during a rearrangement process." [PSI:MS]
+def: "The loss of an uncharged species during a rearrangement process. The value slot holds the molecular formula in Hill notation of the neutral loss molecule, see PMID: 21182243. This term must be used in conjunction with a child of the term MS:1002307 (fragmentation ion type)." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001055 ! modification parameters
 
 [Term]
@@ -8425,7 +8426,7 @@ def: "OMSSA E-value." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! search engine specific score for PSMs
 is_a: MS:1001153 ! search engine specific score
-is_a: MS:1001872 ! distinct peptide-level e-value
+is_a: MS:1002353 ! PSM-level e-value
 
 [Term]
 id: MS:1001329
@@ -8434,7 +8435,7 @@ def: "OMSSA p-value." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! search engine specific score for PSMs
 is_a: MS:1001153 ! search engine specific score
-is_a: MS:1001870 ! distinct peptide-level p-value
+is_a: MS:1002352 ! PSM-level p-value
 
 [Term]
 id: MS:1001330
@@ -8443,7 +8444,7 @@ def: "The X!Tandem expectation value." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! search engine specific score for PSMs
 is_a: MS:1001153 ! search engine specific score
-is_a: MS:1001872 ! distinct peptide-level e-value
+is_a: MS:1002353 ! PSM-level e-value
 
 [Term]
 id: MS:1001331
@@ -8893,7 +8894,7 @@ def: "The p-value of a peptide sequence match in Phenyx." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! search engine specific score for PSMs
 is_a: MS:1001153 ! search engine specific score
-is_a: MS:1001870 ! distinct peptide-level p-value
+is_a: MS:1002352 ! PSM-level p-value
 
 [Term]
 id: MS:1001397
@@ -12130,7 +12131,7 @@ id: MS:1001870
 name: distinct peptide-level p-value
 def: "Estimation of the p-value for distinct peptides once redundant identifications of the same peptide have been removed (id est multiple PSMs have been collapsed to one entry)." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
-is_a: MS:1002347 ! PSM-level identification confidence metric
+MS:1001092 ! peptide identification confidence metric
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -12146,7 +12147,7 @@ id: MS:1001872
 name: distinct peptide-level e-value
 def: "Estimation of the e-value for distinct peptides once redundant identifications of the same peptide have been removed (id est multiple PSMs have been collapsed to one entry)." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
-is_a: MS:1002347 ! PSM-level identification confidence metric
+MS:1001092 ! peptide identification confidence metric
 relationship: has_domain MS:1002306 ! value greater than zero
 
 [Term]
@@ -16131,23 +16132,29 @@ is_a: MS:1002094 ! common search engine input parameter
 [Term]
 id: MS:1002455
 name: H2O neutral loss
-def: "Neutral loss of water." [PSI:PI]
+def: "OBSOLETE Neutral loss of water." [PSI:PI]
+comment: This term was obsoleted because it should be replaced by MS:1000336 with value H2O.
 is_a: MS:1000336 ! neutral loss
 is_a: MS:1002473 ! ion series considered in search
+is_obsolete: true
 
 [Term]
 id: MS:1002456
 name: NH3 neutral loss
-def: "Neutral loss of ammonia." [PSI:PI]
+def: "OBSOLETE Neutral loss of ammonia." [PSI:PI]
+comment: This term was obsoleted because it should be replaced by MS:1000336 with value NH3.
 is_a: MS:1000336 ! neutral loss
 is_a: MS:1002473 ! ion series considered in search
+is_obsolete: true
 
 [Term]
 id: MS:1002457
 name: H3PO4 neutral loss
-def: "Neutral loss of phosphoric acid." [PSI:PI]
+def: "OBSOLETE Neutral loss of phosphoric acid." [PSI:PI]
+comment: This term was obsoleted because it should be replaced by MS:1000336 with value H3PO4.
 is_a: MS:1000336 ! neutral loss
 is_a: MS:1002473 ! ion series considered in search
+is_obsolete: true
 
 [Term]
 id: MS:1002458
@@ -17541,7 +17548,7 @@ relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[
 [Term]
 id: MS:1002665
 name: regular expression for protein interaction scores derived from cross-linking
-def: "([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\})" [PSI:PI]
+def: "([:digit:]+[.][a|b]:([:digit:]+|null):[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\})" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17555,3 +17562,49 @@ id: MS:1002667
 name: impact HD
 def: "Bruker Daltonics' impact HD." [PSI:MS]
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
+
+[Term]
+id: MS:1002668
+name: frag: iTRAQ 4plex reporter ion
+def: "Standard reporter ion for iTRAQ 4Plex. The value slot holds the integer mass of the iTRAQ 4Plex reporter ion, e.g. 114." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002307 ! fragmentation ion type
+
+[Term]
+id: MS:1002669
+name: frag: iTRAQ 8plex reporter ion
+def: "Standard reporter ion for iTRAQ 8Plex. The value slot holds the integer mass of the iTRAQ 8Plex reporter ion, e.g. 113." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002307 ! fragmentation ion type
+
+[Term]
+id: MS:1002670
+name: frag: TMT reporter ion
+def: "Standard reporter ion for TMT. The value slot holds the integer mass of the TMT reporter ion and can be suffixed with either N or C, indicating whether the mass difference is encoded at a Nitrogen or Carbon atom, e.g. 127N." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002307 ! fragmentation ion type
+
+[Term]
+id: MS:1002671
+name: frag: TMT ETD reporter ion
+def: "Standard reporter ion for TMT with ETD fragmentation. The value slot holds the integer mass of the TMT ETD reporter ion and can be suffixed with either N or C, indicating whether the mass difference is encoded at a Nitrogen or Carbon atom, e.g. 127C." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002307 ! fragmentation ion type
+
+[Term]
+id: MS:1002672
+name: no modification threshold
+def: "No statistical threshold for accepting or rejecting that a modification position." [PSI:PI]
+is_a: MS:1002555 ! PTM localization score threshold
+
+[Term]
+id: MS:1002673
+name: OpenXQuest
+def: "Cross-Linking MS search engine." [PSI:PI]
+is_a: MS:1000752 ! TOPP software
+
+[Term]
+id: MS:1002674
+name: X500R QTOF
+def: "SCIEX X500R QTOF, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
