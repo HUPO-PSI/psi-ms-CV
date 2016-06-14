@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.89.0
-date: 06:06:2016 11:12
+data-version: 3.90.0
+date: 14:06:2016 16:50
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
@@ -8,8 +8,8 @@ import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontol
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.89.0
-remark: release date: 2016-06-06
+remark: version: 3.90.0
+remark: release date: 2016-06-14
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -7965,8 +7965,6 @@ def: "Result of quality estimation: the local FDR at the current position of a s
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001092 ! peptide identification confidence metric
 is_a: MS:1001198 ! protein identification confidence metric
-relationship: has_units UO:0000166 ! parts per notation unit
-relationship: has_units UO:0000187 ! percent
 
 [Term]
 id: MS:1001251
@@ -12112,8 +12110,6 @@ name: distinct peptide-level q-value
 def: "Estimation of the q-value for distinct peptides once redundant identifications of the same peptide have been removed (id est multiple PSMs, possibly with different mass modifications, mapping to the same sequence have been collapsed to one entry)." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002484 ! peptide-level statistical threshold
-relationship: has_units UO:0000166 ! parts per notation unit
-relationship: has_units UO:0000187 ! percent
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -12122,8 +12118,6 @@ name: protein-level q-value
 def: "Estimation of the q-value for proteins." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001198 ! protein identification confidence metric
-relationship: has_units UO:0000166 ! parts per notation unit
-relationship: has_units UO:0000187 ! percent
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -15422,8 +15416,6 @@ name: PSM-level q-value
 def: "Estimation of the q-value for peptide spectrum matches." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002347 ! PSM-level identification confidence metric
-relationship: has_units UO:0000166 ! parts per notation unit
-relationship: has_units UO:0000187 ! percent
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -15576,8 +15568,6 @@ name: protein group-level q-value
 def: "Estimation of the q-value for protein groups." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002348 ! protein group-level identification confidence metric
-relationship: has_units UO:0000166 ! parts per notation unit
-relationship: has_units UO:0000187 ! percent
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -17608,3 +17598,102 @@ id: MS:1002674
 name: X500R QTOF
 def: "SCIEX X500R QTOF, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1002675
+name: cross-linking result details
+def: "This subsection describes terms which can describe details of cross-linking results." [PSI:PI]
+relationship: part_of MS:1001000 ! spectrum interpretation
+
+[Term]
+id: MS:1002676
+name: protein-pair-level global FDR
+def: "Estimation of the global false discovery rate of proteins-pairs in cross-linking experiments." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002675 ! cross-linking result details
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1002677
+name: residue-pair-level global FDR
+def: "Estimation of the global false discovery rate of residue-pairs in cross-linking experiments." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002675 ! cross-linking result details
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1002678
+name: supplemental higher energy beam-type collision-induced dissociation
+def: "A supplemental collision-induced dissociation process wherein the projectile ion has the translational energy higher than approximately 1000 eV." [PSI:MS]
+is_a: MS:1000422 ! beam-type collision-induced dissociation
+
+[Term]
+id: MS:1002679
+name: supplemental collision-induced dissociation
+def: "The dissociation of an ion after supplemental collisional excitation." [PSI:MS]
+is_a: MS:1000044 ! dissociation method
+
+[Term]
+id: MS:1002680
+name: supplemental collision energy
+def: "Energy for an ion experiencing supplemental collision with a stationary gas particle resulting in dissociation of the ion." [PSI:MS]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+is_a: MS:1000510 ! precursor activation attribute
+relationship: has_units UO:0000266 ! electronvolt
+
+[Term]
+id: MS:1002681
+name: OpenXQuest:combined score
+def: "OpenXQuest's combined score for a cross-link spectrum match." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002682
+name: OpenXQuest:xcorr xlink
+def: "OpenXQuest's cross-correlation of cross-linked ions subscore." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002683
+name: OpenXQuest:xcorr common
+def: "OpenXQuest's cross-correlation of unlinked ions subscore." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002684
+name: OpenXQuest:match-odds
+def: "OpenXQuest's match-odds subscore." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002306 ! value greater than zero
+
+[Term]
+id: MS:1002685
+name: OpenXQuest:intsum
+def: "OpenXQuest's sum of matched peak intensity subscore." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002306 ! value greater than zero
+
+[Term]
+id: MS:1002686
+name: OpenXQuest:wTIC
+def: "OpenXQuest's weighted percent of total ion current subscore." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! search engine specific score for PSMs
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
