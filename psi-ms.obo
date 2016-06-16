@@ -1,15 +1,15 @@
 format-version: 1.2
-data-version: 3.90.1
-date: 15:06:2016 14:39
+data-version: 3.90.2
+date: 16:06:2016 08:36
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
-import: https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
-import: https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/unit.obo
+import: http://www.berkeleybop.org/ontologies/pato/pato.obo
+import: http://www.berkeleybop.org/ontologies/uo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.90.1
-remark: release date: 2016-06-15
+remark: version: 3.90.2
+remark: release date: 2016-06-16
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -12125,7 +12125,7 @@ id: MS:1001870
 name: distinct peptide-level p-value
 def: "Estimation of the p-value for distinct peptides once redundant identifications of the same peptide have been removed (id est multiple PSMs have been collapsed to one entry)." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
-MS:1001092 ! peptide identification confidence metric
+is_a: MS:1001092 ! peptide identification confidence metric
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 
 [Term]
@@ -12141,7 +12141,7 @@ id: MS:1001872
 name: distinct peptide-level e-value
 def: "Estimation of the e-value for distinct peptides once redundant identifications of the same peptide have been removed (id est multiple PSMs have been collapsed to one entry)." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
-MS:1001092 ! peptide identification confidence metric
+is_a: MS:1001092 ! peptide identification confidence metric
 relationship: has_domain MS:1002306 ! value greater than zero
 
 [Term]
