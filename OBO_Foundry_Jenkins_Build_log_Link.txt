@@ -1,0 +1,1 @@
+https://build.berkeleybop.org/job/simple-build-obo-all/lastBuild/consoleFull
