@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.0
-date: 30:06:2016 08:57
+data-version: 4.0.1
+date: 15:07:2016 14:16
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://www.berkeleybop.org/ontologies/pato/pato.obo
@@ -8,8 +8,8 @@ import: http://www.berkeleybop.org/ontologies/uo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 4.0.0
-remark: release date: 2016-06-30
+remark: version: 4.0.1
+remark: release date: 2016-07-15
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -6511,7 +6511,6 @@ id: MS:1001010
 name: de novo search
 def: "A de novo sequencing search (without database)." [PSI:PI]
 is_a: MS:1001080 ! search type
-is_a: MS:1002489 ! special processing
 
 [Term]
 id: MS:1001011
@@ -6648,7 +6647,6 @@ id: MS:1001031
 name: spectral library search
 def: "A search using a library of spectra." [PSI:PI]
 is_a: MS:1001080 ! search type
-is_a: MS:1002489 ! special processing
 
 [Term]
 id: MS:1001032
@@ -9265,7 +9263,6 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1001460
 name: unknown modification
 def: "This term should be given if the modification was unknown." [PSI:PI]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001471 ! peptide modification details
 
 [Term]
