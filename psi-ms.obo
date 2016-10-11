@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.1
-date: 15:07:2016 14:16
+data-version: 4.0.2
+date: 11:10:2016 14:28
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://www.berkeleybop.org/ontologies/pato/pato.obo
@@ -8,8 +8,8 @@ import: http://www.berkeleybop.org/ontologies/uo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 4.0.1
-remark: release date: 2016-07-15
+remark: version: 4.0.2
+remark: release date: 2016-10-11
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -17465,15 +17465,15 @@ relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[
 
 [Term]
 id: MS:1002678
-name: supplemental higher energy beam-type collision-induced dissociation
-def: "A supplemental collision-induced dissociation process wherein the projectile ion has the translational energy higher than approximately 1000 eV." [PSI:MS]
+name: supplemental beam-type collision-induced dissociation
+def: "A supplemental collision-induced dissociation process that occurs in a beam-type collision cell in addition to another primary type of dissociation." [PSI:MS]
 is_a: MS:1000422 ! beam-type collision-induced dissociation
 
 [Term]
 id: MS:1002679
 name: supplemental collision-induced dissociation
 def: "The dissociation of an ion after supplemental collisional excitation." [PSI:MS]
-is_a: MS:1000044 ! dissociation method
+is_a: MS:1000133 ! collision-induced dissociation
 
 [Term]
 id: MS:1002680
@@ -17654,3 +17654,54 @@ name: protein group-level result list statistic
 def: "Attrbiute of an entire list of protein groups." [PSI:PI]
 is_a: MS:1002405 ! protein group-level result list attribute
 
+[Term]
+id: MS:1002719
+name: Pegasus BT
+def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1001800 ! LECO instrument model
+
+[Term]
+id: MS:1002720
+name: MSPathFinder
+def: "PNNL top-down/bottom-up analysis software for identifying peptides and proteoforms in fragmentation mass spectra." [PSI:PI]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002721
+name: MSPathFinder:SpecEValue
+def: "MSPathFinder spectral E-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002353 ! PSM-level e-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1002722
+name: MSPathFinder:EValue
+def: "MSPathFinder E-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002353 ! PSM-level e-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1002723
+name: MSPathFinder:QValue
+def: "MSPathFinder Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002354 ! PSM-level q-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002724
+name: MSPathFinder:PepQValue
+def: "MSPathFinder peptide-level Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002725
+name: MSPathFinder:RawScore
+def: "MSPathFinder raw score." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
