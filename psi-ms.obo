@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.2
-date: 11:10:2016 14:28
+data-version: 4.0.3
+date: 24:10:2016 14:43
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://www.berkeleybop.org/ontologies/pato/pato.obo
@@ -8,8 +8,8 @@ import: http://www.berkeleybop.org/ontologies/uo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 4.0.2
-remark: release date: 2016-10-11
+remark: version: 4.0.3
+remark: release date: 2016-10-24
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -1070,7 +1070,7 @@ is_a: MS:1001534 ! Bruker Daltonics flex series
 [Term]
 id: MS:1000150
 name: Auto Spec Ultima NT
-def: "Waters AutoSpec Ultima NT MS." [PSI:MS]
+def: "Waters magnetic sector based AutoSpec Ultima NT MS." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -1304,7 +1304,7 @@ is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000189
-name: Q-Tof ultima
+name: Q-Tof Ultima
 def: "Waters oa-ToF based Q-Tof Ultima." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
@@ -1317,13 +1317,13 @@ is_a: MS:1000121 ! SCIEX instrument model
 [Term]
 id: MS:1000191
 name: quattro micro
-def: "Waters oa-ToF based micro." [PSI:MS]
+def: "Waters (triple) quadrupole based micro." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000192
-name: Quattro UItima
-def: "Waters oa-ToF based Ultima." [PSI:MS]
+name: Quattro Ultima
+def: "Waters (triple) quadrupole based Ultima." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -11385,8 +11385,8 @@ is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001767
-name: nanoACQUITY UPLC System with Technology
-def: "Waters LC-system nanoACQUITY UPLC System with Technology." [PSI:MS]
+name: nanoACQUITY UPLC System with 1D Technology
+def: "Waters LC-system nanoACQUITY UPLC System with 1D Technology." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -11518,7 +11518,7 @@ is_a: MS:1000126 ! Waters instrument model
 [Term]
 id: MS:1001789
 name: Quattro micro GC
-def: "Waters quadrupole based Quattro micro GC." [PSI:MS]
+def: "Waters (triple) quadrupole based Quattro micro GC." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -11556,8 +11556,8 @@ is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1001796
-name: Unify
-def: "Waters Unify software for liquid chromatography and mass spectrometry acquisition." [PSI:MS]
+name: UNIFY
+def: "Waters UNIFY software for liquid chromatography and mass spectrometry acquisition." [PSI:MS]
 is_a: MS:1000694 ! Waters software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
@@ -14766,7 +14766,7 @@ is_a: MS:1000126 ! Waters instrument model
 [Term]
 id: MS:1002277
 name: AutoSpec Premier
-def: "Waters AutoSpec Premier." [PSI:MS]
+def: "Waters AutoSpec Premier magnetic sector instrument." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -17705,3 +17705,40 @@ name: MSPathFinder:RawScore
 def: "MSPathFinder raw score." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002726
+name: SYNAPT G2-Si
+def: "Waters Corporation SYNAPT G2-Si orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002727
+name: MALDI SYNAPT G2-Si
+def: "Waters Corporation MALDI SYNAPT G2-Si orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002728
+name: Vion IMS QTof
+def: "Waters Corporation Vion IMS QTof orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002729
+name: Xevo G2 XS Tof
+def: "Waters Corporation Xevo G2 XS Tof orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002730
+name: Xevo TQ-XS
+def: "Waters Corporation Xevo TQ-XS triple quadrupole mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002731
+name: Xevo TQ-S micro
+def: "Waters Corporation Xevo TQ-S micro triple quadrupole mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
