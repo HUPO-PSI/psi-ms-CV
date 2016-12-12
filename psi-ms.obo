@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.4
-date: 16:11:2016 13:39
+data-version: 4.0.5
+date: 12:12:2016 13:18
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://www.berkeleybop.org/ontologies/pato/pato.obo
@@ -8,8 +8,8 @@ import: http://www.berkeleybop.org/ontologies/uo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 4.0.4
-remark: release date: 2016-11-16
+remark: version: 4.0.5
+remark: release date: 2016-12-12
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -930,7 +930,6 @@ is_a: MS:1000525 ! spectrum representation
 id: MS:1000129
 name: negative scan
 def: "Polarity of the scan is negative." [PSI:MS]
-is_a: PATO:0002186 ! polarity
 is_a: MS:1000465 ! scan polarity
 is_a: MS:1000808 ! chromatogram attribute
 
@@ -938,7 +937,6 @@ is_a: MS:1000808 ! chromatogram attribute
 id: MS:1000130
 name: positive scan
 def: "Polarity of the scan is positive." [PSI:MS]
-is_a: PATO:0002186 ! polarity
 is_a: MS:1000465 ! scan polarity
 is_a: MS:1000808 ! chromatogram attribute
 
@@ -16132,6 +16130,7 @@ name: ion mobility drift time
 def: "Drift time of an ion or spectrum of ions as measured in an ion mobility mass spectrometer. This time might refer to the central value of a bin into which all ions within a narrow range of drift time have been aggregated." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1000503 ! scan attribute
 relationship: has_units UO:0000028 ! millisecond
 
 [Term]
