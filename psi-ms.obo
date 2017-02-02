@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.7
-date: 30:01:2017 16:30
+data-version: 4.0.8
+date: 02:02:2017 13:55
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -17788,3 +17788,15 @@ id: MS:1002739
 name: protein group-level quantification datatype
 def: "The data type of the value reported in a QuantLayer for a protein group." [PSI:PI]
 is_a: MS:1001805 ! quantification datatype
+
+[Term]
+id: MS:1002740
+name: unmapped peptide
+def: "Within the context of a proteogenomics approach, a peptide sequence that has not been mapped to a genomic location." [PSI:PI]
+is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002741
+name: unmapped protein
+def: "Within the context of a proteogenomics approach, a protein sequence that has not been mapped to a genomic location." [PSI:PI]
+is_a: MS:1002636 ! proteogenomics attribute
