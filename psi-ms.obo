@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.8
-date: 02:02:2017 13:55
+data-version: 4.0.9
+date: 28:03:2017 09:20
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -14981,19 +14981,19 @@ relationship: has_order MS:1002108 ! higher score better
 [Term]
 id: MS:1002312
 name: MS-Numpress linear prediction compression
-def: "Compression using MS-Numpress linear prediction compression." [https://github.com/fickludd/ms-numpress]
+def: "Compression using MS-Numpress linear prediction compression." [https://github.com/ms-numpress/ms-numpress]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1002313
 name: MS-Numpress positive integer compression
-def: "Compression using MS-Numpress positive integer compression." [https://github.com/fickludd/ms-numpress]
+def: "Compression using MS-Numpress positive integer compression." [https://github.com/ms-numpress/ms-numpress]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1002314
 name: MS-Numpress short logged float compression
-def: "Compression using MS-Numpress short logged float compression." [https://github.com/fickludd/ms-numpress]
+def: "Compression using MS-Numpress short logged float compression." [https://github.com/ms-numpress/ms-numpress]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
@@ -17800,3 +17800,100 @@ id: MS:1002741
 name: unmapped protein
 def: "Within the context of a proteogenomics approach, a protein sequence that has not been mapped to a genomic location." [PSI:PI]
 is_a: MS:1002636 ! proteogenomics attribute
+
+[Term]
+id: MS:1002742
+name: noise array
+def: "A data array of noise values." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1000513 ! binary data array
+
+[Term]
+id: MS:1002743
+name: sampled noise m/z array
+def: "A data array of parallel, independent m/z values for a sampling of noise across a spectrum (typically much smaller than MS:1000514, the m/z array)." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1000513 ! binary data array
+relationship: has_units MS:1000040 ! m/z 
+
+[Term]
+id: MS:1002744
+name: sampled noise intensity array
+def: "A data array of intensity values for the amplitude of noise variation superposed on the baseline (MS:1002745) across a spectrum (for use with MS:1002743, sampled noise m/z array)." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1000513 ! binary data array
+relationship: has_units MS:1000131 ! number of detector counts
+
+[Term]
+id: MS:1002745
+name: sampled noise baseline array
+def: "A data array of baseline intensity values (the intensity in the absence of analytes) for a sampling of noise across a spectrum (for use with MS:1002743, sampled noise m/z array)." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1000513 ! binary data array
+
+[Term]
+id: MS:1002746
+name: MS-Numpress linear prediction compression followed by zlib compression
+def: "Compression using MS-Numpress linear prediction compression and zlib." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1002747
+name: MS-Numpress positive integer compression followed by zlib compression
+def: "Compression using MS-Numpress positive integer compression and zlib." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1002748
+name: MS-Numpress short logged float compression followed by zlib compression
+def: "Compression using MS-Numpress short logged float compression and zlib." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1002749
+name: Mascot:IntegratedSpectralLibrarySearch
+def: "Means that Mascot has integrated the search results of database and spectral library search into a single data set." [PSI:PI]
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1002095 ! Mascot input parameter
+
+[Term]
+id: MS:1002750
+name: NIST MSPepSearch
+def: "Search tool of the NIST (National Institute of Standrads and Technology) for spectral library searches." [PSI:PI]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002751
+name: NIST MSP format
+def: "MSP text format defined by the NIST." [PSI:PI]
+is_a: MS:1001347 ! database file formats
+
+[Term]
+id: MS:1002752
+name: database type spectral library
+def: "Database containing spectra." [PSI:PI]
+is_a: MS:1001073 ! database type
+
+[Term]
+id: MS:1002753
+name: value between 0 and 1000 inclusive
+def: "Value range for scores." [PSI:PI]
+is_a: MS:1002304 ! domain range
+
+[Term]
+id: MS:1002754
+name: MSPepSearch:score
+def: "MSPepSearch score (0 for entirely dissimilar and 1000 for identical observed spectrum and library spectrum." [PSI:PI]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002753 ! value between 0 and 1000 inclusive
+
+[Term]
+id: MS:1002755
+name: combined ms-ms + spectral library search
+def: "A combined MS2 (with fragment ions) and spectral library search." [PSI:PI]
+is_a: MS:1001080 ! search type
