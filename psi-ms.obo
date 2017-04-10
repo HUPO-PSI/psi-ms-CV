@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.10
-date: 31:03:2017 10:14
+data-version: 4.0.11
+date: 10:04:2017 10:10
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -11813,7 +11813,8 @@ is_a: MS:1001833 ! quantitation analysis summary
 [Term]
 id: MS:1001837
 name: iTRAQ quantitation analysis
-def: "Quantification analysis using the SCIEX iTRAQ isobaric labelling workflow, wherein 2-8 reporter ions are measured in MS2 spectra near 114 m/z." [PSI:PI]
+def: "Quantification analysis using the SCIEX amine-reactive isobaric tags for relative and absolute quantification (iTRAQ) labelling workflow, wherein 2-8 reporter ions are measured in MS2 spectra near in the 114-121 m/z range." [PSI:PI, PMID:15385600]
+is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -13011,7 +13012,7 @@ is_a: MS:1001833 ! quantitation analysis summary
 [Term]
 id: MS:1002010
 name: TMT quantitation analysis
-def: "Quantitation analysis using the Thermo Fisher tandem mass tag (TMT) labelling workflow." [PSI:PI]
+def: "Quantitation analysis using the Thermo Fisher amine-reactive tandem mass tag (TMT) labelling workflow, wherein 2-10 reporter ions are measured in MS2 spectra in the 126-131 m/z." [PSI:PI, PMID:12713048]
 is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
@@ -14307,7 +14308,8 @@ is_a: MS:1001861 ! quantification data processing
 [Term]
 id: MS:1002212
 name: IPTL quantitation analysis
-def: "Quantification analysis using a labelling strategy where both peptide termini are labelled so that the peptides from different labelling schema are isobaric." [PSI:PI]
+def: "Quantification analysis using a labelling strategy where both peptide termini are labelled so that the peptides from different labelling schema are isobaric." [PSI:PI, PMID:19655813]
+is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -17036,7 +17038,7 @@ is_a: MS:1002611 ! SILAC reagent
 [Term]
 id: MS:1002615
 name: TMT reagent
-def: "Tandem mass tag reagent." [PSI:PI]
+def: "Tandem mass tag reagent used in TMT, glycoTMT, iodoTMT, aminoxyTMT or hydrazideTMT isobaric labeling." [PSI:PI]
 is_a: MS:1002602 ! quantification reagent
 
 [Term]
@@ -17078,7 +17080,7 @@ is_a: MS:1002615 ! TMT reagent
 [Term]
 id: MS:1002622
 name: iTRAQ reagent
-def: "Isobaric tag for relative and absolute quantitation reagent." [PSI:PI]
+def: "Isobaric tag for relative and absolute quantitation (iTRAQ or iTRAQH) reagent." [PSI:PI]
 is_a: MS:1002602 ! quantification reagent
 
 [Term]
@@ -17897,3 +17899,172 @@ id: MS:1002755
 name: combined ms-ms + spectral library search
 def: "A combined MS2 (with fragment ions) and spectral library search." [PSI:PI]
 is_a: MS:1001080 ! search type
+
+[Term]
+id: MS:1002756
+name: iodoTMT quantitation analysis
+def: "Quantitation analysis using the Thermo Fisher sulfhydryl-reactive iodo tandem mass tag (iodoTMT) labelling workflow." [PSI:PI, PMID:24926564]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002757
+name: glyco-TMT quantitation analysis
+def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive glyco-tandem mass tag (glyco-TMT) labelling workflow." [PSI:PI, PMID:22455665]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002758
+name: aminoxyTMT quantitation analysis
+def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive aminoxy tandem mass tag (aminoxyTMT) labelling workflow." [PSI:PI, PMID:25337643]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002759
+name: hydrazideTMT quantitation analysis
+def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive hydrazide tandem mass tag (hydrazide-TMT) labelling workflow." [PSI:PI, PMID:25337643]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002760
+name: iTRAQH quantitation analysis
+def: "Quantification analysis using the carbonyl-reactive isobaric tags for relative and absolute quantification hydrazide (iTRAQH) labelling workflow." [PSI:PI, PMID:22926130]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002761
+name: DiART quantitation analysis
+def: "Quantification analysis using the amine-reactive deuterium isobaric amine reactive tag (DiART) labelling workflow." [PSI:PI, PMID:20715779]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002762
+name: DiLeu quantitation analysis
+def: "Quantification analysis using the amine-reactive dimethyl leucine (DiLeu) tag labelling workflow." [PSI:PI, PMID:20715779]
+is_a: MS:1001833 ! quantitation analysis summary
+is_a: MS:1002009 ! isobaric label quantitation analysis
+
+[Term]
+id: MS:1002763
+name: TMT reagent 127N
+def: "The name of the sample labelled with the TMT reagent 127N." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002764
+name: TMT reagent 127C
+def: "The name of the sample labelled with the TMT reagent 127C." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002765
+name: TMT reagent 128N
+def: "The name of the sample labelled with the TMT reagent 128N." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002766
+name: TMT reagent 128C
+def: "The name of the sample labelled with the TMT reagent 128C." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002767
+name: TMT reagent 129N
+def: "The name of the sample labelled with the TMT reagent 129N." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002768
+name: TMT reagent 129C
+def: "The name of the sample labelled with the TMT reagent 129C." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002769
+name: TMT reagent 130N
+def: "The name of the sample labelled with the TMT reagent 130N." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002770
+name: TMT reagent 130C
+def: "The name of the sample labelled with the TMT reagent 130C." [PSI:PI]
+is_a: MS:1002615 ! TMT reagent
+
+[Term]
+id: MS:1002771
+name: DiART reagent
+def: "Deuterium isobaric amine reactive tag labeling reagent." [PSI:PI]
+is_a: MS:1002602 ! quantification reagent
+
+[Term]
+id: MS:1002772
+name: DiART reagent 114
+def: "The name of the sample labelled with the DiART reagent 114." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002773
+name: DiART reagent 115
+def: "The name of the sample labelled with the DiART reagent 115." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002774
+name: DiART reagent 116
+def: "The name of the sample labelled with the DiART reagent 116." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002775
+name: DiART reagent 117
+def: "The name of the sample labelled with the DiART reagent 117." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002776
+name: DiART reagent 118
+def: "The name of the sample labelled with the DiART reagent 118." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002777
+name: DiART reagent 119
+def: "The name of the sample labelled with the DiART reagent 119." [PSI:PI]
+is_a: MS:1002771 ! DiART reagent
+
+[Term]
+id: MS:1002778
+name: DiLeu reagent
+def: "Dimethyl leucine labeling reagent." [PSI:PI]
+is_a: MS:1002602 ! quantification reagent
+
+[Term]
+id: MS:1002779
+name: DiLeu reagent 115
+def: "The name of the sample labelled with the DiLeu reagent 115." [PSI:PI]
+is_a: MS:1002778 ! DiLeu reagent
+
+[Term]
+id: MS:1002780
+name: DiLeu reagent 116
+def: "The name of the sample labelled with the DiLeu reagent 116." [PSI:PI]
+is_a: MS:1002778 ! DiLeu reagent
+
+[Term]
+id: MS:1002781
+name: DiLeu reagent 117
+def: "The name of the sample labelled with the DiLeu reagent 117." [PSI:PI]
+is_a: MS:1002778 ! DiLeu reagent
+
+[Term]
+id: MS:1002782
+name: DiLeu reagent 118
+def: "The name of the sample labelled with the DiLeu reagent 118." [PSI:PI]
+is_a: MS:1002778 ! DiLeu reagent
