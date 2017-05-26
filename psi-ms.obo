@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.11
-date: 10:04:2017 10:10
+data-version: 4.0.12
+date: 26:05:2017 15:45
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -3258,8 +3258,8 @@ is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000469
-name: 6120 Quadrupole LC/MS
-def: "The 6120 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers. 6120 quadrupole mass spectrometer has m/z range of 10-1500, 2500 u/s scan speed and utilizes multiple signal acquisition." [PSI:MS]
+name: 6120A Quadrupole LC/MS
+def: "The 6120A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers. 6120 quadrupole mass spectrometer has m/z range of 10-1500, 2500 u/s scan speed and utilizes multiple signal acquisition." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -4689,8 +4689,8 @@ is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000677
-name: 6520 Quadrupole Time-of-Flight LC/MS
-def: "The 6520 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 26,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
+name: 6520A Quadrupole Time-of-Flight LC/MS
+def: "The 6520A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 26,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -18068,3 +18068,142 @@ id: MS:1002782
 name: DiLeu reagent 118
 def: "The name of the sample labelled with the DiLeu reagent 118." [PSI:PI]
 is_a: MS:1002778 ! DiLeu reagent
+
+[Term]
+id: MS:1002783
+name: 6550 iFunnel Q-TOF LC/MS
+def: "The 6550 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002784
+name: 6550A iFunnel Q-TOF LC/MS
+def: "The 6550A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002785
+name: 6520B Q-TOF LC/MS
+def: "The 6520B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002786
+name: 6530A Q-TOF LC/MS
+def: "The 6530A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002787
+name: 6530B Q-TOF LC/MS
+def: "The 6530B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002788
+name: 6538 Q-TOF LC/MS
+def: "The 6538 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002789
+name: 6540 Q-TOF LC/MS
+def: "The 6540 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002790
+name: 6542 Q-TOF LC/MS
+def: "The 6542 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002791
+name: 6545 Q-TOF LC/MS
+def: "The 6545 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002792
+name: 6560 Q-TOF LC/MS
+def: "The 6560 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002793
+name: 6570 Q-TOF LC/MS
+def: "The 6570 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002794
+name: 6120B Quadrupole LC/MS
+def: "The 6120B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002795
+name: 6150 Quadrupole LC/MS
+def: "The 6150 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002796
+name: 6224 Time-of-Flight LC/MS
+def: "The 6224 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002797
+name: 6230A Time-of-Flight LC/MS
+def: "The 6230A Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002798
+name: 6230B Time-of-Flight LC/MS
+def: "The 6230B Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002799
+name: 6430 Triple Quadrupole LC/MS
+def: "The 6430 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002800
+name: 6495A Triple Quadrupole LC/MS
+def: "The 6495A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002801
+name: 6495B Triple Quadrupole LC/MS
+def: "The 6495B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002802
+name: 7000A Triple Quadrupole GC/MS
+def: "The 7000A Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002803
+name: 7000B Triple Quadrupole GC/MS
+def: "The 7000B Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002804
+name: 7800 Quadrupole ICP-MS
+def: "The 7800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument combined with a Agilent quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1002805
+name: 8800 Triple Quadrupole ICP-MS
+def: "The 8800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument combined with a Agilent quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
