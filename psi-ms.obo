@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.15
-date: 18:09:2017 12:33
+data-version: 4.0.16
+date: 06:10:2017 16:34
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18398,3 +18398,10 @@ id: MS:1002833
 name: alternating polarity mode
 def: "Polarities of the scans of a run are alternating, i.e. both positive and negative mode scans are acquired." [PSI:PI]
 is_a: MS:1000857 ! run attribute
+
+[Term]
+id: MS:1002834
+name: ProteomeDiscoverer:Delta Score
+def: "The Delta Score reported by Proteome Discoverer version 2." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
