@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.16
-date: 06:10:2017 16:34
+data-version: 4.0.17
+date: 13:10:2017 11:30
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18405,3 +18405,23 @@ name: ProteomeDiscoverer:Delta Score
 def: "The Delta Score reported by Proteome Discoverer version 2." [PSI:PI]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002835
+name: LTQ Orbitrap Classic
+def: "Thermo Fisher Scientific LTQ Orbitrap Classic." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002836
+name: iProX dataset identifier
+def: "Dataset identifier issued by the iProX repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002837
+name: iProX dataset URI
+def: "URI that allows the access to one dataset in the iProX repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+xref: value-type:xsd\:anyURI "The allowed value-type for this CV term."
+is_a: MS:1000878 ! external reference identifier
