@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.17
-date: 13:10:2017 11:30
+data-version: 4.0.18
+date: 14:11:2017 15:49
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -6084,7 +6084,7 @@ relationship: has_units UO:0000218 ! volt
 id: MS:1000878
 name: external reference identifier
 def: "An identifier/accession number to an external reference database." [PSI:MS]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+is_a: MS:1002840 ! external reference data
 
 [Term]
 id: MS:1000879
@@ -12415,7 +12415,7 @@ id: MS:1001923
 name: external reference keyword
 def: "Free text attribute that can enrich the information about an entity." [PSI:PI]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000878 ! external reference identifier
+is_a: MS:1002840 ! external reference data
 
 [Term]
 id: MS:1001924
@@ -18425,3 +18425,44 @@ name: iProX dataset URI
 def: "URI that allows the access to one dataset in the iProX repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
 xref: value-type:xsd\:anyURI "The allowed value-type for this CV term."
 is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002838
+name: mzMLb format
+def: "mzMLb file format, mzML encapsulated within HDF5." [PSI:PI, https://github.com/biospi/mzmlb]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002839
+name: Conversion to mzMLb
+def: "Conversion of a file format to Proteomics Standards Initiative mzMLb file format." [PSI:PI]
+is_a: MS:1000530 ! file format conversion
+
+[Term]
+id: MS:1002840
+name: external reference data
+def: "Data belonging to an external reference." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1002841
+name: external HDF5 dataset
+def: "The HDF5 dataset location containing the binary data, relative to the dataset containing the mzML. Also indicates that there is no data in the <binary> section of the BinaryDataArray." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002840 ! external reference data
+
+[Term]
+id: MS:1002842
+name: external offset
+def: "The position in the external data where the array begins." [PSI:PI]
+xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
+relationship: has_units UO:0000189 ! Count
+is_a: MS:1002840 ! external reference data
+
+[Term]
+id: MS:1002843
+name: external array length
+def: "Describes how many fields an array contains." [PSI:PI]
+xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
+relationship: has_units UO:0000189 ! Count
+is_a: MS:1002840 ! external reference data
