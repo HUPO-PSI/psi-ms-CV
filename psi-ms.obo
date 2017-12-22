@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.0.19
-date: 22:12:2017 14:19
+data-version: 4.1.0
+date: 22:12:2017 16:28
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18473,6 +18473,7 @@ is_a: MS:1002840 ! external reference data
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format Controlled Vocabulary term." [PSI:PEFF]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: PEFF:0000002
