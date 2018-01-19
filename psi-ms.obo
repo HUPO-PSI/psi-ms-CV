@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.0
-date: 22:12:2017 16:28
+data-version: 4.1.1
+date: 19:01:2018 13:18
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18468,6 +18468,169 @@ def: "Describes how many fields an array contains." [PSI:PI]
 xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
 relationship: has_units UO:0000189 ! Count
 is_a: MS:1002840 ! external reference data
+
+[Term]
+id: MS:1002844
+name: Experiment additional parameter
+def: "Root node for terms relating to the description of an Experiment in relation to the PRIDE-XML element ExperimentCollection/Experiment/additional/cvParam." [PSI:PI]
+is_a: MS:1001458 ! spectrum generation information
+
+[Term]
+id: MS:1002845
+name: Associated file URI
+def: "URI of one external file associated to the PRIDE experiment (maybe through a PX submission)." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002846
+name: Associated raw file URI
+def: "URI of one raw data file associated to the PRIDE experiment (maybe through a PX submission)." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002847
+name: ProteomeCentral dataset URI
+def: "URI associated to one PX submission in ProteomeCentral." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002848
+name: Result file URI
+def: "URI of one file labeled as 'Result', associated to one PX submission." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002849
+name: Search engine output file URI
+def: "URI of one search engine output file associated to one PX submission." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002850
+name: Peak list file URI
+def: "URI of one of one search engine output file associated to one PX submission." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002851
+name: Other type file URI
+def: "URI of one file labeled as 'Other', associated to one PX submission." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002852
+name: Dataset FTP location
+def: "FTP location of one entire PX data set." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002853
+name: Dataset with no associated published manuscript
+def: "A dataset which does not have an associated published manuscript." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002854
+name: Peer-reviewed dataset
+def: "Dataset has been peer-reviewed somehow." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002855
+name: Non peer-reviewed dataset
+def: "Dataset that has not been peer-reviewed by any means." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002856
+name: Supported dataset by repository
+def: "The PX dataset is supported by and is available through the submission repository." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002857
+name: Unsupported dataset by repository
+def: "The PX dataset is not fully supported by the submission repository." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002858
+name: Dataset with its publication pending
+def: "A dataset which has an associated manuscript pending for publication." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002859
+name: Additional associated raw file URI
+def: "Additional URI of one raw data file associated to the PRIDE experiment (maybe through a PX submission). The URI is provided via an additional resource to PRIDE." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002860
+name: Gel image file URI
+def: "URI of one gel image file associated to one PX submission." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002845 ! Associated file URI
+
+[Term]
+id: MS:1002861
+name: Reprocessed complete dataset
+def: "All the raw files included in the original dataset (or group of original datasets) have been reanalysed." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002862
+name: Reprocessed subset dataset
+def: "A subset of the raw files included in the original dataset (or group of original datasets) has been reanalysed." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002863
+name: Data derived from previous dataset
+def: "One dataset is a reanalysis of previously published data." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002864
+name: No PTMs are included in the dataset
+def: "No post-translational-modifications are been included in the identified peptides of one dataset." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002865
+name: Accepted manuscript
+def: "A dataset has one associated manuscript, which has been accepted but no PubMedID is available yet." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002866
+name: Reference
+def: "Literature reference associated with one dataset (including the authors, title, year and journal details). The value field can be used for the PubMedID, or to specify if one manuscript is just submitted or accepted, but it does not have a PubMedID yet." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002867
+name: Experimental information has been refined since this experiment was originally made publicly available
+def: "This means that the experimental information available has been improved, for instance precursor charges were added." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
+
+[Term]
+id: MS:1002868
+name: Original data
+def: "One dataset is not a reanalysis of previously published data." [PSI:PI]
+is_a: MS:1002844 ! Experiment additional parameter
 
 [Term]
 id: PEFF:0000001
