@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.3
-date: 06:04:2018 10:07
+data-version: 4.1.4
+date: 16:04:2018 14:36
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18666,6 +18666,30 @@ name: Panorama Public dataset URI
 def: "URI that allows the access to one dataset in the Panorama Public repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
 xref: value-type:xsd\:anyURI "The allowed value-type for this CV term."
 is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002874
+name: TSQ Altis
+def: "Thermo Scientific TSQ Altis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002875
+name: TSQ Quantis
+def: "Thermo Scientific TSQ Quantis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002876
+name: TSQ 9000
+def: "Thermo Scientific TSQ 9000 Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002877
+name: Q Exactive HF-X
+def: "Thermo Scientific Q Exactive HF-X Hybrid Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: PEFF:0000001
