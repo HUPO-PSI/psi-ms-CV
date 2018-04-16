@@ -23,8 +23,8 @@ products:
   - id: ms.obo
   - id: ms.owl
 license:
-  url: https://creativecommons.org/licenses/by/3.0/
-  label: CC-BY
+  url: https://creativecommons.org/licenses/by/4.0/
+  label: CC BY 4.0
 build:
   source_url: https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo
   method: obo2owl
