@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.4
-date: 16:04:2018 14:36
+data-version: 4.1.5
+date: 30:04:2018 13:33
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18690,6 +18690,91 @@ id: MS:1002877
 name: Q Exactive HF-X
 def: "Thermo Scientific Q Exactive HF-X Hybrid Quadrupole Orbitrap MS." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002878
+name: small molecule analysis software
+def: "Software for the analysis of small molecules." [PSI:PI]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002879
+name: Progenesis QI
+def: "Metabolomics analysis software for LC-MS data from Nonlinear Dynamics." [PSI:PI]
+is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1002880
+name: Compound Discoverer
+def: "Metabolomics analysis software from Thermo Fisher Scientific." [PSI:PI]
+is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1002881
+name: MyCompoundID
+def: "Metabolite identification tool MyCompoundID." [PSI:PI, PMID:23373753]
+is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1002882
+name: study variable average function
+def: "Function used to calculate the study variable quantification value." [PSI:PI]
+is_a: MS:1001184 ! search statistics
+
+[Term]
+id: MS:1002883
+name: median
+def: "Median function." [PSI:PI]
+is_a: MS:1002882 ! study variable average function
+
+[Term]
+id: MS:1002884
+name: study variable variation function
+def: "Function used to calculate the study variable quantification variation value." [PSI:PI]
+is_a: MS:1001184 ! search statistics
+
+[Term]
+id: MS:1002885
+name: standard error
+def: "Standard error function." [PSI:PI]
+is_a: MS:1002884 ! study variable variation function
+
+[Term]
+id: MS:1002886
+name: small molecule quantification datatype
+def: "The value reported in a small molecule quantification." [PSI:PI]
+is_a: MS:1001805 ! quantification datatype
+
+[Term]
+id: MS:1002887
+name: Progenesis QI normalised abundance
+def: "The normalised abundance produced by Progenesis QI LC-MS." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002886 ! small molecule quantification datatype
+
+[Term]
+id: MS:1002888
+name: small molecule confidence measure
+def: "The confidence score produced by a small molecule analysis software." [PSI:PI]
+is_a: MS:1002694 ! single identification result attribute
+
+[Term]
+id: MS:1002889
+name: Progenesis MetaScope score
+def: "The confidence score produced by Progenesis QI." [PSI:PI]
+is_a: MS:1002888 ! small molecule confidence measure
+
+[Term]
+id: MS:1002890
+name: fragmentation score
+def: "The fragmentation confidence score." [PSI:PI]
+is_a: MS:1002888 ! small molecule confidence measure
+
+[Term]
+id: MS:1002891
+name: isotopic fit score
+def: "The isotopic fit confidence score." [PSI:PI]
+is_a: MS:1002888 ! small molecule confidence measure
 
 [Term]
 id: PEFF:0000001
