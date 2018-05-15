@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.5
-date: 30:04:2018 13:33
+data-version: 4.1.6
+date: 15:05:2018 10:57
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -10034,7 +10034,7 @@ id: MS:1001581
 name: FAIMS compensation voltage
 def: "The DC potential applied to the asymmetric waveform in FAIMS that compensates for the difference between high and low field mobility of an ion." [PSI:MS]
 synonym: "FAIMS CV" EXACT []
-is_a: MS:1000503 ! scan attribute
+is_a: MS:1002892 ! ion mobility attribute
 
 [Term]
 id: MS:1001582
@@ -16133,7 +16133,7 @@ name: ion mobility drift time
 def: "Drift time of an ion or spectrum of ions as measured in an ion mobility mass spectrometer. This time might refer to the central value of a bin into which all ions within a narrow range of drift time have been aggregated." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000455 ! ion selection attribute
-is_a: MS:1000503 ! scan attribute
+is_a: MS:1002892 ! ion mobility attribute
 relationship: has_units UO:0000028 ! millisecond
 
 [Term]
@@ -16141,7 +16141,7 @@ id: MS:1002477
 name: mean drift time array
 def: "Array of drift times, averaged from a matrix of binned m/z and drift time values, corresponding to spectrum of individual peaks encoded with an m/z array." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-is_a: MS:1000513 ! binary data array
+is_a: MS:1002893 ! ion mobility array
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_units UO:0000010 ! second
 
@@ -18275,15 +18275,15 @@ name: inverse reduced ion mobility
 def: "Ion mobility measurement for an ion or spectrum of ions as measured in an ion mobility mass spectrometer. This might refer to the central value of a bin into which all ions within a narrow range of mobilities have been aggregated." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000455 ! ion selection attribute
-is_a: MS:1000503 ! scan attribute
+is_a: MS:1002892 ! ion mobility attribute
 relationship: has_units MS:1002814 ! "volt-second per square centimeter"
 
 [Term]
 id: MS:1002816
-name: mean ion mobility array
+name: mean inverse reduced ion mobility array
 def: "Array of drift times or inverse reduced ion mobilities, averaged from a matrix of binned m/z and ion mobility values, corresponding to a spectrum of individual peaks encoded with an m/z array." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-is_a: MS:1000513 ! binary data array
+is_a: MS:1002893 ! ion mobility array
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_units UO:0000010 ! second
 relationship: has_units MS:1002814 ! "volt-second per square centimeter"
@@ -18762,19 +18762,35 @@ is_a: MS:1002694 ! single identification result attribute
 id: MS:1002889
 name: Progenesis MetaScope score
 def: "The confidence score produced by Progenesis QI." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1002888 ! small molecule confidence measure
 
 [Term]
 id: MS:1002890
 name: fragmentation score
 def: "The fragmentation confidence score." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1002888 ! small molecule confidence measure
 
 [Term]
 id: MS:1002891
 name: isotopic fit score
 def: "The isotopic fit confidence score." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1002888 ! small molecule confidence measure
+
+[Term]
+id: MS:1002892
+name: ion mobility attribute
+def: "An attribute describing ion mobility searches." [PSI:PI]
+is_a: MS:1000503 ! scan attribute
+is_a: MS:1002345 ! PSM-level attribute
+
+[Term]
+id: MS:1002893
+name: ion mobility array
+def: "An array of ion mobility data." [PSI:PI]
+is_a: MS:1000513 ! binary data array
 
 [Term]
 id: PEFF:0000001
