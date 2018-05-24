@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.6
-date: 15:05:2018 10:57
+data-version: 4.1.7
+date: 24:05:2018 14:37
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -16942,7 +16942,7 @@ is_a: MS:1001456 ! analysis software
 [Term]
 id: MS:1002599
 name: splash key
-def: "The Splash, is an unique identifier for Spectra, as the InChI Key is an unique identifier for chemical compounds." [http://splash.fiehnlab.ucdavis.edu/]
+def: "Spectral Hash key, an unique identifier for spectra." [PMID:27824832]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001405 ! spectrum identification result details
 
@@ -18791,6 +18791,39 @@ id: MS:1002893
 name: ion mobility array
 def: "An array of ion mobility data." [PSI:PI]
 is_a: MS:1000513 ! binary data array
+
+[Term]
+id: MS:1002894
+name: InChIKey
+def: "Unique chemical structure identifier for chemical compounds." [PMID:273343401]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1001405 ! spectrum identification result details
+
+[Term]
+id: MS:1002895
+name: small molecule identification attribute
+def: "Compound identification information." [PSI:PI]
+is_a: MS:1002694 ! single identification result attribute
+
+[Term]
+id: MS:1002896
+name: compound identification confidence level
+def: "Confidence level for annotation of identified compounds as defined by the Metabolomics Standards Initiative (MSI). The value slot can have the values 'Level 0' until 'Level 4'." [PMID:29748461]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002895 ! small molecule identification attribute
+
+[Term]
+id: MS:1002897
+name: isotopomer peak
+def: "Identifies a peak when no de-isotoping has been performed. The value slot reports the isotopomer peak, e.g. '2H', '13C', '15N', '18O', '31P'." [PSI:PI]
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+is_a: MS:1000231 ! peak
+
+[Term]
+id: MS:1002898
+name: Shimadzu Biotech QTOF nativeID format
+def: "Native format defined by scan=xsd:nonNegativeInteger." [PSI:PI]
+is_a: MS:1000767 ! native spectrum identifier format
 
 [Term]
 id: PEFF:0000001
