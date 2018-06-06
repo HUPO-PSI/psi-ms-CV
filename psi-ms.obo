@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.7
-date: 24:05:2018 14:37
+data-version: 4.1.8
+date: 06:06:2018 09:20
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18824,6 +18824,394 @@ id: MS:1002898
 name: Shimadzu Biotech QTOF nativeID format
 def: "Native format defined by scan=xsd:nonNegativeInteger." [PSI:PI]
 is_a: MS:1000767 ! native spectrum identifier format
+
+[Term]
+id: MS:1002899
+name: msalign format
+def: "msalign file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002900
+name: feature format
+def: "TopFD feature file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002901
+name: TopPIC
+def: "TopPIC: a software tool for top-down mass spectrometry-based proteoform identification and characterization." [PMID:27423895, http://proteomics.informatics.iupui.edu/software/toppic/index.html]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002902
+name: TopFD
+def: "Top-down mass spectral feature detection." [http://proteomics.informatics.iupui.edu/software/toppic/index.html]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002903
+name: TopMG
+def: "A mass graph-based approach for the identification of modified proteoforms using top-down tandem mass spectra." [PMID:28453668, http://proteomics.informatics.iupui.edu/software/topmg/index.html]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002904
+name: proteoform-level identification attribute
+def: "Proteoform level information." [PSI:PI]
+is_a: MS:1002694 ! single identification result attribute
+
+[Term]
+id: MS:1002905
+name: proteoform-level identification statistic
+def: "Identification confidence metric for a proteoform." [PSI:PI]
+is_a: MS:1002904 ! proteoform-level identification attribute
+
+[Term]
+id: MS:1002906
+name: search engine specific score for proteoforms
+def: "Search engine specific proteoform scores." [PSI:PI]
+is_a: MS:1002905 ! proteoform-level identification statistic
+
+[Term]
+id: MS:1002907
+name: proteoform-level global FDR
+def: "Estimation of the global false discovery rate of proteoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002905 ! proteoform-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1002908
+name: proteoform-level local FDR
+def: "Estimation of the local false discovery rate of proteoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002905 ! proteoform-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1002909
+name: proteoform-level statistical threshold
+def: "Estimated statistical threshold at proteoform-level." [PSI:PI]
+is_a: MS:1002573 ! spectrum identification statistical threshold
+
+[Term]
+id: MS:1002910
+name: proteoform-level global FDR threshold
+def: "Threshold for the global false discovery rate of proteoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002909 ! proteoform-level statistical threshold
+
+[Term]
+id: MS:1002911
+name: proteoform-level local FDR threshold
+def: "Threshold for the local false discovery rate of proteoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002909 ! proteoform-level statistical threshold
+
+[Term]
+id: MS:1002912
+name: TopPIC input parameter
+def: "Search engine input parameters specific to TopPIC." [PSI:PI]
+is_a: MS:1001302 ! search engine specific input parameter
+
+[Term]
+id: MS:1002913
+name: TopPIC:fixed modification
+def: "Fixed modifications for TopPIC searching." [PSI:PI]
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002914
+name: TopPIC:N-term form
+def: "N-terminal forms of proteins allowed in TopPIC searching." [PSI:PI]
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002915
+name: TopPIC:error tolerance
+def: "Error tolerance for precursor and fragment masses in PPM." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002916
+name: TopPIC:max shift
+def: "Maximum value of the mass shift (in Dalton) of an unexpected modification." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002917
+name: TopPIC:min shift
+def: "Minimum value of the mass shift (in Dalton) of an unexpected modification." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002918
+name: TopPIC:shift num
+def: "Maximum number of unexpected modifications in a proteoform spectrum match." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002919
+name: TopPIC:spectral cutoff type
+def: "Spectrum-level cutoff type for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002920
+name: TopPIC:spectral cutoff value
+def: "Spectrum-level cutoff value for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002921
+name: TopPIC:proteoform-level cutoff type
+def: "Proteoform-level cutoff type for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002922
+name: TopPIC:proteoform-level cutoff value
+def: "Proteoform-level cutoff value for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002923
+name: TopPIC:generating function
+def: "P-value and E-value estimation using generating function." [PSI:PI]
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002924
+name: TopPIC:combined spectrum number
+def: "Number of combined spectra." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002925
+name: TopPIC:mod file
+def: "The text file containing the information of common PTMs." [PSI:PI]
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002926
+name: TopPIC:thread number
+def: "Number of threads used in TopPIC." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002927
+name: TopPIC:use TopFD feature
+def: "Proteoform identification using TopFD feature file." [PSI:PI]
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1002912 ! TopPIC input parameter
+
+[Term]
+id: MS:1002928
+name: TopPIC:spectral E-value
+def: "TopPIC spectrum-level E-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1002353 ! PSM-level e-value
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1002929
+name: TopPIC:spectral FDR
+def: "TopPIC spectrum-level FDR." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1002351 ! PSM-level local FDR
+
+[Term]
+id: MS:1002930
+name: TopPIC:proteoform-level FDR
+def: "TopPIC proteoform-level FDR." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002908 ! proteoform-level local FDR
+is_a: MS:1002901 ! search engine specific score for proteoforms
+
+[Term]
+id: MS:1002931
+name: TopPIC:spectral p-value
+def: "TopPIC spectrum-level p-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1002352 ! PSM-level p-value
+
+[Term]
+id: MS:1002932
+name: TopPIC:MIScore
+def: "Modification identification score." [PMID:27291504]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+
+[Term]
+id: MS:1002933
+name: TopPIC:MIScore threshold
+def: "TopPIC:MIScore threshold." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002555 ! PTM localization score threshold
+
+[Term]
+id: MS:1002934
+name: TopMG input parameter
+def: "Search engine input parameters specific to TopMG." [PSI:PI]
+is_a: MS:1001302 ! search engine specific input parameter
+
+[Term]
+id: MS:1002935
+name: TopMG:fixed modification
+def: "Fixed modifications for TopMG searching." [PSI:PI]
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002936
+name: TopMG:N-term form
+def: "N-terminal forms of proteins allowed in TopMG searching." [PSI:PI]
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002937
+name: TopMG:error tolerance
+def: "Error tolerance for precursor and fragment masses in PPM." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002938
+name: TopMG:max shift
+def: "Maximum value of the mass shift (in Dalton)." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002939
+name: TopMG:spectral cutoff type
+def: "Spectrum-level cutoff type for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002940
+name: TopMG:spectral cutoff value
+def: "Spectrum-level cutoff value for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002941
+name: TopMG:proteoform-level cutoff type
+def: "Proteoform-level cutoff type for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002942
+name: TopMG:proteoform-level cutoff value
+def: "Proteoform-level cutoff value for filtering identified proteoform spectrum matches." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002943
+name: TopMG:mod file
+def: "The text file containing the information of common PTMs." [PSI:PI]
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002944
+name: TopMG:thread number
+def: "Number of threads used in TopMG." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002945
+name: TopMG:use TopFD feature
+def: "Proteoform identification using TopFD feature file." [PSI:PI]
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002946
+name: TopMG:proteoform graph gap size
+def: "Gap size in constructing proteoform graph." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002947
+name: TopMG:variable PTM number
+def: "Maximum number of variable PTMs." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002948
+name: TopMG:variable PTM number in proteoform graph gap
+def: "Maximum number of variable PTMs in a proteoform graph gap." [PSI:PI]
+xref: value-type:xsd\:integer "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002949
+name: TopMG:use ASF-DIAGONAL
+def: "Protein filtering using ASF-DIAGONAL method." [PMID:29327814]
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1002934 ! TopMG input parameter
+
+[Term]
+id: MS:1002950
+name: TopMG:spectral E-value
+def: "TopMG spectrum-level E-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002353 ! PSM-level e-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1002951
+name: TopMG:spectral FDR
+def: "TopMG spectrum-level FDR." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002351 ! PSM-level local FDR
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002952
+name: TopMG:proteoform-level FDR
+def: "TopMG proteoform-level FDR." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002908 ! proteoform-level local FDR
+is_a: MS:1002901 ! search engine specific score for proteoforms
+
+[Term]
+id: MS:1002953
+name: TopMG:spectral p-value
+def: "TopMG spectrum-level p-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002352 ! PSM-level p-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1002954
+name: collisional cross sectional area
+def: "Structural molecular descriptor for the effective interaction area between the ion and neutral gas measured in ion mobility mass spectrometry." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1000861 ! chemical compound attribute
+relationship: has_units UO:0000324 ! square angstrom
 
 [Term]
 id: PEFF:0000001
