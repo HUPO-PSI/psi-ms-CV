@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.9
-date: 19:06:2018 11:00
+data-version: 4.1.10
+date: 02:07:2018 14:03
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19260,6 +19260,107 @@ name: isotopologue
 def: "A molecular entity that differs only in isotopic composition (number of isotopic substitutions)." [https://goldbook.iupac.org/html/I/I03351.html]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002959 ! isomer
+
+[Term]
+id: MS:1002962
+name: mean
+def: "The arithmetic mean." [PSI:PI]
+is_a: MS:1002882 ! study variable average function
+
+[Term]
+id: MS:1002963
+name: variation coefficient
+def: "The coefficient of variation." [PSI:PI]
+is_a: MS:1002884 ! study variable variation function
+
+[Term]
+id: MS:1002964
+name: lipidomics analysis software
+def: "Lipidomics analysis software." [PSI:PI]
+is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1002965
+name: Lipid Data Analyzer
+def: "Lipid Data Analyzer software for lipid quantification." [PMID:29058722]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002966
+name: chrom format
+def: "The Lipid Data Analyzer native chrom format." [PSI:PI]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002967
+name: LipidHunter
+def: "Software for identification of phospholipids by high-throughput processing of LC-MS and shotgun lipidomics datasets." [PMID:28753264]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002968
+name: LipidXplorer
+def: "Software for consensual cross-platform lipidomics." [PMID:22272252]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002969
+name: LipidMatch
+def: "An automated workflow for rule-based lipid identification using untargeted high-resolution tandem mass spectrometry data." [PMID:28693421]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002970
+name: Greazy
+def: "Open-source software for automated phospholipid tandem mass spectrometry identification." [PMID:27186799]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002971
+name: LipidBlast
+def: "LC-MS-based lipidomics and automated identification of lipids using the LipidBlast in-silico MS/MS library." [PMID:28660581]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002972
+name: Lipid-Pro
+def: "A computational lipid identification solution for untargeted lipidomics on data-independent acquisition tandem mass spectrometry platforms." [PMID:25433698]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002973
+name: LipidFinder
+def: "A computational workflow for the discovery of lipids for the identification of eicosanoid-phosphoinositides in platelets." [PMID:28405621]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002974
+name: LipiDex
+def: "An integrated software package for high-confidence lipid identification." [PMID:29705063]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002975
+name: LIQUID
+def: "An-open source software for identifying lipids in LC-MS/MS-based lipidomics data." [PMID:28158427]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002976
+name: ALEX
+def: "Analysis of lipid experiments, a software framework for the analysis of high-resolution shotgun lipidomics data." [PMID:24244551]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: PEFF:0000001
