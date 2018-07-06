@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.10
-date: 02:07:2018 14:03
+data-version: 4.1.11
+date: 06:07:2018 15:21
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19358,7 +19358,32 @@ is_a: MS:1001457 ! data processing software
 [Term]
 id: MS:1002976
 name: ALEX
-def: "Analysis of lipid experiments, a software framework for the analysis of high-resolution shotgun lipidomics data." [PMID:24244551]
+def: "Analysis of lipid experiments, a calculator for m/z values of intact lipid molecules (MS1)." [PMID:24244551]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002977
+name: ALEX123
+def: "Analysis of lipid experiments 123, a calculator with m/z values of intact lipid molecules (MS1) and their fragment ions at the MS2 and MS3 level." [PMID:29786091]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+id: MS:1002978
+name: LIMSA
+def: "Software tool for the quantitative analysis of mass spectrometric lipidome data." [PMID:17165823]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+id: MS:1002979
+name: LOBSTAHS
+def: "Adduct-Based lipidomics software for the discovery and identification of oxidative stress biomarkers." [PMID:27322848]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
+
+id: MS:1002980
+name: LipidQA
+def: "Lipid qualitative/quantitative analysis software for identification and quantitation of complex lipid molecular species." [PMID:17720531]
 is_a: MS:1002964 ! lipidomics analysis software
 is_a: MS:1001457 ! data processing software
 
