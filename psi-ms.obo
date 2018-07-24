@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.11
-date: 09:07:2018 09:02
+data-version: 4.1.12
+date: 24:07:2018 14:50
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19389,6 +19389,12 @@ name: LipidQA
 def: "Lipid qualitative/quantitative analysis software for identification and quantitation of complex lipid molecular species." [PMID:17720531]
 is_a: MS:1002964 ! lipidomics analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002981
+name: Proline
+def: "The Proline software suite for mass spectrometry based proteomics." [http://www.profiproteomics.fr/proline/]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: PEFF:0000001
