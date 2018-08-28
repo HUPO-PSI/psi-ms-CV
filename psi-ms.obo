@@ -5166,7 +5166,7 @@ is_a: MS:1001486 ! data filtering
 id: MS:1000747
 name: completion time
 def: "The time that a data processing action was finished." [PSI:MS]
-xref: value-type:xsd\:date "The allowed value-type for this CV term."
+xref: value-type:xsd\:dateTime "The allowed value-type for this CV term."
 is_a: MS:1000630 ! data processing parameter
 
 [Term]
@@ -15846,7 +15846,7 @@ is_a: MS:1001249 ! search input details
 id: MS:1002435
 name: data processing start time
 def: "The time that a data processing action was started." [PSI:MS]
-xref: value-type:xsd\:date "The allowed value-type for this CV term."
+xref: value-type:xsd\:dateTime "The allowed value-type for this CV term."
 is_a: MS:1000630 ! data processing parameter
 
 [Term]
