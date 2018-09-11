@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.12
-date: 24:07:2018 14:50
+data-version: 4.1.13
+date: 11:09:2018 15:00
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -5166,7 +5166,7 @@ is_a: MS:1001486 ! data filtering
 id: MS:1000747
 name: completion time
 def: "The time that a data processing action was finished." [PSI:MS]
-xref: value-type:xsd\:date "The allowed value-type for this CV term."
+xref: value-type:xsd\:dateTime "The allowed value-type for this CV term."
 is_a: MS:1000630 ! data processing parameter
 
 [Term]
@@ -15846,7 +15846,7 @@ is_a: MS:1001249 ! search input details
 id: MS:1002435
 name: data processing start time
 def: "The time that a data processing action was started." [PSI:MS]
-xref: value-type:xsd\:date "The allowed value-type for this CV term."
+xref: value-type:xsd\:dateTime "The allowed value-type for this CV term."
 is_a: MS:1000630 ! data processing parameter
 
 [Term]
@@ -19394,6 +19394,24 @@ is_a: MS:1001457 ! data processing software
 id: MS:1002981
 name: Proline
 def: "The Proline software suite for mass spectrometry based proteomics." [http://www.profiproteomics.fr/proline/]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002982
+name: PepNovo
+def: "PepNovo tool for de novo peptide sequencing." [PMID:15858974]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002983
+name: pNovo
+def: "pNovo tool for de novo peptide sequencing and identification using HCD spectra." [PMID:20329752]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002984
+name: Novor
+def: "Novor real-time peptide de novo sequencing software tool." [PMID:26122521]
 is_a: MS:1001456 ! analysis software
 
 [Term]
