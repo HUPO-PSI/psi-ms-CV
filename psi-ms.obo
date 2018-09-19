@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.13
-date: 11:09:2018 15:00
+data-version: 4.1.14
+date: 19:09:2018 08:33
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19413,6 +19413,15 @@ id: MS:1002984
 name: Novor
 def: "Novor real-time peptide de novo sequencing software tool." [PMID:26122521]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002995
+name: Andromeda:PEP
+def: "Posterior error probability of the best identified peptide of the Andromeda search engine." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_order MS:1002108 ! higher score better
 
 [Term]
 id: PEFF:0000001
