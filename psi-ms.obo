@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.14
-date: 19:09:2018 08:33
+data-version: 4.1.15
+date: 20:09:2018 09:05
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19422,6 +19422,12 @@ xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002996
+name: Andromeda:apl file format
+def: "Peak list file format of the Andromeda search engine." [PSI:PI]
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: PEFF:0000001
