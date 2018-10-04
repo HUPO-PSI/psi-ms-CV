@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.15
-date: 20:09:2018 09:05
+data-version: 4.1.16_rc1
+date: 04:10:2018 12:57
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -7111,7 +7111,6 @@ def: "OBSOLETE Retention time of the spectrum from the source file." [PSI:PI]
 comment: This term was made obsolete because scan start time (MS:1000016) should be used instead.
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001105 ! peptide sequence-level identification attribute
-is_a: MS:1001405 ! spectrum identification result details
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 is_obsolete: true
@@ -11814,7 +11813,6 @@ is_a: MS:1001833 ! quantitation analysis summary
 id: MS:1001837
 name: iTRAQ quantitation analysis
 def: "Quantification analysis using the SCIEX amine-reactive isobaric tags for relative and absolute quantification (iTRAQ) labelling workflow, wherein 2-8 reporter ions are measured in MS2 spectra near in the 114-121 m/z range." [PSI:PI, PMID:15385600]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -12105,9 +12103,6 @@ is_a: MS:1001798 ! LECO software
 id: MS:1001878
 name: MALDI Solutions Microbial Identification
 def: "Shimadzu Biotech software for data acquisition, processing, and analysis." [PSI:MS]
-is_a: MS:1001455 ! acquisition software
-is_a: MS:1001456 ! analysis software
-is_a: MS:1001457 ! data processing software
 is_a: MS:1001558 ! MALDI Solutions
 
 [Term]
@@ -13013,7 +13008,6 @@ is_a: MS:1001833 ! quantitation analysis summary
 id: MS:1002010
 name: TMT quantitation analysis
 def: "Quantitation analysis using the Thermo Fisher amine-reactive tandem mass tag (TMT) labelling workflow, wherein 2-10 reporter ions are measured in MS2 spectra in the 126-131 m/z." [PSI:PI, PMID:12713048]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -14309,7 +14303,6 @@ is_a: MS:1001861 ! quantification data processing
 id: MS:1002212
 name: IPTL quantitation analysis
 def: "Quantification analysis using a labelling strategy where both peptide termini are labelled so that the peptides from different labelling schema are isobaric." [PSI:PI, PMID:19655813]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -15137,14 +15130,12 @@ id: MS:1002334
 name: ProCon
 def: "Java software designed to convert one of several proteomics identification results formats into mzIdentML or PRIDE XML." [PSI:PI, http://www.medizinisches-proteom-center.de/procon]
 is_a: MS:1002333 ! conversion software
-is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002335
 name: PRIDE Converter2
 def: "Java software designed to convert one of several proteomics identification results formats into PRIDE XML." [PMID:22949509]
 is_a: MS:1002333 ! conversion software
-is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002336
@@ -15524,7 +15515,6 @@ name: PIA
 def: "PIA - Protein Inference Algorithms, a toolbox for protein inference and identification analysis." [PSI:PI, http://www.medizinisches-proteom-center.de/pia]
 is_a: MS:1002414 ! postprocessing software
 is_a: MS:1001456 ! analysis software
-is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002388
@@ -17904,49 +17894,42 @@ is_a: MS:1001080 ! search type
 id: MS:1002756
 name: iodoTMT quantitation analysis
 def: "Quantitation analysis using the Thermo Fisher sulfhydryl-reactive iodo tandem mass tag (iodoTMT) labelling workflow." [PSI:PI, PMID:24926564]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002757
 name: glyco-TMT quantitation analysis
 def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive glyco-tandem mass tag (glyco-TMT) labelling workflow." [PSI:PI, PMID:22455665]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002758
 name: aminoxyTMT quantitation analysis
 def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive aminoxy tandem mass tag (aminoxyTMT) labelling workflow." [PSI:PI, PMID:25337643]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002759
 name: hydrazideTMT quantitation analysis
 def: "Quantitation analysis using the Thermo Fisher carbonyl-reactive hydrazide tandem mass tag (hydrazide-TMT) labelling workflow." [PSI:PI, PMID:25337643]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002760
 name: iTRAQH quantitation analysis
 def: "Quantification analysis using the carbonyl-reactive isobaric tags for relative and absolute quantification hydrazide (iTRAQH) labelling workflow." [PSI:PI, PMID:22926130]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002761
 name: DiART quantitation analysis
 def: "Quantification analysis using the amine-reactive deuterium isobaric amine reactive tag (DiART) labelling workflow." [PSI:PI, PMID:20715779]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
 id: MS:1002762
 name: DiLeu quantitation analysis
 def: "Quantification analysis using the amine-reactive dimethyl leucine (DiLeu) tag labelling workflow." [PSI:PI, PMID:20715779]
-is_a: MS:1001833 ! quantitation analysis summary
 is_a: MS:1002009 ! isobaric label quantitation analysis
 
 [Term]
@@ -18321,7 +18304,7 @@ is_a: MS:1002808 ! negative mode adduct ion
 [Term]
 id: MS:1002822
 name: OpenMS file format
-def: "File format developed by the OpenMS team." [PMID: 27575624]
+def: "File format developed by the OpenMS team." [PMID:27575624]
 is_a: MS:1001459 ! file format
 
 [Term]
@@ -19413,6 +19396,52 @@ id: MS:1002984
 name: Novor
 def: "Novor real-time peptide de novo sequencing software tool." [PMID:26122521]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002985
+name: in-gel digestion
+def: "Digestion of proteins separated by gel electrophoresis for mass spectrometric characterization of proteins and proteomes." [PSI:PI]
+is_a: MS:1000831 ! sample preparation
+
+[Term]
+id: MS:1002986
+name: in-solution digestion
+def: "Digestion of proteins in solution for mass spectrometric characterization of proteins and proteomes." [PSI:PI]
+is_a: MS:1000831 ! sample preparation
+
+[Term]
+id: MS:1002987
+name: IdentiPy
+def: "IdentiPy." [PMID:29682971, https://bitbucket.org/levitsky/identipy]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1002988
+name: IdentiPy:RHNS
+def: "The IdentiPy result 'RHNS'." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002989
+name: IdentiPy:hyperscore
+def: "The IdentiPy result 'hyperscore'." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1002990
+name: ms_deisotope
+def: "ms_deisotope, a library for deisotoping and charge state deconvolution of mass spectra." [https://github.com/mobiusklein/ms_deisotope]
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002991
+name: python-psims
+def: "python-psims, a library for generating mzML and mzIdentML." [https://github.com/mobiusklein/psims]
+is_a: MS:1002333 ! conversion software
 
 [Term]
 id: MS:1002995
