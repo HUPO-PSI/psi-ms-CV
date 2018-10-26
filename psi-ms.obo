@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.17
-date: 15:10:2018 11:48
+data-version: 4.1.18
+date: 26:10:2018 15:06
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19845,7 +19845,7 @@ xref: value-type:xsd\:string "The allowed value-type for this CV term."
 
 [Term]
 id: PEFF:0001034
-name: maturation peptide
+name: propeptide
 def: "Short peptide that is cleaved off a newly synthesized protein and generally immediately degraded in the process of protein maturation, and is not a signal peptide or transit peptide." [PSI:PEFF]
 is_a: PEFF:0001032 ! PEFF molecule processing keyword
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
