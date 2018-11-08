@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.19
-date: 06:11:2018 14:49
+data-version: 4.1.20
+date: 08:11:2018 17:00
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19437,6 +19437,13 @@ id: MS:1002996
 name: Andromeda:apl file format
 def: "Peak list file format of the Andromeda search engine." [PSI:PI]
 is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1002997
+name: ProteomeXchange dataset identifier reanalysis number
+def: "Index number of a reanalysis within a ProteomeXchange reprocessed dataset identifier container (RPXD)." [PSI:PI]
+xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
+is_a: MS:1000878 ! external reference identifier
 
 [Term]
 id: PEFF:0000001
