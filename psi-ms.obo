@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.20
-date: 08:11:2018 17:00
+data-version: 4.1.21
+date: 07:12:2018 12:10
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19444,6 +19444,42 @@ name: ProteomeXchange dataset identifier reanalysis number
 def: "Index number of a reanalysis within a ProteomeXchange reprocessed dataset identifier container (RPXD)." [PSI:PI]
 xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
 is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1002998
+name: LCMS-9030
+def: "Shimadzu Scientific Instruments LCMS-9030 Q-TOF MS." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1002999
+name: LCMS-8060
+def: "Shimadzu Scientific Instruments LCMS-8060 MS." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003000
+name: LCMS-8050
+def: "Shimadzu Scientific Instruments LCMS-8050 MS." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003001
+name: LCMS-8045
+def: "Shimadzu Scientific Instruments LCMS-8045 MS." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003002
+name: LCMS-8040
+def: "Shimadzu Scientific Instruments LCMS-8040 MS." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003003
+name: LCMS-2020
+def: "Shimadzu Scientific Instruments LCMS-2020." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: PEFF:0000001
