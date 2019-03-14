@@ -1,4 +1,4 @@
-!date: 2018/05/02 16:10:03
+!date: 2019/01/27 16:10:02
 !
 !WARNING: This file is READ-ONLY. Any changes will be overwritten.
 !WARNING: The upstream read/write version is available at:
@@ -170,6 +170,15 @@ example_id: BRENDA:4.2.1.3
 url_example: http://www.brenda-enzymes.info/php/result_flat.php4?ecno=4.2.1.3
 entity_type: GO:0003824 ! catalytic activity
 
+abbreviation: BTO
+database: BRENDA tissue / enzyme ontology
+description: A structured controlled vocabulary for the source of an enzyme comprising tissues, cell lines, cell types and cell cultures.
+generic_url: http://purl.obolibrary.org/obo/bto
+url_syntax: http://purl.obolibrary.org/obo/BTO_[example_id]
+example_id: BTO_0002164
+url_example: http://purl.obolibrary.org/obo/BTO_0002164
+entity_type: BET:0000000 ! entity
+
 abbreviation: Broad
 database: Broad Institute
 generic_url: http://www.broad.mit.edu/
@@ -268,10 +277,10 @@ abbreviation: CGD
 database: Candida Genome Database
 synonym: CGDID
 generic_url: http://www.candidagenome.org/
-local_id_syntax: (CAL|CAF)[0-9]{7}
+local_id_syntax: (CAL|CAF)[0-9]{10}
 url_syntax: http://www.candidagenome.org/cgi-bin/locus.pl?dbid=[example_id]
-example_id: CGD:CAL0005516
-url_example: http://www.candidagenome.org/cgi-bin/locus.pl?dbid=CAL0005516
+example_id: CGD:CAL0000179664
+url_example: http://www.candidagenome.org/cgi-bin/locus.pl?dbid=CAL0000179664
 entity_type: SO:0000704 ! gene
 
 abbreviation: CGD_LOCUS
@@ -525,6 +534,7 @@ entity_type: BET:0000000 ! entity
 
 abbreviation: ECOGENE
 database: EcoGene Database of Escherichia coli Sequence and Function
+synonym: EcoGene
 generic_url: http://www.ecogene.org/
 local_id_syntax: EG[0-9]{5}
 url_syntax: http://www.ecogene.org/geneInfo.php?eg_id=[example_id]
@@ -830,6 +840,14 @@ example_id: 0000001
 url_example: http://purl.obolibrary.org/obo/go/references/0000001
 entity_type: BET:0000000 ! entity
 
+abbreviation: gomodel
+database: Gene Ontology Causal Activity Model Database
+generic_url: http://www.geneontology.org/gocam
+url_syntax: http://www.geneontology.org/gocam/[example_id]
+example_id: gomodel:5ae3b0f600001522
+url_example: http://www.geneontology.org/gocam/gomodel:5ae3b0f600001522
+entity_type: BET:0000000 ! model
+
 abbreviation: GOC
 database: Gene Ontology Consortium
 generic_url: http://www.geneontology.org/
@@ -1054,10 +1072,10 @@ entity_type: BET:0000000 ! entity
 
 abbreviation: iPTMnet
 database: iPTMnet protein post-translational modification database
-generic_url: http://annotation.dbi.udel.edu/iptmnet/
-url_syntax: http://annotation.dbi.udel.edu/iptmnet/entry/[example_id]/
+generic_url: https://research.bioinformatics.udel.edu/iptmnet/
+url_syntax: https://research.bioinformatics.udel.edu/iptmnet/entry/[example_id]/
 example_id: iPTM:P06493
-url_example: http://annotation.dbi.udel.edu/iptmnet/entry/P06493/
+url_example: https://research.bioinformatics.udel.edu/iptmnet/entry/P06493/
 entity_type: BET:0000000 ! entity
 
 abbreviation: IRIC
@@ -1078,10 +1096,10 @@ entity_type: BET:0000000 ! entity
 
 abbreviation: ISBN
 database: International Standard Book Number
-generic_url: http://isbntools.com/
-url_syntax: http://openisbn.com/search.php?q=[example_id]&isbn=1/
+generic_url: https://www.worldcat.org
+url_syntax: https://www.worldcat.org/search?q=bn%3A[example_id]
 example_id: ISBN:0781702534
-url_example: http://openisbn.com/search.php?q=0781702534&isbn=1/
+url_example: https://www.worldcat.org/search?q=bn%3A0781702534
 entity_type: BET:0000000 ! entity
 
 abbreviation: ISRR
@@ -1148,6 +1166,10 @@ url_syntax: http://cmr.jcvi.org/cgi-bin/CMR/shared/GenePage.cgi?locus=[example_i
 example_id: JCVI_CMR:VCA0557
 url_example: http://cmr.jcvi.org/cgi-bin/CMR/shared/GenePage.cgi?locus=VCA0557
 entity_type: PR:000000001 ! protein
+
+abbreviation: TIGR_CMR
+database: CMR Blast
+generic_url: http://blast.jcvi.org/cmr-blast/
 
 abbreviation: JCVI_EGAD
 database: JCVI CMR Egad
@@ -1490,6 +1512,10 @@ generic_url: http://www.ncbi.nlm.nih.gov/
 example_id: NCBI_locus_tag:CTN_0547
 entity_type: BET:0000000 ! entity
 
+abbreviation: NCBI_NP
+database: NCBI Protein
+generic_url: https://www.ncbi.nlm.nih.gov/protein
+
 abbreviation: NIF_Subcellular
 database: Neuroscience Information Framework standard ontology, subcellular hierarchy
 generic_url: http://www.neurolex.org/wiki
@@ -1783,11 +1809,11 @@ entity_type: BET:0000000 ! entity
 
 abbreviation: PomBase
 database: PomBase
-generic_url: http://www.pombase.org/
+generic_url: https://www.pombase.org/
 local_id_syntax: S\w+(\.)?\w+(\.)?
-url_syntax: http://www.pombase.org/spombe/result/[example_id]
+url_syntax: https://www.pombase.org/gene/[example_id]
 example_id: PomBase:SPBC11B10.09
-url_example: http://www.pombase.org/spombe/result/SPBC11B10.09
+url_example: https://www.pombase.org/gene/SPBC11B10.09
 entity_type: SO:0000704 ! gene
 
 abbreviation: Pompep
@@ -1976,10 +2002,10 @@ entity_type: BET:0000000 ! entity
 
 abbreviation: Rfam
 database: Rfam database of RNA families
-generic_url: http://rfam.sanger.ac.uk/
-url_syntax: http://rfam.sanger.ac.uk/family/[example_id]
+generic_url: http://rfam.org
+url_syntax: http://rfam.org/family/[example_id]
 example_id: Rfam:RF00012
-url_example: http://rfam.sanger.ac.uk/family/RF00012
+url_example: http://rfam.org/family/RF00012
 entity_type: BET:0000000 ! entity
 
 abbreviation: RGD
@@ -2255,16 +2281,16 @@ url_syntax: http://arabidopsis.org/servlets/TairObject?accession=[example_id]
 example_id: TAIR:gene:2062713
 url_example: http://arabidopsis.org/servlets/TairObject?accession=gene:2062713
 entity_type: SO:0000704 ! gene
-local_id_syntax: locus:[0-9]{7}
-url_syntax: http://arabidopsis.org/servlets/TairObject?accession=[example_id]
-example_id: TAIR:locus:2146653
-url_example: http://arabidopsis.org/servlets/TairObject?accession=locus:2146653
-entity_type: SO:0000185 ! primary transcript
 local_id_syntax: Communication:[0-9]{7,12}
 url_syntax: http://arabidopsis.org/servlets/TairObject?type=communication&id=[example_id]
 example_id: TAIR:Communication:1345790
 url_example: http://arabidopsis.org/servlets/TairObject?type=communication&id=1345790
 entity_type: BET:0000000 ! communication
+local_id_syntax: locus:[0-9]{7,12}
+url_syntax: http://arabidopsis.org/servlets/TairObject?accession=[example_id]
+example_id: TAIR:locus:2146653
+url_example: http://arabidopsis.org/servlets/TairObject?accession=locus:2146653
+entity_type: SO:0000185 ! primary transcript
 
 abbreviation: taxon
 database: NCBI Taxonomy
@@ -2601,6 +2627,11 @@ abbreviation: YeastFunc
 database: Yeast Function
 generic_url: http://func.med.harvard.edu/yeast/
 entity_type: BET:0000000 ! entity
+
+abbreviation: YuBioLab
+database: CITGeneDB
+description: CITGeneDB is a comprehensive database of human and mouse genes enhancing or suppressing Cold-Induced Thermogenesis (CIT).
+generic_url: http://citgenedb.yubiolab.org
 
 abbreviation: ZFIN
 database: Zebrafish Information Network

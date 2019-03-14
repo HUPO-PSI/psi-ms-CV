@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.22
-date: 25:01:2019 14:27
+data-version: 4.1.23
+date: 14:03:2019 13:23
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -6525,9 +6525,9 @@ is_a: MS:1001011 ! search database details
 [Term]
 id: MS:1001016
 name: database version
-def: "OBSOLETE: Use attribute in mzIdentML instead. Version of the search database." [PSI:PI]
+def: "Version of the search database. In mzIdentML use the attribute instead." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001011 ! search database details
-is_obsolete: true
 
 [Term]
 id: MS:1001017
