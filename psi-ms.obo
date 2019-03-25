@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.23
-date: 14:03:2019 13:23
+data-version: 4.1.24_rc1
+date: 25:03:2019 16:22
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19522,6 +19522,13 @@ id: MS:1003009
 name: Shimadzu Biotech LCD format
 def: "Shimadzu Biotech LCD file format." [PSI:PI]
 is_a: MS:1000560 ! mass spectrometer file format 
+
+[Term]
+id: MS:1003010
+name: LPPtiger
+def: "Software for lipidome-specific prediction and identification of oxidized phospholipids from LC-MS datasets." [PMID:29123162]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: PEFF:0000001
