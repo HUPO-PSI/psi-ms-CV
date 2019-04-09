@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.24
-date: 25:03:2019 16:28
+data-version: 4.1.25_rc1
+date: 06:04:2019 14:50
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -14806,6 +14806,7 @@ is_a: MS:1002286 ! Trans-Proteomic Pipeline software
 id: MS:1002288
 name: iProphet
 def: "A program in the TPP that calculates distinct peptide probabilities based on several lines of corroborating evidence including search results from multiple search engines via the pepXML format." [PMID:21876204]
+synonym: "InterProphet" EXACT []
 is_a: MS:1002286 ! Trans-Proteomic Pipeline software
 
 [Term]
@@ -19529,6 +19530,63 @@ name: LPPtiger
 def: "Software for lipidome-specific prediction and identification of oxidized phospholipids from LC-MS datasets." [PMID:29123162]
 is_a: MS:1002964 ! lipidomics analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003011
+name: pFind
+def: "Sequence-tag-based search engine pFind." [PMID:30295672]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003012
+name: KSDP score
+def: "Kernel mass spectral dot product scoring function." [PMID:15044235]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1003013
+name: i3tms
+def: "i3-tms search engine and data-analysis software." [PSI:PI]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003014
+name: MSFragger
+def: "A database search-based peptide identification tool." [PMID:28394336]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003015
+name: razor peptide
+def: "A peptide which is shared between protein groups and assigned to the protein group with the largest number of identified peptides." [PSI:PI]
+is_a: MS:1000860 ! peptide
+
+[Term]
+id: MS:1003016
+name: ProteinProphet:peptide weight
+def: "Fraction of peptide evidence attributable to a protein or a set of indistinguishable proteins." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+is_a: MS:1002490 ! peptide-level scoring
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1003017
+name: ProteinProphet:peptide group weight
+def: "Fraction of peptide evidence attributable to a group of proteins." [PSI:PI]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+is_a: MS:1002490 ! peptide-level scoring
+is_a: MS:1001153 ! search engine specific score
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1003018
+name: Philosopher
+def: "General proteomics processing toolkit for shotgun proteomics." [https://philosopher.nesvilab.org/]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: PEFF:0000001
