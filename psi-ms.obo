@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.26
-date: 13:05:2019 13:19
+date: 13:05:2019 13:53
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -5670,6 +5670,7 @@ def: "A data array of flow rate measurements." [PSI:MS]
 xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
 is_a: MS:1000513 ! binary data array
+relationship: has_units UO:0000271 ! microliters per minute
 
 [Term]
 id: MS:1000821
