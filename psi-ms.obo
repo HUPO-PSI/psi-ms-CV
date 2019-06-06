@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.26
-date: 13:05:2019 13:53
+data-version: 4.1.27
+date: 06:06:2019 16:13
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19600,6 +19600,18 @@ id: MS:1003020
 name: flow rate chromatogram
 def: "Representation of the chromatographic flow rate versus time." [PSI:MS]
 is_a: MS:1000626 ! chromatogram type
+
+[Term]
+id: MS:1003021
+name: Fixed modification
+def: "Post-translational modification which is assumed to be present at each instance of a residue type." [PSI:PI]
+is_a: MS:1001055 ! modification parameters
+
+[Term]
+id: MS:1003022
+name: Variable modification
+def: "Post-translational modification which may or may not be present at a residue type." [PSI:PI]
+is_a: MS:1001055 ! modification parameters
 
 [Term]
 id: PEFF:0000001
