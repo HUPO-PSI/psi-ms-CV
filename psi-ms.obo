@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.31
-date: 31:10:2019 10:44
+date: 31:10:2019 10:47
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -18198,8 +18198,8 @@ is_a: MS:1000547 ! object attribute
 
 [Term]
 id: MS:1002810
-name: adduct ion mass
-def: "Mass of an adduct formation specified by the given value." [DOI:10.1016/S1044-0305(99)00089-6, http://fiehnlab.ucdavis.edu/staff/kind/Metabolomics/MS-Adduct-Calculator]
+name: adduct ion mass X m/z
+def: "Theoretical m/z of the X component in the adduct M+X or M-X. This term was formerly called 'adduct ion mass', but it is not really a mass. It corresponds to the column mislabeled as 'Mass' at https://fiehnlab.ucdavis.edu/staff/kind/Metabolomics/MS-Adduct-Calculator." [DOI:10.1016/S1044-0305(99)00089-6, http://fiehnlab.ucdavis.edu/staff/kind/Metabolomics/MS-Adduct-Calculator]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002809 ! adduct ion attribute
 
