@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.31
-date: 31:10:2019 10:47
+data-version: 4.1.32
+date: 19:11:2019 13:36
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19673,6 +19673,13 @@ name: CPTAC accession number
 def: "Main identifier of a CPTAC dataset." [PSI:PI]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000878 ! external reference identifier
+
+[Term]
+id: MS:1003032
+name: compound identification confidence code in MS-DIAL
+def: "The confidence code to describe the confidence of annotated compounds as defined by the MS-DIAL program." [PMID:25938372, http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1002895 ! small molecule identification attribute
 
 [Term]
 id: PEFF:0000001
