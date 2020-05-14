@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.35
-date: 17:02:2020 15:39
-saved-by: Gerhard Mayer
+data-version: 4.1.36
+date: 13:05:2020 18:30
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20027,23 +20027,41 @@ is_a: MS:1002844 ! Experiment additional parameter
 [Term]
 id: MS:1003088
 name: truncation and zlib compression
-def: "Compression using truncation and zlib." [https://github.com/biospi/pwiz]
-xref: value-type:xsd\:int "The number of mantissa bits truncated."
+def: "Data array compression using mantissa bit truncation followed by zlib compression." [https://github.com/biospi/pwiz]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003089
 name: truncation, delta prediction and zlib compression
-def: "Compression using truncation, delta prediction and zlib." [https://github.com/biospi/pwiz]
-xref: value-type:xsd\:int "The number of mantissa bits truncated."
+def: "Data array compression using mantissa bit truncation, delta prediction and zlib compression." [https://github.com/biospi/pwiz]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003090
 name: truncation, linear prediction and zlib compression
-def: "Compression using truncation, linear prediction and zlib." [https://github.com/biospi/pwiz]
-xref: value-type:xsd\:int "The number of mantissa bits truncated."
+def: "Data array compression using mantissa bit truncation, linear prediction and zlib compression." [https://github.com/biospi/pwiz]
 is_a: MS:1000572 ! binary data compression type 
+
+[Term]
+id: MS:1003091
+name: binary data compression parameter
+def: "Settable parameter for a binary data compression event." [PSI:MS]
+relationship: part_of MS:1000442 ! spectrum
+relationship: part_of MS:1000625 ! chromatogram
+
+[Term]
+id: MS:1003092
+name: number of mantissa bits truncated
+def: "Number of extraneous mantissa bits truncated to improve subsequent compression."
+xref: value-type:xsd\:positiveInteger "Number of mantissa bits truncated."
+is_a: MS:1003091 ! binary data compression parameter
+
+[Term]
+id: MS:1003093
+name: Lys-N
+def: "Metalloendopeptidase found in the mushroom Grifola frondosa that cleaves proteins on the amino side of lysine residues." [https://en.wikipedia.org/wiki/Lys-N]
+is_a: MS:1001045 ! cleavage agent name
+relationship: has_regexp MS:1001335 ! (?=K)
 
 [Term]
 id: PEFF:0000001
