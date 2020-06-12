@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.36
-date: 13:05:2020 18:30
+data-version: 4.1.37
+date: 02:06:2020 18:30
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -20062,6 +20062,18 @@ name: Lys-N
 def: "Metalloendopeptidase found in the mushroom Grifola frondosa that cleaves proteins on the amino side of lysine residues." [https://en.wikipedia.org/wiki/Lys-N]
 is_a: MS:1001045 ! cleavage agent name
 relationship: has_regexp MS:1001335 ! (?=K)
+
+[Term]
+id: MS:1003094
+name: Orbitrap Exploris 240
+def: "Thermo Scientific Orbitrap Exploris 240 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003095
+name: Orbitrap Exploris 120
+def: "Thermo Scientific Orbitrap Exploris 120 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: PEFF:0000001
