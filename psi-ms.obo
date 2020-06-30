@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.37
-date: 02:06:2020 18:30
+data-version: 4.1.38
+date: 30:06:2020 14:30
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -12303,7 +12303,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1001910
 name: LTQ Orbitrap Elite
-def: "Thermo Scientific second generation Velos and Orbitrap." [PSI:MS]
+def: "Thermo Scientific LTQ Orbitrap Elite, often just referred to as the Orbitrap Elite." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -20073,6 +20073,12 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1003095
 name: Orbitrap Exploris 120
 def: "Thermo Scientific Orbitrap Exploris 120 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003096
+name: LTQ Orbitrap Velos Pro
+def: "Thermo Scientific LTQ Orbitrap Velos Pro, often just referred to as the Orbitrap Velos Pro." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
