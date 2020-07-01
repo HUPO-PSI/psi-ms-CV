@@ -20052,7 +20052,7 @@ relationship: part_of MS:1000625 ! chromatogram
 [Term]
 id: MS:1003092
 name: number of mantissa bits truncated
-def: "Number of extraneous mantissa bits truncated to improve subsequent compression."
+def: "Number of extraneous mantissa bits truncated to improve subsequent compression." [PSI:MS]
 xref: value-type:xsd\:positiveInteger "Number of mantissa bits truncated."
 is_a: MS:1003091 ! binary data compression parameter
 
