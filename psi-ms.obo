@@ -20082,6 +20082,13 @@ def: "Thermo Scientific LTQ Orbitrap Velos Pro, often just referred to as the Or
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
+id: MS:1003097
+name: MaxQuant: protein group-level score
+def: "The probability based MaxQuant protein group score." [PSI:MS]
+is_a: MS:1002368 ! search engine specific score for protein groups
+
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
