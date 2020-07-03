@@ -20083,10 +20083,39 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003097
-name: MaxQuant: protein group-level score
+name: MaxQuant:protein group-level score
 def: "The probability based MaxQuant protein group score." [PSI:MS]
 is_a: MS:1002368 ! search engine specific score for protein groups
 
+[Term]
+id: MS:1003098
+name: Andromeda:peptide PEP
+def: "Peptide probability from Andromeda." [PSI:MS]
+is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
+
+[Term]
+id: MS:1003099
+name: MaxQuant-DIA:peptide PEP
+def: "Peptide probability from MaxQuant-DIA algorithm." [PSI:MS]
+is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
+
+[Term]
+id: MS:1003100
+name: MaxQuant-DIA:score
+def: "PSM evidence score from MAxQuant-DIA algorithm." [PSI:MS]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1003101
+name: MaxQuant-DIA:PEP
+def: "PSM evidence PEP probability from MAxQuant-DIA algorithm." [PSI:MS]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1003102
+name: NIST msp spectrum reference
+def: "NIST msp spectrum reference name and comment" [PSI:MS]
+is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: PEFF:0000001
