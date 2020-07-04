@@ -20113,8 +20113,8 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 
 [Term]
 id: MS:1003102
-name: NIST msp spectrum reference
-def: "NIST msp spectrum reference name and comment" [PSI:MS]
+name: NIST msp comment
+def: "NIST msp comment" [PSI:MS]
 is_a: MS:1000499 ! spectrum attribute
 
 [Term]
