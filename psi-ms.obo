@@ -20102,13 +20102,13 @@ is_a: MS:1002358 ! search engine specific peptide sequence-level identification 
 [Term]
 id: MS:1003100
 name: MaxQuant-DIA score
-def: "PSM evidence score from MAxQuant-DIA algorithm." [PSI:MS]
+def: "PSM evidence score from MaxQuant-DIA algorithm." [PSI:MS]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 
 [Term]
 id: MS:1003101
 name: MaxQuant-DIA PEP
-def: "PSM evidence PEP probability from MAxQuant-DIA algorithm." [PSI:MS]
+def: "PSM evidence PEP probability from MaxQuant-DIA algorithm." [PSI:MS]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 
 [Term]
