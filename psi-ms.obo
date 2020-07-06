@@ -20114,7 +20114,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 [Term]
 id: MS:1003102
 name: NIST msp comment
-def: "NIST msp comment" [PSI:MS]
+def: "Term for a comment field withing the NIST msp file format" [PSI:MS]
 is_a: MS:1000499 ! spectrum attribute
 
 [Term]
