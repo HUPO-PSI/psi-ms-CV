@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.39
-date: 14:07:2020 14:30
+data-version: 4.1.40
+date: 16:07:2020 20:00
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -20152,6 +20152,33 @@ id: MS:1003107
 name: lipid ion interpretation format
 def: "Interpretation format designed specifically for lipid ion peaks." [PSI:MS]
 is_a: MS:1003103 ! ion interpretation format
+
+[Term]
+id: MS:1003108
+name: PatternLab
+def: "PatternLab for Proteomics is an integrated computational environment for analyzing shotgun proteomic data." [PSI:MS]
+is_a: MS:1001139 ! quantitation software name
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003109
+name: SIM-XL
+def: "Identifying cross-linked peptides in complex protein mixtures" [PSI:MS]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003110
+name: SIM-XL score
+def: "SIM-XL identification search engine score" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1003111
+name: QUIN-XL
+def: "Quantification of cross-linked peptides in complex protein mixtures" [PSI:MS]
+is_a: MS:1001139 ! quantitation software name
 
 [Term]
 id: PEFF:0000001
