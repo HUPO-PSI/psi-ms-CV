@@ -20181,6 +20181,12 @@ def: "Quantification of cross-linked peptides in complex protein mixtures" [PSI:
 is_a: MS:1001139 ! quantitation software name
 
 [Term]
+id: MS:1003112
+name: Orbitrap ID-X
+def: "Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
