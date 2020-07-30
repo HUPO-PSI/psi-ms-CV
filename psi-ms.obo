@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.40
-date: 16:07:2020 20:00
-saved-by: Eric Deutsch
+data-version: 4.1.41
+date: 30:07:2020 18:25
+saved-by: Matt Chambers
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20179,6 +20179,12 @@ id: MS:1003111
 name: QUIN-XL
 def: "Quantification of cross-linked peptides in complex protein mixtures" [PSI:MS]
 is_a: MS:1001139 ! quantitation software name
+
+[Term]
+id: MS:1003112
+name: Orbitrap ID-X
+def: "Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: PEFF:0000001
