@@ -20574,14 +20574,14 @@ xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 
 [Term]
-id: PEFF:0001035
+i: PEFF:0001035
 name: initiator methionine
 def: "N-terminal methionine residue of a protein that can be co-translationally cleaved." [PSI:PEFF]
-is_a: PEFF:0001032 ! PEFF molecule processing keyword
+isa: PEFF:0001032 ! PEFF molecule processing keyword
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 
-[Term]
+[Trm]
 id: PEFF:1002001
 name: regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 def: "([0-9]+|[A-Z*](|.+)?)." [PSI:PEFF]
@@ -20593,7 +20593,7 @@ name: regular expression for PEFF molecular sequence type
 def: "(AA|NA|DNA|cDNA|RNA|RNAi|tRNA|rRNA|siRNA|mDNA|mRNA|snoRNA|ncRNA|EST|[a-z0-9A-Z]+)." [PSI:PEFF]
 is_a: MS:1002479 ! regular expression
 
-[Term]
+[Instance]
 id: PEFF:1002002
 name: regular expression for PEFF sequence status
 def: "(Complete|Fragment|[a-z0-9A-Z]+)." [PSI:PEFF]
