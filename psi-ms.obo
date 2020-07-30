@@ -20594,7 +20594,7 @@ def: "(AA|NA|DNA|cDNA|RNA|RNAi|tRNA|rRNA|siRNA|mDNA|mRNA|snoRNA|ncRNA|EST|[a-z0-
 is_a: MS:1002479 ! regular expression
 
 [Term]
-id: PEFF:1002003
+id: PEFF:1002002
 name: regular expression for PEFF sequence status
 def: "(Complete|Fragment|[a-z0-9A-Z]+)." [PSI:PEFF]
 is_a: MS:1002479 ! regular expression
