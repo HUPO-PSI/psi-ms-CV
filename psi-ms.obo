@@ -20574,7 +20574,7 @@ xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 
 [Term]
-i: PEFF:0001035
+id: PEFF:0001035
 name: initiator methionine
 def: "N-terminal methionine residue of a protein that can be co-translationally cleaved." [PSI:PEFF]
 isa: PEFF:0001032 ! PEFF molecule processing keyword
