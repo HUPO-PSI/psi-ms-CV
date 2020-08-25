@@ -20203,15 +20203,27 @@ is_a: MS:1002358 ! search engine specific peptide sequence-level identification 
 
 [Term]
 id: MS:1003115
-name: OpenMS:Target-decoy q-value
-def: "The OpenMS Target-decoy q-values is computed at different levels psm, peptides and proteins" [PSI:MS]
+name: OpenMS:Target-decoy PSM q-value
+def: "The OpenMS Target-decoy q-values at PSM level" [PSI:MS]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
-is_a: MS:1002363 ! search engine specific score for proteins
 
 [Term]
 id: MS:1003116
+name: OpenMS:Target-decoy peptide q-value
+def: "The OpenMS Target-decoy q-values at Peptide sequence level" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
+
+[Term]
+id: MS:1003117
+name: OpenMS:Target-decoy protein q-value
+def: "The OpenMS Target-decoy q-values at protein level" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002363 ! search engine specific score for proteins
+
+[Term]
+id: MS:1003118
 name: EPIFANY
 def: "A Method for Efficient High-Confidence Protein Inference. The tool is part of the OpenMS framework" [PSI:MS]
 is_a: MS:1001456 ! analysis software
