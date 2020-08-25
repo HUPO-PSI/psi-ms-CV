@@ -20230,6 +20230,13 @@ is_a: MS:1001456 ! analysis software
 is_a: MS:1000752 ! TOPP software
 
 [Term]
+id: MS:1003119
+name: EPIFANY:Protein posterior probability
+def: "Protein Posterior probability calculated by EPIFANY protein inference algorithm" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002363 ! search engine specific score for proteins
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
