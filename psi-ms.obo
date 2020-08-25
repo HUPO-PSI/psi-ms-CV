@@ -20197,7 +20197,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 [Term]
 id: MS:1003114
 name: OpenMS:Best PSM Score
-def: "The OpenMS Best PSM selected as the Peptide score" [PSI:MS]
+def: "The score of the best PSM selected by the underlying identification tool" [PSI:MS]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
 
