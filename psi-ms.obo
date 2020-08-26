@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.41
-date: 30:07:2020 18:25
-saved-by: Matt Chambers
+data-version: 4.1.42
+date: 24:08:2020 18:25
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -11,6 +11,7 @@ namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
 remark: namespace: MS
 remark: namespace: PEFF
 remark: coverage: Mass spectrometer output files and spectra interpretation
+remark: creator: Yasset Perez-Riverol <yperez <-at-> ebi.ac.uk>
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
 remark: creator: Marius Kallhardt <Marius.Kallhardt <-at-> bdal.de>
@@ -20183,8 +20184,57 @@ is_a: MS:1001139 ! quantitation software name
 [Term]
 id: MS:1003112
 name: Orbitrap ID-X
-def: "Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+def: "Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003113
+name: OpenMS:ConsensusID PEP
+def: "The OpenMS ConsesusID tool posterior error probability" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1003114
+name: OpenMS:Best PSM Score
+def: "The score of the best PSM selected by the underlying identification tool" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
+
+[Term]
+id: MS:1003115
+name: OpenMS:Target-decoy PSM q-value
+def: "The OpenMS Target-decoy q-values at PSM level" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+
+[Term]
+id: MS:1003116
+name: OpenMS:Target-decoy peptide q-value
+def: "The OpenMS Target-decoy q-values at peptide sequence level" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
+
+[Term]
+id: MS:1003117
+name: OpenMS:Target-decoy protein q-value
+def: "The OpenMS Target-decoy q-values at protein level" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002363 ! search engine specific score for proteins
+
+[Term]
+id: MS:1003118
+name: EPIFANY
+def: "A Method for Efficient High-Confidence Protein Inference. The tool is part of the OpenMS framework" [PSI:MS]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1000752 ! TOPP software
+
+[Term]
+id: MS:1003119
+name: EPIFANY:Protein posterior probability
+def: "Protein Posterior probability calculated by EPIFANY protein inference algorithm" [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002363 ! search engine specific score for proteins
 
 [Term]
 id: PEFF:0000001
