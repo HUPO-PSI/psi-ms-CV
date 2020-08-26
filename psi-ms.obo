@@ -20211,7 +20211,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 [Term]
 id: MS:1003116
 name: OpenMS:Target-decoy peptide q-value
-def: "The OpenMS Target-decoy q-values at Peptide sequence level" [PSI:MS]
+def: "The OpenMS Target-decoy q-values at peptide sequence level" [PSI:MS]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
 
