@@ -20237,6 +20237,20 @@ xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1002363 ! search engine specific score for proteins
 
 [Term]
+id: MS:1003120
+name: OpenMS:LFQ intensity
+def: "The data type LFQ intensity produced by OpenMS." [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001805 ! quantification datatype
+
+[Term]
+id: MS:1003121
+name: OpenMS:LFQ spectral count
+def: "The data type LFQ spectral count produced by OpenMS." [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001805 ! quantification datatype
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
