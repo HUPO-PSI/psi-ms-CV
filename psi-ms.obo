@@ -10013,6 +10013,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 id: MS:1001581
 name: FAIMS compensation voltage
 def: "The DC potential applied to the asymmetric waveform in FAIMS that compensates for the difference between high and low field mobility of an ion." [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
 synonym: "FAIMS CV" EXACT []
 is_a: MS:1002892 ! ion mobility attribute
 
