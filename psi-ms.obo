@@ -10016,6 +10016,7 @@ def: "The DC potential applied to the asymmetric waveform in FAIMS that compensa
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 synonym: "FAIMS CV" EXACT []
 is_a: MS:1002892 ! ion mobility attribute
+relationship: has_units UO:0000218 ! volt
 
 [Term]
 id: MS:1001582
