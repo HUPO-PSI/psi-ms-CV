@@ -20251,6 +20251,12 @@ xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001805 ! quantification datatype
 
 [Term]
+id: MS:1003122
+name: rapiflex
+def: "Bruker Daltonics' autoflex: MALDI TOF/TOF." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
