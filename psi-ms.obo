@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.43
-date: 01:09:2020 18:25
+data-version: 4.1.44
+date: 08:09:2020 18:42
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -10013,8 +10013,10 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 id: MS:1001581
 name: FAIMS compensation voltage
 def: "The DC potential applied to the asymmetric waveform in FAIMS that compensates for the difference between high and low field mobility of an ion." [PSI:MS]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
 synonym: "FAIMS CV" EXACT []
 is_a: MS:1002892 ! ion mobility attribute
+relationship: has_units UO:0000218 ! volt
 
 [Term]
 id: MS:1001582
