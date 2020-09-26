@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.44
-date: 08:09:2020 18:42
+date: 25:09:2020 18:42
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -20251,6 +20251,12 @@ name: OpenMS:LFQ spectral count
 def: "The data type LFQ spectral count produced by OpenMS." [PSI:MS]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001805 ! quantification datatype
+
+[Term]
+id: MS:1003122
+name: rapifleX
+def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: PEFF:0000001
