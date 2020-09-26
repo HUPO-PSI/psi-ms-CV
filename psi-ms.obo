@@ -20254,7 +20254,7 @@ is_a: MS:1001805 ! quantification datatype
 
 [Term]
 id: MS:1003122
-name: rapiflex
+name: rapifleX
 def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
