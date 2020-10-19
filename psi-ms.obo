@@ -20259,6 +20259,150 @@ def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
+id: MS:1003123
+name: ProSight:spectral Q-value
+def: "ProSight spectrum-level Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002354 ! PSM-level q-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003124
+name: ProSight:spectral P-score
+def: "ProSight spectrum-level P-score." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003125
+name: ProSight:spectral E-value
+def: "ProSight spectrum-level E-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002353 ! PSM-level e-value
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003126
+name: ProSight:spectral C-score
+def: "ProSight spectrum-level C-score." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+
+[Term]
+id: MS:1003127
+name: proteoform-level Q-value
+def: "Estimation of the Q-value for proteoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1002905 ! proteoform-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003128
+name: ProSight:proteoform Q-value
+def: "ProSight proteoform-level Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1003127 ! proteoform-level Q-value
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003129
+name: isoform-level identification attribute
+def: "Isoform level information." [PSI:PI]
+is_a: MS:1002694 ! single identification result attribute
+
+[Term]
+id: MS:1003130
+name: isoform-level identification statistic
+def: "Identification confidence metric for a isoform." [PSI:PI]
+is_a: MS:1003129 ! isoform-level identification attribute
+
+[Term]
+id: MS:1003131
+name: isoform-level Q-value
+def: "Estimation of the Q-value for isoforms." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1003130 ! isoform-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+
+[Term]
+id: MS:1003132
+name: ProSight:isoform Q-value
+def: "ProSight isoform-level Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1003131 ! isoform-level Q-value
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003133
+name: ProSight:protein Q-value
+def: "ProSight protein-level Q-value." [PSI:PI]
+xref: value-type:xsd\:double "The allowed value-type for this CV term."
+is_a: MS:1001869 ! protein-level q-value
+relationship: has_order MS:1002109 ! lower score better
+
+[Term]
+id: MS:1003134
+name: ProSight input parameter
+def: "Search engine input parameters specific to ProSight." [PSI:PI]
+is_a: MS:1001302 ! search engine specific input parameter
+
+[Term]
+id: MS:1003135
+name: TDPortal input parameter
+def: "Search engine input parameters specific to TDPortal." [PSI:PI]
+is_a: MS:1001302 ! search engine specific input parameter
+
+[Term]
+id: MS:1003136
+name: ProSight:Run delta m mode
+def: "If true, runs delta m mode in ProSight."
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1003134 ! ProSight input parameter
+is_a: MS:1003135 ! TDPortal input parameter
+
+[Term]
+id: MS:1003137
+name: ProSight:Run Subsequence Search mode
+def: "If true, runs Subsequence Search mode in ProSight."
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1003134 ! ProSight input parameter
+is_a: MS:1003135 ! TDPortal input parameter
+
+[Term]
+id: MS:1003138
+name: ProSight:Run Annotated Proteoform Search mode
+def: "If true, runs Annotated Proteoform Search mode in ProSight."
+xref: value-type:xsd\:boolean "The allowed value-type for this CV term."
+is_a: MS:1003134 ! ProSight input parameter
+is_a: MS:1003135 ! TDPortal input parameter
+
+[Term]
+id: MS:1003139
+name: ProSight
+def: "ProSight: Database search engine for top-down proteomics."
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003140
+name: TDPortal
+def: "TDPortal: Database search engine for top-down proteomics."
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003141
+name: mass array
+def: "A data array of mass values." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1000513 ! binary data array
+relationship: has_units UO:0000221 ! dalton
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
