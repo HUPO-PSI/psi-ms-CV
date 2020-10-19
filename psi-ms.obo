@@ -20259,6 +20259,12 @@ def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
+id: MS:1003123
+name: timsTOF fleX
+def: "Bruker Daltonics' timsTOF fleX" [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
