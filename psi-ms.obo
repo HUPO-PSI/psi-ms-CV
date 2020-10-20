@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.44
-date: 25:09:2020 18:42
+data-version: 4.1.45
+date: 19:10:2020 18:42
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -19497,7 +19497,7 @@ is_a: MS:1001547 ! Bruker Daltonics maXis series
 id: MS:1003005
 name: timsTOF Pro
 def: "Bruker Daltonics' timsTOF Pro." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003006
@@ -20257,6 +20257,18 @@ id: MS:1003122
 name: rapifleX
 def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
 is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003123
+name: Bruker Daltonics timsTOF series
+def: "Bruker Daltonics timsTOF series" [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003124
+name: timsTOF fleX
+def: "Bruker Daltonics' timsTOF fleX" [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: PEFF:0000001
