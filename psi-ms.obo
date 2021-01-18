@@ -48,6 +48,12 @@ name: has_order
 id: has_domain
 name: has_domain
 
+[Typedef]
+id: has_value_type
+name: has value type
+def: "'Entity A' has value type 'Entity B', such as xsd:float." []
+is_transitive: true
+
 [Term]
 id: MS:0000000
 name: Proteomics Standards Initiative Mass Spectrometry Vocabularies
