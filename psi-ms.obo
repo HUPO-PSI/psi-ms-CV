@@ -63,8 +63,8 @@ def: "Proteomics Standards Initiative Mass Spectrometry Vocabularies." [PSI:MS]
 id: MS:1000001
 name: sample number
 def: "A reference number relevant to the sample under study." [PSI:MS]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000548 ! sample attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term.
 
 [Term]
 id: MS:1000002
@@ -83,9 +83,9 @@ is_a: MS:1000548 ! sample attribute
 id: MS:1000004
 name: sample mass
 def: "Total mass of sample used." [PSI:MS]
-xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000548 ! sample attribute
 relationship: has_units UO:0000021 ! gram
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term.
 
 [Term]
 id: MS:1000005
@@ -19183,9 +19183,9 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 id: MS:1002954
 name: collisional cross sectional area
 def: "Structural molecular descriptor for the effective interaction area between the ion and neutral gas measured in ion mobility mass spectrometry." [PSI:PI]
-xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1000861 ! molecular entity property
 relationship: has_units UO:0000324 ! square angstrom
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term.
 
 [Term]
 id: MS:1002955
@@ -19454,8 +19454,8 @@ is_a: MS:1000560 ! mass spectrometer file format
 id: MS:1002997
 name: ProteomeXchange dataset identifier reanalysis number
 def: "Index number of a reanalysis within a ProteomeXchange reprocessed dataset identifier container (RPXD)." [PSI:PI]
-xref: value-type:xsd\:nonNegativeInteger "The allowed value-type for this CV term."
 is_a: MS:1000878 ! external reference identifier
+relationship: has_value_type xsd:nonNegativeInteger ! The allowed value-type for this CV term.
 
 [Term]
 id: MS:1002998
