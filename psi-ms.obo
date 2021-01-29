@@ -20838,10 +20838,3 @@ id: PEFF:1002003
 name: regular expression for PEFF sequence status
 def: "(Complete|Fragment|[a-z0-9A-Z]+)." [PSI:PEFF]
 is_a: MS:1002479 ! regular expression
-
-[Term]
-id: MS:1000001
-name: sample number
-def: "DUPLICATE ! A reference number relevant to the sample under study." [PSI:MS]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000548 ! sample attribute
