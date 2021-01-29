@@ -1869,12 +1869,12 @@ is_obsolete: true
 [Term]
 id: MS:1000266
 name: Laser Desorption
-alt_id: MS:1000393
 def: "OBSOLETE The formation of ions through the interaction of a laser with a material or with gas-phase ions or molecules." [PSI:MS]
 comment: This term was made obsolete because it was replaced by laser desorption ionization (MS:1000393).
 synonym: "Laser Ionization MERGE" EXACT []
 synonym: "LD" EXACT []
 is_obsolete: true
+replaced_by: MS:1000393
 
 [Term]
 id: MS:1000267
