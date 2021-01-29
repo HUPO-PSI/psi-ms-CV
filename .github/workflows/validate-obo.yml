@@ -30,4 +30,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Check against duplicate IDs
-      run: test \"X$(grep '^id:' psi-ms.obo | sort | uniq -d)\" == \"X\"
+      run: bash -c 'test "X$(grep ^id: psi-ms.obo | sort | uniq -d)" == "X" '
