@@ -26,4 +26,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Validate OBO file
-      run: fastobo-validator psi-ms.obo
+      run: fastobo-validator --duplicates psi-ms.obo
