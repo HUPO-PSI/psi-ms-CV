@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.47
-date: 17:11:2020 00:00
-saved-by: Eric Deutsch
+data-version: 4.1.48
+date: 01:02:2021 19:50
+saved-by: Vladimir Gorshkov
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20419,6 +20419,19 @@ id: MS:1003144
 name: Triple Quad 7500
 def: "SCIEX Triple Quad 7500." [PSI:MS]
 is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003145
+name: ThermoRawFileParser
+def: "Cross-platform software to convert Thermo RAW files to a number of open formats." [PSI:MS]
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003146
+name: pyteomics
+def: "Python module that helps handling various proteomics data analysis tasks." [PSI:MS]
+is_a: MS:1001456 ! analysis software
+
 
 [Term]
 id: PEFF:0000001
