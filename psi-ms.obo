@@ -20423,15 +20423,14 @@ is_a: MS:1000121 ! SCIEX instrument model
 [Term]
 id: MS:1003145
 name: ThermoRawFileParser
-def: "Cross-platform software to convert Thermo RAW files to a number of open formats." [PSI:MS]
+def: "Cross-platform software to convert Thermo RAW files to a number of open formats." [DOI:10.1021/acs.jproteome.9b00328, PMID:31755270]
 is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1003146
 name: pyteomics
-def: "Python module that helps handling various proteomics data analysis tasks." [PSI:MS]
+def: "Python module that helps handling various proteomics data analysis tasks." [DOI:10.1021/acs.jproteome.8b00717, PMID:30576148]
 is_a: MS:1001456 ! analysis software
-
 
 [Term]
 id: PEFF:0000001
