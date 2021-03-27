@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.50
+data-version: 4.1.51
 date: 24:03:2021 00:00
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
@@ -3932,14 +3932,14 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1000568
 name: MD5
-def: "MD5 (Message-Digest algorithm 5) is a cryptographic hash function with a 128-bit hash value used to check the integrity of files." [PSI:MS]
+def: "MD5 (Message-Digest algorithm 5) is a (now deprecated) cryptographic hash function with a 128-bit hash value used to check the integrity of files." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000561 ! data file checksum type
 
 [Term]
 id: MS:1000569
 name: SHA-1
-def: "SHA-1 (Secure Hash Algorithm-1) is a cryptographic hash function designed by the National Security Agency (NSA) and published by the NIST as a U. S. government standard. It is also used to verify file integrity." [PSI:MS]
+def: "SHA-1 (Secure Hash Algorithm-1) is a cryptographic hash function designed by the National Security Agency (NSA). It is also used to verify file integrity. Since 2011 it has been deprecated by the NIST as a U. S. government standard." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000561 ! data file checksum type
 
@@ -14724,7 +14724,7 @@ relationship: has_units UO:0000218 ! volt
 
 [Term]
 id: MS:1002274
-name: SQ Detector 2	
+name: SQ Detector 2
 def: "Waters quadrupole based SQ Detector 2." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 
@@ -16345,7 +16345,7 @@ is_a: MS:1002363 ! search engine specific score for proteins
 
 [Term]
 id: MS:1002513
-name: molecules per cell 
+name: molecules per cell
 def: "The absolute abundance of protein in a cell." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001805 ! quantification datatype
@@ -16570,7 +16570,7 @@ relationship: has_order MS:1002108 ! higher score better
 
 [Term]
 id: MS:1002546
-name: Skyline mzQuantML converter 
+name: Skyline mzQuantML converter
 def: "A software package to convert Skyline report to mzQuantML." [PSI:PI, http://code.google.com/p/srm-mzquantml-convertor/]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
@@ -16584,7 +16584,7 @@ is_a: MS:1001805 ! quantification datatype
 [Term]
 id: MS:1002548
 name: distributed normalized spectral abundance factor
-def: "A distributed normalized spectral abundance factor (dNSAF)." [DOI:10.1021/ac9023999, PMID:20166708] 
+def: "A distributed normalized spectral abundance factor (dNSAF)." [DOI:10.1021/ac9023999, PMID:20166708]
 is_a: MS:1001805 ! quantification datatype
 
 [Term]
@@ -17795,7 +17795,7 @@ def: "A data array of parallel, independent m/z values for a sampling of noise a
 xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
 is_a: MS:1000513 ! binary data array
-relationship: has_units MS:1000040 ! m/z 
+relationship: has_units MS:1000040 ! m/z
 
 [Term]
 id: MS:1002744
@@ -19528,7 +19528,7 @@ relationship: has_units MS:1002814 ! volt-second per square centimeter
 id: MS:1003009
 name: Shimadzu Biotech LCD format
 def: "Shimadzu Biotech LCD file format." [PSI:PI]
-is_a: MS:1000560 ! mass spectrometer file format 
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:1003010
@@ -19633,7 +19633,7 @@ def: "The OpenPepXL score for a cross-link spectrum match." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 is_a: MS:1001153 ! search engine specific score
-relationship: has_order MS:1002108 ! higher score better 
+relationship: has_order MS:1002108 ! higher score better
 
 [Term]
 id: MS:1003025
@@ -20043,7 +20043,7 @@ is_a: MS:1000572 ! binary data compression type
 id: MS:1003090
 name: truncation, linear prediction and zlib compression
 def: "Data array compression using mantissa bit truncation, linear prediction and zlib compression." [https://github.com/biospi/pwiz]
-is_a: MS:1000572 ! binary data compression type 
+is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003091
@@ -20452,13 +20452,20 @@ name: PTMProphet normalized information content
 def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
- 
+
 [Term]
 id: MS:1003150
 name: PTMProphet information content
 def: " PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+
+[Term]
+id: MS:1003151
+name: SHA-256
+def: "SHA-256 (member of Secure Hash Algorithm-2 family) is a cryptographic hash function designed by the National Security Agency (NSA) and published by the NIST as a U. S. government standard. It is also used to verify file integrity." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000561 ! data file checksum type
 
 [Term]
 id: PEFF:0000001
