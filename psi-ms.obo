@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.49
-date: 03:05:2021 11:30
-saved-by: Matthew Robey
+data-version: 4.1.50
+date: 24:03:2021 00:00
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20431,6 +20431,34 @@ id: MS:1003146
 name: pyteomics
 def: "Python module that helps handling various proteomics data analysis tasks." [DOI:10.1021/acs.jproteome.8b00717, PMID:30576148]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003147
+name: PTMProphet probability
+def: "Probability that one mass modification has been correctly localized to a specific residue as computed by PTMProphet." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+
+[Term]
+id: MS:1003148
+name: PTMProphet mean best probability
+def: "PSM-specific average of the m best site probabilities over all potential sites where m is the number of modifications of a specific type, as computed by PTMProphet." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+
+[Term]
+id: MS:1003149
+name: PTMProphet normalized information content
+def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+ 
+[Term]
+id: MS:1003150
+name: PTMProphet information content
+def: " PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
 [Term]
 id: PEFF:0000001
