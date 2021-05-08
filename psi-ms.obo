@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.51
-date: 24:03:2021 00:00
-saved-by: Eric Deutsch
+data-version: 4.1.52
+date: 02:05:2021 00:00
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -19,6 +19,7 @@ remark: creator: Eric Deutsch <edeutsch <-at-> systemsbiology.org>
 remark: creator: Fredrik Levander <fredrik.levander <-at-> immun.lth.se>
 remark: creator: Pierre-Alain Binz <pierre-alain.binz <-at-> chuv.ch>
 remark: creator: Gerhard Mayer <mayerg97 <-at-> rub.de>
+remark: creator: Joshua Klein <jaklein <-at-> bu.edu>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -20466,6 +20467,12 @@ name: SHA-256
 def: "SHA-256 (member of Secure Hash Algorithm-2 family) is a cryptographic hash function designed by the National Security Agency (NSA) and published by the NIST as a U. S. government standard. It is also used to verify file integrity." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000561 ! data file checksum type
+
+[Term]
+id: MS:1003152
+name: GCMS-QP2010SE
+def: "Shimadzu Scientific Instruments GCMS-QP2010SE." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: PEFF:0000001
