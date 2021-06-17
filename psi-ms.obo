@@ -17640,7 +17640,7 @@ is_a: MS:1001180 ! Cleavage agent regular expression
 [Term]
 id: MS:1002708
 name: LysargiNase
-def: "Metalloproteinase found in Methanosarcina acetivorans that cleaves on the N-terminal side of lysine and arginine residues." [PMID:33517145]
+def: "Metalloproteinase found in Methanosarcina acetivorans that cleaves on the N-terminal side of lysine and arginine residues." [PMID:25419962]
 synonym: "Tryp-N" EXACT []
 is_a: MS:1001045 ! cleavage agent name
 relationship: has_regexp MS:1002707 ! (?=[KR])
