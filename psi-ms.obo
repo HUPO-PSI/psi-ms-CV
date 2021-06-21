@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.54
-date: 21:06:2021 00:00
-saved-by: Mathias Walzer
+data-version: 4.1.55
+date: 21:05:2021 00:00
+saved-by: Joshua Klei
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -17630,6 +17630,20 @@ id: MS:1002706
 name: protein group-level result list statistic
 def: "Attrbiute of an entire list of protein groups." [PSI:PI]
 is_a: MS:1002405 ! protein group-level result list attribute
+
+[Term]
+id: MS:1002707
+name: (?=[KR])
+def: "Regular expression for LysargiNase." [PSI:PI]
+is_a: MS:1001180 ! Cleavage agent regular expression
+
+[Term]
+id: MS:1002708
+name: LysargiNase
+def: "Metalloproteinase found in Methanosarcina acetivorans that cleaves on the N-terminal side of lysine and arginine residues." [PMID:25419962]
+synonym: "Tryp-N" EXACT []
+is_a: MS:1001045 ! cleavage agent name
+relationship: has_regexp MS:1002707 ! (?=[KR])
 
 [Term]
 id: MS:1002719
