@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.53
-date: 16:06:2021 00:00
+data-version: 4.1.54
+date: 21:06:2021 00:00
 saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -20535,6 +20535,12 @@ is_a: MS:1000792 ! isolation window attribute
 id: MS:1003160
 name: mzQC format
 def: "Proteomics Standards Initiative mzQC format for quality control data." [PSI:MS]
+is_a: MS:1003161 ! quality control data format
+
+[Term]
+id: MS:1003161
+name: quality control data format
+def: "Grouping term for quality control data formats." [PSI:MS]
 is_a: MS:1001459 ! file format
 
 [Term]
