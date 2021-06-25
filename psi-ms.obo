@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.55
-date: 21:05:2021 00:00
-saved-by: Joshua Klei
+data-version: 4.1.56
+date: 25:06:2021 00:00
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20556,6 +20556,13 @@ id: MS:1003161
 name: quality control data format
 def: "Grouping term for quality control data formats." [PSI:MS]
 is_a: MS:1001459 ! file format
+
+[Term]
+id: MS:1003162
+name: PTX-QC
+def: "Proteomics (PTX) - QualityControl (QC) software for QC report generation and visualization" [DOI:10.1021/acs.jproteome.5b00780, PMID:26653327, https://github.com/cbielow/PTXQC/]
+is_a: MS:1001456 ! analysis software
+synonym: "PTXQC" EXACT []
 
 [Term]
 id: PEFF:0000001
