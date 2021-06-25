@@ -20464,14 +20464,15 @@ relationship: has_regexp MS:1002505 ! regular expression for modification locali
 [Term]
 id: MS:1003149
 name: PTMProphet normalized information content
-def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: "PTMProphet-computed PSM-specific normalized (0.0 - 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+
 
 [Term]
 id: MS:1003150
 name: PTMProphet information content
-def: " PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: "PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
