@@ -20893,6 +20893,13 @@ def: "Grouping term for quality control data formats." [PSI:MS]
 is_a: MS:1001459 ! file format
 
 [Term]
+id: MS:1003162
+name: analyte mixture members
+def: "The set of analyte identifiers that compose an interpretation of a spectrum." [PSI:PI]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type MS:1002711 ! list of strings
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
