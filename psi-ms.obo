@@ -17814,12 +17814,6 @@ def: "A data type defining a list of values of a single type." []
 is_a: MS:1002709 ! compound data type
 
 [Term]
-id: MS:1002710
-name: list of type
-def: "A data type defining a list of values of a single type." []
-is_a: MS:1002709 ! compound data type
-
-[Term]
 id: MS:1002711
 name: list of strings
 def: "A list of xsd:string." []
