@@ -2,7 +2,9 @@ name: New Term Request
 description: Request a new term for the PSI-MS controlled vocabulary
 body:
   - type: textarea
-    description: Describe the new term or terms you would like to add.
-    placeholder: "Describe the new term or terms in words and/or as snippets of OBO format"
+    id: term description
+    attributes:
+      label: Describe the new term or terms you would like to add.
+      placeholder: "Describe the new term or terms in words and/or as snippets of OBO format"
     validations:
       required: true
