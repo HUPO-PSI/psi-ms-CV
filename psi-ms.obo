@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.55
-date: 21:05:2021 00:00
-saved-by: Joshua Klei
+data-version: 4.1.56
+date: 25:06:2021 00:00
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -20464,14 +20464,15 @@ relationship: has_regexp MS:1002505 ! regular expression for modification locali
 [Term]
 id: MS:1003149
 name: PTMProphet normalized information content
-def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: "PTMProphet-computed PSM-specific normalized (0.0 - 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
+
 
 [Term]
 id: MS:1003150
 name: PTMProphet information content
-def: " PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: "PTMProphet-computed PSM-specific measure of information content per modification type ranging from 0 to m, where m is the number of modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
@@ -20556,6 +20557,13 @@ id: MS:1003161
 name: quality control data format
 def: "Grouping term for quality control data formats." [PSI:MS]
 is_a: MS:1001459 ! file format
+
+[Term]
+id: MS:1003162
+name: PTX-QC
+def: "Proteomics (PTX) - QualityControl (QC) software for QC report generation and visualization." [DOI:10.1021/acs.jproteome.5b00780, PMID:26653327, https://github.com/cbielow/PTXQC/]
+is_a: MS:1001456 ! analysis software
+synonym: "PTXQC" EXACT []
 
 [Term]
 id: PEFF:0000001
