@@ -17799,21 +17799,18 @@ id: MS:1002711
 name: list of strings
 def: "A list of xsd:string." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:string ! None
 
 [Term]
 id: MS:1002712
 name: list of integers
 def: "A list of xsd:integer." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:integer ! None
 
 [Term]
 id: MS:1002713
 name: list of floats
 def: "A list of xsd:float." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:float ! None
 
 [Term]
 id: MS:1002719
@@ -20872,7 +20869,7 @@ id: MS:1003162
 name: analyte mixture members
 def: "The set of analyte identifiers that compose an interpretation of a spectrum." [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
-relationship: has_value_type MS:1002711 ! list of strings
+relationship: has_value_type MS:1002712 ! list of integers
 
 [Term]
 id: PEFF:0000001
