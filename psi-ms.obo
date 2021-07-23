@@ -18559,6 +18559,38 @@ is_a: MS:1001045 ! cleavage agent name
 relationship: has_regexp MS:1002707 ! (?=[KR])
 
 [Term]
+id: MS:1002709
+name: compound data type
+def: "A data type representing more than a single value." []
+
+[Term]
+id: MS:1002710
+name: list of type
+def: "A data type defining a list of values of a single type." []
+is_a: MS:1002709 ! compound data type
+
+[Term]
+id: MS:1002711
+name: list of strings
+def: "A list of xsd:string." []
+is_a: MS:1002710 ! list of type
+relationship: has_value_type: xsd\:string
+
+[Term]
+id: MS:1002712
+name: list of integers
+def: "A list of xsd:integer." []
+is_a: MS:1002710 ! list of type
+relationship: has_value_type: xsd\:integer
+
+[Term]
+id: MS:1002713
+name: list of floats
+def: "A list of xsd:float." []
+is_a: MS:1002710 ! list of type
+relationship: has_value_type: xsd\:float
+
+[Term]
 id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
@@ -21615,6 +21647,13 @@ id: MS:1003161
 name: quality control data format
 def: "Grouping term for quality control data formats." [PSI:MS]
 is_a: MS:1001459 ! file format
+
+[Term]
+id: MS:1003162
+name: analyte mixture members
+def: "The set of analyte identifiers that compose an interpretation of a spectrum." [PSI:PI]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type MS:1002712 ! list of integers
 
 [Term]
 id: PEFF:0000001
