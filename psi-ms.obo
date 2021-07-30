@@ -18574,21 +18574,21 @@ id: MS:1002711
 name: list of strings
 def: "A list of xsd:string." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type: xsd\:string
+relationship: has_value_type xsd\:string
 
 [Term]
 id: MS:1002712
 name: list of integers
 def: "A list of xsd:integer." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type: xsd\:integer
+relationship: has_value_type xsd\:integer
 
 [Term]
 id: MS:1002713
 name: list of floats
 def: "A list of xsd:float." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type: xsd\:float
+relationship: has_value_type xsd\:float
 
 [Term]
 id: MS:1002719
