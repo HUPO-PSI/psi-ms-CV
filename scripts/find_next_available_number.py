@@ -26,10 +26,10 @@ def collect_gaps(stream, min_value=1000300):
                     gaps.append((cv, last_in_cv + i))
                 print(f"Found gap {gaps[-diff + 1]} to {gaps[-1]}")
             last_seen[cv] = acc
-    return gaps
+    return gaps, last_seen
 
 
 if __name__ == "__main__":
     path = sys.argv[1]
     with open(path, 'rt') as stream:
-        gaps = collect_gaps(stream)
+        gaps, last_seen = collect_gaps(stream)

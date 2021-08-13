@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.57
+data-version: 4.1.59
 date: 21:05:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -19790,7 +19790,7 @@ id: MS:1002897
 name: isotopomer peak
 def: "OBSOLETE Identifies a peak when no de-isotoping has been performed. The value slot reports the isotopomer peak, e.g. '2H', '13C', '15N', '18O', '31P'." [PSI:PI]
 comment: This term was obsoleted because it was replaced by the more exact terms MS:1002956 'isotopic ion MS peak', MS:1002957 'isotopomer MS peak' and MS:1002958 'isotopologue MS peak' instead.
-xref: value-type:xsd:string "The allowed value-type for this CV term."
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000231 ! peak
 is_obsolete: true
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -20232,7 +20232,7 @@ relationship: has_value_type xsd\:double ! The allowed value-type for this CV te
 id: MS:1002955
 name: hr-ms compound identification confidence level
 def: "Refined High Resolution mass spectrometry confidence level for annotation of identified compounds as proposed by Schymanski et al. The value slot can have the values 'Level 1', 'Level 2', 'Level 2a', 'Level 2b', 'Level 3', 'Level 4', and 'Level 5'." [PMID:24476540]
-xref: value-type:xsd:string "The allowed value-type for this CV term."
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002895 ! small molecule identification attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -21661,6 +21661,136 @@ name: analyte mixture members
 def: "The set of analyte identifiers that compose an interpretation of a spectrum." [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type MS:1002712 ! list of integers
+
+[Term]
+id: MS:1003164
+name: assigned intensity fraction
+def: "Fraction of intensity summed from all peaks that can be attributed to expected fragments of the analyte, divided by the intensity summed from all peaks in the spectrum" [PSI:PI]
+is_a: MS:1003078 ! interpreted spectrum attribute
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003165
+name: MSn-1 isolation window precursor purity
+def: "The fraction of total intensities in the isolation window in the previous round of MS (i.e. the MSn-1 scan) that can be assigned to this identified analyte" [PSI:PI]
+is_a: MS:1003078 ! interpreted spectrum attribute
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003166
+name: library entry comment
+def: "A free-text string providing additional information of the library entry not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
+is_a: MS:1003166 ! library entry attribute
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string
+
+[Term]
+id: MS:1003167
+name: proforma peptidoform sequence
+def: "Sequence string describing the amino acids and mass modifications of a peptidoform using the PSI ProForma notation" [PSI:PI]
+is_a: MS:1000889 ! peptidoform sequence
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string
+
+[Term]
+id: MS:1003168
+name: spectral library
+def: "A collection of spectra organized by their originating analyte, compiled deliberately for use in MS data analysis in future experiments" [PSI:PI]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003169
+name: spectral library attribute
+def: "An attribute of a spectral library" [PSI:PI]
+relationship: part_of MS:1003168 ! spectral library
+
+[Term]
+id: MS:1003170
+name: library entry
+def: "An entry in a spectral library representing a spectrum" [PSI:PI]
+relationship: part_of MS:1003168 ! spectral library
+
+[Term]
+id: MS:1003171
+name: numeric attribute
+def: "An attribute that takes on a numeric value" [PSI:PI]
+is_a: MS:1000547 ! object attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003172
+name: attribute maximum
+def: "The maximum value for this attribute" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003173
+name: attribute minimum
+def: "The minimum value for this attribute" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003174
+name: attribute mean
+def: "The arithmetic mean value for this attribute" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003175
+name: attribute standard deviation
+def: "The standard deviation (exact value of population, or estimate from sample) of this attribute" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003176
+name: attribute coefficient of variation
+def: "The coefficient of variation of this attribute, i.e. standard deviation divided by the mean" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003177
+name: attribute summary value
+def: "The most appropriate summary value of the attribute, usually but not necessarily the mean" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
+
+[Term]
+id: MS:1003178
+name: attribute median
+def: "The median of this attribute" [PSI:PI]
+relationship: part_of MS:1003171 ! numeric attribute
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:int
+relationship: has_value_type xsd\:float
 
 [Term]
 id: PEFF:0000001
