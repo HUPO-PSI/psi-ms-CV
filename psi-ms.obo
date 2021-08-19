@@ -21663,6 +21663,13 @@ is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type MS:1002712 ! list of integers
 
 [Term]
+id: MS:1003164
+name: Electron-Transfer/Collision-Induced Dissociation (ETciD)
+def: "A dissociation process combining electron-transfer and collision-induced dissociation (ETciD). It combines ETD and CID." [PSI:PI]
+synonym: "ETciD" EXACT []
+is_a: MS:1000044 ! dissociation method
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
