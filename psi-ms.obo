@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.57
-date: 21:05:2021 00:00
-saved-by: Joshua Klein
+data-version: 4.1.58
+date: 11:08:2021 00:00
+saved-by: Wout Bittremieux
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -21661,6 +21661,19 @@ name: analyte mixture members
 def: "The set of analyte identifiers that compose an interpretation of a spectrum." [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type MS:1002712 ! list of integers
+
+[Term]
+id: MS:1003164
+name: QuaMeter IDFree
+def: "QuaMeter IDFree software for QC metric calculation." [DOI:10.1021/ac4034455, PMID:24494671]
+is_a: MS:1001456 ! analysis software
+synonym: "QuaMeter" EXACT []
+
+[Term]
+id: MS:1003165
+name: iMonDB
+def: "iMonDB software to extract, store, and manage mass spectrometry instrument parameters from raw data files." [DOI:10.1021/acs.jproteome.5b00127, PMID:25798920, https://github.com/bittremieux/iMonDB]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: PEFF:0000001
