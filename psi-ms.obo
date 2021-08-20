@@ -21681,7 +21681,7 @@ name: assigned intensity fraction
 def: "Fraction of intensity summed from all peaks that can be attributed to expected fragments of the analyte, divided by the intensity summed from all peaks in the spectrum" [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003167
@@ -21689,7 +21689,7 @@ name: MSn-1 isolation window precursor purity
 def: "The fraction of total intensities in the isolation window in the previous round of MS (i.e. the MSn-1 scan) that can be assigned to this identified analyte" [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003168
@@ -21697,7 +21697,7 @@ name: library entry comment
 def: "A free-text string providing additional information of the library entry not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
 is_a: MS:1003166 ! library entry attribute
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:string
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003169
@@ -21705,7 +21705,7 @@ name: proforma peptidoform sequence
 def: "Sequence string describing the amino acids and mass modifications of a peptidoform using the PSI ProForma notation" [PSI:PI]
 is_a: MS:1000889 ! peptidoform sequence
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:string
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003170
