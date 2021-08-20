@@ -18574,21 +18574,21 @@ id: MS:1002711
 name: list of strings
 def: "A list of xsd:string." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:string
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002712
 name: list of integers
 def: "A list of xsd:integer." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:integer
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002713
 name: list of floats
 def: "A list of xsd:float." []
 is_a: MS:1002710 ! list of type
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002719
@@ -19793,7 +19793,7 @@ comment: This term was obsoleted because it was replaced by the more exact terms
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000231 ! peak
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002898
@@ -20234,7 +20234,7 @@ name: hr-ms compound identification confidence level
 def: "Refined High Resolution mass spectrometry confidence level for annotation of identified compounds as proposed by Schymanski et al. The value slot can have the values 'Level 1', 'Level 2', 'Level 2a', 'Level 2b', 'Level 3', 'Level 4', and 'Level 5'." [PMID:24476540]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1002895 ! small molecule identification attribute
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002956
@@ -21719,8 +21719,8 @@ def: "An attribute that takes on a numeric value" [PSI:PI]
 is_a: MS:1000547 ! object attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003172
@@ -21729,8 +21729,8 @@ def: "The maximum value for this attribute" [PSI:PI]
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003173
@@ -21739,8 +21739,8 @@ def: "The minimum value for this attribute" [PSI:PI]
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003174
@@ -21749,8 +21749,8 @@ def: "The arithmetic mean value for this attribute" [PSI:PI]
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003175
@@ -21759,8 +21759,8 @@ def: "The standard deviation (exact value of population, or estimate from sample
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003176
@@ -21769,8 +21769,8 @@ def: "The coefficient of variation of this attribute, i.e. standard deviation di
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003177
@@ -21779,8 +21779,8 @@ def: "The most appropriate summary value of the attribute, usually but not neces
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003178
@@ -21789,8 +21789,8 @@ def: "The median of this attribute" [PSI:PI]
 relationship: part_of MS:1003171 ! numeric attribute
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:int
-relationship: has_value_type xsd\:float
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
