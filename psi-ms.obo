@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.58
-date: 11:08:2021 00:00
-saved-by: Wout Bittremieux
+data-version: 4.1.59
+date: 10:09:2021 00:00
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
