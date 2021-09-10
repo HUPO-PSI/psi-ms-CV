@@ -21676,6 +21676,24 @@ def: "iMonDB software to extract, store, and manage mass spectrometry instrument
 is_a: MS:1001456 ! analysis software
 
 [Term]
+id: MS:1003183
+name: Synapt XS
+def: "Waters oa-ToF based Synapt XS." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003184
+name: SELECT SERIES Cyclic IMS
+def: "Waters oa-ToF based SELECT SERIES Cyclic IMS." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003185
+name: SELECT SERIES MRT
+def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
