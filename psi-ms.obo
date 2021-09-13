@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.60
+data-version: 4.1.61
 date: 13:09:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -17987,10 +17987,10 @@ is_a: MS:1002622 ! iTRAQ reagent
 
 [Term]
 id: MS:1002631
-name: Electron-Transfer/Higher-Energy Collision Dissociation (EThcD)
-def: "A dissociation process combining electron-transfer and higher-energy collision dissociation (EThcD). It combines ETD (reaction time) followed by HCD (activation energy)." [PSI:PI]
+name: electron-transfer/higher-energy collision dissociation
+def: "Dissociation process combining electron-transfer dissociation and higher-energy collision dissociation. It combines ETD (reaction time) followed by HCD (activation energy)." [PSI:PI]
 synonym: "EThcD" EXACT []
-is_a: MS:1000044 ! dissociation method
+is_a: MS:1003181 ! combined dissociation method
 
 [Term]
 id: MS:1002632
@@ -21805,6 +21805,18 @@ xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
+[Term]
+id: MS:1003181
+name: combined dissociation method
+def: "Combination of two or more dissociation methods that are known by a special term." [PSI:PI]
+is_a: MS:1000044 ! dissociation method
+
+[Term]
+id: MS:1003182
+name: electron-transfer/collision-induced dissociation
+def: "Dissociation process combining electron-transfer dissociation (ETD) and collision-induced dissociation (CID)." [PSI:PI]
+synonym: "ETciD" EXACT []
+is_a: MS:1003181 ! combined dissociation method
 
 [Term]
 id: MS:1003183
