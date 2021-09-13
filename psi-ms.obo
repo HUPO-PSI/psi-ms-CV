@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.59
-date: 21:05:2021 00:00
+data-version: 4.1.60
+date: 13:09:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -21804,6 +21804,25 @@ xref: value-type:xsd\:int "The allowed value-type for this CV term."
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003183
+name: Synapt XS
+def: "Waters oa-ToF based Synapt XS." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003184
+name: SELECT SERIES Cyclic IMS
+def: "Waters oa-ToF based SELECT SERIES Cyclic IMS." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003185
+name: SELECT SERIES MRT
+def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: PEFF:0000001
