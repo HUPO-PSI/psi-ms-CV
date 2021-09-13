@@ -1,4 +1,4 @@
-name: New Term Software Term
+name: New Software Term
 description: A shorthand term request for a new software term
 body:
   - type: input
