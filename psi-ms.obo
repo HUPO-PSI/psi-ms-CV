@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.61
-date: 13:09:2021 00:00
+data-version: 4.1.62
+date: 24:09:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -21835,6 +21835,184 @@ id: MS:1003185
 name: SELECT SERIES MRT
 def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
+
+
+[Term]
+id: MS:1003186
+name: library format version
+def: "Version number of the [PSI] library format specification" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003187
+name: library identifier
+def: "Short identifier for the library for easy reference, preferably but not necessarily globally unique" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003188
+name: library name
+def: "A short name identifying the library to potential users. The same name may refer to multiple versions of the same continually updated library." [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003189
+name: library description
+def: "Extended free-text description of the library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003190
+name: library version
+def: "Version number of the library, usually refering to a certain release of a continually updated library " [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003191
+name: library URI
+def: "URI or URL that uniquely identifies the library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003192
+name: decoy spectrum
+def: "A spectrum deliberately introduced into a spectral library that necessarily produces incorrect identifications when matched, for the purpose of error control in spectral library searching" [PSI:PI]
+is_a: MS:1003072 ! spectrum origin type
+
+
+[Term]
+id: MS:1003193
+name: shuffle-and-reposition decoy spectrum
+def: "A decoy spectrum generated from a real spectrum, by shuffling the amino acid sequence of the identification of the real spectrum, followed by re-positioning annotated peaks to match the shuffled sequence." [PSI:PI]
+is_a: MS:1003192 ! decoy spectrum
+
+
+[Term]
+id: MS:1003194
+name: precursor shift decoy spectrum
+def: "A decoy spectrum generated from a real spectrum, by changing the precursor m/z value of the real spectrum." [PSI:PI]
+is_a: MS:1003192 ! decoy spectrum
+
+
+[Term]
+id: MS:1003195
+name: unnatural peptidoform decoy spectrum
+def: "A decoy spectrum that is either a real spectrum of an unnatural peptidoform (e.g. a synthetic peptide that cannot be found in nature), or an artificial spectrum predicted for such unnatural peptidoform" [PSI:PI]
+is_a: MS:1003192 ! decoy spectrum
+
+
+[Term]
+id: MS:1003196
+name: unrelated species decoy spectrum
+def: "A decoy spectrum that is a real spectrum of a naturally occuring peptidoform of an unrelated species that should not be found in the sample" [PSI:PI]
+is_a: MS:1003192 ! decoy spectrum
+
+
+[Term]
+id: MS:1003197
+name: license URI
+def: "URI of the license controlling use of the library (e.g. https://creativecommons.org/publicdomain/zero/1.0/)" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003198
+name: copyright notice
+def: "Notice of statutorily prescribed form that informs users of the underlying claim to copyright ownership in a published work" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003199
+name: change log
+def: "Extended free-text description of the difference from the previous version" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003200
+name: software version
+def: "Version number of the software package used for library creation" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003201
+name: library provenance attribute
+def: "Abstract term containing several different types of provenance information" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+
+[Term]
+id: MS:1003202
+name: input parameters string
+def: "String of input parameters specified when invoking a data analysis tool" [PSI:PI]
+is_a: MS:1003201 ! library provenance attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003203
+name: constituent spectrum file
+def: "Spectrum data file from which (at least) a subset of spectra were extracted from. Should use USI notation mzspec:PXDxxxx:msRunName if possible, or a URI if USI notation is not possible." [PSI:PI]
+is_a: MS:1003201 ! library provenance attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003204
+name: constituent identification file
+def: "Identification file where (at least) a subset of identifications were extracted from. Should use a URI if possible" [PSI:PI]
+is_a: MS:1003201 ! library provenance attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003205
+name: constituent library file
+def: "Source library URI which(at least) a subset of spectra were extracted from." [PSI:PI]
+is_a: MS:1003201 ! library provenance attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003206
+name: library creation log
+def: "String of logging information generated when the library was constructed from its constituent files. Multiple lines should be separated with escaped \n" [PSI:PI]
+is_a: MS:1003201 ! library provenance attribute
+xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
 
 [Term]
 id: PEFF:0000001
