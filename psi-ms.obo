@@ -21836,6 +21836,48 @@ name: SELECT SERIES MRT
 def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
 
+
+[Term]
+id: MS:1003207
+name: mass spectrometry workflow
+def: "TBD"
+is_a: MS:1000524 ! data file content
+
+[Term]
+id: MS:1003208
+name: data independent acquisition
+def: "TBD"
+is_a: MS:1003207 ! mass spectrometry workflow
+
+[Term]
+id: MS:1003209
+name: dissociation of full mass range
+def: "MS^e, AIF, p2cid"
+is_a: MS:1003207 ! mass spectrometry workflow
+
+[Term]
+id: MS:1003210
+name: dissociation of scanning quadrupole across a specified mass range
+def: "SONAR"
+
+[Term]
+id: MS:1003211
+name: dissociation of sequential mass ranges
+def: "SWATH-MS, FT-ARM, HRM, PAcIFIC"
+is_a: MS:1003207 ! mass spectrometry workflow
+
+[Term]
+id: MS:1003212
+name: ion mobility separation
+def: "HDMS^e, IMS-AIF, diaPASEF"
+is_a: MS:1003207 ! mass spectrometry workflow
+
+[Term]
+id: MS:1003213
+name: deconvoluted data
+def: "TBD"
+is_a: MS:1003207 ! mass spectrometry workflow
+
 [Term]
 id: PEFF:0000001
 name: PEFF CV term
