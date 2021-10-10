@@ -12709,6 +12709,7 @@ name: command-line parameters
 def: "Parameters string passed to a command-line interface software application, omitting the executable name." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000630 ! data processing parameter
+is_a: MS:1003201 ! library provenance attribute
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
@@ -21967,15 +21968,6 @@ id: MS:1003201
 name: library provenance attribute
 def: "Abstract term containing several different types of provenance information" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
-
-
-[Term]
-id: MS:1003202
-name: input parameters string
-def: "String of input parameters specified when invoking a data analysis tool" [PSI:PI]
-is_a: MS:1003201 ! library provenance attribute
-xref: value-type:xsd:string "The allowed value-type for this CV term."
-relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 
 [Term]
