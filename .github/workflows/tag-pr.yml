@@ -22,8 +22,8 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: GitHub Tag
         uses: mathieudutour/github-tag-action@v5.6
-          with:
-            dry_run: true
-            github_token: secrets.PSI_MS_CV_GITHUB_TOKEN
-            pre_release_branches: test-tag
-            custom_tag: ${{ env.CV_VERSION }}
+        with:
+          dry_run: true
+          github_token: secrets.PSI_MS_CV_GITHUB_TOKEN
+          pre_release_branches: test-tag
+          custom_tag: ${{ env.CV_VERSION }}
