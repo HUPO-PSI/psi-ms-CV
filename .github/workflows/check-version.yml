@@ -4,9 +4,16 @@ name: check-for-obo-version-update
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - main
+    paths:
+      - 'psi-ms.obo'
+
   pull_request:
     branches: [ master ]
+    paths:
+      - 'psi-ms.obo'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
