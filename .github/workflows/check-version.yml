@@ -4,7 +4,10 @@ name: check-for-obo-version-update
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - main
+
   pull_request:
     branches: [ master ]
 
