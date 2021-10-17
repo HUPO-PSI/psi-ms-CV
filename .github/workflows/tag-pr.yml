@@ -24,8 +24,10 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL
         run: |
+          git rm psi-ms.owl
           wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -O robot.jar
           java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
+          rm robot.jar
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           git add psi-ms.owl
