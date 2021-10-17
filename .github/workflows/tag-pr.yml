@@ -1,4 +1,4 @@
-name: tag-new-version
+name: generate-owl-tag-release
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -20,6 +20,10 @@ jobs:
           CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
           echo CV_VERSION=${CV_VERSION}
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+      - name: Generate OWL
+        run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -o robot.jar
+          java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
       - name: GitHub Tag
         uses: mathieudutour/github-tag-action@v5.6
         with:
