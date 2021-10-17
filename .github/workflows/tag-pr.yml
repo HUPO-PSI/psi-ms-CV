@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - test-tag
+    paths-ignore:
+      - 'psi-ms.owl'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -22,8 +24,11 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL
         run: |
-          wget https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -o robot.jar
+          wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -O robot.jar
           java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
+          git add psi-ms.owl
+          git commit -m "Generate OWL file"
+          git push
       - name: GitHub Tag
         uses: mathieudutour/github-tag-action@v5.6
         with:
