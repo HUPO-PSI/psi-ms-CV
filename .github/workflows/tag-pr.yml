@@ -30,6 +30,7 @@ jobs:
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
+          echo $OWL_CHANGE
           if [ -z "$OWL_CHANGE" ]
           then
             git add psi-ms.owl
