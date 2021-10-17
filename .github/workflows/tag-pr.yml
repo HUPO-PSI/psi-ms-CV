@@ -30,9 +30,10 @@ jobs:
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
-          echo $OWL_CHANGE
           if [ -z "$OWL_CHANGE" ]
           then
+            echo OWL did not change, not committing
+          else
             git add psi-ms.owl
             git commit -m "Generate OWL file"
             git push
