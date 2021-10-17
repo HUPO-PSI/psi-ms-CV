@@ -5,6 +5,8 @@ name: generate-owl-tag-release
 on:
   push:
     branches:
+      - master
+      - main
       - test-tag
     paths-ignore:
       - 'psi-ms.owl'
@@ -33,6 +35,7 @@ jobs:
           if [ -z "$OWL_CHANGE" ]
           then
             echo OWL did not change, not committing
+            exit 1
           else
             git add psi-ms.owl
             git commit -m "Generate OWL file"
