@@ -8,6 +8,8 @@ on:
       - master
       - main
       - test-tag
+    paths:
+      - 'psi-ms.obo'
     paths-ignore:
       - 'psi-ms.owl'
 
@@ -26,6 +28,7 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL
         run: |
+          echo Downloading robot.jar: https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar
           wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -O robot.jar -o /dev/null
           java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
           rm robot.jar
@@ -34,9 +37,10 @@ jobs:
           OWL_CHANGE=`git diff psi-ms.owl`
           if [ -z "$OWL_CHANGE" ]
           then
-            echo OWL did not change, not committing
+            echo OWL did not change, aborting
             exit 1
           else
+            echo OWL updated, committing and proceeding to tag
             git add psi-ms.owl
             git commit -m "Generate OWL file"
             git push
