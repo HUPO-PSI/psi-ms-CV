@@ -1,0 +1,34 @@
+name: try-robot-in-docker
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - master
+      - main
+      - test-tag
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract version from OBO
+        run: |
+          CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
+          echo CV_VERSION=${CV_VERSION}
+          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+      - name: Generate OWL
+        run: |
+          # echo Downloading robot.jar: https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar
+          # wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -O robot.jar -o /dev/null
+          # java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
+          # rm robot.jar
+          echo `stat psi-ms.owl`
+          docker pull obolibrary/robot:v1.8.1
+          docker run --rm obolibrary/robot:v1.8.1 -v ${{ github.workspace }}:/work -it robot convert -i /work/psi-ms.obo -o /work/psi-ms.owl --format.owl
+          echo `stat psi-ms.owl`
