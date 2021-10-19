@@ -24,12 +24,11 @@ jobs:
           CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
           echo CV_VERSION=${CV_VERSION}
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
-      - name: Generate OWL
+      - name: Generate OWL and Commit
         run: |
-          echo Downloading robot.jar: https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar
-          wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.8.1/robot.jar -O robot.jar -o /dev/null
-          java -jar robot.jar convert -i psi-ms.obo -o psi-ms.owl --format owl
-          rm robot.jar
+          docker pull obolibrary/robot:v1.8.1
+          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -i /work/psi-ms.obo -o /work/psi-ms.owl --format owl
+
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
