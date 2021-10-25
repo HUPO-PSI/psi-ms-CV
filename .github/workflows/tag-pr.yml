@@ -1,0 +1,59 @@
+name: generate-owl-tag-release
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - master
+      - main
+      - test-tag
+    paths:
+      - 'psi-ms.obo'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract version from OBO
+        run: |
+          CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
+          echo CV_VERSION=${CV_VERSION}
+          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+      - name: Generate OWL and Commit
+        run: |
+          docker pull obolibrary/robot:v1.8.1
+          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -i /work/psi-ms.obo -o /work/psi-ms.owl --format owl
+
+          git config --global user.name 'PSI-MS CV Bot'
+          git config --global user.email 'mobiusklein@users.noreply.github.com'
+          OWL_CHANGE=`git diff psi-ms.owl`
+          if [ -z "$OWL_CHANGE" ]
+          then
+            echo OWL did not change, aborting
+            exit 1
+          else
+            echo OWL updated, committing and proceeding to tag
+            git add psi-ms.owl
+            git commit -m "Generate OWL file"
+            git push
+          fi
+      - name: GitHub Tag
+        id: new_tag
+        uses: mathieudutour/github-tag-action@v5.6
+        with:
+          github_token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
+          pre_release_branches: test-tag
+          custom_tag: ${{ env.CV_VERSION }}
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+          artifacts: "psi-ms.obo,psi-ms.owl"
+          token: ${{ secrets.GITHUB_TOKEN }}
