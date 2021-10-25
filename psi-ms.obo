@@ -21875,8 +21875,8 @@ is_a: MS:1003207 ! mass spectrometry workflow
 
 [Term]
 id: MS:1003213
-name: deconvoluted data
-def: "TBD" [PSI:MS]
+name: adduct deconvolution
+def: "The determination of the mass of an ion based on the mass spectral peaks that represent different adductoforms of an ion." [PSI:MS]
 is_a: MS:1003207 ! mass spectrometry workflow
 
 [Term]
