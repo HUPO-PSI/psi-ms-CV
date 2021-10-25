@@ -21877,7 +21877,7 @@ is_a: MS:1003207 ! mass spectrometry workflow
 id: MS:1003213
 name: adduct deconvolution
 def: "The determination of the mass of an ion based on the mass spectral peaks that represent different adductoforms of an ion." [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
+is_a: MS:1000543 ! data processing action
 
 [Term]
 id: PEFF:0000001
