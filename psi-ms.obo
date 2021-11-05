@@ -1432,7 +1432,8 @@ def: "The operation of a mass spectrometer in which the intensities of several s
 synonym: "MIM" RELATED []
 synonym: "Multiple Ion Monitoring" EXACT []
 synonym: "SIM" EXACT []
-is_a: MS:1000596 ! measurement method
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
 
 [Term]
 id: MS:1000206
@@ -1441,7 +1442,8 @@ def: "Data acquired from specific product ions corresponding to m/z selected pre
 synonym: "MRM" RELATED []
 synonym: "Multiple Reaction Monitoring" RELATED []
 synonym: "SRM" EXACT []
-is_a: MS:1000596 ! measurement method
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
 
 [Term]
 id: MS:1000207
@@ -21837,49 +21839,6 @@ name: SELECT SERIES MRT
 def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
 
-
-[Term]
-id: MS:1003207
-name: mass spectrometry workflow
-def: "TBD" [PSI:MS]
-is_a: MS:1000524 ! data file content
-
-[Term]
-id: MS:1003208
-name: data independent acquisition
-def: "TBD" [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
-
-[Term]
-id: MS:1003209
-name: dissociation of full mass range
-def: "MS^e, AIF, p2cid" [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
-
-[Term]
-id: MS:1003210
-name: dissociation of scanning quadrupole across a specified mass range
-def: "SONAR" [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
-
-[Term]
-id: MS:1003211
-name: dissociation of sequential mass ranges
-def: "SWATH-MS, FT-ARM, HRM, PAcIFIC" [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
-
-[Term]
-id: MS:1003212
-name: ion mobility separation
-def: "HDMS^e, IMS-AIF, diaPASEF" [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry workflow
-
-[Term]
-id: MS:1003213
-name: adduct deconvolution
-def: "The determination of the mass of an ion based on the mass spectral peaks that represent different adductoforms of an ion." [PSI:MS]
-is_a: MS:1000543 ! data processing action
-
 [Term]
 id: MS:1003186
 name: library format version
@@ -22027,6 +21986,112 @@ def: "String of logging information generated when the library was constructed f
 is_a: MS:1003201 ! library provenance attribute
 xref: value-type:xsd:string "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003207
+name: mass spectrometry mass selection/dissociation method aspect
+def: "Specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
+is_a: MS:1001458 ! spectrum generation information
+
+[Term]
+id: MS:1003208
+name: data-independent acquisition
+def: "Mass spectrometer data acquisition method wherein mass selection for fragmentation is configured according to a pre-determined program, rather than based on any detected precursor ions." [PSI:MS]
+synonym: "DIA" EXACT []
+is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+
+[Term]
+id: MS:1003209
+name: dissociation of full mass range
+def: "Mass spectrometer data acquisition method wherein all precursor ions of which the instrument is capable are fragmented at once.." [PSI:MS]
+is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+
+[Term]
+id: MS:1003210
+name: dissociation of scanning quadrupole across a specified mass range
+def: "Mass spectrometer data acquisition method wherein ????." [PSI:MS]
+is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+
+[Term]
+id: MS:1003211
+name: dissociation of sequential mass ranges
+def: "Mass spectrometer data acquisition method wherein a series of limited mass range fragmentation selection windows are preconfigured." [PSI:MS]
+is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+
+[Term]
+id: MS:1003212
+name: ion mobility separation
+def: "Mass spectrometer data acquisition method wherein precursor ions are separated by their ion mobility properties prior to measurement." [PSI:MS]
+is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+
+[Term]
+id: MS:1003213
+name: adduct deconvolution
+def: "Data processing action of merging of the measurements of potentially multiple adducts into a single representation that is independent of the small ion that adds charge to a larger molecule." [PSI:MS]
+is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003214
+name: data-dependent acquisition
+def: "Mass spectrometer data acquisition method wherein MSn spectra are triggered based on the m/z of precursor ions detected in the same run." [PSI:MS]
+synonym: "DDA" EXACT []
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
+
+[Term]
+id: MS:1003215
+name: ion mobility deconvolution
+def: "Data processing action of merging multiple ion peaks acquired at different ion mobility steps into a single mass spectrum representing a single analyte." [PSI:MS]
+is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003216
+name: mass spectrometry mass selection/dissociation method
+def: "Mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
+is_a: MS:1000524 ! data file content
+is_a: MS:1001954 ! acquisition parameter
+
+[Term]
+id: MS:1003217
+name: data independent acquisition from dissociation of sequential mass ranges
+def: "Data independent mass spectrometer acquisition method wherein a preconfigured sequence of mass ranges are fragmented. Examples of such an approach include SWATH-MS, FT-ARM, HRM, and PAcIFIC." [PSI:MS]
+is_a: MS:1003207 ! dissociation of sequential mass ranges
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
+
+[Term]
+id: MS:1003218
+name: data independent acquisition from dissociation of sequential mass ranges after ion mobility separation
+def: "Data independent mass spectrometer acquisition method wherein a preconfigured sequence of mass ranges are fragmented after being separated by ion mobility. An example of such an approach is Bruker diaPASEF." [PSI:MS]
+is_a: MS:1003207 ! dissociation of sequential mass ranges
+is_a: MS:1003212 ! ion mobility separation
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
+
+[Term]
+id: MS:1003219
+name: data independent acquisition from dissociation of full mass range after ion mobility separation
+def: "Data independent mass spectrometer acquisition method wherein the full mass range is fragmented after being separated by ion mobility. Examples of such an approach include HDMS^E and IMS-AIF." [PSI:MS]
+is_a: MS:1003209 ! dissociation of full mass range
+is_a: MS:1003212 ! ion mobility separation
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
+
+[Term]
+id: MS:100320
+name: data independent acquisition from dissociation of full mass range
+def: "Data independent mass spectrometer acquisition method wherein the full mass range is fragmented. Examples of such an approach include MS^E, AIF, and bbCID." [PSI:MS]
+is_a: MS:1003209 ! dissociation of full mass range
+is_a: MS:1003212 ! ion mobility separation
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
+
+[Term]
+id: MS:100321
+name: data independent acquisition from dissociation of scanning quadrupole across mass range
+def: "Data independent mass spectrometer acquisition method wherein ???. An example of such an approach is Waters SONAR." [PSI:MS]
+is_a: MS:1003208 ! data independent acquisition
+is_a: MS:1003210 ! dissociation of scanning quadrupole across a specified mass range
+is_a: MS:1003216 ! mass spectrometry mass selection/dissociation method
 
 [Term]
 id: PEFF:0000001
