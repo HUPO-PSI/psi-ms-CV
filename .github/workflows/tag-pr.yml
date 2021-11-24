@@ -28,7 +28,8 @@ jobs:
         run: |
           docker pull obolibrary/robot:v1.8.1
           docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -i /work/psi-ms.obo -o /work/psi-ms.owl --format owl
-
+          # Replace the imports of the UO and PATO ontology .obo files with the equivalent .owl files
+          sed -e "s/pato.obo/pato.owl/g" -e "s/uo.obo/uo.owl/g" -i psi-ms.owl
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
