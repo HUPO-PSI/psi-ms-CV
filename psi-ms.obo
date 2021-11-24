@@ -22029,7 +22029,7 @@ is_a: MS:1003171 ! spectral library attribute
 id: MS:1003212
 name: library entry class name
 def: "A name to refer to a library entry class" [PSI:PI]
-part_of: MS:1003211 ! library entry class
+relationship: part_of MS:1003211 ! library entry class
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
