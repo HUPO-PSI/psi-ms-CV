@@ -21994,8 +21994,8 @@ is_a: MS:1003171 ! spectral library attribute
 
 [Term]
 id: MS:1003208
-name: reported precursor monoisotopic m/z
-def: "The measured or inferred (as reported by the mass spectrometer acquisition software or post-processing software) of the monoisotopic peak of the precursor ion based on the MSn-1 spectrum." [PSI:MS]
+name: experimental precursor monoisotopic m/z
+def: "The measured or inferred m/z (as reported by the mass spectrometer acquisition software or post-processing software) of the monoisotopic peak of the precursor ion based on the MSn-1 spectrum." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
 relationship: has_units MS:1000040 ! m/z
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
