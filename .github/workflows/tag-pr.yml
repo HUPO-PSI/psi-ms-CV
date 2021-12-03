@@ -53,8 +53,8 @@ jobs:
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ env.CV_VERSION }}
-          name: Release ${{ env.CV_VERSION }}
+          tag: v${{ env.CV_VERSION }}
+          name: Release v${{ env.CV_VERSION }}
           body: ${{ steps.new_tag.outputs.changelog }}
           artifacts: "psi-ms.obo,psi-ms.owl"
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
