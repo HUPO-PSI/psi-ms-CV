@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.62
-date: 24:09:2021 00:00
+data-version: 4.1.63
+date: 02:12:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -21983,6 +21983,52 @@ name: library creation log
 def: "String of logging information generated when the library was constructed from its constituent files. Multiple lines should be separated with escaped \n" [PSI:PI]
 is_a: MS:1003201 ! library provenance attribute
 xref: value-type:xsd:string "The allowed value-type for this CV term."
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003207
+name: library creation software
+def: "Library creation software" [PSI:MS]
+is_a: MS:1000531 ! software
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003208
+name: experimental precursor monoisotopic m/z
+def: "The measured or inferred m/z (as reported by the mass spectrometer acquisition software or post-processing software) of the monoisotopic peak of the precursor ion based on the MSn-1 spectrum." [PSI:MS]
+is_a: MS:1000455 ! ion selection attribute
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003209
+name: monoisotopic m/z deviation
+def: "The measured monoisotopic m/z (as reported by the mass spectrometer acquisition software or post-processing software) minus the theoretical monoisotopic m/z of the analyte assigned to the spectrum." [PSI:MS]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_units MS:1000040 ! m/z
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003210
+name: average m/z deviation
+def: "The measured average m/z (as reported by the mass spectrometer acquisition software or post-processing software) minus the theoretical average m/z of the analyte assigned to the spectrum." [PSI:MS]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_units MS:1000040 ! m/z
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003211
+name: library entry class
+def: "A subset of entries within the same spectral library that share the same attributes" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003212
+name: library entry class name
+def: "A name to refer to a library entry class" [PSI:PI]
+relationship: part_of MS:1003211 ! library entry class
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
