@@ -21989,7 +21989,7 @@ relationship: has_value_type xsd\:string ! The allowed value-type for this CV te
 
 [Term]
 id: MS:1003207
-name: mass spectrometry mass selection/dissociation method aspect
+name: mass spectrometry acquisition method
 def: "Specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
 is_a: MS:1001458 ! spectrum generation information
 
@@ -21998,31 +21998,31 @@ id: MS:1003208
 name: data-independent acquisition
 def: "Mass spectrometer data acquisition method wherein mass selection for fragmentation is configured according to a pre-determined program, rather than based on any detected precursor ions." [PSI:MS]
 synonym: "DIA" EXACT []
-is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+is_a: MS:1003207 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003209
 name: dissociation of full mass range
 def: "Mass spectrometer data acquisition method wherein all precursor ions of which the instrument is capable are fragmented at once.." [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+is_a: MS:1003207 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003210
 name: dissociation of scanning quadrupole across a specified mass range
 def: "Mass spectrometer data acquisition method wherein ????." [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+is_a: MS:1003207 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003211
 name: dissociation of sequential mass ranges
 def: "Mass spectrometer data acquisition method wherein a series of limited mass range fragmentation selection windows are preconfigured." [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+is_a: MS:1003207 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003212
 name: ion mobility separation
 def: "Mass spectrometer data acquisition method wherein precursor ions are separated by their ion mobility properties prior to measurement." [PSI:MS]
-is_a: MS:1003207 ! mass spectrometry mass selection/dissociation method aspect
+is_a: MS:1003207 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003213
