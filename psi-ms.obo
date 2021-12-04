@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.64
-date: 03:12:2021 00:00
-saved-by: Joshua Klein
+data-version: 4.1.65
+date: 04:12:2021 00:00
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -22138,6 +22138,32 @@ def: "Data independent mass spectrometer acquisition method wherein ???. An exam
 is_a: MS:1003215 ! data-independent acquisition
 is_a: MS:1003217 ! dissociation of scanning quadrupole across a specified mass range
 is_a: MS:1003213 ! mass spectrometry acquisition method
+
+[Term]
+id: MS:1003229
+name: timsTOF
+def: "Bruker Daltonics' timsTOF." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
+[Term]
+id: MS:1003230
+name: timsTOF Pro 2
+def: "Bruker Daltonics' timsTOF Pro 2." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
+[Term]
+id: MS:1003231
+name: timsTOF SCP
+def: "Bruker Daltonics' timsTOF SCP." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
+[Term]
+id: MS:1003232
+name: PeakForest
+def: "comprehensive infrastructure to organize, curate and share a multi- instrument spectral library for metabolomics data annotation developed and distributed by the French National infrastructure in metabolomics and fluxomics (MetaboHUB)." [https://peakforest.org/]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1003207 ! library creation software
+is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
 id: PEFF:0000001
