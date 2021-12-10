@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.65
-date: 04:12:2021 00:00
-saved-by: Eric Deutsch
+data-version: 4.1.66
+date: 10:12:2021 00:00
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
 import: http://ontologies.berkeleybop.org/uo.obo
@@ -22164,6 +22164,20 @@ def: "comprehensive infrastructure to organize, curate and share a multi- instru
 is_a: MS:1001456 ! analysis software
 is_a: MS:1003207 ! library creation software
 is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:4000278
+name: instrument acquisition start time
+def: "The date and time of the instrument data acquisition start timepoint" [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: has_value_type xsd\:dateTime
+
+[Term]
+id: MS:4000279
+name: instrument acquisition end time
+def: "The date and time of the instrument data acquisition end timepoint" [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: has_value_type xsd\:dateTime
 
 [Term]
 id: PEFF:0000001
