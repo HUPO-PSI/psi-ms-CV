@@ -57,4 +57,5 @@ jobs:
           name: Release v${{ env.CV_VERSION }}
           body: ${{ steps.new_tag.outputs.changelog }}
           artifacts: "psi-ms.obo,psi-ms.owl"
+          generateReleaseNotes: true
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
