@@ -22166,14 +22166,14 @@ is_a: MS:1003207 ! library creation software
 is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
-id: MS:4000278
+id: MS:1003233
 name: instrument acquisition start time
 def: "The date and time of the instrument data acquisition start timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd\:dateTime
 
 [Term]
-id: MS:4000279
+id: MS:1003234
 name: instrument acquisition end time
 def: "The date and time of the instrument data acquisition end timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
