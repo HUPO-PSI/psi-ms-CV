@@ -6677,10 +6677,11 @@ relationship: has_value_type xsd\:string ! The allowed value-type for this CV te
 
 [Term]
 id: MS:1001017
-name: database release date
-def: "OBSOLETE: Use attribute in mzIdentML instead. Release date of the search database." [PSI:PI]
+name: release date
+def: "Date and time at which a product was publicly released. For mzIdentML, use the XML attribute instead of this term." [PSI:PI]
 is_a: MS:1001011 ! search database details
-is_obsolete: true
+is_a: MS:1003171 ! spectral library attribute
+relationship: has_value_type xsd\:dateTime
 
 [Term]
 id: MS:1001018
