@@ -3,8 +3,8 @@ data-version: 4.1.65
 date: 04:12:2021 00:00
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
-import: http://ontologies.berkeleybop.org/pato.obo
-import: http://ontologies.berkeleybop.org/uo.obo
+import: http://purl.obolibrary.org/obo/pato.obo
+import: http://purl.obolibrary.org/obo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
