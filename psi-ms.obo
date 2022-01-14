@@ -22171,6 +22171,7 @@ name: instrument acquisition start time
 def: "The date and time of the instrument data acquisition start timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd\:dateTime
+relationship: has_structured_representation_in_format mzML
 
 [Term]
 id: MS:1003234
