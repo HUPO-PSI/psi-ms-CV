@@ -54,6 +54,11 @@ id: has_value_type
 name: has value type
 def: "'Entity A' has value type 'Entity B', such as xsd:float." []
 
+[Typedef]
+id: has_structured_representation_in_format
+name: has structured representation in format
+def: "The term is encoded in the structure of the named file format rather than as an explicit parameter, and should not be used as one in that format." []
+
 [Term]
 id: MS:0000000
 name: Proteomics Standards Initiative Mass Spectrometry Vocabularies
