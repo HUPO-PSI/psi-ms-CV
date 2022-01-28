@@ -20935,8 +20935,8 @@ is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1003062
-name: spectrum index
-def: "Integer index value associated with a spectrum within a collection of spectra, often in a spectral library. By custom, index counters should begin with 0." [PSI:PI]
+name: spectrum position
+def: "Integer index value that indicates the spectrum's ordered position within a collection of spectra, often in a spectral library. By custom, index counters should begin with 0." [PSI:PI]
 is_a: MS:1000499 ! spectrum attribute
 
 [Term]
