@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: 4.1.66
-date: 10:12:2021 00:00
+data-version: 4.1.68
+date: 04:12:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
-import: http://ontologies.berkeleybop.org/pato.obo
-import: http://ontologies.berkeleybop.org/uo.obo
+import: http://purl.obolibrary.org/obo/pato.obo
+import: http://purl.obolibrary.org/obo/uo.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -53,6 +53,11 @@ name: has_domain
 id: has_value_type
 name: has value type
 def: "'Entity A' has value type 'Entity B', such as xsd:float." []
+
+[Typedef]
+id: has_structured_representation_in_format
+name: has structured representation in format
+def: "The term is encoded in the structure of the named file format rather than as an explicit parameter, and should not be used as one in that format." []
 
 [Term]
 id: MS:0000000
@@ -22171,6 +22176,7 @@ name: instrument acquisition start time
 def: "The date and time of the instrument data acquisition start timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd\:dateTime
+relationship: has_structured_representation_in_format MS:1000584 ! mzML format
 
 [Term]
 id: MS:1003234
