@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.68
+data-version: 4.1.70
 date: 04:12:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -20940,9 +20940,9 @@ is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1003062
-name: spectrum position
-def: "Integer index value that indicates the spectrum's ordered position within a collection of spectra, often in a spectral library. By custom, index counters should begin with 0." [PSI:PI]
-is_a: MS:1000499 ! spectrum attribute
+name: library entry index
+def: "Integer index value that indicates the spectrum's ordered position within a spectral library. By custom, index counters should begin with 0." [PSI:PI]
+is_a: MS:1003235 ! library entry attribute
 
 [Term]
 id: MS:1003063
@@ -21703,7 +21703,7 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 id: MS:1003168
 name: library entry comment
 def: "A free-text string providing additional information of the library entry not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
-is_a: MS:1003166 ! library entry attribute
+is_a: MS:1003235 ! library entry attribute
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
@@ -22184,6 +22184,18 @@ name: instrument acquisition end time
 def: "The date and time of the instrument data acquisition end timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd\:dateTime
+
+[Term]
+id: MS:1003235
+name: library entry attribute
+def: "An attribute that describes information about an entry in a sepctral library" [PSI:PI]
+part_of: MS:1003172 ! library entry
+
+[Term]
+id: MS:1003236
+name: library entry key
+def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
+is_a: MS:1003235 ! library entry attribute
 
 [Term]
 id: PEFF:0000001
