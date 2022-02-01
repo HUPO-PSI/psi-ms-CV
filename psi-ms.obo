@@ -22245,43 +22245,43 @@ relationship: part_of MS:4000000 ! PSI-MS CV Quality Control Vocabulary
 
 [Term]
 id: MS:4000008
-name: ID based
+name: ID based metric
 def: "QC metric based on identification results." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000009
-name: ID free
+name: ID free metric
 def: "QC metric not based on identification results." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000010
-name: quantification based
+name: quantification based metric
 def: "QC metric based on quantification results." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000012
-name: single run based
+name: single run based metric
 def: "QC metric calculated from a single run (e.g. one .raw file)." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000013
-name: multiple runs based
+name: multiple runs based metric
 def: "QC metric calculated from multiple runs (e.g. multiple .raw files)." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000014
-name: single spectrum based
+name: single spectrum based metric
 def: "QC metric calculated from a single spectrum." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000015
-name: multiple spectra based
+name: multiple spectra based metric
 def: "QC metric calculated from multiple spectra." [PSI:QC]
 is_a: MS:4000007 ! QC metric category
 
@@ -22346,8 +22346,8 @@ def: "The number of XIC that account for the top half of all XIC-FWHM divided by
 comment: This metric characterises the distribution of precursor peak widths, much as the N50 characterises contig sizes in genome assembly.
 synonym: "XIC-WideFrac" EXACT []
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept UO:0000191 ! fraction
 
@@ -22359,8 +22359,8 @@ synonym: "XIC-FWHM-Q1" RELATED []
 synonym: "XIC-FWHM-Q2" RELATED []
 synonym: "XIC-FWHM-Q3" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept MS:1000086 ! full width at half-maximum
@@ -22375,8 +22375,8 @@ synonym: "XIC-Height-Q2" RELATED []
 synonym: "XIC-Height-Q3" RELATED []
 synonym: "XIC-Height-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
@@ -22384,11 +22384,11 @@ relationship: has_value_concept UO:0000191 ! fraction
 
 [Term]
 id: MS:4000053
-name: RT duration
+name: chromatography duration
 def: "The retention time duration of the chromatography in seconds." [PSI:QC]
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C25330 ! Duration
@@ -22403,8 +22403,8 @@ synonym: "RT-TIC-Q2" RELATED []
 synonym: "RT-TIC-Q3" RELATED []
 synonym: "RT-TIC-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
@@ -22419,8 +22419,8 @@ synonym: "RT-MS-Q2" RELATED []
 synonym: "RT-MS-Q3" RELATED []
 synonym: "RT-MS-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
@@ -22435,8 +22435,8 @@ synonym: "RT-MSMS-Q2" RELATED []
 synonym: "RT-MSMS-Q3" RELATED []
 synonym: "RT-MSMS-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
@@ -22450,8 +22450,8 @@ synonym: "MS1-TIC-Change-Q2" RELATED []
 synonym: "MS1-TIC-Change-Q3" RELATED []
 synonym: "MS1-TIC-Change-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
@@ -22465,8 +22465,8 @@ synonym: "MS1-TIC-Q2" RELATED []
 synonym: "MS1-TIC-Q3" RELATED []
 synonym: "MS1-TIC-Q4" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
@@ -22474,24 +22474,24 @@ relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 
 [Term]
 id: MS:4000059
-name: Number of MS1 spectra
+name: number of MS1 spectra
 def: "The number of MS1 events in the run." [PSI:QC]
 synonym: "MS1-Count" EXACT []
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:4000060
-name: Number of MS2 spectra
+name: number of MS2 spectra
 def: "The number of MS2 events in the run." [PSI:QC]
 synonym: "MS2-Count" EXACT []
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
@@ -22504,8 +22504,8 @@ synonym: "MS1-Density-Q1" RELATED []
 synonym: "MS1-Density-Q2" RELATED []
 synonym: "MS1-Density-Q3" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
@@ -22519,8 +22519,8 @@ synonym: "MS2-Density-Q1" RELATED []
 synonym: "MS2-Density-Q2" RELATED []
 synonym: "MS2-Density-Q3" RELATED []
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
@@ -22537,8 +22537,8 @@ synonym: "MS2-PrecZ-4" RELATED []
 synonym: "MS2-PrecZ-5" RELATED []
 synonym: "MS2-PrecZ-more" RELATED []
 is_a: MS:4000005 ! table
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_column: MS:1000041 ! charge state
@@ -22551,8 +22551,8 @@ def: "The fractions of inferred charge state of MS/MS precursors. The fractions 
 synonym: "MS2-PrecZ-likely-1" RELATED []
 synonym: "MS2-PrecZ-likely-multi" RELATED []
 is_a: MS:4000005 ! table
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_column: MS:1000041 ! charge state
@@ -22560,37 +22560,37 @@ relationship: has_column: UO:0000191 ! fraction
 
 [Term]
 id: MS:4000065
-name: Fastest frequency for MS level 1 collection
+name: fastest frequency for MS level 1 collection
 def: "Fastest frequency for MS level 1 collection" [PSI:QC]
 comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
 synonym: "MS1-Freq-Max" EXACT []
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000106 ! hertz
 
 [Term]
 id: MS:4000066
-name: Fastest frequency for MS level 2 collection
+name: fastest frequency for MS level 2 collection
 def: "Fastest frequency for MS level 2 collection" [PSI:QC]
 comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
 synonym: "MS2-Freq-Max" EXACT []
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000106 ! hertz
 
 [Term]
 id: MS:4000067
-name: MS duration
+name: MS run duration
 def: "The duration of the mass spectrometry acquisition (as measured by the time between the last scan and first scan) in seconds." [PSI:QC]
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
-relationship: has_metric_category MS:4000012 ! single run based
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C25330 ! Duration
