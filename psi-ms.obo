@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.68
-date: 22:01:2022 01:22
+data-version: 4.1.70
+date: 02:02:2022 02:22
 saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -62,6 +62,11 @@ name: has_domain
 id: has_value_type
 name: has value type
 def: "'Entity A' has value type 'Entity B', such as xsd:float." []
+
+[Typedef]
+id: has_structured_representation_in_format
+name: has structured representation in format
+def: "The term is encoded in the structure of the named file format rather than as an explicit parameter, and should not be used as one in that format." []
 
 [Typedef]
 id: has_value_concept
@@ -6698,10 +6703,12 @@ relationship: has_value_type xsd\:string ! The allowed value-type for this CV te
 
 [Term]
 id: MS:1001017
-name: database release date
-def: "OBSOLETE: Use attribute in mzIdentML instead. Release date of the search database." [PSI:PI]
+name: release date
+def: "Date and time at which a product was publicly released. For mzIdentML, use the database release date XML attribute instead of this term." [PSI:PI]
 is_a: MS:1001011 ! search database details
-is_obsolete: true
+is_a: MS:1003171 ! spectral library attribute
+relationship: has_value_type xsd\:dateTime
+relationship: has_structured_representation_in_format MS:1002073 ! mzIdentML format
 
 [Term]
 id: MS:1001018
