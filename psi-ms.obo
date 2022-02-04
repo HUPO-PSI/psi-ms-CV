@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.70
+data-version: 4.1.72
 date: 04:12:2021 00:00
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -6682,10 +6682,12 @@ relationship: has_value_type xsd\:string ! The allowed value-type for this CV te
 
 [Term]
 id: MS:1001017
-name: database release date
-def: "OBSOLETE: Use attribute in mzIdentML instead. Release date of the search database." [PSI:PI]
+name: release date
+def: "Date and time at which a product was publicly released. For mzIdentML, use the database release date XML attribute instead of this term." [PSI:PI]
 is_a: MS:1001011 ! search database details
-is_obsolete: true
+is_a: MS:1003171 ! spectral library attribute
+relationship: has_value_type xsd\:dateTime
+relationship: has_structured_representation_in_format MS:1002073 ! mzIdentML format
 
 [Term]
 id: MS:1001018
@@ -22193,6 +22195,12 @@ part_of: MS:1003172 ! library entry
 
 [Term]
 id: MS:1003236
+name: paper spray ionization
+def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
+is_a: MS:1000008 ! ionization type
+
+[Term]
+id: MS:1003237
 name: library entry key
 def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
 is_a: MS:1003235 ! library entry attribute
