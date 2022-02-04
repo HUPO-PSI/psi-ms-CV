@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.69
-date: 04:12:2021 00:00
-saved-by: Joshua Klein
+data-version: 4.1.70
+date: 03:02:2022 00:00
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -22186,6 +22186,12 @@ name: instrument acquisition end time
 def: "The date and time of the instrument data acquisition end timepoint" [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd\:dateTime
+
+[Term]
+id: MS:1003235
+name: paper spray ionization 
+def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
+is_a: MS:1000008 ! ionization type
 
 [Term]
 id: PEFF:0000001
