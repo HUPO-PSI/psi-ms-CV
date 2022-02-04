@@ -69,6 +69,10 @@ name: has structured representation in format
 def: "The term is encoded in the structure of the named file format rather than as an explicit parameter, and should not be used as one in that format." []
 
 [Typedef]
+id: has_metric_category
+name: has_metric_category
+
+[Typedef]
 id: has_value_concept
 name: has_value_concept
 
