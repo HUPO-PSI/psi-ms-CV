@@ -22601,7 +22601,7 @@ relationship: has_units UO:0000010 ! second
 
 [Term]
 id: MS:1003235
-name: paper spray ionization 
+name: paper spray ionization
 def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
 is_a: MS:1000008 ! ionization type
 
