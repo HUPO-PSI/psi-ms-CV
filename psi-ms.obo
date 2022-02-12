@@ -22053,15 +22053,17 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003211
-name: library entry class
-def: "A subset of entries within the same spectral library that share the same attributes" [PSI:PI]
+name: library spectrum attribute set
+def: A set of spectrum-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 
 [Term]
 id: MS:1003212
-name: library entry class name
-def: "A name to refer to a library entry class" [PSI:PI]
-relationship: part_of MS:1003211 ! library entry class
+name: library attribute set name
+def: "A name to refer to a library attribute set" [PSI:PI]
+relationship: part_of MS:1003211 ! library spectrum attribute set
+relationship: part_of MS:1003238 ! library analyte attribute set
+relationship: part_of MS:1003239 ! library interpretation attribute set
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
@@ -22195,6 +22197,68 @@ def: "comprehensive infrastructure to organize, curate and share a multi- instru
 is_a: MS:1001456 ! analysis software
 is_a: MS:1003207 ! library creation software
 is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1003235
+name: library entry attribute
+def: "An attribute that describes information about an entry in a sepctral library" [PSI:PI]
+part_of: MS:1003172 ! library entry
+
+[Term]
+id: MS:1003236
+name: paper spray ionization
+def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
+is_a: MS:1000008 ! ionization type
+
+[Term]
+id: MS:1003237
+name: library entry key
+def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
+is_a: MS:1003235 ! library entry attribute
+
+[Term]
+id: MS:1003238
+name: library analyte attribute set
+def: A set of analyte-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003239
+name: library interpretation attribute set
+def: A set of interpretation-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003240
+name: peak intensity transforma
+def: "A mathematical transformation applied to peak intensities, for example, as a way to modify the weight put on each peak when computing spectral match scores" [PSI:PI]
+is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003241
+name: square root transform
+def: "A mathematical transformation applied to peak intensities, in which peak intensities are replaced by their square roots" [PSI:PI]
+is_a: MS:1003240 ! peak intensity transform
+
+[Term]
+id: MS:1003241
+name: rank transform
+def: "A mathematical transformation applied to peak intensities, in which peak intensities are replaced by their ranks" [PSI:PI]
+is_a: MS:1003240 ! peak intensity transform
+
+[Term]
+id: MS:1003242
+name: adduct ion mass
+def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule’s mass plus the mass of a proton)" [PSI:PI]
+is_a: MS:1003056 ! adduct ion property
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003243
+name: peptide accession number
+def: "Accession number (e.g. in PeptideAtlas) of the peptide sequence" [PSI:PI]
+is_a: MS:1003050 ! peptidoform attribute
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
@@ -22598,24 +22662,6 @@ relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C25330 ! Duration
 relationship: has_units UO:0000010 ! second
-
-[Term]
-id: MS:1003235
-name: library entry attribute
-def: "An attribute that describes information about an entry in a sepctral library" [PSI:PI]
-part_of: MS:1003172 ! library entry
-
-[Term]
-id: MS:1003236
-name: paper spray ionization
-def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
-is_a: MS:1000008 ! ionization type
-
-[Term]
-id: MS:1003237
-name: library entry key
-def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
-is_a: MS:1003235 ! library entry attribute
 
 [Term]
 id: PEFF:0000001
