@@ -22202,7 +22202,7 @@ is_a: MS:1002878 ! small molecule analysis software
 id: MS:1003235
 name: library entry attribute
 def: "An attribute that describes information about an entry in a sepctral library" [PSI:PI]
-part_of: MS:1003172 ! library entry
+relationship: part_of MS:1003172 ! library entry
 
 [Term]
 id: MS:1003236
