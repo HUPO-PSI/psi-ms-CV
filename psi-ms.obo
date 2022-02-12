@@ -22054,7 +22054,7 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003211
 name: library spectrum attribute set
-def: A set of spectrum-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+def: "A set of spectrum-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 
 [Term]
