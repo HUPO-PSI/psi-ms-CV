@@ -22219,13 +22219,13 @@ is_a: MS:1003235 ! library entry attribute
 [Term]
 id: MS:1003238
 name: library analyte attribute set
-def: A set of analyte-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+def: "A set of analyte-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 
 [Term]
 id: MS:1003239
 name: library interpretation attribute set
-def: A set of interpretation-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+def: "A set of interpretation-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 
 [Term]
