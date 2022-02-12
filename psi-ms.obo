@@ -22241,20 +22241,20 @@ def: "A mathematical transformation applied to peak intensities, in which peak i
 is_a: MS:1003240 ! peak intensity transform
 
 [Term]
-id: MS:1003241
+id: MS:1003242
 name: rank transform
 def: "A mathematical transformation applied to peak intensities, in which peak intensities are replaced by their ranks" [PSI:PI]
 is_a: MS:1003240 ! peak intensity transform
 
 [Term]
-id: MS:1003242
+id: MS:1003243
 name: adduct ion mass
 def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule’s mass plus the mass of a proton)" [PSI:PI]
 is_a: MS:1003056 ! adduct ion property
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
-id: MS:1003243
+id: MS:1003244
 name: peptide accession number
 def: "Accession number (e.g. in PeptideAtlas) of the peptide sequence" [PSI:PI]
 is_a: MS:1003050 ! peptidoform attribute
