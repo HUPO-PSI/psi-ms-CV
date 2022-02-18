@@ -22201,7 +22201,7 @@ is_a: MS:1002878 ! small molecule analysis software
 [Term]
 id: MS:1003234
 name: library entry attribute
-def: "An attribute that describes information about an entry in a sepctral library" [PSI:PI]
+def: "An attribute that describes information about an entry in a spectral library" [PSI:PI]
 relationship: part_of MS:1003172 ! library entry
 
 [Term]
@@ -22230,7 +22230,7 @@ is_a: MS:1003171 ! spectral library attribute
 
 [Term]
 id: MS:1003240
-name: peak intensity transforma
+name: peak intensity transform
 def: "A mathematical transformation applied to peak intensities, for example, as a way to modify the weight put on each peak when computing spectral match scores" [PSI:PI]
 is_a: MS:1000543 ! data processing action
 
