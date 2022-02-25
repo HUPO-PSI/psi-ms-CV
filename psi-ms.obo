@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.71
+data-version: 4.1.72
 date: 02:02:2022 02:22
-saved-by: Mathias Walzer
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -20966,9 +20966,9 @@ is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1003062
-name: spectrum index
-def: "Integer index value associated with a spectrum within a collection of spectra, often in a spectral library. By custom, index counters should begin with 0." [PSI:PI]
-is_a: MS:1000499 ! spectrum attribute
+name: library entry index
+def: "Integer index value that indicates the spectrum's ordered position within a spectral library. By custom, index counters should begin with 0." [PSI:PI]
+is_a: MS:1003234 ! library entry attribute
 
 [Term]
 id: MS:1003063
@@ -21729,7 +21729,7 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 id: MS:1003168
 name: library entry comment
 def: "A free-text string providing additional information of the library entry not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
-is_a: MS:1003166 ! library entry attribute
+is_a: MS:1003234 ! library entry attribute
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
@@ -22053,15 +22053,17 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003211
-name: library entry class
-def: "A subset of entries within the same spectral library that share the same attributes" [PSI:PI]
+name: library spectrum attribute set
+def: "A set of spectrum-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 
 [Term]
 id: MS:1003212
-name: library entry class name
-def: "A name to refer to a library entry class" [PSI:PI]
-relationship: part_of MS:1003211 ! library entry class
+name: library attribute set name
+def: "A name to refer to a library attribute set" [PSI:PI]
+relationship: part_of MS:1003211 ! library spectrum attribute set
+relationship: part_of MS:1003238 ! library analyte attribute set
+relationship: part_of MS:1003239 ! library interpretation attribute set
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
@@ -22118,8 +22120,8 @@ is_a: MS:1000543 ! data processing action
 id: MS:1003221
 name: data-dependent acquisition
 def: "Mass spectrometer data acquisition method wherein MSn spectra are triggered based on the m/z of precursor ions detected in the same run." [PSI:MS]
-synonym: "DDA" EXACT []
 is_a: MS:1003214 ! mass spectrometry acquisition method aspect
+synonym: "DDA" EXACT []
 
 [Term]
 id: MS:1003222
@@ -22195,6 +22197,68 @@ def: "comprehensive infrastructure to organize, curate and share a multi- instru
 is_a: MS:1001456 ! analysis software
 is_a: MS:1003207 ! library creation software
 is_a: MS:1002878 ! small molecule analysis software
+
+[Term]
+id: MS:1003234
+name: library entry attribute
+def: "An attribute that describes information about an entry in a spectral library" [PSI:PI]
+relationship: part_of MS:1003172 ! library entry
+
+[Term]
+id: MS:1003235
+name: paper spray ionization
+def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
+is_a: MS:1000008 ! ionization type
+
+[Term]
+id: MS:1003237
+name: library entry key
+def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
+is_a: MS:1003234 ! library entry attribute
+
+[Term]
+id: MS:1003238
+name: library analyte attribute set
+def: "A set of analyte-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003239
+name: library interpretation attribute set
+def: "A set of interpretation-related attributes that is shared by a subset of spectra within the same spectral library" [PSI:PI]
+is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003240
+name: peak intensity transform
+def: "A mathematical transformation applied to peak intensities, for example, as a way to modify the weight put on each peak when computing spectral match scores" [PSI:PI]
+is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003241
+name: square root transform
+def: "A mathematical transformation applied to peak intensities, in which peak intensities are replaced by their square roots" [PSI:PI]
+is_a: MS:1003240 ! peak intensity transform
+
+[Term]
+id: MS:1003242
+name: rank transform
+def: "A mathematical transformation applied to peak intensities, in which peak intensities are replaced by their ranks" [PSI:PI]
+is_a: MS:1003240 ! peak intensity transform
+
+[Term]
+id: MS:1003243
+name: adduct ion mass
+def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule’s mass plus the mass of a proton)" [PSI:PI]
+is_a: MS:1003056 ! adduct ion property
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003244
+name: peptide accession number
+def: "Accession number (e.g. in PeptideAtlas) of the peptide sequence" [PSI:PI]
+is_a: MS:1003050 ! peptidoform attribute
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
@@ -22598,12 +22662,6 @@ relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C25330 ! Duration
 relationship: has_units UO:0000010 ! second
-
-[Term]
-id: MS:1003235
-name: paper spray ionization
-def: "The ionization of analytes from a piece of paper by applying a solvent and voltage." [PSI:MS]
-is_a: MS:1000008 ! ionization type
 
 [Term]
 id: PEFF:0000001
