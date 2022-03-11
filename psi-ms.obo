@@ -1916,7 +1916,6 @@ id: MS:1000262
 name: infrared multiphoton dissociation
 def: "Multiphoton ionization where the reactant ion dissociates as a result of the absorption of multiple infrared photons." [PSI:MS]
 synonym: "IRMPD" EXACT []
-is_a: MS:1000044 ! dissociation method
 is_a: MS:1000435 ! photodissociation
 
 [Term]
@@ -4243,7 +4242,7 @@ is_a: MS:1000462 ! ion optics
 [Term]
 id: MS:1000598
 name: electron transfer dissociation
-def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons from a radical-anions." [DOI: 10.1073/pnas.0402700101, PMID: 15210983] [PSI:MS]
+def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons from radical-anions." [DOI: 10.1073/pnas.0402700101, PMID: 15210983] [PSI:MS]
 synonym: "ETD" EXACT []
 is_a: MS:1000044 ! dissociation method
 
