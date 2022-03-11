@@ -22277,7 +22277,7 @@ is_a: MS:1000044 ! dissociation method
 [Term]
 id: MS:1003247
 name: proton transfer reaction
-def: "A process transfer of one or more protons from a multiply charged cation (peptide or protein ion) to an anionic agent, that typically does not lead to fragmentation" [DOI: 10.1002/mas.20048] [PSI:MS]
+def: "A process transfer of one or more protons from a multiply charged cation (peptide or protein ion) to an anionic agent, that typically does not lead to fragmentation" [DOI: 10.1002/mas.20048, PSI:MS]
 synonym: "PTR" EXACT []
 is_a: MS:1000456 ! precursor activation
 
