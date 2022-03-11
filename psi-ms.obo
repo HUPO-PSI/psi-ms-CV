@@ -22663,6 +22663,7 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 relationship: has_value_concept NCIT:C25330 ! Duration
 relationship: has_units UO:0000010 ! second
 
+[Term]
 id: MS:4000068
 name: spectra half-TIC
 def: "The minimal proportion of peaks needed to account for at least 50% of the total ion current in each individual spectrum considered, recorded in a mandatory fraction column. Either USI or native spectrum identifier columns must be present as well." [PSI:QC]
