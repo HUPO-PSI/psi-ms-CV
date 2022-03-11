@@ -1917,6 +1917,7 @@ name: infrared multiphoton dissociation
 def: "Multiphoton ionization where the reactant ion dissociates as a result of the absorption of multiple infrared photons." [PSI:MS]
 synonym: "IRMPD" EXACT []
 is_a: MS:1000044 ! dissociation method
+is_a: MS:1000435 ! photodissociation
 
 [Term]
 id: MS:1000263
@@ -4242,7 +4243,7 @@ is_a: MS:1000462 ! ion optics
 [Term]
 id: MS:1000598
 name: electron transfer dissociation
-def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons to them." [PSI:MS]
+def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons from a radical-anions." [DOI: 10.1073/pnas.0402700101, PMID: 15210983] [PSI:MS]
 synonym: "ETD" EXACT []
 is_a: MS:1000044 ! dissociation method
 
@@ -22259,6 +22260,33 @@ name: peptide accession number
 def: "Accession number (e.g. in PeptideAtlas) of the peptide sequence" [PSI:PI]
 is_a: MS:1003050 ! peptidoform attribute
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003245
+name: ultraviolet photodissociation
+def: "Multiphoton ionization where the reactant ion dissociates as a result of the absorption of multiple UV photons." [PSI:MS]
+synonym: "UVPD" EXACT []
+is_a: MS:1000435 ! photodissociation
+
+[Term]
+id: MS:1003246
+name: negative electron transfer dissociation
+def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of anions (e.g. peptides or proteins) by transferring electrons to a radical-cation." [DOI:10.1016/j.jasms.2005.01.015] [PSI:MS]
+synonym: "NETD" EXACT []
+is_a: MS:1000044 ! dissociation method
+
+[Term]
+id: MS:1003247
+name: Proton Transfer Reaction
+def: "A process transfer of one or more protons from a multiply charged cation (peptide or protein ion) to an anionic agent, that typically does not lead to fragmentation" [DOI: 10.1002/mas.20048] [PSI:MS]
+synonym: "PTR" EXACT []
+is_a: MS:1000456 ! precursor activation
+
+[Term]
+id: MS:1003248
+name: Neagtive Proton Transfer Reaction
+def: "A process transfer of one or more protons to a multiply charged anion (peptide or protein ion) to a cationic agent, that typically does not lead to fragmentation" [PSI:MS]
+is_a: MS:1000456 ! precursor activation
 
 [Term]
 id: MS:4000000
