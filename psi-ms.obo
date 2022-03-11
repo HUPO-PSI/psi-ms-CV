@@ -4242,7 +4242,7 @@ is_a: MS:1000462 ! ion optics
 [Term]
 id: MS:1000598
 name: electron transfer dissociation
-def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons from radical-anions." [DOI: 10.1073/pnas.0402700101, PMID: 15210983] [PSI:MS]
+def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of cations (e.g. peptides or proteins) by transferring electrons from radical-anions." [DOI: 10.1073/pnas.0402700101, PMID: 15210983, PSI:MS]
 synonym: "ETD" EXACT []
 is_a: MS:1000044 ! dissociation method
 
