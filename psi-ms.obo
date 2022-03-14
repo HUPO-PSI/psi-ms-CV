@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.72
-date: 02:02:2022 02:22
-saved-by: Joshua Klein
+data-version: 4.1.73
+date: 11:03:2022 02:22
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -22662,6 +22662,19 @@ relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C25330 ! Duration
 relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000068
+name: spectra half-TIC
+def: "The minimal proportion of peaks needed to account for at least 50% of the total ion current in each individual spectrum considered, recorded in a mandatory fraction column. Either USI or native spectrum identifier columns must be present as well." [PSI:QC]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_optional_column: MS:1003063 ! universal spectrum identifier
+relationship: has_optional_column: MS:1000767 ! native spectrum identifier format
+relationship: has_column: UO:0000191 ! fraction
+relationship: has_relation MS:1000285 ! total ion current
 
 [Term]
 id: PEFF:0000001
