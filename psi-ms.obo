@@ -6,7 +6,6 @@ auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
 import: http://purl.obolibrary.org/obo/stato.owl
-import: http://purl.obolibrary.org/obo/ncit.owl
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -82,6 +81,30 @@ name: has_column
 [Typedef]
 id: has_optional_column
 name: has_optional_column
+
+[Term]
+id: NCIT:C25330
+name: Duration
+def: "The period of time during which something continues." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+is_a: NCIT:C21514 ! Temporal Qualifier
+
+[Term]
+id: NCIT:C45781
+name: Density
+def: "The amount of something per unit size." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+is_a: NCIT:C25447 ! Characteristic
+
+[Term]
+id: NCIT:C68811
+name: Cover
+def: "Span a region or interval of distance, space or time." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+is_a: NCIT:C25404 ! Action
+
+[Term]
+id: NCIT:C79083
+name: Outlier
+def: "An observation in a data set that is numerically distant from the rest of the data." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+is_a: NCIT:C20181 ! Conceptual Entity
 
 [Term]
 id: MS:0000000
