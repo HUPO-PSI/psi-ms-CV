@@ -22277,14 +22277,14 @@ is_a: MS:1000044 ! dissociation method
 [Term]
 id: MS:1003247
 name: proton transfer reaction
-def: "A process to transfer a proton from a hydronium ion (H3O+) to neutral analyte, leading to a protonated analyte, which typically does not lead to fragmentation" [DOI:10.1002/mas.20048, PSI:MS]
+def: "Process to transfer a proton from a hydronium ion (H3O+) to neutral analyte, leading to a protonated analyte, which typically does not lead to fragmentation." [DOI:10.1002/mas.20048, PSI:MS]
 synonym: "PTR" EXACT []
 is_a: MS:1000008 ! ionization type
 
 [Term]
 id: MS:1003248
 name: proton transfer charge reduction
-def: "A process to transfer of one or more protons from a multiply charged cation (peptide or protein ion) to a proton acceptor anion or neutral basic compound" [PSI:MS]
+def: "Process to transfer one or more protons from a multiply charged cation (peptide or protein ion) to a proton acceptor anion or neutral basic compound, thereby reducing the charge of the original analyte." [PSI:MS]
 synonym: "PTCR" EXACT []
 is_a: MS:1000008 ! ionization type
 
