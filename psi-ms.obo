@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.73
+data-version: 4.1.74
 date: 11:03:2022 02:22
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
@@ -22274,21 +22274,21 @@ synonym: "UVPD" EXACT []
 is_a: MS:1000435 ! photodissociation
 
 [Term]
-id: MS:1003246
+id: MS:1003247
 name: negative electron transfer dissociation
 def: "A process to fragment ions in a mass spectrometer by inducing fragmentation of anions (e.g. peptides or proteins) by transferring electrons to a radical-cation." [DOI:10.1016/j.jasms.2005.01.015, PSI:MS]
 synonym: "NETD" EXACT []
 is_a: MS:1000044 ! dissociation method
 
 [Term]
-id: MS:1003247
+id: MS:1003248
 name: proton transfer reaction
 def: "Process to transfer a proton from a hydronium ion (H3O+) to neutral analyte, leading to a protonated analyte, which typically does not lead to fragmentation." [DOI:10.1002/mas.20048, PSI:MS]
 synonym: "PTR" EXACT []
 is_a: MS:1000008 ! ionization type
 
 [Term]
-id: MS:1003248
+id: MS:1003249
 name: proton transfer charge reduction
 def: "Process to transfer one or more protons from a multiply charged cation (peptide or protein ion) to a proton acceptor anion or neutral basic compound, thereby reducing the charge of the original analyte." [PSI:MS]
 synonym: "PTCR" EXACT []
