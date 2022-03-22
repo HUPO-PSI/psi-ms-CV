@@ -22708,8 +22708,8 @@ def: "Observed mass accuracy for the peptides of a QC2 sample measurement. The t
 is_a: MS:4000074 ! QC2 sample metric
 is_a: MS:4000008 ! ID based metric
 is_a: MS:4000005 ! table
-relationship: has_column: MS:1003169 ! proforma peptidoform sequence
-relationship: has_column: MS:4000072 ! observed mass accuracy
+relationship: has_column MS:1003169 ! proforma peptidoform sequence
+relationship: has_column MS:4000072 ! observed mass accuracy
 
 [Term]
 id: MS:4000076
@@ -22718,7 +22718,7 @@ def: "Observed intensities for the peptides of a QC2 sample measurement within 5
 is_a: MS:4000xxx ! QC2 sample metric
 is_a: MS:4000008 ! ID based metric
 is_a: MS:4000005 ! table
-relationship: has_column: MS:1003169 ! proforma peptidoform sequence
+relationship: has_column MS:1003169 ! proforma peptidoform sequence
 relationship: has_optional_column MS:1001858 ! XIC area
 relationship: has_optional_column MS:1001859 ! normalized XIC area
 relationship: has_optional_column MS:1001844 ! MS1 feature area
