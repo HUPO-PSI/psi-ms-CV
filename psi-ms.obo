@@ -22683,6 +22683,35 @@ relationship: has_column: UO:0000191 ! fraction
 relationship: has_relation MS:1000285 ! total ion current
 
 [Term]
+id: MS:4000069
+name: m/z acquisition range
+def: "Upper and lower limit of m/z precursor values at which MSn spectra are recorded." [PSI:QC]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units MS:1000040 ! m/z
+
+[Term]
+id: MS:4000070
+name: retention time acquisition range
+def: "Upper and lower limit of time at which spectra are recorded." [PSI:QC]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000071
+name: number of chromatograms
+def: "The number of chromatograms recorded for the run." [PSI:QC]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
