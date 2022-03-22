@@ -22689,16 +22689,20 @@ def: "Upper and lower limit of m/z precursor values at which MSn spectra are rec
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000070
 name: retention time acquisition range
-def: "Upper and lower limit of time at which spectra are recorded." [PSI:QC]
+def: "Upper and lower limit of retention time at which spectra are recorded." [PSI:QC]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_units UO:0000010 ! second
+relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000071
