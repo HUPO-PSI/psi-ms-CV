@@ -22686,38 +22686,59 @@ relationship: has_relation MS:1000285 ! total ion current
 id: MS:4000072
 name: observed mass accuracy
 def: "Observed mass accuracy in ppm, calculated by 1E6 x (observed m/z - theoretical m/z)/theoretical m/z of a selected peptide spectrum." [PSI:MS]
-relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_metric_category MS:4000014 ! single spectrum based metric
 relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_concept MS:1000014 ! accuracy
 
 [Term]
 id: MS:4000073
-name: "QC sample metric." [PSI:MS]
-def: A QC metric based on a QC sample of known content.
+name: QC sample metric
+def: "A QC metric based on a QC sample of known content." [PSI:MS]
 is_a: MS:4000007 ! QC metric category
 
 [Term]
 id: MS:4000074
-name: QC2 sample metric
-def: "A QC metric based on the results of a QC2 sample measurement (see Pichler et al. (pmid:23088386) Chiva et al. (pmid:29324744) for details on QC2 sample design). Expected peptides from sample measurement are: 'YAEAVTR','STLTDSLVC(Carbamidomethyl)K','SLADELALVDVLEDK','NPDDITNEEYGEFYK','LAVDEEENADNNTK','FEELNMDLFR','EAALSTALSEK','DDVAQTDLLQIDPNFGSK','RFPGYDSESK','EATTEFSVDAR','EQFLDGDGWTSR','TPAQFDADELR','LGDLYEEEMR','EVSTYIK','FAFQAEVNR'" [PSI:MS]
+name: high complexity QC sample metric
+def: "A QC metric based on a QC sample of known and high complexity content." [PSI:MS]
 is_a: MS:4000073 ! QC sample metric
 
 [Term]
 id: MS:4000075
+name: low complexity QC sample metric
+def: A QC metric based on a QC sample of known and low complexity content." [PSI:MS]
+is_a: MS:4000073 ! QC sample metric
+
+[Term]
+id: MS:4000076
+name: QC2 sample metric
+def: "A QC metric based on the results of a QC2 sample measurement. A QC2 sample is made from Pierce HeLa protein digest standard, see Pichler et al. Chiva et al. for details on QC sample design." [PSI:MS, PMID:23088386, PMID:29324744]
+comment: Expected peptides from QC2 sample measurement are: 'YAEAVTR','STLTDSLVC(Carbamidomethyl)K','SLADELALVDVLEDK','NPDDITNEEYGEFYK','LAVDEEENADNNTK','FEELNMDLFR','EAALSTALSEK','DDVAQTDLLQIDPNFGSK','RFPGYDSESK','EATTEFSVDAR','EQFLDGDGWTSR','TPAQFDADELR','LGDLYEEEMR','EVSTYIK','FAFQAEVNR'
+is_a: MS:4000074 ! high complexity QC sample metric
+
+[Term]
+id: MS:4000077
+name: QC1 sample metric
+def: "A QC metric based on the results of a QC1 sample measurement. A QC1 sample is made from trypsin-digested BSA MS Standard (CAM modified), see Pichler et al. Chiva et al. for details on QC sample design)." [PSI:MS, PMID:23088386, PMID:29324744]
+comment: Expected peptides from QC1 sample measurement are: 'LVNELTEFAK','HLVDEPQNLIK','VPQVSTPTLVEVSR','EAC(Carbamidomethyl)FAVEGPK','EYEATLEEC(Carbamidomethyl)C(Carbamidomethyl)AK','EC(Carbamidomethyl)C(Carbamidomethyl)HGDLLEC(Carbamidomethyl)ADDR','SLHTLFGDELC(Carbamidomethyl)K','TC(Carbamidomethyl)VADESHAGC(Carbamidomethyl)EK','YIC(Carbamidomethyl)DNQDTISSK','NEC(Carbamidomethyl)FLSHK'
+is_a: MS:4000075 ! low complexity QC sample metric
+
+[Term]
+id: MS:4000078
 name: QC2 sample mass accuracies
-def: "Observed mass accuracy for the peptides of a QC2 sample measurement. The table should contain the peptides as defined in the parent QC2 sample metric term, missing are interpreted as not detected." [PSI:MS]
-is_a: MS:4000074 ! QC2 sample metric
-is_a: MS:4000008 ! ID based metric
+def: "Observed mass accuracy for the peptides of a QC2 sample measurement. The table should contain the peptides as described in the QC2 sample metric term, missing are interpreted as not detected." [PSI:MS]
 is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000076 ! QC2 sample metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003169 ! proforma peptidoform sequence
 relationship: has_column MS:4000072 ! observed mass accuracy
 
 [Term]
-id: MS:4000076
+id: MS:4000079
 name: QC2 sample intensities
 def: "Observed intensities for the peptides of a QC2 sample measurement within 5 ppm and +/- 240 s RT tolerance. Different metrics of observed intensities are possible, at least one must be present. The table should contain the peptides as defined in the parent QC2 sample metric term, missing are interpreted as not detected." [PSI:MS]
-is_a: MS:4000xxx ! QC2 sample metric
-is_a: MS:4000008 ! ID based metric
 is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000076 ! QC2 sample metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003169 ! proforma peptidoform sequence
 relationship: has_optional_column MS:1001858 ! XIC area
 relationship: has_optional_column MS:1001859 ! normalized XIC area
