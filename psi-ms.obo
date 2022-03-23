@@ -22685,7 +22685,7 @@ relationship: has_relation MS:1000285 ! total ion current
 [Term]
 id: MS:4000072
 name: observed mass accuracy
-def: "Observed mass accuracy in ppm, calculated by 1E6 x (observed m/z - theoretical m/z)/theoretical m/z of a selected peptide spectrum." [PSI:MS]
+def: "Observed mass accuracy in ppm, calculated by 1E6 x (observed m/z - theoretical m/z)/theoretical m/z of a selected and identified ion in a mass spectrum." [PSI:MS]
 relationship: has_metric_category MS:4000014 ! single spectrum based metric
 relationship: has_metric_category MS:4000008 ! ID based metric 
 relationship: has_metric_category MS:4000022 ! MS2 metric
