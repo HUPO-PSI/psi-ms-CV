@@ -22318,6 +22318,22 @@ synonym: "PTCR" EXACT []
 is_a: MS:1000008 ! ionization type
 
 [Term]
+id: MS:1003250
+name: count of identified peptides
+def: "The number of peptidoforms that have been identified and pass the threshold in the file." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002702 ! peptide sequence-level result list attribute
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003251
+name: count of identified spectra
+def: "The number of spectra that have been identified and pass the threshold in the file." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002700 ! PSM-level result list attribute
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:QC]
