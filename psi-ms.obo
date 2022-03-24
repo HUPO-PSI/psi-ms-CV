@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.73
-date: 11:03:2022 02:22
-saved-by: Eric Deutsch
+data-version: 4.1.78
+date: 24:03:2022 15:30
+saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
