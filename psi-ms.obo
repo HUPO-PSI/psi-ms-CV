@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.78
-date: 24:03:2022 15:30
+data-version: 4.1.79
+date: 25:03:2022 16:47
 saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22318,6 +22318,22 @@ synonym: "PTCR" EXACT []
 is_a: MS:1000008 ! ionization type
 
 [Term]
+id: MS:1003250
+name: count of identified peptidoforms
+def: "The number of peptidoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002702 ! peptide sequence-level result list attribute
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003251
+name: count of identified spectra
+def: "The number of spectra that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
+xref: value-type:xsd\:int "The allowed value-type for this CV term."
+is_a: MS:1002700 ! PSM-level result list attribute
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
@@ -22468,7 +22484,7 @@ id: MS:4000050
 name: XIC50 fraction
 def: "The number of XIC that account for the top half of all XIC-FWHM divided by the number of all XIC." [PSI:MS]
 comment: This metric characterises the distribution of precursor peak widths, much as the N50 characterises contig sizes in genome assembly.
-synonym: "XIC-WideFrac" EXACT []
+synonym: "XIC-WideFrac" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22479,9 +22495,9 @@ relationship: has_value_concept UO:0000191 ! fraction
 id: MS:4000051
 name: XIC-FWHM quantiles
 def: "The first to n-th quantile of peak widths for XICs. A metric's value triplet represents the related QuaMeter metrics of of XIC-FWHM-Q1,Q2,Q3." [PSI:MS]
-synonym: "XIC-FWHM-Q1" RELATED []
-synonym: "XIC-FWHM-Q2" RELATED []
-synonym: "XIC-FWHM-Q3" RELATED []
+synonym: "XIC-FWHM-Q1" RELATED [PMID:24494671]
+synonym: "XIC-FWHM-Q2" RELATED [PMID:24494671]
+synonym: "XIC-FWHM-Q3" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22495,9 +22511,9 @@ relationship: has_units UO:0000010 ! second
 id: MS:4000052
 name: XIC-Height quartile ratios
 def: "The log ratio of successive XIC height quartiles. The metric's value triplet represents the log ratios of XIC-height-Q2 to XIC-height-Q1, XIC-height-Q3 to XIC-height-Q2, XIC-height max to XIC-height-Q3." [PSI:MS]
-synonym: "XIC-Height-Q2" RELATED []
-synonym: "XIC-Height-Q3" RELATED []
-synonym: "XIC-Height-Q4" RELATED []
+synonym: "XIC-Height-Q2" RELATED [PMID:24494671]
+synonym: "XIC-Height-Q3" RELATED [PMID:24494671]
+synonym: "XIC-Height-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22521,11 +22537,11 @@ relationship: has_units UO:0000010 ! second
 [Term]
 id: MS:4000054
 name: TIC quarters RT fraction
-def: "The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:MS]
-synonym: "RT-TIC-Q1" RELATED []
-synonym: "RT-TIC-Q2" RELATED []
-synonym: "RT-TIC-Q3" RELATED []
-synonym: "RT-TIC-Q4" RELATED []
+def: "The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:QC]
+synonym: "RT-TIC-Q1" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q2" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q3" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22537,11 +22553,11 @@ relationship: has_units UO:0000191 ! fraction
 [Term]
 id: MS:4000055
 name: MS1 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:MS]
-synonym: "RT-MS-Q1" RELATED []
-synonym: "RT-MS-Q2" RELATED []
-synonym: "RT-MS-Q3" RELATED []
-synonym: "RT-MS-Q4" RELATED []
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:QC]
+synonym: "RT-MS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MS-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22553,11 +22569,11 @@ relationship: has_units UO:0000191 ! fraction
 [Term]
 id: MS:4000056
 name: MS2 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:MS]
-synonym: "RT-MSMS-Q1" RELATED []
-synonym: "RT-MSMS-Q2" RELATED []
-synonym: "RT-MSMS-Q3" RELATED []
-synonym: "RT-MSMS-Q4" RELATED []
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:QC]
+synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22570,9 +22586,9 @@ relationship: has_units UO:0000191 ! fraction
 id: MS:4000057
 name: MS1 TIC-change quartile ratios
 def: "The log ratios of successive TIC-change quartiles. The TIC changes are the list of MS1 total ion current (TIC) value changes from one to the next scan, produced when each MS1 TIC is subtracted from the preceding MS1 TIC. The metric's value triplet represents the log ratio of the TIC-change Q2 to Q1, Q3 to Q2, TIC-change-max to Q3" [PSI:MS]
-synonym: "MS1-TIC-Change-Q2" RELATED []
-synonym: "MS1-TIC-Change-Q3" RELATED []
-synonym: "MS1-TIC-Change-Q4" RELATED []
+synonym: "MS1-TIC-Change-Q2" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Change-Q3" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Change-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22585,9 +22601,9 @@ relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 id: MS:4000058
 name: MS1 TIC quartile ratios
 def: "The log ratios of successive TIC quartiles. The metric's value triplet represents the log ratios of TIC-Q2 to TIC-Q1, TIC-Q3 to TIC-Q2, TIC-max to TIC-Q3." [PSI:MS]
-synonym: "MS1-TIC-Q2" RELATED []
-synonym: "MS1-TIC-Q3" RELATED []
-synonym: "MS1-TIC-Q4" RELATED []
+synonym: "MS1-TIC-Q2" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Q3" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Q4" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22600,7 +22616,7 @@ relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 id: MS:4000059
 name: number of MS1 spectra
 def: "The number of MS1 events in the run." [PSI:MS]
-synonym: "MS1-Count" EXACT []
+synonym: "MS1-Count" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22612,7 +22628,7 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000060
 name: number of MS2 spectra
 def: "The number of MS2 events in the run." [PSI:MS]
-synonym: "MS2-Count" EXACT []
+synonym: "MS2-Count" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22624,9 +22640,9 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000061
 name: MS1 density quantiles
 def: "The first to n-th quantile of MS1 peak density (scan peak counts). A value triplet represents the original QuaMeter metrics, the quartiles of MS1 density. The number of values in the tuple implies the quantile mode." [PSI:MS]
-synonym: "MS1-Density-Q1" RELATED []
-synonym: "MS1-Density-Q2" RELATED []
-synonym: "MS1-Density-Q3" RELATED []
+synonym: "MS1-Density-Q1" RELATED [PMID:24494671]
+synonym: "MS1-Density-Q2" RELATED [PMID:24494671]
+synonym: "MS1-Density-Q3" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22639,9 +22655,9 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000062
 name: MS2 density quantiles
 def: "The first to n-th quantile of MS2 peak density (scan peak counts). A value triplet represents the original QuaMeter metrics, the quartiles of MS2 density. The number of values in the tuple implies the quantile mode." [PSI:MS]
-synonym: "MS2-Density-Q1" RELATED []
-synonym: "MS2-Density-Q2" RELATED []
-synonym: "MS2-Density-Q3" RELATED []
+synonym: "MS2-Density-Q1" RELATED [PMID:24494671]
+synonym: "MS2-Density-Q2" RELATED [PMID:24494671]
+synonym: "MS2-Density-Q3" RELATED [PMID:24494671]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22654,12 +22670,16 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000063
 name: MS2 known precursor charges fractions
 def: "The fraction of MS/MS precursors of the corresponding charge. The fractions [0,1] are given in the 'Fraction' column, corresponding charges in the 'Charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:MS]
-synonym: "MS2-PrecZ-1" RELATED []
-synonym: "MS2-PrecZ-2" RELATED []
-synonym: "MS2-PrecZ-3" RELATED []
-synonym: "MS2-PrecZ-4" RELATED []
-synonym: "MS2-PrecZ-5" RELATED []
-synonym: "MS2-PrecZ-more" RELATED []
+synonym: "MS2-PrecZ-1" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-2" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-3" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-4" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-5" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-more" NARROW [PMID:24494671]
+synonym: "IS-3A"  RELATED [PMID:19837981]
+synonym: "IS-3B"  RELATED [PMID:19837981]
+synonym: "IS-3C"  RELATED [PMID:19837981]
+comment: the MS2-PrecZ metrics can be directly read from the table respective table rows, the ratios of IS-3 metrics must be derived from the respective table rows, IS-3A as ratio of +1 over +2, IS-3B as ratio of +3 over +2, IS-3C as +4 over +2.
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22672,8 +22692,8 @@ relationship: has_column UO:0000191 ! fraction
 id: MS:4000064
 name: MS2 unknown and likely precursor charges fractions
 def: "The fractions of inferred charge state of MS/MS precursors. The fractions [0,1] are given in the 'Fraction' column, corresponding charges in the 'Charge state' column. Charge 0 represents unknown charge states." [PSI:MS]
-synonym: "MS2-PrecZ-likely-1" RELATED []
-synonym: "MS2-PrecZ-likely-multi" RELATED []
+synonym: "MS2-PrecZ-likely-1" RELATED [PMID:24494671]
+synonym: "MS2-PrecZ-likely-multi" RELATED [PMID:24494671]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22687,7 +22707,7 @@ id: MS:4000065
 name: fastest frequency for MS level 1 collection
 def: "Fastest frequency for MS level 1 collection" [PSI:MS]
 comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
-synonym: "MS1-Freq-Max" EXACT []
+synonym: "MS1-Freq-Max" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22700,7 +22720,7 @@ id: MS:4000066
 name: fastest frequency for MS level 2 collection
 def: "Fastest frequency for MS level 2 collection" [PSI:MS]
 comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
-synonym: "MS2-Freq-Max" EXACT []
+synonym: "MS2-Freq-Max" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22798,6 +22818,38 @@ relationship: has_optional_column MS:1001859 ! normalized XIC area
 relationship: has_optional_column MS:1001844 ! MS1 feature area
 relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
+=======
+id: MS:4000069
+name: m/z acquisition range
+def: "Upper and lower limit of m/z precursor values at which MSn spectra are recorded." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
+
+[Term]
+id: MS:4000070
+name: retention time acquisition range
+def: "Upper and lower limit of retention time at which spectra are recorded." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_units UO:0000010 ! second
+relationship: has_value_concept STATO:0000035 ! range
+
+[Term]
+id: MS:4000071
+name: number of chromatograms
+def: "The number of chromatograms recorded for the run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: PEFF:0000001
