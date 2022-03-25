@@ -22778,7 +22778,7 @@ is_a: MS:4000073 ! QC sample metric
 [Term]
 id: MS:4000075
 name: low complexity QC sample metric
-def: A QC metric based on a QC sample of known and low complexity content." [PSI:MS]
+def: "A QC metric based on a QC sample of known and low complexity content." [PSI:MS]
 is_a: MS:4000073 ! QC sample metric
 
 [Term]
@@ -22818,7 +22818,6 @@ relationship: has_optional_column MS:1001859 ! normalized XIC area
 relationship: has_optional_column MS:1001844 ! MS1 feature area
 relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
-=======
 id: MS:4000069
 name: m/z acquisition range
 def: "Upper and lower limit of m/z precursor values at which MSn spectra are recorded." [PSI:MS]
