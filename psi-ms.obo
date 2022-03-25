@@ -22654,12 +22654,16 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000063
 name: MS2 known precursor charges fractions
 def: "The fraction of MS/MS precursors of the corresponding charge. The fractions [0,1] are given in the 'Fraction' column, corresponding charges in the 'Charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:QC]
-synonym: "MS2-PrecZ-1" RELATED []
-synonym: "MS2-PrecZ-2" RELATED []
-synonym: "MS2-PrecZ-3" RELATED []
-synonym: "MS2-PrecZ-4" RELATED []
-synonym: "MS2-PrecZ-5" RELATED []
-synonym: "MS2-PrecZ-more" RELATED []
+synonym: "MS2-PrecZ-1" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-2" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-3" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-4" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-5" NARROW [PMID:24494671]
+synonym: "MS2-PrecZ-more" NARROW [PMID:24494671]
+synonym: "IS-3A"  RELATED [PMID:19837981]
+synonym: "IS-3B"  RELATED [PMID:19837981]
+synonym: "IS-3C"  RELATED [PMID:19837981]
+comment: the MS2-PrecZ metrics can be directly read from the table respective table rows, the ratios of IS-3 metrics must be derived from the respective table rows, IS-3A as ratio of +1 over +2, IS-3B as ratio of +3 over +2, IS-3C as +4 over +2.
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
