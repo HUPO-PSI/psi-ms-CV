@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.77
+data-version: 4.1.78
 date: 25:03:2022 16:47
 saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
@@ -22752,6 +22752,39 @@ relationship: has_optional_column: MS:1003063 ! universal spectrum identifier
 relationship: has_optional_column: MS:1000767 ! native spectrum identifier format
 relationship: has_column: UO:0000191 ! fraction
 relationship: has_relation MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000069
+name: m/z acquisition range
+def: "Upper and lower limit of m/z precursor values at which MSn spectra are recorded." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
+
+[Term]
+id: MS:4000070
+name: retention time acquisition range
+def: "Upper and lower limit of retention time at which spectra are recorded." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_units UO:0000010 ! second
+relationship: has_value_concept STATO:0000035 ! range
+
+[Term]
+id: MS:4000071
+name: number of chromatograms
+def: "The number of chromatograms recorded for the run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: PEFF:0000001
