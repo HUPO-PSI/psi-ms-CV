@@ -22319,8 +22319,8 @@ is_a: MS:1000008 ! ionization type
 
 [Term]
 id: MS:1003250
-name: count of identified peptides
-def: "The number of peptidoforms that have been identified and pass the threshold in the file." [PSI:PI]
+name: count of identified peptidoforms
+def: "The number of peptidoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_a: MS:1002702 ! peptide sequence-level result list attribute
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
@@ -22328,7 +22328,7 @@ relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 [Term]
 id: MS:1003251
 name: count of identified spectra
-def: "The number of spectra that have been identified and pass the threshold in the file." [PSI:PI]
+def: "The number of spectra that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_a: MS:1002700 ! PSM-level result list attribute
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
