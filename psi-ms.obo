@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.79
-date: 25:03:2022 16:47
-saved-by: Mathias Walzer
+data-version: 4.1.80
+date: 01:04:2022 12:51
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -21774,13 +21774,13 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1003171
 name: spectral library attribute
 def: "An attribute of a spectral library" [PSI:PI]
-relationship: part_of MS:1003168 ! spectral library
+relationship: part_of MS:1003170 ! spectral library
 
 [Term]
 id: MS:1003172
 name: library entry
 def: "An entry in a spectral library representing a spectrum" [PSI:PI]
-relationship: part_of MS:1003168 ! spectral library
+relationship: part_of MS:1003170 ! spectral library
 
 [Term]
 id: MS:1003173
@@ -22173,7 +22173,7 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 id: MS:1003226
 name: data independent acquisition from dissociation of full mass range after ion mobility separation
 def: "Data independent mass spectrometer acquisition method wherein the full mass range is fragmented after being separated by ion mobility. Examples of such an approach include HDMS^E and IMS-AIF." [PSI:MS]
-is_a: MS:1003215 ! dissociation of full mass range
+is_a: MS:1003216 ! dissociation of full mass range
 is_a: MS:1003219 ! ion mobility separation
 is_a: MS:1003215 ! data-independent acquisition
 is_a: MS:1003213 ! mass spectrometry acquisition method
@@ -22791,7 +22791,7 @@ id: MS:4000072
 name: observed mass accuracy
 def: "Observed mass accuracy in ppm, calculated by 1E6 x (observed m/z - theoretical m/z)/theoretical m/z of a selected and identified ion in a mass spectrum." [PSI:MS]
 relationship: has_metric_category MS:4000014 ! single spectrum based metric
-relationship: has_metric_category MS:4000008 ! ID based metric 
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_concept MS:1000014 ! accuracy
