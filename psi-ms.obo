@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.80
+data-version: 4.1.81
 date: 01:04:2022 12:51
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -105,6 +105,38 @@ id: NCIT:C79083
 name: Outlier
 def: "An observation in a data set that is numerically distant from the rest of the data." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
 is_a: NCIT:C20181 ! Conceptual Entity
+
+[Term]
+id: NCIT:C21514
+name: Temporal Qualifier
+def: "Terms used to indicate units of time or other terms associated with time." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Temporal Qualifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Temporal Qualifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NICHD"}
+
+[Term]
+id: NCIT:C25447
+name: Characteristic
+def: "The distinguishing qualities or prominent aspect of a person, object, action, process, or substance." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Characteristic" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Characteristic" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
+synonym: "Characteristic" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NICHD"}
+synonym: "Characteristics" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Feature" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Features" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
+
+[Term]
+id: NCIT:C25404
+name: Action
+def: "A thing done." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
+synonym: "Generic Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+
+[Term]
+id: NCIT:C20181
+name: Conceptual Entity
+def: "An organizational header for concepts representing mostly abstract entities." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Conceptual Entity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 
 [Term]
 id: MS:0000000
