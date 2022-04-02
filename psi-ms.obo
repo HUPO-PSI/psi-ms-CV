@@ -112,6 +112,15 @@ name: Temporal Qualifier
 def: "Terms used to indicate units of time or other terms associated with time." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
 synonym: "Temporal Qualifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Temporal Qualifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NICHD"}
+is_a: NCIT:C41009 ! Qualifier
+
+[Term]
+id: NCIT:C41009
+name: Qualifier
+def: "A term that helps define and render a concept unique." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Modifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Qualifier" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+is_a: NCIT:C20189 ! Property or Attribute
 
 [Term]
 id: NCIT:C25447
@@ -123,14 +132,34 @@ synonym: "Characteristic" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT
 synonym: "Characteristics" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Feature" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Features" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
+is_a: NCIT:C20189 ! Property or Attribute
+
+[Term]
+id: NCIT:C20189
+name: Property or Attribute
+def: "A distinguishing quality or prominent aspect of a person, object, action, process, or substance." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Property or Attribute" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Property or Attribute" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NICHD"}
 
 [Term]
 id: NCIT:C25404
 name: Action
 def: "A thing done." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+subset: NCIT:C105763
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
 synonym: "Generic Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+is_a: NCIT:C43431 ! Activity
+
+[Term]
+id: NCIT:C43431
+name: Activity
+def: "An active process; excludes processes and mechanisms which fulfill biological functions." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
+synonym: "Activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+synonym: "Activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="BRIDG 3.0.3"}
+synonym: "Activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="BRIDG 5.3"}
+synonym: "General activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
 
 [Term]
 id: NCIT:C20181
