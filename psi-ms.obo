@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.81
-date: 01:04:2022 12:51
-saved-by: Joshua Klein
+data-version: 4.1.82
+date: 08:04:2022 12:51
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -19290,10 +19290,11 @@ relationship: part_of MS:1000353 ! adduct ion
 [Term]
 id: MS:1002810
 name: adduct ion X m/z
-def: "Theoretical m/z of the X component in the adduct M+X or M-X. This term was formerly called 'adduct ion mass', but it is not really a mass. It corresponds to the column mislabelled as 'mass' at https://fiehnlab.ucdavis.edu/staff/kind/Metabolomics/MS-Adduct-Calculator." [PSI:MS]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
+def: "Theoretical m/z of the X component in the adduct (addition product) M+X or M-X. This term was formerly called 'adduct ion mass', but it is not really a mass. It corresponds to the column mislabelled as 'mass' at https://fiehnlab.ucdavis.edu/staff/kind/Metabolomics/MS-Adduct-Calculator." [PSI:MS]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1003056 ! adduct ion property
-relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
 
 [Term]
 id: MS:1002811
