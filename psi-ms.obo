@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.82
-date: 08:04:2022 12:51
+data-version: 4.1.83
+date: 12:04:2022 12:51
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -18785,7 +18785,7 @@ is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002729
-name: Xevo G2 XS Tof
+name: Xevo G2-XS Tof
 def: "Waters Corporation Xevo G2 XS Tof orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
 
@@ -22394,6 +22394,12 @@ def: "The number of spectra that pass the threshold to be considered identified 
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_a: MS:1002700 ! PSM-level result list attribute
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003252
+name: Xevo G2-XS QTof
+def: "Waters Corporation Xevo G2-XS QTof quadrupole time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:4000000
