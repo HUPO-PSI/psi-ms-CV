@@ -22921,6 +22921,166 @@ relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
 
 [Term]
+id: MS:4000080
+name: QC non-metric term
+def: "QC terms associated but not directly metrics themselves." [PSI:MS]
+relationship: part_of MS:4000000 ! PSI-MS CV Quality Control Vocabulary
+
+[Term]
+id: MS:4000081
+name: 1st PC 
+def: Data from the first principal component of a PCA. [] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000082
+name: 2nd PC 
+def: Data from the second principal component of a PCA. [] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000083
+name: 3rd PC 
+def: Data from the third principal component of a PCA. [] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000084
+name: 4th PC 
+def: Data from the fourth principal component of a PCA. [] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000085
+name: 5th PC 
+def: Data from the fifth principal component of a PCA. [] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000086
+name: mzQC input reference 
+def: Used to refer to data elements of input sections in mzQC, either inputFile names or metadata labels. [] 
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000087
+name: mzQC plot label 
+def: Used to supply alternative labels for plotting figures. [] 
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000088
+name: batch label
+def: Used to supply batch label information with any string value. []
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+	
+[Term]
+id: MS:4000089
+name: injection sequence label
+def: Used to supply injection sequence information with consecutive whole numbers. []
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000090
+name: PCA of MaxQuant's protein group raw intensities
+def: A table with the PCA results of MaxQuant's protein group raw intensities. []
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! 1st PC
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! 2nd PC 
+relationship: has_optional_column MS:4000083 ! 3rd PC 
+relationship: has_optional_column MS:4000084 ! 4th PC 
+relationship: has_optional_column MS:4000085 ! 5th PC 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000091
+name: PCA of MaxQuant's protein group lfq intensities
+def: A table with the PCA results of MaxQuant's protein group lfq intensities. []
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! 1st PC
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! 2nd PC 
+relationship: has_optional_column MS:4000083 ! 3rd PC 
+relationship: has_optional_column MS:4000084 ! 4th PC 
+relationship: has_optional_column MS:4000085 ! 5th PC 
+relationship: has_optional_column MS:40000xx ! mzQC input reference 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000092
+name: identified MS1 feature area PCA result
+def: A table with the PCA results of identified MS1 feature areas. []
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! 1st PC
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! 2nd PC 
+relationship: has_optional_column MS:4000083 ! 3rd PC 
+relationship: has_optional_column MS:4000084 ! 4th PC 
+relationship: has_optional_column MS:4000085 ! 5th PC 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000093
+name: unidentified MS1 feature area PCA result
+def: A table with the PCA results of unidentified but multiple-run-matched MS1 feature areas. []
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! 1st PC
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! 2nd PC 
+relationship: has_optional_column MS:4000083 ! 3rd PC 
+relationship: has_optional_column MS:4000084 ! 4th PC 
+relationship: has_optional_column MS:4000085 ! 5th PC 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000094
+name: batch-corrected identified MS1 feature area PCA result
+def: A table with the PCA results of identified MS1 feature areas after batch-correction. []
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! 1st PC
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! 2nd PC 
+relationship: has_optional_column MS:4000083 ! 3rd PC 
+relationship: has_optional_column MS:4000084 ! 4th PC 
+relationship: has_optional_column MS:4000085 ! 5th PC 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
