@@ -23021,7 +23021,7 @@ relationship: has_optional_column MS:4000082 ! 2nd PC
 relationship: has_optional_column MS:4000083 ! 3rd PC 
 relationship: has_optional_column MS:4000084 ! 4th PC 
 relationship: has_optional_column MS:4000085 ! 5th PC 
-relationship: has_optional_column MS:40000xx ! mzQC input reference 
+relationship: has_optional_column MS:4000086 ! mzQC input reference 
 relationship: has_optional_column MS:4000087 ! mzQC plot label 
 relationship: has_optional_column MS:4000088 ! batch label 
 relationship: has_optional_column MS:4000089 ! injection sequence label
