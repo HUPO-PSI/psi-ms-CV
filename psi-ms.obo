@@ -23031,7 +23031,7 @@ synonym: "PCA of MQ protein group raw intensities" EXACT [http://coxdocs.org/dok
 [Term]
 id: MS:4000091
 name: principal component analysis of MaxQuant's protein group lfq intensities
-def: A table with the PCA results of MaxQuant's protein group lfq intensities. []
+def: "A table with the PCA results of MaxQuant's protein group lfq intensities." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -23047,7 +23047,7 @@ synonym: "PCA of MQ protein group lfq intensities" EXACT [http://coxdocs.org/dok
 [Term]
 id: MS:4000092
 name: identified MS1 feature area principal component analysis result
-def: A table with the PCA results of identified MS1 feature areas. []
+def: "A table with the PCA results of identified MS1 feature areas." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -23065,7 +23065,7 @@ relationship: has_optional_column MS:4000089 ! injection sequence label
 [Term]
 id: MS:4000093
 name: unidentified MS1 feature area principal component analysis result
-def: A table with the PCA results of unidentified but multiple-run-matched MS1 feature areas. []
+def: "A table with the PCA results of unidentified but multiple-run-matched MS1 feature areas." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -23083,7 +23083,7 @@ relationship: has_optional_column MS:4000089 ! injection sequence label
 [Term]
 id: MS:4000094
 name: batch-corrected identified MS1 feature area principal component analysis result
-def: A table with the PCA results of identified MS1 feature areas after batch-correction. []
+def: "A table with the PCA results of identified MS1 feature areas after batch-correction." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
