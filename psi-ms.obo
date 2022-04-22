@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.83
-date: 12:04:2022 12:51
-saved-by: Eric Deutsch
+data-version: 4.1.84
+date: 08:04:2022 12:51
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -6703,6 +6703,24 @@ def: "Name of the gene from which the protein is translated." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1000884 ! protein attribute
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1000935
+name: 6470A Triple Quadrupole LC/MS
+def: "The 6470A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1000936
+name: 6470B Triple Quadrupole LC/MS
+def: "The 6470B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1000937
+name: 6495C Triple Quadrupole LC/MS
+def: "The 6495C Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1001000
