@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.84
+data-version: 4.1.85
 date: 08:04:2022 12:51
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22418,6 +22418,116 @@ id: MS:1003252
 name: Xevo G2-XS QTof
 def: "Waters Corporation Xevo G2-XS QTof quadrupole time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003253
+name: peak miscellaneous attribute
+def: "An attribute of a peak in a mass spectrum other than its m/z, intensity, and annotation. " [PSI:PI]
+relationship: part_of MS:1000231 ! peak
+
+[Term]
+id: MS:1003254
+name: pre-decharged original charge state
+def: "For a de-charged spectrum, the original charge state of the ion observed in a mass spectrum determined by charge deconvolution. " [PSI:PI]
+is_a: MS:1003253 ! peak miscellaneous attribute
+
+[Term]
+id: MS:1003255
+name: peptidoform ion attribute
+def: "Non-inherent characteristic attributed to a peptidoform" [PSI:PI]
+relationship: part_of MS:1003051 ! peptidoform ion
+
+[Term]
+id: MS:1003256
+name: library spectrum cross reference
+def: "A link from one spectrum to another spectrum of interest " [PSI:PI]
+is_a: MS:1003234 ! library entry attribute
+
+[Term]
+id: MS:1003257
+name: related spectrum
+def: "A cross reference to another spectrum that has some relationship with this one, but is not necessarily spectrally similar. " [PSI:PI]
+is_a: MS:1003256 ! library spectrum cross reference
+
+[Term]
+id: MS:1003258
+name: related spectrum keys
+def: "A list of cross references to a related spectrum in the same library, in the form of the library entry key.  " [PSI:PI]
+is_a: MS:1003257 ! related spectrum
+relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003259
+name: related spectrum USI
+def: "A cross reference to a related spectrum in the form of a PSI Universal Spectrum Identifier" [PSI:PI]
+is_a: MS:1003257 ! related spectrum
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003260
+name: related spectrum description
+def: "A free-text string describing the related spectrum and/or its relationship to this spectrum" [PSI:PI]
+relationship: part_of MS:1003257 ! related spectrum
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003261
+name: similar spectrum
+def: "A cross reference to another spectrum that has high spectral similarity with this one, usually assumed to originate from the same analyte ion." [PSI:PI]
+is_a: MS:1003256 ! library spectrum cross reference
+
+[Term]
+id: MS:1003262
+name: similar spectrum keys
+def: "A list of cross references to a similar spectrum in the same library, in the form of the library entry key.  " [PSI:PI]
+is_a: MS:1003261 ! similar spectrum
+relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003263
+name: similar spectrum USI
+def: "A cross reference to a similar spectrum in the form of a PSI Universal Spectrum Identifier" [PSI:PI]
+is_a: MS:1003261 ! similar spectrum
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003264
+name: spectrum cluster
+def: "A group of spectra that are spectrally similar to each other" [PSI:PI]
+relationship: part_of MS:1003170 ! spectral library
+
+[Term]
+id: MS:1003265
+name: spectrum cluster attribute
+def: "A non-inherent characteristic of a spectrum cluster" [PSI:PI]
+relationship: part_of MS:1003264 ! spectrum cluster
+
+[Term]
+id: MS:1003266
+name: spectrum cluster key
+def: "An ordinal number uniquely identifying a spectrum cluster. It should start with 1." [PSI:PI]
+is_a: MS:1003265 ! spectrum cluster attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003267
+name: spectrum cluster member spectrum keys
+def: "A list of integers corresponding to the library entry keys of the members of this cluster. These members must be in the same library." [PSI:PI]
+is_a: MS:1003265 ! spectrum cluster attribute
+relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003268
+name: spectrum cluster member USI
+def: "A member of this cluster external to the library, specified using a PSI Universal Spectrum Identifier " [PSI:PI]
+is_a: MS:1003265 ! spectrum cluster attribute
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003269
+name: proforma peptidoform ion notation
+def: "A string describing the peptidoform ion using the PSI ProForma notation, which should include the charge state, and optionally the adduct type.  " [PSI:PI]
+is_a: MS:1003255 ! peptidoform ion attribute
 
 [Term]
 id: MS:4000000
