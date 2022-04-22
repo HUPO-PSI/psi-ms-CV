@@ -23026,7 +23026,7 @@ relationship: has_optional_column MS:4000082 ! second principal component
 relationship: has_optional_column MS:4000083 ! third principal component 
 relationship: has_optional_column MS:4000084 ! fourth principal component 
 relationship: has_optional_column MS:4000085 ! fifth principal component 
-synonym: "PCA of MQ protein group raw intensities" EXACT [http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output]
+synonym: "PCA of MQ protein group raw intensities" EXACT [] {http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output}
 
 [Term]
 id: MS:4000091
@@ -23042,7 +23042,7 @@ relationship: has_optional_column MS:4000082 ! second principal component
 relationship: has_optional_column MS:4000083 ! third principal component 
 relationship: has_optional_column MS:4000084 ! fourth principal component 
 relationship: has_optional_column MS:4000085 ! fifth principal component 
-synonym: "PCA of MQ protein group lfq intensities" EXACT [http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output]
+synonym: "PCA of MQ protein group lfq intensities" EXACT [] {http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output}
 
 [Term]
 id: MS:4000092
