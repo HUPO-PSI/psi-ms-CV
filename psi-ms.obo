@@ -22939,6 +22939,13 @@ relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
 
 [Term]
+id: MS:4000080
+name: DIA-NN
+def: "A universal software for data-independent acquisition (DIA) proteomics data processing" [PSI:MS]
+is_a: MS:1001139 ! quantitation software name
+is_a: MS:1001456 ! analysis software
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
