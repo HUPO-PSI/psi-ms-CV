@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.84
-date: 08:04:2022 12:51
-saved-by: Joshua Klein
+data-version: 4.1.85
+date: 27:04:2022 12:51
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
