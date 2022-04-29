@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.84
-date: 08:04:2022 12:51
-saved-by: Joshua Klein
+data-version: 4.1.85
+date: 27:04:2022 12:51
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -22937,6 +22937,13 @@ relationship: has_optional_column MS:1001859 ! normalized XIC area
 relationship: has_optional_column MS:1001844 ! MS1 feature area
 relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
+
+[Term]
+id: MS:1003253
+name: DIA-NN
+def: "A universal software for data-independent acquisition (DIA) proteomics data processing" [PMID:31768060, https://github.com/vdemichev/DiaNN]
+is_a: MS:1001139 ! quantitation software name
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: PEFF:0000001
