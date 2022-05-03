@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.83
-date: 12:04:2022 12:51
-saved-by: Eric Deutsch
+data-version: 4.1.87
+date: 02:05:2022 11:44
+saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -23015,7 +23015,7 @@ relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
 [Term]
 id: MS:4000090
 name: principal component analysis of MaxQuant's protein group raw intensities
-def: "A table with the PCA results of MaxQuant's protein group raw intensities." [PSI:MS]
+def: "A table with the PCA results of MaxQuant's protein group raw intensities." [PSI:MS] {http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output}
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -23026,12 +23026,11 @@ relationship: has_optional_column MS:4000082 ! second principal component
 relationship: has_optional_column MS:4000083 ! third principal component 
 relationship: has_optional_column MS:4000084 ! fourth principal component 
 relationship: has_optional_column MS:4000085 ! fifth principal component 
-synonym: "PCA of MQ protein group raw intensities" EXACT [] {'http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output'}
 
 [Term]
 id: MS:4000091
 name: principal component analysis of MaxQuant's protein group lfq intensities
-def: "A table with the PCA results of MaxQuant's protein group lfq intensities." [PSI:MS]
+def: "A table with the PCA results of MaxQuant's protein group lfq intensities." [PSI:MS] {http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output}
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -23042,7 +23041,6 @@ relationship: has_optional_column MS:4000082 ! second principal component
 relationship: has_optional_column MS:4000083 ! third principal component 
 relationship: has_optional_column MS:4000084 ! fourth principal component 
 relationship: has_optional_column MS:4000085 ! fifth principal component 
-synonym: "PCA of MQ protein group lfq intensities" EXACT [] {'http://coxdocs.org/doku.php?id=maxquant:table:directory&s[]=output'}
 
 [Term]
 id: MS:4000092
