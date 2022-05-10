@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.86
-date: 27:04:2022 12:51
-saved-by: Joshua Klein
+data-version: 4.1.87
+date: 02:05:2022 11:44
+saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -166,6 +166,24 @@ id: NCIT:C20181
 name: Conceptual Entity
 def: "An organizational header for concepts representing mostly abstract entities." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
 synonym: "Conceptual Entity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+
+[Term]
+id: NCIT:C16847
+name: Technique
+def: "A practiced and regimented skill or series of actions." [] {http://purl.obolibrary.org/obo/NCIT_C16847="NCI"}
+is_a: NCIT:C43431 ! Activity
+	
+[Term]
+id: NCIT:C19044
+name: Statistical Technique
+def: "A method of analyzing or representing statistical data; a procedure for calculating a statistic." [] {http://purl.obolibrary.org/obo/NCIT_C19044="NCI"}
+is_a: NCIT:C16847 ! Technique
+
+[Term]
+id: NCIT:C60694
+name: Principal Component 
+def: "One of the axes representing the projection of varience resulting from principal component analysis." [] {http://purl.obolibrary.org/obo/NCIT_C60694="NCI"}
+is_a: NCIT:C19044 ! Statistical Technique
 
 [Term]
 id: MS:0000000
@@ -23054,6 +23072,164 @@ relationship: has_optional_column MS:1001859 ! normalized XIC area
 relationship: has_optional_column MS:1001844 ! MS1 feature area
 relationship: has_optional_column MS:1001843 ! MS1 feature maximum intensity
 relationship: has_optional_column MS:1003085 ! previous MSn-1 scan precursor intensity
+
+[Term]
+id: MS:4000080
+name: QC non-metric term
+def: "QC terms associated but not directly metrics themselves." [PSI:MS]
+relationship: part_of MS:4000000 ! PSI-MS CV Quality Control Vocabulary
+
+[Term]
+id: MS:4000081
+name: first principal component 
+def: "Data from the first principal component of a PCA." [PSI:MS] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+synonym: "1st PC" EXACT [] 
+
+[Term]
+id: MS:4000082
+name: second principal component 
+def: "Data from the second principal component of a PCA." [PSI:MS] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+synonym: "2nd PC" EXACT [] 
+
+[Term]
+id: MS:4000083
+name: third principal component 
+def: "Data from the third principal component of a PCA." [PSI:MS] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+synonym: "3rd PC" EXACT [] 
+
+[Term]
+id: MS:4000084
+name: fourth principal component 
+def: "Data from the fourth principal component of a PCA." [PSI:MS] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+synonym: "4th PC" EXACT [] 
+
+[Term]
+id: MS:4000085
+name: fifth principal component 
+def: "Data from the fifth principal component of a PCA." [PSI:MS] 
+relationship: has_value_concept NCIT:C60694 ! Principal Component 
+is_a: MS:4000080 ! QC non-metric term
+synonym: "5th PC" EXACT [] 
+
+[Term]
+id: MS:4000086
+name: mzQC input reference 
+def: "Used to refer to data elements of input sections in mzQC, either inputFile names or metadata labels." [PSI:MS] 
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000087
+name: mzQC plot label 
+def: "Used to supply alternative labels for plotting figures." [PSI:MS] 
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000088
+name: batch label
+def: "Used to supply batch label information with any string value." [PSI:MS]
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+	
+[Term]
+id: MS:4000089
+name: injection sequence label
+def: "Used to supply injection sequence information with consecutive whole numbers." [PSI:MS]
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000090
+name: principal component analysis of MaxQuant's protein group raw intensities
+def: "A table with the PCA results of MaxQuant's protein group raw intensities." [PSI:MS] {http://coxdocs.org/doku.php?id="maxquant:table:directory&s[]=output"}
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! first principal component
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! second principal component 
+relationship: has_optional_column MS:4000083 ! third principal component 
+relationship: has_optional_column MS:4000084 ! fourth principal component 
+relationship: has_optional_column MS:4000085 ! fifth principal component 
+
+[Term]
+id: MS:4000091
+name: principal component analysis of MaxQuant's protein group lfq intensities
+def: "A table with the PCA results of MaxQuant's protein group lfq intensities." [PSI:MS] {http://coxdocs.org/doku.php?id="maxquant:table:directory&s[]=output"}
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! first principal component
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! second principal component 
+relationship: has_optional_column MS:4000083 ! third principal component 
+relationship: has_optional_column MS:4000084 ! fourth principal component 
+relationship: has_optional_column MS:4000085 ! fifth principal component 
+
+[Term]
+id: MS:4000092
+name: identified MS1 feature area principal component analysis result
+def: "A table with the PCA results of identified MS1 feature areas." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! first principal component
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! second principal component 
+relationship: has_optional_column MS:4000083 ! third principal component 
+relationship: has_optional_column MS:4000084 ! fourth principal component 
+relationship: has_optional_column MS:4000085 ! fifth principal component 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000093
+name: unidentified MS1 feature area principal component analysis result
+def: "A table with the PCA results of unidentified but multiple-run-matched MS1 feature areas." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! first principal component
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! second principal component 
+relationship: has_optional_column MS:4000083 ! third principal component 
+relationship: has_optional_column MS:4000084 ! fourth principal component 
+relationship: has_optional_column MS:4000085 ! fifth principal component 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000094
+name: batch-corrected identified MS1 feature area principal component analysis result
+def: "A table with the PCA results of identified MS1 feature areas after batch-correction." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000081 ! first principal component
+relationship: has_column MS:4000086 ! mzQC input reference 
+relationship: has_optional_column MS:4000082 ! second principal component 
+relationship: has_optional_column MS:4000083 ! third principal component 
+relationship: has_optional_column MS:4000084 ! fourth principal component 
+relationship: has_optional_column MS:4000085 ! fifth principal component 
+relationship: has_optional_column MS:4000087 ! mzQC plot label 
+relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_optional_column MS:4000089 ! injection sequence label
 
 [Term]
 id: PEFF:0000001
