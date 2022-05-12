@@ -21069,9 +21069,9 @@ is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1003062
-name: library entry index
+name: library spectrum index
 def: "Integer index value that indicates the spectrum's ordered position within a spectral library. By custom, index counters should begin with 0." [PSI:PI]
-is_a: MS:1003234 ! library entry attribute
+is_a: MS:1003234 ! library spectrum attribute
 
 [Term]
 id: MS:1003063
@@ -21830,9 +21830,9 @@ relationship: has_value_type xsd\:float ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003168
-name: library entry comment
-def: "A free-text string providing additional information of the library entry not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
-is_a: MS:1003234 ! library entry attribute
+name: library spectrum comment
+def: "A free-text string providing additional information of the library spectrum not encoded otherwise, usually for human use and not parsed by software tools." [PSI:PI]
+is_a: MS:1003234 ! library spectrum attribute
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
@@ -21858,7 +21858,7 @@ relationship: part_of MS:1003170 ! spectral library
 
 [Term]
 id: MS:1003172
-name: library entry
+name: library spectrum
 def: "An entry in a spectral library representing a spectrum" [PSI:PI]
 relationship: part_of MS:1003170 ! spectral library
 
@@ -22303,9 +22303,9 @@ is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
 id: MS:1003234
-name: library entry attribute
+name: library spectrum attribute
 def: "An attribute that describes information about an entry in a spectral library" [PSI:PI]
-relationship: part_of MS:1003172 ! library entry
+relationship: part_of MS:1003172 ! library spectrum
 
 [Term]
 id: MS:1003235
@@ -22315,9 +22315,9 @@ is_a: MS:1000008 ! ionization type
 
 [Term]
 id: MS:1003237
-name: library entry key
-def: "An ordinal number uniquely identifying a spectrum in a library. Library entry keys should start at 1. Library entry keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
-is_a: MS:1003234 ! library entry attribute
+name: library spectrum key
+def: "An ordinal number uniquely identifying a spectrum in a library. Library spectrum keys should start at 1. Library spectrum keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
+is_a: MS:1003234 ! library spectrum attribute
 
 [Term]
 id: MS:1003238
@@ -22448,7 +22448,7 @@ relationship: part_of MS:1003051 ! peptidoform ion
 id: MS:1003257
 name: library spectrum cross reference
 def: "A link from one spectrum to another spectrum of interest " [PSI:PI]
-is_a: MS:1003234 ! library entry attribute
+is_a: MS:1003234 ! library spectrum attribute
 
 [Term]
 id: MS:1003258
@@ -22459,7 +22459,7 @@ is_a: MS:1003257 ! library spectrum cross reference
 [Term]
 id: MS:1003259
 name: related spectrum keys
-def: "A list of cross references to a related spectrum in the same library, in the form of the library entry key.  " [PSI:PI]
+def: "A list of cross references to a related spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
 is_a: MS:1003258 ! related spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -22486,7 +22486,7 @@ is_a: MS:1003257 ! library spectrum cross reference
 [Term]
 id: MS:1003263
 name: similar spectrum keys
-def: "A list of cross references to a similar spectrum in the same library, in the form of the library entry key.  " [PSI:PI]
+def: "A list of cross references to a similar spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
 is_a: MS:1003262 ! similar spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -22519,7 +22519,7 @@ relationship: has_value_type xsd\:integer ! The allowed value-type for this CV t
 [Term]
 id: MS:1003268
 name: spectrum cluster member spectrum keys
-def: "A list of integers corresponding to the library entry keys of the members of this cluster. These members must be in the same library." [PSI:PI]
+def: "A list of integers corresponding to the library spectrum keys of the members of this cluster. These members must be in the same library." [PSI:PI]
 is_a: MS:1003266 ! spectrum cluster attribute
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
