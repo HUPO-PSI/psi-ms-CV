@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.87
+data-version: 4.1.88
 date: 02:05:2022 11:44
-saved-by: Mathias Walzer
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/uo.obo
@@ -172,7 +172,7 @@ id: NCIT:C16847
 name: Technique
 def: "A practiced and regimented skill or series of actions." [] {http://purl.obolibrary.org/obo/NCIT_C16847="NCI"}
 is_a: NCIT:C43431 ! Activity
-	
+
 [Term]
 id: NCIT:C19044
 name: Statistical Technique
@@ -181,7 +181,7 @@ is_a: NCIT:C16847 ! Technique
 
 [Term]
 id: NCIT:C60694
-name: Principal Component 
+name: Principal Component
 def: "One of the axes representing the projection of varience resulting from principal component analysis." [] {http://purl.obolibrary.org/obo/NCIT_C60694="NCI"}
 is_a: NCIT:C19044 ! Statistical Technique
 
@@ -23082,55 +23082,55 @@ relationship: part_of MS:4000000 ! PSI-MS CV Quality Control Vocabulary
 
 [Term]
 id: MS:4000081
-name: first principal component 
-def: "Data from the first principal component of a PCA." [PSI:MS] 
-relationship: has_value_concept NCIT:C60694 ! Principal Component 
+name: first principal component
+def: "Data from the first principal component of a PCA." [PSI:MS]
+relationship: has_value_concept NCIT:C60694 ! Principal Component
 is_a: MS:4000080 ! QC non-metric term
-synonym: "1st PC" EXACT [] 
+synonym: "1st PC" EXACT []
 
 [Term]
 id: MS:4000082
-name: second principal component 
-def: "Data from the second principal component of a PCA." [PSI:MS] 
-relationship: has_value_concept NCIT:C60694 ! Principal Component 
+name: second principal component
+def: "Data from the second principal component of a PCA." [PSI:MS]
+relationship: has_value_concept NCIT:C60694 ! Principal Component
 is_a: MS:4000080 ! QC non-metric term
-synonym: "2nd PC" EXACT [] 
+synonym: "2nd PC" EXACT []
 
 [Term]
 id: MS:4000083
-name: third principal component 
-def: "Data from the third principal component of a PCA." [PSI:MS] 
-relationship: has_value_concept NCIT:C60694 ! Principal Component 
+name: third principal component
+def: "Data from the third principal component of a PCA." [PSI:MS]
+relationship: has_value_concept NCIT:C60694 ! Principal Component
 is_a: MS:4000080 ! QC non-metric term
-synonym: "3rd PC" EXACT [] 
+synonym: "3rd PC" EXACT []
 
 [Term]
 id: MS:4000084
-name: fourth principal component 
-def: "Data from the fourth principal component of a PCA." [PSI:MS] 
-relationship: has_value_concept NCIT:C60694 ! Principal Component 
+name: fourth principal component
+def: "Data from the fourth principal component of a PCA." [PSI:MS]
+relationship: has_value_concept NCIT:C60694 ! Principal Component
 is_a: MS:4000080 ! QC non-metric term
-synonym: "4th PC" EXACT [] 
+synonym: "4th PC" EXACT []
 
 [Term]
 id: MS:4000085
-name: fifth principal component 
-def: "Data from the fifth principal component of a PCA." [PSI:MS] 
-relationship: has_value_concept NCIT:C60694 ! Principal Component 
+name: fifth principal component
+def: "Data from the fifth principal component of a PCA." [PSI:MS]
+relationship: has_value_concept NCIT:C60694 ! Principal Component
 is_a: MS:4000080 ! QC non-metric term
-synonym: "5th PC" EXACT [] 
+synonym: "5th PC" EXACT []
 
 [Term]
 id: MS:4000086
-name: mzQC input reference 
-def: "Used to refer to data elements of input sections in mzQC, either inputFile names or metadata labels." [PSI:MS] 
+name: mzQC input reference
+def: "Used to refer to data elements of input sections in mzQC, either inputFile names or metadata labels." [PSI:MS]
 is_a: MS:4000080 ! QC non-metric term
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000087
-name: mzQC plot label 
-def: "Used to supply alternative labels for plotting figures." [PSI:MS] 
+name: mzQC plot label
+def: "Used to supply alternative labels for plotting figures." [PSI:MS]
 is_a: MS:4000080 ! QC non-metric term
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
 
@@ -23140,7 +23140,7 @@ name: batch label
 def: "Used to supply batch label information with any string value." [PSI:MS]
 is_a: MS:4000080 ! QC non-metric term
 relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
-	
+
 [Term]
 id: MS:4000089
 name: injection sequence label
@@ -23157,11 +23157,11 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000081 ! first principal component
-relationship: has_column MS:4000086 ! mzQC input reference 
-relationship: has_optional_column MS:4000082 ! second principal component 
-relationship: has_optional_column MS:4000083 ! third principal component 
-relationship: has_optional_column MS:4000084 ! fourth principal component 
-relationship: has_optional_column MS:4000085 ! fifth principal component 
+relationship: has_column MS:4000086 ! mzQC input reference
+relationship: has_optional_column MS:4000082 ! second principal component
+relationship: has_optional_column MS:4000083 ! third principal component
+relationship: has_optional_column MS:4000084 ! fourth principal component
+relationship: has_optional_column MS:4000085 ! fifth principal component
 
 [Term]
 id: MS:4000091
@@ -23172,11 +23172,11 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000081 ! first principal component
-relationship: has_column MS:4000086 ! mzQC input reference 
-relationship: has_optional_column MS:4000082 ! second principal component 
-relationship: has_optional_column MS:4000083 ! third principal component 
-relationship: has_optional_column MS:4000084 ! fourth principal component 
-relationship: has_optional_column MS:4000085 ! fifth principal component 
+relationship: has_column MS:4000086 ! mzQC input reference
+relationship: has_optional_column MS:4000082 ! second principal component
+relationship: has_optional_column MS:4000083 ! third principal component
+relationship: has_optional_column MS:4000084 ! fourth principal component
+relationship: has_optional_column MS:4000085 ! fifth principal component
 
 [Term]
 id: MS:4000092
@@ -23187,13 +23187,13 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000081 ! first principal component
-relationship: has_column MS:4000086 ! mzQC input reference 
-relationship: has_optional_column MS:4000082 ! second principal component 
-relationship: has_optional_column MS:4000083 ! third principal component 
-relationship: has_optional_column MS:4000084 ! fourth principal component 
-relationship: has_optional_column MS:4000085 ! fifth principal component 
-relationship: has_optional_column MS:4000087 ! mzQC plot label 
-relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_column MS:4000086 ! mzQC input reference
+relationship: has_optional_column MS:4000082 ! second principal component
+relationship: has_optional_column MS:4000083 ! third principal component
+relationship: has_optional_column MS:4000084 ! fourth principal component
+relationship: has_optional_column MS:4000085 ! fifth principal component
+relationship: has_optional_column MS:4000087 ! mzQC plot label
+relationship: has_optional_column MS:4000088 ! batch label
 relationship: has_optional_column MS:4000089 ! injection sequence label
 
 [Term]
@@ -23205,13 +23205,13 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000081 ! first principal component
-relationship: has_column MS:4000086 ! mzQC input reference 
-relationship: has_optional_column MS:4000082 ! second principal component 
-relationship: has_optional_column MS:4000083 ! third principal component 
-relationship: has_optional_column MS:4000084 ! fourth principal component 
-relationship: has_optional_column MS:4000085 ! fifth principal component 
-relationship: has_optional_column MS:4000087 ! mzQC plot label 
-relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_column MS:4000086 ! mzQC input reference
+relationship: has_optional_column MS:4000082 ! second principal component
+relationship: has_optional_column MS:4000083 ! third principal component
+relationship: has_optional_column MS:4000084 ! fourth principal component
+relationship: has_optional_column MS:4000085 ! fifth principal component
+relationship: has_optional_column MS:4000087 ! mzQC plot label
+relationship: has_optional_column MS:4000088 ! batch label
 relationship: has_optional_column MS:4000089 ! injection sequence label
 
 [Term]
@@ -23223,13 +23223,13 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000081 ! first principal component
-relationship: has_column MS:4000086 ! mzQC input reference 
-relationship: has_optional_column MS:4000082 ! second principal component 
-relationship: has_optional_column MS:4000083 ! third principal component 
-relationship: has_optional_column MS:4000084 ! fourth principal component 
-relationship: has_optional_column MS:4000085 ! fifth principal component 
-relationship: has_optional_column MS:4000087 ! mzQC plot label 
-relationship: has_optional_column MS:4000088 ! batch label 
+relationship: has_column MS:4000086 ! mzQC input reference
+relationship: has_optional_column MS:4000082 ! second principal component
+relationship: has_optional_column MS:4000083 ! third principal component
+relationship: has_optional_column MS:4000084 ! fourth principal component
+relationship: has_optional_column MS:4000085 ! fifth principal component
+relationship: has_optional_column MS:4000087 ! mzQC plot label
+relationship: has_optional_column MS:4000088 ! batch label
 relationship: has_optional_column MS:4000089 ! injection sequence label
 
 [Term]
