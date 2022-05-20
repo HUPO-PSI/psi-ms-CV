@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.88
+data-version: 4.1.89
 date: 02:05:2022 11:44
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -7456,7 +7456,7 @@ is_a: MS:1001085 ! protein-level identification attribute
 [Term]
 id: MS:1001117
 name: theoretical mass
-def: "The theoretical mass of the molecule (e.g. the peptide sequence and its modifications)." [PSI:PI]
+def: "The theoretical neutral mass of the molecule (e.g. the peptide sequence and its modifications) not including its charge carrier." [PSI:PI]
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001105 ! peptide sequence-level identification attribute
 relationship: has_units UO:0000221 ! dalton
@@ -21090,6 +21090,7 @@ id: MS:1003062
 name: library spectrum index
 def: "Integer index value that indicates the spectrum's ordered position within a spectral library. By custom, index counters should begin with 0." [PSI:PI]
 is_a: MS:1003234 ! library spectrum attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003063
@@ -21242,10 +21243,10 @@ relationship: has_value_type xsd\:string ! The allowed value-type for this CV te
 id: MS:1003086
 name: precursor apex intensity
 def: "Intensity of the precursor ion current as measured by its apex point over time and m/z. It is unspecified whether this is the intensity of the selected isotope or the most intense isotope." [PSI:MS]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1001141 ! intensity of precursor ion
 is_a: MS:1000499 ! spectrum attribute
-relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003087
@@ -22336,6 +22337,7 @@ id: MS:1003237
 name: library spectrum key
 def: "An ordinal number uniquely identifying a spectrum in a library. Library spectrum keys should start at 1. Library spectrum keys SHOULD not change if entries are re-ordered or removed from a library." [PSI:PI]
 is_a: MS:1003234 ! library spectrum attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003238
