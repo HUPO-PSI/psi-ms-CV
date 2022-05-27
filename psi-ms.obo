@@ -4593,12 +4593,11 @@ is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000633
-name: possible precursor charge state
+name: possible charge state
 def: "A possible charge state of the ion in a situation where the charge of an ion is known to be one of several possible values rather than a completely unknown value or determined to be a specific charge with reasonable certainty." [PSI:MS]
 xref: value-type:xsd\:int "The allowed value-type for this CV term."
 is_a: MS:1000455 ! ion selection attribute
 relationship: has_value_type xsd\:int ! The allowed value-type for this CV term
-synonym: "possible charge state" EXACT []
 
 [Term]
 id: MS:1000634
