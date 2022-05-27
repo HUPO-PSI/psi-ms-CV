@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.89
+data-version: 4.1.90
 date: 02:05:2022 11:44
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -9836,8 +9836,9 @@ is_a: MS:1001456 ! analysis software
 [Term]
 id: MS:1001477
 name: SpectraST
-def: "SpectraST was used to analyze the spectra." [PSI:PI]
+def: "Open-source software for mass spectral library creation and searching, developed at the Institute for Systems Biology and the Hong Kong University of Science and Technology. Part of the Trans-Proteomic Pipeline." [PSI:PI]
 is_a: MS:1001456 ! analysis software
+is_a: MS:1003207 ! library creation software
 
 [Term]
 id: MS:1001478
@@ -20997,6 +20998,7 @@ id: MS:1003047
 name: protein sequence offset
 def: "Offset in number of residues from the n terminus of the protein at which the peptide begins. Use 1 when the first residue of the peptide sequence is the first residue of the protein sequence." [PSI:PI]
 is_a: MS:1003046 ! peptide-to-protein mapping attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003048
@@ -21036,12 +21038,14 @@ id: MS:1003053
 name: theoretical monoisotopic m/z
 def: "Mass-to-charge ratio of a peptidoform ion composed of the most common isotope of each atom computed from the putative knowledge of its molecular constituents." [PSI:PI]
 is_a: MS:1003052 ! peptidoform ion property
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003054
 name: theoretical average m/z
 def: "Mass-to-charge ratio of a peptidoform ion computed from the putative knowledge of its molecular constituents, averaged over the distribution of naturally occurring isotopes." [PSI:PI]
 is_a: MS:1003052 ! peptidoform ion property
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003055
@@ -21072,18 +21076,22 @@ id: MS:1003059
 name: number of peaks
 def: "Number of peaks or features in a spectrum. For a peak-picked spectrum, this will correspond to the number of data points. For a non-peak-picked spectrum, this corresponds to the number of features discernable in the spectrum, which will be fewer than the number of data points." [PSI:PI]
 is_a: MS:1003058 ! spectrum property
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003060
 name: number of data points
 def: "Number of data points in a spectrum. For a peak-picked spectrum, this will correspond to the number of peaks. For a non-peak-picked spectrum, this corresponds to the number of values in the data array, which are not all peaks." [PSI:PI]
 is_a: MS:1003058 ! spectrum property
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003061
-name: spectrum name
+name: library spectrum name
 def: "Label attached to a spectrum uniquely naming it within a collection of spectra, often in a spectral library. It is often a string combination of peptide sequence, charge, mass modifications, collision energy, but will obviously be different for small molecules or unidentified spectra. It must be unique within a collection." [PSI:PI]
 is_a: MS:1000499 ! spectrum attribute
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+synonym: "spectrum name" EXACT []
 
 [Term]
 id: MS:1003062
@@ -21097,6 +21105,8 @@ id: MS:1003063
 name: universal spectrum identifier
 def: "PSI universal spectrum identifier (USI) multipart key that uniquely identifies a spectrum available in a ProteomeXchange datasets or spectral library." [PSI:PI]
 is_a: MS:1000499 ! spectrum attribute
+relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+synonym: "USI" EXACT []
 
 [Term]
 id: MS:1003064
@@ -21133,12 +21143,14 @@ id: MS:1003069
 name: number of replicate spectra available
 def: "Number of replicate spectra available for use during the aggregation process." [PSI:PI]
 is_a: MS:1003064 ! spectrum aggregation attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003070
 name: number of replicate spectra used
 def: "Number of replicate spectra used during the aggregation process. This is generally applicable when there are many replicates available, but some are discarded as being low S/N, blended, or otherwise unsuitable, and the remaining set is then used for merging via a consensus algorithm." [PSI:PI]
 is_a: MS:1003064 ! spectrum aggregation attribute
+relationship: has_value_type xsd\:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003071
@@ -21199,6 +21211,7 @@ id: MS:1003080
 name: top 20 peak unassigned intensity fraction
 def: "Fraction of intensity summed from unassigned peaks among the top 20 divided by the intensity summed from all top 20 peaks in the spectrum." [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd\:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003081
@@ -21237,7 +21250,7 @@ def: "Intensity of the precursor ion in the previous MSn-1 scan (prior in time t
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001141 ! intensity of precursor ion
 is_a: MS:1000499 ! spectrum attribute
-relationship: has_value_type xsd\:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd\:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003086
@@ -22107,6 +22120,13 @@ id: MS:1003201
 name: library provenance attribute
 def: "Abstract term containing several different types of provenance information" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
+
+[Term]
+id: MS:1003202
+name: BiblioSpec
+def: "A suite of software tools for creating and searching MS/MS peptide spectrum libraries, developed at the University of Washington" [PSI:PI]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1003207 ! library creation software
 
 [Term]
 id: MS:1003203
