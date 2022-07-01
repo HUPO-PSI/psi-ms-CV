@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.91
-date: 02:05:2022 11:44
+data-version: 4.1.92
+date: 07:01:2022 11:44
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -17473,7 +17473,6 @@ relationship: part_of MS:1001000 ! spectrum interpretation
 id: MS:1002659
 name: UniProtKB text sequence format
 def: "Text-based format used by UniProtKB for sequence entries." [PSI:PI]
-xref: SWO:http://edamontology.org/format_2187
 is_a: MS:1001347 ! database file formats
 
 [Term]
