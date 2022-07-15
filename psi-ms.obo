@@ -20354,33 +20354,33 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003103
-name: ion interpretation format
-def: "Interpretation format used for annotating individual spectrum ion peaks." [PSI:MS]
+name: ion annotation format
+def: "Annotation format used for annotating individual spectrum ion peaks." [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
 
 [Term]
 id: MS:1003104
-name: peptide ion interpretation format
-def: "Interpretation format designed primarily for peptides, with allowances for generic chemical formulas and other miscellaneous named ions." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: peptide ion annotation format
+def: "Annotation format designed primarily for peptides, with allowances for generic chemical formulas and other miscellaneous named ions." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003105
-name: cross-linked peptide ion interpretation format
-def: "Interpretation format designed specifically for cross-linked peptide ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: cross-linked peptide ion annotation format
+def: "Annotation format designed specifically for cross-linked peptide ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003106
-name: glycan ion interpretation format
-def: "Interpretation format designed specifically for glycan ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: glycan ion annotation format
+def: "Annotation format designed specifically for glycan ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003107
-name: lipid ion interpretation format
-def: "Interpretation format designed specifically for lipid ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: lipid ion annotation format
+def: "Annotation format designed specifically for lipid ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003108
@@ -21520,13 +21520,13 @@ is_a: MS:1003078 ! interpreted spectrum attribute
 [Term]
 id: MS:1003275
 name: other attribute name
-def: "A user-provided name for a user-defined value describing a trait not covered by an existing controlled vocabulary term." [PSI:MS]
+def: "A user-provided name for a user-defined value describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003276 to provide the attribute's value" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
 
 [Term]
 id: MS:1003276
 name: other attribute value
-def: "A user-provided value for a user-defined name describing a trait not covered by an existing controlled vocabulary term." [PSI:MS]
+def: "A user-provided value for a user-defined name describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003275 to provide the attribute's name" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
 
 
