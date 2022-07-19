@@ -22164,6 +22164,30 @@ relationship: has_optional_column MS:4000088 ! batch label
 relationship: has_optional_column MS:4000089 ! injection sequence label
 
 [Term]
+id: MS:4000095
+name: Slowest frequency for MS level 1 collection
+def: "Slowest frequency for MS level 1 collection" [PSI:MS]
+comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000021 ! MS1 metric
+
+[Term]
+id: MS:4000096
+name: Slowest frequency for MS level 2 collection
+def: "Slowest frequency for MS level 2 collection" [PSI:MS]
+comment: Spectrum acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000022 ! MS2 metric
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
