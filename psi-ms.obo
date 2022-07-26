@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.93
+data-version: 4.1.94
 date: 07:01:2022 11:44
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -17508,13 +17508,13 @@ id: MS:1002664
 name: interaction score derived from cross-linking
 def: "Parent term for interaction scores derived from cross-linking." [PSI:PI]
 is_a: MS:1002675 ! cross-linking result details
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002665
 name: regular expression for interaction scores derived from cross-linking
-def: "([:digit:]+[.][a|b]:([:digit:]+|null):[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))." [PSI:PI]
+def: "([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17586,8 +17586,8 @@ id: MS:1002676
 name: protein-pair-level global FDR
 def: "Estimation of the global false discovery rate of proteins-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
-relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17595,8 +17595,8 @@ id: MS:1002677
 name: residue-pair-level global FDR
 def: "Estimation of the global false discovery rate of residue-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
-relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -21484,6 +21484,12 @@ id: MS:1003270
 name: proforma peptidoform ion notation
 def: "A string describing the peptidoform ion using the PSI ProForma notation, which should include the charge state, and optionally the adduct type.  " [PSI:PI]
 is_a: MS:1003256 ! peptidoform ion attribute
+
+[Term]
+id: MS:1003277
+name: value between -1 and 1 inclusive
+def: "Value range for signed normalized score values." [PSI:PI]
+is_a: MS:1002304 ! domain range
 
 [Term]
 id: MS:4000000
