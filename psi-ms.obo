@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.93
-date: 07:01:2022 11:44
+data-version: 4.1.94
+date: 29:07:2022 11:12
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -30,7 +30,7 @@ remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
-remark: URL: https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo
+remark: URL: http://purl.obolibrary.org/obo/ms/psi-ms.obo
 remark: This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
 remark: To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 ontology: ms
@@ -7954,6 +7954,7 @@ def: "The product ion m/z error." [PSI:PI]
 is_a: MS:1001221 ! product ion attribute
 relationship: has_units MS:1000040 ! m/z
 relationship: has_units UO:0000166 ! parts per notation unit
+relationship: has_units UO:0000169 ! parts per million
 
 [Term]
 id: MS:1001228
@@ -12915,6 +12916,7 @@ def: "The difference between a theoretically calculated m/z and the correspondin
 synonym: "m/z difference" EXACT []
 is_a: MS:1001405 ! spectrum identification result details
 relationship: has_units UO:0000166 ! parts per notation unit
+relationship: has_units UO:0000169 ! parts per million
 relationship: has_units UO:0000187 ! percent
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -12926,6 +12928,7 @@ def: "The difference between a theoretically calculated molecular mass M and the
 synonym: "mass difference" EXACT []
 is_a: MS:1001405 ! spectrum identification result details
 relationship: has_units UO:0000166 ! parts per notation unit
+relationship: has_units UO:0000169 ! parts per million
 relationship: has_units UO:0000187 ! percent
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -19989,6 +19992,7 @@ id: MS:1003048
 name: number of enzymatic termini
 def: "Total number of termini that match standard rules for the cleavage agent, 2 when both termini match cleavage agent rules, 1 when only one terminus does, and 0 if neither terminus matches cleavage agent rules." [PSI:PI]
 is_a: MS:1003046 ! peptide-to-protein mapping attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003049
@@ -20048,6 +20052,7 @@ id: MS:1003057
 name: scan number
 def: "Ordinal number of the scan indicating its order of acquisition within a mass spectrometry acquisition run." [PSI:PI]
 is_a: MS:1000503 ! scan attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003058
@@ -20189,6 +20194,7 @@ id: MS:1003079
 name: total unassigned intensity fraction
 def: "Fraction of intensity summed from all unassigned peaks divided by the intensity summed from all peaks in the spectrum." [PSI:PI]
 is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003080
@@ -20348,33 +20354,33 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003103
-name: ion interpretation format
-def: "Interpretation format used for annotating individual spectrum ion peaks." [PSI:MS]
+name: ion annotation format
+def: "Annotation format used for annotating individual spectrum ion peaks." [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
 
 [Term]
 id: MS:1003104
-name: peptide ion interpretation format
-def: "Interpretation format designed primarily for peptides, with allowances for generic chemical formulas and other miscellaneous named ions." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: peptide ion annotation format
+def: "Annotation format designed primarily for peptides, with allowances for generic chemical formulas and other miscellaneous named ions." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003105
-name: cross-linked peptide ion interpretation format
-def: "Interpretation format designed specifically for cross-linked peptide ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: cross-linked peptide ion annotation format
+def: "Annotation format designed specifically for cross-linked peptide ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003106
-name: glycan ion interpretation format
-def: "Interpretation format designed specifically for glycan ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: glycan ion annotation format
+def: "Annotation format designed specifically for glycan ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003107
-name: lipid ion interpretation format
-def: "Interpretation format designed specifically for lipid ion peaks." [PSI:MS]
-is_a: MS:1003103 ! ion interpretation format
+name: lipid ion annotation format
+def: "Annotation format designed specifically for lipid ion peaks." [PSI:MS]
+is_a: MS:1003103 ! ion annotation format
 
 [Term]
 id: MS:1003108
@@ -21475,15 +21481,54 @@ relationship: has_value_type MS:1002712 ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003269
 name: spectrum cluster member USI
-def: "A member of this cluster external to the library, specified using a PSI Universal Spectrum Identifier " [PSI:PI]
+def: "A member of this cluster external to the library, specified using a PSI Universal Spectrum Identifier." [PSI:PI]
 is_a: MS:1003266 ! spectrum cluster attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003270
 name: proforma peptidoform ion notation
-def: "A string describing the peptidoform ion using the PSI ProForma notation, which should include the charge state, and optionally the adduct type.  " [PSI:PI]
+def: "A string describing the peptidoform ion using the PSI ProForma notation, which should include the charge state, and optionally the adduct type." [PSI:PI]
 is_a: MS:1003256 ! peptidoform ion attribute
+
+[Term]
+id: MS:1003271
+name: peak annotation
+def: "The molecular identity(-ies) of the ion(s) producing this peak, inferred manually or computationally based on its m/z and the molecular interpretation of the spectrum." [PSI:PI]
+relationship: part_of MS:1000231 ! peak
+
+[Term]
+id: MS:1003272
+name: peak annotation string
+def: "A string representing the peak annotation, in a defined format specified by the attribute 'ion annotation format'." [PSI:PI]
+relationship: part_of MS:1003271 ! peak annotation
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003273
+name: peak annotation confidence
+def: "A confidence value of assigning a peak annotation to a peak, as defined by the attribute 'peak annotation confidence metric'." [PSI:PI]
+relationship: part_of MS:1003271 ! peak annotation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003274
+name: peak annotation confidence metric
+def: "A confidence metric of assigning a peak annotation to a peak. By default, this should range from 0 (no confidence) to 1 (certain), and if there are multiple annotations of the same peak, the sum of their confidence levels should be no more than 1." [PSI:PI]
+is_a: MS:1003078 ! interpreted spectrum attribute
+
+[Term]
+id: MS:1003275
+name: other attribute name
+def: "A user-provided name for a user-defined value describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003276 to provide the attribute's value" [PSI:MS]
+is_a: MS:1003078 ! interpreted spectrum attribute
+
+[Term]
+id: MS:1003276
+name: other attribute value
+def: "A user-provided value for a user-defined name describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003275 to provide the attribute's name" [PSI:MS]
+is_a: MS:1003078 ! interpreted spectrum attribute
+
 
 [Term]
 id: MS:4000000
