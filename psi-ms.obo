@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.94
-date: 29:07:2022 11:12
+data-version: 4.1.95
+date: 07:01:2022 11:53
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -17511,13 +17511,13 @@ id: MS:1002664
 name: interaction score derived from cross-linking
 def: "Parent term for interaction scores derived from cross-linking." [PSI:PI]
 is_a: MS:1002675 ! cross-linking result details
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002665
 name: regular expression for interaction scores derived from cross-linking
-def: "([:digit:]+[.][a|b]:([:digit:]+|null):[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))." [PSI:PI]
+def: "([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17589,8 +17589,8 @@ id: MS:1002676
 name: protein-pair-level global FDR
 def: "Estimation of the global false discovery rate of proteins-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
-relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17598,8 +17598,8 @@ id: MS:1002677
 name: residue-pair-level global FDR
 def: "Estimation of the global false discovery rate of residue-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
-relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([:digit:]+[.][a|b]:[:digit:]+:[:digit:]+[.][:digit:]+([Ee][+-][0-9]+)*:(true|false]\{1\}))
+relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
+relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -21529,6 +21529,11 @@ name: other attribute value
 def: "A user-provided value for a user-defined name describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003275 to provide the attribute's name" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
 
+[Term]
+id: MS:1003277
+name: value between -1 and 1 inclusive
+def: "Value range for signed normalized score values." [PSI:PI]
+is_a: MS:1002304 ! domain range
 
 [Term]
 id: MS:4000000
