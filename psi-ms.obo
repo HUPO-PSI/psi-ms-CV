@@ -22188,6 +22188,26 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000022 ! MS2 metric
 
 [Term]
+id: MS:4000097
+name: MS1 signal jump (10x) count
+def: "The number of times where MS1 TIC increased more than 10-fold between adjacent MS1 scans" [PSI:MS]
+comment: An unusual high count of signal jumps or falls can indicate ESI stability issues.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric 
+synonym: "IS-1A"  RELATED []
+
+[Term]
+id: MS:4000098
+name: MS1 signal fall (10x) count
+def: "The number of times where MS1 TIC decreased more than 10-fold between adjacent MS1 scans" [PSI:MS]
+comment: An unusual high count of signal jumps or falls can indicate ESI stability issues.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric 
+synonym: "IS-1B"  RELATED []
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
