@@ -1,10 +1,9 @@
 format-version: 1.2
-data-version: 4.1.96
-date: 08:12:2022 11:53
+data-version: 4.1.98
+date: 14:08:2022 05:27
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
-import: http://purl.obolibrary.org/obo/uo.obo
 import: http://purl.obolibrary.org/obo/stato.owl
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -21559,6 +21558,11 @@ def: "A measure of the statistical variability of the intensity of this peak, us
 is_a: MS:1003254 ! peak attribute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
+id: MS:1003281
+name: Casanovo
+def: "Casanovo is a deep learning-based de novo spectrum identification tool. Official website https://github.com/Noble-Lab/casanovo/." [https://github.com/Noble-Lab/casanovo/]
+is_a: MS:1001456 ! analysis software
+
 [Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
@@ -22655,3 +22659,534 @@ id: PEFF:1002003
 name: regular expression for PEFF sequence status
 def: "(Complete|Fragment|[a-z0-9A-Z]+)." [PSI:PEFF]
 is_a: MS:1002479 ! regular expression
+
+
+[Term]
+id: UO:0000000
+name: unit
+namespace: unit.ontology
+def: "A unit of measurement is a standardized quantity of a physical quality." [Wikipedia:Wikipedia]
+created_by: george gkoutos
+
+[Term]
+id: UO:0000001
+name: length unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the distance between two points." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001708
+created_by: george gkoutos
+
+[Term]
+id: UO:0000002
+name: mass unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the amount of matter/energy of a physical object." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0000125
+relationship: is_unit_of PATO:0000128
+created_by: george gkoutos
+
+[Term]
+id: UO:0000003
+name: time unit
+namespace: unit.ontology
+alt_id: UO:0000149
+def: "A unit which is a standard measure of the dimension in which events occur in sequence." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+synonym: "time derived unit" EXACT []
+is_a: UO:0000000
+relationship: is_unit_of PATO:0000165
+relationship: is_unit_of PATO:0001309
+created_by: george gkoutos
+
+[Term]
+id: UO:0000005
+name: temperature unit
+namespace: unit.ontology
+alt_id: UO:0000126
+def: "A unit which is a standard measure of the average kinetic energy of the particles in a sample of matter." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+synonym: "temperature derived unit" EXACT []
+is_a: UO:0000000
+relationship: is_unit_of PATO:0000146
+created_by: george gkoutos
+
+[Term]
+id: UO:0000008
+name: meter
+namespace: unit.ontology
+def: "A length unit which is equal to the length of the path traveled by light in vacuum during a time interval of 1/299 792 458 of a second." [BIPM:BIPM, NIST:NIST]
+subset: unit_slim
+synonym: "m" EXACT []
+synonym: "metre" EXACT []
+is_a: UO:0000001
+is_a: UO:0000045
+created_by: george gkoutos
+
+[Term]
+id: UO:0000010
+name: second
+namespace: unit.ontology
+def: "A time unit which is equal to the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom." [BIPM:BIPM, NIST:NIST]
+subset: unit_slim
+synonym: "s" EXACT []
+is_a: UO:0000003
+is_a: UO:0000045
+created_by: george gkoutos
+
+[Term]
+id: UO:0000012
+name: kelvin
+namespace: unit.ontology
+def: "A thermodynamic temperature unit which is equal to the fraction 1/273.16 of the thermodynamic temperature of the triple point of water." [BIPM:BIPM, NIST:NIST]
+subset: unit_slim
+synonym: "K" EXACT []
+is_a: UO:0000005
+is_a: UO:0000045
+created_by: george gkoutos
+
+[Term]
+id: UO:0000017
+name: micrometer
+namespace: unit.ontology
+def: "A length unit which is equal to one millionth of a meter or 10^[-6] m." [NIST:NIST]
+subset: unit_slim
+synonym: "micrometre" EXACT []
+synonym: "micron" EXACT []
+synonym: "um" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
+id: UO:0000018
+name: nanometer
+namespace: unit.ontology
+def: "A length unit which is equal to one thousandth of one millionth of a meter or 10^[-9] m." [NIST:NIST]
+subset: unit_slim
+synonym: "nanometre" EXACT []
+synonym: "nm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
+id: UO:0000021
+name: gram
+namespace: unit.ontology
+def: "A mass unit which is equal to one thousandth of a kilogram or 10^[-3] kg." [NIST:NIST]
+subset: unit_slim
+synonym: "g" EXACT []
+is_a: UO:0000002
+created_by: george gkoutos
+
+[Term]
+id: UO:0000027
+name: degree Celsius
+namespace: unit.ontology
+def: "A temperature unit which is equal to one kelvin degree. However, they have their zeros at different points. The centigrade scale has its zero at 273.15 K." [NIST:NIST]
+subset: unit_slim
+synonym: "C" EXACT []
+is_a: UO:0000005
+created_by: george gkoutos
+
+[Term]
+id: UO:0000028
+name: millisecond
+namespace: unit.ontology
+def: "A time unit which is equal to one thousandth of a second or 10^[-3] s." [NIST:NIST]
+subset: unit_slim
+synonym: "ms" EXACT []
+is_a: UO:0000003
+created_by: george gkoutos
+
+[Term]
+id: UO:0000031
+name: minute
+namespace: unit.ontology
+def: "A time unit which is equal to 60 seconds." [Wikipedia:Wikipedia]
+subset: unit_slim
+synonym: "min" EXACT []
+is_a: UO:0000003
+created_by: george gkoutos
+
+[Term]
+id: UO:0000045
+name: base unit
+namespace: unit.ontology
+def: "A unit which is one of a particular measure to which all measures of that type can be related." [NIST:NIST]
+subset: unit_group_slim
+is_a: UO:0000000
+created_by: george gkoutos
+
+[Term]
+id: UO:0000047
+name: area unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the amount of a 2-dimensional flat surface." [UOC:GVG]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001709
+created_by: george gkoutos
+
+[Term]
+id: UO:0000052
+name: mass density unit
+namespace: unit.ontology
+def: "A density unit which is a standard measure of the mass of a substance in a given volume." [UOC:GVG]
+subset: unit_group_slim
+synonym: "mass per unit volume" EXACT []
+is_a: UO:0000182
+relationship: is_unit_of PATO:0001353
+created_by: george gkoutos
+
+[Term]
+id: UO:0000095
+name: volume unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the amount of space occupied by any substance, whether solid, liquid, or gas." [NIST:NIST]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001710
+created_by: george gkoutos
+
+[Term]
+id: UO:0000098
+name: milliliter
+namespace: unit.ontology
+def: "A volume unit which is equal to one thousandth of a liter or 10^[-3] L, or to 1 cubic centimeter." [NIST:NIST]
+subset: unit_slim
+synonym: "millilitre" EXACT []
+synonym: "ml" EXACT []
+is_a: UO:0000095
+created_by: george gkoutos
+
+[Term]
+id: UO:0000105
+name: frequency unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the number of repetitive actions in a particular time." [NIST:NIST]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0000044
+created_by: george gkoutos
+
+[Term]
+id: UO:0000106
+name: hertz
+namespace: unit.ontology
+def: "A frequency unit which is equal to 1 complete cycle of a recurring phenomenon in 1 second." [NIST:NIST]
+subset: unit_slim
+synonym: "Hz" EXACT []
+synonym: "s^1" EXACT []
+is_a: UO:0000105
+created_by: george gkoutos
+
+[Term]
+id: UO:0000109
+name: pressure unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the force applied to a given area." [NIST:NIST]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001025
+created_by: george gkoutos
+
+[Term]
+id: UO:0000110
+name: pascal
+namespace: unit.ontology
+def: "A pressure unit which is equal to the pressure or stress on a surface caused by a force of 1 newton spread over a surface of 1 m^[2]." [NIST:NIST]
+subset: unit_slim
+synonym: "Pa" EXACT []
+is_a: UO:0000109
+created_by: george gkoutos
+
+[Term]
+id: UO:0000111
+name: energy unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the work done by a certain force (gravitational, electric, magnetic, force of inertia, etc)." [NIST:NIST]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001021
+relationship: is_unit_of PATO:0001026
+created_by: george gkoutos
+
+[Term]
+id: UO:0000112
+name: joule
+namespace: unit.ontology
+def: "An energy unit which is equal to the energy required when a force of 1 newton moves an object 1 meter in the direction of the force." [NIST:NIST]
+subset: unit_slim
+synonym: "J" EXACT []
+is_a: UO:0000111
+created_by: george gkoutos
+
+[Term]
+id: UO:0000121
+name: angle unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the figure or space formed by the junction of two lines or planes." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0000133
+created_by: george gkoutos
+
+[Term]
+id: UO:0000122
+name: plane angle unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the angle formed by two straight lines in the same plane." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000121
+created_by: george gkoutos
+
+[Term]
+id: UO:0000150
+name: nanosecond
+namespace: unit.ontology
+def: "A time unit which is equal to one thousandth of one millionth of a second or 10^[-9] s." [NIST:NIST]
+subset: unit_slim
+synonym: "ns" EXACT []
+is_a: UO:0000003
+created_by: george gkoutos
+
+[Term]
+id: UO:0000166
+name: parts per notation unit
+namespace: unit.ontology
+def: "A dimensionless concentration notation which describes the amount of one substance in another. It is the ratio of the amount of the substance of interest to the amount of that substance plus the amount of the substance." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000186
+created_by: george gkoutos
+
+[Term]
+id: UO:0000169
+name: parts per million
+namespace: unit.ontology
+def: "A dimensionless concentration notation which denotes the amount of a given substance in a total amount of 1,000,000 regardless of the units of measure used as long as they are the same or 1 part in 10^[6]." [UOC:GVG]
+subset: unit_slim
+synonym: "10^[-6]" EXACT []
+synonym: "ppm" EXACT []
+is_a: UO:0000166
+created_by: george gkoutos
+
+[Term]
+id: UO:0000175
+name: gram per liter
+namespace: unit.ontology
+def: "A mass unit density which is equal to mass of an object in grams divided by the volume in liters." [UOC:GVG]
+subset: unit_slim
+synonym: "g/L" EXACT []
+synonym: "gram per litre" EXACT []
+is_a: UO:0000052
+created_by: george gkoutos
+
+[Term]
+id: UO:0000182
+name: density unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the influence exerted by some mass." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001019
+created_by: george gkoutos
+
+[Term]
+id: UO:0000185
+name: degree
+namespace: unit.ontology
+def: "A plane angle unit which is equal to 1/360 of a full rotation or 1.7453310^[-2] rad." [Wikipedia:Wikipedia]
+subset: unit_slim
+is_a: UO:0000122
+created_by: george gkoutos
+
+[Term]
+id: UO:0000186
+name: dimensionless unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of physical quantity consisting of only a numerical number without any units." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+created_by: george gkoutos
+
+[Term]
+id: UO:0000187
+name: percent
+namespace: unit.ontology
+def: "A dimensionless ratio unit which denotes numbers as fractions of 100." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+synonym: "%" EXACT []
+is_a: UO:0000190
+created_by: george gkoutos
+
+[Term]
+id: UO:0000189
+name: count unit
+namespace: unit.ontology
+def: "A dimensionless unit which denotes a simple count of things." [MGED:MGED]
+subset: unit_group_slim
+synonym: "count" EXACT []
+is_a: UO:0000186
+created_by: george gkoutos
+
+[Term]
+id: UO:0000190
+name: ratio
+namespace: unit.ontology
+def: "A dimensionless unit which denotes an amount or magnitude of one quantity relative to another." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000186
+created_by: george gkoutos
+
+[Term]
+id: UO:0000191
+name: fraction
+namespace: unit.ontology
+def: "A dimensionless ratio unit which relates the part (the numerator) to the whole (the denominator)." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000190
+created_by: george gkoutos
+
+[Term]
+id: UO:0000217
+name: electric potential difference unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the work done per unit charge as a charge is moved between two points in an electric field." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+relationship: is_unit_of PATO:0001464
+created_by: george gkoutos
+
+[Term]
+id: UO:0000218
+name: volt
+namespace: unit.ontology
+def: "An electric potential difference unit which is equal to the work per unit charge. One volt is the potential difference required to move one coulomb of charge between two points in a circuit while using one joule of energy." [Wikipedia:Wikipedia]
+subset: unit_slim
+synonym: "V" EXACT []
+is_a: UO:0000217
+created_by: george gkoutos
+
+[Term]
+id: UO:0000221
+name: dalton
+namespace: unit.ontology
+def: "An independently to the base SI units defined mass unit which is equal to one twelfth of the mass of an unbound atom of the carbon-12 nuclide, at rest and in its ground state." [Wikipedia:Wikipedia]
+subset: unit_slim
+synonym: "amu" EXACT []
+synonym: "Da" EXACT []
+synonym: "u" EXACT []
+synonym: "unified atomic mass unit" EXACT []
+is_a: UO:0000002
+created_by: george gkoutos
+
+[Term]
+id: UO:0000222
+name: kilodalton
+namespace: unit.ontology
+def: "A mass unit which is equal to one thousand daltons." [Wikipedia:Wikipedia]
+subset: unit_slim
+synonym: "kDa" EXACT []
+is_a: UO:0000002
+created_by: george gkoutos
+
+[Term]
+id: UO:0000227
+name: magnetic flux density unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the strength of a magnetic field." [allnet:allnet]
+subset: unit_group_slim
+synonym: "B" EXACT []
+is_a: UO:0000000
+created_by: george gkoutos
+
+[Term]
+id: UO:0000228
+name: tesla
+namespace: unit.ontology
+def: "A magnetic flux density unit which is equal to one weber per square meter." [WordNet:WordNet]
+subset: unit_slim
+synonym: "T" EXACT []
+synonym: "Wb/m2" EXACT []
+is_a: UO:0000227
+created_by: george gkoutos
+
+[Term]
+id: UO:0000266
+name: electronvolt
+namespace: unit.ontology
+def: "A non-SI unit of energy (eV) defined as the energy acquired by a single unbound electron when it passes through an electrostatic potential difference of one volt. An electronvolt is equal to 1.602 176 53(14) x 10^-19 J." [Wikipedia:Wikipedia]
+subset: unit_slim
+synonym: "electron volt" EXACT []
+synonym: "eV" EXACT []
+is_a: UO:0000111
+created_by: george gkoutos
+
+[Term]
+id: UO:0000267
+name: electric field strength unit
+namespace: unit.ontology
+def: "The electric field strength is a unit which is a measure of the potential difference between two points some distance apart." [Wikipedia:http\://en.wikipedia.org/wiki/Electric_field]
+subset: unit_group_slim
+synonym: "E-field strength " EXACT []
+is_a: UO:0000000
+created_by: george gkoutos
+creation_date: 2009-03-03T12:23:16Z
+
+[Term]
+id: UO:0000268
+name: volt per meter
+namespace: unit.ontology
+def: "The volt per meter is a unit of electric field strength equal to the a potential difference of 1 volt existing between two points that are 1 meter apart." [Wikipedia:http\://en.wikipedia.org/wiki/Electric_field]
+subset: unit_slim
+synonym: "V/m" EXACT []
+synonym: "volt per metre" EXACT []
+is_a: UO:0000267
+created_by: george gkoutos
+creation_date: 2009-03-03T12:28:17Z
+
+[Term]
+id: UO:0000269
+name: absorbance unit
+namespace: unit.ontology
+def: "A dimensionless logarithmic unit assigned to a measure of absorbance of light through a partially absorbing substance, defined as -log10(I/I_0) where I = transmitted light and I_0 = incident light." [Wikipedia:http\://en.wikipedia.org/wiki/Absorbance]
+subset: unit_slim
+synonym: "AU" EXACT []
+is_a: UO:0000186
+created_by: george gkoutos
+creation_date: 2009-07-14T12:33:48Z
+
+[Term]
+id: UO:0000270
+name: volumetric flow rate unit
+namespace: unit.ontology
+def: "A unit which is a standard measure of the volume of fluid which passes through a given surface per unit time ." [Wikipedia:Wikipedia]
+subset: unit_group_slim
+is_a: UO:0000000
+created_by: george gkoutos
+
+[Term]
+id: UO:0000271
+name: microliters per minute
+namespace: unit.ontology
+def: "A volumetric flow rate unit which is equal to one microliter volume through a given surface in one minute." [UOC:GVG]
+subset: unit_slim
+synonym: "microlitres per minute" EXACT []
+synonym: "uL/min" EXACT []
+is_a: UO:0000270
+relationship: is_unit_of PATO:0001574
+created_by: george gkoutos
+
+[Term]
+id: UO:0000324
+name: square angstrom
+namespace: unit.ontology
+def: "An area unit which is equal to an area enclosed by a square with sides each 1 angstrom long." [UOC:GVG]
+synonym: "A^[2]" RELATED []
+is_a: UO:0000047
+created_by: gkoutos
+creation_date: 2013-06-27T05:06:40Z
+
