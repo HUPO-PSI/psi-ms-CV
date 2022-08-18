@@ -21558,6 +21558,7 @@ def: "A measure of the statistical variability of the intensity of this peak, us
 is_a: MS:1003254 ! peak attribute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1003281
 name: Casanovo
 def: "Casanovo is a deep learning-based de novo spectrum identification tool. Official website https://github.com/Noble-Lab/casanovo/." [https://github.com/Noble-Lab/casanovo/]
