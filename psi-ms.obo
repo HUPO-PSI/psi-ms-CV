@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.96
-date: 07:01:2022 11:53
+data-version: 4.1.97
+date: 14:08:2022 05:27
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -21533,6 +21533,12 @@ id: MS:1003277
 name: value between -1 and 1 inclusive
 def: "Value range for signed normalized score values." [PSI:PI]
 is_a: MS:1002304 ! domain range
+
+[Term]
+id: MS:1003281
+name: Casanovo
+def: "Casanovo is a deep learning-based de novo spectrum identification tool. Official website https://github.com/Noble-Lab/casanovo/." [https://github.com/Noble-Lab/casanovo/]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:4000000
