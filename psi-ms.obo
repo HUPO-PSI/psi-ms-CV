@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.97
+data-version: 4.1.98
 date: 14:08:2022 05:27
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -10175,6 +10175,7 @@ name: FAIMS compensation voltage
 def: "The DC potential applied to the asymmetric waveform in FAIMS that compensates for the difference between high and low field mobility of an ion." [PSI:MS]
 synonym: "FAIMS CV" EXACT []
 is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -16270,6 +16271,7 @@ name: ion mobility drift time
 def: "Drift time of an ion or spectrum of ions as measured in an ion mobility mass spectrometer. This time might refer to the central value of a bin into which all ions within a narrow range of drift time have been aggregated." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -18451,6 +18453,7 @@ name: inverse reduced ion mobility
 def: "Ion mobility measurement for an ion or spectrum of ions as measured in an ion mobility mass spectrometer. This might refer to the central value of a bin into which all ions within a narrow range of mobilities have been aggregated." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1003254 ! peak attribute
 relationship: has_units MS:1002814 ! volt-second per square centimeter
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -21533,6 +21536,27 @@ id: MS:1003277
 name: value between -1 and 1 inclusive
 def: "Value range for signed normalized score values." [PSI:PI]
 is_a: MS:1002304 ! domain range
+
+[Term]
+id: MS:1003278
+name: m/z variability of peak
+def: "A measure of the statistical variability of the m/z value of this peak, usually estimated from replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003254 ! peak attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003279
+name: observation frequency of peak
+def: "The frequency at which this peak is observed among replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003254 ! peak attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003280
+name: intensity variability of peak
+def: "A measure of the statistical variability of the intensity of this peak, usually estimated from replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003254 ! peak attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003281
