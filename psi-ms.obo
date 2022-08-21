@@ -21598,7 +21598,7 @@ is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
 [Term]
-id: MS:1003285
+id: MS:1003287
 name: number of unassigned peaks among top 20 peaks
 def: "The number of unassigned peaks among the most intense 20 peaks in the spectrum." [NIST]
 is_a: MS:1003078 ! interpreted spectrum attribute
