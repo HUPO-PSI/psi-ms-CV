@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.98
-date: 14:08:2022 05:27
-saved-by: Joshua Klein
+data-version: 4.1.99
+date: 24:08:2022 10:06
+saved-by: Matt Chambers
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21563,6 +21563,25 @@ id: MS:1003281
 name: Casanovo
 def: "Casanovo is a deep learning-based de novo spectrum identification tool. Official website https://github.com/Noble-Lab/casanovo/." [https://github.com/Noble-Lab/casanovo/]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003282
+name: Bruker TSF format
+def: "Bruker TSF raw file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003283
+name: Bruker TSF nativeID format
+def: "Native format defined by frame=xsd:nonNegativeInteger." [PSI:MS]
+is_a: MS:1000767 ! native spectrum identifier format
+
+[Term]
+id: MS:1003284
+name: Bruker TSF nativeID format, combined spectra
+def: "Bruker TSF comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
+is_a: MS:1002646 ! native spectrum identifier format, combined spectra
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
