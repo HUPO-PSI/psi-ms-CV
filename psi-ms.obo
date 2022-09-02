@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.99
+data-version: 4.1.100
 date: 24:08:2022 10:06
-saved-by: Matt Chambers
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21542,7 +21542,6 @@ id: MS:1003278
 name: m/z variability of peak
 def: "A measure of the statistical variability of the m/z value of this peak, usually estimated from replicate spectra of the same analyte." [PSI:PI]
 is_a: MS:1003254 ! peak attribute
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003279
@@ -21556,7 +21555,6 @@ id: MS:1003280
 name: intensity variability of peak
 def: "A measure of the statistical variability of the intensity of this peak, usually estimated from replicate spectra of the same analyte." [PSI:PI]
 is_a: MS:1003254 ! peak attribute
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003281
@@ -21582,6 +21580,49 @@ name: Bruker TSF nativeID format, combined spectra
 def: "Bruker TSF comma separated list of spectra that have been combined prior to searching or interpretation." [PSI:PI]
 is_a: MS:1002646 ! native spectrum identifier format, combined spectra
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+
+[Term]
+id: MS:1003285
+name: standard deviation of m/z values of peak among replicates
+def: "The standard deviation of the m/z values of this peak among the replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003278 ! m/z variability of peak
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003286
+name: coefficient of variation of intensity of peak among replicates
+def: "The coefficient of variation (standard deviation divided by mean) of the intensities of this peak among the replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003280 ! intensity variability of peak
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003287
+name: standard deviation of intensity of peak among replicates
+def: "The standard deviation of the intensities of this peak among the replicate spectra of the same analyte." [PSI:PI]
+is_a: MS:1003280 ! intensity variability of peak
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003288
+name: number of unassigned peaks
+def: "The number of unassigned peaks in the spectrum." [NIST]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003289
+name: intensity of highest unassigned peak
+def: "The intensity of the highest unassigned peak in the spectrum." [NIST]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003290
+name: number of unassigned peaks among top 20 peaks
+def: "The number of unassigned peaks among the most intense 20 peaks in the spectrum." [NIST]
+is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
