@@ -22195,6 +22195,8 @@ comment: An unusual high count of signal jumps or falls can indicate ESI stabili
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric 
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 synonym: "IS-1A"  RELATED []
 
 [Term]
@@ -22205,7 +22207,53 @@ comment: An unusual high count of signal jumps or falls can indicate ESI stabili
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric 
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 synonym: "IS-1B"  RELATED []
+
+[Term]
+id: MS:4000099
+name: number of empty MS1 scans
+def: "Number of MS1 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000100
+name: number of empty MS2 scans
+def: "Number of MS2 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000101
+name: number of empty MS3 scans
+def: "Number of MS3 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000102
+name: number of confident spectrum identifications
+def: "The number of spectra identified after user defined acceptance criteria are applied. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_relation QC:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+comment: The user defined acceptance criteria such as FDR are considered to be known, however defined outside of mzQC. 
 
 [Term]
 id: PEFF:0000001
