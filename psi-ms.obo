@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.100
-date: 24:08:2022 10:06
-saved-by: Joshua Klein
+data-version: 4.1.101
+date: 13:09:2022 10:06
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21623,6 +21623,13 @@ name: number of unassigned peaks among top 20 peaks
 def: "The number of unassigned peaks among the most intense 20 peaks in the spectrum." [NIST]
 is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003291
+name: Luciphor deltaScore
+def: "Luciphor phosphosite localization score" [PSI:MS]
+is_a: MS:1001968 ! PTM localization PSM-level statistic
+relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
 [Term]
 id: MS:4000000
