@@ -21632,6 +21632,12 @@ is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
 [Term]
+id: MS:1003292
+name: TSQ Altis Plus
+def: "Thermo Scientific TSQ Altis Plus Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
