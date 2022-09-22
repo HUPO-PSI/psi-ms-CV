@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.102
-date: 13:09:2022 11:38
-saved-by: Matt Chambers
+data-version: 4.1.103
+date: 21:09:2022 11:38
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21636,6 +21636,19 @@ id: MS:1003292
 name: TSQ Altis Plus
 def: "Thermo Scientific TSQ Altis Plus Triple Quadrupole MS." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003293
+name: ZenoTOF 7600
+def: "Applied Biosystems/MDS SCIEX ZenoTOF 7600." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003294
+name: electron activated dissociation
+def: "A process to fragment ions in a high intensity electron beam which results in a dissociation of various analytes ranging from singly charged small molecules to multiply protonated proteins." [PSI:MS]
+synonym: "EAD" EXACT []
+is_a: MS:1000250 ! electron capture dissociation
 
 [Term]
 id: MS:4000000
