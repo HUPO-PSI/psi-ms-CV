@@ -21671,7 +21671,7 @@ is_a: MS:1003064 ! spectrum aggregation attribute
 [Term]
 id: MS:1003296
 name: number of replicates spectra used from source
-def: "The number of replicate spectra used during the aggregation process that originate from a specified source (e.g. a file, a dataset, a sample type, etc.). This term must appear in a group alongside a source term, which is one of: 'ProteomeXchange accession number', 'constituent spectrum file', or 'sample name'"
+def: "The number of replicate spectra used during the aggregation process that originate from a specified source (e.g. a file, a dataset, a sample type, etc.). This term must appear in a group alongside a source term, which is one of: 'ProteomeXchange accession number', 'constituent spectrum file', or 'sample name'" [PSI:PI]
 is_a: MS:1003064 ! spectrum aggregation attribute
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
