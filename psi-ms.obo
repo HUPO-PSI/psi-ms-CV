@@ -21640,7 +21640,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1003293
 name: ZenoTOF 7600
-def: "Applied Biosystems/MDS SCIEX ZenoTOF 7600." [PSI:MS]
+def: "SCIEX ZenoTOF 7600." [PSI:MS]
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
