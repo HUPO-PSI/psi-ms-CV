@@ -21529,6 +21529,7 @@ id: MS:1003275
 name: other attribute name
 def: "A user-provided name for a user-defined value describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003276 to provide the attribute's value" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003276
