@@ -45,7 +45,7 @@ jobs:
             echo OWL updated, committing and proceeding to tag
             git add psi-ms.owl
             git commit -m "Generate OWL file"
-            git push
+            git push --force
           fi
       - name: GitHub Tag
         id: new_tag
