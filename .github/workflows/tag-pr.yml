@@ -7,7 +7,6 @@ on:
     branches:
       - master
       - main
-      - test-tag
     paths:
       - 'psi-ms.obo'
 
