@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.103
-date: 21:09:2022 11:38
+data-version: 4.1.104
+date: 23:09:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -6315,6 +6315,7 @@ id: MS:1000894
 name: retention time
 def: "A time interval from the start of chromatography when an analyte exits a chromatographic column." [PSI:MS]
 is_a: MS:1003050 ! peptidoform attribute
+is_a: MS:1003295 ! summary statistics of replicates
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -6333,6 +6334,7 @@ id: MS:1000896
 name: normalized retention time
 def: "A time interval from the start of chromatography when an analyte exits a standardized reference chromatographic column and instrumental setup." [PSI:MS]
 is_a: MS:1000894 ! retention time
+is_a: MS:1003295 ! summary statistics of replicates
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -21091,6 +21093,7 @@ id: MS:1003208
 name: experimental precursor monoisotopic m/z
 def: "The measured or inferred m/z (as reported by the mass spectrometer acquisition software or post-processing software) of the monoisotopic peak of the precursor ion based on the MSn-1 spectrum." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003295 ! summary statistics of replicates
 relationship: has_units MS:1000040 ! m/z
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -21099,6 +21102,7 @@ id: MS:1003209
 name: monoisotopic m/z deviation
 def: "The measured monoisotopic m/z (as reported by the mass spectrometer acquisition software or post-processing software) minus the theoretical monoisotopic m/z of the analyte assigned to the spectrum." [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
+is_a: MS:1003295 ! summary statistics of replicates
 relationship: has_units MS:1000040 ! m/z
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -21108,6 +21112,7 @@ id: MS:1003210
 name: average m/z deviation
 def: "The measured average m/z (as reported by the mass spectrometer acquisition software or post-processing software) minus the theoretical average m/z of the analyte assigned to the spectrum." [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
+is_a: MS:1003295 ! summary statistics of replicates
 relationship: has_units MS:1000040 ! m/z
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -21524,12 +21529,19 @@ id: MS:1003275
 name: other attribute name
 def: "A user-provided name for a user-defined value describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003276 to provide the attribute's value" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003276
 name: other attribute value
 def: "A user-provided value for a user-defined name describing a trait not covered by an existing controlled vocabulary term. This term should be used sparingly, preferring existing terms that describe the specific concept. Should be used with MS:1003275 to provide the attribute's name" [PSI:MS]
 is_a: MS:1003078 ! interpreted spectrum attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_type MS:1002711 ! The allowed value-type for this CV term
+relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003277
@@ -21649,6 +21661,37 @@ name: electron activated dissociation
 def: "A process to fragment ions in a high intensity electron beam which results in a dissociation of various analytes ranging from singly charged small molecules to multiply protonated proteins." [PSI:MS]
 synonym: "EAD" EXACT []
 is_a: MS:1000250 ! electron capture dissociation
+
+[Term]
+id: MS:1003295
+name: summary statistics of replicates
+def: "Summary statistics of an attribute among all replicates that are aggregated to generate this spectrum." [PSI:PI]
+is_a: MS:1003064 ! spectrum aggregation attribute
+
+[Term]
+id: MS:1003296
+name: number of replicates spectra used from source
+def: "The number of replicate spectra used during the aggregation process that originate from a specified source (e.g. a file, a dataset, a sample type, etc.). This term must appear in a group alongside a source term, which is one of: 'ProteomeXchange accession number', 'constituent spectrum file', or 'sample name'" [PSI:PI]
+is_a: MS:1003064 ! spectrum aggregation attribute
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003297
+name: contributing replicate spectrum
+def: "A cross reference to another spectrum that is a replicate spectrum of the same analyte and contributes to the generation of this aggregated spectrum." [PSI:PI]
+is_a: MS:1003257 ! library spectrum cross reference
+
+[Term]
+id: MS:1003298
+name: contributing replicate spectrum keys
+def: "A list of cross references to contributing replicate spectra in the same library, in the form of library spectrum keys." [PSI:PI]
+relationship: part_of MS:1003297 ! contributing replicate spectrum
+
+[Term]
+id: MS:1003299
+name: contributing replicate spectrum USI
+def: "A list of cross references to contributing replicate spectra, in the form of PSI Universal Spectrum Identifiers." [PSI:PI]
+relationship: part_of MS:1003297 ! contributing replicate spectrum
 
 [Term]
 id: MS:4000000
