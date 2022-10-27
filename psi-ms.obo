@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.104
-date: 23:09:2022 11:38
+data-version: 4.1.105
+date: 26:10:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -15357,6 +15357,7 @@ id: MS:1002345
 name: PSM-level attribute
 def: "Attribute of a single peptide-spectrum match." [PSI:PI]
 is_a: MS:1002694 ! single identification result attribute
+relationship: part_of MS:1003301 ! peptide-spectrum match
 
 [Term]
 id: MS:1002346
@@ -21692,6 +21693,70 @@ id: MS:1003299
 name: contributing replicate spectrum USI
 def: "A list of cross references to contributing replicate spectra, in the form of PSI Universal Spectrum Identifiers." [PSI:PI]
 relationship: part_of MS:1003297 ! contributing replicate spectrum
+
+[Term]
+id: MS:1003300
+name: spectrum match
+def: "Result of a comparison of a spectrum to another spectrum, usually to assess the plausibility that the two spectra originate from the same analyte." [PSI:PI]
+relationship: part_of MS:1001000 ! spectrum interpretation
+
+[Term]
+id: MS:1003301
+name: peptide-spectrum match
+def: "Result of a comparison of an observed fragment ion spectrum to the theoretically predicted fragmentation pattern of a peptide sequence, to assess the plausibility that the observed spectrum originates from the putative peptide sequence." [PSI:PI]
+is_a: MS:1003300 ! spectrum match
+synonym: "PSM" EXACT []
+
+[Term]
+id: MS:1003302
+name: spectrum-spectrum match
+def: "Result of a comparison of an observed fragment ion spectrum to another observed fragment ion spectrum, to assess the plausibility that two spectra originate from the same analyte, e.g., in spectral library searching and spectrum clustering." [PSI:PI]
+is_a: MS:1003300 ! spectrum match
+synonym: "SSM" EXACT []
+
+[Term]
+id: MS:1003303
+name: spectral similarity
+def: "A measure of how similar two spectra are, based on the features of the spectra (the locations and intensities of peaks) alone." [PSI:PI]
+is_a: MS:1002694 ! single identification attribute
+relationship: part_of MS:1003302 ! spectrum-spectrum match
+
+
+[Term]
+id: MS:1003304
+name: spectral dot product
+def: "The dot (inner) product of two vectorized spectra divided by the product of their vector norms. It ranges from 0 (orthogonal vectors) to 1 (collinear vectors). Also known as cosine similarity." [PSI:PI]
+is_a: MS:1003303 ! spectral similarity
+synonym: "cosine similarity" EXACT []
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003305
+name: Euclidean distance
+def: "The Euclidean distance between a pair of points representing two vectorized spectra in high-dimensional space." [PSI:PI]
+is_a: MS:1003303 ! spectral similarity
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003306
+name: shared peak count
+def: "The number of peaks with closely matching m/z values that are common to two spectra." [PSI:PI]
+is_a: MS:1003303 ! spectral similarity
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003307
+name: spectral angle
+def: "A inverse cosine transformation of the spectral dot product." [PSI:PI]
+is_a: MS:1003303 ! spectral similarity
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003308
+name: pearson correlation
+def: "The Pearson's rho statistic of two equal length series of values." [PSI:PI]
+is_a: MS:1003303 ! spectral similarity
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
