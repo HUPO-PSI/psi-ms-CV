@@ -34,7 +34,7 @@ jobs:
           docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -vvv -i /work/tmp.obo -o /work/psi-ms.owl --format owl
           rm tmp.obo
           git config --global user.name 'mobiusklein'
-          git config --global user.email 'mobiusklein@users.noreply.github.com'
+          git config --global user.email 'mobiusklein@gmail.com'
           OWL_CHANGE=`git diff psi-ms.owl`
           if [ -z "$OWL_CHANGE" ]
           then
