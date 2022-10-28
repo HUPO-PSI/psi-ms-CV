@@ -21731,7 +21731,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003305
-name: Euclidean distance
+name: spectral Euclidean distance
 def: "The Euclidean distance between a pair of points representing two vectorized spectra in high-dimensional space." [PSI:PI]
 is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -21752,8 +21752,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003308
-name: Pearson correlation
-def: "The Pearson's rho statistic of two equal length series of values." [PSI:PI]
+name: spectral Pearson correlation
+def: "The Pearson's rho statistic between a pair of points representing two vectorized spectra." [PSI:PI]
 is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
