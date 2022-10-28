@@ -21747,7 +21747,7 @@ relationship: has_value_type xsd:integer ! The allowed value-type for this CV te
 [Term]
 id: MS:1003307
 name: spectral angle
-def: "A inverse cosine transformation of the spectral dot product." [PSI:PI]
+def: "The angle subtended by two vectorized spectra in high-dimensional space. It is equal to the inverse cosine of the dot product." [PSI:PI]
 is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
