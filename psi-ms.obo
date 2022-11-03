@@ -21643,6 +21643,26 @@ name: TSQ Altis Plus
 def: "Thermo Scientific TSQ Altis Plus Triple Quadrupole MS." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
+[Term] 
+id: MS:1003294 
+name: number of identified protein groups 
+def: "The number of protein groups that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]  
+is_a: MS:1002405 ! protein group-level result list attribute 
+is_a: MS:4000003 ! single value 
+relationship: has_metric_category MS:4000008 ! ID based metric 
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
+relationship: has_units UO:0000189 ! count unit 
+
+[Term] 
+id: MS:1003294 
+name: count of identified proteoforms 
+def: "The number of proteoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI] 
+is_a: MS:1001085 ! protein-level identification attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric 
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
+relationship: has_units UO:0000189 ! count unit 
+
 [Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
@@ -22416,6 +22436,34 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric 
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
 relationship: has_units UO:0000189 ! count unit 
+
+[Term]
+id: MS:4000104 
+name: total ion currents 
+def: "Tabular representation of the total ion current detected in each of a series of mass spectra." [PSI:MS] 
+is_a: MS:4000005 ! table 
+is_a: MS:1000235 ! total ion current chromatogram 
+relationship: has_metric_category MS:4000009 ! ID free metric 
+relationship: has_metric_category MS:4000012 ! single run based metric 
+relationship: has_metric_category MS:4000016 ! retention time metric 
+relationship: has_column MS:1000767 ! native spectrum identifier format 
+relationship: has_optional_column MS:1000894 ! retention time  
+relationship: has_optional_column MS:1003059 ! number of peaks
+relationship: has_column MS:1000285 ! total ion current 
+
+[Term] 
+id: MS:4000105 
+name: ion injection parameters
+def: "Tabular representation of the parameters around ion selection like the amount of time spent filling an ion trapping device for each scan acquisition." [PSI:MS] 
+is_a: MS:4000005 ! table name: scan window upper limit
+relationship: has_metric_category MS:4000009 ! ID free metric 
+relationship: has_metric_category MS:4000012 ! single run based metric 
+relationship: has_column MS:1000767 ! native spectrum identifier format 
+relationship: has_column MS:1000927 ! ion injection time 
+relationship: has_optional_column MS:1000511! ms level  
+relationship: has_optional_column MS:1000465 ! scan polarity 
+relationship: has_optional_column MS:1000500 ! scan window upper limit
+relationship: has_optional_column MS:1000501 ! scan window lower limit
 
 [Term]
 id: PEFF:0000001
