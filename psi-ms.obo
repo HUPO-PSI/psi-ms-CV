@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.105
+data-version: 4.1.107
 date: 26:10:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -15784,6 +15784,8 @@ id: MS:1002404
 name: count of identified proteins
 def: "The number of proteins that have been identified, which must match the number of groups that pass the threshold in the file." [PSI:PI]
 is_a: MS:1002704 ! protein-level result list attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
@@ -21367,6 +21369,8 @@ id: MS:1003250
 name: count of identified peptidoforms
 def: "The number of peptidoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
 is_a: MS:1002702 ! peptide sequence-level result list attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
@@ -21374,7 +21378,9 @@ id: MS:1003251
 name: count of identified spectra
 def: "The number of spectra that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
 is_a: MS:1002700 ! PSM-level result list attribute
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000008 ! ID based metric
 
 [Term]
 id: MS:1003252
@@ -21757,6 +21763,7 @@ def: "The Pearson's rho statistic between a pair of points representing two vect
 is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
+
 [Term]
 id: MS:1003309
 name: Goslin
@@ -21778,6 +21785,41 @@ name: Lipid empirical score
 def: "The lipid empirical score is a point-based lipid class-specific scoring system based on MS and other evidence sources as defined by the Lipidomics Standards Initiative (LSI). The score has a numeric value between 0 and 100. Score values are lipid class-specific and are therefore not immediately comparable between lipid classes." []
 is_a: MS:1002888 ! small molecule confidence measure
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003320
+name: spectrum cluster size
+def: "The number of spectra in a spectrum cluster." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:integer
+
+[Term]
+id: MS:1003321
+name: summary statistics of clustered spectra
+def: "Summary statistics of an attribute among all spectra of a spectrum cluster." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+
+[Term]
+id: MS:1003322
+name: spectrum cluster best representative
+def: "Cross reference to the spectrum that is considered the most representative among spectra in a cluster, either as a library spectrum key if the best representative is in the same library, or a universal spectrum identifier if it is not." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003323
+name: spectrum cluster consensus spectrum
+def: "Cross reference to a consensus spectrum that is constructed from aggregating spectra in a cluster, either as a library spectrum key if the consensus spectrum is in the same library, or a universal spectrum identifier if it is not." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003324
+name: spectral dot product to aggregated spectrum
+def: "Spectral similarity measured by the spectral dot product between a replicate to its corresponding aggregated (e.g. consensus) spectrum." [PSI:PI]
+is_a: MS:1003295 ! summary statistics of replicates
+is_a: MS:1003304 ! spectral dot product
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000000
@@ -22456,6 +22498,102 @@ relationship: has_optional_column MS:4000085 ! fifth principal component
 relationship: has_optional_column MS:4000087 ! mzQC plot label
 relationship: has_optional_column MS:4000088 ! batch label
 relationship: has_optional_column MS:4000089 ! injection sequence label
+
+[Term]
+id: MS:4000095
+name: slowest frequency for MS level 1 collection
+def: "The slowest acquisition speed with which precursor MS scans were collected. Scan acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000021 ! MS1 metric
+
+[Term]
+id: MS:4000096
+name: slowest frequency for MS level 2 collection
+def: "The slowest acquisition speed with which product MS scans were collected. Scan acquisition frequency can be used to gauge the suitability of used instrument settings for the sample content used." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000022 ! MS2 metric
+
+[Term]
+id: MS:4000097
+name: MS1 signal jump (10x) count
+def: "The number of times where MS1 TIC increased more than 10-fold between adjacent MS1 scans. An unusual high count of signal jumps or falls can indicate ESI stability issues." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+synonym: "IS-1A"  RELATED []
+
+[Term]
+id: MS:4000098
+name: MS1 signal fall (10x) count
+def: "The number of times where MS1 TIC decreased more than 10-fold between adjacent MS1 scans. An unusual high count of signal jumps or falls can indicate ESI stability issues." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+synonym: "IS-1B"  RELATED []
+
+[Term]
+id: MS:4000099
+name: number of empty MS1 scans
+def: "Number of MS1 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000100
+name: number of empty MS2 scans
+def: "Number of MS2 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000101
+name: number of empty MS3 scans
+def: "Number of MS3 scans where the scans' peaks intensity sums to 0 (i.e. no peaks or only 0-intensity peaks)." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000102
+name: number of detected quantification data points
+def: "The number of datapoints detected for quantification purposes within the run. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000103
+name: number of identified quantification data points
+def: "The number of identified datapoints for quantification purposes withing the run after user defined acceptance criteria are applied. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: PEFF:0000001
