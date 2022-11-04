@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.106
+data-version: 4.1.107
 date: 26:10:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22565,7 +22565,7 @@ relationship: has_units UO:0000189 ! count unit
 [Term]
 id: MS:4000103
 name: number of identified quantification data points
-def: "The number of identified datapoints for quantification purposes withing the run after user defined acceptance criteria are applied.  These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+def: "The number of identified datapoints for quantification purposes withing the run after user defined acceptance criteria are applied. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
