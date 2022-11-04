@@ -21760,7 +21760,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:1003320
 name: spectrum cluster size
-def: "The number of spectra in a spectrum cluster." []
+def: "The number of spectra in a spectrum cluster." [PSI:PI]
 is_a: MS:1003266 ! spectrum cluster attribute
 relationship: has_value_type xsd:integer
 
@@ -21783,6 +21783,14 @@ name: spectrum cluster consensus spectrum
 def: "Cross reference to a consensus spectrum that is constructed from aggregating spectra in a cluster, either as a library spectrum key if the consensus spectrum is in the same library, or a universal spectrum identifier if it is not." [PSI:PI]
 is_a: MS:1003266 ! spectrum cluster attribute
 relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003324
+name: spectral dot product to aggregated spectrum
+def: "Spectral similarity measured by the spectral dot product between a replicate to its corresponding aggregated (e.g. consensus) spectrum." [PSI:PI]
+is_a: MS:1003295 ! summary statistics of replicates
+is_a: MS:1003304 ! spectral dot product
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000000
