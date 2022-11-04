@@ -1,14 +1,11 @@
-name: generate-owl-tag-release
+name: test-generate-owl-tag-release
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches:
-      - master
-      - main
-    paths:
-      - 'psi-ms.obo'
+      - test-tag
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,8 +30,8 @@ jobs:
           export JAVA_TOOL_OPTIONS=-Xmx6G
           docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -vvv -i /work/tmp.obo -o /work/psi-ms.owl --format owl
           rm tmp.obo
-          git config --global user.name 'mobiusklein'
-          git config --global user.email 'mobiusklein@gmail.com'
+          git config --global user.name 'PSI-MS CV Bot'
+          git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
           if [ -z "$OWL_CHANGE" ]
           then
@@ -44,7 +41,7 @@ jobs:
             echo OWL updated, committing and proceeding to tag
             git add psi-ms.owl
             git commit -m "Generate OWL file"
-            git push --force origin master
+            git push --force
           fi
       - name: GitHub Tag
         id: new_tag
