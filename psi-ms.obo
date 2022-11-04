@@ -21758,6 +21758,28 @@ is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003309
+name: Goslin
+def: "The Goslin implementations parse common lipid name dialects and normalize them to the recent lipid shorthand nomenclature based on grammars on succinct lipid nomenclature." [PMID:32589019, https://github.com/lifs-tools/goslin]
+is_a: MS:1001457 ! data processing software
+is_a: MS:1002414 ! postprocessing software
+is_a: MS:1002964 ! lipidomics analysis software
+
+[Term]
+id: MS:1003310
+name: Lipid shorthand identification confidence level
+def: "Identification confidence levels based on the updated lipid shorthand nomenclature. The value slot can have the values 'Category', 'Class', 'Species', 'Phosphate-position', 'Molecular species', 'sn-position', 'DBE position', 'Structure defined', 'Full structure', 'Complete structure'." [PMID:33037133]
+is_a: MS:1002895 ! small molecule identification attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003311
+name: Lipid empirical score
+def: "The lipid empirical score is a point-based lipid class-specific scoring system based on MS and other evidence sources as defined by the Lipidomics Standards Initiative (LSI). The score has a numeric value between 0 and 100. Score values are lipid class-specific and are therefore not immediately comparable between lipid classes." []
+is_a: MS:1002888 ! small molecule confidence measure
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
