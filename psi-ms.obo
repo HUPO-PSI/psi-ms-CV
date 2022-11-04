@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.105
+data-version: 4.1.106
 date: 26:10:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -21756,6 +21756,41 @@ name: spectral Pearson correlation
 def: "The Pearson's rho statistic between a pair of points representing two vectorized spectra." [PSI:PI]
 is_a: MS:1003303 ! spectral similarity
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003320
+name: spectrum cluster size
+def: "The number of spectra in a spectrum cluster." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:integer
+
+[Term]
+id: MS:1003321
+name: summary statistics of clustered spectra
+def: "Summary statistics of an attribute among all spectra of a spectrum cluster." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+
+[Term]
+id: MS:1003322
+name: spectrum cluster best representative
+def: "Cross reference to the spectrum that is considered the most representative among spectra in a cluster, either as a library spectrum key if the best representative is in the same library, or a universal spectrum identifier if it is not." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003323
+name: spectrum cluster consensus spectrum
+def: "Cross reference to a consensus spectrum that is constructed from aggregating spectra in a cluster, either as a library spectrum key if the consensus spectrum is in the same library, or a universal spectrum identifier if it is not." [PSI:PI]
+is_a: MS:1003266 ! spectrum cluster attribute
+relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003324
+name: spectral dot product to aggregated spectrum
+def: "Spectral similarity measured by the spectral dot product between a replicate to its corresponding aggregated (e.g. consensus) spectrum." [PSI:PI]
+is_a: MS:1003295 ! summary statistics of replicates
+is_a: MS:1003304 ! spectral dot product
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000000
