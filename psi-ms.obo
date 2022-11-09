@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.107
-date: 26:10:2022 11:38
+data-version: 4.1.108
+date: 08:11:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -19645,6 +19645,12 @@ id: MS:1002991
 name: python-psims
 def: "python-psims, a library for generating mzML and mzIdentML." [https://github.com/mobiusklein/psims]
 is_a: MS:1002333 ! conversion software
+
+[Term]
+id: MS:1002992
+name: Zstd compression
+def: "Zstd." [PSI:MS, https://facebook.github.io/zstd/]
+is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1002995
