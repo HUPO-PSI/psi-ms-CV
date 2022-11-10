@@ -19653,6 +19653,24 @@ def: "Zstd." [PSI:MS, https://facebook.github.io/zstd/]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
+id: MS:1002993
+name: MS-Numpress linear prediction compression followed by Zstd compression
+def: "Compression using MS-Numpress linear prediction compression followed by zstd compression." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1002994
+name: MS-Numpress positive integer compression followed by Zstd compression
+def: "Compression using MS-Numpress positive integer compression followed by zstd compression." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1002995
+name: MS-Numpress short logged float compression followed by Zstd compression
+def: "Compression using MS-Numpress short logged float compression followed by zstd compression." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
+
+[Term]
 id: MS:1002995
 name: Andromeda:PEP
 def: "Posterior error probability of the best identified peptide of the Andromeda search engine." [PSI:PI]
