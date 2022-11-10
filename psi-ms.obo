@@ -19666,12 +19666,6 @@ is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1002995
-name: MS-Numpress short logged float compression followed by Zstd compression
-def: "Compression using MS-Numpress short logged float compression followed by zstd compression." [https://github.com/ms-numpress/ms-numpress]
-is_a: MS:1000572 ! binary data compression type
-
-[Term]
-id: MS:1002995
 name: Andromeda:PEP
 def: "Posterior error probability of the best identified peptide of the Andromeda search engine." [PSI:PI]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
@@ -21221,6 +21215,12 @@ id: MS:1003222
 name: ion mobility deconvolution
 def: "Data processing action of merging multiple ion peaks acquired at different ion mobility steps into a single mass spectrum representing a single analyte." [PSI:MS]
 is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003223
+name: MS-Numpress short logged float compression followed by Zstd compression
+def: "Compression using MS-Numpress short logged float compression followed by zstd compression." [https://github.com/ms-numpress/ms-numpress]
+is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003224
