@@ -21828,6 +21828,12 @@ def: "Lipid shorthand identification confidence level 'DBE pos'." [PMID:33037133
 is_a: MS:1003310 ! Lipid shorthand identification confidence level
 
 [Term]
+id: MS:1003319
+name: Lipid shorthand identification confidence - Structure defined
+def: "Lipid shorthand identification confidence level 'Structure defined'." [PMID:33037133]
+is_a: MS:1003310 ! Lipid shorthand identification confidence level
+
+[Term]
 id: MS:1003320
 name: spectrum cluster size
 def: "The number of spectra in a spectrum cluster." [PSI:PI]
@@ -21861,6 +21867,18 @@ def: "Spectral similarity measured by the spectral dot product between a replica
 is_a: MS:1003295 ! summary statistics of replicates
 is_a: MS:1003304 ! spectral dot product
 relationship: has_value_type xsd:float
+
+[Term]
+id: MS:1003325
+name: Lipid shorthand identification confidence - Full structure
+def: "Lipid shorthand identification confidence level 'Full structure'." [PMID:33037133]
+is_a: MS:1003310 ! Lipid shorthand identification confidence level
+
+[Term]
+id: MS:1003326
+name: Lipid shorthand identification confidence - Complete structure
+def: "Lipid shorthand identification confidence level 'Complete structure'." [PMID:33037133]
+is_a: MS:1003310 ! Lipid shorthand identification confidence level
 
 [Term]
 id: MS:4000000
