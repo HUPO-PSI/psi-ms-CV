@@ -1,0 +1,26 @@
+name: generate-owl-tag-release
+
+# Controls when the action will run.
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  make-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract version from OBO
+        run: |
+          CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
+          echo CV_VERSION=${CV_VERSION}
+          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ env.CV_VERSION }}
+          name: Release v${{ env.CV_VERSION }}
+          artifacts: "psi-ms.obo,psi-ms.owl"
+          generateReleaseNotes: true
+          token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
