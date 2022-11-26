@@ -21635,6 +21635,7 @@ name: intensity of highest unassigned peak
 def: "The intensity of the highest unassigned peak in the spectrum." [NIST]
 is_a: MS:1003078 ! interpreted spectrum attribute
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003290
