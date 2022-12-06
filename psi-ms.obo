@@ -20682,7 +20682,7 @@ relationship: has_regexp MS:1002505 ! regular expression for modification locali
 [Term]
 id: MS:1003149
 name: PTMProphet normalized information content
-def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: " PTMProphet-computed PSM-specific normalized (0.0 - 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
@@ -21319,7 +21319,7 @@ is_a: MS:1003240 ! peak intensity transform
 [Term]
 id: MS:1003243
 name: adduct ion mass
-def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule’s mass plus the mass of a proton)" [PSI:PI]
+def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's mass plus the mass of a proton)" [PSI:PI]
 is_a: MS:1003056 ! adduct ion property
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -22061,7 +22061,7 @@ relationship: has_value_concept UO:0000191 ! fraction
 [Term]
 id: MS:4000051
 name: XIC-FWHM quantiles
-def: "The first to n-th quantile of peak widths for XICs. A metric's value triplet represents the related QuaMeter metrics of of XIC-FWHM-Q1,Q2,Q3." [PSI:MS]
+def: "The first to n-th quantile of peak widths for XICs. A metric's value triplet represents the related QuaMeter metrics of XIC-FWHM-Q1,Q2,Q3." [PSI:MS]
 synonym: "XIC-FWHM-Q1" RELATED [PMID:24494671]
 synonym: "XIC-FWHM-Q2" RELATED [PMID:24494671]
 synonym: "XIC-FWHM-Q3" RELATED [PMID:24494671]
@@ -22667,7 +22667,7 @@ relationship: has_units UO:0000189 ! count unit
 [Term] 
 id: MS:4000103 
 name: number of identified quantification data points 
-def: "The number of identified datapoints for quantification purposes withing the run after user defined acceptance criteria are applied.  These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
+def: "The number of identified datapoints for quantification purposes within the run after user defined acceptance criteria are applied.  These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
 is_a: MS:4000003 ! single value 
 relationship: has_metric_category MS:4000008 ! ID based metric 
 relationship: has_metric_category MS:4000012 ! single run based metric 
