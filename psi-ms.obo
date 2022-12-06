@@ -21656,26 +21656,6 @@ name: TSQ Altis Plus
 def: "Thermo Scientific TSQ Altis Plus Triple Quadrupole MS." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
-[Term] 
-id: MS:1003294 
-name: number of identified protein groups 
-def: "The number of protein groups that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]  
-is_a: MS:1002405 ! protein group-level result list attribute 
-is_a: MS:4000003 ! single value 
-relationship: has_metric_category MS:4000008 ! ID based metric 
-relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
-relationship: has_units UO:0000189 ! count unit 
-
-[Term] 
-id: MS:1003294 
-name: count of identified proteoforms 
-def: "The number of proteoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI] 
-is_a: MS:1001085 ! protein-level identification attribute
-is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000008 ! ID based metric 
-relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
-relationship: has_units UO:0000189 ! count unit 
-
 [Term]
 id: MS:1003293
 name: ZenoTOF 7600
@@ -21899,6 +21879,26 @@ id: MS:1003326
 name: Lipid shorthand identification confidence - Complete structure
 def: "Lipid shorthand identification confidence level 'Complete structure'." [PMID:33037133]
 is_a: MS:1003310 ! Lipid shorthand identification confidence level
+
+[Term] 
+id: MS:1003327 
+name: number of identified protein groups 
+def: "The number of protein groups that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]  
+is_a: MS:1002405 ! protein group-level result list attribute 
+is_a: MS:4000003 ! single value 
+relationship: has_metric_category MS:4000008 ! ID based metric 
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
+relationship: has_units UO:0000189 ! count unit 
+
+[Term] 
+id: MS:1003328 
+name: count of identified proteoforms 
+def: "The number of proteoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI] 
+is_a: MS:1001085 ! protein-level identification attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric 
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term 
+relationship: has_units UO:0000189 ! count unit 
 
 [Term]
 id: MS:4000000
