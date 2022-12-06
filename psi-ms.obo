@@ -22703,6 +22703,30 @@ relationship: has_optional_column MS:1000500 ! scan window upper limit
 relationship: has_optional_column MS:1000501 ! scan window lower limit
 
 [Term]
+id: MS:4000106
+name: MS1 frequency in equal parts of subsequent RT
+def: "Average MS1 frequency during retention time periods between adjacent retention time quantiles. (Four values implies values for 1st, 2nd, 3rd, 4th quarter.)" [PSI:MS]
+comment: Acquisition frequency can be used to gauge the suitability of instrument settings depending on the sample content.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000107
+name: MS2 frequency in equal parts of subsequent RT
+def: "Average MS2 frequency  during retention time periods between adjacent retention time quantiles. (Four values implies values for 1st, 2nd, 3rd, 4th quarter.)" [PSI:MS]
+comment: Acquisition frequency can be used to gauge the suitability of instrument settings depending on the sample content.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
