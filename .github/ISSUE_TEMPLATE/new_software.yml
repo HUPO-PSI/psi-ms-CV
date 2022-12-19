@@ -51,4 +51,4 @@ body:
     id: extra
     attributes:
       label: "Describe any additional information."
-      placeholder: "Add any additional details that might be relevant."
+      placeholder: "Add any additional details that might be relevant. Include a DOI or cite-able source if one is available for us to refer to both in the definition line and for additional suggestions if you like."
