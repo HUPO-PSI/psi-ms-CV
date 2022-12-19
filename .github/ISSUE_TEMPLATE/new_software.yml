@@ -19,30 +19,34 @@ body:
       label: "Software type"
       multiple: true
       options:
-        - MS:1000531 ! software
-        - MS:1000871 ! SRM software
-        - MS:1000873 ! peptide attribute calculation software
-        - MS:1001139 ! quantitation software name
         - MS:1001455 ! acquisition software
         - MS:1001456 ! analysis software
-        - MS:1001457 ! data processing software
         - MS:1002333 ! conversion software
+        - MS:1001457 ! data processing software
+        - MS:1003207 ! library creation software
+        - MS:1002964 ! lipidomics analysis software
+        - MS:1000873 ! peptide attribute calculation software
         - MS:1002414 ! postprocessing software
+        - MS:1001832 ! quantitation software comment or customizations
+        - MS:1001139 ! quantitation software name
         - MS:1002878 ! small molecule analysis software
-        - MS:1002964 ! lipidomics analysis software        
-        - MS:1000615 ! ProteoWizard software
+        - MS:1000531 ! software
+        - MS:1002103 ! software input parameter
+        - MS:1002105 ! software specific input parameter
         - MS:1000689 ! Agilent software
-        - MS:1000690 ! SCIEX software
         - MS:1000691 ! Applied Biosystems software
         - MS:1000692 ! Bruker software
-        - MS:1000693 ! Thermo Finnigan software
-        - MS:1000694 ! Waters software
-        - MS:1000752 ! TOPP software
-        - MS:1001557 ! Shimadzu Corporation software
         - MS:1001798 ! LECO software
-        - MS:1002180 ! TOPP software adaptor
-        - MS:1002286 ! Trans-Proteomic Pipeline software
+        - MS:1000615 ! ProteoWizard software
+        - MS:1001557 ! Shimadzu Corporation software
         - MS:1002383 ! SCiLS software
+        - MS:1000690 ! SCIEX software
+        - MS:1000871 ! SRM software
+        - MS:1000693 ! Thermo Finnigan software
+        - MS:1002286 ! Trans-Proteomic Pipeline software
+        - MS:1000752 ! TOPP software
+        - MS:1002180 ! TOPP software adaptor
+        - MS:1000694 ! Waters software
   - type: textarea
     id: extra
     attributes:
