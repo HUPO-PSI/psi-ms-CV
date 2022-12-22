@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.108
+data-version: 4.1.109
 date: 26:10:2022 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -8537,6 +8537,13 @@ name: add_others
 def: "OBSOLETE." [PSI:PI]
 comment: This former purgatory term was made obsolete.
 is_obsolete: true
+
+[Term]
+id: MS:1001327
+name: Spectronaut
+def: "Commercial cross-vendor software for library (peptide centric), and library-free (spectrum centric) analysis and quantification of DIA data." [https://doi.org/10.1074/mcp.M114.044305]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1003207 ! library creation software
 
 [Term]
 id: MS:1001328
