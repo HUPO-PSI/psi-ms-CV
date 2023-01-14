@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.109
-date: 22:12:2022 11:38
+data-version: 4.1.110
+date: 06:01:2023 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -16469,7 +16469,7 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 [Term]
 id: MS:1002505
 name: regular expression for modification localization scoring
-def: "([:digit:]+:[0|1]\{1\}.[:digit:]+[Ee]{0,1}[+-]{0,1}[:digit:]*:[:digit:]+[|]\{1\}[:digit:]+:(true|false)\{1\})." [PSI:PI]
+def: "(?<MOD_INDEX>[0-9]+):(?<SCORE>[01][.][0-9]+(?:[Ee][+\-]?[0-9]+)?):(?<POSITION>[0-9]+(?:[|][0-9]+)*):(?<PASS_THRESHOLD>true|false)" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17524,13 +17524,13 @@ id: MS:1002664
 name: interaction score derived from cross-linking
 def: "Parent term for interaction scores derived from cross-linking." [PSI:PI]
 is_a: MS:1002675 ! cross-linking result details
-relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
+relationship: has_regexp MS:1002665 ! regular expression for interaction scores derived from cross-linking
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002665
 name: regular expression for interaction scores derived from cross-linking
-def: "([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)" [PSI:PI]
+def: "((?<int_ID>[0-9]+)[.](?<SUFFIX>[a|b]):(?<POS>[0-9]+|null):(?<SCORE_OR_VALUE>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+)?):(?<PASS_THRESHOLD>true|false))|(?<SCORE_ONLY>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+)?)" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -17603,8 +17603,8 @@ name: protein-pair-level global FDR
 def: "Estimation of the global false discovery rate of proteins-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
 relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+relationship: has_regexp MS:1002665 ! regular expression for interaction scores derived from cross-linking
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002677
@@ -17612,8 +17612,8 @@ name: residue-pair-level global FDR
 def: "Estimation of the global false discovery rate of residue-pairs in cross-linking experiments." [PSI:PI]
 is_a: MS:1002664 ! interaction score derived from cross-linking
 relationship: has_domain MS:1003277 ! value between -1 and 1 inclusive
-relationship: has_regexp MS:1002665 ! ([0-9]+)[.]([a|b]):([0-9]+|null):([\-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][+-][0-9]+)?):(true|false)
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+relationship: has_regexp MS:1002665 ! regular expression for interaction scores derived from cross-linking
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002678
