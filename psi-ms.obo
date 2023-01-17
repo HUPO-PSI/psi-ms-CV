@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.109
-date: 09:12:2022 11:31
+date: 17:01:2023 09:51
 saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -21892,7 +21892,7 @@ relationship: has_units UO:0000189 ! count unit
 
 [Term] 
 id: MS:1003328 
-name: count of identified proteoforms 
+name: number of identified proteoforms 
 def: "The number of proteoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI] 
 is_a: MS:1001085 ! protein-level identification attribute
 is_a: MS:4000003 ! single value
@@ -22657,7 +22657,7 @@ relationship: has_value_type xsd:integer ! The allowed value-type for this CV te
 [Term] 
 id: MS:4000102 
 name: number of detected quantification data points 
-def: "The number of datapoints detected for quantification purposes within the run. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run." [PSI:MS] 
+def: "The number of data points detected for quantification purposes within the run. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run." [PSI:MS] 
 is_a: MS:4000003 ! single value 
 relationship: has_metric_category MS:4000009 ! ID free metric 
 relationship: has_metric_category MS:4000012 ! single run based metric 
@@ -22667,7 +22667,7 @@ relationship: has_units UO:0000189 ! count unit
 [Term] 
 id: MS:4000103 
 name: number of identified quantification data points 
-def: "The number of identified datapoints for quantification purposes within the run after user defined acceptance criteria are applied.  These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
+def: "The number of identified data points for quantification purposes within the run after user defined acceptance criteria are applied.  These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
 is_a: MS:4000003 ! single value 
 relationship: has_metric_category MS:4000008 ! ID based metric 
 relationship: has_metric_category MS:4000012 ! single run based metric 
