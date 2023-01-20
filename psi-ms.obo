@@ -22192,6 +22192,7 @@ def: "The first to n-th quantile of MS1 peak density (scan peak counts). A value
 synonym: "MS1-Density-Q1" RELATED [PMID:24494671]
 synonym: "MS1-Density-Q2" RELATED [PMID:24494671]
 synonym: "MS1-Density-Q3" RELATED [PMID:24494671]
+synonym: "MS1 peak density distribution - quantiles" EXACT []
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22207,6 +22208,7 @@ def: "The first to n-th quantile of MS2 peak density (scan peak counts). A value
 synonym: "MS2-Density-Q1" RELATED [PMID:24494671]
 synonym: "MS2-Density-Q2" RELATED [PMID:24494671]
 synonym: "MS2-Density-Q3" RELATED [PMID:24494671]
+synonym: "MS1 peak density distribution - quantiles" EXACT []
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22656,17 +22658,6 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
-id: MS:4000108
-name: MS1 peak density distribution - quantiles
-def: "From the distribution of peak densities in MS1, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
-comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-	
-[Term]
 id: MS:4000109
 name: MS1 peak density distribution - mean
 def: "From the distribution of peak densities in MS1, the mean" [PSI:MS]
@@ -22710,19 +22701,6 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
-[Term]
-id: MS:4000113
-name: MS2 peak density distribution - quantiles
-def: "From the distribution of peak densities in MS2, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
-comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_type STATO:0000167 ! first quartile
-relationship: has_type STATO:0000574 ! center value
-relationship: has_type STATO:0000170 ! third quartile
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-	
 [Term]
 id: MS:4000114
 name: MS2 peak density distribution - mean
