@@ -22683,8 +22683,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000111
-name: MS1 peak density distribution - low outliers (<Q1-1.5*IQR)
-def: "From the distribution of peak densities in MS1, the list of outliers below Q1-1.5*IQR" [PSI:MS]
+name: MS1 peak density distribution - low outliers
+def: "From the distribution of peak densities in MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22694,8 +22694,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000112
-name: MS1 peak density distribution - high outliers (>Q3+1.5*IQR)
-def: "From the distribution of peak densities in MS1, the list of outliers above Q3+1.5*IQR" [PSI:MS]
+name: MS1 peak density distribution - high outliers
+def: "From the distribution of peak densities in MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22727,8 +22727,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000116
-name: MS2 peak density distribution - low outliers (<Q1-1.5*IQR)
-def: "From the distribution of peak densities in MS2, the list of outliers below Q1-1.5*IQR" [PSI:MS]
+name: MS2 peak density distribution - low outliers
+def: "From the distribution of peak densities in MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22738,8 +22738,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000117
-name: MS2 peak density distribution - high outliers (>Q3+1.5*IQR)
-def: "From the distribution of peak densities in MS2, the list of outliers above Q3+1.5*IQR" [PSI:MS]
+name: MS2 peak density distribution - high outliers
+def: "From the distribution of peak densities in MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22783,8 +22783,8 @@ relationship: has_units MS:1000043 ! intensity unit
 	
 [Term]
 id: MS:4000121
-name: precursor intensity distribution - low outliers (<Q1-1.5*IQR)
-def: "From the distribution of precursor intensities, the list of outliers below Q1-1.5*IQR" [PSI:MS]
+name: precursor intensity distribution - low outliers
+def: "From the distribution of precursor intensities, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22794,8 +22794,8 @@ relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
 id: MS:4000122
-name: precursor intensity distribution - high outliers (>Q3+1.5*IQR)
-def: "From the distribution of precursor intensities, the list of outliers above Q3+1.5*IQR" [PSI:MS]
+name: precursor intensity distribution - high outliers
+def: "From the distribution of precursor intensities, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22838,7 +22838,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000126
-name: MS1 signal-to-noise ratio - low outliers (<Q1-1.5*IQR)
+name: MS1 signal-to-noise ratio - low outliers
 def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers below Q1-1.5IQR" [PSI:MS]
 comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
@@ -22849,7 +22849,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000127
-name: MS1 signal-to-noise ratio - high outliers (>Q3+1.5*IQR)
+name: MS1 signal-to-noise ratio - high outliers
 def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers above Q3+1.5IQR" [PSI:MS]
 comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
@@ -22893,7 +22893,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000131
-name: signal-to-noise ratio in MS2 - low outliers (<Q1-1.5*IQR)
+name: signal-to-noise ratio in MS2 - low outliers
 def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers below Q1-1.5IQR" [PSI:MS]
 comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
@@ -22904,7 +22904,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000132
-name: signal-to-noise ratio in MS2 - high outliers (>Q3+1.5*IQR)
+name: signal-to-noise ratio in MS2 - high outliers
 def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers above Q3+1.5IQR" [PSI:MS]
 comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
@@ -22950,8 +22950,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000136
-name: MS1 ion collection time - low outliers (<Q1-1.5*IQR)
-def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers below Q1-1.5*IQR" [PSI:MS]
+name: MS1 ion collection time - low outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22963,8 +22963,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000137
-name: MS1 ion collection time - high outliers (>Q3+1.5*IQR)
-def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers above Q3+1.5*IQR" [PSI:MS]
+name: MS1 ion collection time - high outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -23010,8 +23010,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 	
 [Term]
 id: MS:4000141
-name: MS2 ion collection time - low outliers (<Q1-1.5*IQR)
-def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers below Q1-1.5*IQR" [PSI:MS]
+name: MS2 ion collection time - low outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -23023,8 +23023,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000142
-name: MS2 ion collection time - high outliers (>Q3+1.5*IQR)
-def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers above Q3+1.5*IQR" [PSI:MS]
+name: MS2 ion collection time - high outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
