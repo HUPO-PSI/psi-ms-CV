@@ -1,4 +1,4 @@
-name: generate-owl-tag-release
+name: release-on-tag
 
 # Controls when the action will run.
 on:
@@ -16,11 +16,12 @@ jobs:
           CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
           echo CV_VERSION=${CV_VERSION}
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+          cp psi-ms.owl ms.owl
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
           tag: v${{ env.CV_VERSION }}
           name: Release v${{ env.CV_VERSION }}
-          artifacts: "psi-ms.obo,psi-ms.owl"
+          artifacts: "psi-ms.obo,*ms.owl"
           generateReleaseNotes: true
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
