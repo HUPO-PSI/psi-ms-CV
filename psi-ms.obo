@@ -22896,8 +22896,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:4000122
 name: MS1 signal-to-noise ratio mean
-comment: The signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 def: "From the distribution of signal-to-noise ratio in MS1, the mean" [PSI:MS]
+comment: The signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -22918,7 +22918,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:4000124
 name: MS1 signal-to-noise ratio low outliers
-def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers below Q1-1.5IQR" [PSI:MS]
+def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22929,7 +22929,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:4000125
 name: MS1 signal-to-noise ratio high outliers
-def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers above Q3+1.5IQR" [PSI:MS]
+def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22973,7 +22973,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:4000129
 name: MS2 signal-to-noise ratio low outliers
-def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers below Q1-1.5IQR" [PSI:MS]
+def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
 comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22984,7 +22984,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:4000130
 name: MS2 signal-to-noise ratio high outliers
-def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers above Q3+1.5IQR" [PSI:MS]
+def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
 comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -23118,19 +23118,19 @@ def: "The definition of the outlier criteria applied." [PSI:MS]
 [Term]
 id: MS:4000142
 name: Tukey's fence
-def: "Defines outliers with Tuckey's fence as <(Q1-x*IQR) for low outliers and >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+def: "Defines outliers with Tukey's fence as <(Q1-x*IQR) for low outliers and >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
 is_a: MS:4000141 ! outlier threshold criterion
 
 [Term]
 id: MS:4000143
 name: Tukey's fence high outliers
-def: "Defines high outliers with Tuckey's fence as >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+def: "Defines high outliers with Tukey's fence as >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
 is_a: MS:4000141 ! outlier threshold criterion
 
 [Term]
 id: MS:4000144
 name: Tukey's fence low outliers
-def: "Defines low outliers with Tuckey's fence as <(Q1-x*IQR) for low outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+def: "Defines low outliers with Tukey's fence as <(Q1-x*IQR) for low outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
 is_a: MS:4000141 ! outlier threshold criterion
 
 [Term]
