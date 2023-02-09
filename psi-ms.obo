@@ -16497,7 +16497,7 @@ is_a: MS:1002694 ! single identification result attribute
 [Term]
 id: MS:1002509
 name: crosslink donor
-def: "The Cross-linking donor, assigned according to the following rules: the export software SHOULD use the following rules to choose the crosslink donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
+def: "The  crosslinking donor, assigned according to the following rules: the export software SHOULD use the following rules to choose the crosslink donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
 synonym: "cross-link donor" EXACT []
 is_a: MS:1002508 ! crosslinking attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -21935,7 +21935,7 @@ is_a: MS:1002489 ! special processing
 id: MS:1003331
 name: noncovalently associated peptides spectrum identification item
 def: "Noncovalently associated peptides spectrum identification item."
-is_a: MS:1002508 ! cross-linking attribute
+is_a: MS:1002508 !  crosslinking attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
@@ -21980,7 +21980,7 @@ Name: crosslinked PSM-level global FDR
 def: "Estimation of the global false discovery rate of crosslinked peptide spectrum matches."
 is_a: MS:1002701 ! PSM-level result list statistic
 is_a: MS:1002483 ! PSM-level statistical threshold
-is_a: MS:1002664 ! interaction score derived from cross-linking
+is_a: MS:1002664 ! interaction score derived from  crosslinking
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -21989,7 +21989,7 @@ Name: peptide-pair sequence-level global FDR
 def: "Estimation of the global false discovery rate for distinct peptide-pairs (id est multiple PSMs have been collapsed to one entry). Applicable in the case of crosslinked peptides or noncovalently associated peptides."
 is_a: MS:1002703 ! peptide sequence-level result list statistic
 is_a: MS:1002484 ! peptide-level statistical threshold
-is_a: MS:1002664 ! interaction score derived from cross-linking
+is_a: MS:1002664 ! interaction score derived from  crosslinking
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -22032,7 +22032,7 @@ relationship: has_value_type xsd:boolean ! The allowed value-type for this CV te
 id: MS:1003344
 name: residue-pair ref
 def: "Reference to a residue-pair supported by this identification item, the value is the identifier for the residue-pair. In the context of crosslinking experiments, a residue-pair is a unique pair of crosslinked residues, irrespective of the peptides identified. (A level of consolidation higher than unique peptide but lower than PPI.)"
-is_a: MS:1002508 ! cross-linking attribute
+is_a: MS:1002508 !  crosslinking attribute
 relationship: has_regexp MS:1003345 ! regular expression for residue-pair ref
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
