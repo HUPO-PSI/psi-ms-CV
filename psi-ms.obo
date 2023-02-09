@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.111
+data-version: 4.1.112
 date: 08:02:2023 11:38
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -20699,7 +20699,7 @@ relationship: has_regexp MS:1002505 ! regular expression for modification locali
 [Term]
 id: MS:1003149
 name: PTMProphet normalized information content
-def: " PTMProphet-computed PSM-specific normalized (0.0 – 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
+def: " PTMProphet-computed PSM-specific normalized (0.0 - 1.0) measure of information content across all modifications of a specific type." [DOI:10.1021/acs.jproteome.9b00205, PMID:31290668]
 is_a: MS:1001968 ! PTM localization PSM-level statistic
 relationship: has_regexp MS:1002505 ! regular expression for modification localization scoring
 
@@ -21336,7 +21336,7 @@ is_a: MS:1003240 ! peak intensity transform
 [Term]
 id: MS:1003243
 name: adduct ion mass
-def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule’s mass plus the mass of a proton)" [PSI:PI]
+def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's mass plus the mass of a proton)" [PSI:PI]
 is_a: MS:1003056 ! adduct ion property
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -21900,16 +21900,23 @@ is_a: MS:1003310 ! Lipid shorthand identification confidence level
 
 [Term]
 id: MS:1003327
-name: cleavable crosslinker stub
-def: "This term indicates that a given  protein modification is a derivative of a cleavable crosslinker." [PSI:MS]
-is_a: MS:1001471 ! peptide modification details
+name: number of identified protein groups
+def: "The number of protein groups that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
+is_a: MS:1002405 ! protein group-level result list attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003328
-name: Unimod derivative code
-def: "The single letter code in Unimod that identifies a specific derivative of a modification. For example, in UNIMOD:1842 (http://www.unimod.org/modifications_view.php?editid1=1842) the letter ‘W’ represents the derivative ‘water quenched monolink’." [PSI:MS]
-is_a: MS:1001471 ! peptide modification details
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+name: number of identified proteoforms
+def: "The number of proteoforms that pass the threshold to be considered identified with sufficient confidence." [PSI:PI]
+is_a: MS:1001085 ! protein-level identification attribute
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003329
@@ -22034,6 +22041,19 @@ id: MS:1003345
 name: regular expression for residue-pair ref
 def:  "^(([0-9]+).(a|b))$"
 is_a: MS:1002479 ! regular expression
+
+[Term]
+id: MS:1003346
+name: cleavable crosslinker stub
+def: "This term indicates that a given  protein modification is a derivative of a cleavable crosslinker." [PSI:MS]
+is_a: MS:1001471 ! peptide modification details
+
+[Term]
+id: MS:1003347
+name: Unimod derivative code
+def: "The single letter code in Unimod that identifies a specific derivative of a modification. For example, in UNIMOD:1842 (http://www.unimod.org/modifications_view.php?editid1=1842) the letter ‘W’ represents the derivative ‘water quenched monolink’." [PSI:MS]
+is_a: MS:1001471 ! peptide modification details
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
@@ -22196,7 +22216,7 @@ relationship: has_value_concept UO:0000191 ! fraction
 [Term]
 id: MS:4000051
 name: XIC-FWHM quantiles
-def: "The first to n-th quantile of peak widths for XICs. A metric's value triplet represents the related QuaMeter metrics of of XIC-FWHM-Q1,Q2,Q3." [PSI:MS]
+def: "The first to n-th quantile of peak widths for XICs. A metric's value triplet represents the related QuaMeter metrics of XIC-FWHM-Q1,Q2,Q3." [PSI:MS]
 synonym: "XIC-FWHM-Q1" RELATED [PMID:24494671]
 synonym: "XIC-FWHM-Q2" RELATED [PMID:24494671]
 synonym: "XIC-FWHM-Q3" RELATED [PMID:24494671]
@@ -22792,7 +22812,7 @@ relationship: has_value_type xsd:integer ! The allowed value-type for this CV te
 [Term]
 id: MS:4000102
 name: number of detected quantification data points
-def: "The number of datapoints detected for quantification purposes within the run. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run." [PSI:MS]
+def: "The number of data points detected for quantification purposes within the run. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run." [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -22802,12 +22822,64 @@ relationship: has_units UO:0000189 ! count unit
 [Term]
 id: MS:4000103
 name: number of identified quantification data points
-def: "The number of identified datapoints for quantification purposes withing the run after user defined acceptance criteria are applied. These datapoints may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the meta data or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+def: "The number of identified data points for quantification purposes within the run after user defined acceptance criteria are applied.  These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000104
+name: total ion currents
+def: "Tabular representation of the total ion current detected in each of a series of mass spectra." [PSI:MS]
+is_a: MS:4000005 ! table
+is_a: MS:1000235 ! total ion current chromatogram
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_column MS:1000767 ! native spectrum identifier format
+relationship: has_optional_column MS:1000894 ! retention time
+relationship: has_optional_column MS:1003059 ! number of peaks
+relationship: has_column MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000105
+name: ion injection parameters
+def: "Tabular representation of the parameters around ion selection like the amount of time spent filling an ion trapping device for each scan acquisition." [PSI:MS]
+is_a: MS:4000005 ! table name: scan window upper limit
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:1000767 ! native spectrum identifier format
+relationship: has_column MS:1000927 ! ion injection time
+relationship: has_optional_column MS:1000511! ms level
+relationship: has_optional_column MS:1000465 ! scan polarity
+relationship: has_optional_column MS:1000500 ! scan window upper limit
+relationship: has_optional_column MS:1000501 ! scan window lower limit
+
+[Term]
+id: MS:4000106
+name: MS1 frequency in equal parts of subsequent RT
+def: "Average MS1 frequency during retention time periods between adjacent retention time quantiles. (Four values implies values for 1st, 2nd, 3rd, 4th quarter.)" [PSI:MS]
+comment: Acquisition frequency can be used to gauge the suitability of instrument settings depending on the sample content.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000107
+name: MS2 frequency in equal parts of subsequent RT
+def: "Average MS2 frequency  during retention time periods between adjacent retention time quantiles. (Four values implies values for 1st, 2nd, 3rd, 4th quarter.)" [PSI:MS]
+comment: Acquisition frequency can be used to gauge the suitability of instrument settings depending on the sample content.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000106 ! hertz
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
