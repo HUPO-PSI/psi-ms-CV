@@ -21927,21 +21927,21 @@ is_a: MS:1002508 ! crosslinking attribute
 [Term]
 id: MS:1003330
 name: noncovalently associated peptides search
-def: "Noncovalently associated peptides search performed. Noncovalently associated peptides are two different peptides which were not crosslinked but stayed associated with each other throughout the workflow, due to noncovalent interactions.”
+def: "Noncovalently associated peptides search performed. Noncovalently associated peptides are two different peptides which were not crosslinked but stayed associated with each other throughout the workflow, due to noncovalent interactions." [PSI:MS]
 is_a: MS:1002489 ! special processing
 
 
 [Term]
 id: MS:1003331
 name: noncovalently associated peptides spectrum identification item
-def: "Noncovalently associated peptides spectrum identification item."
+def: "Noncovalently associated peptides spectrum identification item." [PSI:MS]
 is_a: MS:1002508 !  crosslinking attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003332
 name: identification based on multiple spectra
-def: "Provides an identifier to encode identifications based on multiple spectra."
+def: "Provides an identifier to encode identifications based on multiple spectra." [PSI:MS]
 is_a: MS:1002345 ! PSM-level attribute
 relationship: has_regexp MS:1003333 ! regular expression for encoding identifications based on multiple spectra.
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -21949,13 +21949,13 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003333
 name: regular expression for encoding identifications based on multiple spectra.
-def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+):(?<PARENT_OR_CHILD>P|C)$"
+def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+):(?<PARENT_OR_CHILD>P|C)$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
 id: MS:1003334
 name: parent term for PSM-level scores for identifications based on multiple spectra
-def: "Parent term for PSM-level scores for identifications based on multiple spectra."
+def: "Parent term for PSM-level scores for identifications based on multiple spectra." [PSI:MS]
 is_a: MS:1002347 ! PSM-level identification statistic
 is_a: MS:1002483 ! PSM-level statistical threshold
 relationship: has_regexp MS:1003335 ! regular expression for PSM-level scores for identifications based on multiple spectra
@@ -21964,20 +21964,20 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003335
 name: regular expression for PSM-level scores for identifications based on multiple spectra
-def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+):(?<SCORE>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+))$"
+def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+):(?<SCORE>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+))$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
 id: MS:1003336
 name: Posterior Error Probability from multiple spectra identification
-def: "PEP score for identifications based on multiple spectra."
+def: "PEP score for identifications based on multiple spectra." [PSI:MS]
 is_a: MS:1003334 ! Parent term for PSM-level scores for identifications based on multiple spectra
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003337
 Name: crosslinked PSM-level global FDR
-def: "Estimation of the global false discovery rate of crosslinked peptide spectrum matches."
+def: "Estimation of the global false discovery rate of crosslinked peptide spectrum matches." [PSI:MS]
 is_a: MS:1002701 ! PSM-level result list statistic
 is_a: MS:1002483 ! PSM-level statistical threshold
 is_a: MS:1002664 ! interaction score derived from  crosslinking
@@ -21986,7 +21986,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003338
 Name: peptide-pair sequence-level global FDR
-def: "Estimation of the global false discovery rate for distinct peptide-pairs (id est multiple PSMs have been collapsed to one entry). Applicable in the case of crosslinked peptides or noncovalently associated peptides."
+def: "Estimation of the global false discovery rate for distinct peptide-pairs (id est multiple PSMs have been collapsed to one entry). Applicable in the case of crosslinked peptides or noncovalently associated peptides." [PSI:MS]
 is_a: MS:1002703 ! peptide sequence-level result list statistic
 is_a: MS:1002484 ! peptide-level statistical threshold
 is_a: MS:1002664 ! interaction score derived from  crosslinking
@@ -21995,14 +21995,14 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003339
 name: peptide-pair passes threshold
-def: "Peptide-pair passes threshold. Applicable in the case of crosslinked peptides or noncovalently associated peptides."
+def: "Peptide-pair passes threshold. Applicable in the case of crosslinked peptides or noncovalently associated peptides." [PSI:MS]
 is_a: MS:1001105 ! peptide sequence-level identification attribute
 relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003340
 name: residue-pair passes threshold
-def: "Residue-pair passes threshold. In the context of crosslinking experiments, a residue-pair is a unique pair of crosslinked residues, irrespective of the peptides identified. (A level of consolidation higher than unique peptide but lower than PPI.)"
+def: "Residue-pair passes threshold. In the context of crosslinking experiments, a residue-pair is a unique pair of crosslinked residues, irrespective of the peptides identified (A level of consolidation higher than unique peptide but lower than PPI)." [PSI:MS]
 is_a: MS:1001060 ! quality estimation method details
 relationship: has_regexp MS:1003342 ! regular expression for whether interaction score derived from crosslinking passes threshold
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -22010,7 +22010,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003341
 Name: protein-protein interaction passes threshold
-def: "Protein-protein interaction passes threshold"
+def: "Protein-protein interaction passes threshold." [PSI:MS]
 is_a: MS:1001060 ! quality estimation method details
 relationship: has_regexp MS:1003342 ! regular expression for whether interaction score derived from crosslinking passes threshold
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -22018,20 +22018,20 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003342
 name: regular expression for whether interaction score derived from crosslinking passes threshold
-def:  "^((?<int_ID>[0-9]+):(?<PASS_THRESHOLD>true|false))$"
+def:  "^((?<int_ID>[0-9]+):(?<PASS_THRESHOLD>true|false))$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
 id: MS:1003343
 name: FDR applied separately to self crosslinks and protein heteromeric crosslinks
-def: "States whether FDR was applied separately to self crosslinks (crosslinks between peptides within one protein sequence) and protein heteromeric crosslinks (crosslinks between distinct protein sequences).”
+def: "States whether FDR was applied separately to self crosslinks (crosslinks between peptides within one protein sequence) and protein heteromeric crosslinks (crosslinks between distinct protein sequences)." [PSI:MS]
 is_a: MS:1002489 ! special processing
 relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003344
 name: residue-pair ref
-def: "Reference to a residue-pair supported by this identification item, the value is the identifier for the residue-pair. In the context of crosslinking experiments, a residue-pair is a unique pair of crosslinked residues, irrespective of the peptides identified. (A level of consolidation higher than unique peptide but lower than PPI.)"
+def: "Reference to a residue-pair supported by this identification item, the value is the identifier for the residue-pair. In the context of crosslinking experiments, a residue-pair is a unique pair of crosslinked residues, irrespective of the peptides identified (A level of consolidation higher than unique peptide but lower than PPI)." [PSI:MS]
 is_a: MS:1002508 !  crosslinking attribute
 relationship: has_regexp MS:1003345 ! regular expression for residue-pair ref
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -22039,7 +22039,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003345
 name: regular expression for residue-pair ref
-def:  "^(([0-9]+).(a|b))$"
+def:  "^(([0-9]+).(a|b))$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
