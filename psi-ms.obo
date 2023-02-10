@@ -16399,7 +16399,7 @@ is_a: MS:1002489 ! special processing
 [Term]
 id: MS:1002494
 name: crosslinking search
-def: "Cross-linking search performed." [PSI:PI]
+def: "Crosslinking search performed." [PSI:PI]
 synonym: "cross-linking search" EXACT []
 is_a: MS:1002489 ! special processing
 
@@ -16490,7 +16490,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1002508
 name: crosslinking attribute
-def: "Cross-linking attribute." [PSI:PI]
+def: "Crosslinking attribute." [PSI:PI]
 synonym: "cross-linking attribute" EXACT []
 is_a: MS:1002694 ! single identification result attribute
 
@@ -16505,7 +16505,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1002510
 name: crosslink acceptor
-def: "Cross-linking acceptor, assigned according to the following rules: the export software SHOULD use the following rules to choose the crosslink donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
+def: "Crosslinking acceptor, assigned according to the following rules: the export software SHOULD use the following rules to choose the crosslink donor as the: longer peptide, then higher peptide neutral mass, then alphabetical order." [PSI:PI]
 synonym: "cross-link acceptor" EXACT []
 is_a: MS:1002508 ! crosslinking attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -16513,7 +16513,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1002511
 name: crosslink spectrum identification item
-def: "Cross-linked spectrum identification item." [PSI:PI]
+def: "Crosslinked spectrum identification item." [PSI:PI]
 synonym: "cross-link spectrum identification item" EXACT []
 is_a: MS:1002508 ! crosslinking attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
@@ -16521,7 +16521,7 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 [Term]
 id: MS:1002512
 name: crosslinking score
-def: "Cross-linking scoring value." [PSI:PI]
+def: "Crosslinking scoring value." [PSI:PI]
 synonym: "cross-linking score" EXACT []
 is_a: MS:1002363 ! search engine specific score for proteins
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -17529,7 +17529,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1002664
 name: interaction score derived from crosslinking
 def: "Parent term for interaction scores derived from crosslinking." [PSI:PI]
-synonym: "interaction score derived from crosslinking" EXACT []
+synonym: "interaction score derived from cross-linking" EXACT []
 is_a: MS:1002675 ! crosslinking result details
 relationship: has_regexp MS:1002665 ! regular expression for interaction scores derived from crosslinking
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -17538,7 +17538,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1002665
 name: regular expression for interaction scores derived from crosslinking
 def: "((?<int_ID>[0-9]+)[.](?<SUFFIX>[a|b]):(?<POS>[0-9]+|null):(?<SCORE_OR_VALUE>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+)?):(?<PASS_THRESHOLD>true|false))|(?<SCORE_ONLY>[-+]?[0-9]+(?:[.][0-9]+)?(?:[Ee][-+]?[0-9]+)?)" [PSI:PI]
-synonym: "regular expression for interaction scores derived from crosslinking" EXACT []
+synonym: "regular expression for interaction scores derived from cross-linking" EXACT []
 is_a: MS:1002479 ! regular expression
 
 [Term]
