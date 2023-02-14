@@ -17862,9 +17862,9 @@ is_a: MS:1002710 ! list of type
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
-id MS:1002714
+id: MS:1002714
 name: FLASHDeconv
-def: "Ultrafast, High-Quality Feature Deconvolution for Top-Down Proteomics." [DOI: 10.1016/j.cels.2020.01.003]
+def: "Ultrafast, High-Quality Feature Deconvolution for Top-Down Proteomics." [DOI:10.1016/j.cels.2020.01.003]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
