@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.112
-date: 08:02:2023 11:38
-saved-by: Joshua Klein
+data-version: 4.1.113
+date: 30:01:2023 11:30
+saved-by: Mathias Walzer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -22260,7 +22260,7 @@ relationship: has_units UO:0000010 ! second
 [Term]
 id: MS:4000054
 name: TIC quarters RT fraction
-def: "The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:QC]
+def: "The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:MS]
 synonym: "RT-TIC-Q1" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q2" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q3" RELATED [PMID:24494671]
@@ -22276,7 +22276,7 @@ relationship: has_units UO:0000191 ! fraction
 [Term]
 id: MS:4000055
 name: MS1 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:QC]
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:MS]
 synonym: "RT-MS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MS-Q3" RELATED [PMID:24494671]
@@ -22292,7 +22292,7 @@ relationship: has_units UO:0000191 ! fraction
 [Term]
 id: MS:4000056
 name: MS2 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:QC]
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:MS]
 synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
@@ -22366,12 +22366,14 @@ def: "The first to n-th quantile of MS1 peak density (scan peak counts). A value
 synonym: "MS1-Density-Q1" RELATED [PMID:24494671]
 synonym: "MS1-Density-Q2" RELATED [PMID:24494671]
 synonym: "MS1-Density-Q3" RELATED [PMID:24494671]
+synonym: "MS1 peak density distribution - quantiles" EXACT []
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
+relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
@@ -22381,12 +22383,14 @@ def: "The first to n-th quantile of MS2 peak density (scan peak counts). A value
 synonym: "MS2-Density-Q1" RELATED [PMID:24494671]
 synonym: "MS2-Density-Q2" RELATED [PMID:24494671]
 synonym: "MS2-Density-Q3" RELATED [PMID:24494671]
+synonym: "MS2 peak density distribution - quantiles" EXACT []
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
+relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
@@ -22880,6 +22884,425 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000106 ! hertz
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000108
+name: MS1 peak density distribution mean
+def: "From the distribution of peak densities in MS1, the mean" [PSI:MS]
+comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000109
+name: MS1 peak density distribution sigma
+def: "From the distribution of peak densities in MS1, the sigma value" [PSI:MS]
+comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000110
+name: MS1 peak density distribution low outliers
+def: "From the distribution of peak densities in MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000111
+name: MS1 peak density distribution high outliers
+def: "From the distribution of peak densities in MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: The distribution of peak densities in MS1 can provide insight into the presence of nuisance factors.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000112
+name: MS2 peak density distribution mean
+def: "From the distribution of peak densities in MS2, the mean" [PSI:MS]
+comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000113
+name: MS2 peak density distribution sigma
+def: "From the distribution of peak densities in MS2, the sigma value" [PSI:MS]
+comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000114
+name: MS2 peak density distribution low outliers
+def: "From the distribution of peak densities in MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000115
+name: MS2 peak density distribution high outliers
+def: "From the distribution of peak densities in MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: The distribution of peak densities in MS2 can provide insight into the instruments ion selection settings.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000116
+name: precursor intensity distribution quantiles
+def: "From the distribution of precursor intensities, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000117
+name: precursor intensity distribution mean
+def: "From the distribution of precursor intensities, the mean" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000118
+name: precursor intensity distribution sigma
+def: "From the distribution of precursor intensities, the sigma value" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000119
+name: precursor intensity distribution low outliers
+def: "From the distribution of precursor intensities, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000120
+name: precursor intensity distribution high outliers
+def: "From the distribution of precursor intensities, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000121
+name: MS1 signal-to-noise ratio quantiles
+def: "From the distribution of signal-to-noise ratio in MS1, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
+comment: The Signal-to-noise ratio in MS1 distribution can provide insight to the presence of nuisance factors.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000122
+name: MS1 signal-to-noise ratio mean
+def: "From the distribution of signal-to-noise ratio in MS1, the mean" [PSI:MS]
+comment: The signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000123
+name: MS1 signal-to-noise ratio sigma
+def: "From the distribution of signal-to-noise ratio in MS1, the sigma value" [PSI:MS]
+comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000124
+name: MS1 signal-to-noise ratio low outliers
+def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000125
+name: MS1 signal-to-noise ratio high outliers
+def: "From the distribution of signal-to-noise ratio in MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: The Signal-to-noise ratio in MS1 distribution can provide insight into the presence of nuisance factors. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000126
+name: MS2 signal-to-noise ratio quantiles
+def: "From the distribution of signal-to-noise ratio in MS2, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
+comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000127
+name: MS2 signal-to-noise ratio mean
+def: "From the distribution of signal-to-noise ratio in MS2, the mean" [PSI:MS]
+comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000128
+name: MS2 signal-to-noise ratio sigma
+def: "From the distribution of signal-to-noise ratio in MS2, the sigma value" [PSI:MS]
+comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000129
+name: MS2 signal-to-noise ratio low outliers
+def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000130
+name: MS2 signal-to-noise ratio high outliers
+def: "From the distribution of signal-to-noise ratio in MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: A high signal-to-noise ratio in MS2 distribution can explain a high rate of unidentified spectra. Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware').
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000131
+name: MS1 ion collection time quantiles
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000132
+name: MS1 ion collection time mean
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the mean" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000133
+name: MS1 ion collection time sigma
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the sigma value" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000134
+name: MS1 ion collection time low outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000135
+name: MS1 ion collection time high outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS1, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000136
+name: MS2 ion collection time quantiles
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the quantiles. I.e. a value triplet represents the quartiles Q1, Q2, Q3" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000137
+name: MS2 ion collection time mean
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the mean" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000138
+name: MS2 ion collection time sigma
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the sigma value" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000139
+name: MS2 ion collection time low outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers below a in-file defined threshold" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000140
+name: MS2 ion collection time high outliers
+def: "From the distribution of ion injection times (MS:1000927) for MS2, the list of outliers above a in-file defined threshold" [PSI:MS]
+comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept STATO:0000036 ! outlier
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000141
+name: outlier threshold criterion
+def: "The definition of the outlier criteria applied." [PSI:MS]
+
+[Term]
+id: MS:4000142
+name: Tukey's fence
+def: "Defines outliers with Tukey's fence as <(Q1-x*IQR) for low outliers and >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000143
+name: Tukey's fence high outliers
+def: "Defines high outliers with Tukey's fence as >(Q3+x*IQR) for high outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000144
+name: Tukey's fence low outliers
+def: "Defines low outliers with Tukey's fence as <(Q1-x*IQR) for low outliers, where x is defined by the term's value. The default is x=1.5" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000145
+name: Z-score threshold
+def: "Defines outliers with a Z-score threshold as <(-x) for low outliers and >(+x) for high outliers, where x is defined by the term's value. The default is x=3" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000146
+name: Z-score threshold high outliers
+def: "Defines outliers with a Z-score threshold as <(-x) for low outliers and >(+x) for high outliers, where x is defined by the term's value. The default is x=3" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000147
+name: Z-score threshold low outliers
+def: "Defines outliers with a Z-score threshold as <(-x) for low outliers and >(+x) for high outliers, where x is defined by the term's value. The default is x=3" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
+
+[Term]
+id: MS:4000148
+name: algorithmical threshold
+def: "Defines outliers algorithmically, where a single value threshold might not be applicable or p.r.n. multivariate decision making is applied. The value of the term should name the algorithmical method used" [PSI:MS]
+is_a: MS:4000141 ! outlier threshold criterion
 
 [Term]
 id: PEFF:0000001
@@ -23829,4 +24252,3 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
-
