@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.113
-date: 30:01:2023 11:30
-saved-by: Mathias Walzer
+data-version: 4.1.114
+date: 17:02:2023 11:30
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -17860,6 +17860,13 @@ name: list of floats
 def: "A list of xsd:float." []
 is_a: MS:1002710 ! list of type
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1002714
+name: FLASHDeconv
+def: "Ultrafast, High-Quality Feature Deconvolution for Top-Down Proteomics." [DOI:10.1016/j.cels.2020.01.003]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002719
