@@ -22109,7 +22109,7 @@ is_a: MS:1003350 ! mass spectrometry proteomics
 [Term]
 id: MS:1003355
 name: bottom-up proteomics
-def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of small protein fragments called peptides, after complete digestion of denatured proteins." [PSI:MS]
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of peptides after complete digestion of denatured proteins." [PSI:MS]
 is_a: MS:1003350 ! mass spectrometry proteomics
 
 [Term]
