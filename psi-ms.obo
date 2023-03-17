@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.114
-date: 17:02:2023 11:30
-saved-by: Joshua Klein
+data-version: 4.1.115
+date: 16:03:2023 11:30
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21162,15 +21162,17 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003213
 name: mass spectrometry acquisition method
-def: "Specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
+def: "Mode of running a mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
 is_a: MS:1000524 ! data file content
 is_a: MS:1001954 ! acquisition parameter
+relationship: part_of MS:1003350 ! mass spectrometry proteomics
 
 [Term]
 id: MS:1003214
 name: mass spectrometry acquisition method aspect
 def: "Specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated." [PSI:MS]
 is_a: MS:1001458 ! spectrum generation information
+relationship: part_of MS:1003213 ! mass spectrometry acquisition method
 
 [Term]
 id: MS:1003215
@@ -22061,6 +22063,54 @@ name: Unimod derivative code
 def: "The single letter code in Unimod that identifies a specific derivative of a modification. For example, in UNIMOD:1842 (http://www.unimod.org/modifications_view.php?editid1=1842) the letter ‘W’ represents the derivative ‘water quenched monolink’." [PSI:MS]
 is_a: MS:1001471 ! peptide modification details
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003348
+name: proteomics
+def: "large-scale study of proteins and proteomes." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003349
+name: affinity proteomics
+def: "large-scale study of proteins and proteomes via the use of affinity reagents." [PSI:MS]
+is_a: MS:1003348 ! proteomics
+
+[Term]
+id: MS:1003350
+name: mass spectrometry proteomics
+def: "large-scale study of proteins and proteomes via the use of mass spectrometers to measure the masses and abundances of charged proteins or protein fragments." [PSI:MS]
+is_a: MS:1003348 ! proteomics
+
+[Term]
+id: MS:1003351
+name: top-down proteomics
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of charged intact proteins." [PSI:MS]
+is_a: MS:1003350 ! mass spectrometry proteomics
+
+[Term]
+id: MS:1003352
+name: native top-down proteomics
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of charged intact folded proteins." [PSI:MS]
+is_a: MS:1003351 ! top-down proteomics
+
+[Term]
+id: MS:1003353
+name: non-native top-down proteomics
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of charged intact denatured proteins." [PSI:MS]
+is_a: MS:1003351 ! top-down proteomics
+
+[Term]
+id: MS:1003354
+name: middle-down proteomics
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of large protein fragments after partial digestion of denatured proteins." [PSI:MS]
+is_a: MS:1003350 ! mass spectrometry proteomics
+
+[Term]
+id: MS:1003355
+name: bottom-up proteomics
+def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of peptides after complete digestion of denatured proteins." [PSI:MS]
+is_a: MS:1003350 ! mass spectrometry proteomics
 
 [Term]
 id: MS:4000000
