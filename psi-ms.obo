@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.115
-date: 16:03:2023 11:30
-saved-by: Eric Deutsch
+data-version: 4.1.116
+date: 17:03:2023 11:30
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21958,7 +21958,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003333
 name: regular expression for encoding identifications based on multiple spectra.
-def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+):(?<PARENT_OR_CHILD>P|C)$" [PSI:MS]
+def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+)(?::(?<PARENT_OR_CHILD>P|C))$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -21978,7 +21978,7 @@ is_a: MS:1002479 ! regular expression
 
 [Term]
 id: MS:1003336
-name: Posterior Error Probability from multiple spectra identification
+name: posterior error probability from identification based on multiple spectra
 def: "PEP score for identifications based on multiple spectra." [PSI:MS]
 is_a: MS:1003334 ! Parent term for PSM-level scores for identifications based on multiple spectra
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
