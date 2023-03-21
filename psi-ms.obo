@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.116
+data-version: 4.1.117
 date: 17:03:2023 11:30
-saved-by: Joshua Klein
+saved-by: Matt Chambers
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -22111,6 +22111,12 @@ id: MS:1003355
 name: bottom-up proteomics
 def: "study of proteins via the use of mass spectrometers to measure the masses and abundances of peptides after complete digestion of denatured proteins." [PSI:MS]
 is_a: MS:1003350 ! mass spectrometry proteomics
+
+[Term]
+id: MS:1003356
+name: Orbitrap Ascend
+def: "Thermo Scientific Orbitrap Ascend mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:4000000
