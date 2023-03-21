@@ -22113,6 +22113,12 @@ def: "study of proteins via the use of mass spectrometers to measure the masses 
 is_a: MS:1003350 ! mass spectrometry proteomics
 
 [Term]
+id: MS:1003356
+name: Orbitrap Ascend
+def: "Thermo Scientific Orbitrap Ascend mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
