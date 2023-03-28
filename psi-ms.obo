@@ -21929,8 +21929,8 @@ relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003329
-name: loop-link spectrum identification item
-def: "Identification of an internally linked peptide (a peptide that contains both ends of a crosslink), also known as a loop-link." [PSI:MS]
+name: looplink spectrum identification item
+def: "Identification of an internally linked peptide (a peptide that contains both ends of a crosslink), also known as a looplink." [PSI:MS]
 is_a: MS:1002508 ! crosslinking attribute
 
 [Term]
