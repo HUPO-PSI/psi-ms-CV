@@ -22170,7 +22170,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003364
 name: combined p-value
-def: "A p-value that is computed by taking the product of the exact p-value and the res-ev p-value and then adjusting for dependencies between them" [PMID:30221945]
+def: "A p-value that is computed by taking the product of the exact p-value and the res-ev p-value and then adjusting for dependencies between them." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
