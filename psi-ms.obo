@@ -2504,7 +2504,7 @@ is_obsolete: true
 [Term]
 id: MS:1000336
 name: neutral loss
-def: "The loss of an uncharged species during a rearrangement process. The value slot holds the molecular formula in Hill notation of the neutral loss molecule, see PMID: 21182243. This term must be used in conjunction with a child of the term MS:1002307 (fragmentation ion type)." [PSI:MS]
+def: "The loss of an uncharged species during a rearrangement process. The value slot holds the molecular formula in Hill notation of the neutral loss molecule, see PMID:21182243. This term must be used in conjunction with a child of the term MS:1002307 (fragmentation ion type)." [PSI:MS]
 is_a: MS:1001055 ! modification parameters
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -22127,7 +22127,7 @@ is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:1003358
-name: Xcorr rank
+name: XCorr rank
 def: "The rank of this PSM relative to all other PSMs involving this spectrum, when sorting by the XCorr score." [PSI:MS]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -22135,56 +22135,56 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003359
 name: exact p-value
-def: "A p-value for the XCorr score, calculated using dynamic programming." [PMID: 24895379]
+def: "A p-value for the XCorr score, calculated using dynamic programming." [PMID:24895379]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003360
-name: refactored xcorr
-def: "A modified version of the XCorr score that is made amenable to dynamic programming calculation of p-values by changing a max operation to a sum." [PMID: 30221945]
+name: refactored XCorr
+def: "A modified version of the XCorr score that is made amenable to dynamic programming calculation of p-values by changing a max operation to a sum." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003361
 name: res-ev score
-def: "The residue-evidence (res-ev) score measures the quality of a match between a peptide and observed spectrum using a method similar to XCorr, but considering all pairs of observed peaks. (PMID: 30221945)" [PSI:MS]
+def: "The residue-evidence (res-ev) score measures the quality of a match between a peptide and observed spectrum using a method similar to XCorr, but considering all pairs of observed peaks. (PMID:30221945)" [PSI:MS]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003362
 name: res-ev rank
-def: "The rank of this PSM relative to all other PSMs involving this spectrum, when sorting by the res-ev score." [PMID: 30221945]
+def: "The rank of this PSM relative to all other PSMs involving this spectrum, when sorting by the res-ev score." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003363
 name: res-ev p-value
-def: "The residue-evidence p-value is computed from the residue-evidence score using a dynamic programming procedure." [PMID: 30221945]
+def: "The residue-evidence p-value is computed from the residue-evidence score using a dynamic programming procedure." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003364
 name: combined p-value
-def: "A p-value that is computed by taking the product of the exact p-value and the res-ev p-value and then adjusting for dependencies between them" [PMID: 30221945]
+def: "A p-value that is computed by taking the product of the exact p-value and the res-ev p-value and then adjusting for dependencies between them" [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003365
 name: combined p-value rank
-def: "The rank of this PSM relative to all other PSMs involving this spectrum, when sorting by the combined p-value." [PMID: 30221945]
+def: "The rank of this PSM relative to all other PSMs involving this spectrum, when sorting by the combined p-value." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003366
 name: tailor score
-def: "A calibrated version of the XCorr score, computed by dividing the XCorr by the 99th percentile of the distribution of all scores for a particular spectrum." [PMID: 32175744]
+def: "A calibrated version of the XCorr score, computed by dividing the XCorr by the 99th percentile of the distribution of all scores for a particular spectrum." [PMID:32175744]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -23441,12 +23441,16 @@ is_a: MS:4000141 ! outlier threshold criterion
 id: MS:4000149
 name: iRT calibration formula
 def: "A polynomial formula to calibrate retention time based on iRT reference peptides. The order of the values corresponds to polynomial terms. I.e. a linear equation is represented by a two-tuple consisting of (slope, intercept). More general, the position in the n_tuple indicates the power of `x`: position `n → x^0`, position `n - 1 → x^1`, position `n - 2 → x^2`, etc." [PSI:MS]
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type MS:4000004 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000150
 name: iRT calibration adjusted r-squared
 def: "The goodness of fit statistic between observed retention times and iRT calibrated retention times." [PSI:MS]
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type MS:4000003 ! The allowed value-type for this CV term
 
 [Term]
