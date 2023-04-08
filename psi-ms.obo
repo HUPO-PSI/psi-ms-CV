@@ -22149,7 +22149,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003361
 name: res-ev score
-def: "The residue-evidence (res-ev) score measures the quality of a match between a peptide and observed spectrum using a method similar to XCorr, but considering all pairs of observed peaks. (PMID:30221945)" [PSI:MS]
+def: "The residue-evidence (res-ev) score measures the quality of a match between a peptide and observed spectrum using a method similar to XCorr, but considering all pairs of observed peaks." [PMID:30221945]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -23441,17 +23441,19 @@ is_a: MS:4000141 ! outlier threshold criterion
 id: MS:4000149
 name: iRT calibration formula
 def: "A polynomial formula to calibrate retention time based on iRT reference peptides. The order of the values corresponds to polynomial terms. I.e. a linear equation is represented by a two-tuple consisting of (slope, intercept). More general, the position in the n_tuple indicates the power of `x`: position `n → x^0`, position `n - 1 → x^1`, position `n - 2 → x^2`, etc." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_value_type MS:4000004 ! The allowed value-type for this CV term
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000150
 name: iRT calibration adjusted r-squared
 def: "The goodness of fit statistic between observed retention times and iRT calibrated retention times." [PSI:MS]
+is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_value_type MS:4000003 ! The allowed value-type for this CV term
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
