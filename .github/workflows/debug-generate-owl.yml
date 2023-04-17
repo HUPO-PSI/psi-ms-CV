@@ -24,6 +24,7 @@ jobs:
         run: |
           git config --global user.name 'Joshua Klein'
           git config --global user.email 'mobiusklein@gmail.com'
+          git config --list
           echo `date` >> tick
           git add tick
           git commit -m "tick"
