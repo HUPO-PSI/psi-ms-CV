@@ -22,7 +22,7 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL and Commit
         run: |
-          git config --global user.name 'mobiusklein'
+          git config --global user.name 'Joshua Klein'
           git config --global user.email 'mobiusklein@gmail.com'
           echo `date` >> tick
           git add tick
