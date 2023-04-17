@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.118
+data-version: 4.1.119
 date: 31:03:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22187,6 +22187,33 @@ name: tailor score
 def: "A calibrated version of the XCorr score, computed by dividing the XCorr by the 99th percentile of the distribution of all scores for a particular spectrum." [PMID:32175744]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003367
+name: monoisotopic mass array
+def: "A data array of deisotoped neutral mass values corresponding to the estimated monoisotopic masses of the measured ions." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1003143 ! mass array
+relationship: has_units UO:0000221 ! dalton
+
+[Term]
+id: MS:1003368
+name: most abundant mass array
+def: "A data array of deisotoped neutral mass values corresponding to the mass of the most abundant isotopic peak of the measured ions." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1003143 ! mass array
+relationship: has_units UO:0000221 ! dalton
+
+[Term]
+id: MS:1003369
+name: average mass array
+def: "A data array of deisotoped neutral mass values corresponding to the mass of the most average mass of the measured ions." [PSI:MS]
+xref: binary-data-type:MS\:1000521 "32-bit float"
+xref: binary-data-type:MS\:1000523 "64-bit float"
+is_a: MS:1003143 ! mass array
+relationship: has_units UO:0000221 ! dalton
 
 [Term]
 id: MS:4000000
