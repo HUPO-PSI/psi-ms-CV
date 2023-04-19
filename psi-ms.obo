@@ -424,7 +424,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1000033
 name: deisotoping
-def: "The removal of isotope peaks to represent the fragment ion as one data point and is commonly done to reduce complexity. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+def: "The removal of isotope peaks to represent the ion as one data point and is commonly done to reduce complexity. It is done in conjunction with the charge state deconvolution." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
 [Term]
@@ -22190,34 +22190,25 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003367
-name: monoisotopic mass array
-def: "A data array of deisotoped neutral mass values corresponding to the estimated monoisotopic masses of the measured ions." [PSI:MS]
-xref: binary-data-type:MS\:1000521 "32-bit float"
-xref: binary-data-type:MS\:1000523 "64-bit float"
-is_a: MS:1003143 ! mass array
-relationship: has_units UO:0000221 ! dalton
+name: monoisotopic mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's monoisotopic mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
 
 [Term]
 id: MS:1003368
-name: most abundant mass array
-def: "A data array of deisotoped neutral mass values corresponding to the mass of the most abundant isotopic peak of the measured ions." [PSI:MS]
-xref: binary-data-type:MS\:1000521 "32-bit float"
-xref: binary-data-type:MS\:1000523 "64-bit float"
-is_a: MS:1003143 ! mass array
-relationship: has_units UO:0000221 ! dalton
+name: most abundant mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's most abundant isotopic mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
 
 [Term]
 id: MS:1003369
-name: average mass array
-def: "A data array of deisotoped neutral mass values corresponding to the mass of the most average mass of the measured ions." [PSI:MS]
-xref: binary-data-type:MS\:1000521 "32-bit float"
-xref: binary-data-type:MS\:1000523 "64-bit float"
-is_a: MS:1003143 ! mass array
-relationship: has_units UO:0000221 ! dalton
+name: average mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's average mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
 
 [Term]
 id: MS:1003370
-name: reduction to summed singly charged peak list
+name: decharging
 def: "The summing of peaks corresponding to the same mass at multiple charge states and presented as singly charged m/z." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
