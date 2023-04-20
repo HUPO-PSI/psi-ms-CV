@@ -22208,7 +22208,7 @@ is_a: MS:1000033 ! deisotoping
 
 [Term]
 id: MS:1003370
-name: decharging
+name: reduction to summed singly charged peak list
 def: "The summing of peaks corresponding to the same mass at multiple charge states and presented as singly charged m/z." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
