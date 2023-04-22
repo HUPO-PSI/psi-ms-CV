@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.118
+data-version: 4.1.119
 date: 31:03:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -424,7 +424,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1000033
 name: deisotoping
-def: "The removal of isotope peaks to represent the fragment ion as one data point and is commonly done to reduce complexity. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+def: "The removal of isotope peaks to represent the ion as one data point and is commonly done to reduce complexity. It is done in conjunction with the charge state deconvolution." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
 [Term]
@@ -22187,6 +22187,30 @@ name: tailor score
 def: "A calibrated version of the XCorr score, computed by dividing the XCorr by the 99th percentile of the distribution of all scores for a particular spectrum." [PMID:32175744]
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003367
+name: monoisotopic mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's monoisotopic mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
+
+[Term]
+id: MS:1003368
+name: most abundant mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's most abundant isotopic mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
+
+[Term]
+id: MS:1003369
+name: average mass deisotoping
+def: "The removal of isotope peaks to represent each ion as one data point corresponding to the ion's average mass. It is done in conjunction with the charge state deconvolution." [PSI:MS]
+is_a: MS:1000033 ! deisotoping
+
+[Term]
+id: MS:1003370
+name: reduction to summed singly charged peak list
+def: "The summing of peaks corresponding to the same mass at multiple charge states and presented as singly charged m/z." [PSI:MS]
+is_a: MS:1000543 ! data processing action
 
 [Term]
 id: MS:4000000
