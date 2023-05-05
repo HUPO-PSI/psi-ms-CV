@@ -10184,6 +10184,7 @@ name: FAIMS compensation voltage
 def: "The DC potential applied to the asymmetric waveform in FAIMS that compensates for the difference between high and low field mobility of an ion." [PSI:MS]
 synonym: "FAIMS CV" EXACT []
 is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -22217,6 +22218,7 @@ id: MS:1003371
 name: SelexION compensation voltage
 def: "The voltage applied in the SelexION device to allow certain ions to transmit through to the mass spectrometer." [PSI:MS]
 is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
