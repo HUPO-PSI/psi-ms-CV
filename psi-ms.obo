@@ -22222,7 +22222,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1003373
 name: mzIdentML extension version
 def: "The versioning of an mzIdentML extension document." [PSI:PI]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+is_a: MS:1003372 ! mzIdentML extension version
 relationship: part_of MS:1002073 ! mzIdentML format
 relationship: has_value_type xsd:string
 
