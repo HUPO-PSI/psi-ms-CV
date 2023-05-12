@@ -21217,6 +21217,7 @@ id: MS:1003221
 name: data-dependent acquisition
 def: "Mass spectrometer data acquisition method wherein MSn spectra are triggered based on the m/z of precursor ions detected in the same run." [PSI:MS]
 is_a: MS:1003214 ! mass spectrometry acquisition method aspect
+is_a: MS:1003213 ! mass spectrometry acquisition method
 synonym: "DDA" EXACT []
 
 [Term]
