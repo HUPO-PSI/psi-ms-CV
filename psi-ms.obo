@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.120
-date: 31:03:2023 11:30
+data-version: 4.1.121
+date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22222,6 +22222,20 @@ is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003372
+name: specification document extension version
+def: "The versioning of a an extension to a specification document that the current file requires to be read correctly. The version should encode the name of the extension, and some ordinal expression of its revision, preferably in semantic versioning notation. Signals that readers that do not know this extension should return an appropriately informative error if they do not think they can or should try to interpret the file." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003373
+name: mzIdentML extension version
+def: "The versioning of an mzIdentML extension document." [PSI:PI]
+is_a: MS:1003372 ! specification document extension version
+relationship: part_of MS:1002073 ! mzIdentML format
+relationship: has_value_type xsd:string
 
 [Term]
 id: MS:4000000
