@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.121
+data-version: 4.1.122
 date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22236,6 +22236,12 @@ def: "The versioning of an mzIdentML extension document." [PSI:PI]
 is_a: MS:1003372 ! specification document extension version
 relationship: part_of MS:1002073 ! mzIdentML format
 relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003374
+name: Orbitrap Astral
+def: "Thermo Scientific Orbitrap Astral mass spectrometer contains three mass analyzers: a quadrupole analyzer, an Orbitrap analyzer, and the novel Astral analyzer." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:4000000
