@@ -22238,6 +22238,18 @@ relationship: part_of MS:1002073 ! mzIdentML format
 relationship: has_value_type xsd:string
 
 [Term]
+id: MS:1003374
+name: Open Chromatography Binary OCB format
+def: "ChemClipse/OpenChrom file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003375
+name: Conversion to OCB
+def: "Conversion of a file format to Open Chromatography Binary OCB file format." [PSI:MS]
+is_a: MS:1000530 ! file format conversion
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
