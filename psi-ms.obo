@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.121
+data-version: 4.1.122
 date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22248,6 +22248,22 @@ id: MS:1003375
 name: Conversion to OCB
 def: "Conversion of a file format to Open Chromatography Binary OCB file format." [PSI:MS]
 is_a: MS:1000530 ! file format conversion
+
+[Term]
+id: MS:1003376
+name: ChemClipse
+def: "ChemClipse is part of the Eclipse Science project. Primarily developed by Lablicate GmbH." [https://projects.eclipse.org/projects/science.chemclipse]
+synonym: "chemclipse" EXACT []
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003377
+name: OpenChrom
+def: "OpenChrom is an Open Source software for data processing and analysis. Based upon Eclipse ChemClipse."  [PMID:20673335, DOI:10.1186/1471-2105-11-405, https://www.openchrom.net/]
+synonym: "openchrom" EXACT []
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:4000000
