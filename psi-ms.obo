@@ -22275,7 +22275,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1003379
 name: asymmetric track lossless time-of-flight analyzer
-def "A TOF-like mass analyzer with asymmetric ion mirrors to direct ions into transversal asymmetric oscillations and ion foil shapes and maintains ion packet for transmission and resolution." [PSI:MS]
+def: "A TOF-like mass analyzer with asymmetric ion mirrors to direct ions into transversal asymmetric oscillations and ion foil shapes and maintains ion packet for transmission and resolution." [PSI:MS]
 synonym: "Astral" EXACT []
 is_a: MS:1000084 ! time-of-flight
 
