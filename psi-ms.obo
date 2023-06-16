@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.123
+data-version: 4.1.124
 date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22265,6 +22265,19 @@ def: "OpenChrom is an Open Source software for data processing and analysis. Bas
 synonym: "openchrom" EXACT []
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003378
+name: Orbitrap Astral
+def: "Thermo Scientific Orbitrap Astral mass spectrometer contains three mass analyzers: a quadrupole analyzer, an Orbitrap analyzer, and the Astral analyzer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003379
+name: asymmetric track lossless time-of-flight analyzer
+def: "A TOF-like mass analyzer with asymmetric ion mirrors to direct ions into transversal asymmetric oscillations and ion foil shapes and maintains ion packet for transmission and resolution." [PSI:MS]
+synonym: "Astral" EXACT []
+is_a: MS:1000084 ! time-of-flight
 
 [Term]
 id: MS:4000000
