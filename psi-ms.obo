@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.124
+data-version: 4.1.125
 date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -15786,6 +15786,27 @@ id: MS:1002403
 name: group representative
 def: "An arbitrary and optional flag applied to exactly one protein per group to indicate it can serve as the representative of the group, amongst leading proteins, in effect serving as a tiebreaker for approaches that require exactly one group representative." [PSI:PI]
 is_a: MS:1001101 ! protein group or subset relationship
+
+[Term]
+id: MS:1002404
+name: Xevo G3 QTof
+def: Waters Corporation Xevo G3 QTof quadrupole time-of-flight mass spectrometer.
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002405
+name: ACQUITY RDa Detector
+def: Waters Corporation RDa time-of-flight mass detector.
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1002406
+name: waters_connect
+def: Waters Corporation waters_connect software for liquid chromatography and mass spectrometry acquisition and processing.
+is_a: MS:1000694 ! Waters software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002404
