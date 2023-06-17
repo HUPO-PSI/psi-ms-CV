@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.125
-date: 04:05:2023 11:30
+data-version: 4.1.126
+date: 17:06:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -15789,27 +15789,6 @@ is_a: MS:1001101 ! protein group or subset relationship
 
 [Term]
 id: MS:1002404
-name: Xevo G3 QTof
-def: Waters Corporation Xevo G3 QTof quadrupole time-of-flight mass spectrometer.
-is_a: MS:1000126 ! Waters instrument model
-
-[Term]
-id: MS:1002405
-name: ACQUITY RDa Detector
-def: Waters Corporation RDa time-of-flight mass detector.
-is_a: MS:1000126 ! Waters instrument model
-
-[Term]
-id: MS:1002406
-name: waters_connect
-def: Waters Corporation waters_connect software for liquid chromatography and mass spectrometry acquisition and processing.
-is_a: MS:1000694 ! Waters software
-is_a: MS:1001455 ! acquisition software
-is_a: MS:1001456 ! analysis software
-is_a: MS:1001457 ! data processing software
-
-[Term]
-id: MS:1002404
 name: count of identified proteins
 def: "The number of proteins that have been identified, which must match the number of groups that pass the threshold in the file." [PSI:PI]
 is_a: MS:1002704 ! protein-level result list attribute
@@ -22299,6 +22278,33 @@ name: asymmetric track lossless time-of-flight analyzer
 def: "A TOF-like mass analyzer with asymmetric ion mirrors to direct ions into transversal asymmetric oscillations and ion foil shapes and maintains ion packet for transmission and resolution." [PSI:MS]
 synonym: "Astral" EXACT []
 is_a: MS:1000084 ! time-of-flight
+
+[Term]
+id: MS:1003380
+name: Xevo G3 QTof
+def: "Waters Corporation Xevo G3 QTof quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003381
+name: ACQUITY RDa Detector
+def: "Waters Corporation RDa time-of-flight mass detector." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003382
+name: waters_connect
+def: "Waters Corporation waters_connect software for liquid chromatography and mass spectrometry acquisition and processing." [PSI:MS]
+is_a: MS:1000694 ! Waters software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003383
+name: timsTOF Ultra
+def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
+is_a: MS:1003123! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:4000000
