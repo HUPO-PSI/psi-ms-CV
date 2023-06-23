@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.126
-date: 17:06:2023 11:30
+data-version: 4.1.127
+date: 23:06:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22229,6 +22229,7 @@ id: MS:1003372
 name: specification document extension version
 def: "The versioning of a an extension to a specification document that the current file requires to be read correctly. The version should encode the name of the extension, and some ordinal expression of its revision, preferably in semantic versioning notation. Signals that readers that do not know this extension should return an appropriately informative error if they do not think they can or should try to interpret the file." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+relationship: has_regexp MS:1003384 ! semantic version regexp
 
 [Term]
 id: MS:1003373
@@ -22236,7 +22237,6 @@ name: mzIdentML extension version
 def: "The versioning of an mzIdentML extension document." [PSI:PI]
 is_a: MS:1003372 ! specification document extension version
 relationship: part_of MS:1002073 ! mzIdentML format
-relationship: has_value_type xsd:string
 
 [Term]
 id: MS:1003374
@@ -22305,6 +22305,19 @@ id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
 is_a: MS:1003123! Bruker Daltonics timsTOF series
+
+[Term]
+id: MS:1003384
+name: semantic version regexp
+def: "v?(\d+)\.(\d+)\.(\d+)(?:-(\S+))?" [PSI:PI]
+is_a: MS:1002479 ! regular expression
+
+[Term]
+id: MS:1003385
+name: mzIdentML crosslinking extension document version
+def: "The versioning of the crosslinking mzIdentML extension document." [PSI:PI]
+is_a: MS:1003373 ! mzIdentML extension version
+relationship: has_value_type xsd:string
 
 [Term]
 id: MS:4000000
