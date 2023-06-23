@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.125
+data-version: 4.1.126
 date: 04:05:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22282,7 +22282,7 @@ is_a: MS:1000084 ! time-of-flight
 [Term]
 id: MS:1003384
 name: semantic version regexp
-def: "v?(\d+)\.(\d+)\.(\d+)" [PSI:PI]
+def: "v?(\d+)\.(\d+)\.(\d+)(?:-(\S+))?" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
