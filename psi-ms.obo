@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.127
-date: 23:06:2023 11:30
+data-version: 4.1.128
+date: 29:06:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22318,6 +22318,31 @@ name: mzIdentML crosslinking extension document version
 def: "The versioning of the crosslinking mzIdentML extension document." [PSI:PI]
 is_a: MS:1003373 ! mzIdentML extension version
 relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003386
+name: Spectra
+def: "Bioconductor package Spectra for mass spectrometry data representation and processing." [PSI:MS, https://doi.org/doi:10.18129/B9.bioc.Spectra]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+synonym: "Spectra" EXACT []
+
+[Term]
+id: MS:1003387
+name: MetaboAnnotation
+def: "Bioconductor package MetaboAnnotation for annotation of untargeted metabolomics data." [PSI:MS, https://doi.org/doi:10.18129/B9.bioc.MetaboAnnotation, https://doi.org/10.3390/metabo12020173, PMID:35208247]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+synonym: "MetaboAnnotation" EXACT []
+
+[Term]
+id: MS:1003388
+name: CompoundDb
+def: "Bioconductor package CompoundDb for creation, usage and maintenance of public or library-specific annotation databases and spectra libraries." [PSI:MS, https://doi.org/doi:10.18129/B9.bioc.CompoundDb, https://doi.org/10.3390/metabo12020173, PMID:35208247]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+is_a: MS:1003207 ! library creation software
+synonym: "CompoundDb" EXACT []
 
 [Term]
 id: MS:4000000
