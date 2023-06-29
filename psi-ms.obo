@@ -23587,6 +23587,13 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:4000151
+name: MsQuality
+def: "MsQuality – an interoperable open-source package for the calculation of standardized quality metrics of mass spectrometry data." [DOI:10.1101/2023.05.12.540477, https://github.com/tnaake/MsQuality/]
+is_a: MS:1001456 ! analysis software
+synonym: "MsQuality" EXACT []
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
@@ -24534,3 +24541,5 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
+
+
