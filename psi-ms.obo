@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.128
+data-version: 4.1.129
 date: 29:06:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -22343,6 +22343,12 @@ is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 is_a: MS:1003207 ! library creation software
 synonym: "CompoundDb" EXACT []
+
+[Term]
+id: MS:1003389
+name: mzTab-M
+def: "Expanded tabular result format for metabolomics experiments reporting quantitative summary data, MS features and identification evidence." [PMID:30688441, PMID:31525911, https://www.psidev.info/mztab]
+is_a: MS:1000914 ! tab delimited text format
 
 [Term]
 id: MS:4000000
