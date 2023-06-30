@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.127
-date: 23:06:2023 11:30
+data-version: 4.1.130
+date: 29:06:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22318,6 +22318,12 @@ name: mzIdentML crosslinking extension document version
 def: "The versioning of the crosslinking mzIdentML extension document." [PSI:PI]
 is_a: MS:1003373 ! mzIdentML extension version
 relationship: has_value_type xsd:string
+
+[Term]
+id: MS:1003389
+name: mzTab-M
+def: "Expanded tabular result format for metabolomics experiments reporting quantitative summary data, MS features and identification evidence." [PMID:30688441, PMID:31525911, https://www.psidev.info/mztab]
+is_a: MS:1000914 ! tab delimited text format
 
 [Term]
 id: MS:4000000
