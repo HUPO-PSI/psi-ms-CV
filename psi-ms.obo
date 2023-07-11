@@ -23713,7 +23713,7 @@ relationship: has_units MS:1000043 ! intensity unit
 id: MS:4000162
 name: unidentified precursor intensity distribution Q1, Q2, Q3
 def: "From the distribution of unidentified precursor intensities, the quartiles Q1, Q2, Q3" [PSI:MS]
-relationship: has_metric_category MS:4000009 ! ID free metric
+is_a: MS:4000008 ! ID based
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23725,7 +23725,6 @@ name: identified precursor intensity distribution mean
 def: "From the distribution of identified precursor intensities, the mean. The intensity distribution of the identified precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
-relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
@@ -23735,7 +23734,7 @@ id: MS:4000164
 name: unidentified precursor intensity distribution mean
 def: "From the distribution of unidentified precursor intensities, the mean. The intensity distribution of the unidentified precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free metric
+is_a: MS:4000008 ! ID based
 relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
