@@ -22351,6 +22351,33 @@ def: "Expanded tabular result format for metabolomics experiments reporting quan
 is_a: MS:1000914 ! tab delimited text format
 
 [Term]
+id: MS:1003390
+name: crosslinker cleavage
+def: "Signifies that the crosslinker is cleavable and on cleavage can leave a given stub. The pattern specifies up to three slots <name>:<mass>:<pairs with>." [PSI:PI]
+is_a: MS:1001471 ! peptide modification details
+has_regexp: MS:1003391 ! crosslinker cleavage regular expression
+
+[Term]
+id: MS:1003391
+name: crosslinker cleavage regular expression
+def: "[A-Za-z]:[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?:[A-Za-z]+"
+is_a: MS:1002479 ! regular expression
+
+[Term]
+id: MS:1003392
+name: search modification id
+def: "A unique identifier within an in mzIdentML document denoting a search modification rule. The same modification may be present multiple times with different id values to reflect different specificities or neutral losses." [PSI:PI]
+is_a: MS:1001471 ! peptide modification details
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003393
+name: search modification id ref
+def: "A reference to a `search modification id` in the current mzIdentML document that defines the properties of this modification instance." [PSI:PI]
+is_a: MS:1001471 ! peptide modification details
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
