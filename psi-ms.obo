@@ -23672,7 +23672,7 @@ id: MS:4000161
 name: identified precursor intensity distribution Q1, Q2, Q3
 def: "From the distribution of identified precursor intensities, the quartiles Q1, Q2, Q3" [PSI:MS]
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
+is_a: MS:4000008 ! ID based
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23693,6 +23693,7 @@ id: MS:4000163
 name: identified precursor intensity distribution mean
 def: "From the distribution of identified precursor intensities, the mean. The intensity distribution of the identified precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000003 ! single value
+is_a: MS:4000008 ! ID based
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23721,7 +23722,7 @@ id: MS:4000166
 name: charged spectra ratio 1+ over 2+
 def: "Ratio of 1+ spectra count over 2+ spectra count in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
@@ -23737,7 +23738,7 @@ id: MS:4000168
 name: charged spectra ratio 3+ over 2+ 
 def: "Ratio of 3+ peptide count over 2+ peptide count in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
@@ -23753,7 +23754,7 @@ id: MS:4000170
 name: charged spectra ratio 4+ over 2+
 def: "Ratio of 4+ peptide count over 2+ peptide count in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
@@ -23769,7 +23770,7 @@ id: MS:4000172
 name: mean precursor charge in all MS2
 def: "Mean precursor charge in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
@@ -23785,7 +23786,7 @@ id: MS:4000174
 name: median charge in all MS2
 def: "Median precursor charge in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
