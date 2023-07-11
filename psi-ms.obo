@@ -23636,7 +23636,7 @@ is_a: MS:4000020 ! ion source metric
 [Term]
 id: MS:4000153
 name: interquartile RT period for peptide identifications
-def: "The interquartile retention time period, in seconds, for all peptide identifications over the complete run. Longer times indicate better chromatographic separation." [PSI:QC]
+def: "The interquartile retention time period, in seconds, for all peptide identifications over the complete run. Longer times indicate better chromatographic separation." [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 is_a: MS:4000017 ! chromatogram metric
