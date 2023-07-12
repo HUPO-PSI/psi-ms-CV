@@ -23812,8 +23812,8 @@ is_a: MS:4000001 ! QC metric
 
 [Term]
 id: MS:4000173
-name: mean charge in identified spectra
-def: "Mean charge in identified spectra" [PSI:MS]
+name: mean precursor charge in identified spectra
+def: "Mean precursor charge in identified spectra" [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 is_a: MS:4000001 ! QC metric
@@ -23828,8 +23828,8 @@ is_a: MS:4000001 ! QC metric
 
 [Term]
 id: MS:4000175
-name: median charge in identified spectra
-def: "Median charge in identified spectra" [PSI:MS]
+name: median precursor charge in identified spectra
+def: "Median precursor charge in identified spectra" [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 is_a: MS:4000001 ! QC metric
