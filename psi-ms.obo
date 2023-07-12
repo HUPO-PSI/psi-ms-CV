@@ -23661,7 +23661,7 @@ is_a: MS:4000017 ! chromatogram metric
 id: MS:4000156
 name: area under TIC RT quantiles
 def: "The area under the total ion chromatogram of the retention time quantiles. Number of quantiles are given by the n-tuple." [PSI:MS]
-is_a: QC:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 is_a: MS:4000009 ! ID free
 is_a: MS:4000017 ! chromatogram metric
 
@@ -23671,7 +23671,7 @@ name: extent of identified precursor intensity
 def: "Ratio of 95th over 5th percentile of precursor intensity for identified peptides. Can be used to approximate the dynamic range of signal." [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
-is_a: QC:4000001 ! QC metric
+is_a: MS:4000001 ! QC metric
 
 [Term]
 id: MS:4000158
@@ -23679,7 +23679,7 @@ name: median of TIC values in the RT range in which the middle half of peptides 
 def: "Median of TIC values in the RT range in which half of peptides are identified (RT values of Q1 to Q3 of identifications)" [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
-is_a: QC:4000001 ! QC metric
+is_a: MS:4000001 ! QC metric
 
 
 [Term]
@@ -23688,15 +23688,15 @@ name: median of TIC values in the shortest RT range in which half of the peptide
 def: "Median of TIC values in the shortest RT range in which half of the peptides are identified"  [PSI:MS] 
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
-is_a: QC:4000001 ! QC metric
+is_a: MS:4000001 ! QC metric
 
 [Term]
 id: MS:4000160
 name: precursor intensity range
 def: "Minimum and maximum precursor intensity recorded." [PSI:MS]
 is_a: MS:4000009 ! ID free
-is_a: QC:4000001 ! QC metric
-is_a: QC:4000004 ! n-tuple
+is_a: MS:4000001 ! QC metric
+is_a: MS:4000004 ! n-tuple
 
 [Term]
 id: MS:4000161
