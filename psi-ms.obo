@@ -23698,19 +23698,9 @@ is_a: MS:4000009 ! ID free
 is_a: MS:4000001 ! QC metric
 is_a: MS:4000004 ! n-tuple
 
-[Term]
-id: MS:4000161
-name: precursor intensity distribution Q1, Q2, Q3
-def: "From the distribution of precursor intensities, the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
-is_a: MS:4000004 ! n-tuple
-is_a: MS:4000009 ! free
-relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
-id: MS:4000162
+id: MS:4000161
 name: identified precursor intensity distribution Q1, Q2, Q3
 def: "From the distribution of identified precursor intensities, the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000004 ! n-tuple
@@ -23721,7 +23711,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
-id: MS:4000163
+id: MS:4000162
 name: unidentified precursor intensity distribution Q1, Q2, Q3
 def: "From the distribution of unidentified precursor intensities, the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000008 ! ID based
@@ -23731,17 +23721,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
-id: MS:4000164
-name: precursor intensity distribution mean
-def: "From the distribution of precursor intensities, the mean. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
-is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free
-relationship: has_value_concept STATO:0000401 ! sample mean
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units MS:1000043 ! intensity unit
-
-[Term]
-id: MS:4000165
+id: MS:4000163
 name: identified precursor intensity distribution mean
 def: "From the distribution of identified precursor intensities, the mean. The intensity distribution of the identified precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000003 ! single value
@@ -23751,12 +23731,34 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
-id: MS:4000166
+id: MS:4000164
 name: unidentified precursor intensity distribution mean
 def: "From the distribution of unidentified precursor intensities, the mean. The intensity distribution of the unidentified precursors informs about the dynamic range of the acquisition in relation to identifiability." [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000165
+name: identified precursor intensity distribution sigma
+def: "From the distribution of identified precursor intensities, the sigma value" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000166
+name: unidentified precursor intensity distribution sigma
+def: "From the distribution of unidentified precursor intensities, the sigma value" [PSI:MS]
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based
+relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
