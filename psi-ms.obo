@@ -23744,7 +23744,7 @@ relationship: has_units MS:1000043 ! intensity unit
 id: MS:4000165
 name: identified precursor intensity distribution sigma
 def: "From the distribution of identified precursor intensities, the sigma value" [PSI:MS]
-comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability..
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based
 relationship: has_value_concept STATO:0000237 ! standard deviation
@@ -23755,7 +23755,7 @@ relationship: has_units MS:1000043 ! intensity unit
 id: MS:4000166
 name: unidentified precursor intensity distribution sigma
 def: "From the distribution of unidentified precursor intensities, the sigma value" [PSI:MS]
-comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
+comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability..
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based
 relationship: has_value_concept STATO:0000237 ! standard deviation
