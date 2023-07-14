@@ -22360,7 +22360,7 @@ relationship: has_regexp MS:1003391 ! crosslinker cleavage regular expression
 [Term]
 id: MS:1003391
 name: crosslinker cleavage regular expression
-def: "[A-Za-z]:[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?:[A-Za-z]+"
+def: "[A-Za-z]:[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?:[A-Za-z]+" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
