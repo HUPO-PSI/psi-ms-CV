@@ -22355,7 +22355,7 @@ id: MS:1003390
 name: crosslinker cleavage
 def: "Signifies that the crosslinker is cleavable and on cleavage can leave a given stub. The pattern specifies up to three slots <name>:<mass>:<pairs with>." [PSI:PI]
 is_a: MS:1001471 ! peptide modification details
-has_regexp: MS:1003391 ! crosslinker cleavage regular expression
+relationship: has_regexp MS:1003391 ! crosslinker cleavage regular expression
 
 [Term]
 id: MS:1003391
