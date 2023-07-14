@@ -22352,15 +22352,16 @@ is_a: MS:1000914 ! tab delimited text format
 
 [Term]
 id: MS:1003390
-name: crosslinker cleavage
-def: "Signifies that the crosslinker is cleavable and on cleavage can leave a given stub. The pattern specifies up to three slots <name>:<mass>:<pairs with>." [PSI:PI]
+name: crosslinker cleavage characteristics
+def: "Signifies that the crosslinker is cleavable and on cleavage can leave a given stub. The pattern specifies three slots <name>:<mass>:<pairs with>." [PSI:PI]
 is_a: MS:1001471 ! peptide modification details
 relationship: has_regexp MS:1003391 ! crosslinker cleavage regular expression
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003391
 name: crosslinker cleavage regular expression
-def: "[A-Za-z]:[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?:[A-Za-z]+" [PSI:PI]
+def: "^(?<NAME>[A-Za-z]):(?<MASS>[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?):(?<PAIRS_WITH>[A-Za-z]+)$" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
