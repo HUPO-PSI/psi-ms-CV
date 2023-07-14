@@ -23787,7 +23787,7 @@ is_a: MS:4000008 ! ID based
 is_a: MS:4000001 ! QC metric
 
 [Term]
-id: MS:4000168
+id: MS:4000170
 name: charged spectra ratio 3+ over 2+
 def: "Ratio of 3+ peptide count over 2+ peptide count in all MS2" [PSI:MS]
 is_a: MS:4000003 ! single value
@@ -23795,7 +23795,7 @@ is_a: MS:4000009 ! ID free metric
 is_a: MS:4000001 ! QC metric
 
 [Term]
-id: MS:4000169
+id: MS:4000171
 name: charged peptides ratio 4+ over 2+
 def: "Ratio of 4+ peptide count  over 2+ peptide count in identified spectra" [PSI:MS]
 is_a: MS:4000003 ! single value
