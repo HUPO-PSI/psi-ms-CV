@@ -23270,8 +23270,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000116
-name: MS2 precursor intensity distribution Q1, Q2, Q3
-def: "From the distribution of MS2 precursor intensities, the quartiles Q1, Q2, Q3." [PSI:MS]
+name: MS2 precursor intensity distribution
+def: "From the distribution of MS2 precursor intensities, the quantiles. E.g. a value triplet represents the quartiles Q1, Q2, Q3." [PSI:MS]
 comment: The intensity distribution of the precursors informs about the dynamic range of the acquisition.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -23633,8 +23633,9 @@ name: MS2 precursor median m/z of identified quantification data points
 def: "Median m/z value for MS2 precursors of all quantification data points after user-defined acceptance criteria are applied. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
-relationship: has_metric_category MS:4000022 ! MS2 metric
 is_a: MS:4000020 ! ion source metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units MS:1000040 ! m/z
 
 [Term]
 id: MS:4000153
@@ -23643,6 +23644,7 @@ def: "The interquartile retention time period, in seconds, for all quantificatio
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 is_a: MS:4000017 ! chromatogram metric
+relationship: has_units UO:0000010 ! second
 synonym: "C-2A"  RELATED [PMID:19837981]
 
 [Term]
@@ -23652,6 +23654,7 @@ def: "The rate of identified quantification data points for the interquartile re
 is_a: MS:4000003 ! single value
 is_a: MS:4000008 ! ID based
 is_a: MS:4000017 ! chromatogram metric
+relationship: has_units UO:0000106 ! hertz
 synonym: "C-2B"  RELATED [PMID:19837981]
 
 [Term]
@@ -23708,8 +23711,8 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 
 [Term]
 id: MS:4000161
-name: identified MS2 precursor intensity distribution Q1, Q2, Q3
-def: "From the distribution of identified MS2 precursor intensities, the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+name: identified MS2 precursor intensity distribution
+def: "From the distribution of identified MS2 precursor intensities, the quantiles. E.g. a value triplet represents the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 is_a: MS:4000004 ! n-tuple
 is_a: MS:4000008 ! ID based
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23719,8 +23722,9 @@ relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
 id: MS:4000162
-name: unidentified MS2 precursor intensity distribution Q1, Q2, Q3
-def: "From the distribution of unidentified MS2 precursor intensities, the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+name: unidentified MS2 precursor intensity distribution
+def: "From the distribution of unidentified MS2 precursor intensities, the quantiles. E.g. a value triplet represents the quartiles Q1, Q2, Q3. The intensity distribution of the precursors informs about the dynamic range of the acquisition in relation to identifiability. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
 is_a: MS:4000008 ! ID based
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000291 ! quantile
