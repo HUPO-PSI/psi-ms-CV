@@ -23707,7 +23707,7 @@ synonym: "C-2B"  RELATED [PMID:19837981]
 id: MS:4000155
 name: area under TIC
 def: "The area under the total ion chromatogram." [PSI:MS]
-comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range or in the sample content.
+comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content.
 is_a: MS:4000003 ! single value
 is_a: MS:4000009 ! ID free
 is_a: MS:4000017 ! chromatogram metric
