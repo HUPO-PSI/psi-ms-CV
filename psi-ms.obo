@@ -22827,7 +22827,7 @@ relationship: has_value_concept STATO:0000035 ! range
 id: MS:4000070
 name: retention time acquisition range
 def: "Upper and lower limit of retention time at which spectra are recorded." [PSI:MS]
-comment: An unusual low range may indicate incomplete sampling, or a premature or failed LC run.
+comment: An unusual low range may indicate incomplete sampling and/or a premature or failed LC run.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
