@@ -22668,7 +22668,7 @@ relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 id: MS:4000059
 name: number of MS1 spectra
 def: "The number of MS1 events in the run." [PSI:MS]
-comment: An unusual low number may indicate incomplete sampling/scan rate of the MS instrument, low sample volume or failed injection of a sample.
+comment: An unusual low number may indicate incomplete sampling/scan rate of the MS instrument, low sample volume and/or failed injection of a sample.
 synonym: "MS1-Count" EXACT [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
