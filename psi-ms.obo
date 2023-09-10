@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.132
-date: 29:06:2023 11:30
+data-version: 4.1.133
+date: 09:09:2023 11:30
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -20391,9 +20391,10 @@ is_a: MS:1003078 ! interpreted spectrum attribute
 
 [Term]
 id: MS:1003104
-name: peptide ion annotation format
+name: mzPAF peptide ion annotation format
 def: "Annotation format designed primarily for peptides, with allowances for generic chemical formulas and other miscellaneous named ions." [PSI:MS]
 is_a: MS:1003103 ! ion annotation format
+synonym: "peptide ion annotation format" EXACT []
 
 [Term]
 id: MS:1003105
