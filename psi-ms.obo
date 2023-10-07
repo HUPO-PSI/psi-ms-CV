@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.133
-date: 09:09:2023 11:30
-saved-by: Joshua Klein
+data-version: 4.1.134
+date: 06:10:2023 11:30
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -22378,6 +22378,16 @@ name: search modification id ref
 def: "A reference to a `search modification id` in the current mzIdentML document that defines the properties of this modification instance." [PSI:PI]
 is_a: MS:1001471 ! peptide modification details
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003394
+name: SelexION separation voltage
+def: "RF voltage applied in the SelexION device to separate ions in trajectory based on the difference in their mobility between the high field and low field portions of the applied RF." [PSI:MS]
+is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003254 ! peak attribute
+relationship: has_units UO:0000218 ! volt
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
