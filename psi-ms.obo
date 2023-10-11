@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.134
-date: 06:10:2023 11:30
-saved-by: Eric Deutsch
+data-version: 4.1.135
+date: 11:10:2023 11:08
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
