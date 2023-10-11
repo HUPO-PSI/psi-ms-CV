@@ -24017,6 +24017,34 @@ synonym: "MS2-PrecZ-5" RELATED [PMID:24494671]
 synonym: "MS2-PrecZ-more" RELATED [PMID:24494671]
 
 [Term]
+id: MS:4000177
+name: ms2 mass analyzer
+def: "Terms used to describe the MS2 Analyzer." [PSI:MS]
+synonym: "ms2 analyzer" EXACT []
+is_a: MS:1000451 ! mass analyzer
+
+[Term]
+id: MS:4000178
+name: ms3 mass analyzer
+def: "Terms used to describe the MS3 Analyzer." [PSI:MS]
+synonym: "ms3 analyzer" EXACT []
+is_a: MS:1000451 ! mass analyzer
+
+[Term]
+id: MS:4000179
+name: ms2 dissociation method
+def: "MS2 Fragmentation method used for dissociation or fragmentation." [PSI:MS]
+synonym: "Activation Method" RELATED []
+is_a: MS:1000044 ! dissociation method
+
+[Term]
+id: MS:4000180
+name: ms3 dissociation method
+def: "MS3 Fragmentation method used for dissociation or fragmentation." [PSI:MS]
+synonym: "Activation Method" RELATED []
+is_a: MS:1000044 ! dissociation method
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
