@@ -22410,7 +22410,7 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 [Term]
 id: MS:1003398
 name: deconvoluted data
-def: "Deconvoluted data has averaged properties of an analyte post peak-detection, weighted charge state reduction, and/or adduct aggregation." [PSI:MS]
+def: "The data contained in this file have been processed to remove, collapse, or label one or more dimensions of the original dataset, such as charge deconvolution or ion mobility deconvolution. To determine the type of deconvolution done, the reader should consult the appropriate section of the file, such as the data processing methods in an mzML file." [PSI:MS]
 is_a: MS:1000524 ! data file content
 
 [Term]
