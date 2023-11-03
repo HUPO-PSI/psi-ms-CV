@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.134
-date: 06:10:2023 11:30
+data-version: 4.1.135
+date: 02:11:2023 11:30
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22388,6 +22388,30 @@ is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003395
+name: Q Exactive GC Orbitrap
+def: "Q Exactive GC Orbitrap GC-MS/MS hybrid quadrupole Orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000483 ! Thermo Fisher Scientific instrument model
+
+[Term]
+id: MS:1003396
+name: 8890 GC/MS
+def: "Agilent 8890 Gas Chromatograph System." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003397
+name: timsTOF fleX MALDI-2
+def: "Bruker Daltonics' timsTOF fleX MALDI-2." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
+[Term]
+id: MS:1003398
+name: deconvoluted data
+def: "The data contained in this file have been processed to remove, collapse, or label one or more dimensions of the original dataset, such as charge deconvolution or ion mobility deconvolution. To determine the type of deconvolution done, the reader should consult the appropriate section of the file, such as the data processing methods in an mzML file." [PSI:MS]
+is_a: MS:1000524 ! data file content
 
 [Term]
 id: MS:4000000
