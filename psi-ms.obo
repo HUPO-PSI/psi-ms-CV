@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.135
-date: 02:11:2023 11:30
-saved-by: Eric Deutsch
+data-version: 4.1.136
+date: 10:11:2023 11:30
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -22412,6 +22412,30 @@ id: MS:1003398
 name: deconvoluted data
 def: "The data contained in this file have been processed to remove, collapse, or label one or more dimensions of the original dataset, such as charge deconvolution or ion mobility deconvolution. To determine the type of deconvolution done, the reader should consult the appropriate section of the file, such as the data processing methods in an mzML file." [PSI:MS]
 is_a: MS:1000524 ! data file content
+
+[Term]
+id: MS:1003399
+name: quality control software
+def: "Software that creates or manipulates QC-related data." [PSI:MS]
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003400
+name: rmzqc
+def: "An R package for reading, validating, and writing mzQC files." [https://github.com/MS-Quality-hub/rmzqc]
+is_a: MS:1003399 ! quality control software
+
+[Term]
+id: MS:1003401
+name: jmzqc
+def: "A Java package for reading, validating, and writing mzQC files." [https://github.com/MS-Quality-hub/jmzqc]
+is_a: MS:1003399 ! quality control software
+
+[Term]
+id: MS:1003402
+name: pymzqc
+def: "A Python package for reading, validating, and writing mzQC files." [https://github.com/MS-Quality-hub/pymzqc]
+is_a: MS:1003399 ! quality control software
 
 [Term]
 id: MS:4000000
