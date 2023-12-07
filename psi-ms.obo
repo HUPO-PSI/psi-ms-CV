@@ -22326,7 +22326,6 @@ name: Spectra
 def: "Bioconductor package Spectra for mass spectrometry data representation and processing." [PSI:MS, https://doi.org/doi:10.18129/B9.bioc.Spectra]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
-synonym: "Spectra" EXACT []
 
 [Term]
 id: MS:1003387
@@ -22334,7 +22333,6 @@ name: MetaboAnnotation
 def: "Bioconductor package MetaboAnnotation for annotation of untargeted metabolomics data." [PSI:MS, https://doi.org/doi:10.18129/B9.bioc.MetaboAnnotation, https://doi.org/10.3390/metabo12020173, PMID:35208247]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
-synonym: "MetaboAnnotation" EXACT []
 
 [Term]
 id: MS:1003388
@@ -22343,7 +22341,6 @@ def: "Bioconductor package CompoundDb for creation, usage and maintenance of pub
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 is_a: MS:1003207 ! library creation software
-synonym: "CompoundDb" EXACT []
 
 [Term]
 id: MS:1003389
