@@ -19419,7 +19419,6 @@ id: MS:1002954
 name: collisional cross sectional area
 def: "Structural molecular descriptor for the effective interaction area between the ion and neutral gas measured in ion mobility mass spectrometry." [PSI:PI]
 is_a: MS:1000861 ! molecular entity property
-is_a: MS:1002892 ! ion mobility attribute
 is_a: MS:1000455 ! ion selection attribute
 relationship: has_units UO:0000324 ! square angstrom
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
