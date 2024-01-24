@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.138
-date: 07:12:2023 16:37
-saved-by: Matt Chambers
+data-version: 4.1.139
+date: 24:01:2024 10:23
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -45,6 +45,7 @@ name: has_units
 [Typedef]
 id: part_of
 name: part_of
+xref: BFO:0000050
 is_transitive: true
 
 [Typedef]
