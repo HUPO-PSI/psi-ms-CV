@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.139
+data-version: 4.1.140
 date: 24:01:2024 10:23
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
@@ -22629,7 +22629,7 @@ relationship: has_value_concept UO:0000191 ! fraction
 id: MS:4000053
 name: chromatography duration
 def: "The retention time duration of the chromatography in seconds." [PSI:MS]
-comment: Longer duration may indicate a better chromatographic separation of compounds which depends, however, also on the sampling/scan rate of the MS instrument. 
+comment: Longer duration may indicate a better chromatographic separation of compounds which depends, however, also on the sampling/scan rate of the MS instrument.
 synonym: "RT-Duration" RELATED [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -23756,7 +23756,7 @@ synonym: "C-2A"  RELATED [PMID:19837981]
 id: MS:4000154
 name: rate of the interquartile RT period for identified quantification data points
 def: "The rate of identified quantification data points for the interquartile retention time period, in identified quantification data points per second. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
-comment: Higher rates may indicate a more efficient sampling and identification. 
+comment: Higher rates may indicate a more efficient sampling and identification.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category: MS:4000008 ! ID based
 relationship: has_metric_category: MS:4000017 ! chromatogram metric
@@ -23802,7 +23802,7 @@ relationship: has_metric_category: MS:4000008 ! ID based
 [Term]
 id: MS:4000159
 name: median of TIC values in the shortest RT range in which half of the quantification data points are identified
-def: "Median of TIC values in the shortest RT range in which half of the quantification data points are identified. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
+def: "Median of TIC values in the shortest RT range in which half of the quantification data points are identified. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category: MS:4000008 ! ID based
@@ -23891,7 +23891,7 @@ relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
 id: MS:4000167
-name: ratio of 1+ over 2+ of all MS2 known precursor charges 
+name: ratio of 1+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 1+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: High ratios of 1+/2+ MS2 precursor charge count may indicate inefficient ionization.
 is_a: MS:4000003 ! single value
@@ -23906,7 +23906,7 @@ synonym: "MS2-PrecZ-2" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000168
-name: ratio of 1+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 1+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 1+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: High ratios of 1+/2+ MS2 precursor charge count may indicate inefficient ionization in relation to identifiability.
 is_a: MS:4000003 ! single value
@@ -23921,7 +23921,7 @@ synonym: "MS2-PrecZ-2" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000169
-name: ratio of 3+ over 2+ of all MS2 known precursor charges 
+name: ratio of 3+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 3+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides.
 is_a: MS:4000003 ! single value
@@ -23936,7 +23936,7 @@ synonym: "MS2-PrecZ-3" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000170
-name: ratio of 3+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 3+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 3+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides in relation to identifiability.
 is_a: MS:4000003 ! single value
@@ -23951,7 +23951,7 @@ synonym: "MS2-PrecZ-3" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000171
-name: ratio of 4+ over 2+ of all MS2 known precursor charges 
+name: ratio of 4+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 4+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides.
 is_a: MS:4000003 ! single value
@@ -23966,7 +23966,7 @@ synonym: "MS2-PrecZ-4" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000172
-name: ratio of 4+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 4+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 4+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides in relation to identifiability.
 is_a: MS:4000003 ! single value
