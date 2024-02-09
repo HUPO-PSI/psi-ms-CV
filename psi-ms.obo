@@ -6135,7 +6135,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1000868
 name: SMILES string
 def: "The simplified molecular input line entry specification or SMILES is a specification for unambiguously describing the structure of a chemical compound using a short ASCII string." [EDAM:2301]
-is_a: MS:1000864 ! chemical formula
+is_a: MS:1000867 ! structural formula
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
