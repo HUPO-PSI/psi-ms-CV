@@ -22437,6 +22437,13 @@ def: "A Python package for reading, validating, and writing mzQC files." [https:
 is_a: MS:1003399 ! quality control software
 
 [Term]
+id: MS:1003403
+name: InChI
+def: "IUPAC International Chemical Identifier." [PMID:26136848]
+is_a: MS:1001405 ! spectrum identification result details
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
