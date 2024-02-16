@@ -1,7 +1,7 @@
 format-version: 1.2
 data-version: 4.1.142
 date: 24:01:2024 10:23
-saved-by: Yasset Perez-Riverol
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -6133,9 +6133,9 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1000868
-name: SMILES formula
+name: SMILES string
 def: "The simplified molecular input line entry specification or SMILES is a specification for unambiguously describing the structure of a chemical compound using a short ASCII string." [EDAM:2301]
-is_a: MS:1000864 ! chemical formula
+is_a: MS:1000867 ! structural formula
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
@@ -22637,7 +22637,7 @@ relationship: has_value_concept UO:0000191 ! fraction
 id: MS:4000053
 name: chromatography duration
 def: "The retention time duration of the chromatography in seconds." [PSI:MS]
-comment: Longer duration may indicate a better chromatographic separation of compounds which depends, however, also on the sampling/scan rate of the MS instrument. 
+comment: Longer duration may indicate a better chromatographic separation of compounds which depends, however, also on the sampling/scan rate of the MS instrument.
 synonym: "RT-Duration" RELATED [PMID:24494671]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -22916,6 +22916,7 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:4000072
 name: observed mass accuracy
 def: "Observed mass accuracy in ppm, calculated by 1E6 x (observed m/z - theoretical m/z)/theoretical m/z of a selected and identified ion in a mass spectrum." [PSI:MS]
+is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000014 ! single spectrum based metric
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23255,7 +23256,7 @@ relationship: has_column MS:1000285 ! total ion current
 id: MS:4000105
 name: ion injection parameters
 def: "Tabular representation of the parameters around ion selection like the amount of time spent filling an ion trapping device for each scan acquisition." [PSI:MS]
-is_a: MS:4000005 ! table name: scan window upper limit
+is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_column MS:1000767 ! native spectrum identifier format
@@ -23669,6 +23670,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:4000141
 name: outlier threshold criterion
 def: "The definition of the outlier criteria applied." [PSI:MS]
+is_a: MS:4000080 ! QC non-metric term
 
 [Term]
 id: MS:4000142
@@ -23742,8 +23744,8 @@ name: MS2 precursor median m/z of identified quantification data points
 def: "Median m/z value for MS2 precursors of all quantification data points after user-defined acceptance criteria are applied. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The m/z distribution informs about the dynamic range of the acquisition.
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
-is_a: MS:4000020 ! ion source metric
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units MS:1000040 ! m/z
 
@@ -23753,8 +23755,8 @@ name: interquartile RT period for identified quantification data points
 def: "The interquartile retention time period, in seconds, for all quantification data points after user-defined acceptance criteria are applied over the complete run. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Longer duration may indicate a better chromatographic separation of compounds which depends, however, also on the sampling/scan rate of the MS instrument.
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
-is_a: MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_units UO:0000010 ! second
 synonym: "C-2A"  RELATED [PMID:19837981]
 
@@ -23762,10 +23764,10 @@ synonym: "C-2A"  RELATED [PMID:19837981]
 id: MS:4000154
 name: rate of the interquartile RT period for identified quantification data points
 def: "The rate of identified quantification data points for the interquartile retention time period, in identified quantification data points per second. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
-comment: Higher rates may indicate a more efficient sampling and identification. 
+comment: Higher rates may indicate a more efficient sampling and identification.
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
-is_a: MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_units UO:0000106 ! hertz
 synonym: "C-2B"  RELATED [PMID:19837981]
 
@@ -23775,8 +23777,8 @@ name: area under TIC
 def: "The area under the total ion chromatogram." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content.
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free
-is_a: MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000017 ! chromatogram metric
 
 [Term]
 id: MS:4000156
@@ -23784,17 +23786,16 @@ name: area under TIC RT quantiles
 def: "The area under the total ion chromatogram of the retention time quantiles. Number of quantiles are given by the n-tuple." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. Differences between samples of an experiment may indicate differences in chromatographic performance, differences in the dynamic range and/or in the sample content.
 is_a: MS:4000004 ! n-tuple
-is_a: MS:4000009 ! ID free
-is_a: MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000017 ! chromatogram metric
 
 [Term]
 id: MS:4000157
 name: extent of identified MS2 precursor intensity
 def: "Ratio of 95th over 5th percentile of MS2 precursor intensity for all quantification data points after user-defined acceptance criteria are applied. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 synonym: "MS1-3A"  RELATED [PMID:19837981]
 
@@ -23803,18 +23804,16 @@ id: MS:4000158
 name: median of TIC values in the RT range in which the middle half of quantification data points are identified
 def: "Median of TIC values in the RT range in which half of quantification data points are identified (RT values of Q1 to Q3 of identifications). These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 
 [Term]
 id: MS:4000159
 name: median of TIC values in the shortest RT range in which half of the quantification data points are identified
-def: "Median of TIC values in the shortest RT range in which half of the quantification data points are identified. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS] 
+def: "Median of TIC values in the shortest RT range in which half of the quantification data points are identified. These data points may be for example XIC profiles, isotopic pattern areas, or reporter ions (see MS:1001805). The used type should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 synonym: "MS1-2B"  RELATED [PMID:19837981]
 
 [Term]
@@ -23822,9 +23821,8 @@ id: MS:4000160
 name: MS2 precursor intensity range
 def: "Minimum and maximum MS2 precursor intensity recorded." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000004 ! n-tuple
-is_a: MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free
 relationship: has_metric_category MS:4000022 ! MS2 metric
 
 [Term]
@@ -23833,7 +23831,7 @@ name: identified MS2 precursor intensity distribution
 def: "From the distribution of identified MS2 precursor intensities, the quantiles. E.g. a value triplet represents the quartiles Q1, Q2, Q3. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000004 ! n-tuple
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23845,7 +23843,7 @@ name: unidentified MS2 precursor intensity distribution
 def: "From the distribution of unidentified MS2 precursor intensities, the quantiles. E.g. a value triplet represents the quartiles Q1, Q2, Q3. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000004 ! n-tuple
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23857,7 +23855,7 @@ name: identified MS2 precursor intensity distribution mean
 def: "From the distribution of identified MS2 precursor intensities, the mean. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23869,7 +23867,7 @@ name: unidentified MS2 precursor intensity distribution mean
 def: "From the distribution of unidentified MS2 precursor intensities, the mean. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23881,7 +23879,7 @@ name: identified MS2 precursor intensity distribution sigma
 def: "From the distribution of identified MS2 precursor intensities, the sigma value. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23893,7 +23891,7 @@ name: unidentified MS2 precursor intensity distribution sigma
 def: "From the distribution of unidentified MS2 precursor intensities, the sigma value. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition in relation to identifiability.
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -23901,12 +23899,11 @@ relationship: has_units MS:1000043 ! intensity unit
 
 [Term]
 id: MS:4000167
-name: ratio of 1+ over 2+ of all MS2 known precursor charges 
+name: ratio of 1+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 1+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: High ratios of 1+/2+ MS2 precursor charge count may indicate inefficient ionization.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23917,12 +23914,11 @@ synonym: "MS2-PrecZ-2" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000168
-name: ratio of 1+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 1+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 1+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: High ratios of 1+/2+ MS2 precursor charge count may indicate inefficient ionization in relation to identifiability.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23933,12 +23929,11 @@ synonym: "MS2-PrecZ-2" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000169
-name: ratio of 3+ over 2+ of all MS2 known precursor charges 
+name: ratio of 3+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 3+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23949,12 +23944,11 @@ synonym: "MS2-PrecZ-3" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000170
-name: ratio of 3+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 3+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 3+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides in relation to identifiability.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23965,12 +23959,11 @@ synonym: "MS2-PrecZ-3" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000171
-name: ratio of 4+ over 2+ of all MS2 known precursor charges 
+name: ratio of 4+ over 2+ of all MS2 known precursor charges
 def: "The ratio of 4+ over 2+ MS2 precursor charge count of all spectra." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -23981,12 +23974,11 @@ synonym: "MS2-PrecZ-4" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000172
-name: ratio of 4+ over 2+ of identified MS2 known precursor charges 
+name: ratio of 4+ over 2+ of identified MS2 known precursor charges
 def: "The ratio of 4+ over 2+ MS2 precursor charge count of identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher ratios of 3+/2+ MS2 precursor charge count may indicate e.g. preference for longer peptides in relation to identifiability.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24000,9 +23992,8 @@ id: MS:4000173
 name: mean MS2 precursor charge in all spectra
 def: "Mean MS2 precursor charge in all spectra" [PSI:MS]
 comment: Higher charges may indicate inefficient ionization or e.g. preference for longer peptides.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24019,9 +24010,8 @@ id: MS:4000174
 name: mean MS2 precursor charge in identified spectra
 def: "Mean MS2 precursor charge in identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher charges may indicate inefficient ionization or e.g. preference for longer peptides in relation to identifiability.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24038,9 +24028,8 @@ id: MS:4000175
 name: median MS2 precursor charge in all spectra
 def: "Median MS2 precursor charge in all spectra" [PSI:MS]
 comment: Higher charges may indicate inefficient ionization and/or e.g. preference for longer peptides.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24057,9 +24046,8 @@ id: MS:4000176
 name: median MS2 precursor charge in identified spectra
 def: "Median MS2 precursor charge in identified spectra. The used type of identification should be noted in the metadata or analysis methods section of the recording file for the respective run. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
 comment: Higher charges may indicate inefficient ionization and/or e.g. preference for longer peptides in relation to identifiability.
-is_a: MS:4000001 ! QC metric
 is_a: MS:4000003 ! single value
-is_a: MS:4000008 ! ID based
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000020 ! ion source metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
