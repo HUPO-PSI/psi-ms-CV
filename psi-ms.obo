@@ -22307,7 +22307,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
-is_a: MS:1003123! Bruker Daltonics timsTOF series
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003384
