@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.141
-date: 11:02:2024 10:23
+data-version: 4.1.142
+date: 24:01:2024 10:23
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -22307,7 +22307,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
-is_a: MS:1003123! Bruker Daltonics timsTOF series
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003384
@@ -22435,6 +22435,14 @@ id: MS:1003402
 name: pymzqc
 def: "A Python package for reading, validating, and writing mzQC files." [https://github.com/MS-Quality-hub/pymzqc]
 is_a: MS:1003399 ! quality control software
+
+[Term]
+id: MS:1003403
+name: InChI
+def: "IUPAC International Chemical Identifier." [PMID:26136848]
+is_a: MS:1001405 ! spectrum identification result details
+is_a: MS:1000867 ! structural formula
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
