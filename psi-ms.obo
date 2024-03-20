@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.142
-date: 24:01:2024 10:23
-saved-by: Eric Deutsch
+data-version: 4.1.143
+date: 19:03:2024 10:23
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -2892,6 +2892,12 @@ id: MS:1000393
 name: laser desorption ionization
 def: "The formation of gas-phase ions by the interaction of a pulsed laser with a solid or liquid material." [PSI:MS]
 is_a: MS:1000247 ! desorption ionization
+
+[Term]
+id: MS:1000394
+name: de novo search or no database used
+def: "The search database does not exist as the search process used de novo sequencing to determine the identified peptide sequence." [PSI:PI]
+is_a: MS:1001347 ! database file format
 
 [Term]
 id: MS:1000395
