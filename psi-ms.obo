@@ -22445,6 +22445,13 @@ is_a: MS:1000867 ! structural formula
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
+id: MS:XXXXXXX
+name: mzRecal
+def: "MS1 recalibration using identified peptides as internal calibrants." [DOI:10.1093/bioinformatics/btab056, PMID:33538780, https://github.com/524D/mzrecal]
+is_a: MS:1001457 ! data processing software
+is_a: MS:1001485 ! m/z calibration
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
