@@ -22445,6 +22445,12 @@ is_a: MS:1000867 ! structural formula
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003404
+name: timsTOF HT
+def: "Bruker Daltonics' timsTOF HT." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
