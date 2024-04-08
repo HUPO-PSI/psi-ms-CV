@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.146
-date: 05:04:2024 13:22
-saved-by: Joshua Klein
+data-version: 4.1.147
+date: 08:04:2024 13:29
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -2892,6 +2892,16 @@ id: MS:1000393
 name: laser desorption ionization
 def: "The formation of gas-phase ions by the interaction of a pulsed laser with a solid or liquid material." [PSI:MS]
 is_a: MS:1000247 ! desorption ionization
+
+[Term]
+id: MS:1000394
+name: precision
+def: "Precision is the degree of how close repeated measurements are to each other. This can, for example, be expressed using the standard deviation." [PSI:MS]
+comment: See MS:1000014 for the related term of accuracy.
+is_a: MS:1000480 ! mass analyzer attribute
+relationship: has_units MS:1000040 ! m/z
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000395
@@ -24085,6 +24095,30 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 synonym: "PG: Contaminants" NARROW []
+
+[Term]
+id: MS:4000178
+name: mean of precursor ppm deviation
+def: "The mean of observed precursor mass accuracies (MS:4000072) in ppm of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000179
+name: std of precursor ppm deviation
+def: "The standard deviation of observed precursor mass accuracies (MS:4000072) in ppm of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_concept STATO:0000237 ! standard deviation
+relationship: has_value_concept MS:1000394 ! precision
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
