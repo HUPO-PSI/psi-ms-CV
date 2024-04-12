@@ -186,6 +186,18 @@ def: "One of the axes representing the projection of varience resulting from pri
 is_a: NCIT:C19044 ! Statistical Technique
 
 [Term]
+id: NCIT:C150827
+name: Number
+def: "A numeral or string of numerals expressing value, quantity, or identification." [] {http://purl.obolibrary.org/obo/NCIT_C150827="NCI"}
+is_a: NCIT:C20189 ! Property or Attribute
+
+[Term]
+id: NCIT:C150827
+name: Number of Occurrences
+def: "The number of times something happened." [] {http://purl.obolibrary.org/obo/NCIT_C150827="NCI"}
+is_a: NCIT:C150827 ! Number
+
+[Term]
 id: MS:0000000
 name: Proteomics Standards Initiative Mass Spectrometry Vocabularies
 def: "Proteomics Standards Initiative Mass Spectrometry Vocabularies." [PSI:MS]
@@ -24085,6 +24097,33 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 synonym: "PG: Contaminants" NARROW []
+
+[Term]
+id: MS:4000180
+name: missed cleavages histogram
+def: "The number of missed cleavages, tallied by the number of occurrence of n missed cleavages per spectrum for a set of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied. The number of missed cleavages per spectrum is given in one column, whereas the occurrence column gives the counts of spectra with the according number of missed cleavages. The highest missed cleavage state is to be interpreted as that number of missed cleavages or more." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_column MS:1003044 ! number of missed cleavages
+relationship: has_column NCIT:C150827 ! Number of Occurrences
+
+[Term]
+id: MS:4000181
+name: identified MS2 quarter RT fraction
+def: "The retention time interval in which the first, second, third, and fourth quarter of all identified MS2 events, ordered by retention time, are recorded, each divided by total retention time duration." [PSI:MS]
+comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000191 ! fraction
+synonym: "RT-MS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MS-Q4" RELATED [PMID:24494671]
 
 [Term]
 id: PEFF:0000001
