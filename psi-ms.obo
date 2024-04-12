@@ -2895,8 +2895,8 @@ is_a: MS:1000247 ! desorption ionization
 
 [Term]
 id: MS:1000394
-name: de novo search or no database used
-def: "The search database does not exist as the search process used de novo sequencing to determine the identified peptide sequence." [PSI:PI]
+name: no sequence database
+def: "No reference sequence database was used in the search process to determine the identified peptide sequence, for example as with de novo sequencing." [PSI:PI]
 is_a: MS:1001347 ! database file format
 
 [Term]
