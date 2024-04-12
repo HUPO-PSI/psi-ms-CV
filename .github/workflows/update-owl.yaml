@@ -29,9 +29,10 @@ jobs:
 
           python -m pip install fastobo
           python scripts/prepare_template.py tmp.obo cv_template.tsv
+          echo Generated template with `wc -l cv_template.tsv`
 
           export JAVA_TOOL_OPTIONS=-Xmx6G
-          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" -i /work/tmp.obo -t /work/cv_template.tsv convert -f ofn -o /work/psi-ms.owl
+          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 cd /work && robot convert -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" --input /work/psi-ms.obo -t /work/cv_template.tsv convert -f ofn -o /work/psi-ms.owl
 
           rm tmp.obo cv_template.tsv
       - name: Create pull request
