@@ -24099,7 +24099,7 @@ synonym: "PG: Contaminants" NARROW []
 [Term]
 id: MS:4000178
 name: mean of precursor ppm deviation
-def: "The mean of observed precursor mass accuracies (MS:4000072) in ppm of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+def: "The mean of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
@@ -24110,8 +24110,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000179
-name: std of precursor ppm deviation
-def: "The standard deviation of observed precursor mass accuracies (MS:4000072) in ppm of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+name: sigma of precursor ppm deviation
+def: "The standard deviation of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
