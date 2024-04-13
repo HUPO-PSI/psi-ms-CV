@@ -31,8 +31,10 @@ jobs:
           python scripts/prepare_template.py tmp.obo cv_template.tsv
           echo Generated template with `wc -l cv_template.tsv`
 
+          wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
+
           export JAVA_TOOL_OPTIONS=-Xmx6G
-          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.9.5 sh -c "cd /work && robot convert -vvv template -p \"PEFF: http://purl.obolibrary.org/obo/PEFF_\" --input /work/psi-ms.obo -t /work/cv_template.tsv convert -f ofn -o /work/psi-ms.owl"
+          java -jar robot.jar convert -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" --input psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
 
           rm tmp.obo cv_template.tsv
       - name: Create pull request
