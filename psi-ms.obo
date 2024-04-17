@@ -24101,8 +24101,8 @@ synonym: "PG: Contaminants" NARROW []
 
 [Term]
 id: MS:4000180
-name: missed cleavages histogram
-def: "The number of missed cleavages, tallied by the number of occurrence of n missed cleavages per spectrum for a set of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied. The number of missed cleavages per spectrum is given in one column, whereas the occurrence column gives the counts of spectra with the according number of missed cleavages. The highest missed cleavage state is to be interpreted as that number of missed cleavages or more." [PSI:MS]
+name: Table of missed cleavage counts
+def: "The number of identified PSM with corresponding number of missed cleavages. The number of missed cleavages per PSM is given in the 'number of missed cleavages' column, the respective count of such PSM in the 'Number of Occurrences' column. The highest 'missed cleavages' row is to be interpreted as that number of missed cleavages or higher." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
