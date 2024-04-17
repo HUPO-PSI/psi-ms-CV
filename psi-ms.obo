@@ -24112,7 +24112,7 @@ relationship: has_column NCIT:C150827 ! Number of Occurrences
 [Term]
 id: MS:4000181
 name: identified MS2 quarter RT fraction
-def: "The retention time interval in which the first, second, third, and fourth quarter of all identified MS2 events, ordered by retention time, are recorded, each divided by total retention time duration." [PSI:MS]
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration." [PSI:MS]
 comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -24121,10 +24121,10 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000191 ! fraction
-synonym: "RT-MS-Q1" RELATED [PMID:24494671]
-synonym: "RT-MS-Q2" RELATED [PMID:24494671]
-synonym: "RT-MS-Q3" RELATED [PMID:24494671]
-synonym: "RT-MS-Q4" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
 
 [Term]
 id: PEFF:0000001
