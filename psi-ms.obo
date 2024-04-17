@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.148
-date: 05:04:2024 13:22
+date: 17:04:2024 16:12
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -2905,6 +2905,12 @@ id: MS:1000393
 name: laser desorption ionization
 def: "The formation of gas-phase ions by the interaction of a pulsed laser with a solid or liquid material." [PSI:MS]
 is_a: MS:1000247 ! desorption ionization
+
+[Term]
+id: MS:1000394
+name: no sequence database
+def: "No reference sequence database was used in the search process to determine the identified peptide sequence, for example as with de novo sequencing." [PSI:PI]
+is_a: MS:1001347 ! database file format
 
 [Term]
 id: MS:1000395
@@ -24094,7 +24100,7 @@ def: "The fraction of total protein abundance in a mass spectrometry run or a gr
 comment: "High values may indicate a sample handling issue, and/or insufficient sample concentration."
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV 
+relationship: has_value_type xsd:float ! The allowed value-type for this CV
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 synonym: "PG: Contaminants" NARROW []
