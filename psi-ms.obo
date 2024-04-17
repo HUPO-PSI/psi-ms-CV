@@ -186,16 +186,17 @@ def: "One of the axes representing the projection of varience resulting from pri
 is_a: NCIT:C19044 ! Statistical Technique
 
 [Term]
-id: NCIT:C150827
+id: NCIT:C25337
 name: Number
-def: "A numeral or string of numerals expressing value, quantity, or identification." [] {http://purl.obolibrary.org/obo/NCIT_C150827="NCI"}
+def: "A numeral or string of numerals expressing value, quantity, or identification." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
 is_a: NCIT:C20189 ! Property or Attribute
 
 [Term]
 id: NCIT:C150827
 name: Number of Occurrences
-def: "The number of times something happened." [] {http://purl.obolibrary.org/obo/NCIT_C150827="NCI"}
-is_a: NCIT:C150827 ! Number
+def: "The number of times something happened." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Number of Occurrences" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+is_a: NCIT:C25337 ! Number
 
 [Term]
 id: MS:0000000
