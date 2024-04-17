@@ -24107,7 +24107,7 @@ synonym: "PG: Contaminants" NARROW []
 
 [Term]
 id: MS:4000180
-name: Table of missed cleavage counts
+name: table of missed cleavage counts
 def: "The number of identified PSM with corresponding number of missed cleavages. The number of missed cleavages per PSM is given in the 'number of missed cleavages' column, the respective count of such PSM in the 'Number of Occurrences' column. The highest 'missed cleavages' row is to be interpreted as that number of missed cleavages or higher." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
