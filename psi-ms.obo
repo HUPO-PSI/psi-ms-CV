@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.151
+data-version: 4.1.152
 date: 18:04:2024 13:22
-saved-by: Eric Deutsch
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21758,12 +21758,14 @@ id: MS:1003298
 name: contributing replicate spectrum keys
 def: "A list of cross references to contributing replicate spectra in the same library, in the form of library spectrum keys." [PSI:PI]
 relationship: part_of MS:1003297 ! contributing replicate spectrum
+relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003299
 name: contributing replicate spectrum USI
 def: "A list of cross references to contributing replicate spectra, in the form of PSI Universal Spectrum Identifiers." [PSI:PI]
 relationship: part_of MS:1003297 ! contributing replicate spectrum
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003300

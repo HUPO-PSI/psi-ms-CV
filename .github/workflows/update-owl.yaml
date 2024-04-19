@@ -35,6 +35,7 @@ jobs:
           export JAVA_TOOL_OPTIONS=-Xmx6G
           java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" -i psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
 
+          rm robot.jar
           rm tmp.obo cv_template.tsv
       - name: Create pull request
         id: cpr
