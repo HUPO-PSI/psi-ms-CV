@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.149
-date: 14:04:2024 20:29
-saved-by: Chris Bielow
+data-version: 4.1.150
+date: 18:04:2024 13:22
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -184,6 +184,19 @@ id: NCIT:C60694
 name: Principal Component
 def: "One of the axes representing the projection of varience resulting from principal component analysis." [] {http://purl.obolibrary.org/obo/NCIT_C60694="NCI"}
 is_a: NCIT:C19044 ! Statistical Technique
+
+[Term]
+id: NCIT:C25337
+name: Number
+def: "A numeral or string of numerals expressing value, quantity, or identification." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+is_a: NCIT:C20189 ! Property or Attribute
+
+[Term]
+id: NCIT:C150827
+name: Number of Occurrences
+def: "The number of times something happened." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+synonym: "Number of Occurrences" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
+is_a: NCIT:C25337 ! Number
 
 [Term]
 id: MS:0000000
@@ -24132,6 +24145,32 @@ relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_concept MS:1000830 ! precision
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000180
+name: table of missed cleavage counts
+def: "The number of identified peptides with corresponding number of missed cleavages after user-defined acceptance criteria are applied. The number of missed cleavages per peptide is given in the 'number of missed cleavages' column, the respective count of such peptides identified in the 'Number of Occurrences' column. The highest 'missed cleavages' row is to be interpreted as that number of missed cleavages or higher." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_column MS:1003044 ! number of missed cleavages
+relationship: has_column NCIT:C150827 ! Number of Occurrences
+
+[Term]
+id: MS:4000181
+name: identified MS2 quarter RT fraction
+def: "The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration." [PSI:MS]
+comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000191 ! fraction
+synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
 
 [Term]
 id: PEFF:0000001
