@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.148
+data-version: 4.1.149
 date: 14:04:2024 20:29
 saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
@@ -9538,6 +9538,7 @@ name: SpectraST
 def: "Open-source software for mass spectral library creation and searching, developed at the Institute for Systems Biology and the Hong Kong University of Science and Technology. Part of the Trans-Proteomic Pipeline." [PSI:PI]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1003207 ! library creation software
+is_a: MS:1003406 ! spectrum clustering software
 
 [Term]
 id: MS:1001478
@@ -22474,6 +22475,12 @@ id: MS:1003405
 name: mzRecal
 def: "MS1 recalibration using identified peptides as internal calibrants." [DOI:10.1093/bioinformatics/btab056, PMID:33538780, https://github.com/524D/mzrecal]
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003406
+name: spectrum clustering software
+def: "Software designed to group multiple mass spectra by high similarity, generally with the goal of grouping replicate spectra derived from the same analyte." [PSI:MS]
+is_a: MS:1000531 ! software
 
 [Term]
 id: MS:4000000
