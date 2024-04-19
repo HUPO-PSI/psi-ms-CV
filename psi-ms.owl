@@ -3289,6 +3289,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MS_1003402>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_1003403>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_1003404>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_1003405>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MS_1003406>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_4000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_4000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MS_4000002>))
@@ -12682,6 +12683,7 @@ AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_0000119> "PSI
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MS_1001477> "SpectraST")
 SubClassOf(<http://purl.obolibrary.org/obo/MS_1001477> <http://purl.obolibrary.org/obo/MS_1001456>)
 SubClassOf(<http://purl.obolibrary.org/obo/MS_1001477> <http://purl.obolibrary.org/obo/MS_1003207>)
+SubClassOf(<http://purl.obolibrary.org/obo/MS_1001477> <http://purl.obolibrary.org/obo/MS_1003406>)
 
 # Class: <http://purl.obolibrary.org/obo/MS_1001478> (Mascot Parser)
 
@@ -25521,6 +25523,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MS_1003404> <http://purl.obolibrary.o
 AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_0000119> "DOI:10.1093/bioinformatics/btab056") Annotation(<http://purl.obolibrary.org/obo/IAO_0000119> "PMID:33538780") Annotation(<http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/524D/mzrecal") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MS_1003405> "MS1 recalibration using identified peptides as internal calibrants.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MS_1003405> "mzRecal")
 SubClassOf(<http://purl.obolibrary.org/obo/MS_1003405> <http://purl.obolibrary.org/obo/MS_1001457>)
+
+# Class: <http://purl.obolibrary.org/obo/MS_1003406> (spectrum clustering software)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_0000119> "PSI:MS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MS_1003406> "Software designed to group multiple mass spectra by high similarity, generally with the goal of grouping replicate spectra derived from the same analyte.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MS_1003406> "spectrum clustering software")
+SubClassOf(<http://purl.obolibrary.org/obo/MS_1003406> <http://purl.obolibrary.org/obo/MS_1000531>)
 
 # Class: <http://purl.obolibrary.org/obo/MS_4000000> (PSI-MS CV Quality Control Vocabulary)
 
