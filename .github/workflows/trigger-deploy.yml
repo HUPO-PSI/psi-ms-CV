@@ -35,7 +35,7 @@ jobs:
           export JAVA_TOOL_OPTIONS=-Xmx6G
           java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" --input psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
           rm tmp.obo cv_template.tsv
-
+          rm robot.jar
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
