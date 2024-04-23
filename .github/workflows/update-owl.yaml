@@ -26,16 +26,16 @@ jobs:
           sed -e "s/pato.obo/pato.owl/g" -e "s/uo.obo/uo.owl/g" -i tmp.obo
           head -n 50 tmp.obo
 
-          # python -m pip install fastobo
-          # python scripts/prepare_template.py tmp.obo cv_template.tsv
-          # echo Generated template with `wc -l cv_template.tsv`
+          python -m pip install fastobo
+          python scripts/prepare_template.py tmp.obo cv_template.tsv
+          echo Generated template with `wc -l cv_template.tsv`
 
           wget -nv --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
           export JAVA_TOOL_OPTIONS=-Xmx6G
           # java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" -i psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
           java -jar robot.jar convert -v -i tmp.obo -o psi-ms.owl --format owl
           rm *robot.jar*
-          rm tmp.obo cv_template.tsv
+          rm *tmp.obo* *cv_template.tsv*
       - name: Create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v4
