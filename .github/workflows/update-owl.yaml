@@ -21,6 +21,7 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL
         run: |
+          docker pull obolibrary/robot:v1.8.1
           # Replace the imports of the UO and PATO ontology .obo files with the equivalent .owl files
           cp psi-ms.obo tmp.obo
           sed -e "s/pato.obo/pato.owl/g" -e "s/uo.obo/uo.owl/g" -i tmp.obo
@@ -30,12 +31,9 @@ jobs:
           python scripts/prepare_template.py tmp.obo cv_template.tsv
           echo Generated template with `wc -l cv_template.tsv`
 
-          wget -nv --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
-
           export JAVA_TOOL_OPTIONS=-Xmx6G
-          java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" -i psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
+          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 sh -c "cd /work && robot convert -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" --input /work/psi-ms.obo -t /work/cv_template.tsv convert -f ofn -o /work/psi-ms.owl"
 
-          rm *robot.jar*
           rm tmp.obo cv_template.tsv
       - name: Create pull request
         id: cpr
@@ -57,7 +55,7 @@ jobs:
           number: ${{ steps.cpr.outputs.pull-request-number }}
       - name: Merge pull request
         if: (steps.cpr.outputs.pull-request-operation == 'created' ||	steps.cpr.outputs.pull-request-operation == 'updated')
-        uses: peter-evans/enable-pull-request-automerge@v3
+        uses: peter-evans/enable-pull-request-automerge@v2
         with:
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
