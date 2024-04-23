@@ -22,14 +22,20 @@ jobs:
           echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL and Commit
         run: |
-          docker pull obolibrary/robot:v1.8.1
           # Replace the imports of the UO and PATO ontology .obo files with the equivalent .owl files
           cp psi-ms.obo tmp.obo
           sed -e "s/pato.obo/pato.owl/g" -e "s/uo.obo/uo.owl/g" -i tmp.obo
           head -n 50 tmp.obo
+
+          python -m pip install fastobo
+          python scripts/prepare_template.py tmp.obo cv_template.tsv
+
+          wget --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
+
           export JAVA_TOOL_OPTIONS=-Xmx6G
-          docker run --rm -v ${{ github.workspace }}:/work obolibrary/robot:v1.8.1 robot convert -vvv -i /work/tmp.obo -o /work/psi-ms.owl --format owl
-          rm tmp.obo
+          java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" --input psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
+          rm tmp.obo cv_template.tsv
+          rm *robot.jar*
           git config --global user.name 'PSI-MS CV Bot'
           git config --global user.email 'mobiusklein@users.noreply.github.com'
           OWL_CHANGE=`git diff psi-ms.owl`
