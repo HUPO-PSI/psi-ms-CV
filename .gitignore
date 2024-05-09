@@ -2,3 +2,5 @@
 *.ipynb
 *.jar
 robot*
+*.log
+.idea/
