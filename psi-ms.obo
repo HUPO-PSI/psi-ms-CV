@@ -22498,7 +22498,7 @@ def: "Software designed to group multiple mass spectra by high similarity, gener
 is_a: MS:1000531 ! software
 
 [Term]
-id: MS:1003407
+id: MS:1003409
 name: Stellar
 def: "Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter, a collision cell, and a quadrupole linear ion trap mass analyzer." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
