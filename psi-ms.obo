@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.154
-date: 25:04:2024 13:22
-saved-by: Yasset Perez-Riverol
+data-version: 4.1.155
+date: 03:06:2024 13:22
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -22496,6 +22496,12 @@ id: MS:1003406
 name: spectrum clustering software
 def: "Software designed to group multiple mass spectra by high similarity, generally with the goal of grouping replicate spectra derived from the same analyte." [PSI:MS]
 is_a: MS:1000531 ! software
+
+[Term]
+id: MS:1003409
+name: Stellar
+def: "Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter, a collision cell, and a quadrupole linear ion trap mass analyzer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:4000000
