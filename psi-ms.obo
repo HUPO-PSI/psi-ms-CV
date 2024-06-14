@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.156
-date: 03:07:2024 13:22
+data-version: 4.1.157
+date: 06:14:2024 13:22
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -21791,7 +21791,7 @@ synonym: "SSM" EXACT []
 id: MS:1003303
 name: spectral similarity
 def: "A measure of how similar two spectra are, based on the features of the spectra (the locations and intensities of peaks) alone." [PSI:PI]
-is_a: MS:1002694 ! single identification attribute
+is_a: MS:1002694 ! single identification result attribute
 relationship: part_of MS:1003302 ! spectrum-spectrum match
 
 [Term]
