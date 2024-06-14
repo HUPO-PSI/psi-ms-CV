@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.155
-date: 03:06:2024 13:22
-saved-by: Eric Deutsch
+data-version: 4.1.156
+date: 03:07:2024 13:22
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
 import: http://purl.obolibrary.org/obo/stato.owl
@@ -21999,7 +21999,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003333
 name: regular expression for encoding identifications based on multiple spectra.
-def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+)(?::(?<PARENT_OR_CHILD>P|C))$" [PSI:MS]
+def:  "^(?<MULTIPLE_SPECTRA_IDENTIFIER>[0-9]+)(?::(?<PARENT_OR_CHILD>P|C))?$" [PSI:MS]
 is_a: MS:1002479 ! regular expression
 
 [Term]
