@@ -24190,7 +24190,7 @@ is_a: MS:1001456 ! analysis software
 id: MS:1003408
 name: Scout score
 def: "Scout identification search engine score" [PSI:MS]
-is_a: MS:1003407 ! PSM-level search engine specific statistic
+is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1003407 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
