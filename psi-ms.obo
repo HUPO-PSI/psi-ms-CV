@@ -22506,7 +22506,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1003410
 name: electron beam energy
-def: "The kinetic energy of the electron beam using in dissociation methods induced by a free electron beam, such as electron-capture dissociation (ECD), electron-detachment dissociation (EDD), and electron-activated dissociation (EAD)." [PSI:MS]
+def: "The kinetic energy of the electron beam used in dissociation methods induced by a free electron beam, such as electron-capture dissociation (ECD), electron-detachment dissociation (EDD), and electron-activated dissociation (EAD)." [PSI:MS]
 is_a: MS:1000510 ! precursor activation attribute
 relationship: has_units UO:0000266 ! electronvolt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
