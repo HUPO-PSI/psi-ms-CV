@@ -5847,6 +5847,7 @@ xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
 is_a: MS:1000513 ! binary data array
 relationship: has_units UO:0000012 ! kelvin
+relationship: has_units UO:0000027 ! degree Celsius
 
 [Term]
 id: MS:1000823
