@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.157
-date: 14:06:2024 13:22
+data-version: 4.1.158
+date: 05:07:2024 13:22
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 import: http://purl.obolibrary.org/obo/pato.obo
@@ -17899,6 +17899,19 @@ name: FLASHDeconv
 def: "Ultrafast, High-Quality Feature Deconvolution for Top-Down Proteomics." [DOI:10.1016/j.cels.2020.01.003]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002715
+name: temperature chromatogram
+def: "Representation of temperature versus time." [PSI:MS]
+is_a: MS:1000626 ! chromatogram type
+
+[Term]
+id: MS:1002716
+name: measured element
+def: "The component or dimension of an object being measured, for example the temperature of an instrument component over time." [PSI:MS]
+relationship: part_of MS:1000513 ! binary data array
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002719
