@@ -32,8 +32,14 @@ jobs:
       - name: Set up Maven
         run: mvn -v
 
-      - name: Build with Maven
+      - name: Build OLS dataload
         run: |
            git clone https://github.com/EBISPOT/ols4
            cd ols4/dataload/rdf2json
            mvn clean install
+
+      - name: Validate OWL File      
+        run: |   
+           cd ols4/dataload/rdf2json/target
+           wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/foundry.json
+           java -jar rdf2json-1.0-SNAPSHOT.jar --config foundry.json foundry_out.json
