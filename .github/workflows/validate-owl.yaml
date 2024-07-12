@@ -1,0 +1,36 @@
+name: Validating owl file
+
+on:
+  push:
+    branches: [master, dev]
+
+  pull_request:
+    branches: [master, dev]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Install JDK from Eclipse Adoptium
+          java-version: '11'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Set up Maven
+        run: mvn -v
+
+      - name: Build with Maven
+        run: mvn clean install
