@@ -42,4 +42,11 @@ jobs:
         run: |   
            cd ols4/dataload/rdf2json/target
            wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/foundry.json
+           wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/fail_owl.json
            java -jar rdf2json-1.0-SNAPSHOT.jar --config foundry.json --output foundry_out.json
+           if diff sorted_foundry_out.json sorted_reference.json > /dev/null; then
+              echo "Output JSON file is equal to reference JSON file. Failing the step."
+              exit 1
+          else
+              echo "Output JSON file is different from reference JSON file."
+          fi
