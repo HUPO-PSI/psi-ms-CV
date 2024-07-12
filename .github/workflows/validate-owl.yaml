@@ -33,7 +33,7 @@ jobs:
         run: mvn -v
 
       - name: Build with Maven
-        run:
+        run: |
            git clone https://github.com/EBISPOT/ols4
            cd ols4/dataload/rdf2json
            mvn clean install
