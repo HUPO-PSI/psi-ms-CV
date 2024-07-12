@@ -42,4 +42,4 @@ jobs:
         run: |   
            cd ols4/dataload/rdf2json/target
            wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/foundry.json
-           java -jar rdf2json-1.0-SNAPSHOT.jar --config foundry.json foundry_out.json
+           java -jar rdf2json-1.0-SNAPSHOT.jar --config foundry.json --output foundry_out.json
