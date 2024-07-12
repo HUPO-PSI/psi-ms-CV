@@ -47,6 +47,6 @@ jobs:
            if diff sorted_foundry_out.json sorted_reference.json > /dev/null; then
               echo "Output JSON file is equal to reference JSON file. Failing the step."
               exit 1
-          else
+           else
               echo "Output JSON file is different from reference JSON file."
-          fi
+           fi
