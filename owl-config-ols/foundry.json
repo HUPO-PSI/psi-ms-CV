@@ -47,17 +47,17 @@
         "url": "https://creativecommons.org/licenses/by/3.0/"
       },
       "mailing_list": "psidev-ms-vocab@lists.sourceforge.net",
-      "ontology_purl": "http://purl.obolibrary.org/obo/ms.owl",
+      "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.owl",
       "page": "http://www.psidev.info/groups/controlled-vocabularies",
       "preferredPrefix": "MS",
       "products": [
         {
           "id": "ms.obo",
-          "ontology_purl": "http://purl.obolibrary.org/obo/ms.obo"
+          "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo"
         },
         {
           "id": "ms.owl",
-          "ontology_purl": "http://purl.obolibrary.org/obo/ms.owl"
+          "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.owl"
         }
       ],
       "publications": [
