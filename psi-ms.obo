@@ -3,7 +3,6 @@ data-version: 4.1.159
 date: 15:07:2024 13:22
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
-import: http://purl.obolibrary.org/obo/pato.owl
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24575,7 +24574,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the distance between two points." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001708
 created_by: george gkoutos
 
 [Term]
@@ -24585,8 +24583,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of matter/energy of a physical object." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000125
-relationship: is_unit_of PATO:0000128
 created_by: george gkoutos
 
 [Term]
@@ -24598,8 +24594,6 @@ def: "A unit which is a standard measure of the dimension in which events occur 
 subset: unit_group_slim
 synonym: "time derived unit" EXACT []
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000165
-relationship: is_unit_of PATO:0001309
 created_by: george gkoutos
 
 [Term]
@@ -24611,7 +24605,6 @@ def: "A unit which is a standard measure of the average kinetic energy of the pa
 subset: unit_group_slim
 synonym: "temperature derived unit" EXACT []
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000146
 created_by: george gkoutos
 
 [Term]
@@ -24727,7 +24720,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of a 2-dimensional flat surface." [UOC:GVG]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001709
 created_by: george gkoutos
 
 [Term]
@@ -24738,7 +24730,6 @@ def: "A density unit which is a standard measure of the mass of a substance in a
 subset: unit_group_slim
 synonym: "mass per unit volume" EXACT []
 is_a: UO:0000182
-relationship: is_unit_of PATO:0001353
 created_by: george gkoutos
 
 [Term]
@@ -24748,7 +24739,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of space occupied by any substance, whether solid, liquid, or gas." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001710
 created_by: george gkoutos
 
 [Term]
@@ -24769,7 +24759,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the number of repetitive actions in a particular time." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000044
 created_by: george gkoutos
 
 [Term]
@@ -24790,7 +24779,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the force applied to a given area." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001025
 created_by: george gkoutos
 
 [Term]
@@ -24810,8 +24798,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the work done by a certain force (gravitational, electric, magnetic, force of inertia, etc)." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001021
-relationship: is_unit_of PATO:0001026
 created_by: george gkoutos
 
 [Term]
@@ -24831,7 +24817,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the figure or space formed by the junction of two lines or planes." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000133
 created_by: george gkoutos
 
 [Term]
@@ -24891,7 +24876,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the influence exerted by some mass." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001019
 created_by: george gkoutos
 
 [Term]
@@ -24957,7 +24941,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the work done per unit charge as a charge is moved between two points in an electric field." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001464
 created_by: george gkoutos
 
 [Term]
@@ -25077,7 +25060,6 @@ subset: unit_slim
 synonym: "microlitres per minute" EXACT []
 synonym: "uL/min" EXACT []
 is_a: UO:0000270
-relationship: is_unit_of PATO:0001574
 created_by: george gkoutos
 
 [Term]
