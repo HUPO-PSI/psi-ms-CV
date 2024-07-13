@@ -5,6 +5,15 @@
 
 The [Human Proteome Organization (HUPO)–Proteomics Standards Initiative (PSI)](https://psidev.info/) extensively uses ontologies and controlled vocabularies (CVs) in their data formats. The PSI-Mass Spectrometry controlled vocabulary (PSI-MS) is the main ontology from PSI that store and control all terms for MS-based proteomics experiments. It encompasses terms for a complete MS analysis pipeline, including sample labeling, digestion enzymes, instrumentation, software for peptide/protein identification and quantification, and parameters for significance determination. This CV's development involved collaboration across PSI working groups, proteomics researchers, instrument manufacturers, and software vendors. This article outlines the CV's structure, development, maintenance, and dependencies on other ontologies.
 
+### OBO and OWL files
+
+The main files of this repository are the OBO and OWL files: 
+
+- **psi-ms.obo**: This file is the main source of the PSI-MS CV terms. All changes should be made in the psi-ms.obo file including addintions, changes, etc.  
+- **psi-ms.owl**: This is a read-only file generate from the **psi-ms.obo** file. This file is used by multiple services including OLS, The OBO Foundry, etc. 
+
+> The [robot.jar tool](https://github.com/ontodev/robot/) is used to convert from obo format to owl. 
+
 ### Requesting a new term
 
 Anyone can request a new term be added to the controlled vocabulary by opening an issue or a pull
