@@ -1,4 +1,4 @@
-name: Validating owl file
+name: OWL file validation
 
 on:
   push:
