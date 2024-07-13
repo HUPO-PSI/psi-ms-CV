@@ -1,10 +1,8 @@
 format-version: 1.2
-data-version: 4.1.158
-date: 14:06:2024 13:22
-saved-by: Joshua Klein
+data-version: 4.1.159
+date: 15:07:2024 13:22
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
-import: http://purl.obolibrary.org/obo/pato.owl
-import: http://purl.obolibrary.org/obo/stato.owl
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -22674,8 +22672,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept MS:1000086 ! full width at half-maximum
-relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_units UO:0000010 ! second
 
 [Term]
 id: MS:4000052
@@ -22689,8 +22685,6 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
-relationship: has_value_concept UO:0000191 ! fraction
 
 [Term]
 id: MS:4000053
@@ -22771,7 +22765,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 
 [Term]
 id: MS:4000058
@@ -22787,7 +22780,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 
 [Term]
 id: MS:4000059
@@ -22829,8 +22821,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
-relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:4000062
@@ -22846,7 +22836,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
@@ -22946,7 +22935,6 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_units MS:1000040 ! m/z
-relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000070
@@ -22958,7 +22946,6 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_units UO:0000010 ! second
-relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000071
@@ -23357,7 +23344,6 @@ comment: The distribution of peak densities in MS1 can provide insight into the 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23368,7 +23354,6 @@ comment: The distribution of peak densities in MS1 can provide insight into the 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23379,7 +23364,6 @@ comment: The distribution of peak densities in MS1 can provide insight into the 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23390,7 +23374,6 @@ comment: The distribution of peak densities in MS1 can provide insight into the 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23401,7 +23384,6 @@ comment: The distribution of peak densities in MS2 can provide insight into the 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23412,7 +23394,6 @@ comment: The distribution of peak densities in MS2 can provide insight into the 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23423,7 +23404,6 @@ comment: The distribution of peak densities in MS2 can provide insight into the 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23434,7 +23414,6 @@ comment: The distribution of peak densities in MS2 can provide insight into the 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23445,7 +23424,6 @@ comment: The intensity distribution of the precursors informs about the dynamic 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23457,7 +23435,6 @@ comment: The intensity distribution of the precursors informs about the dynamic 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23469,7 +23446,6 @@ comment: The intensity distribution of the precursors informs about the dynamic 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23481,7 +23457,6 @@ comment: The intensity distribution of the precursors informs about the dynamic 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23493,7 +23468,6 @@ comment: The intensity distribution of the precursors informs about the dynamic 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23505,7 +23479,6 @@ comment: The Signal-to-noise ratio in MS1 distribution can provide insight to th
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23516,7 +23489,6 @@ comment: The signal-to-noise ratio in MS1 distribution can provide insight into 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23527,7 +23499,6 @@ comment: The Signal-to-noise ratio in MS1 distribution can provide insight into 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23538,7 +23509,6 @@ comment: The Signal-to-noise ratio in MS1 distribution can provide insight into 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23549,7 +23519,6 @@ comment: The Signal-to-noise ratio in MS1 distribution can provide insight into 
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23560,7 +23529,6 @@ comment: A high signal-to-noise ratio in MS2 distribution can explain a high rat
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23571,7 +23539,6 @@ comment: A high signal-to-noise ratio in MS2 distribution can explain a high rat
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23582,7 +23549,6 @@ comment: A high signal-to-noise ratio in MS2 distribution can explain a high rat
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23593,7 +23559,6 @@ comment: A high signal-to-noise ratio in MS2 distribution can explain a high rat
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23604,7 +23569,6 @@ comment: A high signal-to-noise ratio in MS2 distribution can explain a high rat
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -23614,7 +23578,6 @@ def: "From the distribution of ion injection times (MS:1000927) for MS1, the qua
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23626,7 +23589,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23638,7 +23600,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23650,7 +23611,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23662,7 +23622,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23673,7 +23632,6 @@ def: "From the distribution of ion injection times (MS:1000927) for MS2, the qua
 comment: Injection time distribution can be used to gauge the suitability of used instrument settings for the sample content used.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23685,7 +23643,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23697,7 +23654,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23709,7 +23665,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23721,7 +23676,6 @@ comment: Injection time distribution can be used to gauge the suitability of use
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000036 ! outlier
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -23892,7 +23846,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23904,7 +23857,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23916,7 +23868,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23928,7 +23879,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23940,7 +23890,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -23952,7 +23901,6 @@ comment: The metric informs about the dynamic range of the acquisition in relati
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
 
@@ -24137,7 +24085,6 @@ def: "The mean of the distribution of observed precursor mass accuracies (MS:400
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000401 ! sample mean
 relationship: has_value_concept MS:1000014 ! accuracy
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -24149,7 +24096,6 @@ def: "The standard deviation of the distribution of observed precursor mass accu
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept STATO:0000237 ! standard deviation
 relationship: has_value_concept MS:1000830 ! precision
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -24628,7 +24574,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the distance between two points." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001708
 created_by: george gkoutos
 
 [Term]
@@ -24638,8 +24583,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of matter/energy of a physical object." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000125
-relationship: is_unit_of PATO:0000128
 created_by: george gkoutos
 
 [Term]
@@ -24651,8 +24594,6 @@ def: "A unit which is a standard measure of the dimension in which events occur 
 subset: unit_group_slim
 synonym: "time derived unit" EXACT []
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000165
-relationship: is_unit_of PATO:0001309
 created_by: george gkoutos
 
 [Term]
@@ -24664,7 +24605,6 @@ def: "A unit which is a standard measure of the average kinetic energy of the pa
 subset: unit_group_slim
 synonym: "temperature derived unit" EXACT []
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000146
 created_by: george gkoutos
 
 [Term]
@@ -24780,7 +24720,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of a 2-dimensional flat surface." [UOC:GVG]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001709
 created_by: george gkoutos
 
 [Term]
@@ -24791,7 +24730,6 @@ def: "A density unit which is a standard measure of the mass of a substance in a
 subset: unit_group_slim
 synonym: "mass per unit volume" EXACT []
 is_a: UO:0000182
-relationship: is_unit_of PATO:0001353
 created_by: george gkoutos
 
 [Term]
@@ -24801,7 +24739,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the amount of space occupied by any substance, whether solid, liquid, or gas." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001710
 created_by: george gkoutos
 
 [Term]
@@ -24822,7 +24759,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the number of repetitive actions in a particular time." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000044
 created_by: george gkoutos
 
 [Term]
@@ -24843,7 +24779,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the force applied to a given area." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001025
 created_by: george gkoutos
 
 [Term]
@@ -24863,8 +24798,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the work done by a certain force (gravitational, electric, magnetic, force of inertia, etc)." [NIST:NIST]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001021
-relationship: is_unit_of PATO:0001026
 created_by: george gkoutos
 
 [Term]
@@ -24884,7 +24817,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the figure or space formed by the junction of two lines or planes." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0000133
 created_by: george gkoutos
 
 [Term]
@@ -24944,7 +24876,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the influence exerted by some mass." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001019
 created_by: george gkoutos
 
 [Term]
@@ -25010,7 +24941,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the work done per unit charge as a charge is moved between two points in an electric field." [Wikipedia:Wikipedia]
 subset: unit_group_slim
 is_a: UO:0000000
-relationship: is_unit_of PATO:0001464
 created_by: george gkoutos
 
 [Term]
@@ -25130,7 +25060,6 @@ subset: unit_slim
 synonym: "microlitres per minute" EXACT []
 synonym: "uL/min" EXACT []
 is_a: UO:0000270
-relationship: is_unit_of PATO:0001574
 created_by: george gkoutos
 
 [Term]
