@@ -22,11 +22,11 @@ term, from proposing the term name and description to defining its relationships
 
 ### Submitting a new term 
 
-In order to submit a new term, please `fork` or make a new `branch` of this repository. Then, **you can add your CV term in the psi-ms.obo file**. Please do not modify the owl which will be auto-generate from the obo file. Finally, you can do a Pull Request to the main repo and a member of the HUPO-PSI CV group will review and merge the PR.   
+In order to submit a new term, please `fork` or make a new `branch` of this repository. Then, **you can add your CV term in the psi-ms.obo file**. Please do not modify the owl which will be auto-generate from the obo file. Finally, you can do a Pull Request to the main repo and a member of the HUPO-PSI CV group will review and merge the PR.  Alternatively, please open an issue and fill in whatever information you have and we will work with you to get it into the shape we need.
 
 > If you're requesting multiple related terms, you can submit them in a single issue/pull request.
 
-Please keep in mind that when you change the psi-ms.obo file you must increase the version of the file, change the data of update, and add your name to the list of contributors. 
+Please keep in mind that when you change the psi-ms.obo file you must increase the version of the file, change the `date` and `data-version` headers, and add your name to the list of contributors. 
 
 ```obo
 format-version: 1.2
