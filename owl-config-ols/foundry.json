@@ -1,0 +1,159 @@
+{
+  "name": "OBO Foundry",
+  "title": "The OBO Foundry",
+  "markdown": "kramdown",
+  "highlighter": "rouge",
+  "baseurl": "/",
+  "imgurl": "/images",
+  "repo": "https://github.com/OBOFoundry/OBOFoundry.github.io/",
+  "repo_src": "https://github.com/OBOFoundry/OBOFoundry.github.io/blob/master/",
+  "author": {
+    "name": "OBO Technical WG"
+  },
+  "plugins": [
+    "jekyll-sitemap"
+  ],
+  "ontologies": [
+    {
+      "activity_status": "active",
+      "build": {
+        "method": "obo2owl",
+        "source_url": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo"
+      },
+      "contact": {
+        "email": "gerhard.mayer@rub.de",
+        "github": "germa",
+        "label": "Gerhard Mayer",
+        "orcid": "0000-0002-1767-2343"
+      },
+      "dependencies": [
+        {
+          "id": "pato"
+        },
+        {
+          "id": "uo"
+        }
+      ],
+      "description": "A structured controlled vocabulary for the annotation of experiments concerned with proteomics mass spectrometry.",
+      "domain": "investigations",
+      "homepage": "http://www.psidev.info/groups/controlled-vocabularies",
+      "id": "ms",
+      "integration_server": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master",
+      "label": "MS",
+      "layout": "ontology_detail",
+      "license": {
+        "label": "CC BY 3.0",
+        "logo": "http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "mailing_list": "psidev-ms-vocab@lists.sourceforge.net",
+      "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.owl",
+      "page": "http://www.psidev.info/groups/controlled-vocabularies",
+      "preferredPrefix": "MS",
+      "products": [
+        {
+          "id": "ms.obo",
+          "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo"
+        },
+        {
+          "id": "ms.owl",
+          "ontology_purl": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.owl"
+        }
+      ],
+      "publications": [
+        {
+          "id": "https://www.ncbi.nlm.nih.gov/pubmed/23482073",
+          "title": "The HUPO proteomics standards initiative- mass spectrometry controlled vocabulary."
+        }
+      ],
+      "repository": "https://github.com/HUPO-PSI/psi-ms-CV",
+      "tags": [
+        "MS experiments"
+      ],
+      "title": "Mass spectrometry ontology",
+      "tracker": "https://github.com/HUPO-PSI/psi-ms-CV/issues"
+    }
+  ],
+  "principles": [
+    {
+      "id": "fp-000-summary",
+      "layout": "principle",
+      "title": "Overview"
+    },
+    {
+      "id": "fp-001-open",
+      "layout": "principle",
+      "title": "Open (principle 1)"
+    },
+    {
+      "id": "fp-002-format",
+      "layout": "principle",
+      "title": "Common Format (principle 2)"
+    },
+    {
+      "id": "fp-003-uris",
+      "layout": "principle",
+      "title": "URI/Identifier Space (principle 3)"
+    },
+    {
+      "id": "fp-004-versioning",
+      "layout": "principle",
+      "title": "Versioning (principle 4)"
+    },
+    {
+      "id": "fp-005-delineated-content",
+      "layout": "principle",
+      "title": "Scope (principle 5)"
+    },
+    {
+      "id": "fp-006-textual-definitions",
+      "layout": "principle",
+      "title": "Textual Definitions (principle 6)"
+    },
+    {
+      "id": "fp-007-relations",
+      "layout": "principle",
+      "title": "Relations (principle 7)"
+    },
+    {
+      "id": "fp-008-documented",
+      "layout": "principle",
+      "title": "Documentation (principle 8)"
+    },
+    {
+      "id": "fp-009-users",
+      "layout": "principle",
+      "title": "Documented Plurality of Users (principle 9)"
+    },
+    {
+      "id": "fp-010-collaboration",
+      "layout": "principle",
+      "title": "Commitment To Collaboration (principle 10)"
+    },
+    {
+      "id": "fp-011-locus-of-authority",
+      "layout": "principle",
+      "title": "Locus of Authority (principle 11)"
+    },
+    {
+      "id": "fp-012-naming-conventions",
+      "layout": "principle",
+      "title": "Naming Conventions (principle 12)"
+    },
+    {
+      "id": "fp-013-notification",
+      "layout": "principle",
+      "title": "Notification of Changes (principle 13)"
+    },
+    {
+      "id": "fp-016-maintenance",
+      "layout": "principle",
+      "title": "Maintenance (principle 16)"
+    },
+    {
+      "id": "fp-020-responsiveness",
+      "layout": "principle",
+      "title": "Responsiveness (principle 20)"
+    }
+  ]
+}
