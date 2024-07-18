@@ -22672,6 +22672,8 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept MS:1000086 ! full width at half-maximum
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000010 ! second
 
 [Term]
 id: MS:4000052
@@ -22685,6 +22687,8 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
+relationship: has_value_concept UO:0000191 ! fraction
 
 [Term]
 id: MS:4000053
@@ -22765,6 +22769,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 
 [Term]
 id: MS:4000058
@@ -22780,6 +22785,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 
 [Term]
 id: MS:4000059
@@ -22821,6 +22827,8 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:4000062
@@ -22836,6 +22844,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_value_concept NCIT:C45781 ! Density
+relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_units UO:0000189 ! count unit
 
 [Term]
@@ -22935,6 +22944,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000070
@@ -22946,6 +22956,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_units UO:0000010 ! second
+relationship: has_value_concept STATO:0000035 ! range
 
 [Term]
 id: MS:4000071
@@ -23345,6 +23356,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000109
@@ -23355,6 +23367,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000110
@@ -23365,6 +23378,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000111
@@ -23375,6 +23389,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000112
@@ -23385,6 +23400,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000113
@@ -23395,6 +23411,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000114
@@ -23405,6 +23422,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000115
@@ -23415,6 +23433,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000116
@@ -23426,6 +23445,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000117
@@ -23437,6 +23457,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000118
@@ -23448,6 +23469,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000119
@@ -23459,6 +23481,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000120
@@ -23470,6 +23493,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000121
@@ -23480,6 +23504,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000122
@@ -23490,6 +23515,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000123
@@ -23500,6 +23526,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000124
@@ -23510,6 +23537,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000125
@@ -23520,6 +23548,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000126
@@ -23530,6 +23559,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000127
@@ -23540,6 +23570,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000128
@@ -23550,6 +23581,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000129
@@ -23560,6 +23592,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000130
@@ -23570,6 +23603,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000131
@@ -23580,6 +23614,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000132
@@ -23591,6 +23626,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000133
@@ -23602,6 +23638,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000134
@@ -23613,6 +23650,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000135
@@ -23624,6 +23662,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000136
@@ -23634,6 +23673,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000137
@@ -23645,6 +23685,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000138
@@ -23656,6 +23697,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000139
@@ -23667,6 +23709,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000140
@@ -23678,6 +23721,7 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000028 ! millisecond
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000036 ! outlier
 
 [Term]
 id: MS:4000141
@@ -23848,6 +23892,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000162
@@ -23859,6 +23904,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000163
@@ -23870,6 +23916,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000164
@@ -23881,6 +23928,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000165
@@ -23892,6 +23940,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000166
@@ -23903,6 +23952,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000167
@@ -24088,6 +24138,7 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_concept MS:1000014 ! accuracy
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
 
 [Term]
 id: MS:4000179
@@ -24099,6 +24150,7 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_concept MS:1000830 ! precision
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
 
 [Term]
 id: MS:4000180
