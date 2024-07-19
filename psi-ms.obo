@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.161
-date: 13:07:2024 07:15
-saved-by: Colin Combe
+data-version: 4.1.162
+date: 19:07:2024 07:15
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22506,6 +22506,15 @@ id: MS:1003409
 name: Stellar
 def: "Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter, a collision cell, and a quadrupole linear ion trap mass analyzer." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003410
+name: electron beam energy
+def: "The kinetic energy of the electron beam used in dissociation methods induced by a free electron beam, such as electron-capture dissociation (ECD), electron-detachment dissociation (EDD), and electron-activated dissociation (EAD)." [PSI:MS]
+is_a: MS:1000510 ! precursor activation attribute
+relationship: has_units UO:0000266 ! electronvolt
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:4000000
