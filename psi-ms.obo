@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.161
-date: 16:07:2024 07:15
-saved-by: Yasset Perez-Riverol
+data-version: 4.1.162
+date: 19:07:2024 07:15
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -4706,6 +4706,12 @@ is_a: MS:1000690 ! SCIEX software
 is_a: MS:1001455 ! acquisition software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1000660
+name: Xevo MRT MS
+def: "Waters Corporation Xevo MRT Mass Spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000661
