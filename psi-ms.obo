@@ -4708,6 +4708,12 @@ is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
 [Term]
+id: MS:1000660
+name: Xevo MRT MS
+def: "Waters Corporation Xevo MRT Mass Spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
 id: MS:1000661
 name: GPS Explorer
 def: "SCIEX or Applied Biosystems software for data acquisition and analysis." [PSI:MS]
