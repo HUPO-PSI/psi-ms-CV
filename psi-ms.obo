@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.162
+data-version: 4.1.164
 date: 19:07:2024 07:15
-saved-by: Joshua Klein
+saved-by: Wout Bittremieux
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22933,7 +22933,7 @@ name: spectra half-TIC
 def: "The minimal proportion of peaks needed to account for at least 50% of the total ion current in each individual spectrum considered, recorded in a mandatory fraction column. Either USI or native spectrum identifier columns must be present as well." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_optional_column MS:1003063 ! universal spectrum identifier
 relationship: has_optional_column MS:1000767 ! native spectrum identifier format
