@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.162
+data-version: 4.1.163
 date: 19:07:2024 07:15
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -5851,6 +5851,7 @@ xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
 is_a: MS:1000513 ! binary data array
 relationship: has_units UO:0000012 ! kelvin
+relationship: has_units UO:0000027 ! degree Celsius
 
 [Term]
 id: MS:1000823
@@ -17903,6 +17904,19 @@ name: FLASHDeconv
 def: "Ultrafast, High-Quality Feature Deconvolution for Top-Down Proteomics." [DOI:10.1016/j.cels.2020.01.003]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1002715
+name: temperature chromatogram
+def: "Representation of temperature versus time." [PSI:MS]
+is_a: MS:1000626 ! chromatogram type
+
+[Term]
+id: MS:1002716
+name: measured element
+def: "The component or dimension of an object being measured, for example the temperature of an instrument component over time." [PSI:MS]
+relationship: part_of MS:1000513 ! binary data array
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002719
