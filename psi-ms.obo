@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.163
+data-version: 4.1.165
 date: 19:07:2024 07:15
-saved-by: Joshua Klein
+saved-by: Wout Bittremieux
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24102,6 +24102,7 @@ def: "The fraction of total protein abundance in a mass spectrometry run or a gr
 comment: "High values may indicate a sample handling issue, and/or insufficient sample concentration."
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
