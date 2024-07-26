@@ -24083,12 +24083,12 @@ synonym: "MS2-PrecZ-more" RELATED [PMID:24494671]
 
 [Term]
 id: MS:4000177
-name: contaminant protein abundance ratio
-def: "The ratio of total protein abundance in a mass spectrometry run or a group of runs which can be attributed to a user-defined list of contaminant proteins (e.g. using the cRAP contaminant database)." [PSI:MS]
+name: contaminant protein abundance fraction
+def: "The fraction of total protein abundance in a mass spectrometry run or a group of runs which can be attributed to a user-defined list of contaminant proteins (e.g. using the cRAP contaminant database)." [PSI:MS]
 comment: "High values may indicate a sample handling issue, and/or insufficient sample concentration."
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_units UO:0010006 ! ratio
+relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
