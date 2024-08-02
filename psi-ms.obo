@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.168
-date: 28:07:2024 07:15
-saved-by: Joshua Klein
+data-version: 4.1.169
+date: 01:08:2024 07:15
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -14811,6 +14811,7 @@ id: MS:1002257
 name: Comet:expectation value
 def: "The Comet result 'Expectation value'." [PSI:PI]
 is_a: MS:1001153 ! search engine specific score
+is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
