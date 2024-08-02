@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.167
-date: 19:07:2024 07:15
-saved-by: Wout Bittremieux
+data-version: 4.1.168
+date: 28:07:2024 07:15
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -20994,7 +20994,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1003181
 name: combined dissociation method
 def: "Combination of two or more dissociation methods that are known by a special term." [PSI:PI]
-is_a: MS:1000044 ! dissociation method
+is_a: MS:1000510 ! precursor activation attribute
 
 [Term]
 id: MS:1003182
