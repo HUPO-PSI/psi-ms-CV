@@ -35,7 +35,9 @@ jobs:
       - name: Build OLS dataload
         run: |
            git clone https://github.com/EBISPOT/ols4
-           cd ols4/dataload/rdf2json
+           cd ols4/ols-shared/
+           mvn clean install
+           cd ../../ols4/dataload/rdf2json
            mvn clean install
 
       - name: Validate OWL File for OLS
