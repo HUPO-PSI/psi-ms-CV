@@ -22687,7 +22687,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000051
@@ -22718,7 +22718,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000053
@@ -22749,7 +22749,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000055
@@ -22766,7 +22766,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000056
@@ -22783,7 +22783,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000057
@@ -24154,7 +24154,7 @@ comment: "High values may indicate a sample handling issue, and/or insufficient 
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 synonym: "PG: Contaminants" NARROW []
@@ -24203,7 +24203,7 @@ relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
