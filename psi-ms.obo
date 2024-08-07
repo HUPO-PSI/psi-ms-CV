@@ -15832,6 +15832,7 @@ is_a: MS:1002704 ! protein-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1002405
@@ -21454,6 +21455,7 @@ is_a: MS:1002702 ! peptide sequence-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003251
@@ -21463,6 +21465,7 @@ is_a: MS:1002700 ! PSM-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003252
