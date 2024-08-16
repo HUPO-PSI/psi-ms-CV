@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.169
-date: 01:08:2024 07:15
+data-version: 4.1.172
+date: 15:08:2024 07:15
 saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
@@ -22529,6 +22529,12 @@ def: "The kinetic energy of the electron beam used in dissociation methods induc
 is_a: MS:1000510 ! precursor activation attribute
 relationship: has_units UO:0000266 ! electronvolt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003411
+name: Orbitrap IQ-X
+def: "Thermo Scientific Orbitrap IQ-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 
 [Term]
