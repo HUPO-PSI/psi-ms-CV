@@ -22536,6 +22536,12 @@ name: Orbitrap IQ-X
 def: "Thermo Scientific Orbitrap IQ-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
+[Term]
+id: MS:1003412
+name: timsTOF Ultra 2
+def: "Bruker Daltonics timsTOF Ultra 2." [PSI:MS]
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
+
 
 [Term]
 id: MS:4000000
