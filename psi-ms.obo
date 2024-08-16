@@ -20,7 +20,7 @@ remark: creator: Pierre-Alain Binz <pierre-alain.binz <-at-> chuv.ch>
 remark: creator: Gerhard Mayer <mayerg97 <-at-> rub.de>
 remark: creator: Joshua Klein <jaklein <-at-> bu.edu>
 remark: creator: Chris Bielow <chris.bielow <-at-> fu-berlin.de>
-remark: creator: Wout Bittremieux <wbittremieux <-at-> health.ucsd.edu>
+remark: creator: Wout Bittremieux <wout.bittremieux <-at-> uantwerpen.be>
 remark: creator: Nils Hoffmann < nils.hoffmann <-at-> cebitec.uni-bielefeld.de>
 remark: creator: Julian Uszkoreit <julian.uszkoreit <-at-> ruhr-uni-bochum.de>
 remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
@@ -15832,6 +15832,7 @@ is_a: MS:1002704 ! protein-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1002405
@@ -21454,6 +21455,7 @@ is_a: MS:1002702 ! peptide sequence-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003251
@@ -21463,6 +21465,7 @@ is_a: MS:1002700 ! PSM-level result list attribute
 is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_units UO:0000189 ! count unit
 
 [Term]
 id: MS:1003252
@@ -22699,7 +22702,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000051
@@ -22730,7 +22733,7 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
-relationship: has_value_concept UO:0000191 ! fraction
+relationship: has_units UO:0000191 ! fraction
 
 [Term]
 id: MS:4000053
@@ -24165,8 +24168,8 @@ def: "The fraction of total protein abundance in a mass spectrometry run or a gr
 comment: "High values may indicate a sample handling issue, and/or insufficient sample concentration."
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV
+relationship: has_units UO:0000191 ! fraction
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 synonym: "PG: Contaminants" NARROW []
@@ -25166,5 +25169,3 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
-
-
