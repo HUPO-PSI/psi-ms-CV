@@ -21479,6 +21479,7 @@ name: DIA-NN
 def: "A universal software for data-independent acquisition (DIA) proteomics data processing" [PMID:31768060, https://github.com/vdemichev/DiaNN]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
+is_a: MS:1003207 ! library creation software
 
 [Term]
 id: MS:1003254
