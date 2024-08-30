@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.173
+data-version: 4.1.174
 date: 25:08:2024 07:15
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -20249,6 +20249,7 @@ id: MS:1003074
 name: predicted spectrum
 def: "Spectrum that originates from a compututational algorithm that attempts to predict spectra." [PSI:PI]
 is_a: MS:1003072 ! spectrum origin type
+is_a: MS:1003065 ! spectrum aggregation type
 
 [Term]
 id: MS:1003075
