@@ -20249,6 +20249,7 @@ id: MS:1003074
 name: predicted spectrum
 def: "Spectrum that originates from a compututational algorithm that attempts to predict spectra." [PSI:PI]
 is_a: MS:1003072 ! spectrum origin type
+is_a: MS:1003065 ! spectrum aggregation type
 
 [Term]
 id: MS:1003075
