@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.174
+data-version: 4.1.175
 date: 25:08:2024 07:15
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
@@ -15378,8 +15378,9 @@ relationship: has_value_type xsd:boolean ! The allowed value-type for this CV te
 
 [Term]
 id: MS:1002342
-name: MZmine
+name: mzmine
 def: "A framework for differential analysis of mass spectrometry data." [PMID:16403790, PMID:20650010]
+synonym: "MZmine" EXACT []
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
