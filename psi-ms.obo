@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.175
-date: 25:08:2024 07:15
-saved-by: Joshua Klein
+data-version: 4.1.177
+date: 18:08:2024 07:15
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22694,6 +22694,81 @@ id: MS:4000024
 name: environment metric
 def: "QC metric related to measurements of the ambient environment, such as the laboratory." [PSI:MS]
 is_a: MS:4000001 ! QC metric
+
+
+[Term]
+id: MS:4000025
+name: precursor ion current chromatogram
+def: "Representation of the ion current assigned to detected precursors in the series of all MS1 spectra versus time." [PSI:MS]
+synonym: "precursor ion chromatogram" EXACT []
+is_a: MS:1000810 ! ion current chromatogram
+
+[Term]
+id: MS:4000026
+name: fragment ppm deviation median
+def: "The median of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied." [PSI:MS]
+comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000574 ! center value
+
+[Term]
+id: MS:4000027
+name: fragment ppm deviation mean
+def: "The mean of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts. See MS:4000178 for the MS1 equivalent.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
+
+[Term]
+id: MS:4000028
+name: fragment ppm deviation sigma
+def: "The standard deviation of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
+comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts.  See MS:4000179 for the MS1 equivalent.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_concept MS:1000830 ! precision
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000237 ! standard deviation
+
+[Term]
+id: MS:4000029
+name: area under TIC in MS1
+def: "The area under the total ion current chromatogram (MS:100023) of all MS1 spectra." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+
+[Term]
+id: MS:4000030
+name: area under TIC in MS2
+def: "The area under the total ion current chromatogram (MS:100023) of all MS2 spectra." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides. Issues such as contamination on the MS front-end and fragmentation efficiency can lead to poor MS signals. Contamination would decrease both MS1 and MS2 S/N, while poor fragmentation efficiency affects MS2 signal but leaves MS1 signal unchanged.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+
+[Term]
+id: MS:4000031
+name: Ratio of Peak Area of MS1 vs MS2 Signal 
+def: "The ratio of the areas under TIC of MS1 (MS:4000029) divided by the area under the TIC of MS2 (MS:4000030)." [PSI:MS]
+comment: Poor fragmentation efficiency or precursor fragmentation intensity thresholds affect MS2 signal but leave MS1 signal unchanged.
+is_a: MS:4000003 ! single value
+is_a: MS:1001848 ! simple ratio of two values
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:4000050
