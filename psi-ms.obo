@@ -22702,6 +22702,14 @@ name: precursor ion current chromatogram
 def: "Representation of the ion current assigned to detected precursors in the series of all MS1 spectra versus time." [PSI:MS]
 synonym: "precursor ion chromatogram" EXACT []
 is_a: MS:1000810 ! ion current chromatogram
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:4000026
@@ -22745,30 +22753,37 @@ relationship: has_value_concept STATO:0000237 ! standard deviation
 [Term]
 id: MS:4000029
 name: area under TIC in MS1
-def: "The area under the total ion current chromatogram (MS:100023) of all MS1 spectra." [PSI:MS]
+def: "The area under the total ion current chromatogram (MS:1000235) of all MS1 spectra." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free
 relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000209 ! area under curve
 
 [Term]
 id: MS:4000030
 name: area under TIC in MS2
-def: "The area under the total ion current chromatogram (MS:100023) of all MS2 spectra." [PSI:MS]
+def: "The area under the total ion current chromatogram (MS:1000235) of all MS2 spectra." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides. Issues such as contamination on the MS front-end and fragmentation efficiency can lead to poor MS signals. Contamination would decrease both MS1 and MS2 S/N, while poor fragmentation efficiency affects MS2 signal but leaves MS1 signal unchanged.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free
 relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000209 ! area under curve
 
 [Term]
 id: MS:4000031
-name: Ratio of Peak Area of MS1 vs MS2 Signal 
-def: "The ratio of the areas under TIC of MS1 (MS:4000029) divided by the area under the TIC of MS2 (MS:4000030)." [PSI:MS]
+name: ratio of peak area of MS1 vs MS2 signal 
+def: "The ratio of the area under TIC of MS1 (MS:4000029) divided by the area under the TIC of MS2 (MS:4000030)." [PSI:MS]
 comment: Poor fragmentation efficiency or precursor fragmentation intensity thresholds affect MS2 signal but leave MS1 signal unchanged.
 is_a: MS:4000003 ! single value
 is_a: MS:1001848 ! simple ratio of two values
+relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-
 
 [Term]
 id: MS:4000050
