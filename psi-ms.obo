@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.176
-date: 17:09:2024 15:26
-saved-by: Michael Hoopmann
+data-version: 4.1.177
+date: 27:09:2024 07:15
+saved-by: Chris Bielow
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22523,6 +22523,20 @@ def: "Software designed to group multiple mass spectra by high similarity, gener
 is_a: MS:1000531 ! software
 
 [Term]
+id: MS:1003407
+name: Scout
+def: "Identifying crosslinked peptides in complex protein mixtures" [PSI:MS]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003408
+name: Scout score
+def: "Scout identification search engine score" [PSI:MS]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1003407 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
 id: MS:1003409
 name: Stellar
 def: "Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter, a collision cell, and a quadrupole linear ion trap mass analyzer." [PSI:MS]
@@ -24305,20 +24319,6 @@ synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
-
-[Term]
-id: MS:1003407
-name: Scout
-def: "Identifying crosslinked peptides in complex protein mixtures" [PSI:MS]
-is_a: MS:1001456 ! analysis software
-
-[Term]
-id: MS:1003408
-name: Scout score
-def: "Scout identification search engine score" [PSI:MS]
-is_a: MS:1001143 ! PSM-level search engine specific statistic
-relationship: has_order MS:1003407 ! higher score better
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
