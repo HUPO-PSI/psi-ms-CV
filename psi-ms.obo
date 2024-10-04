@@ -22875,7 +22875,7 @@ relationship: has_value_concept STATO:0000209 ! area under curve
 
 [Term]
 id: MS:4000031
-name: ratio of peak area of MS1 vs MS2 signal 
+name: peak area of MS1 vs MS2 signal ratio
 def: "The ratio of the area under TIC of MS1 (MS:4000029) divided by the area under the TIC of MS2 (MS:4000030)." [PSI:MS]
 comment: Poor fragmentation efficiency or precursor fragmentation intensity thresholds affect MS2 signal but leave MS1 signal unchanged.
 is_a: MS:4000003 ! single value
