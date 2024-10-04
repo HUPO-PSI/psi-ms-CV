@@ -22643,6 +22643,12 @@ relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003423
+name: Orbitrap Exploris GC 240
+def: "Orbitrap Exploris GC 240 Mass Spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
