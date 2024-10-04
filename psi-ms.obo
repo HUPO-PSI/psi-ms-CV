@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.179
-date: 18:08:2024 07:15
-saved-by: Chris Bielow
+data-version: 4.1.180
+date: 04:10:2024 07:15
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -7312,11 +7312,12 @@ is_a: MS:1001085 ! protein-level identification attribute
 
 [Term]
 id: MS:1001117
-name: theoretical mass
+name: theoretical neutral mass
 def: "The theoretical neutral mass of the molecule (e.g. the peptide sequence and its modifications) not including its charge carrier." [PSI:PI]
 is_a: MS:1001105 ! peptide sequence-level identification attribute
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+synonym: "theoretical mass" EXACT []
 
 [Term]
 id: MS:1001118
