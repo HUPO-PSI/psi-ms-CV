@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.177
+data-version: 4.1.178
 date: 27:09:2024 07:15
-saved-by: Chris Bielow
+saved-by: Eric Deutsch
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22641,6 +22641,12 @@ def: "The number of matched ions for a crosslinked pair of peptide sequences in 
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003423
+name: Orbitrap Exploris GC 240
+def: "Orbitrap Exploris GC 240 Mass Spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:4000000
