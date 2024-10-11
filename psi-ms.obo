@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.180
-date: 04:10:2024 07:15
+data-version: 4.1.181
+date: 11:10:2024 07:15
 saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
@@ -22651,8 +22651,8 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003424
-name: theoretical m/z observed intensity limited peak spectrum
-def: "Spectrum for which the peaks are limited to a subset of known product ions that are important for subsequent identification, the m/z values are corrected to theoretical values, and the intensity values are experimentally derived." [PSI:PI]
+name: selected fragment theoretical m/z observed intensity spectrum
+def: "Spectrum for which the peaks are limited to a subset of known product ions that are important for subsequent identification, whose m/z values are corrected to theoretical values, and intensity values are experimentally derived." [PSI:PI]
 is_a: MS:1003072 ! spectrum origin type
 
 [Term]
