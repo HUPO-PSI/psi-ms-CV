@@ -22668,6 +22668,13 @@ def: "Spectrum for which the peaks are limited to a subset of known product ions
 is_a: MS:1003072 ! spectrum origin type
 
 [Term]
+id: MS:1003425
+name: quantms
+def: "Is a cloud-based pipeline for quantitative proteomics enables the reanalysis of public proteomics data" [PSI:MS]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001139 ! quantitation software name
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
