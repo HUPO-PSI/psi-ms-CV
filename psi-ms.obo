@@ -22670,7 +22670,7 @@ is_a: MS:1003072 ! spectrum origin type
 [Term]
 id: MS:1003425
 name: quantms
-def: "Is a cloud-based pipeline for quantitative proteomics enables the reanalysis of public proteomics data" [PSI:MS]
+def: "Cloud-based pipeline for quantitative proteomics that enables the reanalysis of public proteomics data." [PMID:38965444]
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001139 ! quantitation software name
 
