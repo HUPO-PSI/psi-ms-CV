@@ -43,8 +43,8 @@ jobs:
       - name: Validate OWL File for OLS
         run: |   
            cd ols4/dataload/rdf2json/target
-           wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/foundry.json
-           wget https://raw.githubusercontent.com/ypriverol/psi-ms-CV/dev/owl-config-ols/fail_owl.json
+           wget https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/dev/owl-config-ols/foundry.json
+           wget https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/dev/owl-config-ols/fail_owl.json
            java -jar rdf2json-1.0-SNAPSHOT.jar --config foundry.json --output foundry_out.json
            if diff foundry_out.json fail_owl.json > /dev/null; then
               echo "The PSI-MS ontology has an error in the owl file and do not allow to import in OLS"
