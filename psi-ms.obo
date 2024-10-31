@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.182
-date: 11:10:2024 07:15
-saved-by: Joshua Klein
+data-version: 4.1.183
+date: 30:10:2024 10:15
+saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22666,6 +22666,13 @@ id: MS:1003424
 name: selected fragment theoretical m/z observed intensity spectrum
 def: "Spectrum for which the peaks are limited to a subset of known product ions that are important for subsequent identification, whose m/z values are corrected to theoretical values, and intensity values are experimentally derived." [PSI:PI]
 is_a: MS:1003072 ! spectrum origin type
+
+[Term]
+id: MS:1003425
+name: quantms
+def: "Cloud-based pipeline for quantitative proteomics that enables the reanalysis of public proteomics data." [PMID:38965444]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001139 ! quantitation software name
 
 [Term]
 id: MS:4000000
