@@ -3,7 +3,7 @@ data-version: 4.1.183
 date: 31:10:2024 10:20
 saved-by: Nithu Sara John
 date: 11:10:2024 07:15
-saved-by: Joshua Kle
+saved-by: Joshua Klein
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -22686,8 +22686,8 @@ is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:1003428
-name: perseus
-def: "A software for interpreting protein quantification, interaction and post-translational modification data." [PSI:MS]
+name: Perseus
+def: "A software for interpreting protein quantification, interaction and post-translational modification data." [PMID:27348712, PSI:MS]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
