@@ -2,6 +2,8 @@ format-version: 1.2
 data-version: 4.1.182
 date: 31:10:2024 10:20
 saved-by: Nithu Sara John
+date: 11:10:2024 07:15
+saved-by: Joshua Kle
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -7743,6 +7745,18 @@ id: MS:1001184
 name: search statistics
 def: "The details of the actual run of the search." [PSI:PI]
 is_a: MS:1001405 ! spectrum identification result details
+
+[Term]
+id: MS:1001185
+name: Mobilion MBI format
+def: "Mobilion MBI file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1001186
+name: Mobilion MBI nativeID format
+def: "Native format defined by frame=xsd:nonNegativeInteger scan=xsd:nonNegativeInteger." [PSI:MS]
+is_a: MS:1000767 ! native spectrum identifier format
 
 [Term]
 id: MS:1001189
