@@ -22705,25 +22705,19 @@ def: "A software for LC-MS data management and analysis." [PSI:MS]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
-[Term]
-id: MS:1003431
-name: OpenMS
-def: "A software for LC-MS data management and analysis." [PSI:MS]
-is_a: MS:1001139 ! quantitation software name
-is_a: MS:1001456 ! analysis software
 
 [Term]
-id: MS:1003432
+id: MS:1003431
 name: pLink
 def: "A tool for the analysis of chemically cross-linked proteins using mass spectrometry." [PSI:MS]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
 [Term]
-id: MS:1003433
+id: MS:1003432
 name: pLink2
 def: "Upgraded version of pLink tool, provides a graphical user interface and faster with newly designed index structure." [PSI:MS]
-is_a: MS:1003432 ! pLink
+is_a: MS:1003431 ! pLink
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
