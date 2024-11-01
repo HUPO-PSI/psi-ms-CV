@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.183
-date: 30:10:2024 10:15
+data-version: 4.1.184
+date: 01:11:2024 10:15
 saved-by: Yasset Perez-Riverol
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
@@ -22538,7 +22538,7 @@ is_a: MS:1000531 ! software
 [Term]
 id: MS:1003407
 name: Scout
-def: "Identifying crosslinked peptides in complex protein mixtures" [PSI:MS]
+def: "Identifying crosslinked peptides in complex protein mixtures" [PMID:39482464]
 is_a: MS:1001456 ! analysis software
 
 [Term]
