@@ -22675,6 +22675,13 @@ def: "Spectrum for which the peaks are limited to a subset of known product ions
 is_a: MS:1003072 ! spectrum origin type
 
 [Term]
+id: MS:1003425
+name: quantms
+def: "Cloud-based pipeline for quantitative proteomics that enables the reanalysis of public proteomics data." [PMID:38965444]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001139 ! quantitation software name
+
+[Term]
 id: MS:1003426
 name: xQuest/xProphet
 def: "A software to identify cross-linked peptides from LC-MS/MS spectra." [PSI:MS]
@@ -22723,12 +22730,6 @@ def: "Upgraded version of pLink tool, provides a graphical user interface and fa
 is_a: MS:1003431 ! pLink
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
-
-id: MS:1003425
-name: quantms
-def: "Cloud-based pipeline for quantitative proteomics that enables the reanalysis of public proteomics data." [PMID:38965444]
-is_a: MS:1001456 ! analysis software
-is_a: MS:1001139 ! quantitation software name
 
 [Term]
 id: MS:4000000
