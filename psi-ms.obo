@@ -3,8 +3,6 @@ data-version: 4.1.185
 date: 31:10:2024 10:20
 saved-by: Nithu Sara John
 date: 30:10:2024 10:15
-saved-by: Yasset Perez-Riverol
-auto-generated-by: OBO-Edit 2.3.1
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
