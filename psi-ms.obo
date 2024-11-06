@@ -22677,7 +22677,7 @@ is_a: MS:1001139 ! quantitation software name
 [Term]
 id: MS:1003426
 name: xQuest/xProphet
-def: "A software to identify cross-linked peptides from LC-MS/MS spectra." [PSI:MS]
+def: "A software to identify cross-linked peptides from LC-MS/MS spectra." [PMID:18327264]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
@@ -22698,7 +22698,7 @@ is_a: MS:1001456 ! analysis software
 [Term]
 id: MS:1003429
 name: FragPipe
-def: "A computational platform for analyzing mass spectrometry-based proteomics data." [PSI:MS]
+def: "A computational platform for analyzing mass spectrometry-based proteomics data." [PMID:37878603]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
@@ -22712,14 +22712,14 @@ is_a: MS:1001456 ! analysis software
 [Term]
 id: MS:1003431
 name: pLink
-def: "A tool for the analysis of chemically cross-linked proteins using mass spectrometry." [PMID:31363125]
+def: "A tool for the analysis of chemically cross-linked proteins using mass spectrometry." [PMID:22772728]
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:1003432
 name: pLink2
-def: "Upgraded version of pLink tool, provides a graphical user interface and faster with newly designed index structure." [PSI:MS]
+def: "Upgraded version of pLink tool, provides a graphical user interface and faster with newly designed index structure." [PMID:31363125]
 is_a: MS:1003431 ! pLink
 is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
