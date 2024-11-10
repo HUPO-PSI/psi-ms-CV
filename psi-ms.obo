@@ -22725,6 +22725,14 @@ is_a: MS:1001139 ! quantitation software name
 is_a: MS:1001456 ! analysis software
 
 [Term]
+id: MS:1003433
+name: Andromeda:delta score
+def: "Score difference to the second best identified peptide with a different amino acid sequence." [PSI:PI]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
