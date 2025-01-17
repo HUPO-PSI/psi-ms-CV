@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.187
+data-version: 4.1.188
 date: 13:01:2025 17:58
-saved-by: Wout Bittremieux
+saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24528,7 +24528,7 @@ relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000105
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000183
@@ -24546,7 +24546,7 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000184
@@ -24564,7 +24564,7 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000185
@@ -24582,7 +24582,7 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000186
@@ -24600,7 +24600,7 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000105
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000187
@@ -24618,7 +24618,7 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000105
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: MS:4000188
@@ -24636,7 +24636,7 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_concept STATO:0000291
-relationship: has_value_type float
+relationship: has_value_type xsd:float
 
 [Term]
 id: PEFF:0000001
