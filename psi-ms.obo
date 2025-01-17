@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.186
-date: 10:11:2024 08:30
-saved-by: Yasset Perez-Riverol
+data-version: 4.1.187
+date: 13:01:2025 17:58
+saved-by: Wout Bittremieux
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -22898,7 +22898,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:4000026
 name: fragment ppm deviation median
 def: "The median of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied." [PSI:MS]
-comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts.
+comment: Factors like temperature, airflow, or instrument calibration can cause mass shifts.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -22911,7 +22911,7 @@ relationship: has_value_concept STATO:0000574 ! center value
 id: MS:4000027
 name: fragment ppm deviation mean
 def: "The mean of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
-comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts. See MS:4000178 for the MS1 equivalent.
+comment: Factors like temperature, airflow, or instrument calibration can cause mass shifts. See MS:4000178 for the MS1 equivalent.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -22924,7 +22924,7 @@ relationship: has_value_concept STATO:0000401 ! sample mean
 id: MS:4000028
 name: fragment ppm deviation sigma
 def: "The standard deviation of the distribution of observed fragment mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
-comment:  Factors like temperature, airflow, or instrument calibration can cause mass shifts.  See MS:4000179 for the MS1 equivalent.
+comment: Factors like temperature, airflow, or instrument calibration can cause mass shifts. See MS:4000179 for the MS1 equivalent.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -22939,7 +22939,7 @@ name: area under TIC in MS1
 def: "The area under the total ion current chromatogram (MS:1000235) of all MS1 spectra." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides.
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -22951,7 +22951,7 @@ name: area under TIC in MS2
 def: "The area under the total ion current chromatogram (MS:1000235) of all MS2 spectra." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content. The signal can be affected by contamination, retention time shifts, or loss of hydrophilic/hydrophobic peptides. Issues such as contamination on the MS front-end and fragmentation efficiency can lead to poor MS signals. Contamination would decrease both MS1 and MS2 S/N, while poor fragmentation efficiency affects MS2 signal but leaves MS1 signal unchanged.
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
@@ -22964,7 +22964,7 @@ def: "The ratio of the area under TIC of MS1 (MS:4000029) divided by the area un
 comment: Poor fragmentation efficiency or precursor fragmentation intensity thresholds affect MS2 signal but leave MS1 signal unchanged.
 is_a: MS:4000003 ! single value
 is_a: MS:1001848 ! simple ratio of two values
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
@@ -22998,8 +22998,8 @@ relationship: has_units UO:0000010 ! second
 
 [Term]
 id: MS:4000052
-name: XIC-Height quartile ratios
-def: "The log ratio of successive XIC height quartiles. The metric's value triplet represents the log ratios of XIC-height-Q2 to XIC-height-Q1, XIC-height-Q3 to XIC-height-Q2, XIC-height max to XIC-height-Q3." [PSI:MS]
+name: obsolete XIC-Height quartile ratios
+def: "OBSOLETE. The log ratio of successive XIC height quartiles. The metric's value triplet represents the log ratios of XIC-height-Q2 to XIC-height-Q1, XIC-height-Q3 to XIC-height-Q2, XIC-height max to XIC-height-Q3." [PSI:MS]
 synonym: "XIC-Height-Q2" RELATED [PMID:24494671]
 synonym: "XIC-Height-Q3" RELATED [PMID:24494671]
 synonym: "XIC-Height-Q4" RELATED [PMID:24494671]
@@ -23010,6 +23010,8 @@ relationship: has_metric_category MS:4000018 ! XIC metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 relationship: has_units UO:0000191 ! fraction
+is_obsolete: true
+replaced_by: MS:4000182
 
 [Term]
 id: MS:4000053
@@ -23027,8 +23029,8 @@ relationship: has_units UO:0000010 ! second
 
 [Term]
 id: MS:4000054
-name: TIC quarters RT fraction
-def: "The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:MS]
+name: obsolete TIC quarters RT fraction
+def: "OBSOLETE. The interval when the respective quarter of the TIC accumulates divided by retention time duration." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. The metric provides information on the sample (compound) flow along the chromatographic run, potentially revealing poor chromatographic performance, such as the absence of a signal for a significant portion of the run.
 synonym: "RT-TIC-Q1" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q2" RELATED [PMID:24494671]
@@ -23041,11 +23043,13 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000191 ! fraction
+is_obsolete: true
+replaced_by: MS:4000183
 
 [Term]
 id: MS:4000055
-name: MS1 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:MS]
+name: obsolete MS1 quarter RT fraction
+def: "OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. For MS1 scans, the values are expected to be in a similar range across samples of the same type.
 synonym: "RT-MS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MS-Q2" RELATED [PMID:24494671]
@@ -23058,11 +23062,13 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000191 ! fraction
+is_obsolete: true
+replaced_by: MS:4000184
 
 [Term]
 id: MS:4000056
-name: MS2 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:MS]
+name: obsolete MS2 quarter RT fraction
+def: "OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
 synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
@@ -23075,11 +23081,13 @@ relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000191 ! fraction
+is_obsolete: true
+replaced_by: MS:4000185
 
 [Term]
 id: MS:4000057
-name: MS1 TIC-change quartile ratios
-def: "The log ratios of successive TIC-change quartiles. The TIC changes are the list of MS1 total ion current (TIC) value changes from one to the next scan, produced when each MS1 TIC is subtracted from the preceding MS1 TIC. The metric's value triplet represents the log ratio of the TIC-change Q2 to Q1, Q3 to Q2, TIC-change-max to Q3" [PSI:MS]
+name: obsolete MS1 TIC-change quartile ratios
+def: "OBSOLETE. The log ratios of successive TIC-change quartiles. The TIC changes are the list of MS1 total ion current (TIC) value changes from one to the next scan, produced when each MS1 TIC is subtracted from the preceding MS1 TIC. The metric's value triplet represents the log ratio of the TIC-change Q2 to Q1, Q3 to Q2, TIC-change-max to Q3" [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation.This metric evaluates the stability (similarity) of MS1 TIC values from scan to scan along the LC run. High log ratios representing very large intensity differences between pairs of scans might be due to electrospray instability or presence of a chemical contaminant.
 synonym: "MS1-TIC-Change-Q2" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Change-Q3" RELATED [PMID:24494671]
@@ -23091,11 +23099,13 @@ relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
+is_obsolete: true
+replaced_by: MS:4000186
 
 [Term]
 id: MS:4000058
-name: MS1 TIC quartile ratios
-def: "The log ratios of successive TIC quartiles. The metric's value triplet represents the log ratios of TIC-Q2 to TIC-Q1, TIC-Q3 to TIC-Q2, TIC-max to TIC-Q3." [PSI:MS]
+name: obsolete MS1 TIC quartile ratios
+def: "OBSOLETE. The log ratios of successive TIC quartiles. The metric's value triplet represents the log ratios of TIC-Q2 to TIC-Q1, TIC-Q3 to TIC-Q2, TIC-max to TIC-Q3." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. The ratios provide information on the distribution of the TIC values for one LC-MS run. Within an experiment, with the same LC setup, values should be comparable between samples.
 synonym: "MS1-TIC-Q2" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Q3" RELATED [PMID:24494671]
@@ -23107,6 +23117,8 @@ relationship: has_metric_category MS:4000017 ! chromatogram metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
+is_obsolete: true
+replaced_by: MS:4000187
 
 [Term]
 id: MS:4000059
@@ -24155,7 +24167,7 @@ name: area under TIC
 def: "The area under the total ion chromatogram." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition. Differences between samples of an experiment may indicate differences in the dynamic range and/or in the sample content.
 is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 
 [Term]
@@ -24164,7 +24176,7 @@ name: area under TIC RT quantiles
 def: "The area under the total ion chromatogram of the retention time quantiles. Number of quantiles are given by the n-tuple." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. Differences between samples of an experiment may indicate differences in chromatographic performance, differences in the dynamic range and/or in the sample content.
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000017 ! chromatogram metric
 
 [Term]
@@ -24200,7 +24212,7 @@ name: MS2 precursor intensity range
 def: "Minimum and maximum MS2 precursor intensity recorded." [PSI:MS]
 comment: The metric informs about the dynamic range of the acquisition.
 is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free
+relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 
 [Term]
@@ -24485,8 +24497,8 @@ relationship: has_column NCIT:C150827 ! Number of Occurrences
 
 [Term]
 id: MS:4000181
-name: identified MS2 quarter RT fraction
-def: "The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration." [PSI:MS]
+name: obsolete identified MS2 quarter RT fraction
+def: "OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration." [PSI:MS]
 comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -24499,6 +24511,132 @@ synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
+is_obsolete: true
+replaced_by: MS:4000188
+
+[Term]
+id: MS:4000182
+name: XIC-Height quantile ratios
+def: "The log ratio of successive XIC height quantiles. A value triplet represents the original QuaMeter metrics, the log ratios of XIC-Height-Q2 to XIC-Height-Q1, XIC-Height-Q3 to XIC-Height-Q2, XIC-Height max to XIC-Height-Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+synonym: "XIC-Height-Q2" RELATED [PMID:24494671]
+synonym: "XIC-Height-Q3" RELATED [PMID:24494671]
+synonym: "XIC-Height-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000105
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000183
+name: TIC quantile RT fraction
+def: "The interval when the respective quantile of the TIC accumulates divided by retention time duration. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. The metric provides information on the sample (compound) flow along the chromatographic run, potentially revealing poor chromatographic performance, such as the absence of a signal for a significant portion of the run.
+synonym: "RT-TIC-Q1" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q2" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q3" RELATED [PMID:24494671]
+synonym: "RT-TIC-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000184
+name: MS1 quantile RT fraction
+def: "The interval used for acquisition of quantiles of all MS1 events divided by retention time duration. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. For MS1 scans, the values are expected to be in a similar range across samples of the same type.
+synonym: "RT-MS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MS-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000185
+name: MS2 quantile RT fraction
+def: "The interval used for acquisition of quantiles of all MS2 events divided by retention time duration. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
+synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000186
+name: MS1 TIC-change quantile ratios
+def: "The log ratios of successive TIC-change quantiles. The TIC changes are the list of MS1 total ion current (TIC) value changes from one to the next scan, produced when each MS1 TIC is subtracted from the preceding MS1 TIC. A value triplet represents the original QuaMeter metrics, the log ratio of the TIC-change Q2 to Q1, Q3 to Q2, TIC-change-max to Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. This metric evaluates the stability (similarity) of MS1 TIC values from scan to scan along the LC run. High log ratios representing very large intensity differences between pairs of scans might be due to electrospray instability or presence of a chemical contaminant.
+synonym: "MS1-TIC-Change-Q2" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Change-Q3" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Change-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000105
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000187
+name: MS1 TIC quantile ratios
+def: "The log ratios of successive TIC quantiles. A value triplet represents the original QuaMeter metrics, the log ratios of TIC-Q2 to TIC-Q1, TIC-Q3 to TIC-Q2, TIC-max to TIC-Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: The metric informs about the dynamic range of the acquisition along the chromatographic separation. The ratios provide information on the distribution of the TIC values for one LC-MS run. Within an experiment, with the same LC setup, values should be comparable between samples.
+synonym: "MS1-TIC-Q2" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Q3" RELATED [PMID:24494671]
+synonym: "MS1-TIC-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000105
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
+
+[Term]
+id: MS:4000188
+name: identified MS2 quantile RT fraction
+def: "The interval used for acquisition of quantiles of all identified MS2 events, after user-defined acceptance criteria are applied, divided by retention time duration. The number of values in the tuple implies the quantile mode. In case of multiple acceptance criteria (FDR) available in proteomics, PSM-level FDR should be used for better comparability." [PSI:MS]
+comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
+synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
+synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_concept STATO:0000291
+relationship: has_value_type float
 
 [Term]
 id: PEFF:0000001
