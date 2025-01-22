@@ -22762,7 +22762,7 @@ relationship: has_units MS:1002814 ! volt-second per square centimeter
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
-id: MS:1003437
+id: MS:1003438
 name: highest observed ion mobility
 def: "Highest ion mobility value observed in the ion mobility measurement array." [PSI:MS]
 is_a: MS:1000808 ! chromatogram attribute
