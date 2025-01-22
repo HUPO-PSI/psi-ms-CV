@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.188
+data-version: 4.1.189
 date: 13:01:2025 17:58
 saved-by: Joshua Klein
 default-namespace: MS
@@ -22731,6 +22731,46 @@ def: "Score difference to the second best identified peptide with a different am
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003434
+name: ion mobility frame representation
+def: "Representation of one or more spectra acquired across an ion mobility dimension." [PSI:MS]
+is_a: MS:1000499 ! spectrum attribute
+
+[Term]
+id: MS:1003435
+name: ion mobility profile frame
+def: "An ion mobility frame where the ion mobility dimension is continuous." [PSI:MS]
+is_a: MS:1003434 ! ion mobility frame representation
+
+[Term]
+id: MS:1003436
+name: ion mobility centroid frame
+def: "An ion mobility frame where the ion mobility dimension is processed into discrete peaks of zero width." [PSI:MS]
+is_a: MS:1003434 ! ion mobility frame representation
+
+[Term]
+id: MS:1003437
+name: lowest observed ion mobility
+def: "Lowest ion mobility value observed in the ion mobility measurement array." [PSI:MS]
+is_a: MS:1000808 ! chromatogram attribute
+is_a: MS:1003058 ! spectrum property
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_units UO:0000010 ! second
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003437
+name: highest observed ion mobility
+def: "Highest ion mobility value observed in the ion mobility measurement array." [PSI:MS]
+is_a: MS:1000808 ! chromatogram attribute
+is_a: MS:1003058 ! spectrum property
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_units UO:0000010 ! second
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
