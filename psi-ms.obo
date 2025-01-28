@@ -8502,7 +8502,7 @@ def: "A serine protease that hydrolyzes peptide bonds at the C-terminus of threo
 is_a: MS:1001045 ! cleavage agent name
 synonym: "alpha-lytic endopeptidase" EXACT []
 synonym: "alpha-lytic protease" EXACT []
-relationship: has_regexp MS:1003435 ! /(?<=[TASV])/
+relationship: has_regexp MS:1003435 ! (?<=[TASV])
 
 [Term]
 id: MS:1001314
