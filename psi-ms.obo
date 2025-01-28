@@ -12877,7 +12877,7 @@ is_a: MS:1001180 ! Cleavage agent regular expression
 [Term]
 id: MS:1003435
 name: (?<=[TSAV])
-def: "Regular expression for alphaLP."
+def: "Regular expression for alphaLP." [PSI:PI]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
