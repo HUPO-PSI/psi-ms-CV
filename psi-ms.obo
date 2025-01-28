@@ -8502,6 +8502,7 @@ def: "A serine protease that hydrolyzes peptide bonds at the C-terminus of threo
 is_a: MS:1001045 ! cleavage agent name
 synonym: "alpha-lytic endopeptidase" EXACT []
 synonym: "alpha-lytic protease" EXACT []
+relationship: has_regexp MS:1003435 ! /(?<=[TASV])/
 
 [Term]
 id: MS:1001314
@@ -12871,6 +12872,12 @@ is_a: MS:1001180 ! Cleavage agent regular expression
 id: MS:1001960
 name: (?<=W)
 def: "Regular expression for 2-iodobenzoate." [PSI:PI]
+is_a: MS:1001180 ! Cleavage agent regular expression
+
+[Term]
+id: MS:1003435
+name: /(?<=[TSAV])/
+def: "Regular expression for alphaLP."
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
