@@ -8501,7 +8501,6 @@ name: AlphaLP
 def: "A serine protease that hydrolyzes peptide bonds at the C-terminus of threonine, alanine, serine, and valine."
 is_a: MS:1001045 ! cleavage agent name
 synonym: "alpha-lytic endopeptidase" EXACT []
-synonym: "alpha-lytic protease" EXACT []
 
 [Term]
 id: MS:1001314
