@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.189
-date: 13:01:2025 17:58
+data-version: 4.1.190
+date: 07:02:2025 17:58
 saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -17948,6 +17948,14 @@ name: measured element
 def: "The component or dimension of an object being measured, for example the temperature of an instrument component over time." [PSI:MS]
 relationship: part_of MS:1000513 ! binary data array
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1002717
+name: Waters DATA Convert
+def: "Software for processing and exporting Waters MassLynx and waters_connect data." [PSI:MS]
+is_a: MS:1000694 ! Waters software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1002719
