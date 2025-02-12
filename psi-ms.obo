@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.190
-date: 07:02:2025 17:58
-saved-by: Joshua Klein
+data-version: 4.1.191
+date: 12:02:2025 17:58
+saved-by: Eric Deutsch
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -3603,7 +3603,7 @@ relationship: part_of MS:1000442 ! spectrum
 [Term]
 id: MS:1000500
 name: scan window upper limit
-def: "The lower m/z bound of a mass spectrometer scan window." [PSI:MS]
+def: "The upper m/z bound of a mass spectrometer scan window." [PSI:MS]
 synonym: "mzRangeStop" RELATED []
 is_a: MS:1000549 ! selection window attribute
 relationship: has_units MS:1000040 ! m/z
@@ -3612,7 +3612,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:1000501
 name: scan window lower limit
-def: "The upper m/z bound of a mass spectrometer scan window." [PSI:MS]
+def: "The lower m/z bound of a mass spectrometer scan window." [PSI:MS]
 synonym: "mzRangeStart" RELATED []
 is_a: MS:1000549 ! selection window attribute
 relationship: has_units MS:1000040 ! m/z
