@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.192
+data-version: 4.1.193
 date: 28:02:2025 17:58
 saved-by: Joshua Klein
 default-namespace: MS
@@ -162,37 +162,37 @@ synonym: "General activity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="
 [Term]
 id: NCIT:C20181
 name: Conceptual Entity
-def: "An organizational header for concepts representing mostly abstract entities." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+def: "An organizational header for concepts representing mostly abstract entities." []
 synonym: "Conceptual Entity" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 
 [Term]
 id: NCIT:C16847
 name: Technique
-def: "A practiced and regimented skill or series of actions." [] {http://purl.obolibrary.org/obo/NCIT_C16847="NCI"}
+def: "A practiced and regimented skill or series of actions." []
 is_a: NCIT:C43431 ! Activity
 
 [Term]
 id: NCIT:C19044
 name: Statistical Technique
-def: "A method of analyzing or representing statistical data; a procedure for calculating a statistic." [] {http://purl.obolibrary.org/obo/NCIT_C19044="NCI"}
+def: "A method of analyzing or representing statistical data; a procedure for calculating a statistic." []
 is_a: NCIT:C16847 ! Technique
 
 [Term]
 id: NCIT:C60694
 name: Principal Component
-def: "One of the axes representing the projection of varience resulting from principal component analysis." [] {http://purl.obolibrary.org/obo/NCIT_C60694="NCI"}
+def: "One of the axes representing the projection of varience resulting from principal component analysis." []
 is_a: NCIT:C19044 ! Statistical Technique
 
 [Term]
 id: NCIT:C25337
 name: Number
-def: "A numeral or string of numerals expressing value, quantity, or identification." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+def: "A numeral or string of numerals expressing value, quantity, or identification." []
 is_a: NCIT:C20189 ! Property or Attribute
 
 [Term]
 id: NCIT:C150827
 name: Number of Occurrences
-def: "The number of times something happened." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
+def: "The number of times something happened." []
 synonym: "Number of Occurrences" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 is_a: NCIT:C25337 ! Number
 
