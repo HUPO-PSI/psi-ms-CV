@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.194
-date: 29:05:2025 17:58
-saved-by: Eric Deutsch
+data-version: 4.1.195
+date: 11:06:2025 21:31
+saved-by: David Cox
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24,6 +24,7 @@ remark: creator: Nils Hoffmann < nils.hoffmann <-at-> cebitec.uni-bielefeld.de>
 remark: creator: Julian Uszkoreit <julian.uszkoreit <-at-> ruhr-uni-bochum.de>
 remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
+remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -1027,7 +1028,7 @@ is_a: MS:1000027 ! detector acquisition mode
 [Term]
 id: MS:1000121
 name: SCIEX instrument model
-def: "The brand of instruments from the joint venture between Applied Biosystems and MDS Analytical Technologies (formerly MDS SCIEX). Previously branded as \"Applied Biosystems|MDS SCIEX\"." [PSI:MS]
+def: "SCIEX instrument model." [PSI:MS]
 synonym: "Applied Biosystems|MDS SCIEX" RELATED []
 is_a: MS:1000031 ! instrument model
 
@@ -22800,6 +22801,46 @@ id: MS:1003442
 name: Orbitrap Astral Zoom
 def: "Thermo Scientific Orbitrap Astral Zoom mass spectrometer contains three mass analyzers: a quadrupole analyzer, an Orbitrap analyzer, and an Astral analyzer." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003443
+name: ZenoTOF 8600
+def: "SCIEX ZenoTOF 8600 system." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003444
+name: ZenoTOF 7600+
+def: "SCIEX ZenoTOF 7600+ system." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003445
+name: SCIEX 7500+
+def: "SCIEX 7500+ system." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003446
+name: SCIEX OS
+def: "SCIEX OS software." [PSI:MS]
+is_a: MS:1000690 ! SCIEX software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003447
+name: SCIEX MS Data Converter
+def: "A software for converting SCIEX wiff or wiff2 format to mzML." [PSI:MS]
+is_a: MS:1000690 ! SCIEX software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003448
+name: ABI WIFF format
+def: "SCIEX WIFF2 file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:4000000
