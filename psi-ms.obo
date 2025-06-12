@@ -22838,7 +22838,7 @@ is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1003448
-name: ABI WIFF format
+name: SCIEX WIFF2 format
 def: "SCIEX WIFF2 file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
