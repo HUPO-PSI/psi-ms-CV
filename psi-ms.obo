@@ -22802,6 +22802,12 @@ def: "Thermo Scientific Orbitrap Astral Zoom mass spectrometer contains three ma
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
+id: MS:1003443
+name: ZenoTOF 8600
+def: "SCIEX ZenoTOF 8600." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
