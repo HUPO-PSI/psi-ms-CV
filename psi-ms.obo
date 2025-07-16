@@ -22843,6 +22843,12 @@ def: "SCIEX WIFF2 file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
+id: MS:1003449
+name: ISQ 7000
+def: "Thermo Scientific  ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
