@@ -22849,6 +22849,26 @@ def: "Thermo Scientific  ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
+id: MS:1003450
+name: FAIMS compensation voltage ramp start
+def: "DC potential at the start of the FAIMS voltage ramp." [PSI:PI]
+is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003254 ! peak attribute
+relationship: has_units UO:0000218 ! volt
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003451
+name: FAIMS compensation voltage ramp end
+def: "DC potential at the end of the FAIMS voltage ramp." [PSI:PI]
+is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003254 ! peak attribute
+relationship: has_units UO:0000218 ! volt
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
