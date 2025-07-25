@@ -24824,7 +24824,7 @@ is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_units UO:0000189 ! count unit
 relationship: has_value_type xsd:int
 
@@ -24836,7 +24836,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_units MS:1000040 ! m/z
 relationship: has_value_type xsd:float
 
@@ -24848,7 +24848,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_units UO:0000189 ! count unit
 relationship: has_value_type xsd:int
 
@@ -24861,8 +24861,8 @@ relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
-relationship: has_metric_category id: MS:1000235 ! total ion current chromatogram
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000235 ! total ion current chromatogram
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float
 
@@ -24875,8 +24875,8 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
-relationship: has_metric_category id: MS:1000235 ! total ion current chromatogram
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000235 ! total ion current chromatogram
 relationship: has_units MS:1000043 ! intensity unit
 relationship: has_value_type xsd:float
 
@@ -24888,7 +24888,7 @@ is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category id: MS:1000792 ! isolation window attribute
+relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_units UO:0000189 ! count unit
 relationship: has_value_type xsd:int
 
