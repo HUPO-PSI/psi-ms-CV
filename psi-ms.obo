@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.195
-date: 11:06:2025 21:31
-saved-by: David Cox
+data-version: 4.1.198
+date: 25:07:2025 21:40
+saved-by: Wout Bittremieux
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24820,7 +24820,7 @@ relationship: has_value_type xsd:int
 id: MS:4000195
 name: DIA isolation window m/z widths
 def: "The minimum and maximum m/z width of the DIA isolation windows, defined as the subtraction between the high m/z boundary and the low m/z boundary. For fixed-window DIA methods, the same value is reported twice." [PSI:MS]
-MS:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24832,7 +24832,7 @@ relationship: has_value_type xsd:float
 id: MS:4000196
 name: DIA isolation window count
 def: "The minimum and maximum number of times any specific DIA isolation window is measured via MS/MS. In case all isolation windows are sampled the same number of times, this value is reported twice." [PSI:MS]
-MS:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24844,7 +24844,7 @@ relationship: has_value_type xsd:int
 id: MS:4000197
 name: DIA isolation window half TIC RT
 def: "The minimum and maximum retention time in which at least half of the TIC for any given DIA isolation window compared to the full TIC in this isolation window has been collected." [PSI:MS]
-MS:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000016 ! retention time metric
@@ -24859,7 +24859,7 @@ id: MS:4000198
 name: DIA isolation window TIC
 def: "The minimum and maximum TIC collected in any given DIA isolation window." [PSI:MS]
 comment: "Because isolation windows measure different m/z regions, the TIC for their MS/MS signals may vary considerably from each other."
-MS:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24872,7 +24872,7 @@ relationship: has_value_type xsd:float
 id: MS:4000199
 name: DIA isolation window peak count
 def: "For each DIA isolation window, we compute the median number of peaks per MS/MS measurement. This metric reports the lowest and highest peak count medians among the isolation windows." [PSI:MS]
-MS:4000004 ! n-tuple
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
@@ -24884,7 +24884,7 @@ relationship: has_value_type xsd:int
 id: MS:4000200
 name: run outlier score PCA distance
 def: "Outlier score for MS runs based on the median Euclidean distance for each run to every other run after robust PCA transformation of the QC metrics for all runs." [doi:10.1021/ac4034455, PSI:MS]
-MS:4000005 ! table
+is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000086 ! mzQC input reference
 relationship: has_column OBI:0200114 ! euclidean distance calculation
@@ -24893,7 +24893,7 @@ relationship: has_column OBI:0200114 ! euclidean distance calculation
 id: MS:4000201
 name: run outlier score LoOP
 def: "Outlier score for MS runs based on the local outlier probabilities (LoOP) algorithm applied to QC metrics from all runs." [doi:10.1021/acs.jproteome.6b00028, PSI:MS]
-MS:4000005 ! table
+is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000086 ! mzQC input reference
 relationship: has_column NCIT:C54154 ! Probability
