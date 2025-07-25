@@ -22845,7 +22845,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1003449
 name: ISQ 7000
-def: "Thermo Scientific  ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
+def: "Thermo Scientific ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
