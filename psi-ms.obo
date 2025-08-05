@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.196
+data-version: 4.1.198
 date: 17:07:2025 10:05
 saved-by: Samuel Wein
 default-namespace: MS
@@ -19759,6 +19759,18 @@ id: MS:1002991
 name: python-psims
 def: "python-psims, a library for generating mzML and mzIdentML." [https://github.com/mobiusklein/psims]
 is_a: MS:1002333 ! conversion software
+
+[Term]
+id: MS:1002992
+name: Orbitrap Exploris GC-MS
+def: "Thermo Scientific Orbitrap Exploris GC-MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1002993
+name: Q Exactive Focus
+def: "Q Exactive Focus Hybrid Quadrupole-Orbitrap Mass Spectrometer." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002995
