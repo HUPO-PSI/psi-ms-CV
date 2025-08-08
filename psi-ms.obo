@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.197
-date: 17:07:2025 21:31
-saved-by: David Cox
+data-version: 4.1.198
+date: 17:07:2025 10:05
+saved-by: Samuel Wein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -22853,6 +22853,32 @@ id: MS:1003448
 name: SCIEX WIFF2 format
 def: "SCIEX WIFF2 file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003449
+name: ISQ 7000
+def: "Thermo Scientific ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003450
+name: FAIMS compensation voltage ramp start
+def: "DC potential at the start of the FAIMS voltage ramp." [PSI:PI]
+is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003254 ! peak attribute
+relationship: has_units UO:0000218 ! volt
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003451
+name: FAIMS compensation voltage ramp end
+def: "DC potential at the end of the FAIMS voltage ramp." [PSI:PI]
+is_a: MS:1002892 ! ion mobility attribute
+is_a: MS:1000455 ! ion selection attribute
+is_a: MS:1003254 ! peak attribute
+relationship: has_units UO:0000218 ! volt
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
