@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.199
+data-version: 4.1.200
 date: 25:07:2025 21:40
-saved-by: Wout Bittremieux
+saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -8496,14 +8496,6 @@ def: "Cleavage agent Trypsin/P." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
 relationship: has_regexp MS:1001339 ! (?<=[KR])
 
-[Term]
-id: MS:1003434
-name: AlphaLP
-def: "A serine protease that hydrolyzes peptide bonds at the C-terminus of threonine, alanine, serine, and valine. (EC:3.4.21.12)" [DOI:10.1038/228438a0, DOI:10.1021/bi00445a015]
-is_a: MS:1001045 ! cleavage agent name
-synonym: "alpha-lytic endopeptidase" EXACT []
-synonym: "alpha-lytic protease" EXACT []
-relationship: has_regexp MS:1003435 ! (?<=[TASV])
 
 [Term]
 id: MS:1001314
@@ -12873,12 +12865,6 @@ is_a: MS:1001180 ! Cleavage agent regular expression
 id: MS:1001960
 name: (?<=W)
 def: "Regular expression for 2-iodobenzoate." [PSI:PI]
-is_a: MS:1001180 ! Cleavage agent regular expression
-
-[Term]
-id: MS:1003435
-name: (?<=[TSAV])
-def: "Regular expression for alphaLP." [PSI:PI]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
@@ -19773,6 +19759,12 @@ def: "Q Exactive Focus Hybrid Quadrupole-Orbitrap Mass Spectrometer." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
+id: MS:1002994
+name: Orbitrap Excedion Pro
+def: "Thermo Scientific Orbitrap Excedion Pro." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:1002995
 name: Andromeda:PEP
 def: "Posterior error probability of the best identified peptide of the Andromeda search engine." [PSI:PI]
@@ -22767,6 +22759,21 @@ def: "Score difference to the second best identified peptide with a different am
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003434
+name: AlphaLP
+def: "A serine protease that hydrolyzes peptide bonds at the C-terminus of threonine, alanine, serine, and valine. (EC:3.4.21.12)" [DOI:10.1038/228438a0, DOI:10.1021/bi00445a015]
+is_a: MS:1001045 ! cleavage agent name
+synonym: "alpha-lytic endopeptidase" EXACT []
+synonym: "alpha-lytic protease" EXACT []
+relationship: has_regexp MS:1003435 ! (?<=[TASV])
+
+[Term]
+id: MS:1003435
+name: (?<=[TSAV])
+def: "Regular expression for alphaLP." [PSI:PI]
+is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
 id: MS:1003437
