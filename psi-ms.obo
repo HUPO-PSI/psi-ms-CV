@@ -1,7 +1,7 @@
 format-version: 1.2
 data-version: 4.1.200
-date: 25:07:2025 21:40
-saved-by: Joshua Klein
+date: 19:08:2025 10:21
+saved-by: Julian Uszkoreit
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24942,6 +24942,178 @@ is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
 relationship: has_column MS:4000086 ! mzQC input reference
 relationship: has_column NCIT:C54154 ! Probability
+
+[Term]
+id: MS:4000202
+name: base peak intensity maximum
+def: "This metric reflects the maximum base peak intensity (MS:1000505) of all spectra in a single run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000505 ! base peak intensity
+
+[Term]
+id: MS:4000203
+name: base peak intensitiy maxima per time ranges table
+def: "This metric reflects the maximum base peak intensity (MS:1000505) of all spectra in a single run in the given retention time ranges. The time windows are specified by the 2nd column defining the start time in seconds and the 3rd column defining the duration in seconds. To define a range from a starting time until the run's end, -1 may be used for the duration with 0 for teh start." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_column MS:1000505 ! base peak intensity
+relationship: has_column UO:0000010 ! second
+relationship: has_column NCIT:C25330 ! Duration
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+
+[Term]
+id: MS:4000204
+name: total ion current maximum
+def: "This metric is the maximum total ion current (MS:1000285) of all spectra in a single run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000205
+name: total ion current maxima per time ranges table
+def: "This metric is the maximum total ion current (MS:1000285) of all spectra in a single run in the given retention time ranges. The time windows are specified by the 2nd column defining the start time in seconds and the 3rd column defining the end time in seconds. To define a range from a starting time until the run's end use -1 in the 3rd column." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_column MS:1000285 ! total ion current
+relationship: has_column UO:0000010 ! second
+relationship: has_column UO:0000010 ! second
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+
+[Term]
+id: MS:4000206
+name: filtered PSMs ppm deviation table
+def: "This table of metrics reflects the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied for a single run. This metric is a table representing the precursor PPM deviations accumulated using the mean (MS:4000178), standard deviation (sigma, MS:4000179), median, 1st quartile and 3rd quartile." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:4000178 ! precursor ppm deviation mean
+relationship: has_column MS:4000179 ! precursor ppm deviation sigma
+relationship: has_column STATO:0000574 ! median
+relationship: has_column STATO:0000167 ! first quartile
+relationship: has_column STATO:0000170 ! third quartile
+
+[Term]
+id: MS:4000207
+name: fractions per charge statues of detected quantification data points table
+def: "The fraction of all data points detected for quantification purposes within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:1000041 ! charge state
+relationship: has_column UO:0000191 ! fraction
+relationship: has_relation MS:4000102 ! number of detected quantification data points
+
+[Term]
+id: MS:4000208
+name: fractions per charge state of identified quantification data points table
+def: "The fraction of all data points detected and identified for quantification purposes within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000009 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:1000041 ! charge state
+relationship: has_column UO:0000191 ! fraction
+relationship: has_relation MS:4000103 ! number of identified quantification data points
+
+[Term]
+id: MS:4000209
+name: fractions per charge state of peptide spectrum matches table
+def: "The fraction of filtered peptide spectrum matches (PSMs) within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher. The numbers here are recorded after any filtering for PSM level quality (e.g. FDR filtering)." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000009 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:1000041 ! charge state
+relationship: has_column UO:0000191 ! fraction
+relationship: has_relation MS:4000063 ! MS2 known precursor charges fractions
+relationship: has_relation MS:4000168 ! ratio of 1+ over 2+ of identified MS2 known precursor charges
+relationship: has_relation MS:4000170 ! ratio of 3+ over 2+ of identified MS2 known precursor charges
+relationship: has_relation MS:4000172 ! ratio of 4+ over 2+ of identified MS2 known precursor charges
+relationship: has_relation MS:4000174 ! mean MS2 precursor charge in identified spectra
+relationship: has_relation MS:4000176 ! median MS2 precursor charge in identified spectra
+
+[Term]
+id: MS:4000210
+name: pump pressure table
+def: "Tabular representation of the pump pressure in an LC/MS run, defined by the retention times and respectively applied pressures. The values are similar to the ones saved in MS:1000821, but using the table representation." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_column MS:1000894 ! retention time
+relationship: has_column UO:0000109 ! pressure unit
+relationship: has_relation MS:1000821 ! pressure array
+
+[Term]
+id: MS:4000211
+name: MS1 total ion current table
+def: "Tabular representation of the total ion current (TIC) of the MS1 spectra. It is a tabluar representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS1 spectra." [PSI:MS]
+name: total ion current chromatogram
+is_a: MS:4000005 ! table
+relationship: has_column MS:1000285 ! total ion current
+relationship: has_column UO:0000010 ! second
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_relation MS:1000235 ! total ion current chromatogram
+
+[Term]
+id: MS:4000212
+name: MS2 total ion current table
+def: "Tabular representation of the total ion current (TIC) of the MS2 spectra. It is a tabluar representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS2 spectra." [PSI:MS]
+name: total ion current chromatogram
+is_a: MS:4000005 ! table
+relationship: has_column MS:1000285 ! total ion current
+relationship: has_column UO:0000010 ! second
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000015 ! multiple spectra based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_relation MS:1000235 ! total ion current chromatogram
+
+[Term]
+id: MS:4000213
+name: characteristics of spike in and reference peptide table
+def: "Observed and expected characteristics for spiked in or reference peptides. The expected peptides are encoded by proforma peptidoform sequence (MS:1003169). The 'predicted retention time' should be interpreted as the expected retention time of a reference measurement." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_column MS:1003169 ! proforma peptidoform sequence
+relationship: has_optional_column MS:1001805 ! quantification datatype
+relationship: has_optional_column MS:4000072 ! observed mass accuracy
+relationship: has_optional_column MS:1000894 ! retention time
+relationship: has_optional_column MS:1000897 ! predicted retention time
+relationship: has_optional_column MS:1003251 ! count of identified spectra
+
+[Term]
+id: MS:4000214
+name: identified accessions in all ambiguity groups count
+def: "The number of accessions in identified protein ambiguity groups that have been identified. This is basically the number of accessions in the groups, which were counted in 'MS:1002404 ! count of identified proteins', which hence must be greater or equal to this number." [PSI:PI]
+is_a: MS:4000003 ! single value
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_relation MS:1002404 ! count of identified proteins
+relationship: has_relation MS:1002704 ! protein-level result list attribute
+
+[Term]
+id: MS:4000215
+name: fractions of missed cleavages table
+def: "The fraction of identified peptides with corresponding number of missed cleavages after user-defined acceptance criteria are applied. The number of missed cleavages per peptide is given in the 'number of missed cleavages' column, the respective fraction of such peptides identified in the 'fraction' column. The highest 'missed cleavages' row is to be interpreted as that number of missed cleavages or higher." [PSI:MS]
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_column MS:1003044 ! number of missed cleavages
+relationship: has_column UO:0000191 ! fraction
 
 [Term]
 id: PEFF:0000001
