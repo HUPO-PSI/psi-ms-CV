@@ -25056,7 +25056,6 @@ relationship: has_relation MS:1000821 ! pressure array
 id: MS:4000211
 name: MS1 total ion current table
 def: "Tabular representation of the total ion current (TIC) of the MS1 spectra. It is a tabluar representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS1 spectra." [PSI:MS]
-name: total ion current chromatogram
 is_a: MS:4000005 ! table
 relationship: has_column MS:1000285 ! total ion current
 relationship: has_column UO:0000010 ! second
@@ -25070,7 +25069,6 @@ relationship: has_relation MS:1000235 ! total ion current chromatogram
 id: MS:4000212
 name: MS2 total ion current table
 def: "Tabular representation of the total ion current (TIC) of the MS2 spectra. It is a tabluar representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS2 spectra." [PSI:MS]
-name: total ion current chromatogram
 is_a: MS:4000005 ! table
 relationship: has_column MS:1000285 ! total ion current
 relationship: has_column UO:0000010 ! second
