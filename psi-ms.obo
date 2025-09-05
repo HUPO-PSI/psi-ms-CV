@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.200
-date: 25:07:2025 21:40
-saved-by: Joshua Klein
+data-version: 4.1.300
+date: 05:09:2025 15:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -25,6 +25,7 @@ remark: creator: Julian Uszkoreit <julian.uszkoreit <-at-> ruhr-uni-bochum.de>
 remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
 remark: creator: David Cox <david.cox <-at-> sciex.com>
+remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -22886,6 +22887,648 @@ is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003452 
+name: Ionicon Analytik instrument model
+def: "Ionicon Analytik instrument model." [PSI:MS]
+is_a: MS:1000031 ! instrument model
+
+[Term]
+id: MS:1003453
+name: JEOL instrument model
+def: "JEOL instrument model." [PSI:MS]
+is_a: MS:1000031 ! instrument model
+
+[Term]
+id: MS:1003454
+name: IONTOF instrument model
+def: "IONTOF instrument model." [PSI:MS]
+is_a: MS:1000031 ! instrument model
+
+[Term]
+id: MS:1003455
+name: PerkinElmer instrument model
+def: "PerkinElmer instrument model." [PSI:MS]
+is_a: MS:1000031 ! instrument model
+
+[Term]
+id: MS:1003456
+name: TripleTOF 6600+
+def: "SCIEX TripleTOF 6600+ triple quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003457
+name: Triple Quad 5500+
+def: "SCIEX Triple Quad 5500+ triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003458
+name: Triple Quad 5500+ QTRAP Ready
+def: "SCIEX Triple Quad 5500+ QTRAP Ready quadrupole - linear ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+
+[Term]
+id: MS:1003459
+name: APEX-Qe 9.4T
+def: "Bruker APEX-Qe 9.4T FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1001556 ! Bruker Daltonics apex series
+
+[Term]
+id: MS:1003460
+name: autoflex speed TOF/TOF
+def: "Bruker autoflex speed TOF/TOF MALDI TOF/TOF mass spectrometer." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003461
+name: esquire 3000
+def: "Bruker esquire 3000 ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1001533 ! Bruker Daltonics esquire series
+
+[Term]
+id: MS:1003462
+name: maXis impact
+def: "Bruker maXis impact quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001547 ! Bruker Daltonics maXis series
+
+[Term]
+id: MS:1003463
+name: maXis impact HD
+def: "Bruker maXis impact HD quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001547 ! Bruker Daltonics maXis series
+
+[Term]
+id: MS:1003464
+name: maXis 3G
+def: "Bruker maXis 3G quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001547 ! Bruker Daltonics maXis series
+
+[Term]
+id: MS:1003465
+name: micrOTOF-Q IITM
+def: "Bruker micrOTOF-Q IITM Q-q time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
+
+[Term]
+id: MS:1003466
+name: solariX XR
+def: "Bruker solariX XR FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1001548 ! Bruker Daltonics solarix series
+
+[Term]
+id: MS:1003467
+name: amaZon SL
+def: "Bruker amaZon SL ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1001545 ! Bruker Daltonics amaZon series
+
+[Term]
+id: MS:1003468
+name: EVOQ DART-TQ+
+def: "Bruker EVOQ DART-TQ+ triple quadrupole mass spectrometer with Direct Analysis in Real Time (DART) ion source." [PSI:MS]
+is_a: MS:1002294 ! Bruker Daltonics EVOQ series
+
+[Term]
+id: MS:1003469
+name: EVOQ LC-TQ
+def: "Bruker EVOQ LC-TQ triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1002294 ! Bruker Daltonics EVOQ series
+
+[Term]
+id: MS:1003470
+name: EVOQ GC-TQ
+def: "Bruker EVOQ GC-TQ gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1002294 ! Bruker Daltonics EVOQ series
+
+[Term]
+id: MS:1003471
+name: Toxtyper
+def: "Bruker Toxtyper ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003472
+name: impact II VIP
+def: "Bruker impact II VIP quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003473
+name: ecTOF
+def: "Bruker ecTOF gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003474
+name: autoflex maX
+def: "Bruker autoflex maX MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003475
+name: rapifleX MALDI PharmaPulse
+def: "Bruker rapifleX MALDI PharmaPulse MALDI TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003476
+name: smartfleX
+def: "Bruker smartfleX MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003477
+name: neofleX
+def: "Bruker neofleX MALDI TOF/TOF mass spectrometer." [PSI:MS]
+is_a: MS:1001534 ! Bruker Daltonics flex series
+
+[Term]
+id: MS:1003478
+name: MALDI Biotyper
+def: "Bruker MALDI Biotyper MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003479
+name: scimaX
+def: "Bruker scimaX FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003480
+name: timsMetabo
+def: "Bruker timsMetabo TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003481
+name: timsUltra AIP
+def: "Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003482
+name: timsOmni
+def: "Bruker timsOmni TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003483
+name: timsTOF MALDI PharmaPulse
+def: "Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+
+[Term]
+id: MS:1003484
+name: 4000 GC/MS
+def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000489 ! Varian instrument model
+
+[Term]
+id: MS:1003485
+name: 210-MS GC/MS Ion Trap
+def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000489 ! Varian instrument model
+
+[Term]
+id: MS:1003486
+name: LCMS-8030
+def: "Shimadzu LCMS-8030 triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003487
+name: LCMS-8030 Plus
+def: "Shimadzu LCMS-8030 Plus triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003488
+name: GCMS-QP2010 Plus
+def: "Shimadzu GCMS-QP2010 Plus gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003489
+name: LCMS-8060NX
+def: "Shimadzu LCMS-8060NX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003490
+name: GCMS-TQ8050NX
+def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003491
+name: GCMS-TQ8040NX
+def: "Shimadzu GCMS-TQ8040NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003492
+name: GCMS-TQ8040
+def: "Shimadzu GCMS-TQ8040 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003493
+name: GCMS-QP5000
+def: "Shimadzu GCMS-QP5000 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003494
+name: GCMS-QP2020
+def: "Shimadzu GCMS-QP2020 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003495
+name: GCMS-QP2010 Ultra
+def: "Shimadzu GCMS-QP2010 Ultra gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+
+[Term]
+id: MS:1003496
+name: Velos Pro
+def: "Thermo Fisher Scientific Velos Pro ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003497
+name: MALDI LTQ Orbitrap XL
+def: "Thermo Fisher Scientific MALDI LTQ Orbitrap XL linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003498
+name: MALDI LTQ Orbitrap Discovery
+def: "Thermo Fisher Scientific MALDI LTQ Orbitrap Discovery linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003499
+name: TSQ Quantum Access MAX
+def: "Thermo Fisher Scientific TSQ Quantum Access MAX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003500
+name: LTQ Orbitrap Velos ETD
+def: "Thermo Fisher Scientific LTQ Orbitrap Velos ETD linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003501
+name: ISQ LT
+def: "Thermo Fisher Scientific ISQ LT gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003502
+name: ITQ
+def: "Thermo Fisher Scientific ITQ ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003503
+name: Orbitrap Velos Pro
+def: "Thermo Fisher Scientific Orbitrap Velos Pro linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003504
+name: Orbitrap Elite
+def: "Thermo Fisher Scientific Orbitrap Elite linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003505
+name: TSQ Quantum XLS
+def: "Thermo Fisher Scientific TSQ Quantum XLS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003506
+name: TSQ 8000
+def: "Thermo Fisher Scientific TSQ 8000 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003507
+name: DeltaPlus IRMS
+def: "Thermo Fisher Scientific DeltaPlus IRMS isotope ratio mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003508
+name: ACQUITY QDa
+def: "Waters ACQUITY QDa quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003509
+name: LCT Premier
+def: "Waters LCT Premier time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003510
+name: Quattro Premier XE
+def: "Waters Quattro Premier XE triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003511
+name: Synapt G1 HDMS
+def: "Waters Synapt G1 HDMS quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003512
+name: Synapt G2-Si HDMS
+def: "Waters Synapt G2-Si HDMS quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003513
+name: Synapt G1
+def: "Waters Synapt G1 quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003514
+name: Synapt G2 XS QTOF
+def: "Waters Synapt G2 XS QTOF quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003515
+name: Xevo TQ Absolute
+def: "Waters Xevo TQ Absolute triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003516
+name: Xevo TQ Absolute XR
+def: "Waters Xevo TQ Absolute XR triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+
+[Term]
+id: MS:1003517
+name: 5973 MSD
+def: "Agilent 5973 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003518
+name: 5973N MSD
+def: "Agilent 5973N MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003519
+name: 5975 MSD
+def: "Agilent 5975 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003520
+name: 5975B MSD
+def: "Agilent 5975B MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003521
+name: 5975C inert XL MSD
+def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003522
+name: 5975C MSD
+def: "Agilent 5975C MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003523
+name: 5975T MSD
+def: "Agilent 5975T MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003524
+name: 5977 MSD
+def: "Agilent 5977 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003525
+name: 5977A MSD
+def: "Agilent 5977A MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003526
+name: 5977B MSD
+def: "Agilent 5977B MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003527
+name: 5977C MSD
+def: "Agilent 5977C MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003528
+name: 6230 Time-of-Flight LC/MS
+def: "Agilent 6230 Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003529
+name: 6410A Triple Quadrupole LC/MS
+def: "Agilent 6410A Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003530
+name: 6445 Q-TOF LC/MS
+def: "Agilent 6445 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003531
+name: 6456 Q-TOF LC/MS
+def: "Agilent 6456 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003532
+name: 6470 Triple Quadrupole LC/MS
+def: "Agilent 6470 Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003533
+name: 6490A Triple Quadrupole LC/MS
+def: "Agilent 6490A Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003534
+name: 6495 Triple Quadrupole LC/MS
+def: "Agilent 6495 Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003535
+name: 6520 Q-TOF LC/MS
+def: "Agilent 6520 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003536
+name: 6530 Q-TOF LC/MS
+def: "Agilent 6530 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003537
+name: 6543 Q-TOF LC/MS
+def: "Agilent 6543 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003538
+name: 6545XT Q-TOF LC/MS
+def: "Agilent 6545XT Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003539
+name: 6546 Q-TOF LC/MS
+def: "Agilent 6546 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003540
+name: 6546 Q-TOF LC/MS
+def: "Agilent 6546 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003541
+name: 6600 Q-TOF LC/MS
+def: "Agilent 6600 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003542
+name: 7000C Triple Quadrupole GC/MS
+def: "Agilent 7000C Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003543
+name: 7000D Triple Quadrupole GC/MS
+def: "Agilent 7000D Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003544
+name: 7010 Triple Quadrupole GC/MS
+def: "Agilent 7010 Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003545
+name: 7010B Triple Quadrupole GC/MS
+def: "Agilent 7010B Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003546
+name: 7200 Q-TOF GC/MS
+def: "Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003547
+name: 7250 Q-TOF GC/MS
+def: "Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003548
+name: CE-TOFMS
+def: "Agilent CE-TOFMS capillary electrophoresis - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003549
+name: G3250AA Time-of-Flight LC/MS
+def: "Agilent G3250AA Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003550
+name: Revident Q-TOF LC/MS
+def: "Agilent Revident Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+
+[Term]
+id: MS:1003551
+name: Pegasus BT 4D
+def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001800 ! LECO instrument model
+
+[Term]
+id: MS:1003552
+name: Pegasus HT
+def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001800 ! LECO instrument model
+
+[Term]
+id: MS:1003553
+name: Pegasus IV
+def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1001800 ! LECO instrument model
+
+[Term]
+id: MS:1003555
+name: PTR-TOF 8000
+def: "Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003452 ! Ionicon Analytik instrument model
+
+[Term]
+id: MS:1003556
+name: AccuTOF GCv
+def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003453 ! JEOL instrument model
+
+[Term]
+id: MS:1003558
+name: TOF.SIMS 5
+def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
+is_a: MS:1003454 ! IONTOF instrument model
+
+[Term]
+id: MS:1003559
+name: TurboMass GC/MS
+def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1003455 ! PerkinElmer instrument model
+
+[Term]
+id: MS:1003560
+name: ThermoQuest Voyager
+def: "Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:4000000
