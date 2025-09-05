@@ -23501,31 +23501,31 @@ def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
-id: MS:1003555
+id: MS:1003554
 name: PTR-TOF 8000
 def: "Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1003452 ! Ionicon Analytik instrument model
 
 [Term]
-id: MS:1003556
+id: MS:1003555
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1003453 ! JEOL instrument model
 
 [Term]
-id: MS:1003558
+id: MS:1003556
 name: TOF.SIMS 5
 def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
 is_a: MS:1003454 ! IONTOF instrument model
 
 [Term]
-id: MS:1003559
+id: MS:1003557
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
-id: MS:1003560
+id: MS:1003558
 name: ThermoQuest Voyager
 def: "Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000125 ! Thermo Finnigan instrument model
