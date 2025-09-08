@@ -23509,127 +23509,127 @@ is_a: MS:1000125 ! Thermo Finnigan instrument model
 [Term]
 id: MS:1003555
 name: AXIMA-LNR
-def: " AXIMA-LNR MALDI TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu AXIMA-LNR MALDI TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003556
 name: AXIMA-TOF²
-def: " AXIMA-TOF² MALDI TOF/TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu AXIMA-TOF² MALDI TOF/TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003557
 name: AXIMA Resonance
-def: " AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn." [PSI:MS]
+def: "Shimadzu AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003558
 name: MALDI-8020
-def: " MALDI-8020 benchtop MALDI TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu MALDI-8020 benchtop MALDI TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003559
 name: MALDI-8030
-def: " MALDI-8030 benchtop MALDI TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu MALDI-8030 benchtop MALDI TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003560
 name: MALDI-8020 EasyCare
-def: " MALDI-8020 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu MALDI-8020 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003561
 name: MALDI-8030 EasyCare
-def: " MALDI-8030 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
+def: "Shimadzu MALDI-8030 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003562
 name: LCMS-2010
-def: " LCMS-2010 quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-2010 quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003563
 name: LCMS-2050
-def: " LCMS-2050 quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-2050 quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003564
 name: LCMS-8045RX
-def: " LCMS-8045RX triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-8045RX triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003565
 name: LCMS-8050RX
-def: " LCMS-8050RX triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-8050RX triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003566
 name: LCMS-8060RX
-def: " LCMS-8060RX triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-8060RX triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003567
 name: LCMS-8065XE
-def: " LCMS-8065XE triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-8065XE triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003568
 name: LCMS-9050
-def: " LCMS-9050 quadrupole time-of-flight mass spectrometer." [PSI:MS]
+def: "Shimadzu LCMS-9050 quadrupole time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003569
 name: GCMS-QP5050A
-def: " GCMS-QP5050A gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP5050A gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003570
 name: GCMS-QP2010S
-def: " GCMS-QP2010S gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010S gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003571
 name: GCMS-QP2010
-def: " GCMS-QP2010 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003572
 name: GCMS-QP2020NX
-def: " GCMS-QP2020NX gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2020NX gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003573
 name: GCMS-QP2050
-def: " GCMS-QP2050 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2050 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003574
 name: GCMS-TQ 8030
-def: " GCMS-TQ 8030 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-TQ 8030 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003575
 name: GCMS-TQ 8050
-def: " GCMS-TQ 8050 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-TQ 8050 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
