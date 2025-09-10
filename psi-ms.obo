@@ -22494,7 +22494,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1003395
 name: Q Exactive GC Orbitrap
 def: "Q Exactive GC Orbitrap GC-MS/MS hybrid quadrupole Orbitrap mass spectrometer." [PSI:MS]
-is_a: MS:1000483 ! Thermo Fisher Scientific instrument model
+is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003396
@@ -22932,8 +22932,8 @@ is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003459
-name: APEX-Qe 9.4T
-def: "Bruker APEX-Qe 9.4T FT-ICR-MS mass spectrometer." [PSI:MS]
+name: APEX-Qe
+def: "Bruker APEX-Qe FT-ICR-MS mass spectrometer." [PSI:MS]
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
@@ -23006,7 +23006,7 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1003471
 name: impact II VIP
 def: "Bruker impact II VIP quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1003472
@@ -23054,25 +23054,25 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1003479
 name: timsMetabo
 def: "Bruker timsMetabo TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003480
 name: timsUltra AIP
 def: "Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003481
 name: timsOmni
 def: "Bruker timsOmni TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003482
 name: timsTOF MALDI PharmaPulse
 def: "Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
-is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003483
@@ -23101,7 +23101,7 @@ is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 [Term]
 id: MS:1003487
 name: GCMS-QP2010 Plus
-def: "Shimadzu GCMS-QP2010 Plus gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010 Plus gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
@@ -23131,19 +23131,19 @@ is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 [Term]
 id: MS:1003492
 name: GCMS-QP5000
-def: "Shimadzu GCMS-QP5000 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP5000 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003493
 name: GCMS-QP2020
-def: "Shimadzu GCMS-QP2020 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2020 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003494
 name: GCMS-QP2010 Ultra
-def: "Shimadzu GCMS-QP2010 Ultra gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010 Ultra gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
@@ -23179,7 +23179,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1003500
 name: ISQ LT
-def: "Thermo Fisher Scientific ISQ LT gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Thermo Fisher Scientific ISQ LT gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -23263,67 +23263,67 @@ is_a: MS:1000126 ! Waters instrument model
 [Term]
 id: MS:1003514
 name: 5973 MSD
-def: "Agilent 5973 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5973 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003515
 name: 5973N MSD
-def: "Agilent 5973N MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5973N MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003516
 name: 5975 MSD
-def: "Agilent 5975 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5975 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003517
 name: 5975B MSD
-def: "Agilent 5975B MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5975B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003518
 name: 5975C inert XL MSD
-def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003519
 name: 5975C MSD
-def: "Agilent 5975C MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5975C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003520
 name: 5975T MSD
-def: "Agilent 5975T MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5975T MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003521
 name: 5977 MSD
-def: "Agilent 5977 MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5977 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003522
 name: 5977A MSD
-def: "Agilent 5977A MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5977A MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003523
 name: 5977B MSD
-def: "Agilent 5977B MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5977B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003524
 name: 5977C MSD
-def: "Agilent 5977C MSD gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Agilent 5977C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23431,13 +23431,13 @@ is_a: MS:1000490 ! Agilent instrument model
 [Term]
 id: MS:1003542
 name: 7200 Q-TOF GC/MS
-def: "Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
+def: "Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupoletime-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003543
 name: 7250 Q-TOF GC/MS
-def: "Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
+def: "Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupoletime-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23497,56 +23497,56 @@ is_a: MS:1003454 ! IONTOF instrument model
 [Term]
 id: MS:1003553
 name: TurboMass GC/MS
-def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
 id: MS:1003554
 name: ThermoQuest Voyager
-def: "Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1003555
 name: AXIMA-LNR
 def: "Shimadzu AXIMA-LNR MALDI TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003556
 name: AXIMA-TOF²
 def: "Shimadzu AXIMA-TOF² MALDI TOF/TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003557
 name: AXIMA Resonance
 def: "Shimadzu AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003558
 name: MALDI-8020
 def: "Shimadzu MALDI-8020 benchtop MALDI TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003559
 name: MALDI-8030
 def: "Shimadzu MALDI-8030 benchtop MALDI TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003560
 name: MALDI-8020 EasyCare
 def: "Shimadzu MALDI-8020 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003561
 name: MALDI-8030 EasyCare
 def: "Shimadzu MALDI-8030 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
-is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003562
@@ -23593,31 +23593,31 @@ is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 [Term]
 id: MS:1003569
 name: GCMS-QP5050A
-def: "Shimadzu GCMS-QP5050A gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP5050A gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003570
 name: GCMS-QP2010S
-def: "Shimadzu GCMS-QP2010S gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010S gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003571
 name: GCMS-QP2010
-def: "Shimadzu GCMS-QP2010 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2010 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003572
 name: GCMS-QP2020NX
-def: "Shimadzu GCMS-QP2020NX gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2020NX gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003573
 name: GCMS-QP2050
-def: "Shimadzu GCMS-QP2050 gas chromatograph - quadrupole  mass spectrometer." [PSI:MS]
+def: "Shimadzu GCMS-QP2050 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
