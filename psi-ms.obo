@@ -24957,7 +24957,7 @@ relationship: has_relation MS:1000505 ! base peak intensity
 
 [Term]
 id: MS:4000203
-name: base peak intensitiy maxima per time ranges
+name: base peak intensity maxima per time ranges
 def: "The maximum base peak intensity (MS:1000505) of all spectra in a single run in the given retention time ranges. The time windows are specified by the 2nd column defining the start time in seconds and the 3rd column defining the duration in seconds. To define a range from a starting time until the run's end, -1 may be used for the duration with 0 for the start." [PSI:MS]
 is_a: MS:4000005 ! table
 relationship: has_column MS:1000505 ! base peak intensity
@@ -24993,42 +24993,18 @@ relationship: has_metric_category MS:4000015 ! multiple spectra based metric
 
 [Term]
 id: MS:4000206
-name: precursor ppm deviation median
-def: "The median of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
-is_a: MS:4000003 ! single value
+name: precursor ppm deviation distribution
+def: "The quantiles of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied. E.g. one alue triplet represents the quartiles Q1, Q2, Q3." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept MS:1000014 ! accuracy
-relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000574 ! median
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_value_concept STATO:0000291 ! quantile
 
 [Term]
 id: MS:4000207
-name: precursor ppm deviation first quartile
-def: "The first quartile of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
-is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept MS:1000014 ! accuracy
-relationship: has_units UO:0000169 ! parts per million
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000167 ! first quartile
-
-[Term]
-id: MS:4000208
-name: precursor ppm deviation third quartile
-def: "The third quartile of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied" [PSI:MS]
-is_a: MS:4000003 ! single value
-relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_concept MS:1000014 ! accuracy
-relationship: has_units UO:0000169 ! parts per million
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000170 ! third quartile
-
-[Term]
-id: MS:4000209
 name: detected quantification data points charges fractions
 def: "The fraction of all data points detected for quantification purposes within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25039,7 +25015,7 @@ relationship: has_column UO:0000191 ! fraction
 relationship: has_relation MS:4000102 ! number of detected quantification data points
 
 [Term]
-id: MS:4000210
+id: MS:4000208
 name: identified quantification data points charges fractions
 def: "The fraction of all data points detected and identified for quantification purposes within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25050,7 +25026,7 @@ relationship: has_column UO:0000191 ! fraction
 relationship: has_relation MS:4000103 ! number of identified quantification data points
 
 [Term]
-id: MS:4000211
+id: MS:4000209
 name: peptide spectrum matches charges fractions 
 def: "The fraction of filtered peptide spectrum matches (PSMs) within the run for each specified charge state. The fractions [0,1] are given in the 'fraction' column, corresponding charges in the 'charge state' column. The highest charge state is to be interpreted as that charge state or higher. The numbers here are recorded after any filtering for PSM level quality (e.g. FDR filtering)." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25066,7 +25042,7 @@ relationship: has_relation MS:4000174 ! mean MS2 precursor charge in identified 
 relationship: has_relation MS:4000176 ! median MS2 precursor charge in identified spectra
 
 [Term]
-id: MS:4000212
+id: MS:4000210
 name: vacuum pump pressure
 def: "The vacuum pump pressure of a run, defined by the retention times and respectively applied pressures. The values are similar to the ones saved in MS:1000821, but using a tabular representation." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25078,7 +25054,7 @@ relationship: has_column UO:0000109 ! pressure unit
 relationship: has_relation MS:1000821 ! pressure array
 
 [Term]
-id: MS:4000213
+id: MS:4000211
 name: MS1 total ion current
 def: "Tabular representation of the total ion current (TIC) of the MS1 spectra. It is a tabular representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS1 spectra." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25091,7 +25067,7 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_relation MS:1000235 ! total ion current chromatogram
 
 [Term]
-id: MS:4000214
+id: MS:4000212
 name: MS2 total ion current
 def: "Tabular representation of the total ion current (TIC) of the MS2 spectra. It is a tabular representation of the total ion current detected in each of a series of mass spectra versus time (similar to the MS:1000235, but a mzQC valid table), using only the MS2 spectra." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25104,7 +25080,7 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_relation MS:1000235 ! total ion current chromatogram
 
 [Term]
-id: MS:4000215
+id: MS:4000213
 name: characteristics of spike in and reference peptide
 def: "Observed and expected characteristics for spiked in or reference peptides. The expected peptides are encoded by proforma peptidoform sequence (MS:1003169). The 'predicted retention time' should be interpreted as the expected retention time of a reference measurement." [PSI:MS]
 is_a: MS:4000005 ! table
@@ -25118,7 +25094,7 @@ relationship: has_optional_column MS:1000897 ! predicted retention time
 relationship: has_optional_column MS:1003251 ! count of identified spectra
 
 [Term]
-id: MS:4000216
+id: MS:4000214
 name: number of all identified accessions in all ambiguity groups
 def: "The number of accessions in identified protein ambiguity groups that have been identified. This is the number of accessions in the groups, which were counted in 'MS:1002404 ! count of identified proteins', which hence must be greater or equal to this number." [PSI:PI]
 is_a: MS:4000003 ! single value
@@ -25130,7 +25106,7 @@ relationship: has_relation MS:1002404 ! count of identified proteins
 relationship: has_relation MS:1002704 ! protein-level result list attribute
 
 [Term]
-id: MS:4000217
+id: MS:4000215
 name: missed cleavages fractions
 def: "The fraction of identified peptides with corresponding number of missed cleavages after user-defined acceptance criteria are applied. The number of missed cleavages per peptide is given in the 'number of missed cleavages' column, the respective fraction of such peptides identified in the 'fraction' column. The highest 'missed cleavages' row is to be interpreted as that number of missed cleavages or higher." [PSI:MS]
 is_a: MS:4000005 ! table
