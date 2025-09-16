@@ -24994,7 +24994,7 @@ relationship: has_metric_category MS:4000015 ! multiple spectra based metric
 [Term]
 id: MS:4000206
 name: precursor ppm deviation distribution
-def: "The quantiles of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied. E.g. one alue triplet represents the quartiles Q1, Q2, Q3." [PSI:MS]
+def: "The quantiles of the distribution of observed precursor mass accuracies (MS:4000072) [in ppm] of identified MS2 spectra after user-defined acceptance criteria (FDR) are applied. E.g. one value triplet represents the quartiles Q1, Q2, Q3." [PSI:MS]
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
