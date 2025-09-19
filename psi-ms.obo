@@ -22883,7 +22883,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003576
 name: all ions fragmentation DIA alignment
-def: "Associating of high-energy product ions with the precursor from which they are derived, by comparing retention time and, where appropriate, ion mobility peaks" [PSI:MS]
+def: "Associating of product ions with the precursor from which they are derived, by comparing retention time and, where appropriate, ion mobility peaks." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
 [Term]
