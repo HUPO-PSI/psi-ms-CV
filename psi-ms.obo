@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.199
+data-version: 4.1.203
 date: 25:07:2025 21:40
 saved-by: Wout Bittremieux
 default-namespace: MS
@@ -22879,6 +22879,12 @@ is_a: MS:1000455 ! ion selection attribute
 is_a: MS:1003254 ! peak attribute
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003576
+name: all ions fragmentation DIA alignment
+def: "Associating of high-energy product ions with the precursor from which they are derived, by comparing retention time and, where appropriate, ion mobility peaks" [PSI:MS]
+is_a: MS:1000543 ! data processing action
 
 [Term]
 id: MS:4000000
