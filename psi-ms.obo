@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.201
+data-version: 4.1.202
 date: 05:09:2025 15:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -23151,7 +23151,7 @@ is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 [Term]
 id: MS:1003495
 name: Velos Pro
-def: "Thermo Fisher Scientific Velos Pro ion trap - orbitrap mass spectrometer." [PSI:MS]
+def: "Thermo Fisher Scientific Velos Pro ion trap - mass spectrometer." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
