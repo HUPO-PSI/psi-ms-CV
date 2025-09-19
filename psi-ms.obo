@@ -6092,6 +6092,7 @@ id: MS:1000856
 name: LTQ Velos/ETD
 def: "Thermo Scientific LTQ Velos MS with ETD." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+synonym: "LTQ Velos ETD" EXACT []
 
 [Term]
 id: MS:1000857
@@ -20438,6 +20439,7 @@ id: MS:1003096
 name: Orbitrap Velos Pro
 def: "Thermo Scientific LTQ Orbitrap Velos Pro, often just referred to as the Orbitrap Velos Pro." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+synonym: "LTQ Orbitrap Velos Pro" EXACT []
 
 [Term]
 id: MS:1003097
@@ -22889,7 +22891,7 @@ relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
-id: MS:1003452 
+id: MS:1003452
 name: Ionicon Analytik instrument model
 def: "Ionicon Analytik instrument model." [PSI:MS]
 is_a: MS:1000031 ! instrument model
