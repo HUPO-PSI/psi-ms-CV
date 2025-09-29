@@ -11557,54 +11557,72 @@ id: MS:1001761
 name: ACQUITY UPLC
 def: "Waters LC-system ACQUITY UPLC." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001762
 name: ACQUITY UPLC H-Class
 def: "Waters LC-system ACQUITY UPLC H-Class." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001763
 name: ACQUITY UPLC H-Class Bio
 def: "Waters LC-system ACQUITY UPLC H-Class Bio." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001764
 name: ACQUITY UPLC I-Class
 def: "Waters LC-system ACQUITY UPLC I-Class." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001765
 name: ACQUITY UPLC Systems with 2D Technology
 def: "Waters LC-system ACQUITY UPLC Systems with 2D Technology." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001766
 name: nanoACQUITY UPLC
 def: "Waters LC-system nanoACQUITY UPLC." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001767
 name: nanoACQUITY UPLC System with 1D Technology
 def: "Waters LC-system nanoACQUITY UPLC System with 1D Technology." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001768
 name: nanoACQUITY UPLC with HDX Technology
 def: "Waters LC-system nanoACQUITY UPLC with HDX Technology." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001769
 name: TRIZAIC UPLC nanoTile
 def: "Waters LC-system TRIZAIC UPLC nanoTile." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1003592 ! ultra-performance liquid chromatography
 
 [Term]
 id: MS:1001770
@@ -23645,6 +23663,7 @@ id: MS:1003577
 name: hyphenated separation technique
 def: "The on-line coupling of a separation technique with a spectrometric or other detection technology." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
 
 [Term]
 id: MS:1003578
