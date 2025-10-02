@@ -11556,73 +11556,67 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1001761
 name: ACQUITY UPLC
 def: "Waters LC-system ACQUITY UPLC." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
 
 [Term]
 id: MS:1001762
 name: ACQUITY UPLC H-Class
 def: "Waters LC-system ACQUITY UPLC H-Class." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatographh
 
 [Term]
 id: MS:1001763
 name: ACQUITY UPLC H-Class Bio
 def: "Waters LC-system ACQUITY UPLC H-Class Bio." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
 
 [Term]
 id: MS:1001764
 name: ACQUITY UPLC I-Class
 def: "Waters LC-system ACQUITY UPLC I-Class." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
 
 [Term]
 id: MS:1001765
 name: ACQUITY UPLC Systems with 2D Technology
 def: "Waters LC-system ACQUITY UPLC Systems with 2D Technology." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
 
 [Term]
 id: MS:1001766
 name: nanoACQUITY UPLC
 def: "Waters LC-system nanoACQUITY UPLC." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
+relationship: has_value_concept MS:1003591 ! nano-flow scale
 
 [Term]
 id: MS:1001767
 name: nanoACQUITY UPLC System with 1D Technology
 def: "Waters LC-system nanoACQUITY UPLC System with 1D Technology." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
+relationship: has_value_concept MS:1003591 ! nano-flow scale
 
 [Term]
 id: MS:1001768
 name: nanoACQUITY UPLC with HDX Technology
 def: "Waters LC-system nanoACQUITY UPLC with HDX Technology." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
+relationship: has_value_concept MS:1003591 ! nano-flow scale
 
 [Term]
 id: MS:1001769
 name: TRIZAIC UPLC nanoTile
 def: "Waters LC-system TRIZAIC UPLC nanoTile." [PSI:MS]
-is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003578 ! liquid chromatography
-is_a: MS:1003592 ! ultra-performance liquid chromatography
+is_a: MS:1003609 ! Waters liquid chromatography instrument model
+is_a: MS:1003600 ! ultra-performance liquid chromatograph
 
 [Term]
 id: MS:1001770
@@ -23660,22 +23654,21 @@ is_a: MS:1000543 ! data processing action
 
 [Term]
 id: MS:1003577
-name: hyphenated separation technique
-def: "The on-line coupling of a separation technique with a spectrometric or other detection technology." [PSI:MS]
+name: hyphenated separation concept
+def: "The methods, technology and chemistry by which a hyphenated separation instrument effects the separation of compounds." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
-
 
 [Term]
 id: MS:1003578
-name: liquid chromatography
-def: "Liquid chromatography (LC) is an analytical technique used to separate a mixture into its individual components for identification, quantification, and purification. The separation is based on the differential interactions of the sample compounds with a liquid mobile phase and a solid stationary phase." [PSI:MS]
-is_a: MS:1003577 ! hyphenated separation technique
+name: liquid chromatography concept
+def: "The methods, technology and chemistry by which a liquid chromatography instrument effects the separation of compounds." [PSI:MS]
+is_a: MS:1003577 ! hyphenated separation concept
 
 [Term]
 id: MS:1003579
 name: liquid chromatography separation mode
 def: "Separation modes in liquid chromatography are categorized based on the interaction mechanism between the analyte, the stationary phase, and the mobile phase." [PSI:MS]
-relationship: part_of MS:1003578 ! liquid chromatography
+is_a: MS:1003578 ! liquid chromatography concept
 
 [Term]
 id: MS:1003580
@@ -23739,105 +23732,123 @@ is_a: MS:1003579 ! liquid chromatography separation mode
 
 [Term]
 id: MS:1003590
-name: liquid chromatography technology
-def: "Instrument formats for the application of liquid chromatography to the separation of analytes." [PSI:MS]
-relationship: part_of MS:1003578 ! liquid chromatography
+name: liquid chromatography flow scale
+def: "Describes the scaling of flow rates in relation to different column dimensions in liquid chromatography." [PSI:MS]
+is_a: MS:1003578 ! liquid chromatography concept
 
 [Term]
 id: MS:1003591
-name: high-performance liquid chromatography
-def: "High-Performance Liquid Chromatography (HPLC) is a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture. " [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: nano-flow scale
+def: "Nano-flow LC at a typical flow rate in the nL/min range (e.g., 50-1000 nL/min) with a typical column internal diameter of ≤ 0.1 mm, commonly used for high sensitivity, low sample volume applications." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003592
-name: ultra-performance liquid chromatography
-def: "Ultra-Performance Liquid Chromatography (UPLC) is a trademark of the Waters Corporation and is largely synonymous with ultra-high performance liquid chromatography." [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: capilliary-flow scale
+def: "Capillary-flow LC at a typical flow rate of 2-10 µL/min with a typical column internal diameter of 0.3-0.5 mm, commonly used for high sensitivity applications." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003593
-name: ultra-high performance liquid chromatography
-def: "Ultra-High Performance Liquid Chromatography (UHPLC), is an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and instrumentation capable of handling ultra-high pressures. " [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: micro-flow scale
+def: "Micro-flow, or microbore, LC at a typical flow rate of 10-50 µL/min with a typical column internal diameter of 1.0 mm, commonly used for increased sensitivity application and lower solvent consumption." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003594
-name: fast protein liquid chromatography
-def: "Fast Protein Liquid Chromatography (FPLC) is a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography. " [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: analytical scale
+def: "Analytical scale LC at a typical flow rate between 0.2- 3 mL/min with a typical column internal diameter of 2.1-4.6 mm, commonly used in typical LC methodology." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003595
-name: three-dimensional liquid chromatography
-def: "Three-dimensional liquid chromatography (3D-LC) is an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics. " [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: semi-preparative scale
+def: "Semi-preparative LC at a typical flow rate between 5-50 mL/min with a typical column internal diameter of 10 mm, commonly used for the small scale purification and isolation of compounds." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003596
-name: planar chomatography
-def: "On-line planar chomatography techniques." [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: preparative scale
+def: "Preparative LC at a typical flow rate of > 50 mL/min with a typical column internal diameter of > 20 mm, commonly used for the large scale purification and isolation of bulk quantities of target compounds." [PSI:MS]
+is_a: MS:1003590 ! liquid chromatography flow scale
 
 [Term]
 id: MS:1003597
-name: thin layer chromatography
-def: "Thin Layer Chromatography (TLC) is a widely used, simple, and cost-effective analytical technique for separating and identifying components in a mixture." [PSI:MS]
-is_a: MS:1003596 ! planar chomatography
+name: hyphenated separation instrument
+def: "The on-line coupling of a separation technique with a spectrometric or other detection technology." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: MS:1003598
-name: high-performance thin layer chromatography
-def: "High-Performance Thin Layer Chromatography (HPTLC) is an advanced and refined version of traditional Thin Layer Chromatography (TLC), designed to offer significantly improved performance in terms of resolution, sensitivity, and reproducibility. It utilizes finer and more uniformly sized stationary phase particles, leading to more efficient separations and more accurate quantitative analysis." [PSI:MS]
-is_a: MS:1003596 ! planar chomatography
+name: liquid chromatography instrument
+def: "Liquid chromatography (LC) is an analytical technique used to separate a mixture into its individual components for identification, quantification, and purification. The separation is based on the differential interactions of the sample compounds with a liquid mobile phase and a solid stationary phase." [PSI:MS]
+is_a: MS:1003597 ! hyphenated separation instrument
 
 [Term]
 id: MS:1003599
-name: two-dimensional liquid chromatography
-def: "Two-dimensional liquid chromatography (2D-LC), also often referred to as LC-LC or LC×LC, is an advanced analytical technique that combines two different liquid chromatography methods in series to achieve enhanced separation of complex mixtures. It offers significantly higher resolving power and peak capacity compared to conventional one-dimensional liquid chromatography (1D-LC)." [PSI:MS]
-is_a: MS:1003590 ! liquid chromatography technology
+name: high-performance liquid chromatograph
+def: "An instrument for High-Performance Liquid Chromatography (HPLC), a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture. " [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003600
-name: liquid chromatography flow scale
-def: "Describes the scaling of flow rates in relation to different column dimensions in liquid chromatography." [PSI:MS]
-relationship: part_of MS:1003578 ! liquid chromatography
+name: ultra-performance liquid chromatograph
+def: "An instrument for Ultra-Performance Liquid Chromatography (UPLC), a trademark of the Waters Corporation and is largely synonymous with ultra-high performance liquid chromatography." [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003601
-name: nano-flow scale
-def: "Nano-flow LC at a typical flow rate in the nL/min range (e.g., 50-1000 nL/min) with a typical column internal diameter of ≤ 0.1 mm, commonly used for high sensitivity, low sample volume applications." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: ultra-high performance liquid chromatograph
+def: "An instrument for Ultra-High Performance Liquid Chromatography (UHPLC), an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and instrumentation capable of handling ultra-high pressures. " [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003602
-name: capilliary-flow scale
-def: "Capillary-flow LC at a typical flow rate of 2-10 µL/min with a typical column internal diameter of 0.3-0.5 mm, commonly used for high sensitivity applications." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: fast protein liquid chromatograph
+def: "An instrument for Fast Protein Liquid Chromatography (FPLC), a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography. " [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003603
-name: micro-flow scale
-def: "Micro-flow, or microbore, LC at a typical flow rate of 10-50 µL/min with a typical column internal diameter of 1.0 mm, commonly used for increased sensitivity application and lower solvent consumption." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: three-dimensional liquid chromatograph
+def: "An instrument for Three-dimensional liquid chromatography (3D-LC), an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics. " [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003604
-name: analytical scale
-def: "Analytical scale LC at a typical flow rate between 0.2- 3 mL/min with a typical column internal diameter of 2.1-4.6 mm, commonly used in typical LC methodology." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: planar chomatography instrument
+def: "An Instrument for on-line planar chomatography." [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
 
 [Term]
 id: MS:1003605
-name: semi-preparative scale
-def: "Semi-preparative LC at a typical flow rate between 5-50 mL/min with a typical column internal diameter of 10 mm, commonly used for the small scale purification and isolation of compounds." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: thin layer chromatograph
+def: "An instrument for on-line Thin Layer Chromatography (TLC), based upon a widely used, simple, and cost-effective analytical technique for separating and identifying components in a mixture." [PSI:MS]
+is_a: MS:1003604 ! planar chomatography instrument
 
 [Term]
 id: MS:1003606
-name: preparative scale
-def: "Preparative LC at a typical flow rate of > 50 mL/min with a typical column internal diameter of > 20 mm, commonly used for the large scale purification and isolation of bulk quantities of target compounds." [PSI:MS]
-is_a: MS:1003600 ! liquid chromatography flow scale
+name: high-performance thin layer chromatograph
+def: "An instrument for on-line High-Performance Thin Layer Chromatography (HPTLC), an advanced and refined version of traditional Thin Layer Chromatography (TLC), designed to offer significantly improved performance in terms of resolution, sensitivity, and reproducibility. It utilizes finer and more uniformly sized stationary phase particles, leading to more efficient separations and more accurate quantitative analysis." [PSI:MS]
+is_a: MS:1003604 ! planar chomatography instrument
+
+[Term]
+id: MS:1003607
+name: two-dimensional liquid chromatograph
+def: "An instrument for two-dimensional liquid chromatography (2D-LC), also often referred to as LC-LC or LC×LC, an advanced analytical technique that combines two different liquid chromatography methods in series to achieve enhanced separation of complex mixtures. It offers significantly higher resolving power and peak capacity compared to conventional one-dimensional liquid chromatography (1D-LC)." [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
+
+[Term]
+id: MS:1003608
+name: liquid chromatography instrument model
+def: "Liquid chromatography instrument model name not including the vendor's name." [PSI:MS]
+is_a: MS:1003598 ! liquid chromatography instrument
+
+[Term]
+id: MS:1003609
+name: Waters liquid chromatography instrument model
+def: "Waters Corporation liquid chromatography instrument model." [PSI:MS]
+is_a: MS:1003608 ! liquid chromatography instrument model
 
 [Term]
 id: MS:4000000
