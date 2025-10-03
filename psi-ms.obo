@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.204
-date: 05:09:2025 15:00
-saved-by: Jonathan Hunter
+data-version: 4.1.205
+date: 02:10:2025 15:00
+saved-by: Eric Deutsch
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -12531,8 +12531,9 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1001910
 name: Orbitrap Elite
-def: "Thermo Scientific LTQ Orbitrap Elite, often just referred to as the Orbitrap Elite." [PSI:MS]
+def: "Thermo Scientific Orbitrap Elite, sometimes referred to as the LTQ Orbitrap Elite." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+synonym: "LTQ Orbitrap Elite" EXACT []
 
 [Term]
 id: MS:1001911
