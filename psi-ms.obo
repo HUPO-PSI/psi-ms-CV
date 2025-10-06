@@ -23644,18 +23644,6 @@ is_a: MS:1000543 ! data processing action
 [Term]
 id: MS:1003577
 name: imzML format
-def: "imsis imzML imaging file format." [PSI:MS]
-is_a: MS:1000560 ! mass spectrometer file format
-
-[Term]
-id: MS:1003577
-name: imzML format
-def: "imsis imzML imaging file format." [PSI:MS]
-is_a: MS:1000560 ! mass spectrometer file format
-
-[Term]
-id: MS:1003577
-name: imzML format
 def: "IMSIS imzML imaging file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
