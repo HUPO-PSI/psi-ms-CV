@@ -12543,8 +12543,9 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1001910
 name: Orbitrap Elite
-def: "Thermo Scientific LTQ Orbitrap Elite, often just referred to as the Orbitrap Elite." [PSI:MS]
+def: "Thermo Scientific Orbitrap Elite, sometimes referred to as the LTQ Orbitrap Elite." [PSI:MS]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+synonym: "LTQ Orbitrap Elite" EXACT []
 
 [Term]
 id: MS:1001911
