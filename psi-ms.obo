@@ -82,6 +82,11 @@ name: has_column
 id: has_optional_column
 name: has_optional_column
 
+[Typedef]
+id: has_separation_characteristic
+name: has_separation_characteristic
+def: "The hyphenated separation or hyphenated separation system has the specified characteristic." []
+
 [Term]
 id: NCIT:C25330
 name: Duration
@@ -11593,7 +11598,7 @@ name: nanoACQUITY UPLC
 def: "Waters LC-system nanoACQUITY UPLC." [PSI:MS]
 is_a: MS:1003608 ! Waters liquid chromatography system model
 is_a: MS:1003599 ! ultra-performance liquid chromatography system
-relationship: has_value_concept MS:1003590 ! nano-flow liquid chromatography
+relationship: has_separation_characteristic MS:1003590 ! nano-flow liquid chromatography
 
 [Term]
 id: MS:1001767
@@ -11601,7 +11606,7 @@ name: nanoACQUITY UPLC System with 1D Technology
 def: "Waters LC-system nanoACQUITY UPLC System with 1D Technology." [PSI:MS]
 is_a: MS:1003608 ! Waters liquid chromatography system model
 is_a: MS:1003599 ! ultra-performance liquid chromatography system
-relationship: has_value_concept MS:1003590 ! nano-flow liquid chromatography
+relationship: has_separation_characteristic MS:1003590 ! nano-flow liquid chromatography
 
 [Term]
 id: MS:1001768
@@ -11609,7 +11614,7 @@ name: nanoACQUITY UPLC with HDX Technology
 def: "Waters LC-system nanoACQUITY UPLC with HDX Technology." [PSI:MS]
 is_a: MS:1003608 ! Waters liquid chromatography system model
 is_a: MS:1003599 ! ultra-performance liquid chromatography system
-relationship: has_value_concept MS:1003590 ! nano-flow liquid chromatography
+relationship: has_separation_characteristic MS:1003590 ! nano-flow liquid chromatography
 
 [Term]
 id: MS:1001769
