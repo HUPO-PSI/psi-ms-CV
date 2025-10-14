@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.205
+data-version: 4.1.301
 date: 02:10:2025 15:00
 saved-by: Eric Deutsch
 default-namespace: MS
@@ -23640,6 +23640,125 @@ id: MS:1003576
 name: all ions fragmentation DIA alignment
 def: "Associating of product ions with the precursor from which they are derived, by comparing retention time and, where appropriate, ion mobility peaks." [PSI:MS]
 is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003609
+name: timsControl
+def: "Bruker software for data acquisition." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001455 ! acquisition software
+
+[Term]
+id: MS:1003610
+name: MetaboScape
+def: "Bruker software for untargeted metabolomics and lipidomics data analysis." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003611
+name: TASQ
+def: "Bruker software for target screening and quantitation." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003612
+name: Shimadzu Method Package
+def: "Shimadzu Method Packages contains ready-to-use analytical conditions and sample pretreatment procedures optimized for Shimadzu mass spectrometers and specific analytical applications." [PSI:MS]
+is_a: MS:1001557 ! Shimadzu Corporation software
+
+[Term]
+id: MS:1003613
+name: LC/MS/MS Method Package for Primary Metabolites
+def: "A set of ready-to-use analytical conditions and protocols for the simultaneous analysis of up to 200 primary metabolites. It provides optimized LC and MS parameters and sample preparation procedures." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003614
+name: LC/MS/MS Method Package for Bile Acids
+def: "A pre-configured solution for the fast, comprehensive analysis of bile acids in various biological samples. It provides pre-optimized LC conditions, MS/MS parameters, and validated sample preparation protocols." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003615
+name: LC/MS/MS Method Package for Cell Culture Profiling
+def: "A pre-configured solution for the rapid and simultaneous analysis of nutrients and metabolites in cell culture media. It provides optimized analytical methods and sample preparation protocols for both intracellular and extracellular metabolites." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003616
+name: LC/MS/MS Method Package for Lipid Mediators 
+def: "A pre-configured solution for the simultaneous, highly sensitive analysis of a wide range of bioactive lipid mediators. It provides ready-to-use analytical conditions, including optimized LC separation and MS parameters." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003617
+name: LC/MS/MS Method Package - MRM Library for Phospholipid profiling 
+def: "A pre-configured solution that enables a two-step workflow for comprehensive phospholipid analysis. It allows for an initial analysis to classify phospholipid classes based on characteristic head groups, followed by a second analysis to determine fatty acid composition using a method generated from detected peaks." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003618
+name: LC/MS/MS Method Package for Reactive Sulfur Profiling
+def: "A pre-configured solution for analyzing 17 sulfur-containing metabolites, including unstable reactive sulfur species. It includes optimized LC/MS/MS parameters and detailed sample preparation protocols with derivatization steps for biological samples like cells and plasma to ensure stable, reliable, and high-throughput analysis." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003619
+name: LC/MS/MS Method Package for Short Chain Fatty Acids
+def: "A pre-configured solution for the simultaneous analysis of volatile and hydrophilic short-chain fatty acids and related organic acids. It relies on a derivatization step using 3-nitrophenylhydrazine (3-NPH) to enable robust LC-MS/MS analysis, which would otherwise be challenging with a conventional reverse-phase system." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003620
+name: LC/MS/MS Method Package for Steroid Hormones
+def: "A pre-configured solution for the rapid, simultaneous, and highly sensitive analysis of up to 20 steroid hormones and related compounds. It provides ready-to-use analytical conditions, including a derivatization protocol for serum samples." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003621
+name: LC/MS/MS Method Package for Sugars and Sugar Nucleotides
+def: "A pre-configured solution for the simultaneous, efficient, and precise analysis of various sugars and sugar nucleotides. It includes analytical methods, protocols and optimized conditions for separating isomers and sample pretreatment guidance." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003622
+name: LC/MS/MS Method Package for Triglycerides 
+def: "An MRM library designed for qualitative profiling of 47 different triglycerides in plasma. It uses 195 Multiple Reaction Monitoring (MRM) transitions that target specific fatty acid chain lengths and unsaturation sites to enable high-throughput analysis and characterization of fatty acid composition." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003623
+name: LC/MS/MS Method Package for Modified Nucleosides
+def: "A pre-configured solution for the rapid quantification of specific modified nucleosides. It includes methods for chromatographic separation, MS parameters and sample preparation protocols for biological samples like urine and blood serum." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003624
+name: LC/MS/MS Method Package for Glycosaminoglycans 
+def: "A pre-configured solution for the quantitative analysis of sulfated disaccharides derived from key GAGs. It includes optimized LC and MS parameters, along with example sample preparation protocols." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003625
+name: LC/MS/MS Method Package for DL Amino Acids
+def: "A pre-configured solution for the rapid and high-sensitivity analysis of chiral amino acids. Using chiral stationary phase columns and without the need for derivatization, it enables simultaneous separation and quantification of D- and L-amino acid isomers." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003626
+name: LC/MS/MS Method Package for Aminoglycosides Antibiotics
+def: "A pre-configured solution for the fast, quantitative screening of 13 aminoglycosides in food products like meat, eggs, and milk, using a HILIC/MS/MS method." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
+
+[Term]
+id: MS:1003627
+name: GC/MS Smart Metabolites Database
+def: "A comprehensive library of data for analyzing hundreds of metabolic compounds using GC-MS and GC-MS/MS systems. It includes optimized analytical methods, retention indices, and MS/MS transitions." [PSI:MS]
+is_a: MS:1003612 ! Shimadzu Method Package
 
 [Term]
 id: MS:4000000
