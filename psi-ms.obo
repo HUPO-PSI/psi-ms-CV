@@ -23848,7 +23848,7 @@ is_a: MS:1003597 ! liquid chromatography system
 id: MS:1003608
 name: Waters liquid chromatography system model
 def: "Waters Corporation liquid chromatography system model." [PSI:MS]
-is_a: MS:1003607 ! liquid chromatography system modell
+is_a: MS:1003607 ! liquid chromatography system model
 
 [Term]
 id: MS:4000000
