@@ -82,11 +82,6 @@ name: has_column
 id: has_optional_column
 name: has_optional_column
 
-[Typedef]
-id: has_separation_characteristic
-name: has_separation_characteristic
-def: "The hyphenated separation or hyphenated separation system has the specified characteristic." []
-
 [Term]
 id: NCIT:C25330
 name: Duration
