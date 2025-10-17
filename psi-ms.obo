@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.205
-date: 02:10:2025 15:00
+data-version: 4.1.206
+date: 17:10:2025 15:00
 saved-by: Eric Deutsch
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -26,6 +26,7 @@ remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
 remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
+remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -23640,6 +23641,18 @@ id: MS:1003576
 name: all ions fragmentation DIA alignment
 def: "Associating of product ions with the precursor from which they are derived, by comparing retention time and, where appropriate, ion mobility peaks." [PSI:MS]
 is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003577
+name: InstaNovo
+def: "InstaNovo is a deep learning based tool using a Transformer architecture for de novo peptide sequencing." [DOI:0.1038/s42256-025-01019-5, https://github.com/instadeepai/instanovo, PSI:MS]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003578
+name: InstaNovo+
+def: "InstaNovo+ is a deep learning based tool using a Diffusion architecture for de novo peptide sequencing." [DOI:0.1038/s42256-025-01019-5, https://github.com/instadeepai/instanovo, PSI:MS]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:4000000
