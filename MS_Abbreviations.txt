@@ -23,7 +23,7 @@ List of MS-related abbreviations:
 * ATAQS		Automated and Targeted Analysis with Quantitative SRM
 * AQUA		Absolute QUAntification (of proteins)
 * BDRG		Biotin-Aspartate-Rink-Glycine
-* BFP		Blue Flourescent Protein
+* BFP		Blue Fluorescent Protein
 * BIRD		Blackbody Infrared Radiative Dissociation
 * BONCAT	BioOrthogonal Non-Canonical Amino acid Tagging
 * BPC		Base Peak Chromatogram
@@ -74,7 +74,7 @@ List of MS-related abbreviations:
 * DEI		Direct Electron Ionization
 * DEP		Direct Exposure Probe
 * DESI		Desorption ElectroSpray Ionization
-* DGMS		Deutsche Gesellschaft für MassenSpektrometrie
+* DGMS		Deutsche Gesellschaft fï¿½r MassenSpektrometrie
 * DiART		Deuterium isobaric Amine Reactive Tag)
 * DiLeu		Dimethyl Leucine
 * DIA		Data Independent Acquisition
@@ -128,7 +128,7 @@ List of MS-related abbreviations:
 * FuGE		Functional Genomics Experiment
 * FWER		Family-Wise Error Rate
 * FWHM		Full Width at Half Maximum
-* GFP		Green Flourescent Protein
+* GFP		Green Fluorescent Protein
 * HCD		High-energy Collision-induced Dissociation; High-energy C-trap Dissociation
 * HCT		High Capacity ion Trap
 * HDMS<sup>E</sup>	MS<sup>E</sup> combined with mobility separation
@@ -320,7 +320,7 @@ List of MS-related abbreviations:
 * SSI		Sonic Spray ionization
 * STED		Stimulated Emission Depletion
 * STS		Sequence Tagged Search
-* SWATH		Sequential Windowed Aquisition of all THeoretical mass spectra/ions; a DIA (Data Independent Aquisition) method; means a series of isolation windows
+* SWATH		Sequential Windowed Acquisition of all THeoretical mass spectra/ions; a DIA (Data Independent Acquisition) method; means a series of isolation windows
 * SWIFT		Stored Waveform Inverse Fourier Transform
 * TAILS		Terminal Amine Isotopic Labeling of Substrates
 * TAP		Tandem Affinity Purification
