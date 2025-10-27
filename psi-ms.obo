@@ -23651,7 +23651,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1003578
 name: mzPeak format
-def: "HUPO-PSI mzPeak file format." [PSI:MS]
+def: "Proteomics Standards Initiatve mzPeak file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
