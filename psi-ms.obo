@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.206
-date: 27:10:2025 12:00
+data-version: 4.1.207
+date: 28:10:2025 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -23832,6 +23832,29 @@ id: MS:1003606
 name: Waters liquid chromatography system model
 def: "Waters Corporation liquid chromatography system model." [PSI:MS]
 is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003607
+name: timsControl
+def: "Bruker software for data acquisition." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001455 ! acquisition software
+
+[Term]
+id: MS:1003608
+name: MetaboScape
+def: "Bruker software for untargeted metabolomics and lipidomics data analysis." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003609
+name: TASQ
+def: "Bruker software for target screening and quantitation." [PSI:MS]
+is_a: MS:1000692 ! Bruker software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:4000000
