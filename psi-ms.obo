@@ -26485,6 +26485,14 @@ relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
+id: PEFF:0001036
+name: PSequence
+def: "PEFF keyword for the peptide sequence." [PSI:PEFF]
+is_a: PEFF:0000003 ! PEFF file sequence entry term
+is_a: MS:1000888 ! stripped peptide sequence
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
 id: PEFF:1002001
 name: regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 def: "([0-9]+|[A-Z*](|.+)?)." [PSI:PEFF]
