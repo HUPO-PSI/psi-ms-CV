@@ -26226,7 +26226,6 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: PEFF:0001001
 name: DbUniqueId
 def: "Sequence database unique identifier." [PSI:PEFF]
-comment: This term was made obsolete because decided in Heidelberg 2018-04 that this is redundant.
 is_a: PEFF:0000003 ! PEFF file sequence entry term
 comment: DbUniqueId shall not be used in the PEFF 1.0 serialization as it is redundant with the primary identifier following the >
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
