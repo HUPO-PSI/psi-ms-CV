@@ -26225,10 +26225,10 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: PEFF:0001001
 name: DbUniqueId
-def: "OBSOLETE Sequence database unique identifier." [PSI:PEFF]
+def: "Sequence database unique identifier." [PSI:PEFF]
 comment: This term was made obsolete because decided in Heidelberg 2018-04 that this is redundant.
 is_a: PEFF:0000003 ! PEFF file sequence entry term
-is_obsolete: true
+comment: DbUniqueId shall not be used in the PEFF 1.0 serialization as it is redundant with the primary identifier following the >
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
@@ -26490,6 +26490,7 @@ name: PSequence
 def: "PEFF keyword for the peptide sequence." [PSI:PEFF]
 is_a: PEFF:0000003 ! PEFF file sequence entry term
 is_a: MS:1000888 ! stripped peptide sequence
+comment: PSequence shall not be used in the PEFF 1.0 serialization as it is redundant with the sequence line
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
