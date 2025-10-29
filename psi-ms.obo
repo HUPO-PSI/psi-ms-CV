@@ -1,7 +1,7 @@
 format-version: 1.2
 data-version: 4.1.208
 date: 28:10:2025 12:00
-saved-by: Jonathan Hunter
+saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26,6 +26,7 @@ remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
 remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
+remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -23858,140 +23859,152 @@ is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:1003610
+name: mzPeak format
+def: "Proteomics Standards Initiatve mzPeak file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003611
+name: imzML format
+def: "IMSIS imzML imaging file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003615
 name: Advion liquid chromatography system model
 def: "Advion Interchim Scientific liquid chromatography system model." [PSI:MS]
 is_a: MS:1003605 ! liquid chromatography system model
 
 [Term]
-id: MS:1003611
+id: MS:1003616
 name: AVANT
 def: "Advion AVANT UHPLC system." [PSI:MS]
-is_a: MS:1003610 ! Advion liquid chromatography system model
+is_a: MS:1003615 ! Advion liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
-id: MS:1003612
+id: MS:1003617
 name: Agilent liquid chromatography system model
 def: "Agilent Technologies liquid chromatography system model." [PSI:MS]
 is_a: MS:1003605 ! liquid chromatography system model
 
 [Term]
-id: MS:1003613
+id: MS:1003618
 name: 1100 Series
 def: "Agilent 1100 Series HPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003590 ! high-performance liquid chromatography system
-
-[Term]
-id: MS:1003614
-name: 1200 Series
-def: "Agilent 1200 Series HPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003590 ! high-performance liquid chromatography system
-
-[Term]
-id: MS:1003615
-name: 1200 Series HPLC-Chip
-def: "Agilent 1200 Series HPLC-Chip system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003590 ! high-performance liquid chromatography system
-
-[Term]
-id: MS:1003616
-name: 1200 Series Rapid Resolution
-def: "Agilent  1200 Series Rapid Resolution RRLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003590 ! high-performance liquid chromatography system
-
-[Term]
-id: MS:1003617
-name: 1200 RR Series II
-def: "Agilent 1200 RR Series II RRLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003590 ! high-performance liquid chromatography system
-
-[Term]
-id: MS:1003618
-name: 1200 SL
-def: "Agilent 1200 SL RRLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003619
-name: 1220 Infinity
-def: "Agilent 1220 Infinity UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+name: 1200 Series
+def: "Agilent 1200 Series HPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003620
-name: 1260 Infinity II
-def: "Agilent 1260 Infinity II UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+name: 1200 Series HPLC-Chip
+def: "Agilent 1200 Series HPLC-Chip system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003621
-name: 1260 Infinity
-def: "Agilent 1260 Infinity UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+name: 1200 Series Rapid Resolution
+def: "Agilent  1200 Series Rapid Resolution RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003622
-name: 1290 Infinity 2D-LC
-def: "Agilent  1290 Infinity 2D-LC 2D-LC UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+name: 1200 RR Series II
+def: "Agilent 1200 RR Series II RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003623
-name: 1290 Infinity
-def: "Agilent 1290 Infinity UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
-is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+name: 1200 SL
+def: "Agilent 1200 SL RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003624
-name: 1290 Infinity II 2D-LC
-def: "Agilent 1290 Infinity II 2D-LC 2D-LC UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+name: 1220 Infinity
+def: "Agilent 1220 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
 id: MS:1003625
-name: 1290 Infinity II
-def: "Agilent 1290 Infinity II UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+name: 1260 Infinity II
+def: "Agilent 1260 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
 id: MS:1003626
-name: 1200 Infinity
-def: "Agilent 1200 Infinity UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+name: 1260 Infinity
+def: "Agilent 1260 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
 id: MS:1003627
-name: 1220 Infinity II
-def: "Agilent 1220 Infinity II UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+name: 1290 Infinity 2D-LC
+def: "Agilent  1290 Infinity 2D-LC 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
 id: MS:1003628
-name: 1260 Infinity III
-def: "Agilent 1260 Infinity III UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+name: 1290 Infinity
+def: "Agilent 1290 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
 id: MS:1003629
+name: 1290 Infinity II 2D-LC
+def: "Agilent 1290 Infinity II 2D-LC 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003630
+name: 1290 Infinity II
+def: "Agilent 1290 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003631
+name: 1200 Infinity
+def: "Agilent 1200 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003632
+name: 1220 Infinity II
+def: "Agilent 1220 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003633
+name: 1260 Infinity III
+def: "Agilent 1260 Infinity III UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003634
 name: 1260 Infinity III Prime
 def: "Agilent 1260 Infinity III Prime UHPLC system." [PSI:MS]
-is_a: MS:1003612 ! Agilent liquid chromatography system model
+is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
 [Term]
