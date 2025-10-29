@@ -23656,12 +23656,6 @@ is_a: MS:1000543 ! data processing action
 
 [Term]
 id: MS:1003577
-name: imzML format
-def: "IMSIS imzML imaging file format." [PSI:MS]
-is_a: MS:1000560 ! mass spectrometer file format
-
-[Term]
-id: MS:1003578
 name: hyphenated separation
 def: "The methods, technology and chemistry by which a hyphenated separation system effects the separation of compounds." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
@@ -23867,6 +23861,12 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003610
 name: mzPeak format
 def: "Proteomics Standards Initiatve mzPeak file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003611
+name: imzML format
+def: "IMSIS imzML imaging file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
