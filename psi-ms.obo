@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.207
+data-version: 4.1.208
 date: 28:10:2025 12:00
-saved-by: Jonathan Hunter
+saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26,6 +26,7 @@ remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
 remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
+remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -23855,6 +23856,18 @@ def: "Bruker software for target screening and quantitation." [PSI:MS]
 is_a: MS:1000692 ! Bruker software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003610
+name: mzPeak format
+def: "Proteomics Standards Initiatve mzPeak file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003611
+name: imzML format
+def: "IMSIS imzML imaging file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:4000000
