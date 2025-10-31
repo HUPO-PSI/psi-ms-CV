@@ -23871,41 +23871,6 @@ name: imzML format
 def: "IMSIS imzML imaging file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
-
-[Term]
-id: MS:1003nnn
-name: adduct ion monoisotopic mass
-def: "The theoretical monoisotopic mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's monoisotopic mass plus the mass of a proton)." [PSI:MS]
-is_a: MS:1003243 ! adduct ion mass
-relationship: has_units UO:0000221 ! dalton
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-
-[Term]
-id: MS:1003nnn
-name: adduct ion average mass
-def: "The theoretical average mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's average mass plus the average mass of a hydrogen ion)." [PSI:MS]
-is_a: MS:1003243 ! adduct ion mass
-relationship: has_units UO:0000221 ! dalton
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-
-[Term]
-id: MS:1003nnn
-name: theoretical neutral monoisotopic mass
-def: "The theoretical neutral monoisotopic mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
-is_a: MS:1001117 ! theoretical neutral mass
-relationship: has_units UO:0000221 ! dalton
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
-
-[Term]
-id: MS:1003nnn
-name: theoretical neutral average mass
-def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
-is_a: MS:10001117 ! theoretical neutral mass
-relationship: has_units UO:0000221 ! dalton
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
-
-
-
 [Term]
 id: MS:1003612
 name: InstaNovo
@@ -24055,6 +24020,39 @@ name: 1260 Infinity III Prime
 def: "Agilent 1260 Infinity III Prime UHPLC system." [PSI:MS]
 is_a: MS:1003617 ! Agilent liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+
+[Term]
+id: MS:1003635
+name: adduct ion monoisotopic mass
+def: "The theoretical monoisotopic mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's monoisotopic mass plus the mass of a proton)." [PSI:MS]
+is_a: MS:1003243 ! adduct ion mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003636
+name: adduct ion average mass
+def: "The theoretical average mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's average mass plus the average mass of a hydrogen ion)." [PSI:MS]
+is_a: MS:1003243 ! adduct ion mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003637
+name: theoretical neutral monoisotopic mass
+def: "The theoretical neutral monoisotopic mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
+is_a: MS:1001117 ! theoretical neutral mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003638
+name: theoretical neutral average mass
+def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
+is_a: MS:10001117 ! theoretical neutral mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
