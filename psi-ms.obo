@@ -6450,7 +6450,7 @@ relationship: has_value_type xsd:positiveInteger ! The allowed value-type for th
 [Term]
 id: MS:1000907
 name: peak targeting suitability rank
-def: "Ordinal specifying the rank of a peak in a spectrum in terms of suitability for targeting. The most suitable peak is 1. The next most suitability peak is 2, etc. Suitability is algorithm and context dependent." [PSI:MS]
+def: "Ordinal specifying the rank of a peak in a spectrum in terms of suitability for targeting. The most suitable peak is 1. The next most suitable peak is 2, etc. Suitability is algorithm and context dependent." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
 relationship: part_of MS:1000231 ! peak
 relationship: has_value_type xsd:positiveInteger ! The allowed value-type for this CV term
