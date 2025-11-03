@@ -3010,14 +3010,14 @@ is_obsolete: true
 [Term]
 id: MS:1000410
 name: alpha-cleavage
-def: "OBSOLETE A homolytic cleavage where the bond fission occurs between at the atom adjacent to the atom at the apparent charge site and an atom removed from the apparent charge site by two bonds." [PSI:MS]
+def: "OBSOLETE A homolytic cleavage where the bond fission occurs between the atom adjacent to the atom at the apparent charge site and an atom removed from the apparent charge site by two bonds." [PSI:MS]
 comment: This child of the former purgatory term ion reaction was made obsolete.
 is_obsolete: true
 
 [Term]
 id: MS:1000411
 name: beta-cleavage
-def: "OBSOLETE A homolytic cleavage where the bond fission occurs between at an atom removed from the apparent charge site atom by two bonds and an atom adjacent to that atom and removed from the apparent charge site by three bonds." [PSI:MS]
+def: "OBSOLETE A homolytic cleavage where the bond fission occurs between an atom removed from the apparent charge site atom by two bonds and an atom adjacent to that atom and removed from the apparent charge site by three bonds." [PSI:MS]
 comment: This child of the former purgatory term ion reaction was made obsolete.
 is_obsolete: true
 
