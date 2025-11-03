@@ -17830,7 +17830,7 @@ is_a: MS:1002307 ! fragmentation ion type
 [Term]
 id: MS:1002697
 name: secondary isotope peak
-def: "Fragment ion is an isotopic peak other than that monoisotopic peak. This is used in conjunction with another ion type, such as frag: y ion." [PSI:PI]
+def: "Fragment ion that is an isotopic peak other than the monoisotopic peak. This is used in conjunction with another ion type, such as frag: y ion." [PSI:PI]
 is_a: MS:1002307 ! fragmentation ion type
 
 [Term]
