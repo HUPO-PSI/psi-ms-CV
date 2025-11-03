@@ -6284,7 +6284,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1000884
 name: protein attribute
-def: "An nonphysical characteristic attributed to a specific protein." [PSI:MS]
+def: "A nonphysical characteristic attributed to a specific protein." [PSI:MS]
 relationship: part_of MS:1000882 ! protein
 is_a: MS:1001806 ! quantification object attribute
 
