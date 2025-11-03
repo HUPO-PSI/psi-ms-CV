@@ -21115,7 +21115,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003190
 name: library version
-def: "Version number of the library, usually referring to a certain release of a continually updated library " [PSI:PI]
+def: "Version number of the library, usually referring to a certain release of a continually updated library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -21545,13 +21545,13 @@ is_a: MS:1003207 ! library creation software
 [Term]
 id: MS:1003254
 name: peak attribute
-def: "An attribute of a peak in a mass spectrum other than its m/z, intensity, and annotation. " [PSI:PI]
+def: "An attribute of a peak in a mass spectrum other than its m/z, intensity, and annotation." [PSI:PI]
 relationship: part_of MS:1000231 ! peak
 
 [Term]
 id: MS:1003255
 name: pre-decharged charge state
-def: "For a de-charged spectrum, the original charge state of the ion observed in a mass spectrum determined by charge deconvolution. " [PSI:PI]
+def: "For a de-charged spectrum, the original charge state of the ion observed in a mass spectrum determined by charge deconvolution." [PSI:PI]
 is_a: MS:1003254 ! peak attribute
 
 [Term]
@@ -21563,19 +21563,19 @@ relationship: part_of MS:1003051 ! peptidoform ion
 [Term]
 id: MS:1003257
 name: library spectrum cross reference
-def: "A link from one spectrum to another spectrum of interest " [PSI:PI]
+def: "A link from one spectrum to another spectrum of interest" [PSI:PI]
 is_a: MS:1003234 ! library spectrum attribute
 
 [Term]
 id: MS:1003258
 name: related spectrum
-def: "A cross reference to another spectrum that has some relationship with this one, but is not necessarily spectrally similar. " [PSI:PI]
+def: "A cross reference to another spectrum that has some relationship with this one, but is not necessarily spectrally similar." [PSI:PI]
 is_a: MS:1003257 ! library spectrum cross reference
 
 [Term]
 id: MS:1003259
 name: related spectrum keys
-def: "A list of cross references to a related spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
+def: "A list of cross references to a related spectrum in the same library, in the form of the library spectrum key." [PSI:PI]
 is_a: MS:1003258 ! related spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -21602,7 +21602,7 @@ is_a: MS:1003257 ! library spectrum cross reference
 [Term]
 id: MS:1003263
 name: similar spectrum keys
-def: "A list of cross references to a similar spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
+def: "A list of cross references to a similar spectrum in the same library, in the form of the library spectrum key." [PSI:PI]
 is_a: MS:1003262 ! similar spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -23676,13 +23676,13 @@ is_a: MS:1003578 ! liquid chromatography
 [Term]
 id: MS:1003580
 name: size-exclusion chromatography
-def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers. " [PSI:MS]
+def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers." [PSI:MS]
 is_a: MS:1003578 ! liquid chromatography
 
 [Term]
 id: MS:1003581
 name: affinity chromatography
-def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand. " [PSI:MS]
+def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand." [PSI:MS]
 is_a: MS:1003578 ! liquid chromatography
 
 [Term]
@@ -23736,7 +23736,7 @@ is_a: MS:1003588 ! hyphenated separation system
 [Term]
 id: MS:1003590
 name: high-performance liquid chromatography system
-def: "A system for High-Performance Liquid Chromatography (HPLC), a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture. " [PSI:MS]
+def: "A system for High-Performance Liquid Chromatography (HPLC), a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
@@ -23748,19 +23748,19 @@ is_a: MS:1003589 ! liquid chromatography system
 [Term]
 id: MS:1003592
 name: ultra-high performance liquid chromatography system
-def: "A system for Ultra-High Performance Liquid Chromatography (UHPLC), an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and systemation capable of handling ultra-high pressures. " [PSI:MS]
+def: "A system for Ultra-High Performance Liquid Chromatography (UHPLC), an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and systemation capable of handling ultra-high pressures." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
 id: MS:1003593
 name: fast protein liquid chromatography system
-def: "A system for Fast Protein Liquid Chromatography (FPLC), a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography. " [PSI:MS]
+def: "A system for Fast Protein Liquid Chromatography (FPLC), a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
 id: MS:1003594
 name: three-dimensional liquid chromatography system
-def: "A system for Three-dimensional liquid chromatography (3D-LC), an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics. " [PSI:MS]
+def: "A system for Three-dimensional liquid chromatography (3D-LC), an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
