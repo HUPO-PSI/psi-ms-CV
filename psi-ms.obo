@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.212
+data-version: 4.1.213
 date: 03:11:2025 12:00
 saved-by: Joshua Klein
 default-namespace: MS
@@ -24053,6 +24053,308 @@ def: "The theoretical neutral average mass of the molecule (e.g. the peptide seq
 is_a: MS:10001117 ! theoretical neutral mass
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003639
+name: Beckman Coulter liquid chromatography system model
+def: "Beckman Coulter, Inc. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003640
+name: System Gold
+def: "Beckman Coulter System Gold HPLC system." [PSI:MS]
+is_a: MS:1003639 ! Beckman Coulter liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003641
+name: Bruker liquid chromatography system model
+def: "Bruker Corporation liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003642
+name: Elute
+def: "Bruker Elute UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003643
+name: Elute HT
+def: "Bruker Elute HT UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003644
+name: Elute OLE
+def: "Bruker Elute OLE UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003645
+name: Elute SP
+def: "Bruker Elute SP HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003646
+name: nanoElute 2
+def: "Bruker nanoElute 2 HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003647
+name: proteoElute
+def: "Bruker proteoElute UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003648
+name: Michrom BioResources Paradigm MS4
+def: "Bruker Michrom BioResources Paradigm MS4 2D-LC HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003649
+name: Michrom Advance nanoflow
+def: "Bruker Michrom Advance nanoflow UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003650
+name: SCIEX liquid chromatography system model
+def: "SCIEX liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003651
+name: ExionLC
+def: "SCIEX ExionLC HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003652
+name: ExionLC AC
+def: "SCIEX ExionLC AC UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003653
+name: ExionLC AD
+def: "SCIEX ExionLC AD UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003654
+name: ExionLC AE
+def: "SCIEX ExionLC AE UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003655
+name: ExionLC 2.0
+def: "SCIEX ExionLC 2.0 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003656
+name: ExionLC 2.0+
+def: "SCIEX ExionLC 2.0+ UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003657
+name: Eksigent ekspert nanoLC 400
+def: "SCIEX Eksigent ekspert nanoLC 400 HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003658
+name: Eksigent ekspert nanoLC 425
+def: "SCIEX Eksigent ekspert nanoLC 425 HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003659
+name: Eksigent ekspret ultraLC 100
+def: "SCIEX Eksigent ekspret ultraLC 100 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003660
+name: Eksigent ekspert ultraLC 100-XL
+def: "SCIEX Eksigent ekspert ultraLC 100-XL UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003661
+name: Eksigent ekspert ultraLC 110
+def: "SCIEX Eksigent ekspert ultraLC 110 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003662
+name: Eksigent NanoLC-Ultra 2D
+def: "SCIEX Eksigent NanoLC-Ultra 2D 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003663
+name: Hitachi liquid chromatography system model
+def: "Hitachi, Ltd. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003664
+name: L-7100
+def: "Hitachi L-7100 HPLC pump." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003665
+name: LaChrom Ultra
+def: "Hitachi LaChrom Ultra UHPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003666
+name: Chromaster
+def: "Hitachi Chromaster HPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003667
+name: Chromaster RS
+def: "Hitachi Chromaster RS UHPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003668
+name: JASCO liquid chromatography system model
+def: "JASCO, Inc. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003669
+name: X-LC Series
+def: "JASCO X-LC Series UHPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003670
+name: LC-4000 Series
+def: "JASCO LC-4000 Series UHPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003671
+name: LC-2000 Series
+def: "JASCO LC-2000 Series HPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003672
+name: Shimadzu liquid chromatography system model
+def: "Shimadzu Corporation liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003673
+name: LC-10
+def: "Shimadzu LC-10 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003674
+name: Nexera LC-20
+def: "Shimadzu Nexera LC-20 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003675
+name: Nexera LC-30
+def: "Shimadzu Nexera LC-30 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003676
+name: Nexera X2 LC-30
+def: "Shimadzu Nexera X2 LC-30 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003677
+name: Nexera LC-40
+def: "Shimadzu Nexera LC-40 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003678
+name: Prominence LC-20
+def: "Shimadzu Prominence LC-20 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003679
+name: Prominence UFLC
+def: "Shimadzu Prominence UFLC HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003680
+name: Prominence UFLC XR
+def: "Shimadzu Prominence UFLC XR UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003681
+name: LC-2040C 3D Nexera-i
+def: "Shimadzu LC-2040C 3D Nexera-i HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003682
+name: Prominence Plus LC-30
+def: "Shimadzu Prominence Plus LC-30 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:4000000
