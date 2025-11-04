@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.213
+data-version: 4.1.214
 date: 03:11:2025 12:00
 saved-by: Joshua Klein
 default-namespace: MS
@@ -26725,10 +26725,9 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: PEFF:0001001
 name: DbUniqueId
-def: "OBSOLETE Sequence database unique identifier." [PSI:PEFF]
-comment: This term was made obsolete because decided in Heidelberg 2018-04 that this is redundant.
+def: "Sequence database unique identifier." [PSI:PEFF]
 is_a: PEFF:0000003 ! PEFF file sequence entry term
-is_obsolete: true
+comment: DbUniqueId shall not be used in the PEFF 1.0 serialization as it is redundant with the primary identifier following the >
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
@@ -26982,6 +26981,15 @@ name: initiator methionine
 def: "N-terminal methionine residue of a protein that can be co-translationally cleaved." [PSI:PEFF]
 is_a: PEFF:0001032 ! PEFF molecule processing keyword
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: PEFF:0001036
+name: PSequence
+def: "PEFF keyword for the peptide sequence." [PSI:PEFF]
+is_a: PEFF:0000003 ! PEFF file sequence entry term
+is_a: MS:1000888 ! stripped peptide sequence
+comment: PSequence shall not be used in the PEFF 1.0 serialization as it is redundant with the sequence line
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
