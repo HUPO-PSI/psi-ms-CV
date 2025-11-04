@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.208
-date: 28:10:2025 12:00
-saved-by: Jonathan Hunter
+data-version: 4.1.213
+date: 03:11:2025 12:00
+saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26,6 +26,8 @@ remark: creator: Mathias Walzer <walzer <-at-> ebi.ac.uk>
 remark: creator: Nithu Sara John <nithu <-at-> ebi.ac.uk>
 remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
+remark: creator: Samuel Wein <sam <-at-> openms.de>
+remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -182,7 +184,7 @@ is_a: NCIT:C16847 ! Technique
 [Term]
 id: NCIT:C60694
 name: Principal Component
-def: "One of the axes representing the projection of varience resulting from principal component analysis." []
+def: "One of the axes representing the projection of variance resulting from principal component analysis." []
 is_a: NCIT:C19044 ! Statistical Technique
 
 [Term]
@@ -2126,7 +2128,7 @@ is_a: MS:1000406 ! surface ionization
 
 [Term]
 id: MS:1000280
-name: suface ionization
+name: surface ionization
 def: "OBSOLETE The ionization of a neutral species when it interacts with a solid surface with an appropriate work function and temperature." [PSI:MS]
 comment: This term was made obsolete because it was replaced by surface ionization (MS:1000406).
 synonym: "SI" EXACT []
@@ -2483,7 +2485,7 @@ is_obsolete: true
 [Term]
 id: MS:1000331
 name: Linked Scan at Constant E2/V
-def: "OBSOLETE A linked scan performed on a sector instrument that incorporates at least one electric sector plus one magnetic sector. The electric sector field, E, and the accelerating voltage, V, are scanned simultaneously, so as to maintain the ratio E2/V at a constant value. This linked scan recordss a product ion spectrum of dissociation or other reactions occurring in a field free region (FFR) preceding the two sectors." [PSI:MS]
+def: "OBSOLETE A linked scan performed on a sector instrument that incorporates at least one electric sector plus one magnetic sector. The electric sector field, E, and the accelerating voltage, V, are scanned simultaneously, so as to maintain the ratio E2/V at a constant value. This linked scan records a product ion spectrum of dissociation or other reactions occurring in a field free region (FFR) preceding the two sectors." [PSI:MS]
 comment: This child of the former purgatory term linked scan was made obsolete.
 is_obsolete: true
 
@@ -2504,7 +2506,7 @@ is_obsolete: true
 [Term]
 id: MS:1000334
 name: MS/MS in Time
-def: "OBSOLETE A tandem mass spectrometry method in which product ion spectra are recorded in a single m/z analyzer (such as a Paul Ion Trap or FTMS) in discreet steps over time. Ions in a specific m/z range are selected, dissociated, and the product ions analyzed sequentially in time." [PSI:MS]
+def: "OBSOLETE A tandem mass spectrometry method in which product ion spectra are recorded in a single m/z analyzer (such as a Paul Ion Trap or FTMS) in discrete steps over time. Ions in a specific m/z range are selected, dissociated, and the product ions analyzed sequentially in time." [PSI:MS]
 comment: This child of the former purgatory term m/z Separation Method was made obsolete.
 is_obsolete: true
 
@@ -2933,7 +2935,7 @@ is_a: MS:1000073 ! electrospray ionization
 [Term]
 id: MS:1000398
 name: nanoelectrospray
-def: "Electrospray ionization at a flow rate less than ~25 nL/min. Nanoelectrospray is synonymous with nanospray. The flow is dependent on the potenial on the tip of the electrospray needle and/or a gas presure to push the sample through the needle. See also electrospray ionization and microelectrospray." [PSI:MS]
+def: "Electrospray ionization at a flow rate less than ~25 nL/min. Nanoelectrospray is synonymous with nanospray. The flow is dependent on the potential on the tip of the electrospray needle and/or a gas pressure to push the sample through the needle. See also electrospray ionization and microelectrospray." [PSI:MS]
 synonym: "nanospray" EXACT []
 is_a: MS:1000073 ! electrospray ionization
 
@@ -3008,14 +3010,14 @@ is_obsolete: true
 [Term]
 id: MS:1000410
 name: alpha-cleavage
-def: "OBSOLETE A homolytic cleavage where the bond fission occurs between at the atom adjacent to the atom at the apparent charge site and an atom removed from the aparent charge site by two bonds." [PSI:MS]
+def: "OBSOLETE A homolytic cleavage where the bond fission occurs between the atom adjacent to the atom at the apparent charge site and an atom removed from the apparent charge site by two bonds." [PSI:MS]
 comment: This child of the former purgatory term ion reaction was made obsolete.
 is_obsolete: true
 
 [Term]
 id: MS:1000411
 name: beta-cleavage
-def: "OBSOLETE A homolytic cleavage where the bond fission occurs between at an atom removed from the apparent charge site atom by two bonds and an atom adjacent to that atom and removed from the aparent charge site by three bonds." [PSI:MS]
+def: "OBSOLETE A homolytic cleavage where the bond fission occurs between an atom removed from the apparent charge site atom by two bonds and an atom adjacent to that atom and removed from the apparent charge site by three bonds." [PSI:MS]
 comment: This child of the former purgatory term ion reaction was made obsolete.
 is_obsolete: true
 
@@ -4066,7 +4068,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1000564
 name: PSI mzData format
-def: "Proteomics Standards Inititative mzData file format." [PSI:MS]
+def: "Proteomics Standards Initiative mzData file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
@@ -4204,7 +4206,7 @@ is_a: MS:1000294 ! mass spectrum
 [Term]
 id: MS:1000584
 name: mzML format
-def: "Proteomics Standards Inititative mzML file format." [PSI:MS]
+def: "Proteomics Standards Initiative mzML file format." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
@@ -4264,7 +4266,7 @@ is_a: MS:1000543 ! data processing action
 [Term]
 id: MS:1000593
 name: baseline reduction
-def: "A process of removal of varying intensities generated due to variable energy absorption before further processing can take place. Baseline reduction facilitates meaningful comparision between intensities of m/z values." [PSI:MS]
+def: "A process of removal of varying intensities generated due to variable energy absorption before further processing can take place. Baseline reduction facilitates meaningful comparison between intensities of m/z values." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
 [Term]
@@ -5446,7 +5448,7 @@ is_a: MS:1000752 ! TOPP software
 [Term]
 id: MS:1000767
 name: native spectrum identifier format
-def: "Describes how the native spectrum identifiers are formated." [PSI:MS]
+def: "Describes how the native spectrum identifiers are formatted." [PSI:MS]
 synonym: "nativeID format" EXACT []
 relationship: part_of MS:1000577 ! source data file
 
@@ -6103,7 +6105,7 @@ is_a: MS:1000547 ! object attribute
 [Term]
 id: MS:1000858
 name: fraction identifier
-def: "Identier string that describes the sample fraction. This identifier should contain the fraction number(s) or similar information." [PSI:MS]
+def: "Identifier string that describes the sample fraction. This identifier should contain the fraction number(s) or similar information." [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -6282,7 +6284,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1000884
 name: protein attribute
-def: "An nonphysical characterstic attributed to a specific protein." [PSI:MS]
+def: "A nonphysical characteristic attributed to a specific protein." [PSI:MS]
 relationship: part_of MS:1000882 ! protein
 is_a: MS:1001806 ! quantification object attribute
 
@@ -6448,7 +6450,7 @@ relationship: has_value_type xsd:positiveInteger ! The allowed value-type for th
 [Term]
 id: MS:1000907
 name: peak targeting suitability rank
-def: "Ordinal specifying the rank of a peak in a spectrum in terms of suitability for targeting. The most suitable peak is 1. The next most suitability peak is 2, etc. Suitability is algorithm and context dependant." [PSI:MS]
+def: "Ordinal specifying the rank of a peak in a spectrum in terms of suitability for targeting. The most suitable peak is 1. The next most suitable peak is 2, etc. Suitability is algorithm and context dependent." [PSI:MS]
 is_a: MS:1000455 ! ion selection attribute
 relationship: part_of MS:1000231 ! peak
 relationship: has_value_type xsd:positiveInteger ! The allowed value-type for this CV term
@@ -9427,7 +9429,7 @@ is_a: MS:1001450 ! decoy DB details
 
 [Term]
 id: MS:1001454
-name: quality estimation with implicite decoy sequences
+name: quality estimation with implicit decoy sequences
 def: "Decoy entries are generated during the search, not explicitly stored in a database (like Mascot Decoy)." [PSI:PI]
 is_a: MS:1001060 ! quality estimation method details
 
@@ -13975,7 +13977,7 @@ is_a: MS:1001806 ! quantification object attribute
 [Term]
 id: MS:1002121
 name: spectral count feature
-def: "Dummy decribing a spectral count feature." [PSI:PI]
+def: "Dummy describing a spectral count feature." [PSI:PI]
 is_a: MS:1001828 ! feature attribute
 
 [Term]
@@ -17468,7 +17470,7 @@ is_a: MS:1001457 ! data processing software
 [Term]
 id: MS:1002646
 name: native spectrum identifier format, combined spectra
-def: "Describes how the native spectrum identifiers that have been combined prior to searching or interpretation are formated." [PSI:PI]
+def: "Describes how the native spectrum identifiers that have been combined prior to searching or interpretation are formatted." [PSI:PI]
 synonym: "nativeID format, combined spectra" EXACT []
 relationship: part_of MS:1000577 ! source data file
 
@@ -17828,7 +17830,7 @@ is_a: MS:1002307 ! fragmentation ion type
 [Term]
 id: MS:1002697
 name: secondary isotope peak
-def: "Fragment ion is an isotopic peak other than that monoisotopic peak. This is used in conjuction with another ion type, such as frag: y ion." [PSI:PI]
+def: "Fragment ion that is an isotopic peak other than the monoisotopic peak. This is used in conjunction with another ion type, such as frag: y ion." [PSI:PI]
 is_a: MS:1002307 ! fragmentation ion type
 
 [Term]
@@ -17882,7 +17884,7 @@ is_a: MS:1002704 ! protein-level result list attribute
 [Term]
 id: MS:1002706
 name: protein group-level result list statistic
-def: "Attrbiute of an entire list of protein groups." [PSI:PI]
+def: "Attribute of an entire list of protein groups." [PSI:PI]
 is_a: MS:1002405 ! protein group-level result list attribute
 
 [Term]
@@ -20205,7 +20207,7 @@ relationship: part_of MS:1000442 ! spectrum
 [Term]
 id: MS:1003059
 name: number of peaks
-def: "Number of peaks or features in a spectrum. For a peak-picked spectrum, this will correspond to the number of data points. For a non-peak-picked spectrum, this corresponds to the number of features discernable in the spectrum, which will be fewer than the number of data points." [PSI:PI]
+def: "Number of peaks or features in a spectrum. For a peak-picked spectrum, this will correspond to the number of data points. For a non-peak-picked spectrum, this corresponds to the number of features discernible in the spectrum, which will be fewer than the number of data points." [PSI:PI]
 is_a: MS:1003058 ! spectrum property
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
@@ -20492,7 +20494,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003102
 name: NIST msp comment
-def: "Term for a comment field withing the NIST msp file format" [PSI:MS]
+def: "Term for a comment field within the NIST msp file format" [PSI:MS]
 is_a: MS:1000499 ! spectrum attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -21113,7 +21115,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003190
 name: library version
-def: "Version number of the library, usually refering to a certain release of a continually updated library " [PSI:PI]
+def: "Version number of the library, usually referring to a certain release of a continually updated library" [PSI:PI]
 is_a: MS:1003171 ! spectral library attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -21151,7 +21153,7 @@ is_a: MS:1003192 ! decoy spectrum
 [Term]
 id: MS:1003196
 name: unrelated species decoy spectrum
-def: "A decoy spectrum that is a real spectrum of a naturally occuring peptidoform of an unrelated species that should not be found in the sample" [PSI:PI]
+def: "A decoy spectrum that is a real spectrum of a naturally occurring peptidoform of an unrelated species that should not be found in the sample" [PSI:PI]
 is_a: MS:1003192 ! decoy spectrum
 
 [Term]
@@ -21463,6 +21465,7 @@ id: MS:1003243
 name: adduct ion mass
 def: "The theoretical mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's mass plus the mass of a proton)" [PSI:PI]
 is_a: MS:1003056 ! adduct ion property
+relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -21543,13 +21546,13 @@ is_a: MS:1003207 ! library creation software
 [Term]
 id: MS:1003254
 name: peak attribute
-def: "An attribute of a peak in a mass spectrum other than its m/z, intensity, and annotation. " [PSI:PI]
+def: "An attribute of a peak in a mass spectrum other than its m/z, intensity, and annotation." [PSI:PI]
 relationship: part_of MS:1000231 ! peak
 
 [Term]
 id: MS:1003255
 name: pre-decharged charge state
-def: "For a de-charged spectrum, the original charge state of the ion observed in a mass spectrum determined by charge deconvolution. " [PSI:PI]
+def: "For a de-charged spectrum, the original charge state of the ion observed in a mass spectrum determined by charge deconvolution." [PSI:PI]
 is_a: MS:1003254 ! peak attribute
 
 [Term]
@@ -21561,19 +21564,19 @@ relationship: part_of MS:1003051 ! peptidoform ion
 [Term]
 id: MS:1003257
 name: library spectrum cross reference
-def: "A link from one spectrum to another spectrum of interest " [PSI:PI]
+def: "A link from one spectrum to another spectrum of interest" [PSI:PI]
 is_a: MS:1003234 ! library spectrum attribute
 
 [Term]
 id: MS:1003258
 name: related spectrum
-def: "A cross reference to another spectrum that has some relationship with this one, but is not necessarily spectrally similar. " [PSI:PI]
+def: "A cross reference to another spectrum that has some relationship with this one, but is not necessarily spectrally similar." [PSI:PI]
 is_a: MS:1003257 ! library spectrum cross reference
 
 [Term]
 id: MS:1003259
 name: related spectrum keys
-def: "A list of cross references to a related spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
+def: "A list of cross references to a related spectrum in the same library, in the form of the library spectrum key." [PSI:PI]
 is_a: MS:1003258 ! related spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -21600,7 +21603,7 @@ is_a: MS:1003257 ! library spectrum cross reference
 [Term]
 id: MS:1003263
 name: similar spectrum keys
-def: "A list of cross references to a similar spectrum in the same library, in the form of the library spectrum key.  " [PSI:PI]
+def: "A list of cross references to a similar spectrum in the same library, in the form of the library spectrum key." [PSI:PI]
 is_a: MS:1003262 ! similar spectrum
 relationship: has_value_type MS:1002712 ! The allowed value-type for this CV term
 
@@ -23674,13 +23677,13 @@ is_a: MS:1003578 ! liquid chromatography
 [Term]
 id: MS:1003580
 name: size-exclusion chromatography
-def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers. " [PSI:MS]
+def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers." [PSI:MS]
 is_a: MS:1003578 ! liquid chromatography
 
 [Term]
 id: MS:1003581
 name: affinity chromatography
-def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand. " [PSI:MS]
+def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand." [PSI:MS]
 is_a: MS:1003578 ! liquid chromatography
 
 [Term]
@@ -23734,7 +23737,7 @@ is_a: MS:1003588 ! hyphenated separation system
 [Term]
 id: MS:1003590
 name: high-performance liquid chromatography system
-def: "A system for High-Performance Liquid Chromatography (HPLC), a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture. " [PSI:MS]
+def: "A system for High-Performance Liquid Chromatography (HPLC), a widely used analytical chemistry technique for separating, identifying, and quantifying individual components in a liquid mixture." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
@@ -23746,19 +23749,19 @@ is_a: MS:1003589 ! liquid chromatography system
 [Term]
 id: MS:1003592
 name: ultra-high performance liquid chromatography system
-def: "A system for Ultra-High Performance Liquid Chromatography (UHPLC), an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and systemation capable of handling ultra-high pressures. " [PSI:MS]
+def: "A system for Ultra-High Performance Liquid Chromatography (UHPLC), an advanced form of high-performance liquid chromatography designed to achieve significantly faster, higher-resolution, and more sensitive separations. It is primarily achieved by innovations in particle chemistry and systemation capable of handling ultra-high pressures." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
 id: MS:1003593
 name: fast protein liquid chromatography system
-def: "A system for Fast Protein Liquid Chromatography (FPLC), a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography. " [PSI:MS]
+def: "A system for Fast Protein Liquid Chromatography (FPLC), a versatile and widely used medium-pressure chromatography technique primarily employed for the separation and purification of biomolecules, especially proteins. It operates under low to moderate pressures, making it suitable for labile proteins and other large biomolecules that might be denatured by the high pressures and organic solvents often used in high-performance liquid chromatography." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
 id: MS:1003594
 name: three-dimensional liquid chromatography system
-def: "A system for Three-dimensional liquid chromatography (3D-LC), an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics. " [PSI:MS]
+def: "A system for Three-dimensional liquid chromatography (3D-LC), an advanced separation technique that combines three distinct liquid chromatography (LC) methods to achieve significantly enhanced separation power for complex mixtures, particularly in fields like proteomics." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
@@ -23855,6 +23858,503 @@ def: "Bruker software for target screening and quantitation." [PSI:MS]
 is_a: MS:1000692 ! Bruker software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003610
+name: mzPeak format
+def: "Proteomics Standards Initiatve mzPeak file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003611
+name: imzML format
+def: "IMSIS imzML imaging file format." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003612
+name: InstaNovo
+def: "InstaNovo is a deep learning based tool using a Transformer architecture for de novo peptide sequencing." [DOI:0.1038/s42256-025-01019-5, https://github.com/instadeepai/instanovo, PSI:MS]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003613
+name: InstaNovo+
+def: "InstaNovo+ is a deep learning based tool using a Diffusion architecture for de novo peptide sequencing." [DOI:0.1038/s42256-025-01019-5, https://github.com/instadeepai/instanovo, PSI:MS]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003615
+name: Advion liquid chromatography system model
+def: "Advion Interchim Scientific liquid chromatography system model." [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003616
+name: AVANT
+def: "Advion AVANT UHPLC system." [PSI:MS]
+is_a: MS:1003615 ! Advion liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003617
+name: Agilent liquid chromatography system model
+def: "Agilent Technologies liquid chromatography system model." [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003618
+name: 1100 Series
+def: "Agilent 1100 Series HPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003619
+name: 1200 Series
+def: "Agilent 1200 Series HPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003620
+name: 1200 Series HPLC-Chip
+def: "Agilent 1200 Series HPLC-Chip system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003621
+name: 1200 Series Rapid Resolution
+def: "Agilent  1200 Series Rapid Resolution RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003622
+name: 1200 RR Series II
+def: "Agilent 1200 RR Series II RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003623
+name: 1200 SL
+def: "Agilent 1200 SL RRLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003624
+name: 1220 Infinity
+def: "Agilent 1220 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003625
+name: 1260 Infinity II
+def: "Agilent 1260 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003626
+name: 1260 Infinity
+def: "Agilent 1260 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003627
+name: 1290 Infinity 2D-LC
+def: "Agilent  1290 Infinity 2D-LC 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003628
+name: 1290 Infinity
+def: "Agilent 1290 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003629
+name: 1290 Infinity II 2D-LC
+def: "Agilent 1290 Infinity II 2D-LC 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003630
+name: 1290 Infinity II
+def: "Agilent 1290 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003631
+name: 1200 Infinity
+def: "Agilent 1200 Infinity UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003632
+name: 1220 Infinity II
+def: "Agilent 1220 Infinity II UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003633
+name: 1260 Infinity III
+def: "Agilent 1260 Infinity III UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003634
+name: 1260 Infinity III Prime
+def: "Agilent 1260 Infinity III Prime UHPLC system." [PSI:MS]
+is_a: MS:1003617 ! Agilent liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+
+[Term]
+id: MS:1003635
+name: adduct ion monoisotopic mass
+def: "The theoretical monoisotopic mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's monoisotopic mass plus the mass of a proton)." [PSI:MS]
+is_a: MS:1003243 ! adduct ion mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003636
+name: adduct ion average mass
+def: "The theoretical average mass of the adduct ion (e.g. for a singly-charged protonated peptide ion, this value would be the neutral peptide molecule's average mass plus the average mass of a hydrogen ion)." [PSI:MS]
+is_a: MS:1003243 ! adduct ion mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003637
+name: theoretical neutral monoisotopic mass
+def: "The theoretical neutral monoisotopic mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
+is_a: MS:1001117 ! theoretical neutral mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003638
+name: theoretical neutral average mass
+def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
+is_a: MS:10001117 ! theoretical neutral mass
+relationship: has_units UO:0000221 ! dalton
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003639
+name: Beckman Coulter liquid chromatography system model
+def: "Beckman Coulter, Inc. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003640
+name: System Gold
+def: "Beckman Coulter System Gold HPLC system." [PSI:MS]
+is_a: MS:1003639 ! Beckman Coulter liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003641
+name: Bruker liquid chromatography system model
+def: "Bruker Corporation liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003642
+name: Elute
+def: "Bruker Elute UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003643
+name: Elute HT
+def: "Bruker Elute HT UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003644
+name: Elute OLE
+def: "Bruker Elute OLE UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003645
+name: Elute SP
+def: "Bruker Elute SP HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003646
+name: nanoElute 2
+def: "Bruker nanoElute 2 HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003647
+name: proteoElute
+def: "Bruker proteoElute UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003648
+name: Michrom BioResources Paradigm MS4
+def: "Bruker Michrom BioResources Paradigm MS4 2D-LC HPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003649
+name: Michrom Advance nanoflow
+def: "Bruker Michrom Advance nanoflow UHPLC system." [PSI:MS]
+is_a: MS:1003641 ! Bruker liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003650
+name: SCIEX liquid chromatography system model
+def: "SCIEX liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003651
+name: ExionLC
+def: "SCIEX ExionLC HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003652
+name: ExionLC AC
+def: "SCIEX ExionLC AC UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003653
+name: ExionLC AD
+def: "SCIEX ExionLC AD UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003654
+name: ExionLC AE
+def: "SCIEX ExionLC AE UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003655
+name: ExionLC 2.0
+def: "SCIEX ExionLC 2.0 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003656
+name: ExionLC 2.0+
+def: "SCIEX ExionLC 2.0+ UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003657
+name: Eksigent ekspert nanoLC 400
+def: "SCIEX Eksigent ekspert nanoLC 400 HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003658
+name: Eksigent ekspert nanoLC 425
+def: "SCIEX Eksigent ekspert nanoLC 425 HPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003659
+name: Eksigent ekspret ultraLC 100
+def: "SCIEX Eksigent ekspret ultraLC 100 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003660
+name: Eksigent ekspert ultraLC 100-XL
+def: "SCIEX Eksigent ekspert ultraLC 100-XL UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003661
+name: Eksigent ekspert ultraLC 110
+def: "SCIEX Eksigent ekspert ultraLC 110 UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003662
+name: Eksigent NanoLC-Ultra 2D
+def: "SCIEX Eksigent NanoLC-Ultra 2D 2D-LC UHPLC system." [PSI:MS]
+is_a: MS:1003650 ! SCIEX liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003663
+name: Hitachi liquid chromatography system model
+def: "Hitachi, Ltd. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003664
+name: L-7100
+def: "Hitachi L-7100 HPLC pump." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003665
+name: LaChrom Ultra
+def: "Hitachi LaChrom Ultra UHPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003666
+name: Chromaster
+def: "Hitachi Chromaster HPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003667
+name: Chromaster RS
+def: "Hitachi Chromaster RS UHPLC system." [PSI:MS]
+is_a: MS:1003663 ! Hitachi liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003668
+name: JASCO liquid chromatography system model
+def: "JASCO, Inc. liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003669
+name: X-LC Series
+def: "JASCO X-LC Series UHPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003670
+name: LC-4000 Series
+def: "JASCO LC-4000 Series UHPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003671
+name: LC-2000 Series
+def: "JASCO LC-2000 Series HPLC system." [PSI:MS]
+is_a: MS:1003668 ! JASCO liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003672
+name: Shimadzu liquid chromatography system model
+def: "Shimadzu Corporation liquid chromatography system model" [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003673
+name: LC-10
+def: "Shimadzu LC-10 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003674
+name: Nexera LC-20
+def: "Shimadzu Nexera LC-20 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003675
+name: Nexera LC-30
+def: "Shimadzu Nexera LC-30 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003676
+name: Nexera X2 LC-30
+def: "Shimadzu Nexera X2 LC-30 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003677
+name: Nexera LC-40
+def: "Shimadzu Nexera LC-40 UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003678
+name: Prominence LC-20
+def: "Shimadzu Prominence LC-20 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003679
+name: Prominence UFLC
+def: "Shimadzu Prominence UFLC HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003680
+name: Prominence UFLC XR
+def: "Shimadzu Prominence UFLC XR UHPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003681
+name: LC-2040C 3D Nexera-i
+def: "Shimadzu LC-2040C 3D Nexera-i HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003682
+name: Prominence Plus LC-30
+def: "Shimadzu Prominence Plus LC-30 HPLC system." [PSI:MS]
+is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:4000000
