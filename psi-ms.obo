@@ -24437,7 +24437,7 @@ is_a: MS:1003722 ! gas-solid chromatography
 
 [Term]
 id: MS:1003724
-name: porous polymers stationary phase gas-solid chromatography
+name: porous polymer stationary phase gas-solid chromatography
 def: "Porous polymer stationary phase gas-solid chromatography employs solid adsorbents like porous polystyrene-divinylbenzene, enabling volatile analyte separation by selective physical adsorption based on molecular size and polarity." [PSI:MS]
 is_a: MS:1003722 ! gas-solid chromatography
 
