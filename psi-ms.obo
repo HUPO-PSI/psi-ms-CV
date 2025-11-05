@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.215
-date: 05:11:2025 11:31
+date: 05:11:2025 11:46
 saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24401,6 +24401,7 @@ name: Dionex UltiMate 3000 RSLCnano
 def: "Thermo Dionex UltiMate 3000 RSLCnano UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
 
 [Term]
 id: MS:1003690
@@ -24422,6 +24423,7 @@ name: EASY-nLC 1000
 def: "Thermo EASY-nLC 1000 UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
 
 [Term]
 id: MS:1003693
@@ -24429,6 +24431,7 @@ name: EASY-nLC 1200
 def: "Thermo EASY-nLC 1200 UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
 
 [Term]
 id: MS:1003694
@@ -24440,7 +24443,7 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 [Term]
 id: MS:1003695
 name: Vanquish Duo 
-def: "Thermo Vanquish Duo  UHPLC system." [PSI:MS]
+def: "Thermo Vanquish Duo UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
 
@@ -24477,6 +24480,7 @@ name: Proxeon EASY-nLC II
 def: "Thermo Proxeon EASY-nLC II UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
 
 [Term]
 id: MS:1003701
