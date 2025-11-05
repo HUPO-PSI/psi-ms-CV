@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.214
-date: 03:11:2025 12:00
+data-version: 4.1.215
+date: 05:11:2025 12:56
 saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -23133,6 +23133,7 @@ id: MS:1003489
 name: GCMS-TQ8050NX
 def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1003735 ! Shimadzu gas chromatography mass spectrometry system model
 
 [Term]
 id: MS:1003490
@@ -24355,6 +24356,156 @@ name: Prominence Plus LC-30
 def: "Shimadzu Prominence Plus LC-30 HPLC system." [PSI:MS]
 is_a: MS:1003672 ! Shimadzu liquid chromatography system model
 is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003711
+name: gas chromatography
+def: "Gas chromatography (GC) separates volatile or semi-volatile compounds by injecting a vaporized sample into a flow of inert carrier gas, passing it through a column with a stationary phase, where analytes are separated based on differential interactions." [PSI:MS]
+is_a: MS:1003577 ! hyphenated separation
+
+[Term]
+id: MS:1003712
+name: fast gas chromatography
+def: "Fast gas chromatography (fast GC, FGC) employs short, narrow-bore capillary columns, high carrier gas velocity, and rapid temperature programming to achieve high-efficiency separations in a fraction of standard GC run times." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003713
+name: packed column gas chromatography
+def: "Packed column gas chromatography uses stainless steel or glass tubes (typically 2–4 mm ID, 1–6 m length) filled with particulate packing material coated with stationary phase, enabling the separation of larger sample volumes but typically providing lower efficiency and broader peaks than capillary GC." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003714
+name: capilliary column gas chromatography
+def: "Capillary column gas chromatography uses narrow-bore fused silica columns (typically 0.1–0.5 mm ID, 5–100 m length) coated with a thin internal stationary phase, enabling high-efficiency, high-resolution separations of volatile analytes." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003715
+name: high-resolution gas chromatography
+def: "High-resolution gas chromatography (HRGC) utilizes narrow-bore capillary columns and optimized parameters to achieve exceptional separation efficiency and peak capacity for complex, volatile mixtures." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003716
+name: pyrolysis-gas chromatography
+def: "Pyrolysis-gas chromatography (Py-GC) thermally decomposes complex samples into smaller volatile fragments, which are separated using GC." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003717
+name: gas-liquid chromatography
+def: "Gas-liquid chromatography (GLC) employs an inert gaseous mobile phase and a liquid stationary phase immobilized on a solid support, separating volatile analytes by differential partitioning in the column." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003718
+name: non-polar stationary phase gas-liquid chromatography
+def: "Non-polar stationary phase gas-liquid chromatography employs phases like polydimethylsiloxane (PDMS), where separation is based on analyte volatility and dispersion interactions, optimally retaining non-polar compounds." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003719
+name: mid-polar stationary phase gas-liquid chromatography
+def: "Mid-polar stationary phase gas-liquid chromatography employs phases such as polysiloxanes, providing balanced separation through both dispersion and dipole interactions for analytes of intermediate polarity." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003720
+name: polar stationary phase gas-liquid chromatography
+def: "Polar stationary phase gas-liquid chromatography uses stationary phases such as polyethylene glycol, maximizing retention and selectivity for polar analytes via dipole–dipole and hydrogen bonding interactions." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003721
+name: chiral stationary phase gas-liquid chromatography
+def: "Chiral stationary phase gas-liquid chromatography uses a stationary phase with bonded chiral selectors, enabling enantiomeric separation by stereoselective interactions." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003722
+name: gas-solid chromatography
+def: "Gas-solid chromatography (GSC) separates volatile analytes by adsorption onto a solid stationary phase, with elution governed by analyte–surface interactions and adsorption." [PSI:MS]
+is_a: MS:1003711 ! gas chromatography
+
+[Term]
+id: MS:1003723
+name: molecular sieve stationary phase gas-solid chromatography
+def: "Molecular sieve stationary phase gas–solid chromatography separates volatile analytes by differential adsorption onto a porous, crystalline aluminosilicate solid phase, enabling selective separation of permanent gases and small hydrocarbons." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003724
+name: porous polymers stationary phase gas-solid chromatography
+def: "Porous polymer stationary phase gas-solid chromatography employs solid adsorbents like porous polystyrene-divinylbenzene, enabling volatile analyte separation by selective physical adsorption based on molecular size and polarity." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003725
+name: activated carbon stationary phase gas-solid chromatography
+def: "Activated carbon stationary phase gas-solid chromatography utilizes activated carbon’s high surface area to selectively adsorb and resolve volatile non-polar organics and permanent gases via surface interactions and physical adsorption." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003726
+name: inorganic oxides stationary phase gas-solid chromatography
+def: "Inorganic oxides stationary phase gas-solid chromatography employs solid adsorbents such as silica or alumina, enabling separation of permanent gases and low-boiling organics by surface adsorption interactions." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003727
+name: graphitized carbon stationary phase gas-solid chromatography
+def: "Graphitized carbon stationary phase gas-solid chromatography utilizes non-porous or porous graphitized carbon, enabling strong planar and π-electron interactions for selective adsorption and separation of aromatic and polar analytes." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003728
+name: gas chromatography system
+def: "A gas chromatography (GC) system comprises an injector, temperature-controlled column with stationary phase, carrier gas supply, oven, and detector, enabling separation of volatile analytes." [PSI:MS]
+is_a: MS:1003588 ! hyphenated separation system
+
+[Term]
+id: MS:1003729
+name: two-dimensional gas chromatography system
+def: "A two-dimensional gas chromatography system (GC×GC) uses orthogonal column sets connected by a modulator, providing enhanced separation of complex mixtures via sequential, independent mechanisms in primary and secondary columns." [PSI:MS]
+is_a: MS:1003728 ! gas chromatography system
+
+[Term]
+id: MS:1003730
+name: gas chromatography system model
+def: "Gas chromatography system model name not including the vendor's name." [PSI:MS]
+is_a: MS:1003728 ! gas chromatography system
+
+[Term]
+id: MS:1003731
+name: Agilent gas chromatography system model
+def: "Agilent Technologies gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003732
+name: 6890N
+def: "Agilent 6890N gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003733
+name: gas chromatography mass spectrometry system
+def: "A gas chromatography mass spectrometry system (GC–MS) integrates a gas chromatograph for volatile analyte separation with a mass spectrometer for ionization and detection, enabling sensitive qualitative or quantitative analysis." [PSI:MS]
+is_a: MS:1003588 ! hyphenated separation system
+
+[Term]
+id: MS:1003734
+name: gas chromatography mass spectrometry system model
+def: "Gas chromatography mass spectrometry system model name not including the vendor's name." [PSI:MS]
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
+
+[Term]
+id: MS:1003735
+name: Shimadzu gas chromatography mass spectrometry system model
+def: "Shimadzu Corporation gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 
 [Term]
 id: MS:4000000
