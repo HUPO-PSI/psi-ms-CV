@@ -24377,7 +24377,7 @@ is_a: MS:1003711 ! gas chromatography
 
 [Term]
 id: MS:1003714
-name: capilliary column gas chromatography
+name: capillary column gas chromatography
 def: "Capillary column gas chromatography uses narrow-bore fused silica columns (typically 0.1–0.5 mm ID, 5–100 m length) coated with a thin internal stationary phase, enabling high-efficiency, high-resolution separations of volatile analytes." [PSI:MS]
 is_a: MS:1003711 ! gas chromatography
 
