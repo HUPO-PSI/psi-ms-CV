@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.215
-date: 05:11:2025 12:56
+date: 06:11:2025 14:26
 saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -23667,7 +23667,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1003578
 name: liquid chromatography
 def: "The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
-is_a: MS:1003577 ! hyphenated separation
+is_a: MS:1003736 ! separation
 
 [Term]
 id: MS:1003579
@@ -23733,7 +23733,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1003589
 name: liquid chromatography system
 def: "Liquid chromatography (LC) is an analytical technique used to separate a mixture into its individual components for identification, quantification, and purification. The separation is based on the differential interactions of the sample compounds with a liquid mobile phase and a solid stationary phase." [PSI:MS]
-is_a: MS:1003588 ! hyphenated separation system
+is_a: MS:1003737 ! separation system
 
 [Term]
 id: MS:1003590
@@ -24361,7 +24361,7 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 id: MS:1003711
 name: gas chromatography
 def: "Gas chromatography (GC) separates volatile or semi-volatile compounds by injecting a vaporized sample into a flow of inert carrier gas, passing it through a column with a stationary phase, where analytes are separated based on differential interactions." [PSI:MS]
-is_a: MS:1003577 ! hyphenated separation
+is_a: MS:1003736 ! separation
 
 [Term]
 id: MS:1003712
@@ -24463,7 +24463,7 @@ is_a: MS:1003722 ! gas-solid chromatography
 id: MS:1003728
 name: gas chromatography system
 def: "A gas chromatography (GC) system comprises an injector, temperature-controlled column with stationary phase, carrier gas supply, oven, and detector, enabling separation of volatile analytes." [PSI:MS]
-is_a: MS:1003588 ! hyphenated separation system
+is_a: MS:1003737 ! separation system
 
 [Term]
 id: MS:1003729
@@ -24506,6 +24506,18 @@ id: MS:1003735
 name: Shimadzu gas chromatography mass spectrometry system model
 def: "Shimadzu Corporation gas chromatography mass spectrometry system model." [PSI:MS]
 is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003736
+name: separation
+def: "The methods, technology and chemistry by which a separation system effects the separation of compounds." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003737
+name: separation system
+def: "A system to effect separation of compounds." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: MS:4000000
