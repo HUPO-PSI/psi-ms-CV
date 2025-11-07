@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.214
-date: 03:11:2025 12:00
+data-version: 4.1.215
+date: 05:11:2025 11:46
 saved-by: Joshua Klein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24354,6 +24354,202 @@ id: MS:1003682
 name: Prominence Plus LC-30
 def: "Shimadzu Prominence Plus LC-30 HPLC system." [PSI:MS]
 is_a: MS:1003672 ! Shimadzu liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003683
+name: Thermo Scientific liquid chromatography system model
+def: "Thermo Scientific liquid chromatography system model." [PSI:MS]
+is_a: MS:1003605 ! liquid chromatography system model
+
+[Term]
+id: MS:1003684
+name: Accela
+def: "Thermo Accela UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003685
+name: Accela II
+def: "Thermo Accela II UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003686
+name: Dionex Integrion HPIC
+def: "Thermo Dionex Integrion HPIC ion chromatography system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+
+[Term]
+id: MS:1003687
+name: Dionex Integrion RFIC
+def: "Thermo Dionex Integrion RFIC ion chromatography system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+
+[Term]
+id: MS:1003688
+name: Dionex UltiMate 3000 RSLC
+def: "Thermo Dionex UltiMate 3000 RSLC UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003689
+name: Dionex UltiMate 3000 RSLCnano
+def: "Thermo Dionex UltiMate 3000 RSLCnano UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
+
+[Term]
+id: MS:1003690
+name: Dionex UltiMate 3000
+def: "Thermo Dionex UltiMate 3000 UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003691
+name: Dionex UltiMate 3000 XRS
+def: "Thermo Dionex UltiMate 3000 XRS UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003692
+name: EASY-nLC 1000
+def: "Thermo EASY-nLC 1000 UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
+
+[Term]
+id: MS:1003693
+name: EASY-nLC 1200
+def: "Thermo EASY-nLC 1200 UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
+
+[Term]
+id: MS:1003694
+name: Surveyor
+def: "Thermo Surveyor HPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003695
+name: Vanquish Duo 
+def: "Thermo Vanquish Duo UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003696
+name: Vanquish Flex
+def: "Thermo Vanquish Flex UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003697
+name: Vanquish Horizon
+def: "Thermo Vanquish Horizon UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003698
+name: Vanquish
+def: "Thermo Vanquish UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003699
+name: Dionex ICS-5000+
+def: "Thermo Dionex ICS-5000+ ion chromatography system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+
+[Term]
+id: MS:1003700
+name: Proxeon EASY-nLC II
+def: "Thermo Proxeon EASY-nLC II UHPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+is_a: MS:1003599 ! nano-flow liquid chromatography system
+
+[Term]
+id: MS:1003701
+name: Cohesive Technologies TX2
+def: "Thermo Cohesive Technologies TX2 HPLC system." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003702
+name: Rheos Allegro
+def: "Thermo Flux Instruments Rheos Allegro UHPLC pump." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003592 ! ultra-high performance liquid chromatography system
+
+[Term]
+id: MS:1003703
+name: Rheos 2000 Micro
+def: "Thermo Flux Instruments Rheos 2000 Micro HPLC pump." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003704
+name: Rheos 2200 Micro
+def: "Thermo Flux Instruments Rheos 2200 Micro HPLC pump." [PSI:MS]
+is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003705
+name: 1525 Micro
+def: "Waters 1525 Micro HPLC pump." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
+is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003706
+name: ACQUITY Premier
+def: "Waters ACQUITY Premier UPLC system." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
+is_a: MS:1003591 ! ultra-performance liquid chromatography system
+
+[Term]
+id: MS:1003707
+name: ACQUITY UPLC H-Class PLUS
+def: "Waters ACQUITY UPLC H-Class PLUS UPLC system." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
+is_a: MS:1003591 ! ultra-performance liquid chromatography system
+
+[Term]
+id: MS:1003708
+name: ACQUITY UPLC I-Class PLUS
+def: "Waters ACQUITY UPLC I-Class PLUS UPLC system." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
+is_a: MS:1003591 ! ultra-performance liquid chromatography system
+
+[Term]
+id: MS:1003709
+name: ACQUITY UPLC M-Class
+def: "Waters ACQUITY UPLC M-Class UPLC system." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
+is_a: MS:1003591 ! ultra-performance liquid chromatography system
+
+[Term]
+id: MS:1003710
+name: Alliance 2695 Separations Module
+def: "Waters Alliance 2695 Separations Module HPLC system." [PSI:MS]
+is_a: MS:1003606 ! Waters liquid chromatography system model
 is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
