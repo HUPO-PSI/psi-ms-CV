@@ -23661,67 +23661,69 @@ is_a: MS:1000543 ! data processing action
 id: MS:1003577
 name: hyphenated separation
 def: "The methods, technology and chemistry by which a hyphenated separation system effects the separation of compounds." [PSI:MS]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+is_a: MS:1000857 ! run attribute
 
 [Term]
 id: MS:1003578
-name: liquid chromatography
-def: "The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
+name: obsolete liquid chromatography
+def: "OBSOLETE. The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
 is_a: MS:1003736 ! separation
+is_obsolete: true
+replaced_by: MS:1002271
 
 [Term]
 id: MS:1003579
 name: ion-exchange chromatography
 def: "Ion-exchange chromatography is a technique used to separate molecules based on their surface charge. The process relies on the reversible electrostatic interaction between charged molecules in a sample and an oppositely charged stationary phase, typically a resin in a column." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003580
 name: size-exclusion chromatography
 def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003581
 name: affinity chromatography
 def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003582
 name: reversed phase chromatography
 def: "Reversed-phase (RP) chromatography is a technique used to separate compounds based primarily on their hydrophobicity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003583
 name: normal phase chromatography
 def: "Normal-phase (NP) chromatography is a technique used to separate compounds based primarily on their polarity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003584
 name: hydrophilic interaction liquid chromatography
 def: "Hydrophilic Interaction Liquid Chromatography (HILIC) is a chromatographic technique for the separation of polar and hydrophilic compounds. HILIC employs a polar stationary phase that absorbs water from the mobile phase to form a hydrophilic layer that retains polar analytes." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003585
 name: chiral separation liquid chromatography
 def: "Chiral separation in liquid chromatography is the process of resolving enantiomers." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003586
 name: mixed mode chromatography
 def: "Mixed-mode separation in liquid chromatography uses stationary phases that combine multiple types of interactions to retain and separate compounds." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003587
 name: hydrophobic interaction chromatography
 def: "Hydrophobic Interaction Chromatography (HIC) is a type of chromatography used to separate biomolecules, typically proteins, based on their differences in surface hydrophobicity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003588
@@ -24359,45 +24361,47 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003711
-name: gas chromatography
-def: "Gas chromatography (GC) separates volatile or semi-volatile compounds by injecting a vaporized sample into a flow of inert carrier gas, passing it through a column with a stationary phase, where analytes are separated based on differential interactions." [PSI:MS]
+name: obsolete gas chromatography
+def: "OBSOLETE. Gas chromatography (GC) separates volatile or semi-volatile compounds by injecting a vaporized sample into a flow of inert carrier gas, passing it through a column with a stationary phase, where analytes are separated based on differential interactions." [PSI:MS]
 is_a: MS:1003736 ! separation
+is_obsolete: true
+replaced_by: MS:1002272
 
 [Term]
 id: MS:1003712
 name: fast gas chromatography
 def: "Fast gas chromatography (fast GC, FGC) employs short, narrow-bore capillary columns, high carrier gas velocity, and rapid temperature programming to achieve high-efficiency separations in a fraction of standard GC run times." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003713
 name: packed column gas chromatography
 def: "Packed column gas chromatography uses stainless steel or glass tubes (typically 2–4 mm ID, 1–6 m length) filled with particulate packing material coated with stationary phase, enabling the separation of larger sample volumes but typically providing lower efficiency and broader peaks than capillary GC." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003714
 name: capillary column gas chromatography
 def: "Capillary column gas chromatography uses narrow-bore fused silica columns (typically 0.1–0.5 mm ID, 5–100 m length) coated with a thin internal stationary phase, enabling high-efficiency, high-resolution separations of volatile analytes." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003715
 name: high-resolution gas chromatography
 def: "High-resolution gas chromatography (HRGC) utilizes narrow-bore capillary columns and optimized parameters to achieve exceptional separation efficiency and peak capacity for complex, volatile mixtures." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003716
 name: pyrolysis-gas chromatography
 def: "Pyrolysis-gas chromatography (Py-GC) thermally decomposes complex samples into smaller volatile fragments, which are separated using GC." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003717
 name: gas-liquid chromatography
 def: "Gas-liquid chromatography (GLC) employs an inert gaseous mobile phase and a liquid stationary phase immobilized on a solid support, separating volatile analytes by differential partitioning in the column." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003718
@@ -24427,7 +24431,7 @@ is_a: MS:1003717 ! gas-liquid chromatography
 id: MS:1003722
 name: gas-solid chromatography
 def: "Gas-solid chromatography (GSC) separates volatile analytes by adsorption onto a solid stationary phase, with elution governed by analyte–surface interactions and adsorption." [PSI:MS]
-is_a: MS:1003711 ! gas chromatography
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003723
@@ -24509,9 +24513,11 @@ is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 
 [Term]
 id: MS:1003736
-name: separation
-def: "The methods, technology and chemistry by which a separation system effects the separation of compounds." [PSI:MS]
+name: obsolete separation
+def: "OBSOLETE. The methods, technology and chemistry by which a separation system effects the separation of compounds." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+is_obsolete: true
+replaced_by: MS:1002270
 
 [Term]
 id: MS:1003737
