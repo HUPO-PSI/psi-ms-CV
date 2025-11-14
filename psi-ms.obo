@@ -24557,11 +24557,6 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003711
-name: obsolete gas chromatography
-def: "OBSOLETE. Gas chromatography (GC) separates volatile or semi-volatile compounds by injecting a vaporized sample into a flow of inert carrier gas, passing it through a column with a stationary phase, where analytes are separated based on differential interactions." [PSI:MS]
-is_a: MS:1003736 ! separation
-is_obsolete: true
-replaced_by: MS:1002272
 
 [Term]
 id: MS:1003712
