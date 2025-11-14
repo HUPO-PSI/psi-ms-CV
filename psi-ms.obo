@@ -24556,9 +24556,6 @@ is_a: MS:1003606 ! Waters liquid chromatography system model
 is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
-id: MS:1003711
-
-[Term]
 id: MS:1003712
 name: fast gas chromatography
 def: "Fast gas chromatography (fast GC, FGC) employs short, narrow-bore capillary columns, high carrier gas velocity, and rapid temperature programming to achieve high-efficiency separations in a fraction of standard GC run times." [PSI:MS]
