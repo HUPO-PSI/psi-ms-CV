@@ -23667,7 +23667,6 @@ is_a: MS:1000857 ! run attribute
 id: MS:1003578
 name: obsolete liquid chromatography
 def: "OBSOLETE. The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
-is_a: MS:1003736 ! separation
 is_obsolete: true
 replaced_by: MS:1002271
 
@@ -24698,14 +24697,6 @@ id: MS:1003735
 name: Shimadzu gas chromatography mass spectrometry system model
 def: "Shimadzu Corporation gas chromatography mass spectrometry system model." [PSI:MS]
 is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
-id: MS:1003736
-name: obsolete separation
-def: "OBSOLETE. The methods, technology and chemistry by which a separation system effects the separation of compounds." [PSI:MS]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
-is_obsolete: true
-replaced_by: MS:1002270
 
 [Term]
 id: MS:1003737
