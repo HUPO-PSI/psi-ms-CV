@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.215
-date: 05:11:2025 11:46
-saved-by: Joshua Klein
+data-version: 4.1.216
+date: 19:11:2025 11:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -23133,6 +23133,7 @@ id: MS:1003489
 name: GCMS-TQ8050NX
 def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
+is_a: MS:1003735 ! Shimadzu gas chromatography mass spectrometry system model
 
 [Term]
 id: MS:1003490
@@ -23660,67 +23661,68 @@ is_a: MS:1000543 ! data processing action
 id: MS:1003577
 name: hyphenated separation
 def: "The methods, technology and chemistry by which a hyphenated separation system effects the separation of compounds." [PSI:MS]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+is_a: MS:1000857 ! run attribute
 
 [Term]
 id: MS:1003578
-name: liquid chromatography
-def: "The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
-is_a: MS:1003577 ! hyphenated separation
+name: obsolete liquid chromatography
+def: "OBSOLETE. The methods, technology and chemistry by which a liquid chromatography system effects the separation of compounds." [PSI:MS]
+is_obsolete: true
+replaced_by: MS:1002271
 
 [Term]
 id: MS:1003579
 name: ion-exchange chromatography
 def: "Ion-exchange chromatography is a technique used to separate molecules based on their surface charge. The process relies on the reversible electrostatic interaction between charged molecules in a sample and an oppositely charged stationary phase, typically a resin in a column." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003580
 name: size-exclusion chromatography
 def: "Size-exclusion chromatography (SEC), also known as gel filtration chromatography (GFC) or gel permeation chromatography (GPC), is a chromatographic technique that separates molecules based on their size or, more precisely, their hydrodynamic volume in solution. This method is primarily used for the separation of large molecules like proteins and polymers." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003581
 name: affinity chromatography
 def: "Affinity chromatography (AC) is a highly selective separation technique used to purify specific biomolecules from complex mixtures, leveraging their unique biological or chemical interactions with an immobilized ligand." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003582
 name: reversed phase chromatography
 def: "Reversed-phase (RP) chromatography is a technique used to separate compounds based primarily on their hydrophobicity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003583
 name: normal phase chromatography
 def: "Normal-phase (NP) chromatography is a technique used to separate compounds based primarily on their polarity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003584
 name: hydrophilic interaction liquid chromatography
 def: "Hydrophilic Interaction Liquid Chromatography (HILIC) is a chromatographic technique for the separation of polar and hydrophilic compounds. HILIC employs a polar stationary phase that absorbs water from the mobile phase to form a hydrophilic layer that retains polar analytes." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003585
 name: chiral separation liquid chromatography
 def: "Chiral separation in liquid chromatography is the process of resolving enantiomers." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003586
 name: mixed mode chromatography
 def: "Mixed-mode separation in liquid chromatography uses stationary phases that combine multiple types of interactions to retain and separate compounds." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003587
 name: hydrophobic interaction chromatography
 def: "Hydrophobic Interaction Chromatography (HIC) is a type of chromatography used to separate biomolecules, typically proteins, based on their differences in surface hydrophobicity." [PSI:MS]
-is_a: MS:1003578 ! liquid chromatography
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:1003588
@@ -23732,7 +23734,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 id: MS:1003589
 name: liquid chromatography system
 def: "Liquid chromatography (LC) is an analytical technique used to separate a mixture into its individual components for identification, quantification, and purification. The separation is based on the differential interactions of the sample compounds with a liquid mobile phase and a solid stationary phase." [PSI:MS]
-is_a: MS:1003588 ! hyphenated separation system
+is_a: MS:1003737 ! separation system
 
 [Term]
 id: MS:1003590
@@ -24551,6 +24553,156 @@ name: Alliance 2695 Separations Module
 def: "Waters Alliance 2695 Separations Module HPLC system." [PSI:MS]
 is_a: MS:1003606 ! Waters liquid chromatography system model
 is_a: MS:1003590 ! high-performance liquid chromatography system
+
+[Term]
+id: MS:1003712
+name: fast gas chromatography
+def: "Fast gas chromatography (fast GC, FGC) employs short, narrow-bore capillary columns, high carrier gas velocity, and rapid temperature programming to achieve high-efficiency separations in a fraction of standard GC run times." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003713
+name: packed column gas chromatography
+def: "Packed column gas chromatography uses stainless steel or glass tubes (typically 2–4 mm ID, 1–6 m length) filled with particulate packing material coated with stationary phase, enabling the separation of larger sample volumes but typically providing lower efficiency and broader peaks than capillary GC." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003714
+name: capillary column gas chromatography
+def: "Capillary column gas chromatography uses narrow-bore fused silica columns (typically 0.1–0.5 mm ID, 5–100 m length) coated with a thin internal stationary phase, enabling high-efficiency, high-resolution separations of volatile analytes." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003715
+name: high-resolution gas chromatography
+def: "High-resolution gas chromatography (HRGC) utilizes narrow-bore capillary columns and optimized parameters to achieve exceptional separation efficiency and peak capacity for complex, volatile mixtures." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003716
+name: pyrolysis-gas chromatography
+def: "Pyrolysis-gas chromatography (Py-GC) thermally decomposes complex samples into smaller volatile fragments, which are separated using GC." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003717
+name: gas-liquid chromatography
+def: "Gas-liquid chromatography (GLC) employs an inert gaseous mobile phase and a liquid stationary phase immobilized on a solid support, separating volatile analytes by differential partitioning in the column." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003718
+name: non-polar stationary phase gas-liquid chromatography
+def: "Non-polar stationary phase gas-liquid chromatography employs phases like polydimethylsiloxane (PDMS), where separation is based on analyte volatility and dispersion interactions, optimally retaining non-polar compounds." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003719
+name: mid-polar stationary phase gas-liquid chromatography
+def: "Mid-polar stationary phase gas-liquid chromatography employs phases such as polysiloxanes, providing balanced separation through both dispersion and dipole interactions for analytes of intermediate polarity." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003720
+name: polar stationary phase gas-liquid chromatography
+def: "Polar stationary phase gas-liquid chromatography uses stationary phases such as polyethylene glycol, maximizing retention and selectivity for polar analytes via dipole–dipole and hydrogen bonding interactions." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003721
+name: chiral stationary phase gas-liquid chromatography
+def: "Chiral stationary phase gas-liquid chromatography uses a stationary phase with bonded chiral selectors, enabling enantiomeric separation by stereoselective interactions." [PSI:MS]
+is_a: MS:1003717 ! gas-liquid chromatography
+
+[Term]
+id: MS:1003722
+name: gas-solid chromatography
+def: "Gas-solid chromatography (GSC) separates volatile analytes by adsorption onto a solid stationary phase, with elution governed by analyte–surface interactions and adsorption." [PSI:MS]
+is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003723
+name: molecular sieve stationary phase gas-solid chromatography
+def: "Molecular sieve stationary phase gas–solid chromatography separates volatile analytes by differential adsorption onto a porous, crystalline aluminosilicate solid phase, enabling selective separation of permanent gases and small hydrocarbons." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003724
+name: porous polymer stationary phase gas-solid chromatography
+def: "Porous polymer stationary phase gas-solid chromatography employs solid adsorbents like porous polystyrene-divinylbenzene, enabling volatile analyte separation by selective physical adsorption based on molecular size and polarity." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003725
+name: activated carbon stationary phase gas-solid chromatography
+def: "Activated carbon stationary phase gas-solid chromatography utilizes activated carbon’s high surface area to selectively adsorb and resolve volatile non-polar organics and permanent gases via surface interactions and physical adsorption." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003726
+name: inorganic oxides stationary phase gas-solid chromatography
+def: "Inorganic oxides stationary phase gas-solid chromatography employs solid adsorbents such as silica or alumina, enabling separation of permanent gases and low-boiling organics by surface adsorption interactions." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003727
+name: graphitized carbon stationary phase gas-solid chromatography
+def: "Graphitized carbon stationary phase gas-solid chromatography utilizes non-porous or porous graphitized carbon, enabling strong planar and π-electron interactions for selective adsorption and separation of aromatic and polar analytes." [PSI:MS]
+is_a: MS:1003722 ! gas-solid chromatography
+
+[Term]
+id: MS:1003728
+name: gas chromatography system
+def: "A gas chromatography (GC) system comprises an injector, temperature-controlled column with stationary phase, carrier gas supply, oven, and detector, enabling separation of volatile analytes." [PSI:MS]
+is_a: MS:1003737 ! separation system
+
+[Term]
+id: MS:1003729
+name: two-dimensional gas chromatography system
+def: "A two-dimensional gas chromatography system (GC×GC) uses orthogonal column sets connected by a modulator, providing enhanced separation of complex mixtures via sequential, independent mechanisms in primary and secondary columns." [PSI:MS]
+is_a: MS:1003728 ! gas chromatography system
+
+[Term]
+id: MS:1003730
+name: gas chromatography system model
+def: "Gas chromatography system model name not including the vendor's name." [PSI:MS]
+is_a: MS:1003728 ! gas chromatography system
+
+[Term]
+id: MS:1003731
+name: Agilent gas chromatography system model
+def: "Agilent Technologies gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003732
+name: 6890N
+def: "Agilent 6890N gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003733
+name: gas chromatography mass spectrometry system
+def: "A gas chromatography mass spectrometry system (GC–MS) integrates a gas chromatograph for volatile analyte separation with a mass spectrometer for ionization and detection, enabling sensitive qualitative or quantitative analysis." [PSI:MS]
+is_a: MS:1003588 ! hyphenated separation system
+
+[Term]
+id: MS:1003734
+name: gas chromatography mass spectrometry system model
+def: "Gas chromatography mass spectrometry system model name not including the vendor's name." [PSI:MS]
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
+
+[Term]
+id: MS:1003735
+name: Shimadzu gas chromatography mass spectrometry system model
+def: "Shimadzu Corporation gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003737
+name: separation system
+def: "A system to effect separation of compounds." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: MS:4000000
