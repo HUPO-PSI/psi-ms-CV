@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.216
-date: 19:11:2025 11:00
+data-version: 4.1.217
+date: 20:11:2025 15:15
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24703,6 +24703,144 @@ id: MS:1003737
 name: separation system
 def: "A system to effect separation of compounds." [PSI:MS]
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003738
+name: 5975C
+def: "Agilent 5975C gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003739
+name: 5975T
+def: "Agilent 5975T gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003740
+name: 6890
+def: "Agilent 6890 gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003741
+name: 7890A
+def: "Agilent 7890A gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003742
+name: 7890B
+def: "Agilent 7890B gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003743
+name: 8860
+def: "Agilent 8860 gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003744
+name: 8890B
+def: "Agilent 8890B gas chromatograph." [PSI:MS]
+is_a: MS:1003731 ! Agilent gas chromatography system model
+
+[Term]
+id: MS:1003745
+name: Hewlett Packard gas chromatography system model
+def: "Hewlett Packard gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003746
+name: 5890 Series
+def: "Hewlett Packard 5890 Series gas chromatograph." [PSI:MS]
+is_a: MS:1003745 ! Hewlett Packard gas chromatography system model
+
+[Term]
+id: MS:1003747
+name: 5890 Series II
+def: "Hewlett Packard 5890 Series II gas chromatograph." [PSI:MS]
+is_a: MS:1003745 ! Hewlett Packard gas chromatography system model
+
+[Term]
+id: MS:1003748
+name: PerkinElmer gas chromatography system model
+def: "PerkinElmer gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003749
+name: AutoSystem XL GC
+def: "PerkinElmer AutoSystem XL GC gas chromatograph." [PSI:MS]
+is_a: MS:1003748 ! PerkinElmer gas chromatography system model
+
+[Term]
+id: MS:1003750
+name: Shimadzu gas chromatography system model
+def: "Shimadzu Corporation gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003751
+name: GC-2010 Plus
+def: "Shimadzu GC-2010 Plus gas chromatograph." [PSI:MS]
+is_a: MS:1003750 ! Shimadzu gas chromatography system model
+
+[Term]
+id: MS:1003752
+name: GC-2010 Pro
+def: "Shimadzu GC-2010 Pro gas chromatograph." [PSI:MS]
+is_a: MS:1003750 ! Shimadzu gas chromatography system model
+
+[Term]
+id: MS:1003753
+name: GC-17A
+def: "Shimadzu GC-17A gas chromatograph." [PSI:MS]
+is_a: MS:1003750 ! Shimadzu gas chromatography system model
+
+[Term]
+id: MS:1003754
+name: GC-2010
+def: "Shimadzu GC-2010 gas chromatograph." [PSI:MS]
+is_a: MS:1003750 ! Shimadzu gas chromatography system model
+
+[Term]
+id: MS:1003755
+name: Thermo Scientific gas chromatography system model
+def: "Thermo Scientific gas chromatography system model." [PSI:MS]
+is_a: MS:1003730 ! gas chromatography system model
+
+[Term]
+id: MS:1003756
+name: TRACE 1300
+def: "Thermo TRACE 1300 gas chromatograph." [PSI:MS]
+is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003757
+name: TRACE 1310
+def: "Thermo TRACE 1310 gas chromatograph." [PSI:MS]
+is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003758
+name: TRACE GC
+def: "Thermo TRACE GC gas chromatograph." [PSI:MS]
+is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003759
+name: TRACE GC Ultra
+def: "Thermo TRACE GC Ultra gas chromatograph." [PSI:MS]
+is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003760
+name: FOCUS GC
+def: "Thermo FOCUS GC gas chromatograph." [PSI:MS]
+is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
 
 [Term]
 id: MS:4000000
