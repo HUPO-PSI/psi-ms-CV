@@ -24778,6 +24778,50 @@ def: "A component that separates gas-phase ions based on their mobility through 
 is_a: MS:1003768 ! analyzer
 
 [Term]
+id: MS:1003770
+name: ion trap orbitrap mass spectrometer
+def: "A hybrid instrument that combines a linear ion trap (LIT) for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass (HRAM) detection."
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000264 ! ion trap
+relationship: has_part MS:1000484 ! orbitrap
+
+[Term]
+id: MS:1003771
+name: quadrupole orbitrap mass spectrometer
+def: "A quadrupole Orbitrap mass spectrometer is a hybrid instrument that uses a quadrupole mass filter for precursor ion selection, a collision cell for fragmentation, followed by an Orbitrap mass analyzer which determines the precise mass-to-charge ratios of ions with high resolution and mass accuracy via Fourier transform."
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000484 ! orbitrap
+
+[Term]
+id: MS:1003772
+name: quadrupole ion trap orbitrap mass spectrometer
+def: "A tribrid mass spectrometer that integrates a quadrupole mass filter, a linear ion trap, and an Orbitrap mass analyzer to provide precursor ion selection, multiple-stage fragmentation (MSn), and ultra-high resolution mass analysis."
+is_a: MS:1000463 ! Instrument
+synonym: "tribrid" RELATED []
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1000264 ! ion trap
+relationship: has_part MS:1000484 ! orbitrap
+
+[Term]
+id: MS:1003773
+name: asymmetric track lossless
+def: "The Asymmetric Track Lossless (ASTRAL) mass analyzer is a high-resolution, accurate-mass (HRAM) analyzer that uses a 30-meter asymmetric flight path to separate ions by their mass-to-charge ratio. Its key technical feature is a nearly lossless ion transmission and high dynamic range detection, which enables unprecedented sensitivity and extremely fast acquisition rates of up to 200 Hz for MS/MS scans."
+is_a: MS:1000443 ! mass analyzer type
+synonym: "astral" EXACT []
+
+[Term]
+id: MS:1003774
+name: quadrupole orbitrap astral mass spectrometer
+def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements."
+is_a: MS:1000463 ! Instrument
+synonym: "tribrid" RELATED []
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1000484 ! orbitrap
+relationship: has_part MS:1003773 ! asymmetric track lossless
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
