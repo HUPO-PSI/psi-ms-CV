@@ -2095,7 +2095,7 @@ id: MS:1000275
 name: collision quadrupole
 def: "A transmission quadrupole to which an oscillating potential is applied so as to focus a beam of ions through a collision gas with no m/z separation." [PSI:MS]
 synonym: "q" EXACT []
-is_a: MS:1000597 ! ion optics type
+is_a: MS:1003767 ! collision cell
 
 [Term]
 id: MS:1000276
@@ -3293,8 +3293,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1000451
 name: mass analyzer
 def: "Terms used to describe the Analyzer." [PSI:MS]
-synonym: "analyzer" EXACT []
-relationship: part_of MS:1000463 ! instrument
+is_a: MS:1003768 ! analyzer
 
 [Term]
 id: MS:1000452
@@ -11745,6 +11744,7 @@ id: MS:1001790
 name: Xevo TQ MS
 def: "Waters quadrupole based Xevo TQ MS." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003761 ! triple quadrupole mass spectrometer
 
 [Term]
 id: MS:1001791
@@ -18018,6 +18018,7 @@ id: MS:1002726
 name: SYNAPT G2-Si
 def: "Waters Corporation SYNAPT G2-Si orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003766 ! quadrupole ion mobility time-of-flight mass spectrometer
 
 [Term]
 id: MS:1002727
@@ -24706,51 +24707,75 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 
 [Term]
 id: MS:1003761
-name: hybrid instrument configuration
-def: "The assembly and sequence of mass analyzers, filters and separation devices comprising the mass spectrometer instrument, where the system is comprised of multiple such components." [PSI:MS]
+name: triple quadrupole mass spectrometer
+def: "A triple quadrupole mass spectrometer (TQMS; QqQ) is a tandem mass spectrometry (MS/MS) system that employs three linear quadrupoles in series to achieve highly selective and sensitive targeted quantification of specific compounds. The first quadrupole (Q1) may select a precursor ion, the second (Q2) induces fragmentation via collision-induced dissociation (CID), and the third (Q3) monitors specific product ions, typically through Multiple Reaction Monitoring (MRM)." [PSI:MS]
 is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000081 ! quadrupole
 
 [Term]
 id: MS:1003762
-name: triple quadrupole
-def: "A triple quadrupole mass spectrometer (TQMS; QqQ) is a tandem mass spectrometry (MS/MS) system that employs three linear quadrupoles in series to achieve highly selective and sensitive targeted quantification of specific compounds. The first quadrupole (Q1) may select a precursor ion, the second (Q2) induces fragmentation via collision-induced dissociation (CID), and the third (Q3) monitors specific product ions, typically through Multiple Reaction Monitoring (MRM)." [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: quadrupole time-of-flight mass spectrometer
+def: "A quadrupole time-of-flight (QTOF) mass spectrometer is a hybrid instrument that combines a quadrupole mass filter with a time-of-flight (TOF) mass analyzer to provide both highly accurate mass measurements and fragmentation data. The quadrupole may be used to select a specific precursor ion which is then fragmented, and the resulting product ions are measured by the TOF analyzer, providing high resolution and mass accuracy for structural elucidation and quantification." [PSI:MS]
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000084 ! time-of-flight
 
 [Term]
 id: MS:1003763
-name: quadrupole time-of-flight
-def: "A quadrupole time-of-flight (QTOF) mass spectrometer is a hybrid instrument that combines a quadrupole mass filter with a time-of-flight (TOF) mass analyzer to provide both highly accurate mass measurements and fragmentation data. The quadrupole may be used to select a specific precursor ion which is then fragmented, and the resulting product ions are measured by the TOF analyzer, providing high resolution and mass accuracy for structural elucidation and quantification." [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: ion trap time-of-flight mass spectrometer
+def: "An ion trap time-of-flight (IT-TOF) mass spectrometer is a hybrid instrument that uses an ion trap to accumulate, store, and often fragment ions, which are then periodically injected into a time-of-flight (TOF) mass analyzer for high-resolution mass analysis. This combination allows for sensitive MSn experiments (multiple stages of mass spectrometry) within the ion trap for structural elucidation and provides high mass accuracy and resolution via the TOF component." [PSI:MS]
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000264 ! ion trap
+relationship: has_part MS:1000084 ! time-of-flight
 
 [Term]
 id: MS:1003764
-name: ion trap time-of-flight
-def: "An ion trap time-of-flight (IT-TOF) mass spectrometer is a hybrid instrument that uses an ion trap to accumulate, store, and often fragment ions, which are then periodically injected into a time-of-flight (TOF) mass analyzer for high-resolution mass analysis. This combination allows for sensitive MSn experiments (multiple stages of mass spectrometry) within the ion trap for structural elucidation and provides high mass accuracy and resolution via the TOF component." [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: triple quadrupole linear ion trap mass spectrometer
+def: "A triple quadrupole linear ion trap (QqLIT) mass spectrometer is a hybrid instrument that can operate as a conventional triple quadrupole for high-sensitivity quantification (e.g., in Multiple Reaction Monitoring mode) or as a linear ion trap for qualitative analysis, such as MSn experiments and structural elucidation. The final quadrupole (Q3) of the system can be rapidly switched between functioning as a mass-resolving filter and a high-capacity linear ion trap, allowing for both precise quantification and comprehensive structural information to be acquired in a single analytical run." [PSI:MS]
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000082 ! quadrupole ion trap
 
 [Term]
 id: MS:1003765
-name: triple quadrupole linear ion trap
-def: "A triple quadrupole linear ion trap (QqLIT) mass spectrometer is a hybrid instrument that can operate as a conventional triple quadrupole for high-sensitivity quantification (e.g., in Multiple Reaction Monitoring mode) or as a linear ion trap for qualitative analysis, such as MSn experiments and structural elucidation. The final quadrupole (Q3) of the system can be rapidly switched between functioning as a mass-resolving filter and a high-capacity linear ion trap, allowing for both precise quantification and comprehensive structural information to be acquired in a single analytical run." [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: quadrupole fourier transform ion cyclotron resonance mass spectrometer
+def: "A quadrupole Fourier-transform ion cyclotron resonance (Q-FT-ICR) mass spectrometer is a hybrid instrument that uses an initial quadrupole for ion guiding or mass filtering before the ions are introduced into a Penning trap, where the mass analysis occurs. Once in the Penning trap, the ions' mass-to-charge ratios (m/z) are determined with ultra-high resolution and mass accuracy by measuring their unique cyclotron frequencies in a strong magnetic field and converting the resulting image current signal into a mass spectrum via a Fourier transform. " [PSI:MS]
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000079 ! fourier transform ion cyclotron resonance mass spectrometer
 
 [Term]
 id: MS:1003766
-name: quadrupole fourier transform ion cyclotron resonance
-def: "A quadrupole Fourier-transform ion cyclotron resonance (Q-FT-ICR) mass spectrometer is a hybrid instrument that uses an initial quadrupole for ion guiding or mass filtering before the ions are introduced into a Penning trap, where the mass analysis occurs. Once in the Penning trap, the ions' mass-to-charge ratios (m/z) are determined with ultra-high resolution and mass accuracy by measuring their unique cyclotron frequencies in a strong magnetic field and converting the resulting image current signal into a mass spectrum via a Fourier transform. " [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: quadrupole ion mobility time-of-flight mass spectrometer
+def: "A quadrupole ion mobility time-of-flight (Q-IMS-TOF) mass spectrometer is a hybrid instrument that adds an ion mobility spectrometry (IMS) cell between the quadrupole and the time-of-flight (TOF) analyzer, providing an additional dimension of separation based on ion size, shape, and charge in a buffer gas. This configuration allows for the separation of isobars and isomers that have the same mass-to-charge ratio (m/z) but different three-dimensional structures, which significantly enhances analytical confidence for complex samples such as in proteomics, environmental analysis, and drug screening." [PSI:MS]
+is_a: MS:1000463 ! Instrument
+relationship: has_part MS:1000081 ! quadrupole
+relationship: has_part MS:1003769 ! ion mobility analyzer
+relationship: has_part MS:1003767 ! collision cell
+relationship: has_part MS:1000084 ! time-of-flight
 
 [Term]
 id: MS:1003767
-name: quadrupole ion mobility time-of-flight
-def: "A quadrupole ion mobility time-of-flight (Q-IMS-TOF) mass spectrometer is a hybrid instrument that adds an ion mobility spectrometry (IMS) cell between the quadrupole and the time-of-flight (TOF) analyzer, providing an additional dimension of separation based on ion size, shape, and charge in a buffer gas. This configuration allows for the separation of isobars and isomers that have the same mass-to-charge ratio (m/z) but different three-dimensional structures, which significantly enhances analytical confidence for complex samples such as in proteomics, environmental analysis, and drug screening." [PSI:MS]
-is_a: MS:1003761 ! hybrid instrument configuration
+name: collision cell
+def: "A specialized ion guide, typically a multipole or ion trap, in which collision induced or other dissociation occurs, generating fragment product ions for structural characterisation." [PSI:MS]
+is_a: MS:1000597 ! ion optics type
 
 [Term]
 id: MS:1003768
-name: secondary electrospray ionization
-def: "Secondary electrospray ionization (SESI) is an atmospheric pressure ionization (API) technique that uses a primary nano-electrospray plume of solvent ions to ionize neutral gaseous molecules in the gas phase via efficient proton transfer reactions. Operating at atmospheric pressure, SESI allows for the sensitive and real-time detection of volatile organic compounds (VOCs) and vapors with minimal sample preparation, making it ideal for applications like breath analysis and environmental monitoring." [PSI:MS]
-is_a: MS:1000240 ! atmospheric pressure ionization
+name: analyzer
+def: "A device or component of an instrument that seperates, filters or characterises ions." [PSI:MS]
+relationship: part_of MS:1000463 ! instrument
+
+[Term]
+id: MS:1003769
+name: ion mobility analyzer
+def: "A component that separates gas-phase ions based on their mobility through a buffer gas under the influence of an electric field." [PSI:MS]
+is_a: MS:1003768 ! analyzer
 
 [Term]
 id: MS:4000000
