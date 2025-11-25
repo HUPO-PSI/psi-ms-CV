@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.217
-date: 20:11:2025 15:15
+data-version: 4.1.220
+date: 25:11:2025 15:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24841,6 +24841,12 @@ id: MS:1003760
 name: FOCUS GC
 def: "Thermo FOCUS GC gas chromatograph." [PSI:MS]
 is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003775
+name: secondary electrospray ionization
+def: "Secondary electrospray ionization (SESI) is an atmospheric pressure ionization (API) technique that uses a primary nano-electrospray plume of solvent ions to ionize neutral gaseous molecules in the gas phase via efficient proton transfer reactions. Operating at atmospheric pressure, SESI allows for the sensitive and real-time detection of volatile organic compounds (VOCs) and vapors with minimal sample preparation, making it ideal for applications like breath analysis and environmental monitoring." [PSI:MS]
+is_a: MS:1000240 ! atmospheric pressure ionization
 
 [Term]
 id: MS:4000000
