@@ -51,10 +51,9 @@ xref: BFO:0000050
 is_transitive: true
 
 [Typedef]
-id: has_part
-name: has_part
-xref: BFO:0000051
-is_transitive: true
+id: has_component
+name: has_component
+xref: RO:0002180
 
 [Typedef]
 id: has_order
@@ -91,39 +90,39 @@ id: has_optional_column
 name: has_optional_column
 
 [Typedef]
-id: has_part_at_position_00
-name: has_part_at_position_00
-is_a: has_part
+id: has_component_at_position_00
+name: has_component_at_position_00
+is_a: has_component
 
 [Typedef]
-id: has_part_at_position_01
-name: has_part_at_position_01
-is_a: has_part
-relationship: preceded_by has_part_at_position_00
+id: has_component_at_position_01
+name: has_component_at_position_01
+is_a: has_component
+relationship: preceded_by has_component_at_position_00
 
 [Typedef]
-id: has_part_at_position_02
-name: has_part_at_position_02
-is_a: has_part
-relationship: preceded_by has_part_at_position_01
+id: has_component_at_position_02
+name: has_component_at_position_02
+is_a: has_component
+relationship: preceded_by has_component_at_position_01
 
 [Typedef]
-id: has_part_at_position_03
-name: has_part_at_position_03
-is_a: has_part
-relationship: preceded_by has_part_at_position_02
+id: has_component_at_position_03
+name: has_component_at_position_03
+is_a: has_component
+relationship: preceded_by has_component_at_position_02
 
 [Typedef]
-id: has_part_at_position_04
-name: has_part_at_position_04
-is_a: has_part
-relationship: preceded_by has_part_at_position_03
+id: has_component_at_position_04
+name: has_component_at_position_04
+is_a: has_component
+relationship: preceded_by has_component_at_position_03
 
 [Typedef]
-id: has_part_at_position_05
-name: has_part_at_position_05
-is_a: has_part
-relationship: preceded_by has_part_at_position_04
+id: has_component_at_position_05
+name: has_component_at_position_05
+is_a: has_component
+relationship: preceded_by has_component_at_position_04
 
 [Term]
 id: NCIT:C25330
@@ -24751,66 +24750,66 @@ id: MS:1003761
 name: triple quadrupole mass spectrometer
 def: "A triple quadrupole mass spectrometer (TQMS; QqQ) is a tandem mass spectrometry (MS/MS) system that employs three linear quadrupoles in series to achieve highly selective and sensitive targeted quantification of specific compounds. The first quadrupole (Q1) may select a precursor ion, the second (Q2) induces fragmentation via collision-induced dissociation (CID), and the third (Q3) monitors specific product ions, typically through Multiple Reaction Monitoring (MRM)." [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003767 ! collision cell
-relationship: has_part_at_position_03 MS:1000081 ! quadrupole
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003767 ! collision cell
+relationship: has_component_at_position_03 MS:1000081 ! quadrupole
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003762
 name: quadrupole time-of-flight mass spectrometer
 def: "A quadrupole time-of-flight (QTOF) mass spectrometer is a hybrid instrument that combines a quadrupole mass filter with a time-of-flight (TOF) mass analyzer to provide both highly accurate mass measurements and fragmentation data. The quadrupole may be used to select a specific precursor ion which is then fragmented, and the resulting product ions are measured by the TOF analyzer, providing high resolution and mass accuracy for structural elucidation and quantification." [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003767 ! collision cell
-relationship: has_part_at_position_03 MS:1000084 ! time-of-flight
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003767 ! collision cell
+relationship: has_component_at_position_03 MS:1000084 ! time-of-flight
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003763
 name: ion trap time-of-flight mass spectrometer
 def: "An ion trap time-of-flight (IT-TOF) mass spectrometer is a hybrid instrument that uses an ion trap to accumulate, store, and often fragment ions, which are then periodically injected into a time-of-flight (TOF) mass analyzer for high-resolution mass analysis. This combination allows for sensitive MSn experiments (multiple stages of mass spectrometry) within the ion trap for structural elucidation and provides high mass accuracy and resolution via the TOF component." [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000264 ! ion trap
-relationship: has_part_at_position_02 MS:1000084 ! time-of-flight
-relationship: has_part_at_position_03 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000264 ! ion trap
+relationship: has_component_at_position_02 MS:1000084 ! time-of-flight
+relationship: has_component_at_position_03 MS:1000453 ! detector
 
 [Term]
 id: MS:1003764
 name: triple quadrupole linear ion trap mass spectrometer
 def: "A triple quadrupole linear ion trap (QqLIT) mass spectrometer is a hybrid instrument that can operate as a conventional triple quadrupole for high-sensitivity quantification (e.g., in Multiple Reaction Monitoring mode) or as a linear ion trap for qualitative analysis, such as MSn experiments and structural elucidation. The final quadrupole (Q3) of the system can be rapidly switched between functioning as a mass-resolving filter and a high-capacity linear ion trap, allowing for both precise quantification and comprehensive structural information to be acquired in a single analytical run." [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003767 ! collision cell
-relationship: has_part_at_position_03 MS:1000082 ! quadrupole ion trap
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003767 ! collision cell
+relationship: has_component_at_position_03 MS:1000082 ! quadrupole ion trap
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003765
 name: quadrupole fourier transform ion cyclotron resonance mass spectrometer
 def: "A quadrupole Fourier-transform ion cyclotron resonance (Q-FT-ICR) mass spectrometer is a hybrid instrument that uses an initial quadrupole for ion guiding or mass filtering before the ions are introduced into a Penning trap, where the mass analysis occurs. Once in the Penning trap, the ions' mass-to-charge ratios (m/z) are determined with ultra-high resolution and mass accuracy by measuring their unique cyclotron frequencies in a strong magnetic field and converting the resulting image current signal into a mass spectrum via a Fourier transform. " [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003767 ! collision cell
-relationship: has_part_at_position_03 MS:1000079 ! fourier transform ion cyclotron resonance mass spectrometer
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003767 ! collision cell
+relationship: has_component_at_position_03 MS:1000079 ! fourier transform ion cyclotron resonance mass spectrometer
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003766
 name: quadrupole ion mobility time-of-flight mass spectrometer
 def: "A quadrupole ion mobility time-of-flight (Q-IMS-TOF) mass spectrometer is a hybrid instrument that adds an ion mobility spectrometry (IMS) cell between the quadrupole and the time-of-flight (TOF) analyzer, providing an additional dimension of separation based on ion size, shape, and charge in a buffer gas. This configuration allows for the separation of isobars and isomers that have the same mass-to-charge ratio (m/z) but different three-dimensional structures, which significantly enhances analytical confidence for complex samples such as in proteomics, environmental analysis, and drug screening." [PSI:MS]
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003769 ! ion mobility analyzer
-relationship: has_part_at_position_03 MS:1003767 ! collision cell
-relationship: has_part_at_position_04 MS:1000084 ! time-of-flight
-relationship: has_part_at_position_05 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003769 ! ion mobility analyzer
+relationship: has_component_at_position_03 MS:1003767 ! collision cell
+relationship: has_component_at_position_04 MS:1000084 ! time-of-flight
+relationship: has_component_at_position_05 MS:1000453 ! detector
 
 [Term]
 id: MS:1003767
@@ -24835,21 +24834,21 @@ id: MS:1003770
 name: ion trap orbitrap mass spectrometer
 def: "A hybrid instrument that combines a linear ion trap (LIT) for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass (HRAM) detection."
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000264 ! ion trap
-relationship: has_part_at_position_02 MS:1000484 ! orbitrap
-relationship: has_part_at_position_03 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000264 ! ion trap
+relationship: has_component_at_position_02 MS:1000484 ! orbitrap
+relationship: has_component_at_position_03 MS:1000453 ! detector
 
 [Term]
 id: MS:1003771
 name: quadrupole orbitrap mass spectrometer
 def: "A quadrupole Orbitrap mass spectrometer is a hybrid instrument that uses a quadrupole mass filter for precursor ion selection, a collision cell for fragmentation, followed by an Orbitrap mass analyzer which determines the precise mass-to-charge ratios of ions with high resolution and mass accuracy via Fourier transform."
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1003767 ! collision cell
-relationship: has_part_at_position_03 MS:1000484 ! orbitrap
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1003767 ! collision cell
+relationship: has_component_at_position_03 MS:1000484 ! orbitrap
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003772
@@ -24857,11 +24856,11 @@ name: quadrupole ion trap orbitrap mass spectrometer
 def: "A tribrid mass spectrometer that integrates a quadrupole mass filter, a linear ion trap, and an Orbitrap mass analyzer to provide precursor ion selection, multiple-stage fragmentation (MSn), and ultra-high resolution mass analysis."
 synonym: "tribrid" RELATED []
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1000264 ! ion trap
-relationship: has_part_at_position_03 MS:1000484 ! orbitrap
-relationship: has_part_at_position_04 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1000264 ! ion trap
+relationship: has_component_at_position_03 MS:1000484 ! orbitrap
+relationship: has_component_at_position_04 MS:1000453 ! detector
 
 [Term]
 id: MS:1003773
@@ -24869,11 +24868,11 @@ name: quadrupole orbitrap astral mass spectrometer
 def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements."
 synonym: "tribrid" RELATED []
 is_a: MS:1000463 ! instrument
-relationship: has_part_at_position_00 MS:1000458 ! source
-relationship: has_part_at_position_01 MS:1000081 ! quadrupole
-relationship: has_part_at_position_02 MS:1000484 ! orbitrap
-relationship: has_part_at_position_02 MS:1003379 ! asymmetric track lossless time-of-flight analyzer
-relationship: has_part_at_position_03 MS:1000453 ! detector
+relationship: has_component_at_position_00 MS:1000458 ! source
+relationship: has_component_at_position_01 MS:1000081 ! quadrupole
+relationship: has_component_at_position_02 MS:1000484 ! orbitrap
+relationship: has_component_at_position_02 MS:1003379 ! asymmetric track lossless time-of-flight analyzer
+relationship: has_component_at_position_03 MS:1000453 ! detector
 
 [Term]
 id: MS:4000000
