@@ -24806,20 +24806,13 @@ relationship: has_part MS:1000484 ! orbitrap
 
 [Term]
 id: MS:1003773
-name: asymmetric track lossless
-def: "The Asymmetric Track Lossless (ASTRAL) mass analyzer is a high-resolution, accurate-mass (HRAM) analyzer that uses a 30-meter asymmetric flight path to separate ions by their mass-to-charge ratio. Its key technical feature is a nearly lossless ion transmission and high dynamic range detection, which enables unprecedented sensitivity and extremely fast acquisition rates of up to 200 Hz for MS/MS scans."
-is_a: MS:1000443 ! mass analyzer type
-synonym: "astral" EXACT []
-
-[Term]
-id: MS:1003774
 name: quadrupole orbitrap astral mass spectrometer
 def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements."
 is_a: MS:1000463 ! Instrument
 synonym: "tribrid" RELATED []
 relationship: has_part MS:1000081 ! quadrupole
 relationship: has_part MS:1000484 ! orbitrap
-relationship: has_part MS:1003773 ! asymmetric track lossless
+relationship: has_part MS:1003379 ! asymmetric track lossless time-of-flight analyzer
 
 [Term]
 id: MS:4000000
