@@ -24845,19 +24845,19 @@ is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
 [Term]
 id: MS:1003780
 name: zstd compression
-definition: "Zstandard compression, a fast, modern, general purpose lossless compression algorithm." [PSI:MS, https://facebook.github.io/zstd/]
+def: "Zstandard compression, a fast, modern, general purpose lossless compression algorithm." [PSI:MS, https://facebook.github.io/zstd/]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003781
 name: byte-shuffled zstd compression
-definition: "Byte shuffle transform followed by Zstandard compression." [PSI:MS]
+def: "Byte shuffle transform followed by Zstandard compression." [PSI:MS]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
 id: MS:1003782
 name: dictionary-encoded zstd compression
-definition: "Dictionary encoding followed by Zstandard compression using a sorted dictionary with separately byte-shuffled values and indices." [PSI:MS]
+def: "Dictionary encoding followed by Zstandard compression using a sorted dictionary with separately byte-shuffled values and indices." [PSI:MS]
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
