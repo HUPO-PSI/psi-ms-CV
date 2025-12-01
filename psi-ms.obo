@@ -24052,7 +24052,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1003638
 name: theoretical neutral average mass
 def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
-is_a: MS:10001117 ! theoretical neutral mass
+is_a: MS:1001117 ! theoretical neutral mass
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
