@@ -749,22 +749,25 @@ is_a: MS:1000291 ! linear ion trap
 
 [Term]
 id: MS:1000079
-name: fourier transform ion cyclotron resonance mass spectrometer
+name: fourier transform ion cyclotron resonance
 def: "A mass spectrometer based on the principle of ion cyclotron resonance in which an ion in a magnetic field moves in a circular orbit at a frequency characteristic of its m/z value. Ions are coherently excited to a larger radius orbit using a pulse of radio frequency energy and their image charge is detected on receiver plates as a time domain signal. Fourier transformation of the time domain signal results in a frequency domain signal which is converted to a mass spectrum based in the inverse relationship between frequency and m/z." [PSI:MS]
 synonym: "FT_ICR" EXACT []
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000080
 name: magnetic sector
 def: "A device that produces a magnetic field perpendicular to a charged particle beam that deflects the beam to an extent that is proportional to the particle momentum per unit charge. For a monoenergetic beam, the deflection is proportional to m/z." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000081
 name: quadrupole
 def: "A mass spectrometer that consists of four parallel rods whose centers form the corners of a square and whose opposing poles are connected. The voltage applied to the rods is a superposition of a static potential and a sinusoidal radio frequency potential. The motion of an ion in the x and y dimensions is described by the Matthieu equation whose solutions show that ions in a particular m/z range can be transmitted along the z axis." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000082
@@ -787,6 +790,7 @@ name: time-of-flight
 def: "Instrument that separates ions by m/z in a field-free region after acceleration to a fixed acceleration energy." [PSI:MS]
 synonym: "TOF" EXACT []
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000085
@@ -2011,6 +2015,7 @@ name: ion trap
 def: "A device for spatially confining ions using electric and magnetic fields alone or in combination." [PSI:MS]
 synonym: "IT" EXACT []
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000265
@@ -3507,6 +3512,7 @@ id: MS:1000484
 name: orbitrap
 def: "An ion trapping device that consists of an outer barrel-like electrode and a coaxial inner spindle-like electrode that form an electrostatic field with quadro-logarithmic potential distribution. The frequency of harmonic oscillations of the orbitally trapped ions along the axis of the electrostatic field is independent of the ion velocity and is inversely proportional to the square root of m/z so that the trap can be used as a mass analyzer." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
+is_a: MS:1003772 ! single mass analyzer instrument
 
 [Term]
 id: MS:1000485
@@ -24779,6 +24785,12 @@ name: quadrupole orbitrap astral
 def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements."
 synonym: "tribrid" RELATED []
 is_a: MS:1000463 ! instrument
+
+[Term]
+id: MS:1003772
+name: single mass analyzer instrument
+def: "Instruments comprised of a single mass analyzer."
+is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:4000000
