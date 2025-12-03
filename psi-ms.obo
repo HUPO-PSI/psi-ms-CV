@@ -21380,7 +21380,7 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 [Term]
 id: MS:1003228
 name: data independent acquisition from dissociation of scanning quadrupole across mass range
-def: "Data independent mass spectrometer acquisition method wherein a quadrupole mass analyzer scans over a mass range within each 'scan' transmitting a sliding window of precursor ions for dissociation and spectrum acquisition. This correlates precursor selection with product ion detection resulting in 'quadrupole transmission window' as an additional dimension in the resulting data. An example of such an approach is Waters SONAR." [PSI:MS]
+def: "Data independent mass spectrometer acquisition method wherein a quadrupole mass analyzer transmits a sliding window of precursor ions for dissociation and spectrum acquisition within each acquisition cycle. This correlates precursor selection with product ion detection resulting in 'quadrupole transmission window' as an additional dimension in the resulting data. An example of such an approach is Waters SONAR." [PSI:MS]
 is_a: MS:1003215 ! data-independent acquisition
 is_a: MS:1003217 ! dissociation of scanning quadrupole across a specified mass range
 is_a: MS:1003213 ! mass spectrometry acquisition method
