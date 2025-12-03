@@ -18695,7 +18695,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1002833
 name: alternating polarity acquisition
-def: "Polarities of the scans of a run are alternating, i.e. both positive and negative mode scans are acquired." [PSI:PI]
+def: "The scans of a run are acquired with polarities switching in a strictly alternating sequence (e.g., positive, negative, positive, negative), such that consecutive scans or scan cycles differ in polarity." [PSI:PI]
 is_a: MS:1000524 ! data file content
 
 [Term]
@@ -24843,7 +24843,7 @@ is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
 [Term]
 id: MS:1003774
 name: mixed polarity acquisition
-def: "The scans of a run are acquired in both positive and negative polarities, where the polarities are acquired in discrete time windows, i.e. not alternating." [PSI:MS]
+def: "The scans of a run include both positive and negative polarity acquisitions in a pattern that is not strictly alternating, such as discrete blocks of each polarity, irregular switching sequences, or other non-alternating arrangements."  [PSI:MS]
 is_a: MS:1000524 ! data file content
 
 [Term]
