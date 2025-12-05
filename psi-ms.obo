@@ -24901,25 +24901,25 @@ is_a: MS:1003761 ! instrument class
 [Term]
 id: MS:1003768
 name: ion trap orbitrap
-def: "A hybrid instrument that combines an ion trap for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass (HRAM) detection."
+def: "A hybrid instrument that combines an ion trap for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass (HRAM) detection." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003769
 name: quadrupole orbitrap
-def: "A quadrupole Orbitrap mass spectrometer is a hybrid instrument that uses a quadrupole mass filter for precursor ion selection, a collision cell for fragmentation, followed by an Orbitrap mass analyzer which determines the precise mass-to-charge ratios of ions with high resolution and mass accuracy via Fourier transform."
+def: "A quadrupole Orbitrap mass spectrometer is a hybrid instrument that uses a quadrupole mass filter for precursor ion selection, a collision cell for fragmentation, followed by an Orbitrap mass analyzer which determines the precise mass-to-charge ratios of ions with high resolution and mass accuracy via Fourier transform." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003770
 name: quadrupole ion trap orbitrap
-def: "A tribrid mass spectrometer that integrates a quadrupole mass filter, a linear ion trap, and an Orbitrap mass analyzer to provide precursor ion selection, multiple-stage fragmentation (MSn), and ultra-high resolution mass analysis."
+def: "A tribrid mass spectrometer that integrates a quadrupole mass filter, a linear ion trap, and an Orbitrap mass analyzer to provide precursor ion selection, multiple-stage fragmentation (MSn), and ultra-high resolution mass analysis." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003771
 name: quadrupole orbitrap astral
-def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements."
+def: "A tribrid instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
