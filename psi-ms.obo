@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.218
-date: 24:11:2025 12:00
+date: 01:12:2025 13:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24050,7 +24050,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1003638
 name: theoretical neutral average mass
 def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
-is_a: MS:10001117 ! theoretical neutral mass
+is_a: MS:1001117 ! theoretical neutral mass
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -24442,7 +24442,7 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003695
-name: Vanquish Duo 
+name: Vanquish Duo
 def: "Thermo Vanquish Duo UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
