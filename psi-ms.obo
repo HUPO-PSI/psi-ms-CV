@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.220
+data-version: 4.1.221
 date: 25:11:2025 15:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -26792,7 +26792,6 @@ relationship: has_value_type xsd:float
 id: MS:4000192
 name: MS1 median cycle time
 def: "The median time between consecutive MS1 scans across the full run." [PSI:MS]
-synonym: "sampling frequency" RELATED [MS:1000029]
 synonym: "fastest frequency for MS level 1 collection" RELATED [MS:4000065]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
