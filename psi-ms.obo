@@ -24843,6 +24843,79 @@ def: "Thermo FOCUS GC gas chromatograph." [PSI:MS]
 is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
 
 [Term]
+id: MS:1003776
+name: chromatographic column
+def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve analyte separation." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1002270 ! chromatographic separation
+
+[Term]
+id: MS:1003777
+name: liquid chromatographic column
+def: "A chromatographic column designed for use with a liquid mobile phase, housing a stationary phase for analyte separation." [PSI:MS]
+comment: Column or stationary phase name, not including the vendor's name.
+is_a: MS:1003776 ! chromatographic column
+
+[Term]
+id: MS:1003778
+name: Waters liquid chromatographic column
+def: "Waters Corporation liquid chromatographic column." [PSI:MS]
+is_a: MS:1003777 ! liquid chromatographic column
+
+[Term]
+id: MS:1003779
+name: chromatographic stationary phase
+def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003776 ! chromatographic column
+
+[Term]
+id: MS:1003780
+name: chromatographic stationary phase attribute
+def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003779 ! chromatographic stationary phase
+
+[Term]
+id: MS:1003781
+name: pore size, chromatographic stationary phase
+def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
+is_a: MS:1003780 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003782
+name: particle size, chromatographic stationary phase
+def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
+is_a: MS:1003780 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003783
+name: chromatographic column attribute
+def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003776 ! chromatographic column
+
+[Term]
+id: MS:1003784
+name: column length, chromatographic column
+def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
+is_a: MS:1003783 ! chromatographic column attribute
+
+[Term]
+id: MS:1003785
+name: internal diameter, chromatographic column
+def: "The inner diameter of the chromatographic column." [PSI:MS]
+synonym: "column I.D." EXACT []
+is_a: MS:1003783 ! chromatographic column attribute
+
+[Term]
+id: MS:1003786
+name: ACQUITY UPLC HSS T3
+def: "Waters ACQUITY UPLC HSS T3 liquid chromatographic column." [PSI:MS]
+is_a: MS:1003778 ! Waters liquid chromatographic column
+relationship: part_of MS:1003582 ! reversed phase chromatography
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
