@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.218
-date: 03:12:2025 10:52
-saved-by: GitHub Copilot
+data-version: 4.1.222
+date: 25:11:2025 15:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -729,17 +729,15 @@ is_a: MS:1000247 ! desorption ionization
 
 [Term]
 id: MS:1000076
-name: negative ion mode
-def: "OBSOLETE." [PSI:MS]
-comment: This term was made obsolete because it was replaced by negative scan (MS:1000129).
-is_obsolete: true
+name: negative polarity acquisition
+def: "Polarities of the scans of a run are all negative." [PSI:MS]
+is_a: MS:1000524 ! data file content
 
 [Term]
 id: MS:1000077
-name: positive ion mode
-def: "OBSOLETE." [PSI:MS]
-comment: This term was made obsolete because it was replaced by positive scan (MS:1000130).
-is_obsolete: true
+name: positive polarity acquisition
+def: "Polarities of the scans of a run are all positive." [PSI:MS]
+is_a: MS:1000524 ! data file content
 
 [Term]
 id: MS:1000078
@@ -18696,9 +18694,9 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1002833
-name: alternating polarity mode
-def: "Polarities of the scans of a run are alternating, i.e. both positive and negative mode scans are acquired." [PSI:PI]
-is_a: MS:1000857 ! run attribute
+name: alternating polarity acquisition
+def: "The scans of a run are acquired with polarities switching in a strictly alternating sequence (e.g., positive, negative, positive, negative), such that consecutive scans or scan cycles differ in polarity." [PSI:PI]
+is_a: MS:1000524 ! data file content
 
 [Term]
 id: MS:1002834
@@ -24052,7 +24050,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1003638
 name: theoretical neutral average mass
 def: "The theoretical neutral average mass of the molecule (e.g. the peptide sequence and its modifications), not including its charge carrier." [PSI:MS]
-is_a: MS:10001117 ! theoretical neutral mass
+is_a: MS:1001117 ! theoretical neutral mass
 relationship: has_units UO:0000221 ! dalton
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -24444,7 +24442,7 @@ is_a: MS:1003590 ! high-performance liquid chromatography system
 
 [Term]
 id: MS:1003695
-name: Vanquish Duo 
+name: Vanquish Duo
 def: "Thermo Vanquish Duo UHPLC system." [PSI:MS]
 is_a: MS:1003683 ! Thermo Scientific liquid chromatography system model
 is_a: MS:1003592 ! ultra-high performance liquid chromatography system
@@ -24841,6 +24839,18 @@ id: MS:1003760
 name: FOCUS GC
 def: "Thermo FOCUS GC gas chromatograph." [PSI:MS]
 is_a: MS:1003755 ! Thermo Scientific gas chromatography system model
+
+[Term]
+id: MS:1003774
+name: mixed polarity acquisition
+def: "The scans of a run include both positive and negative polarity acquisitions in a pattern that is not strictly alternating, such as discrete blocks of each polarity, irregular switching sequences, or other non-alternating arrangements."  [PSI:MS]
+is_a: MS:1000524 ! data file content
+
+[Term]
+id: MS:1003775
+name: secondary electrospray ionization
+def: "Secondary electrospray ionization (SESI) is an atmospheric pressure ionization (API) technique that uses a primary nano-electrospray plume of solvent ions to ionize neutral gaseous molecules in the gas phase via efficient proton transfer reactions. Operating at atmospheric pressure, SESI allows for the sensitive and real-time detection of volatile organic compounds (VOCs) and vapors with minimal sample preparation, making it ideal for applications like breath analysis and environmental monitoring." [PSI:MS]
+is_a: MS:1000240 ! atmospheric pressure ionization
 
 [Term]
 id: MS:4000000
@@ -26782,7 +26792,6 @@ relationship: has_value_type xsd:float
 id: MS:4000192
 name: MS1 median cycle time
 def: "The median time between consecutive MS1 scans across the full run." [PSI:MS]
-synonym: "sampling frequency" RELATED [MS:1000029]
 synonym: "fastest frequency for MS level 1 collection" RELATED [MS:4000065]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
