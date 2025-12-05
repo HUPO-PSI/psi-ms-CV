@@ -24919,7 +24919,7 @@ is_a: MS:1003761 ! instrument class
 [Term]
 id: MS:1003771
 name: quadrupole orbitrap astral
-def: "A instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the novel ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements." [PSI:MS]
+def: "A instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
