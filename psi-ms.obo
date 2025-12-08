@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.217
-date: 20:11:2025 15:15
+data-version: 4.1.224
+date: 08:12:2025 13:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -24878,13 +24878,13 @@ relationship: part_of MS:1003779 ! chromatographic stationary phase
 
 [Term]
 id: MS:1003781
-name: pore size, chromatographic stationary phase
+name: chromatographic stationary phase pore size
 def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
 is_a: MS:1003780 ! chromatographic stationary phase attribute
 
 [Term]
 id: MS:1003782
-name: particle size, chromatographic stationary phase
+name: chromatographic stationary phase particle diameter
 def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
 is_a: MS:1003780 ! chromatographic stationary phase attribute
 
@@ -24897,13 +24897,13 @@ relationship: part_of MS:1003776 ! chromatographic column
 
 [Term]
 id: MS:1003784
-name: column length, chromatographic column
+name: chromatographic column length
 def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
 is_a: MS:1003783 ! chromatographic column attribute
 
 [Term]
 id: MS:1003785
-name: internal diameter, chromatographic column
+name: chromatographic column internal diameter
 def: "The inner diameter of the chromatographic column." [PSI:MS]
 synonym: "column I.D." EXACT []
 is_a: MS:1003783 ! chromatographic column attribute
