@@ -28017,3 +28017,10 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
+
+[Term]
+id: MS:100xxx
+name: TSQ Certis
+def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
