@@ -20899,7 +20899,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:1003159
 name: no isolation
-def: "Indicates an acquisition mode in which the isolation window is either not used or where the window spans the entire mass range of the precursor spectrum." [PSI:MS]
+def: "Indicates an acquisition mode in which the instrument does not perform isolation or where the window spans the entire mass range of the precursor spectrum." [PSI:MS]
 is_a: MS:1000792 ! isolation window attribute
 synonym: "isolation window full range" EXACT []
 
