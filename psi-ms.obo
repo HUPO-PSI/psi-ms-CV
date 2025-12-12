@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.223
+data-version: 4.1.224
 date: 05:12:2025 15:00
 saved-by: Joshua Klein
 default-namespace: MS
@@ -24854,6 +24854,12 @@ def: "Secondary electrospray ionization (SESI) is an atmospheric pressure ioniza
 is_a: MS:1000240 ! atmospheric pressure ionization
 
 [Term]
+id: MS:1003800
+name: TSQ Certis
+def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
@@ -28018,3 +28024,4 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
+
