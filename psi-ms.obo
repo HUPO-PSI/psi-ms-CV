@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.224
-date: 05:12:2025 15:00
-saved-by: Joshua Klein
+data-version: 4.1.225
+date: 18:12:2025 19:44
+saved-by: Samuel Wein
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -24858,6 +24858,12 @@ id: MS:1003800
 name: TSQ Certis
 def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
 is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003801
+name: AccurateMassSearch
+def: "OpenMS TOPP tool to assemble metabolite features from singleton mass traces." [PSI:MS]
+is_a: MS:1000752 ! TOPP software
 
 [Term]
 id: MS:4000000
