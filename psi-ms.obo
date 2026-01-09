@@ -24976,6 +24976,12 @@ def: "Compression using MS-Numpress short logged float compression and Zstandard
 is_a: MS:1000572 ! binary data compression type
 
 [Term]
+id: MS:1003801
+name: AccurateMassSearch
+def: "OpenMS TOPP tool to assemble metabolite features from singleton mass traces." [PSI:MS]
+is_a: MS:1000752 ! TOPP software
+
+[Term]
 id: MS:1003901
 name: zero intensity point trimming
 def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum. Data may be retained for interperatbility such as retaining only zeros that flank non-zero intensity value data points from a profile spectrum.." [PSI:MS]
