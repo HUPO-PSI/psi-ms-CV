@@ -24862,7 +24862,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 [Term]
 id: MS:1003901
 name: zero intensity point trimming
-def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum." [PSI:MS]
+def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum. Data may be retained for interperatbility such as retaining only zeros that flank non-zero intensity value data points from a profile spectrum.." [PSI:MS]
 is_a: MS:1000543 ! data processing action
 
 [Term]
