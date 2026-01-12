@@ -27,3 +27,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Validate OBO file
       run: fastobo-validator --duplicates psi-ms.obo
+    - name: Check sorting
+      run: |
+        python -m pip install fastobo
+        python scripts/check_sorted.py psi-ms.obo
