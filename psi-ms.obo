@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.227
-date: 02:12:2025 11:00
-saved-by: Joshua Klein
+data-version: 4.1.228
+date: 15:01:2026 12:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -615,7 +615,9 @@ is_a: MS:1000007 ! inlet type
 [Term]
 id: MS:1000058
 name: flow injection analysis
-def: "Sample is directly injected or infused into the ionization source." [PSI:MS]
+def: "A sample introduction method in which a discrete sample aliquot is injected into a continuous carrier solvent stream and transported to the ionization source without chromatographic separation, producing a transient analytical signal." [PSI:MS]
+synonym: "FIA" EXACT []
+synonym: "FIA-MS" EXACT []
 is_a: MS:1000007 ! inlet type
 
 [Term]
@@ -627,7 +629,9 @@ is_a: MS:1000007 ! inlet type
 [Term]
 id: MS:1000060
 name: infusion
-def: "The continuous flow of solution of a sample into the ionization source." [PSI:MS]
+def: "A sample introduction method in which a sample solution is continuously delivered to the ionization source at a constant flow rate without chromatographic separation." [PSI:MS]
+synonym: "direct infusion" EXACT []
+synonym: "DIMS" RELATED []
 is_a: MS:1000007 ! inlet type
 
 [Term]
@@ -1899,7 +1903,7 @@ is_a: MS:1000007 ! inlet type
 [Term]
 id: MS:1000249
 name: direct liquid introduction
-def: "The delivery of a liquid sample into a mass spectrometer for spray or desorption ionization." [PSI:MS]
+def: "A legacy liquid chromatography-mass spectrometry interface in which a minor fraction of the eluate flow is split and introduced through a narrow orifice or diaphragm directly into the ion source, with solvent-mediated chemical ionization. This interface was largely superseded by atmospheric pressure ionization methods." [PSI:MS]
 synonym: "DLI" EXACT []
 is_a: MS:1000007 ! inlet type
 
