@@ -615,9 +615,8 @@ is_a: MS:1000007 ! inlet type
 [Term]
 id: MS:1000058
 name: flow injection analysis
-def: "A sample introduction method in which a discrete sample aliquot is injected into a continuous carrier solvent stream and transported to the ionization source without chromatographic separation, producing a transient analytical signal." [PSI:MS]
+def: "A sample introduction method in which a discrete sample aliquot is injected into a continuous carrier solvent stream and transported to the ionization source without separation, producing a transient analytical signal." [PSI:MS]
 synonym: "FIA" EXACT []
-synonym: "FIA-MS" EXACT []
 is_a: MS:1000007 ! inlet type
 
 [Term]
@@ -629,9 +628,8 @@ is_a: MS:1000007 ! inlet type
 [Term]
 id: MS:1000060
 name: infusion
-def: "A sample introduction method in which a sample solution is continuously delivered to the ionization source at a constant flow rate without chromatographic separation." [PSI:MS]
+def: "A sample introduction method in which a sample solution is continuously delivered to the ionization source at a constant flow rate without separation." [PSI:MS]
 synonym: "direct infusion" EXACT []
-synonym: "DIMS" RELATED []
 is_a: MS:1000007 ! inlet type
 
 [Term]
