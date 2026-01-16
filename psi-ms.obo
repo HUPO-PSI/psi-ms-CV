@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.228
-date: 02:12:2025 11:00
-saved-by: Joshua Klein
+data-version: 4.1.229
+date: 16:01:2026 12:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -22200,8 +22200,8 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003348
 name: proteomics
-def: "large-scale study of proteins and proteomes." [PSI:MS]
-relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+def: "Large-scale study of proteins and proteomes." [PSI:MS]
+is_a: MS:1003903 ! omics
 
 [Term]
 id: MS:1003349
@@ -24992,6 +24992,73 @@ id: MS:1003902
 name: zero intensity point trimming interpolation
 def: "A zero intensity point trimming algorithm that interpolates the m/z coordinate values from the local data or an estimated model." [PSI:MS]
 is_a: MS:1003901 ! zero intensity point trimming
+
+[Term]
+id: MS:1003903
+name: omics
+def: "A large-scale comprehensive study of biological molecules, as applied to mass spectrometry-based analysis." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003904
+name: glycoproteomics
+def: "Large-scale study of glycosylated proteins, including characterization of glycan structures and their attachment sites." [PSI:MS]
+is_a: MS:1003348 ! proteomics
+
+[Term]
+id: MS:1003905
+name: peptidomics
+def: "Large-scale study of endogenous peptides present in biological systems, distinct from peptides derived from enzymatic digestion of proteins." [PSI:MS]
+is_a: MS:1003903 ! omics
+
+[Term]
+id: MS:1003906
+name: metabolomics
+def: "Large-scale study of small molecule metabolites within biological systems." [PSI:MS]
+is_a: MS:1003903 ! omics
+
+[Term]
+id: MS:1003907
+name: lipidomics
+def: "Large-scale study of lipids and their biological roles, including pathways and networks." [PSI:MS]
+is_a: MS:1003906 ! metabolomics
+
+[Term]
+id: MS:1003908
+name: glycomics
+def: "Large-scale study of glycans including their structures, biosynthesis, and biological functions." [PSI:MS]
+is_a: MS:1003903 ! omics
+
+[Term]
+id: MS:1003909
+name: exposomics
+def: "Large-scale study of environmental exposures and their biological effects, including xenobiotics, pollutants, and dietary compounds." [PSI:MS]
+is_a: MS:1003903 ! omics
+
+[Term]
+id: MS:1003910
+name: analytical approach
+def: "A strategy for mass spectrometry-based analysis that defines whether analytes are predetermined or discovered during acquisition." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
+[Term]
+id: MS:1003911
+name: untargeted analysis
+def: "An analytical approach in which comprehensive detection of all measurable analytes is attempted without prior specification of target compounds." [PSI:MS]
+is_a: MS:1003910 ! analytical approach
+
+[Term]
+id: MS:1003912
+name: targeted analysis
+def: "An analytical approach in which a predefined set of analytes is measured, typically enabling quantitative determination." [PSI:MS]
+is_a: MS:1003910 ! analytical approach
+
+[Term]
+id: MS:1003913
+name: semi-targeted analysis
+def: "An analytical approach combining targeted monitoring of predefined analytes with simultaneous untargeted data acquisition." [PSI:MS]
+synonym: "pseudo-targeted analysis" RELATED []
+is_a: MS:1003910 ! analytical approach
 
 [Term]
 id: MS:4000000
