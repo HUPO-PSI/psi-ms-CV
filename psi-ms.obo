@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.228
+data-version: 4.1.229
 date: 15:01:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -24936,18 +24936,6 @@ def: "Secondary electrospray ionization (SESI) is an atmospheric pressure ioniza
 is_a: MS:1000240 ! atmospheric pressure ionization
 
 [Term]
-id: MS:1003800
-name: TSQ Certis
-def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
-is_a: MS:1000494 ! Thermo Scientific instrument model
-
-[Term]
-id: MS:1003801
-name: AccurateMassSearch
-def: "OpenMS TOPP tool to assemble metabolite features from singleton mass traces." [PSI:MS]
-is_a: MS:1000752 ! TOPP software
-
-[Term]
 id: MS:1003780
 name: zstd compression
 def: "Zstandard compression, a fast, modern, general purpose lossless compression algorithm." [PSI:MS, https://facebook.github.io/zstd/]
@@ -24982,6 +24970,30 @@ id: MS:1003785
 name: MS-Numpress short logged float compression followed by zstd compression
 def: "Compression using MS-Numpress short logged float compression and Zstandard." [PSI:MS, https://github.com/ms-numpress/ms-numpress]
 is_a: MS:1000572 ! binary data compression type
+
+[Term]
+id: MS:1003800
+name: TSQ Certis
+def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
+id: MS:1003801
+name: AccurateMassSearch
+def: "OpenMS TOPP tool to assemble metabolite features from singleton mass traces." [PSI:MS]
+is_a: MS:1000752 ! TOPP software
+
+[Term]
+id: MS:1003901
+name: zero intensity point trimming
+def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum. Data may be retained for interperatbility such as retaining only zeros that flank non-zero intensity value data points from a profile spectrum.." [PSI:MS]
+is_a: MS:1000543 ! data processing action
+
+[Term]
+id: MS:1003902
+name: zero intensity point trimming interpolation
+def: "A zero intensity point trimming algorithm that interpolates the m/z coordinate values from the local data or an estimated model." [PSI:MS]
+is_a: MS:1003901 ! zero intensity point trimming
 
 [Term]
 id: MS:4000000
