@@ -12338,9 +12338,11 @@ is_a: MS:1001558 ! MALDI Solutions
 
 [Term]
 id: MS:1001879
-name: offset voltage
+name: source offset voltage
 def: "The potential difference between two adjacent interface voltages affecting in-source collision induced dissociation." [PSI:MS]
 is_a: MS:1000482 ! source attribute
+is_a: MS:1000503 ! scan attribute
+synonym: "offset voltage" EXACT []
 relationship: has_units UO:0000218 ! volt
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
