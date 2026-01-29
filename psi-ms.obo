@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.232
-date: 16:01:2026 12:00
+data-version: 4.1.233
+date: 28:01:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -1166,6 +1166,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000140
 name: 4700 Proteomics Analyzer
 def: "Applied Biosystems/MDS SCIEX 4700 Proteomics Analyzer MS." [PSI:MS]
+is_a: MS:1003922 ! tandem time-of-flight
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -1275,6 +1276,7 @@ is_a: MS:1001533 ! Bruker Daltonics esquire series
 id: MS:1000158
 name: explorer
 def: "IonSpec Explorer MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1299,12 +1301,14 @@ is_a: MS:1000697 ! Bruker Daltonics HCT Series
 id: MS:1000162
 name: HiRes ESI
 def: "IonSpec HiResESI MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000163
 name: HiRes MALDI
 def: "IonSpec HiResMALDI MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1359,30 +1363,35 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000172
 name: MAT253
 def: "ThermoFinnigan MAT253 MS." [PSI:MS]
+is_a: MS:1000080 ! magnetic sector
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000173
 name: MAT900XP
 def: "ThermoFinnigan MAT900XP MS." [PSI:MS]
+is_a: MS:1000080 ! magnetic sector
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000174
 name: MAT900XP Trap
 def: "ThermoFinnigan MAT900XP Trap MS." [PSI:MS]
+is_a: MS:1003923 ! magnetic sector ion trap
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000175
 name: MAT95XP
 def: "ThermoFinnigan MAT95XP MS." [PSI:MS]
+is_a: MS:1000080 ! magnetic sector
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000176
 name: MAT95XP Trap
 def: "ThermoFinnigan MAT95XP Trap MS." [PSI:MS]
+is_a: MS:1003923 ! magnetic sector ion trap
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -1413,12 +1422,14 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000181
 name: OMEGA
 def: "IonSpec OMEGA MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000182
 name: OMEGA-2001
 def: "IonSpec OMEGA-2001 MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1527,6 +1538,7 @@ is_a: MS:1000125 ! Thermo Finnigan instrument model
 id: MS:1000200
 name: ultima
 def: "IonSpec Ultima MS." [PSI:MS]
+is_a: MS:1000079 ! fourier transform ion cyclotron resonance
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1545,12 +1557,14 @@ is_a: MS:1001534 ! Bruker Daltonics flex series
 id: MS:1000203
 name: Voyager-DE PRO
 def: "Applied Biosystems/MDS SCIEX Voyager-DE PRO MS." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
 id: MS:1000204
 name: Voyager-DE STR
 def: "Applied Biosystems/MDS SCIEX Voyager-DE STR MS." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -4720,6 +4734,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000658
 name: 4800 Proteomics Analyzer
 def: "Applied Biosystems|MDS SCIEX 4800 Proteomics Analyzer." [PSI:MS]
+is_a: MS:1003922 ! tandem time-of-flight
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -5349,18 +5364,21 @@ relationship: has_value_type xsd:dateTime ! The allowed value-type for this CV t
 id: MS:1000748
 name: SSQ 7000
 def: "ThermoFinnigan SSQ 7000 MS." [PSI:MS]
+is_a: MS:1000081 ! quadrupole
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000749
 name: TSQ 7000
 def: "ThermoFinnigan TSQ 7000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000750
 name: TSQ
 def: "ThermoFinnigan TSQ MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -11841,24 +11859,31 @@ is_a: MS:1000031 ! instrument model
 id: MS:1001801
 name: Pegasus HRT
 def: "LECO high resolution time-of-flight GC mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001802
 name: Citius HRT
 def: "LECO high resolution time-of-flight LC mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001803
 name: Pegasus
 def: "LECO GC time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001804
 name: TruTOF
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -12810,6 +12835,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1001945
 name: Pegasus 4D
 def: "LECO nominal mass resolution time-of-flight GCxGC mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -15022,6 +15049,8 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1002278
 name: Pegasus III
 def: "LECO nominal mass resolution time-of-flight GC mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -17997,6 +18026,8 @@ is_a: MS:1001457 ! data processing software
 id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23156,12 +23187,16 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 id: MS:1003483
 name: 4000 GC/MS
 def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000264 ! ion trap
+is_a: MS:1003921 ! Varian gas chromatography mass spectrometry system model
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
 id: MS:1003484
 name: 210-MS GC/MS Ion Trap
 def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1000264 ! ion trap
+is_a: MS:1003921 ! Varian gas chromatography mass spectrometry system model
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23595,42 +23630,55 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003547
 name: Pegasus BT 4D
 def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003548
 name: Pegasus HT
 def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
+comment: Web search verification (2026-01-23) found no specific product information for Pegasus IV; classified as GC-TOFMS based on Pegasus product line.
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003550
 name: PTR-TOF 8000
 def: "Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
 is_a: MS:1003452 ! Ionicon Analytik instrument model
 
 [Term]
 id: MS:1003551
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003919 ! JEOL gas chromatography mass spectrometry system model
 is_a: MS:1003453 ! JEOL instrument model
 
 [Term]
 id: MS:1003552
 name: TOF.SIMS 5
 def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
+is_a: MS:1000084 ! time-of-flight
 is_a: MS:1003454 ! IONTOF instrument model
 
 [Term]
 id: MS:1003553
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000081 ! quadrupole
+is_a: MS:1003920 ! PerkinElmer gas chromatography mass spectrometry system model
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
@@ -25139,6 +25187,44 @@ id: MS:1003914
 name: Agilent gas chromatography mass spectrometry system model
 def: "Agilent Technologies gas chromatography mass spectrometry system model." [PSI:MS]
 is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003918
+name: LECO gas chromatography mass spectrometry system model
+def: "LECO Corporation gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003919
+name: JEOL gas chromatography mass spectrometry system model
+def: "JEOL Ltd. gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003920
+name: PerkinElmer gas chromatography mass spectrometry system model
+def: "PerkinElmer gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003921
+name: Varian gas chromatography mass spectrometry system model
+def: "Varian gas chromatography mass spectrometry system model." [PSI:MS]
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003922
+name: tandem time-of-flight
+def: "A tandem time-of-flight (TOF/TOF) mass spectrometer combines two time-of-flight mass analyzers in series, where the first TOF selects precursor ions and the second TOF analyzes fragment ions produced by post-source decay or collision-induced dissociation. This configuration enables MS/MS analysis with high mass accuracy and resolution while preserving the speed and sensitivity advantages of TOF detection." [PSI:MS]
+synonym: "TOF/TOF" EXACT []
+synonym: "TOF-TOF" EXACT []
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003923
+name: magnetic sector ion trap
+def: "A hybrid mass spectrometer combining a high-resolution double-focusing magnetic sector analyzer with an ion trap mass analyzer. This configuration provides high-resolution precursor ion selection via the magnetic sector with subsequent highly sensitive tandem mass spectrometry (MSn) analysis in the ion trap." [PSI:MS]
+is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:4000000
