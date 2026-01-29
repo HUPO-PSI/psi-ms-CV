@@ -23646,7 +23646,6 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
-comment: Web search verification (2026-01-23) found no specific product information for Pegasus IV; classified as GC-TOFMS based on Pegasus product line.
 is_a: MS:1000084 ! time-of-flight
 is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
