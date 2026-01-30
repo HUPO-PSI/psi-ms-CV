@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.236
+data-version: 4.1.237
 date: 30:01:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -11860,7 +11860,7 @@ id: MS:1001801
 name: Pegasus HRT
 def: "LECO high resolution time-of-flight GC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -11875,7 +11875,7 @@ id: MS:1001803
 name: Pegasus
 def: "LECO GC time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -11883,7 +11883,7 @@ id: MS:1001804
 name: TruTOF
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -12836,7 +12836,7 @@ id: MS:1001945
 name: Pegasus 4D
 def: "LECO nominal mass resolution time-of-flight GCxGC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -15050,7 +15050,7 @@ id: MS:1002278
 name: Pegasus III
 def: "LECO nominal mass resolution time-of-flight GC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -18027,7 +18027,7 @@ id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -18573,7 +18573,7 @@ id: MS:1002802
 name: 7000A Triple Quadrupole GC/MS
 def: "The 7000A Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -18581,7 +18581,7 @@ id: MS:1002803
 name: 7000B Triple Quadrupole GC/MS
 def: "The 7000B Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23188,7 +23188,7 @@ id: MS:1003483
 name: 4000 GC/MS
 def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
 is_a: MS:1000264 ! ion trap
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23196,7 +23196,7 @@ id: MS:1003484
 name: 210-MS GC/MS Ion Trap
 def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
 is_a: MS:1000264 ! ion trap
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23228,7 +23228,7 @@ id: MS:1003489
 name: GCMS-TQ8050NX
 def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 
 [Term]
 id: MS:1003490
@@ -23379,7 +23379,7 @@ id: MS:1003514
 name: 5973 MSD
 def: "Agilent 5973 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23387,7 +23387,7 @@ id: MS:1003515
 name: 5973N MSD
 def: "Agilent 5973N MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23395,7 +23395,7 @@ id: MS:1003516
 name: 5975 MSD
 def: "Agilent 5975 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23403,7 +23403,7 @@ id: MS:1003517
 name: 5975B MSD
 def: "Agilent 5975B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23411,7 +23411,7 @@ id: MS:1003518
 name: 5975C inert XL MSD
 def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23419,7 +23419,7 @@ id: MS:1003519
 name: 5975C MSD
 def: "Agilent 5975C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23427,7 +23427,7 @@ id: MS:1003520
 name: 5975T MSD
 def: "Agilent 5975T MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23435,7 +23435,7 @@ id: MS:1003521
 name: 5977 MSD
 def: "Agilent 5977 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23443,7 +23443,7 @@ id: MS:1003522
 name: 5977A MSD
 def: "Agilent 5977A MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23451,7 +23451,7 @@ id: MS:1003523
 name: 5977B MSD
 def: "Agilent 5977B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23459,7 +23459,7 @@ id: MS:1003524
 name: 5977C MSD
 def: "Agilent 5977C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23562,7 +23562,7 @@ id: MS:1003538
 name: 7000C Triple Quadrupole GC/MS
 def: "Agilent 7000C Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23570,7 +23570,7 @@ id: MS:1003539
 name: 7000D Triple Quadrupole GC/MS
 def: "Agilent 7000D Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23578,7 +23578,7 @@ id: MS:1003540
 name: 7010 Triple Quadrupole GC/MS
 def: "Agilent 7010 Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23586,7 +23586,7 @@ id: MS:1003541
 name: 7010B Triple Quadrupole GC/MS
 def: "Agilent 7010B Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23594,7 +23594,7 @@ id: MS:1003542
 name: 7200 Q-TOF GC/MS
 def: "Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1003763 ! quadrupole time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23602,7 +23602,7 @@ id: MS:1003543
 name: 7250 Q-TOF GC/MS
 def: "Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1003763 ! quadrupole time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23631,7 +23631,7 @@ id: MS:1003547
 name: Pegasus BT 4D
 def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23639,7 +23639,7 @@ id: MS:1003548
 name: Pegasus HT
 def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23647,7 +23647,7 @@ id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23662,7 +23662,7 @@ id: MS:1003551
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003453 ! JEOL instrument model
 
 [Term]
@@ -23677,7 +23677,7 @@ id: MS:1003553
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
+relationship: part_of MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
