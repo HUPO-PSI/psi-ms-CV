@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.233
-date: 28:01:2026 12:00
+data-version: 4.1.234
+date: 30:01:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -11860,7 +11860,7 @@ id: MS:1001801
 name: Pegasus HRT
 def: "LECO high resolution time-of-flight GC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -11875,7 +11875,7 @@ id: MS:1001803
 name: Pegasus
 def: "LECO GC time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -11883,7 +11883,7 @@ id: MS:1001804
 name: TruTOF
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -12836,7 +12836,7 @@ id: MS:1001945
 name: Pegasus 4D
 def: "LECO nominal mass resolution time-of-flight GCxGC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -15050,7 +15050,7 @@ id: MS:1002278
 name: Pegasus III
 def: "LECO nominal mass resolution time-of-flight GC mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -18027,7 +18027,7 @@ id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23188,7 +23188,7 @@ id: MS:1003483
 name: 4000 GC/MS
 def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
 is_a: MS:1000264 ! ion trap
-is_a: MS:1003921 ! Varian gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23196,7 +23196,7 @@ id: MS:1003484
 name: 210-MS GC/MS Ion Trap
 def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
 is_a: MS:1000264 ! ion trap
-is_a: MS:1003921 ! Varian gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23631,7 +23631,7 @@ id: MS:1003547
 name: Pegasus BT 4D
 def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23639,7 +23639,7 @@ id: MS:1003548
 name: Pegasus HT
 def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23647,7 +23647,7 @@ id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003918 ! LECO gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -23662,7 +23662,7 @@ id: MS:1003551
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000084 ! time-of-flight
-is_a: MS:1003919 ! JEOL gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1003453 ! JEOL instrument model
 
 [Term]
@@ -23677,7 +23677,7 @@ id: MS:1003553
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000081 ! quadrupole
-is_a: MS:1003920 ! PerkinElmer gas chromatography mass spectrometry system model
+is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
@@ -25185,30 +25185,6 @@ relationship: part_of MS:1003905 ! targeted analysis
 id: MS:1003914
 name: Agilent gas chromatography mass spectrometry system model
 def: "Agilent Technologies gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
-id: MS:1003918
-name: LECO gas chromatography mass spectrometry system model
-def: "LECO Corporation gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
-id: MS:1003919
-name: JEOL gas chromatography mass spectrometry system model
-def: "JEOL Ltd. gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
-id: MS:1003920
-name: PerkinElmer gas chromatography mass spectrometry system model
-def: "PerkinElmer gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
-id: MS:1003921
-name: Varian gas chromatography mass spectrometry system model
-def: "Varian gas chromatography mass spectrometry system model." [PSI:MS]
 is_a: MS:1003734 ! gas chromatography mass spectrometry system model
 
 [Term]
