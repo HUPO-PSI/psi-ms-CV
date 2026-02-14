@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.233
+data-version: 4.1.234
 date: 11:02:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -25145,6 +25145,13 @@ id: MS:1003914
 name: Agilent gas chromatography mass spectrometry system model
 def: "Agilent Technologies gas chromatography mass spectrometry system model." [PSI:MS]
 is_a: MS:1003734 ! gas chromatography mass spectrometry system model
+
+[Term]
+id: MS:1003915
+name: two-dimensional gas chromatography
+def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
+synonym: "GCxGC" EXACT []
+is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:4000000
