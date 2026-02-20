@@ -23626,7 +23626,6 @@ id: MS:1003552
 name: TOF.SIMS 5
 def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
 is_a: MS:1003454 ! IONTOF instrument model
-is_a: MS:1003772 ! time-of-flight secondary ion
 
 [Term]
 id: MS:1003553
@@ -25030,13 +25029,6 @@ def: "A instrument that integrates a quadrupole mass filter, an Orbitrap mass an
 is_a: MS:1003761 ! instrument class
 
 [Term]
-id: MS:1003772
-name: time-of-flight secondary ion
-def: "A time-of-flight secondary ion mass spectrometer (TOF-SIMS) uses a pulsed primary ion beam to sputter and ionize species from a sample surface, with the resulting secondary ions analyzed by a time-of-flight mass analyzer to provide surface-sensitive mass spectra and chemical imaging." [PSI:MS]
-synonym: "TOF-SIMS" EXACT []
-is_a: MS:1003761 ! instrument class
-
-[Term]
 id: MS:1003774
 name: mixed polarity acquisition
 def: "The scans of a run include both positive and negative polarity acquisitions in a pattern that is not strictly alternating, such as discrete blocks of each polarity, irregular switching sequences, or other non-alternating arrangements."  [PSI:MS]
@@ -25153,14 +25145,12 @@ id: MS:1003804
 name: Ionoptika J105
 def: "Ionoptika J105 time-of-flight secondary ion mass spectrometer." [PSI:MS]
 is_a: MS:1003802 ! Ionoptika instrument model
-is_a: MS:1003772 ! time-of-flight secondary ion
 
 [Term]
 id: MS:1003805
 name: J Series III
 def: "Ionoptika J Series III time-of-flight secondary ion mass spectrometer." [PSI:MS]
 is_a: MS:1003802 ! Ionoptika instrument model
-is_a: MS:1003772 ! time-of-flight secondary ion
 
 [Term]
 id: MS:1003806
