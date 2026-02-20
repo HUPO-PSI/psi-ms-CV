@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.236
+data-version: 4.1.237
 date: 19:02:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -23882,8 +23882,8 @@ is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
 id: MS:1003595
-name: planar chomatography system
-def: "A system for on-line planar chomatography." [PSI:MS]
+name: planar chromatography system
+def: "A system for on-line planar chromatography." [PSI:MS]
 is_a: MS:1003589 ! liquid chromatography system
 
 [Term]
