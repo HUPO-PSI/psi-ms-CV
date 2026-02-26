@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.237
-date: 19:02:2026 12:00
+data-version: 4.1.238
+date: 26:02:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -25252,6 +25252,35 @@ name: two-dimensional gas chromatography
 def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
 synonym: "GCxGC" EXACT []
 is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003916
+name: argon gas cluster ion beam
+def: "Argon gas cluster ion beam (Ar GCIB) bombardment uses a focused beam of large argon cluster ions, typically Ar500 to Ar10000+, accelerated to high energies to sputter and generate secondary ions from a surface, enabling molecular depth profiling and imaging of organic and biological materials with reduced subsurface damage compared to monatomic ion beams." [PSI:MS]
+synonym: "Ar GCIB" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
+
+[Term]
+id: MS:1003917
+name: bismuth trimer liquid metal ion gun
+def: "Bismuth trimer liquid metal ion gun (Bi3+ LMIG) bombardment uses a focused beam of singly charged bismuth trimer cluster ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface, providing high spatial resolution imaging and enhanced molecular secondary ion yields compared to monatomic primary ion beams." [PSI:MS]
+synonym: "Bi3+ LMIG" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
+
+[Term]
+id: MS:1003918
+name: doubly charged bismuth trimer liquid metal ion gun
+def: "Doubly charged bismuth trimer liquid metal ion gun (Bi3++ LMIG) bombardment uses a focused beam of doubly charged bismuth trimer cluster ions emitted from a liquid metal ion source, achieving higher velocity at a given acceleration voltage compared to singly charged Bi3+, resulting in enhanced secondary ion yields for surface analysis." [PSI:MS]
+synonym: "Bi3++ LMIG" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
+
+[Term]
+id: MS:1003919
+name: two-dimensional liquid chromatography
+def: "Two-dimensional liquid chromatography (2D-LC) is a multidimensional separation technique that couples two liquid chromatography columns with different selectivities, such as strong cation exchange and reversed phase, connected by a switching valve or modulator to provide significantly higher peak capacity and resolving power for complex mixtures than one-dimensional liquid chromatography." [PSI:MS]
+synonym: "2D-LC" EXACT []
+synonym: "LCxLC" EXACT []
+is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
 id: MS:4000000
