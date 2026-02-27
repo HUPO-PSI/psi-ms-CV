@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.237
-date: 19:02:2026 12:00
+data-version: 4.1.239
+date: 27:02:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -25252,6 +25252,66 @@ name: two-dimensional gas chromatography
 def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
 synonym: "GCxGC" EXACT []
 is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003920
+name: chromatographic column
+def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve analyte separation." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1002270 ! chromatographic separation
+
+[Term]
+id: MS:1003921
+name: liquid chromatographic column
+def: "A chromatographic column designed for use with a liquid mobile phase, housing a stationary phase for analyte separation." [PSI:MS]
+comment: Column or stationary phase name, not including the vendor's name.
+is_a: MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003922
+name: chromatographic stationary phase
+def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003923
+name: chromatographic stationary phase attribute
+def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003922 ! chromatographic stationary phase
+
+[Term]
+id: MS:1003924
+name: chromatographic stationary phase pore size
+def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003925
+name: chromatographic stationary phase particle diameter
+def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003926
+name: chromatographic column attribute
+def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003927
+name: chromatographic column length
+def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
+is_a: MS:1003926 ! chromatographic column attribute
+
+[Term]
+id: MS:1003928
+name: chromatographic column internal diameter
+def: "The inner diameter of the chromatographic column." [PSI:MS]
+synonym: "column I.D." EXACT []
+is_a: MS:1003926 ! chromatographic column attribute
 
 [Term]
 id: MS:4000000
