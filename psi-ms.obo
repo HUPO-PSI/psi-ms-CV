@@ -25254,64 +25254,64 @@ synonym: "GCxGC" EXACT []
 is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
-id: MS:1003916
+id: MS:1003920
 name: chromatographic column
 def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve analyte separation." [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1002270 ! chromatographic separation
 
 [Term]
-id: MS:1003917
+id: MS:1003921
 name: liquid chromatographic column
 def: "A chromatographic column designed for use with a liquid mobile phase, housing a stationary phase for analyte separation." [PSI:MS]
 comment: Column or stationary phase name, not including the vendor's name.
-is_a: MS:1003916 ! chromatographic column
-
-[Term]
-id: MS:1003918
-name: chromatographic stationary phase
-def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
-is_a: MS:1000857 ! run attribute
-relationship: part_of MS:1003916 ! chromatographic column
-
-[Term]
-id: MS:1003919
-name: chromatographic stationary phase attribute
-def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
-is_a: MS:1000857 ! run attribute
-relationship: part_of MS:1003918 ! chromatographic stationary phase
-
-[Term]
-id: MS:1003920
-name: chromatographic stationary phase pore size
-def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
-is_a: MS:1003919 ! chromatographic stationary phase attribute
-
-[Term]
-id: MS:1003921
-name: chromatographic stationary phase particle diameter
-def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
-is_a: MS:1003919 ! chromatographic stationary phase attribute
+is_a: MS:1003920 ! chromatographic column
 
 [Term]
 id: MS:1003922
-name: chromatographic column attribute
-def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+name: chromatographic stationary phase
+def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
 is_a: MS:1000857 ! run attribute
-relationship: part_of MS:1003916 ! chromatographic column
+relationship: part_of MS:1003920 ! chromatographic column
 
 [Term]
 id: MS:1003923
-name: chromatographic column length
-def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
-is_a: MS:1003922 ! chromatographic column attribute
+name: chromatographic stationary phase attribute
+def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003922 ! chromatographic stationary phase
 
 [Term]
 id: MS:1003924
+name: chromatographic stationary phase pore size
+def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003925
+name: chromatographic stationary phase particle diameter
+def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003926
+name: chromatographic column attribute
+def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003927
+name: chromatographic column length
+def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
+is_a: MS:1003926 ! chromatographic column attribute
+
+[Term]
+id: MS:1003928
 name: chromatographic column internal diameter
 def: "The inner diameter of the chromatographic column." [PSI:MS]
 synonym: "column I.D." EXACT []
-is_a: MS:1003922 ! chromatographic column attribute
+is_a: MS:1003926 ! chromatographic column attribute
 
 [Term]
 id: MS:4000000
