@@ -25254,6 +25254,21 @@ synonym: "GCxGC" EXACT []
 is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
+id: MS:1003916
+name: SpectroSwiss software
+def: "SpectroSwiss software for mass spectrometry data processing and analysis." [PSI:MS]
+is_a: MS:1000531 ! software
+
+[Term]
+id: MS:1003917
+name: Peak-by-Peak
+def: "SpectroSwiss software for Fourier transform mass spectrometry (FTMS) data processing and analysis, providing workflows for transient processing, peak picking, calibration, and advanced analysis of proteomics, metabolomics, lipidomics, and complex mixture data." [PSI:MS]
+synonym: "PeakByPeak" EXACT []
+is_a: MS:1003916 ! SpectroSwiss software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
