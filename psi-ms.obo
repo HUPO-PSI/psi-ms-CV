@@ -25262,7 +25262,7 @@ is_a: MS:1000531 ! software
 [Term]
 id: MS:1003917
 name: Peak-by-Peak
-def: "SpectroSwiss software for Fourier transform mass spectrometry (FTMS) data processing and analysis, providing workflows for transient processing, peak picking, calibration, and advanced analysis of proteomics, metabolomics, lipidomics, and complex mixture data." [PSI:MS]
+def: "SpectroSwiss software for Fourier transform mass spectrometry (FTMS) data processing and analysis, providing advanced workflows including the processing of unreduced, transient data." [PSI:MS]
 synonym: "PeakByPeak" EXACT []
 is_a: MS:1003916 ! SpectroSwiss software
 is_a: MS:1001456 ! analysis software
