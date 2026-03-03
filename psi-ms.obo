@@ -11783,7 +11783,7 @@ id: MS:1001790
 name: Xevo TQ MS
 def: "Waters quadrupole based Xevo TQ MS." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003762 ! triple quadrupole instrument mass spectrometer
+is_a: MS:1003762 ! triple quadrupole instrument
 
 [Term]
 id: MS:1001791
