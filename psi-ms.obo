@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.239
+data-version: 4.1.240
 date: 03:03:2026 12:00
 saved-by: Joshua Klein
 default-namespace: MS
@@ -25224,7 +25224,7 @@ is_a: MS:1003821 ! coordinate spacing model
 [Term]
 id: MS:1003823
 name: square root grid interpolation
-def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function." [PSI:MS]
+def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$." [PSI:MS]
 is_a: MS:1003822 ! grid coordinate interpolation
 
 
