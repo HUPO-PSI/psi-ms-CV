@@ -25263,16 +25263,16 @@ is_a: MS:1000446 ! fast ion bombardment
 [Term]
 id: MS:1003917
 name: bismuth trimer liquid metal ion gun
-def: "Bismuth trimer liquid metal ion gun (Bi3+ LMIG) bombardment uses a focused beam of singly charged bismuth trimer cluster ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface, providing high spatial resolution imaging and enhanced molecular secondary ion yields compared to monatomic primary ion beams." [PSI:MS]
+def: "Bismuth trimer (Bi3+) is a possible output from a bismuth liquid metal ion gun (LMIG), where the source generates a diversity of monomers and clusters that are filtered prior to the sample to select the specific ionisation characteristics. This focused beam of singly charged bismuth trimer cluster ions provides high spatial resolution imaging and enhanced molecular secondary ion yields compared to monatomic primary ion beams." [PSI:MS]
 synonym: "Bi3+ LMIG" EXACT []
-is_a: MS:1000446 ! fast ion bombardment
+is_a: MS:1003920 ! bismuth liquid metal ion gun
 
 [Term]
 id: MS:1003918
 name: doubly charged bismuth trimer liquid metal ion gun
-def: "Doubly charged bismuth trimer liquid metal ion gun (Bi3++ LMIG) bombardment uses a focused beam of doubly charged bismuth trimer cluster ions emitted from a liquid metal ion source, achieving higher velocity at a given acceleration voltage compared to singly charged Bi3+, resulting in enhanced secondary ion yields for surface analysis." [PSI:MS]
+def: "Doubly charged bismuth trimer (Bi3++) is a possible output from a bismuth liquid metal ion gun (LMIG), where the source generates a diversity of monomers and clusters that are filtered prior to the sample to select the specific ionisation characteristics. This focused beam of doubly charged cluster ions achieves higher velocity at a given acceleration voltage compared to singly charged Bi3+, resulting in enhanced secondary ion yields for surface analysis." [PSI:MS]
 synonym: "Bi3++ LMIG" EXACT []
-is_a: MS:1000446 ! fast ion bombardment
+is_a: MS:1003920 ! bismuth liquid metal ion gun
 
 [Term]
 id: MS:1003919
@@ -25281,6 +25281,13 @@ def: "Two-dimensional liquid chromatography (2D-LC) is a multidimensional separa
 synonym: "2D-LC" EXACT []
 synonym: "LCxLC" EXACT []
 is_a: MS:1002271 ! liquid chromatography separation
+
+[Term]
+id: MS:1003920
+name: bismuth liquid metal ion gun
+def: "Bismuth liquid metal ion gun (Bi LMIG) bombardment uses a focused beam of bismuth ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface. The LMIG source generates a diversity of monomers and clusters, which are filtered prior to the sample in order to select the specific ionisation characteristics." [PSI:MS]
+synonym: "Bi LMIG" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
 
 [Term]
 id: MS:4000000
