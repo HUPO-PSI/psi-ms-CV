@@ -25213,13 +25213,13 @@ is_a: MS:1000543 ! data processing action
 id: MS:1003821
 name: polynomial delta coordinate interpolation
 def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, e.g. $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$." [PSI:MS]
-is_a: MS:1003821 ! coordinate spacing model
+is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
 id: MS:1003822
 name: grid coordinate interpolation
 def: "A coordinate spacing model that interpolates coordinate values between a fixed minimum and maximum value. This includes formula for (potentially lossily) converting a coordinate to an integer index and vice-versa." [PSI:MS]
-is_a: MS:1003821 ! coordinate spacing model
+is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
 id: MS:1003823
