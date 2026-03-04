@@ -25258,7 +25258,7 @@ id: MS:1003916
 name: argon gas cluster ion beam
 def: "Argon gas cluster ion beam (Ar GCIB) bombardment uses a focused beam of large argon cluster ions, typically [Ar500]+ to [Ar10000]+, accelerated to high energies to sputter and generate secondary ions from a surface, enabling molecular depth profiling and imaging of organic and biological materials with reduced subsurface damage compared to monatomic ion beams." [PSI:MS]
 synonym: "Ar GCIB" EXACT []
-is_a: MS:1000446 ! fast ion bombardment
+is_a: MS:1003921 ! gas cluster ion beam
 
 [Term]
 id: MS:1003917
@@ -25287,6 +25287,20 @@ id: MS:1003920
 name: bismuth liquid metal ion gun
 def: "Bismuth liquid metal ion gun (Bi LMIG) bombardment uses a focused beam of bismuth ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface. The LMIG source generates a diversity of monomers and clusters, which are filtered prior to the sample in order to select the specific ionisation characteristics." [PSI:MS]
 synonym: "Bi LMIG" EXACT []
+is_a: MS:1003922 ! liquid metal ion gun
+
+[Term]
+id: MS:1003921
+name: gas cluster ion beam
+def: "A gas cluster ion beam (GCIB) is an ion source that generates and accelerates large aggregates of gas atoms or molecules to high energies. The low energy per constituent atom minimizes surface damage and molecular fragmentation, making it highly effective for molecular depth profiling and the analysis of fragile organic and biological materials." [PSI:MS]
+synonym: "GCIB" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
+
+[Term]
+id: MS:1003922
+name: liquid metal ion gun
+def: "A liquid metal ion gun (LMIG) is an ion source that extracts and ionizes a thin layer of liquid metal from a fine heated needle using a high-voltage electric field. It produces a high-brightness, tightly focused beam of metal ions or clusters, enabling high-resolution imaging and analysis in Secondary Ion Mass Spectrometry (SIMS)." [PSI:MS]
+synonym: "LMIG" EXACT []
 is_a: MS:1000446 ! fast ion bombardment
 
 [Term]
