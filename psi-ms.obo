@@ -25256,7 +25256,7 @@ is_a: MS:1002272 ! gas chromatography separation
 [Term]
 id: MS:1003920
 name: chromatographic column
-def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve analyte separation." [PSI:MS]
+def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve chromatographic separation of analytes." [PSI:MS]
 is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1002270 ! chromatographic separation
 
@@ -25284,7 +25284,7 @@ relationship: part_of MS:1003922 ! chromatographic stationary phase
 [Term]
 id: MS:1003924
 name: pore size
-def: "The average diameter of the pores within the particles of the stationary phase." [PSI:MS]
+def: "The average diameter of the pores within the particles of the stationary phase, typically represented in angstroms (Å)" [PSI:MS]
 is_a: MS:1003923 ! chromatographic stationary phase attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -25317,7 +25317,7 @@ name: column internal diameter
 def: "The inner diameter of the chromatographic column." [PSI:MS]
 synonym: "column I.D." EXACT []
 is_a: MS:1003926 ! chromatographic column attribute
-relationship: has_units UO:0000017 ! micrometer
+relationship: has_units UO:0000015 ! millimeter
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -25335,7 +25335,7 @@ is_a: MS:1003929 ! particle porosity
 [Term]
 id: MS:1003931
 name: superficially porous
-def: "A chromatographic stationary phase particle consisting of a solid, non-porous core surrounded by a thin porous shell." [PSI:MS]
+def: "A chromatographic stationary phase particle consisting of a solid, non-porous core surrounded by a porous shell." [PSI:MS]
 synonym: "core-shell particle" EXACT []
 is_a: MS:1003929 ! particle porosity
 
@@ -25405,7 +25405,7 @@ is_a: MS:1003944 ! chromatographic column role
 [Term]
 id: MS:1003943
 name: gas chromatographic column
-def: "A chromatographic column designed for use with a gaseous mobile phase, typically a capillary tube with an internal coating of stationary phase." [PSI:MS]
+def: "A chromatographic column designed for use with a gaseous mobile phase." [PSI:MS]
 is_a: MS:1003945 ! chromatographic column type
 
 [Term]
