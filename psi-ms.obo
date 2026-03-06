@@ -25197,7 +25197,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1003812
 name: lambda max
-def: "The wavelength of maximum absorbance for a substance. This is analogous to the base peak m/z for UV spectrometry." [PSI:MS]
+def: "The wavelength of maximum absorbance for a substance. This is analogous to the base peak m/z for UV-Vis spectroscopy." [PSI:MS]
 synonym: "λ-max" EXACT []
 is_a: MS:1003058 ! spectrum property
 relationship: has_units UO:0000018 ! nanometer
