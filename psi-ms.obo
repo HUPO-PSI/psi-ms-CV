@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.237
-date: 19:02:2026 12:00
+data-version: 4.1.239
+date: 10:03:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -4670,7 +4670,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1000650
 name: Proteome Discoverer
 def: "Thermo Scientific software for data analysis of peptides and proteins." [PSI:MS]
-is_a: MS:1000693 ! Thermo Finnigan software
+is_a: MS:1003916 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
@@ -12588,7 +12588,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1001912
 name: PinPoint
 def: "Thermo Scientific PinPoint SRM analysis software." [PSI:MS]
-is_a: MS:1000693 ! Thermo Finnigan software
+is_a: MS:1003916 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
@@ -16708,6 +16708,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1002524
 name: PepFinder
 def: "Thermo Scientific PepFinder BioPharma analysis software." [PSI:PI]
+is_a: MS:1003916 ! Thermo Scientific software
 is_a: MS:1001457 ! data processing software
 
 [Term]
@@ -19063,6 +19064,7 @@ is_a: MS:1002878 ! small molecule analysis software
 id: MS:1002880
 name: Compound Discoverer
 def: "Metabolomics analysis software from Thermo Fisher Scientific." [PSI:PI]
+is_a: MS:1003916 ! Thermo Scientific software
 is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
@@ -20828,7 +20830,9 @@ relationship: has_value_type xsd:boolean ! The allowed value-type for this CV te
 id: MS:1003141
 name: ProSight
 def: "ProSight: Database search engine for top-down proteomics." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
+synonym: "ProSightPD" EXACT []
 
 [Term]
 id: MS:1003142
@@ -25252,6 +25256,79 @@ name: two-dimensional gas chromatography
 def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
 synonym: "GCxGC" EXACT []
 is_a: MS:1002272 ! gas chromatography separation
+
+[Term]
+id: MS:1003916
+name: Thermo Scientific software
+def: "Thermo Scientific software for data acquisition and analysis." [PSI:MS]
+is_a: MS:1000531 ! software
+
+[Term]
+id: MS:1003917
+name: TraceFinder
+def: "Thermo Scientific software for targeted quantitative and screening analysis of LC-MS, GC-MS, and IC-MS data, supporting automated data acquisition, processing, and reporting for diverse workflows." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003918
+name: FreeStyle
+def: "Thermo Scientific software for interactive qualitative visualization and review of mass spectrometry data, including chromatographic peak detection, spectral library searching, and high-resolution deconvolution." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003919
+name: Chromeleon CDS
+def: "Thermo Scientific enterprise chromatography data system with integrated mass spectrometry instrument control and data processing, supporting GC-MS, LC-MS, and IC-MS platforms with GxP/21 CFR Part 11 compliance." [PSI:MS]
+synonym: "Chromeleon Chromatography Data System" EXACT []
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003920
+name: Mass Frontier
+def: "Thermo Scientific software for mass spectral interpretation and structural elucidation of small molecules, featuring the HighChem fragmentation library, fragmentation prediction, and spectral tree searching." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003921
+name: LipidSearch
+def: "Thermo Scientific software for automated identification of lipid molecular species from LC-MS and LC-MS/MS data using a comprehensive database of predicted lipid ion fragments." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003922
+name: mzVault
+def: "Thermo Scientific software for offline storage, searching, and management of high-resolution accurate-mass spectral libraries, including curated mzCloud content and user-generated in-house libraries." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003923
+name: SIEVE
+def: "Thermo Scientific software for label-free differential expression analysis of LC-MS and GC-MS data, providing chromatographic alignment, feature detection, and statistical comparison for proteomics and metabolomics." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003924
+name: BioPharma Finder
+def: "Thermo Scientific software for complex biotherapeutic characterization by LC-MS, supporting intact protein analysis, peptide mapping, oligonucleotide analysis, multi-attribute method workflows, and top-down or middle-down approaches." [PSI:MS]
+is_a: MS:1003916 ! Thermo Scientific software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:4000000
