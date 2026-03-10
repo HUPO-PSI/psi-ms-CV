@@ -25204,29 +25204,49 @@ relationship: has_units UO:0000018 ! nanometer
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003813
+name: list of doubles
+def: "A list of xsd:double." []
+is_a: MS:1002710 ! list of type
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
 id: MS:1003820
 name: coordinate spacing model
 def: "Defines a model for calculating or correcting the spacing between points along a continuous dimension." [PSI:MS]
-is_a: MS:1000543 ! data processing action
+is_a: MS:1000499 ! spectrum attribute
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003821
 name: polynomial delta coordinate interpolation
-def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, e.g. $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$." [PSI:MS]
+def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. It is assumed that the parameters are inferred from the value list and the number implies the polynomial degree." [PSI:MS]
 is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
 id: MS:1003822
 name: grid coordinate interpolation
-def: "A coordinate spacing model that interpolates coordinate values between a fixed minimum and maximum value. This includes formula for (potentially lossily) converting a coordinate to an integer index and vice-versa." [PSI:MS]
+def: "A coordinate spacing model that uses some form of interpolation to calculate coordinate values between a fixed minimum and maximum value. This includes formula for (potentially lossily) converting a coordinate to an integer index and vice-versa. The grid model and recalibration function parameters are given by the value list. The recalibration function may be the identity function, or a more complex model defined in a child term." [PSI:MS]
 is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
-id: MS:1003823
-name: square root grid interpolation
-def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$." [PSI:MS]
+id: MS:1003824
+name: linear grid interpolation
+def: "A coordinate spacing model that uses linear interpolation to map grid indices to coordinates $x_i = f_x(b + i * a)$ where $f$ is some recalibration function." [PSI:MS]
 is_a: MS:1003822 ! grid coordinate interpolation
 
+[Term]
+id: MS:1003824
+name: square root grid interpolation
+def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$" [PSI:MS]
+is_a: MS:1003822 ! grid coordinate interpolation
+
+[Term]
+id: MS:1003825
+name: coordinate grid encoding
+def: "This array stores indices or spans into some form of coordinate space model rather than the coordinates themselves, and that grid is stored externally from this data array. The objective being that these coordinates are more compact to store than the raw coordinates themselves. The value of this parameter is the grid identifier, if there are multiple to choose from. A separate coordinate spacing model parameter will signify what form of coordinate space model is used." [PSI:MS]
+is_a: MS:1000572 ! binary data compression type
+relationship: has_value_type xsd:string ! The allowed valute-type for this CV term
 
 [Term]
 id: MS:1003901
