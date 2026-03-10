@@ -25236,13 +25236,13 @@ def: "A coordinate spacing model that uses linear interpolation to map grid indi
 is_a: MS:1003822 ! grid coordinate interpolation
 
 [Term]
-id: MS:1003824
+id: MS:1003825
 name: square root grid interpolation
 def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$" [PSI:MS]
 is_a: MS:1003822 ! grid coordinate interpolation
 
 [Term]
-id: MS:1003825
+id: MS:1003826
 name: coordinate grid encoding
 def: "This array stores indices or spans into some form of coordinate space model rather than the coordinates themselves, and that grid is stored externally from this data array. The objective being that these coordinates are more compact to store than the raw coordinates themselves. The value of this parameter is the grid identifier, if there are multiple to choose from. A separate coordinate spacing model parameter will signify what form of coordinate space model is used." [PSI:MS]
 is_a: MS:1000572 ! binary data compression type
