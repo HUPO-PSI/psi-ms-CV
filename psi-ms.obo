@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.240
-date: 03:03:2026 12:00
-saved-by: Joshua Klein
+data-version: 4.1.241
+date: 13:03:2026 12:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -25323,6 +25323,176 @@ is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
 
 [Term]
+id: MS:1003920
+name: chromatographic column
+def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve chromatographic separation of analytes." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1002270 ! chromatographic separation
+
+[Term]
+id: MS:1003921
+name: liquid chromatographic column
+def: "A chromatographic column designed for use with a liquid mobile phase, housing a stationary phase for analyte separation." [PSI:MS]
+comment: Column or stationary phase name, not including the vendor's name.
+is_a: MS:1003945 ! chromatographic column type
+
+[Term]
+id: MS:1003922
+name: chromatographic stationary phase
+def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003923
+name: chromatographic stationary phase attribute
+def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003922 ! chromatographic stationary phase
+
+[Term]
+id: MS:1003924
+name: pore size
+def: "The average diameter of the pores within the particles of the stationary phase, typically represented in angstroms (Å)" [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+relationship: has_units UO:0000019 ! angstrom
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003925
+name: particle diameter
+def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+relationship: has_units UO:0000017 ! micrometer
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003926
+name: chromatographic column attribute
+def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003927
+name: column length
+def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
+is_a: MS:1003926 ! chromatographic column attribute
+relationship: has_units UO:0000016 ! millimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003928
+name: column internal diameter
+def: "The inner diameter of the chromatographic column." [PSI:MS]
+synonym: "column I.D." EXACT []
+is_a: MS:1003926 ! chromatographic column attribute
+relationship: has_units UO:0000016 ! millimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003929
+name: particle porosity
+def: "The porosity of the particles composing the chromatographic stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003930
+name: fully porous
+def: "A chromatographic stationary phase particle with pores distributed throughout its entire volume." [PSI:MS]
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003931
+name: superficially porous
+def: "A chromatographic stationary phase particle consisting of a solid, non-porous core surrounded by a porous shell." [PSI:MS]
+synonym: "core-shell particle" EXACT []
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003932
+name: non-porous
+def: "A solid chromatographic stationary phase particle without internal pores." [PSI:MS]
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003933
+name: support material
+def: "The base material from which the chromatographic stationary phase is constructed." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003934
+name: silica-based
+def: "A chromatographic stationary phase constructed from silica particles, optionally with surface chemical modification." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003935
+name: hybrid particle
+def: "A chromatographic stationary phase constructed from organic-inorganic hybrid particles, such as ethylene-bridged hybrid (BEH), providing enhanced chemical stability and pH range." [PSI:MS]
+synonym: "BEH stationary phase" RELATED []
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003936
+name: polymer-based
+def: "A chromatographic stationary phase constructed from organic polymer particles such as polystyrene-divinylbenzene or methacrylate-based polymers." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003937
+name: monolithic
+def: "A chromatographic stationary phase consisting of a single continuous porous rod rather than packed discrete particles." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003938
+name: porous graphitic carbon
+def: "A chromatographic stationary phase composed of porous graphitic carbon, providing strong retention of polar compounds and chemical robustness across a wide pH range." [PSI:MS]
+synonym: "PGC stationary phase" EXACT []
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003939
+name: trap column
+def: "A short chromatographic column used for on-line sample loading, concentration, and desalting prior to separation on the analytical column." [PSI:MS]
+synonym: "precolumn" RELATED []
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003940
+name: guard column
+def: "A short protective chromatographic column placed upstream of the analytical column to capture contaminants and extend analytical column lifetime." [PSI:MS]
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003941
+name: analytical column
+def: "The primary chromatographic column in which analyte separation occurs." [PSI:MS]
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003943
+name: gas chromatographic column
+def: "A chromatographic column designed for use with a gaseous mobile phase." [PSI:MS]
+is_a: MS:1003945 ! chromatographic column type
+
+[Term]
+id: MS:1003944
+name: chromatographic column role
+def: "The functional role of a chromatographic column within the separation workflow." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003945
+name: chromatographic column type
+def: "The type of chromatographic column classified by the mobile phase it is designed to operate with." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
@@ -28058,6 +28228,17 @@ is_a: UO:0000045
 created_by: george gkoutos
 
 [Term]
+id: UO:0000016
+name: millimeter
+namespace: unit.ontology
+def: "A length unit which is equal to one thousandth of a meter or 10^[-3] m." [NIST:NIST]
+subset: unit_slim
+synonym: "millimetre" EXACT []
+synonym: "mm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
 id: UO:0000017
 name: micrometer
 namespace: unit.ontology
@@ -28077,6 +28258,15 @@ def: "A length unit which is equal to one thousandth of one millionth of a meter
 subset: unit_slim
 synonym: "nanometre" EXACT []
 synonym: "nm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
+id: UO:0000019
+name: angstrom
+namespace: unit.ontology
+def: "A length unit which is equal to 10 [-10] m." [NIST:NIST]
+synonym: "Å" EXACT []
 is_a: UO:0000001
 created_by: george gkoutos
 
