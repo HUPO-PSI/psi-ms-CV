@@ -3877,6 +3877,7 @@ id: MS:1000532
 name: Xcalibur
 def: "Thermo Finnigan software for data acquisition and analysis." [PSI:MS]
 is_a: MS:1000693 ! Thermo Finnigan software
+is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001455 ! acquisition software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
