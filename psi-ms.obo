@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.242
+data-version: 4.1.243
 date: 13:03:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -25564,6 +25564,56 @@ id: MS:1003953
 name: orbitrap instrument
 def: "An instrument that uses an Orbitrap mass analyzer as its primary means of mass analysis." [PSI:MS]
 is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003954
+name: argon gas cluster ion beam
+def: "Argon gas cluster ion beam (Ar GCIB) bombardment uses a focused beam of large argon cluster ions, typically [Ar500]+ to [Ar10000]+, accelerated to high energies to sputter and generate secondary ions from a surface, enabling molecular depth profiling and imaging of organic and biological materials with reduced subsurface damage compared to monatomic ion beams." [PSI:MS]
+synonym: "Ar GCIB" EXACT []
+is_a: MS:1003959 ! gas cluster ion beam
+
+[Term]
+id: MS:1003955
+name: singly charged bismuth trimer liquid metal ion gun
+def: "A beam of singly charged bismuth trimer ([Bi3]+) ions for desorption and ionisation from a surface, providing high spatial resolution imaging and enhanced molecular secondary ion yields compared to monatomic primary ion beams." [PSI:MS]
+synonym: "[Bi3]+ LMIG" EXACT []
+is_a: MS:1003958 ! bismuth liquid metal ion gun
+
+[Term]
+id: MS:1003956
+name: doubly charged bismuth trimer liquid metal ion gun
+def: "A beam of doubly charged bismuth trimer ([Bi3]2+) ions for desorption and ionisation from a surface. Ions achieve a higher velocity at a given acceleration voltage compared to singly charged [Bi3]+, resulting in enhanced secondary ion yields for surface analysis." [PSI:MS]
+synonym: "[Bi3]2+ LMIG" EXACT []
+is_a: MS:1003958 ! bismuth liquid metal ion gun
+
+[Term]
+id: MS:1003957
+name: two-dimensional liquid chromatography
+def: "Two-dimensional liquid chromatography (2D-LC) is a multidimensional separation technique that couples two liquid chromatography columns with different selectivities, such as strong cation exchange and reversed phase, connected by a switching valve or modulator to provide significantly higher peak capacity and resolving power for complex mixtures than one-dimensional liquid chromatography." [PSI:MS]
+synonym: "2D-LC" EXACT []
+synonym: "LCxLC" EXACT []
+is_a: MS:1002271 ! liquid chromatography separation
+
+[Term]
+id: MS:1003958
+name: bismuth liquid metal ion gun
+def: "Bismuth liquid metal ion gun (Bi LMIG) bombardment uses a focused beam of bismuth ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface. The LMIG source generates a diversity of monomers and clusters, which are filtered prior to the sample in order to select the specific ionisation characteristics." [PSI:MS]
+synonym: "Bi LMIG" EXACT []
+is_a: MS:1003960 ! liquid metal ion gun
+
+[Term]
+id: MS:1003959
+name: gas cluster ion beam
+def: "A gas cluster ion beam (GCIB) is an ion source that generates and accelerates large aggregates of gas atoms or molecules to high energies. The low energy per constituent atom minimizes surface damage and molecular fragmentation, making it highly effective for molecular depth profiling and the analysis of fragile organic and biological materials." [PSI:MS]
+synonym: "GCIB" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
+
+[Term]
+id: MS:1003960
+name: liquid metal ion gun
+def: "A liquid metal ion gun (LMIG) is an ion source that extracts and ionizes a thin layer of liquid metal from a fine heated needle using a high-voltage electric field. It produces a high-brightness, tightly focused beam of metal ions or clusters, enabling high-resolution imaging and analysis in Secondary Ion Mass Spectrometry (SIMS)." [PSI:MS]
+synonym: "LMIG" EXACT []
+is_a: MS:1000446 ! fast ion bombardment
 
 [Term]
 id: MS:4000000
