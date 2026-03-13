@@ -1162,7 +1162,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000140
 name: 4700 Proteomics Analyzer
 def: "Applied Biosystems/MDS SCIEX 4700 Proteomics Analyzer MS." [PSI:MS]
-is_a: MS:1003922 ! tandem time-of-flight instrument
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -1272,7 +1272,7 @@ is_a: MS:1001533 ! Bruker Daltonics esquire series
 id: MS:1000158
 name: explorer
 def: "IonSpec Explorer MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1297,14 +1297,14 @@ is_a: MS:1000697 ! Bruker Daltonics HCT Series
 id: MS:1000162
 name: HiRes ESI
 def: "IonSpec HiResESI MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000163
 name: HiRes MALDI
 def: "IonSpec HiResMALDI MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1359,35 +1359,35 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000172
 name: MAT253
 def: "ThermoFinnigan MAT253 MS." [PSI:MS]
-is_a: MS:1003925 ! magnetic sector instrument
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000173
 name: MAT900XP
 def: "ThermoFinnigan MAT900XP MS." [PSI:MS]
-is_a: MS:1003925 ! magnetic sector instrument
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000174
 name: MAT900XP Trap
 def: "ThermoFinnigan MAT900XP Trap MS." [PSI:MS]
-is_a: MS:1003923 ! magnetic sector ion trap instrument
+is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000175
 name: MAT95XP
 def: "ThermoFinnigan MAT95XP MS." [PSI:MS]
-is_a: MS:1003925 ! magnetic sector instrument
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000176
 name: MAT95XP Trap
 def: "ThermoFinnigan MAT95XP Trap MS." [PSI:MS]
-is_a: MS:1003923 ! magnetic sector ion trap instrument
+is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -1418,14 +1418,14 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000181
 name: OMEGA
 def: "IonSpec OMEGA MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000182
 name: OMEGA-2001
 def: "IonSpec OMEGA-2001 MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1534,7 +1534,7 @@ is_a: MS:1000125 ! Thermo Finnigan instrument model
 id: MS:1000200
 name: ultima
 def: "IonSpec Ultima MS." [PSI:MS]
-is_a: MS:1003924 ! fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1553,14 +1553,14 @@ is_a: MS:1001534 ! Bruker Daltonics flex series
 id: MS:1000203
 name: Voyager-DE PRO
 def: "Applied Biosystems/MDS SCIEX Voyager-DE PRO MS." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
 id: MS:1000204
 name: Voyager-DE STR
 def: "Applied Biosystems/MDS SCIEX Voyager-DE STR MS." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -3417,70 +3417,70 @@ is_obsolete: true
 id: MS:1000467
 name: 1200 series LC/MSD SL
 def: "The 1200 Series LC/MSD SL ion trap belongs to the Agilent LC/MSD ion trap family. It provides fast polarity switching and multisignal data acquisition capabilities in a single run while also providing 5 stages of automated data dependent MS2 and 11 stages of manual MS2." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000468
 name: 6110 Quadrupole LC/MS
 def: "The 6110 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with an entry level single quadrupole mass spectrometer from the 6100 Series of Agilent quadrupole mass spectrometers. 6110 Quadrupole mass spectrometer has m/z range of 10-1500 and 2500 u/s scan speed. It proves useful for wide range of SIM quantitative applications." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000469
 name: 6120A Quadrupole LC/MS
 def: "The 6120A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers. 6120 quadrupole mass spectrometer has m/z range of 10-1500, 2500 u/s scan speed and utilizes multiple signal acquisition." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000470
 name: 6130 Quadrupole LC/MS
 def: "The 6130 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 series of Agilent mass spectrometers. The 6130 quadrupole mass spectrometer has m/z range of 2-3000, 2500 u/s scan speed in standard mode and 5250 u/s speed in fast-scan mode. It also uses multiple signal acquisition." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000471
 name: 6140 Quadrupole LC/MS
 def: "The 6140 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent quadrupole mass spectrometers. 6140 Quadrupole mass spectrometer has m/z range of 10-1350, 2500 u/s scan speed in standard mode and 10000 u/s speed in fast-scan mode. It also uses multiple signal acquisition." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000472
 name: 6210 Time-of-Flight LC/MS
 def: "The 6210 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 13,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000473
 name: 6310 Ion Trap LC/MS
 def: "The 6310 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.35 resolution and mass range of 200-4000 with resolution of 3-4. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000474
 name: 6320 Ion Trap LC/MS
 def: "The 6320 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000475
 name: 6330 Ion Trap LC/MS
 def: "The 6330 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000476
 name: 6340 Ion Trap LC/MS
 def: "The 6340 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -3495,7 +3495,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1000478
 name: 1200 series LC/MSD VL
 def: "The LC/MSD VL ion trap is part of the family of Agilent ion trap mass spectrometers. It has ESI, APCI and APPI ion sources and is a useful ion trap when the amount of sample is not the limiting factor." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -4728,7 +4728,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000658
 name: 4800 Proteomics Analyzer
 def: "Applied Biosystems|MDS SCIEX 4800 Proteomics Analyzer." [PSI:MS]
-is_a: MS:1003922 ! tandem time-of-flight instrument
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -4859,7 +4859,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000675
 name: 6220 Time-of-Flight LC/MS
 def: "The 6220 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 13,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -5358,7 +5358,7 @@ relationship: has_value_type xsd:dateTime ! The allowed value-type for this CV t
 id: MS:1000748
 name: SSQ 7000
 def: "ThermoFinnigan SSQ 7000 MS." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -11853,7 +11853,7 @@ is_a: MS:1000031 ! instrument model
 id: MS:1001801
 name: Pegasus HRT
 def: "LECO high resolution time-of-flight GC mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -11861,14 +11861,14 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1001802
 name: Citius HRT
 def: "LECO high resolution time-of-flight LC mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001803
 name: Pegasus
 def: "LECO GC time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -11876,7 +11876,7 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1001804
 name: TruTOF
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -12829,7 +12829,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1001945
 name: Pegasus 4D
 def: "LECO nominal mass resolution time-of-flight GCxGC mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -15043,7 +15043,7 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1002278
 name: Pegasus III
 def: "LECO nominal mass resolution time-of-flight GC mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -18020,7 +18020,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -18510,35 +18510,35 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1002794
 name: 6120B Quadrupole LC/MS
 def: "The 6120B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002795
 name: 6150 Quadrupole LC/MS
 def: "The 6150 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002796
 name: 6224 Time-of-Flight LC/MS
 def: "The 6224 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002797
 name: 6230A Time-of-Flight LC/MS
 def: "The 6230A Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002798
 name: 6230B Time-of-Flight LC/MS
 def: "The 6230B Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23181,7 +23181,7 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 id: MS:1003483
 name: 4000 GC/MS
 def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
@@ -23189,7 +23189,7 @@ is_a: MS:1000489 ! Varian instrument model
 id: MS:1003484
 name: 210-MS GC/MS Ion Trap
 def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
-is_a: MS:1003928 ! ion trap instrument
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
@@ -23372,7 +23372,7 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1003514
 name: 5973 MSD
 def: "Agilent 5973 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23380,7 +23380,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003515
 name: 5973N MSD
 def: "Agilent 5973N MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23388,7 +23388,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003516
 name: 5975 MSD
 def: "Agilent 5975 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23396,7 +23396,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003517
 name: 5975B MSD
 def: "Agilent 5975B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23404,7 +23404,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003518
 name: 5975C inert XL MSD
 def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23412,7 +23412,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003519
 name: 5975C MSD
 def: "Agilent 5975C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23420,7 +23420,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003520
 name: 5975T MSD
 def: "Agilent 5975T MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23428,7 +23428,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003521
 name: 5977 MSD
 def: "Agilent 5977 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23436,7 +23436,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003522
 name: 5977A MSD
 def: "Agilent 5977A MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23444,7 +23444,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003523
 name: 5977B MSD
 def: "Agilent 5977B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23452,7 +23452,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003524
 name: 5977C MSD
 def: "Agilent 5977C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
@@ -23460,7 +23460,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003525
 name: 6230 Time-of-Flight LC/MS
 def: "Agilent 6230 Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23603,14 +23603,14 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003544
 name: CE-TOFMS
 def: "Agilent CE-TOFMS capillary electrophoresis - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003545
 name: G3250AA Time-of-Flight LC/MS
 def: "Agilent G3250AA Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23624,7 +23624,7 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1003547
 name: Pegasus BT 4D
 def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -23632,7 +23632,7 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1003548
 name: Pegasus HT
 def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -23640,7 +23640,7 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
@@ -23648,14 +23648,14 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1003550
 name: PTR-TOF 8000
 def: "Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003452 ! Ionicon Analytik instrument model
 
 [Term]
 id: MS:1003551
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003453 ! JEOL instrument model
 
@@ -23663,14 +23663,14 @@ is_a: MS:1003453 ! JEOL instrument model
 id: MS:1003552
 name: TOF.SIMS 5
 def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
-is_a: MS:1003927 ! time-of-flight instrument
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003454 ! IONTOF instrument model
 
 [Term]
 id: MS:1003553
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003926 ! quadrupole instrument
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003455 ! PerkinElmer instrument model
 
