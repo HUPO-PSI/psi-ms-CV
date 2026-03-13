@@ -4678,6 +4678,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1000650
 name: Proteome Discoverer
 def: "Thermo Scientific software for data analysis of peptides and proteins." [PSI:MS]
+is_a: MS:1000693 ! Thermo Finnigan software
 is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
@@ -12607,6 +12608,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1001912
 name: PinPoint
 def: "Thermo Scientific PinPoint SRM analysis software." [PSI:MS]
+is_a: MS:1000693 ! Thermo Finnigan software
 is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
