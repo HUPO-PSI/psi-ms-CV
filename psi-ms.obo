@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.238
-date: 26:02:2026 12:00
+data-version: 4.1.243
+date: 13:03:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -753,21 +753,18 @@ name: fourier transform ion cyclotron resonance
 def: "A device based on the principle of ion cyclotron resonance in which an ion in a magnetic field moves in a circular orbit at a frequency characteristic of its m/z value. Ions are coherently excited to a larger radius orbit using a pulse of radio frequency energy and their image charge is detected on receiver plates as a time domain signal. Fourier transformation of the time domain signal results in a frequency domain signal which is converted to a mass spectrum based in the inverse relationship between frequency and m/z." [PSI:MS]
 synonym: "FT_ICR" EXACT []
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000080
 name: magnetic sector
 def: "A device that produces a magnetic field perpendicular to a charged particle beam that deflects the beam to an extent that is proportional to the particle momentum per unit charge. For a monoenergetic beam, the deflection is proportional to m/z." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000081
 name: quadrupole
 def: "A device that consists of four parallel rods whose centers form the corners of a square and whose opposing poles are connected. The voltage applied to the rods is a superposition of a static potential and a sinusoidal radio frequency potential. The motion of an ion in the x and y dimensions is described by the Matthieu equation whose solutions show that ions in a particular m/z range can be transmitted along the z axis." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000082
@@ -790,7 +787,6 @@ name: time-of-flight
 def: "Instrument that separates ions by m/z in a field-free region after acceleration to a fixed acceleration energy." [PSI:MS]
 synonym: "TOF" EXACT []
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000085
@@ -1166,6 +1162,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000140
 name: 4700 Proteomics Analyzer
 def: "Applied Biosystems/MDS SCIEX 4700 Proteomics Analyzer MS." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -1275,6 +1272,7 @@ is_a: MS:1001533 ! Bruker Daltonics esquire series
 id: MS:1000158
 name: explorer
 def: "IonSpec Explorer MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1299,12 +1297,14 @@ is_a: MS:1000697 ! Bruker Daltonics HCT Series
 id: MS:1000162
 name: HiRes ESI
 def: "IonSpec HiResESI MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000163
 name: HiRes MALDI
 def: "IonSpec HiResMALDI MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1359,30 +1359,35 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000172
 name: MAT253
 def: "ThermoFinnigan MAT253 MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000173
 name: MAT900XP
 def: "ThermoFinnigan MAT900XP MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000174
 name: MAT900XP Trap
 def: "ThermoFinnigan MAT900XP Trap MS." [PSI:MS]
+is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000175
 name: MAT95XP
 def: "ThermoFinnigan MAT95XP MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000176
 name: MAT95XP Trap
 def: "ThermoFinnigan MAT95XP Trap MS." [PSI:MS]
+is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -1413,12 +1418,14 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000181
 name: OMEGA
 def: "IonSpec OMEGA MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
 id: MS:1000182
 name: OMEGA-2001
 def: "IonSpec OMEGA-2001 MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1527,6 +1534,7 @@ is_a: MS:1000125 ! Thermo Finnigan instrument model
 id: MS:1000200
 name: ultima
 def: "IonSpec Ultima MS." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1000123 ! IonSpec instrument model
 
 [Term]
@@ -1545,12 +1553,14 @@ is_a: MS:1001534 ! Bruker Daltonics flex series
 id: MS:1000203
 name: Voyager-DE PRO
 def: "Applied Biosystems/MDS SCIEX Voyager-DE PRO MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
 id: MS:1000204
 name: Voyager-DE STR
 def: "Applied Biosystems/MDS SCIEX Voyager-DE STR MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -2017,7 +2027,6 @@ name: ion trap
 def: "A device for spatially confining ions using electric and magnetic fields alone or in combination." [PSI:MS]
 synonym: "IT" EXACT []
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000265
@@ -3408,70 +3417,70 @@ is_obsolete: true
 id: MS:1000467
 name: 1200 series LC/MSD SL
 def: "The 1200 Series LC/MSD SL ion trap belongs to the Agilent LC/MSD ion trap family. It provides fast polarity switching and multisignal data acquisition capabilities in a single run while also providing 5 stages of automated data dependent MS2 and 11 stages of manual MS2." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000468
 name: 6110 Quadrupole LC/MS
 def: "The 6110 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with an entry level single quadrupole mass spectrometer from the 6100 Series of Agilent quadrupole mass spectrometers. 6110 Quadrupole mass spectrometer has m/z range of 10-1500 and 2500 u/s scan speed. It proves useful for wide range of SIM quantitative applications." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000469
 name: 6120A Quadrupole LC/MS
 def: "The 6120A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers. 6120 quadrupole mass spectrometer has m/z range of 10-1500, 2500 u/s scan speed and utilizes multiple signal acquisition." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000470
 name: 6130 Quadrupole LC/MS
 def: "The 6130 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 series of Agilent mass spectrometers. The 6130 quadrupole mass spectrometer has m/z range of 2-3000, 2500 u/s scan speed in standard mode and 5250 u/s speed in fast-scan mode. It also uses multiple signal acquisition." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000471
 name: 6140 Quadrupole LC/MS
 def: "The 6140 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent quadrupole mass spectrometers. 6140 Quadrupole mass spectrometer has m/z range of 10-1350, 2500 u/s scan speed in standard mode and 10000 u/s speed in fast-scan mode. It also uses multiple signal acquisition." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000472
 name: 6210 Time-of-Flight LC/MS
 def: "The 6210 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 13,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000473
 name: 6310 Ion Trap LC/MS
 def: "The 6310 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.35 resolution and mass range of 200-4000 with resolution of 3-4. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000474
 name: 6320 Ion Trap LC/MS
 def: "The 6320 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000475
 name: 6330 Ion Trap LC/MS
 def: "The 6330 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000476
 name: 6340 Ion Trap LC/MS
 def: "The 6340 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between 0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than 3. The scan speed varies from 1650-27000 for the respective mass ranges." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -3479,14 +3488,14 @@ id: MS:1000477
 name: 6410 Triple Quadrupole LC/MS
 def: "The 6410 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer. Mass range of the mass spectrometer is 15-1650 m/z, resolution is at three settings of 0.7 u (unit), 1.2 u (wide) and 2.5 u (widest). The mass accuracy for 6410 mass spectrometer is 0.1 across the mass range. The collision cell is a hexapole with linear acceleration." [PSI:MS]
 synonym: "6410 Triple Quad LC/MS" EXACT []
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000478
 name: 1200 series LC/MSD VL
 def: "The LC/MSD VL ion trap is part of the family of Agilent ion trap mass spectrometers. It has ESI, APCI and APPI ion sources and is a useful ion trap when the amount of sample is not the limiting factor." [PSI:MS]
-is_a: MS:1000264 ! ion trap
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -3526,7 +3535,6 @@ id: MS:1000484
 name: orbitrap
 def: "An ion trapping device that consists of an outer barrel-like electrode and a coaxial inner spindle-like electrode that form an electrostatic field with quadro-logarithmic potential distribution. The frequency of harmonic oscillations of the orbitally trapped ions along the axis of the electrostatic field is independent of the ion velocity and is inversely proportional to the square root of m/z so that the trap can be used as a mass analyzer." [PSI:MS]
 is_a: MS:1000443 ! mass analyzer type
-is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1000485
@@ -4720,6 +4728,7 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000658
 name: 4800 Proteomics Analyzer
 def: "Applied Biosystems|MDS SCIEX 4800 Proteomics Analyzer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000495 ! Applied Biosystems instrument model
 
 [Term]
@@ -4850,21 +4859,21 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000675
 name: 6220 Time-of-Flight LC/MS
 def: "The 6220 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 13,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000676
 name: 6510 Quadrupole Time-of-Flight LC/MS
 def: "The 6510 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 13,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000677
 name: 6520A Quadrupole Time-of-Flight LC/MS
 def: "The 6520A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer. This time of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2 ppm and resolution greater than 26,000 at m/z 2722. It has multiple ion sources and can be used with multimode ion sources." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -5349,18 +5358,21 @@ relationship: has_value_type xsd:dateTime ! The allowed value-type for this CV t
 id: MS:1000748
 name: SSQ 7000
 def: "ThermoFinnigan SSQ 7000 MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000749
 name: TSQ 7000
 def: "ThermoFinnigan TSQ 7000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
 id: MS:1000750
 name: TSQ
 def: "ThermoFinnigan TSQ MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
 
 [Term]
@@ -6660,21 +6672,21 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1000935
 name: 6470A Triple Quadrupole LC/MS
 def: "The 6470A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000936
 name: 6470B Triple Quadrupole LC/MS
 def: "The 6470B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1000937
 name: 6495C Triple Quadrupole LC/MS
 def: "The 6495C Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -11771,7 +11783,7 @@ id: MS:1001790
 name: Xevo TQ MS
 def: "Waters quadrupole based Xevo TQ MS." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003762 ! triple quadrupole mass spectrometer
+is_a: MS:1003762 ! triple quadrupole instrument
 
 [Term]
 id: MS:1001791
@@ -11841,24 +11853,31 @@ is_a: MS:1000031 ! instrument model
 id: MS:1001801
 name: Pegasus HRT
 def: "LECO high resolution time-of-flight GC mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001802
 name: Citius HRT
 def: "LECO high resolution time-of-flight LC mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001803
 name: Pegasus
 def: "LECO GC time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1001804
 name: TruTOF
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -12810,6 +12829,8 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1001945
 name: Pegasus 4D
 def: "LECO nominal mass resolution time-of-flight GCxGC mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -15022,6 +15043,8 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1002278
 name: Pegasus III
 def: "LECO nominal mass resolution time-of-flight GC mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -16157,21 +16180,21 @@ is_a: MS:1002442 ! chromatograph file format
 id: MS:1002444
 name: 6420 Triple Quadrupole LC/MS
 def: "The 6420 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002445
 name: 6460 Triple Quadrupole LC/MS
 def: "The 6460 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer. It is similar to the 6420 but adds Agilent Jet Stream (AJS) technology to increase sensitivity." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002446
 name: 6490 Triple Quadrupole LC/MS
 def: "The 6490 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer. It is similar to the 6420 but adds the Agilent iFunnel technology to increase sensitivity." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -17997,6 +18020,8 @@ is_a: MS:1001457 ! data processing software
 id: MS:1002719
 name: Pegasus BT
 def: "LECO bench-top GC time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
@@ -18050,7 +18075,7 @@ id: MS:1002726
 name: SYNAPT G2-Si
 def: "Waters Corporation SYNAPT G2-Si orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
 is_a: MS:1000126 ! Waters instrument model
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight mass spectrometer
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 
 [Term]
 id: MS:1002727
@@ -18407,70 +18432,70 @@ is_a: MS:1002778 ! DiLeu reagent
 id: MS:1002783
 name: 6550 iFunnel Q-TOF LC/MS
 def: "The 6550 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002784
 name: 6550A iFunnel Q-TOF LC/MS
 def: "The 6550A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002785
 name: 6520B Q-TOF LC/MS
 def: "The 6520B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002786
 name: 6530A Q-TOF LC/MS
 def: "The 6530A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002787
 name: 6530B Q-TOF LC/MS
 def: "The 6530B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002788
 name: 6538 Q-TOF LC/MS
 def: "The 6538 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002789
 name: 6540 Q-TOF LC/MS
 def: "The 6540 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002790
 name: 6542 Q-TOF LC/MS
 def: "The 6542 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002791
 name: 6545 Q-TOF LC/MS
 def: "The 6545 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002792
 name: 6560 Q-TOF LC/MS
 def: "The 6560 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -18478,79 +18503,79 @@ id: MS:1002793
 name: 6570 Q-TOF LC/MS
 def: "The 6570 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
 comment: Web search verification (2026-01-16) found no evidence that this Agilent model exists.
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002794
 name: 6120B Quadrupole LC/MS
 def: "The 6120B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002795
 name: 6150 Quadrupole LC/MS
 def: "The 6150 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a single quadrupole mass spectrometer from the 6100 Series of Agilent mass spectrometers." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002796
 name: 6224 Time-of-Flight LC/MS
 def: "The 6224 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002797
 name: 6230A Time-of-Flight LC/MS
 def: "The 6230A Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002798
 name: 6230B Time-of-Flight LC/MS
 def: "The 6230B Time-of-Flight LC/MS is a Agilent liquid chromatography instrument combined with a Agilent time of flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002799
 name: 6430 Triple Quadrupole LC/MS
 def: "The 6430 Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002800
 name: 6495A Triple Quadrupole LC/MS
 def: "The 6495A Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002801
 name: 6495B Triple Quadrupole LC/MS
 def: "The 6495B Quadrupole LC/MS system is a Agilent liquid chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002802
 name: 7000A Triple Quadrupole GC/MS
 def: "The 7000A Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002803
 name: 7000B Triple Quadrupole GC/MS
 def: "The 7000B Quadrupole GC/MS system is a Agilent gas chromatography instrument combined with a Agilent triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23156,12 +23181,16 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 id: MS:1003483
 name: 4000 GC/MS
 def: "Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
 id: MS:1003484
 name: 210-MS GC/MS Ion Trap
 def: "Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -23193,7 +23222,7 @@ id: MS:1003489
 name: GCMS-TQ8050NX
 def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
-is_a: MS:1003735 ! Shimadzu gas chromatography mass spectrometry system model
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 
 [Term]
 id: MS:1003490
@@ -23343,102 +23372,102 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1003514
 name: 5973 MSD
 def: "Agilent 5973 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003515
 name: 5973N MSD
 def: "Agilent 5973N MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003516
 name: 5975 MSD
 def: "Agilent 5975 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003517
 name: 5975B MSD
 def: "Agilent 5975B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003518
 name: 5975C inert XL MSD
 def: "Agilent 5975C inert XL MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003519
 name: 5975C MSD
 def: "Agilent 5975C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003520
 name: 5975T MSD
 def: "Agilent 5975T MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003521
 name: 5977 MSD
 def: "Agilent 5977 MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003522
 name: 5977A MSD
 def: "Agilent 5977A MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003523
 name: 5977B MSD
 def: "Agilent 5977B MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003524
 name: 5977C MSD
 def: "Agilent 5977C MSD gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1000081 ! quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003525
 name: 6230 Time-of-Flight LC/MS
 def: "Agilent 6230 Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003526
 name: 6410A Triple Quadrupole LC/MS
 def: "Agilent 6410A Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23446,7 +23475,7 @@ id: MS:1003527
 name: 6445 Q-TOF LC/MS
 def: "Agilent 6445 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
 comment: Web search verification (2026-01-16) found no evidence that this Agilent model exists.
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23454,42 +23483,42 @@ id: MS:1003528
 name: 6456 Q-TOF LC/MS
 def: "Agilent 6456 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
 comment: Web search verification (2026-01-16) found no evidence that this Agilent model exists.
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003529
 name: 6470 Triple Quadrupole LC/MS
 def: "Agilent 6470 Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003530
 name: 6490A Triple Quadrupole LC/MS
 def: "Agilent 6490A Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003531
 name: 6495 Triple Quadrupole LC/MS
 def: "Agilent 6495 Triple Quadrupole LC/MS triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003532
 name: 6520 Q-TOF LC/MS
 def: "Agilent 6520 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003533
 name: 6530 Q-TOF LC/MS
 def: "Agilent 6530 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23497,21 +23526,21 @@ id: MS:1003534
 name: 6543 Q-TOF LC/MS
 def: "Agilent 6543 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
 comment: Web search verification (2026-01-16) found no evidence that this Agilent model exists.
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003535
 name: 6545XT Q-TOF LC/MS
 def: "Agilent 6545XT Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003536
 name: 6546 Q-TOF LC/MS
 def: "Agilent 6546 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -23519,118 +23548,130 @@ id: MS:1003537
 name: 6600 Q-TOF LC/MS
 def: "Agilent 6600 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
 comment: Web search verification (2026-01-16) found no evidence that this Agilent model exists.
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003538
 name: 7000C Triple Quadrupole GC/MS
 def: "Agilent 7000C Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003539
 name: 7000D Triple Quadrupole GC/MS
 def: "Agilent 7000D Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003540
 name: 7010 Triple Quadrupole GC/MS
 def: "Agilent 7010 Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003541
 name: 7010B Triple Quadrupole GC/MS
 def: "Agilent 7010B Triple Quadrupole GC/MS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
-is_a: MS:1003762 ! triple quadrupole
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003762 ! triple quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003542
 name: 7200 Q-TOF GC/MS
 def: "Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003543
 name: 7250 Q-TOF GC/MS
 def: "Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
-is_a: MS:1003914 ! Agilent gas chromatography mass spectrometry system model
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003544
 name: CE-TOFMS
 def: "Agilent CE-TOFMS capillary electrophoresis - time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003545
 name: G3250AA Time-of-Flight LC/MS
 def: "Agilent G3250AA Time-of-Flight LC/MS time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1000084 ! time-of-flight
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003546
 name: Revident Q-TOF LC/MS
 def: "Agilent Revident Q-TOF LC/MS quadrupole time-of-flight mass spectrometer." [PSI:MS]
-is_a: MS:1003763 ! quadrupole time-of-flight
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1003547
 name: Pegasus BT 4D
 def: "LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003548
 name: Pegasus HT
 def: "LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003549
 name: Pegasus IV
 def: "LECO Pegasus IV time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1001800 ! LECO instrument model
 
 [Term]
 id: MS:1003550
 name: PTR-TOF 8000
 def: "Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003452 ! Ionicon Analytik instrument model
 
 [Term]
 id: MS:1003551
 name: AccuTOF GCv
 def: "JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003453 ! JEOL instrument model
 
 [Term]
 id: MS:1003552
 name: TOF.SIMS 5
 def: "IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003454 ! IONTOF instrument model
 
 [Term]
 id: MS:1003553
 name: TurboMass GC/MS
 def: "PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
+is_a: MS:1003733 ! gas chromatography mass spectrometry system
 is_a: MS:1003455 ! PerkinElmer instrument model
 
 [Term]
@@ -24801,18 +24842,6 @@ def: "A gas chromatography mass spectrometry system (GC–MS) integrates a gas c
 is_a: MS:1003588 ! hyphenated separation system
 
 [Term]
-id: MS:1003734
-name: gas chromatography mass spectrometry system model
-def: "Gas chromatography mass spectrometry system model name not including the vendor's name." [PSI:MS]
-is_a: MS:1003733 ! gas chromatography mass spectrometry system
-
-[Term]
-id: MS:1003735
-name: Shimadzu gas chromatography mass spectrometry system model
-def: "Shimadzu Corporation gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
 id: MS:1003737
 name: separation system
 def: "A system to effect separation of compounds." [PSI:MS]
@@ -24964,68 +24993,68 @@ relationship: part_of MS:1000463 ! instrument
 
 [Term]
 id: MS:1003762
-name: triple quadrupole
-def: "A triple quadrupole mass spectrometer (TQMS; QqQ) is a tandem mass spectrometry (MS/MS) system that employs three linear quadrupoles in series to achieve highly selective and sensitive targeted quantification of specific compounds. The first quadrupole (Q1) may select a precursor ion, the second (Q2) induces fragmentation via collision-induced dissociation (CID), and the third (Q3) monitors specific product ions, typically through Multiple Reaction Monitoring (MRM)." [PSI:MS]
+name: triple quadrupole instrument
+def: "A tandem instrument that employs three quadrupoles in series, where the first (Q1) acts as a mass filter for precursor ion selection, the second (q2) serves as a collision cell for fragmentation, and the third (Q3) as a mass filter for product ion detection." [PSI:MS]
 synonym: "QqQ" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003763
-name: quadrupole time-of-flight
-def: "A quadrupole time-of-flight (Q-TOF) mass spectrometer is a hybrid instrument that combines a quadrupole mass filter with a time-of-flight (TOF) mass analyzer to provide both highly accurate mass measurements and fragmentation data. The quadrupole may be used to select a specific precursor ion which is then fragmented, and the resulting product ions are measured by the TOF analyzer, providing high resolution and mass accuracy for structural elucidation and quantification." [PSI:MS]
+name: quadrupole time-of-flight instrument
+def: "A hybrid instrument that combines a quadrupole mass filter for precursor ion selection with a time-of-flight mass analyzer for high-resolution, accurate-mass detection of product ions." [PSI:MS]
 synonym: "Q-TOF" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003764
-name: ion trap time-of-flight
-def: "An ion trap time-of-flight (IT-TOF) mass spectrometer is a hybrid instrument that uses an ion trap to accumulate, store, and often fragment ions, which are then periodically injected into a time-of-flight (TOF) mass analyzer for high-resolution mass analysis. This combination allows for sensitive MSn experiments (multiple stages of mass spectrometry) within the ion trap for structural elucidation and provides high mass accuracy and resolution via the TOF component." [PSI:MS]
+name: ion trap time-of-flight instrument
+def: "A hybrid instrument that combines an ion trap for ion accumulation, storage, and fragmentation with a time-of-flight mass analyzer for high-resolution, accurate-mass detection." [PSI:MS]
 synonym: "IT-TOF" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003765
-name: triple quadrupole linear ion trap
-def: "A triple quadrupole linear ion trap (QqLIT) mass spectrometer is a hybrid instrument that can operate as a conventional triple quadrupole for high-sensitivity quantification (e.g., in Multiple Reaction Monitoring mode) or as a linear ion trap for qualitative analysis, such as MSn experiments and structural elucidation. The final quadrupole (Q3) of the system can be rapidly switched between functioning as a mass-resolving filter and a high-capacity linear ion trap, allowing for both precise quantification and comprehensive structural information to be acquired in a single analytical run." [PSI:MS]
+name: triple quadrupole linear ion trap instrument
+def: "A hybrid instrument that combines a triple quadrupole configuration with a linear ion trap, where the third quadrupole can function either as a conventional mass filter or as a linear ion trap for MSn analysis." [PSI:MS]
 synonym: "QqLIT" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003766
-name: quadrupole fourier transform ion cyclotron resonance
-def: "A quadrupole Fourier-transform ion cyclotron resonance (Q-FT-ICR) mass spectrometer is a hybrid instrument that uses an initial quadrupole for ion guiding or mass filtering before the ions are introduced into a Penning trap, where the mass analysis occurs. Once in the Penning trap, the ions' mass-to-charge ratios (m/z) are determined with ultra-high resolution and mass accuracy by measuring their unique cyclotron frequencies in a strong magnetic field and converting the resulting image current signal into a mass spectrum via a Fourier transform. " [PSI:MS]
+name: quadrupole fourier transform ion cyclotron resonance instrument
+def: "A hybrid instrument that combines a quadrupole for ion guiding or mass filtering with a Fourier transform ion cyclotron resonance mass analyzer for ultra-high resolution and mass accuracy." [PSI:MS]
 synonym: "Q-FT-ICR" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003767
-name: quadrupole ion mobility time-of-flight
-def: "A quadrupole ion mobility time-of-flight (Q-IMS-TOF) mass spectrometer is a hybrid instrument that adds an ion mobility spectrometry (IMS) cell between the quadrupole and the time-of-flight (TOF) analyzer, providing an additional dimension of separation based on ion size, shape, and charge in a buffer gas. This configuration allows for the separation of isobars and isomers that have the same mass-to-charge ratio (m/z) but different three-dimensional structures, which significantly enhances analytical confidence for complex samples such as in proteomics, environmental analysis, and drug screening." [PSI:MS]
+name: quadrupole ion mobility time-of-flight instrument
+def: "A hybrid instrument that combines a quadrupole mass filter, an ion mobility spectrometry separation cell, and a time-of-flight mass analyzer, enabling separation of ions by size and shape in addition to mass-to-charge ratio." [PSI:MS]
 synonym: "Q-IMS-TOF" EXACT []
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003768
-name: ion trap orbitrap
-def: "A hybrid instrument that combines an ion trap for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass (HRAM) detection." [PSI:MS]
+name: ion trap orbitrap instrument
+def: "A hybrid instrument that combines an ion trap for ion storage and fragmentation with an Orbitrap mass analyzer for high-resolution, accurate-mass detection." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003769
-name: quadrupole orbitrap
-def: "A quadrupole Orbitrap mass spectrometer is a hybrid instrument that uses a quadrupole mass filter for precursor ion selection, a collision cell for fragmentation, followed by an Orbitrap mass analyzer which determines the precise mass-to-charge ratios of ions with high resolution and mass accuracy via Fourier transform." [PSI:MS]
+name: quadrupole orbitrap instrument
+def: "A hybrid instrument that combines a quadrupole mass filter for precursor ion selection with an Orbitrap mass analyzer for high-resolution, accurate-mass detection." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003770
-name: quadrupole ion trap orbitrap
-def: "A mass spectrometer that integrates a quadrupole mass filter, a linear ion trap, and an Orbitrap mass analyzer to provide precursor ion selection, multiple-stage fragmentation (MSn), and ultra-high resolution mass analysis." [PSI:MS]
+name: quadrupole ion trap orbitrap instrument
+def: "A hybrid instrument that combines a quadrupole mass filter, a linear ion trap for MSn fragmentation, and an Orbitrap mass analyzer for high-resolution, accurate-mass detection." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003771
-name: quadrupole orbitrap astral
-def: "A instrument that integrates a quadrupole mass filter, an Orbitrap mass analyzer, and the ASTRAL analyzer for high performance in ion selection, high-resolution analysis, and high-speed, high-sensitivity MS2 measurements." [PSI:MS]
+name: quadrupole orbitrap astral instrument
+def: "A hybrid instrument that combines a quadrupole mass filter, an Orbitrap mass analyzer, and an asymmetric track lossless (ASTRAL) analyzer for high-resolution analysis and high-speed MS/MS measurements." [PSI:MS]
 is_a: MS:1003761 ! instrument class
 
 [Term]
@@ -25195,6 +25224,60 @@ def: "Ionoptika data format generated by J105 TOF-SIMS instrument." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
+id: MS:1003812
+name: lambda max
+def: "The wavelength of maximum absorbance for a substance. This is analogous to the base peak m/z for UV-Vis spectroscopy." [PSI:MS]
+synonym: "λ-max" EXACT []
+is_a: MS:1003058 ! spectrum property
+relationship: has_units UO:0000018 ! nanometer
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003813
+name: list of doubles
+def: "A list of xsd:double." []
+is_a: MS:1002710 ! list of type
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003820
+name: coordinate spacing model
+def: "Defines a model for calculating or correcting the spacing between points along a continuous dimension." [PSI:MS]
+is_a: MS:1000499 ! spectrum attribute
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003821
+name: polynomial delta coordinate interpolation
+def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. It is assumed that the parameters are inferred from the value list and the number implies the polynomial degree." [PSI:MS]
+is_a: MS:1003820 ! coordinate spacing model
+
+[Term]
+id: MS:1003822
+name: grid coordinate interpolation
+def: "A coordinate spacing model that uses some form of interpolation to calculate coordinate values between a fixed minimum and maximum value. This includes formula for (potentially lossily) converting a coordinate to an integer index and vice-versa. The grid model and recalibration function parameters are given by the value list. The recalibration function may be the identity function, or a more complex model defined in a child term." [PSI:MS]
+is_a: MS:1003820 ! coordinate spacing model
+
+[Term]
+id: MS:1003824
+name: linear grid interpolation
+def: "A coordinate spacing model that uses linear interpolation to map grid indices to coordinates $x_i = f_x(b + i * a)$ where $f$ is some recalibration function." [PSI:MS]
+is_a: MS:1003822 ! grid coordinate interpolation
+
+[Term]
+id: MS:1003825
+name: square root grid interpolation
+def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$" [PSI:MS]
+is_a: MS:1003822 ! grid coordinate interpolation
+
+[Term]
+id: MS:1003826
+name: coordinate grid encoding
+def: "This array stores indices or spans into some form of coordinate space model rather than the coordinates themselves, and that grid is stored externally from this data array. The objective being that these coordinates are more compact to store than the raw coordinates themselves. The value of this parameter is the grid identifier, if there are multiple to choose from. A separate coordinate spacing model parameter will signify what form of coordinate space model is used." [PSI:MS]
+is_a: MS:1000572 ! binary data compression type
+relationship: has_value_type xsd:string ! The allowed valute-type for this CV term
+
+[Term]
 id: MS:1003901
 name: zero intensity point trimming
 def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum. Data may be retained for interperatbility such as retaining only zeros that flank non-zero intensity value data points from a profile spectrum.." [PSI:MS]
@@ -25241,12 +25324,6 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 relationship: part_of MS:1003905 ! targeted analysis
 
 [Term]
-id: MS:1003914
-name: Agilent gas chromatography mass spectrometry system model
-def: "Agilent Technologies gas chromatography mass spectrometry system model." [PSI:MS]
-is_a: MS:1003734 ! gas chromatography mass spectrometry system model
-
-[Term]
 id: MS:1003915
 name: two-dimensional gas chromatography
 def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
@@ -25255,27 +25332,262 @@ is_a: MS:1002272 ! gas chromatography separation
 
 [Term]
 id: MS:1003916
+name: SpectroSwiss software
+def: "SpectroSwiss software for mass spectrometry data processing and analysis." [PSI:MS]
+is_a: MS:1000531 ! software
+
+[Term]
+id: MS:1003917
+name: Peak-by-Peak
+def: "SpectroSwiss software for Fourier transform mass spectrometry (FTMS) data processing and analysis, providing advanced workflows including the processing of unreduced, transient data." [PSI:MS]
+synonym: "PeakByPeak" EXACT []
+is_a: MS:1003916 ! SpectroSwiss software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003920
+name: chromatographic column
+def: "A tube or housing containing a stationary phase, through which a mobile phase flows to achieve chromatographic separation of analytes." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1002270 ! chromatographic separation
+
+[Term]
+id: MS:1003921
+name: liquid chromatographic column
+def: "A chromatographic column designed for use with a liquid mobile phase, housing a stationary phase for analyte separation." [PSI:MS]
+comment: Column or stationary phase name, not including the vendor's name.
+is_a: MS:1003945 ! chromatographic column type
+
+[Term]
+id: MS:1003922
+name: chromatographic stationary phase
+def: "The immobile phase in a chromatographic system with which analytes interact differentially, enabling separation based on chemical or physical properties." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003923
+name: chromatographic stationary phase attribute
+def: "Chromatographic stationary phase properties that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003922 ! chromatographic stationary phase
+
+[Term]
+id: MS:1003924
+name: pore size
+def: "The average diameter of the pores within the particles of the stationary phase, typically represented in angstroms (Å)" [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+relationship: has_units UO:0000019 ! angstrom
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003925
+name: particle diameter
+def: "The average diameter of the solid particles that constitute the stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+relationship: has_units UO:0000017 ! micrometer
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003926
+name: chromatographic column attribute
+def: "Properties of the chromatographic column hardware that are associated with a value." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003927
+name: column length
+def: "The length of the chromatographic column, representing the path length available for separation." [PSI:MS]
+is_a: MS:1003926 ! chromatographic column attribute
+relationship: has_units UO:0000016 ! millimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003928
+name: column internal diameter
+def: "The inner diameter of the chromatographic column." [PSI:MS]
+synonym: "column I.D." EXACT []
+is_a: MS:1003926 ! chromatographic column attribute
+relationship: has_units UO:0000016 ! millimeter
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003929
+name: particle porosity
+def: "The porosity of the particles composing the chromatographic stationary phase." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003930
+name: fully porous
+def: "A chromatographic stationary phase particle with pores distributed throughout its entire volume." [PSI:MS]
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003931
+name: superficially porous
+def: "A chromatographic stationary phase particle consisting of a solid, non-porous core surrounded by a porous shell." [PSI:MS]
+synonym: "core-shell particle" EXACT []
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003932
+name: non-porous
+def: "A solid chromatographic stationary phase particle without internal pores." [PSI:MS]
+is_a: MS:1003929 ! particle porosity
+
+[Term]
+id: MS:1003933
+name: support material
+def: "The base material from which the chromatographic stationary phase is constructed." [PSI:MS]
+is_a: MS:1003923 ! chromatographic stationary phase attribute
+
+[Term]
+id: MS:1003934
+name: silica-based
+def: "A chromatographic stationary phase constructed from silica particles, optionally with surface chemical modification." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003935
+name: hybrid particle
+def: "A chromatographic stationary phase constructed from organic-inorganic hybrid particles, such as ethylene-bridged hybrid (BEH), providing enhanced chemical stability and pH range." [PSI:MS]
+synonym: "BEH stationary phase" RELATED []
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003936
+name: polymer-based
+def: "A chromatographic stationary phase constructed from organic polymer particles such as polystyrene-divinylbenzene or methacrylate-based polymers." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003937
+name: monolithic
+def: "A chromatographic stationary phase consisting of a single continuous porous rod rather than packed discrete particles." [PSI:MS]
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003938
+name: porous graphitic carbon
+def: "A chromatographic stationary phase composed of porous graphitic carbon, providing strong retention of polar compounds and chemical robustness across a wide pH range." [PSI:MS]
+synonym: "PGC stationary phase" EXACT []
+is_a: MS:1003933 ! support material
+
+[Term]
+id: MS:1003939
+name: trap column
+def: "A short chromatographic column used for on-line sample loading, concentration, and desalting prior to separation on the analytical column." [PSI:MS]
+synonym: "precolumn" RELATED []
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003940
+name: guard column
+def: "A short protective chromatographic column placed upstream of the analytical column to capture contaminants and extend analytical column lifetime." [PSI:MS]
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003941
+name: analytical column
+def: "The primary chromatographic column in which analyte separation occurs." [PSI:MS]
+is_a: MS:1003944 ! chromatographic column role
+
+[Term]
+id: MS:1003943
+name: gas chromatographic column
+def: "A chromatographic column designed for use with a gaseous mobile phase." [PSI:MS]
+is_a: MS:1003945 ! chromatographic column type
+
+[Term]
+id: MS:1003944
+name: chromatographic column role
+def: "The functional role of a chromatographic column within the separation workflow." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003945
+name: chromatographic column type
+def: "The type of chromatographic column classified by the mobile phase it is designed to operate with." [PSI:MS]
+is_a: MS:1000857 ! run attribute
+relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1003946
+name: tandem time-of-flight instrument
+def: "A tandem instrument that combines two time-of-flight mass analyzers in series, where the first selects precursor ions and the second analyzes fragment ions produced by collision-induced dissociation or post-source decay." [PSI:MS]
+synonym: "TOF/TOF" EXACT []
+synonym: "TOF-TOF" EXACT []
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003947
+name: magnetic sector ion trap instrument
+def: "A hybrid instrument that combines a double-focusing magnetic sector analyzer for high-resolution precursor ion selection with an ion trap for MSn fragmentation analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003948
+name: fourier transform ion cyclotron resonance instrument
+def: "An instrument that uses a Fourier transform ion cyclotron resonance mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003949
+name: magnetic sector instrument
+def: "An instrument that uses a magnetic sector mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003950
+name: quadrupole instrument
+def: "An instrument that uses a single quadrupole mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003951
+name: time-of-flight instrument
+def: "An instrument that uses a time-of-flight mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003952
+name: ion trap instrument
+def: "An instrument that uses an ion trap mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003953
+name: orbitrap instrument
+def: "An instrument that uses an Orbitrap mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003954
 name: argon gas cluster ion beam
 def: "Argon gas cluster ion beam (Ar GCIB) bombardment uses a focused beam of large argon cluster ions, typically [Ar500]+ to [Ar10000]+, accelerated to high energies to sputter and generate secondary ions from a surface, enabling molecular depth profiling and imaging of organic and biological materials with reduced subsurface damage compared to monatomic ion beams." [PSI:MS]
 synonym: "Ar GCIB" EXACT []
 is_a: MS:1003921 ! gas cluster ion beam
 
 [Term]
-id: MS:1003917
+id: MS:1003955
 name: singly charged bismuth trimer liquid metal ion gun
 def: "A beam of singly charged bismuth trimer ([Bi3]+) ions for desorption and ionisation from a surface, providing high spatial resolution imaging and enhanced molecular secondary ion yields compared to monatomic primary ion beams." [PSI:MS]
 synonym: "[Bi3]+ LMIG" EXACT []
 is_a: MS:1003920 ! bismuth liquid metal ion gun
 
 [Term]
-id: MS:1003918
+id: MS:1003956
 name: doubly charged bismuth trimer liquid metal ion gun
 def: "A beam of doubly charged bismuth trimer ([Bi3]2+) ions for desorption and ionisation from a surface. Ions achieve a higher velocity at a given acceleration voltage compared to singly charged [Bi3]+, resulting in enhanced secondary ion yields for surface analysis." [PSI:MS]
 synonym: "[Bi3]2+ LMIG" EXACT []
 is_a: MS:1003920 ! bismuth liquid metal ion gun
 
 [Term]
-id: MS:1003919
+id: MS:1003957
 name: two-dimensional liquid chromatography
 def: "Two-dimensional liquid chromatography (2D-LC) is a multidimensional separation technique that couples two liquid chromatography columns with different selectivities, such as strong cation exchange and reversed phase, connected by a switching valve or modulator to provide significantly higher peak capacity and resolving power for complex mixtures than one-dimensional liquid chromatography." [PSI:MS]
 synonym: "2D-LC" EXACT []
@@ -25283,21 +25595,21 @@ synonym: "LCxLC" EXACT []
 is_a: MS:1002271 ! liquid chromatography separation
 
 [Term]
-id: MS:1003920
+id: MS:1003958
 name: bismuth liquid metal ion gun
 def: "Bismuth liquid metal ion gun (Bi LMIG) bombardment uses a focused beam of bismuth ions emitted from a liquid metal ion source to desorb and ionize molecules from a surface. The LMIG source generates a diversity of monomers and clusters, which are filtered prior to the sample in order to select the specific ionisation characteristics." [PSI:MS]
 synonym: "Bi LMIG" EXACT []
 is_a: MS:1003922 ! liquid metal ion gun
 
 [Term]
-id: MS:1003921
+id: MS:1003959
 name: gas cluster ion beam
 def: "A gas cluster ion beam (GCIB) is an ion source that generates and accelerates large aggregates of gas atoms or molecules to high energies. The low energy per constituent atom minimizes surface damage and molecular fragmentation, making it highly effective for molecular depth profiling and the analysis of fragile organic and biological materials." [PSI:MS]
 synonym: "GCIB" EXACT []
 is_a: MS:1000446 ! fast ion bombardment
 
 [Term]
-id: MS:1003922
+id: MS:1003960
 name: liquid metal ion gun
 def: "A liquid metal ion gun (LMIG) is an ion source that extracts and ionizes a thin layer of liquid metal from a fine heated needle using a high-voltage electric field. It produces a high-brightness, tightly focused beam of metal ions or clusters, enabling high-resolution imaging and analysis in Secondary Ion Mass Spectrometry (SIMS)." [PSI:MS]
 synonym: "LMIG" EXACT []
@@ -28039,6 +28351,17 @@ is_a: UO:0000045
 created_by: george gkoutos
 
 [Term]
+id: UO:0000016
+name: millimeter
+namespace: unit.ontology
+def: "A length unit which is equal to one thousandth of a meter or 10^[-3] m." [NIST:NIST]
+subset: unit_slim
+synonym: "millimetre" EXACT []
+synonym: "mm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
 id: UO:0000017
 name: micrometer
 namespace: unit.ontology
@@ -28058,6 +28381,15 @@ def: "A length unit which is equal to one thousandth of one millionth of a meter
 subset: unit_slim
 synonym: "nanometre" EXACT []
 synonym: "nm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
+id: UO:0000019
+name: angstrom
+namespace: unit.ontology
+def: "A length unit which is equal to 10 [-10] m." [NIST:NIST]
+synonym: "Å" EXACT []
 is_a: UO:0000001
 created_by: george gkoutos
 
