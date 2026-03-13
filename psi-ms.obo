@@ -25355,6 +25355,7 @@ id: MS:1003924
 name: pore size
 def: "The average diameter of the pores within the particles of the stationary phase, typically represented in angstroms (Å)" [PSI:MS]
 is_a: MS:1003923 ! chromatographic stationary phase attribute
+relationship: has_units UO:0000019 ! angstrom
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
