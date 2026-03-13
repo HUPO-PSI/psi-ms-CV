@@ -25386,7 +25386,7 @@ name: column internal diameter
 def: "The inner diameter of the chromatographic column." [PSI:MS]
 synonym: "column I.D." EXACT []
 is_a: MS:1003926 ! chromatographic column attribute
-relationship: has_units UO:0000015 ! millimeter
+relationship: has_units UO:0000016 ! millimeter
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -28257,6 +28257,15 @@ def: "A length unit which is equal to one thousandth of one millionth of a meter
 subset: unit_slim
 synonym: "nanometre" EXACT []
 synonym: "nm" EXACT []
+is_a: UO:0000001
+created_by: george gkoutos
+
+[Term]
+id: UO:0000019
+name: angstrom
+namespace: unit.ontology
+def: "A length unit which is equal to 10 [-10] m." [NIST:NIST]
+synonym: "Å" EXACT []
 is_a: UO:0000001
 created_by: george gkoutos
 
