@@ -1170,7 +1170,7 @@ is_a: MS:1000495 ! Applied Biosystems instrument model
 id: MS:1000141
 name: apex IV
 def: "Bruker Daltonics' apex IV: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
-is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
@@ -4423,7 +4423,7 @@ is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 id: MS:1000608
 name: AXIMA-QIT
 def: "Shimadzu Biotech AXIMA-QIT MS." [PSI:MS]
-is_a: MS:1003952 ! ion trap instrument
+is_a: MS:1003764 ! ion trap time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
@@ -6276,7 +6276,6 @@ id: MS:1000870
 name: 4000 QTRAP
 def: "OBSOLETE SCIEX or Applied Biosystems|MDS SCIEX QTRAP 4000." [PSI:MS]
 comment: This term was obsoleted because was redundant to MS:1000139.
-is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 is_obsolete: true
 
@@ -20046,7 +20045,7 @@ is_a: MS:1001547 ! Bruker Daltonics maXis series
 id: MS:1003005
 name: timsTOF Pro
 def: "Bruker Daltonics' timsTOF Pro." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -20841,7 +20840,7 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1003124
 name: timsTOF fleX
 def: "Bruker Daltonics' timsTOF fleX" [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -21596,21 +21595,21 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 id: MS:1003229
 name: timsTOF
 def: "Bruker Daltonics' timsTOF." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003230
 name: timsTOF Pro 2
 def: "Bruker Daltonics' timsTOF Pro 2." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003231
 name: timsTOF SCP
 def: "Bruker Daltonics' timsTOF SCP." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22638,7 +22637,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22736,7 +22735,7 @@ is_a: MS:1003731 ! Agilent gas chromatography system model
 id: MS:1003397
 name: timsTOF fleX MALDI-2
 def: "Bruker Daltonics' timsTOF fleX MALDI-2." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22781,7 +22780,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1003404
 name: timsTOF HT
 def: "Bruker Daltonics' timsTOF HT." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22834,7 +22833,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1003412
 name: timsTOF Ultra 2
 def: "Bruker Daltonics timsTOF Ultra 2." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -23278,7 +23277,7 @@ is_a: MS:1001534 ! Bruker Daltonics flex series
 id: MS:1003474
 name: rapifleX MALDI PharmaPulse
 def: "Bruker rapifleX MALDI PharmaPulse MALDI TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
-is_a: MS:1003951 ! time-of-flight instrument
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -23313,28 +23312,28 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1003479
 name: timsMetabo
 def: "Bruker timsMetabo TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003480
 name: timsUltra AIP
 def: "Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003481
 name: timsOmni
 def: "Bruker timsOmni TIMS-Q-TOF mass spectrometer." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003482
 name: timsTOF MALDI PharmaPulse
 def: "Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
-is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -23868,7 +23867,7 @@ is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 id: MS:1003557
 name: AXIMA Resonance
 def: "Shimadzu AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn." [PSI:MS]
-is_a: MS:1003952 ! ion trap instrument
+is_a: MS:1003764 ! ion trap time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
@@ -25880,6 +25879,13 @@ def: "Thermo Scientific software for complex biotherapeutic characterization by 
 is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003970
+name: ion mobility quadrupole time-of-flight instrument
+def: "An instrument that uses an ion mobility analyzer followed by a quadrupole mass filter and a time-of-flight mass analyzer as its primary means of mass analysis." [PSI:MS]
+synonym: "IMS-Q-TOF" EXACT []
+is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:4000000
