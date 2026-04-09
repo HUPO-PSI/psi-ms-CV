@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.244
-date: 13:03:2026 12:00
+data-version: 4.1.245
+date: 09:04:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -25694,6 +25694,20 @@ def: "Thermo Scientific software for complex biotherapeutic characterization by 
 is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003973
+name: LECO PEG format
+def: "Proprietary binary data format used by LECO ChromaTOF software to store raw and processed data from LECO Pegasus series GC time-of-flight mass spectrometers." [PSI:MS]
+synonym: ".peg" EXACT []
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003974
+name: JEOL JPF format
+def: "Proprietary binary data format produced by JEOL mass spectrometry systems and associated data processing software for storing mass spectral data." [PSI:MS]
+synonym: ".jpf" EXACT []
+is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:4000000
