@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 11
+      - name: Set up JDK 24
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin' # Install JDK from Eclipse Adoptium
@@ -36,9 +36,9 @@ jobs:
         run: |
            git clone https://github.com/EBISPOT/ols4
            cd ols4/ols-shared/
-           mvn -e clean install
+           mvn clean install
            cd ../../ols4/dataload/rdf2json
-           mvn -e clean install
+           mvn clean install
 
       - name: Validate OWL File for OLS
         run: |
