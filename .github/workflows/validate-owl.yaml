@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin' # Install JDK from Eclipse Adoptium
-          java-version: '21'
+          java-version: '24'
 
       - name: Cache Maven packages
         uses: actions/cache@v3
