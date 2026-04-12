@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up JDK 11
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin' # Install JDK from Eclipse Adoptium
-          java-version: '17'
+          java-version: '21'
 
       - name: Cache Maven packages
         uses: actions/cache@v3
@@ -36,9 +36,9 @@ jobs:
         run: |
            git clone https://github.com/EBISPOT/ols4
            cd ols4/ols-shared/
-           mvn clean install
+           mvn -e clean install
            cd ../../ols4/dataload/rdf2json
-           mvn clean install
+           mvn -e clean install
 
       - name: Validate OWL File for OLS
         run: |
