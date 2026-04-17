@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.245
-date: 09:04:2026 12:00
+data-version: 4.1.247
+date: 13:03:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -1156,6 +1156,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1000139
 name: 4000 QTRAP
 def: "Applied Biosystems/MDS SCIEX Q 4000 TRAP MS." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -1169,84 +1170,98 @@ is_a: MS:1000495 ! Applied Biosystems instrument model
 id: MS:1000141
 name: apex IV
 def: "Bruker Daltonics' apex IV: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
+is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
 id: MS:1000142
 name: apex Q
 def: "Bruker Daltonics' apex Q: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
 id: MS:1000143
 name: API 150EX
 def: "Applied Biosystems/MDS SCIEX API 150EX MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000144
 name: API 150EX Prep
 def: "Applied Biosystems/MDS SCIEX API 150EX Prep MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000145
 name: API 2000
 def: "Applied Biosystems/MDS SCIEX API 2000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000146
 name: API 3000
 def: "Applied Biosystems/MDS SCIEX API 3000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000147
 name: API 4000
 def: "Applied Biosystems/MDS SCIEX API 4000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000148
 name: autoflex II
 def: "Bruker Daltonics' autoflex II: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1000149
 name: autoflex TOF/TOF
 def: "Bruker Daltonics' autoflex TOF/TOF MS: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1000150
 name: Auto Spec Ultima NT
 def: "Waters magnetic sector based AutoSpec Ultima NT MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000151
 name: BioTOF II
 def: "Bruker Daltonics' BioTOF II: ESI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
 [Term]
 id: MS:1000152
 name: BioTOF-Q
 def: "Bruker Daltonics' BioTOF-Q: ESI Q-TOF." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
 [Term]
 id: MS:1000153
 name: DELTA plusAdvantage
 def: "ThermoFinnigan DELTA plusAdvantage MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000154
 name: DELTAplusXP
 def: "ThermoFinnigan DELTAplusXP MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -1260,12 +1275,14 @@ is_obsolete: true
 id: MS:1000156
 name: esquire 4000
 def: "Bruker Daltonics' esquire 4000: linear ion trap, ESI, MALDI, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
 [Term]
 id: MS:1000157
 name: esquire 6000
 def: "Bruker Daltonics' esquire 6000: linear ion trap, ESI, MALDI, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
 [Term]
@@ -1279,18 +1296,21 @@ is_a: MS:1000123 ! IonSpec instrument model
 id: MS:1000159
 name: GCT
 def: "Waters oa-ToF based GCT." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000160
 name: HCT
 def: "Bruker Daltonics' HCT: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
 [Term]
 id: MS:1000161
 name: HCTplus
 def: "Bruker Daltonics' HCTplus: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
 [Term]
@@ -1311,48 +1331,56 @@ is_a: MS:1000123 ! IonSpec instrument model
 id: MS:1000164
 name: IsoPrime
 def: "Waters IsoPrime MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000165
 name: IsoProbe
 def: "Waters IsoProbe MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000166
 name: IsoProbe T
 def: "Waters IsoProbe T MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000167
 name: LCQ Advantage
 def: "ThermoFinnigan LCQ Advantage MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000168
 name: LCQ Classic
 def: "ThermoFinnigan LCQ Classic MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000169
 name: LCQ Deca XP Plus
 def: "ThermoFinnigan LCQ Deca XP Plus MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000170
 name: M@LDI L
 def: "Waters oa-ToF based MALDI L." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000171
 name: M@LDI LR
 def: "Waters oa-ToF based MALDI LR." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -1394,18 +1422,21 @@ is_a: MS:1000493 ! Finnigan MAT instrument model
 id: MS:1000177
 name: microflex
 def: "Bruker Daltonics' microflex: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1000178
 name: microTOF LC
 def: "Bruker Daltonics' microTOF LC: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1000179
 name: neptune
 def: "ThermoFinnigan NEPTUNE MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -1432,6 +1463,7 @@ is_a: MS:1000123 ! IonSpec instrument model
 id: MS:1000183
 name: OmniFlex
 def: "Bruker Daltonics' OmniFlex: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -1444,6 +1476,7 @@ is_a: MS:1000126 ! Waters instrument model
 id: MS:1000185
 name: PolarisQ
 def: "ThermoFinnigan PolarisQ MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -1456,42 +1489,49 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000187
 name: Q TRAP
 def: "Applied Biosystems/MDS SCIEX Q TRAP MS." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000188
 name: Q-Tof micro
 def: "Waters oa-ToF based Q-Tof micro." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000189
 name: Q-Tof Ultima
 def: "Waters oa-ToF based Q-Tof Ultima." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000190
 name: QSTAR
 def: "Applied Biosystems/MDS SCIEX QSTAR MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000191
 name: quattro micro
 def: "Waters (triple) quadrupole based micro." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000192
 name: Quattro Ultima
 def: "Waters (triple) quadrupole based Ultima." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1000193
 name: Surveyor MSQ
 def: "ThermoFinnigan Surveyor MSQ MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -1510,24 +1550,28 @@ is_a: MS:1000121 ! SCIEX instrument model
 id: MS:1000196
 name: TEMPUS TOF
 def: "ThermoFinnigan TEMPUS TOF MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000197
 name: TRACE DSQ
 def: "ThermoFinnigan TRACE DSQ MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000198
 name: TRITON
 def: "ThermoFinnigan TRITON MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000199
 name: TSQ Quantum
 def: "ThermoFinnigan TSQ Quantum MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -1541,12 +1585,14 @@ is_a: MS:1000123 ! IonSpec instrument model
 id: MS:1000201
 name: ultraflex
 def: "Bruker Daltonics' ultraflex: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1000202
 name: ultraflex TOF/TOF
 def: "Bruker Daltonics' ultraflex TOF/TOF: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -3285,24 +3331,28 @@ is_a: MS:1000008 ! ionization type
 id: MS:1000447
 name: LTQ
 def: "Finnigan LTQ MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000448
 name: LTQ FT
 def: "Finnigan LTQ FT MS." [PSI:MS]
+is_a: MS:1003971 ! ion trap fourier transform ion cyclotron resonance instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000449
 name: LTQ Orbitrap
 def: "Finnigan LTQ Orbitrap MS." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000450
 name: LXQ
 def: "Finnigan LXQ MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -4038,30 +4088,35 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000554
 name: LCQ Deca
 def: "ThermoFinnigan LCQ Deca." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000555
 name: LTQ Orbitrap Discovery
 def: "LTQ Orbitrap Discovery." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000556
 name: LTQ Orbitrap XL
 def: "LTQ Orbitrap XL." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000557
 name: LTQ FT Ultra
 def: "LTQ FT Ultra." [PSI:MS]
+is_a: MS:1003971 ! ion trap fourier transform ion cyclotron resonance instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000558
 name: GC Quantum
 def: "GC Quantum." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -4187,6 +4242,7 @@ is_a: MS:1000499 ! spectrum attribute
 id: MS:1000578
 name: LCQ Fleet
 def: "LCQ Fleet." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
@@ -4372,54 +4428,63 @@ is_a: MS:1000124 ! Shimadzu instrument model
 id: MS:1000604
 name: LCMS-IT-TOF
 def: "Shimadzu Scientific Instruments LCMS-IT-TOF MS." [PSI:MS]
+is_a: MS:1003764 ! ion trap time-of-flight instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1000605
 name: LCMS-2010EV
 def: "Shimadzu Scientific Instruments LCMS-2010EV MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1000606
 name: LCMS-2010A
 def: "Shimadzu Scientific Instruments LCMS-2010A MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1000607
 name: AXIMA CFR MALDI-TOF
 def: "Shimadzu Biotech AXIMA CFR MALDI-TOF MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1000608
 name: AXIMA-QIT
 def: "Shimadzu Biotech AXIMA-QIT MS." [PSI:MS]
+is_a: MS:1003764 ! ion trap time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1000609
 name: AXIMA-CFR plus
 def: "Shimadzu Biotech AXIMA-CFR plus MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1000610
 name: AXIMA Performance MALDI-TOF/TOF
 def: "Shimadzu Biotech AXIMA Performance MALDI-TOF/TOF MS." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1000611
 name: AXIMA Confidence MALDI-TOF
 def: "Shimadzu Biotech AXIMA Confidence MALDI-TOF (curved field reflectron) MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1000612
 name: AXIMA Assurance Linear MALDI-TOF
 def: "Shimadzu Biotech AXIMA Assurance Linear MALDI-TOF MS." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
@@ -4570,6 +4635,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1000632
 name: Q-Tof Premier
 def: "Waters oa-ToF based Q-Tof Premier." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -4583,84 +4649,98 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 id: MS:1000634
 name: DSQ
 def: "ThermoFinnigan DSQ GC-MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1000635
 name: ITQ 700
 def: "Thermo Scientific ITQ 700 GC-MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000636
 name: ITQ 900
 def: "Thermo Scientific ITQ 900 GC-MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000637
 name: ITQ 1100
 def: "Thermo Scientific ITQ 1100 GC-MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000638
 name: LTQ XL ETD
 def: "Thermo Scientific LTQ XL MS with ETD." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000639
 name: LTQ Orbitrap XL ETD
 def: "Thermo Scientific LTQ Orbitrap XL MS with ETD." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000640
 name: DFS
 def: "Thermo Scientific DFS HR GC-MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000641
 name: DSQ II
 def: "Thermo Scientific DSQ II GC-MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000642
 name: MALDI LTQ XL
 def: "Thermo Scientific MALDI LTQ XL MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000643
 name: MALDI LTQ Orbitrap
 def: "Thermo Scientific MALDI LTQ Orbitrap MS." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000644
 name: TSQ Quantum Access
 def: "Thermo Scientific TSQ Quantum Access MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000645
 name: Element XR
 def: "Thermo Scientific Element XR HR-ICP-MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000646
 name: Element 2
 def: "Thermo Scientific Element 2 HR-ICP-MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000647
 name: Element GD
 def: "Thermo Scientific Element GD Glow Discharge MS." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -4673,6 +4753,7 @@ is_a: MS:1000494 ! Thermo Scientific instrument model
 id: MS:1000649
 name: Exactive
 def: "Thermo Scientific Exactive MS." [PSI:MS]
+is_a: MS:1003953 ! orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -4688,42 +4769,49 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000651
 name: 3200 QTRAP
 def: "SCIEX or Applied Biosystems|MDS SCIEX QTRAP 3200." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000652
 name: 4800 Plus MALDI TOF/TOF
 def: "SCIEX or Applied Biosystems|MDS SCIEX 4800 Plus MALDI TOF-TOF Analyzer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000653
 name: API 3200
 def: "SCIEX or Applied Biosystems|MDS SCIEX API 3200 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000654
 name: API 5000
 def: "SCIEX or Applied Biosystems|MDS SCIEX API 5000 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000655
 name: QSTAR Elite
 def: "SCIEX or Applied Biosystems|MDS SCIEX QSTAR Elite." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000656
 name: QSTAR Pulsar
 def: "Applied Biosystems|MDS SCIEX QSTAR Pulsar." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000657
 name: QSTAR XL
 def: "Applied Biosystems|MDS SCIEX QSTAR XL." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -4746,6 +4834,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000660
 name: Xevo MRT MS
 def: "Waters Corporation Xevo MRT Mass Spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -5006,12 +5095,14 @@ is_a: MS:1000531 ! software
 id: MS:1000695
 name: apex ultra
 def: "Bruker Daltonics' apex ultra: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
 id: MS:1000696
 name: autoflex III smartbeam
 def: "Bruker Daltonics' autoflex III smartbeam: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -5024,48 +5115,56 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1000698
 name: HCTultra
 def: "Bruker Daltonics' HCTultra: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
 [Term]
 id: MS:1000699
 name: HCTultra PTM
 def: "Bruker Daltonics' HCTultra PTM: ESI TOF, Nanospray, APCI, APPI, PTR." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
 [Term]
 id: MS:1000700
 name: HCTultra ETD II
 def: "Bruker Daltonics' HCTultra ETD II: ESI Q-TOF, Nanospray, APCI, APPI, ETD." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
 [Term]
 id: MS:1000701
 name: microflex LT
 def: "Bruker Daltonics' microflex LT: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1000702
 name: micrOTOF
 def: "Bruker Daltonics' micrOTOF: ESI TOF, APCI, APPI." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1000703
 name: micrOTOF-Q
 def: "Bruker Daltonics' micrOTOF-Q: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1000704
 name: micrOTOF-Q II
 def: "Bruker Daltonics' micrOTOF-Q II: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1000705
 name: ultraflex III TOF/TOF
 def: "Bruker Daltonics' ultraflex III TOF/TOF: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -5327,6 +5426,7 @@ is_a: MS:1001040 ! intermediate analysis format
 id: MS:1000743
 name: TSQ Quantum Ultra AM
 def: "Thermo Scientific TSQ Quantum Ultra AM." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -5381,6 +5481,7 @@ is_a: MS:1000493 ! Finnigan MAT instrument model
 id: MS:1000751
 name: TSQ Quantum Ultra
 def: "Thermo Scientific TSQ Quantum Ultra." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -6118,18 +6219,21 @@ is_a: MS:1000842 ! laser type
 id: MS:1000854
 name: LTQ XL
 def: "Thermo Scientific LTQ XL MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000855
 name: LTQ Velos
 def: "Thermo Scientific LTQ Velos MS." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1000856
 name: LTQ Velos/ETD
 def: "Thermo Scientific LTQ Velos MS with ETD." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 synonym: "LTQ Velos ETD" EXACT []
 
@@ -6648,12 +6752,14 @@ is_a: MS:1000560 ! mass spectrometer file format
 id: MS:1000931
 name: QTRAP 5500
 def: "Applied Biosystems|MDS SCIEX QTRAP 5500." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1000932
 name: TripleTOF 5600
 def: "SCIEX TripleTOF 5600, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -9645,6 +9751,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 id: MS:1001482
 name: 5800 TOF/TOF
 def: "SCIEX 5800 TOF-TOF Analyzer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -9834,6 +9941,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 id: MS:1001510
 name: TSQ Vantage
 def: "TSQ Vantage." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -10010,48 +10118,56 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1001537
 name: BioTOF
 def: "Bruker Daltonics' BioTOF: ESI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
 [Term]
 id: MS:1001538
 name: BioTOF III
 def: "Bruker Daltonics' BioTOF III: ESI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
 [Term]
 id: MS:1001539
 name: UltroTOF-Q
 def: "Bruker Daltonics' UltroTOF-Q: ESI Q-TOF (MALDI optional)." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
 [Term]
 id: MS:1001540
 name: micrOTOF II
 def: "Bruker Daltonics' micrOTOF II: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1001541
 name: maXis
 def: "Bruker Daltonics' maXis: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1001542
 name: amaZon ETD
 def: "Bruker Daltonics' amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, ETD, PTR." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
 [Term]
 id: MS:1001543
 name: microflex LRF
 def: "Bruker Daltonics' microflex LRF: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1001544
 name: ultrafleXtreme
 def: "Bruker Daltonics' ultrafleXtreme: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -10064,6 +10180,7 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1001546
 name: amaZon X
 def: "Bruker Daltonics' amaZon X: ESI quadrupole ion trap, APCI, APPI, ETD, PTR." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
 [Term]
@@ -10082,30 +10199,35 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1001549
 name: solariX
 def: "Bruker Daltonics' solariX: ESI, MALDI, Qh-FT_ICR." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001548 ! Bruker Daltonics solarix series
 
 [Term]
 id: MS:1001550
 name: microflex II
 def: "Bruker Daltonics' microflex II: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1001553
 name: autoflex II TOF/TOF
 def: "Bruker Daltonics' autoflex II TOF/TOF: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1001554
 name: autoflex III TOF/TOF smartbeam
 def: "Bruker Daltonics' autoflex III TOF/TOF smartbeam: MALDI TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1001555
 name: autoflex
 def: "Bruker Daltonics' autoflex: MALDI TOF." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -11466,6 +11588,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1001742
 name: LTQ Orbitrap Velos
 def: "Finnigan LTQ Orbitrap Velos MS." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -11664,120 +11787,140 @@ is_a: MS:1003591 ! ultra-performance liquid chromatography system
 id: MS:1001770
 name: GCT Premier
 def: "Waters oa-ToF based GCT Premier." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001771
 name: MALDI Synapt G2 HDMS
 def: "Waters oa-ToF based MALDI Synapt G2 HDMS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001772
 name: MALDI Synapt G2 MS
 def: "Waters oa-ToF based MALDI Synapt G2 MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001773
 name: MALDI Synapt G2-S HDMS
 def: "Waters oa-ToF based MALDI Synapt G2 MS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001774
 name: MALDI Synapt G2-S MS
 def: "Waters oa-ToF based MALDI Synapt G2-S MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001775
 name: MALDI Synapt HDMS
 def: "Waters oa-ToF based MALDI Synapt HDMS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001776
 name: MALDI Synapt MS
 def: "Waters oa-ToF based MALDI Synapt MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001777
 name: Synapt G2 HDMS
 def: "Waters oa-ToF based Synapt G2 HDMS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001778
 name: Synapt G2 MS
 def: "Waters oa-ToF based Synapt G2 MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001779
 name: Synapt G2-S HDMS
 def: "Waters oa-ToF based Synapt G2-S HDMS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001780
 name: Synapt G2-S MS
 def: "Waters oa-ToF based Synapt G2-S MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001781
 name: Synapt HDMS
 def: "Waters oa-ToF based Synapt HDMS." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001782
 name: Synapt MS
 def: "Waters oa-ToF based Synapt MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001783
 name: Xevo G2 Q-Tof
 def: "Waters oa-ToF based Xevo G2 Q-Tof." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001784
 name: Xevo G2 Tof
 def: "Waters oa-ToF based Xevo G2 Tof." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001785
 name: Xevo Q-Tof
 def: "Waters oa-ToF based Xevo Q-Tof." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001786
 name: 3100
 def: "Waters quadrupole based 3100." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001787
 name: Acquity SQD
 def: "Waters quadrupole based Acquity SQD." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001788
 name: Acquity TQD
 def: "Waters quadrupole based Acquity TQD." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001789
 name: Quattro micro GC
 def: "Waters (triple) quadrupole based Quattro micro GC." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -11791,12 +11934,14 @@ is_a: MS:1003762 ! triple quadrupole instrument
 id: MS:1001791
 name: Xevo TQD
 def: "Waters quadrupole based Xevo TQD." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1001792
 name: Xevo TQ-S
 def: "Waters quadrupole based Xevo TQ-S." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -12584,18 +12729,21 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1001908
 name: ISQ
 def: "Thermo Scientific ISQ single quadrupole MS with the ExtractraBrite source." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1001909
 name: Velos Plus
 def: "Thermo Scientific second generation Velos." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1001910
 name: Orbitrap Elite
 def: "Thermo Scientific Orbitrap Elite, sometimes referred to as the LTQ Orbitrap Elite." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 synonym: "LTQ Orbitrap Elite" EXACT []
 
@@ -12603,6 +12751,7 @@ synonym: "LTQ Orbitrap Elite" EXACT []
 id: MS:1001911
 name: Q Exactive
 def: "Thermo Scientific Q Exactive." [PSI:MS]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -13753,6 +13902,7 @@ is_a: MS:1001456 ! analysis software
 id: MS:1002077
 name: impact
 def: "Bruker Daltonics' impact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
@@ -15022,24 +15172,28 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1002274
 name: SQ Detector 2
 def: "Waters quadrupole based SQ Detector 2." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002275
 name: Xevo G2-S Tof
 def: "Waters oa-ToF based Xevo G2-S Tof." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002276
 name: Xevo G2-S QTof
 def: "Waters oa-ToF based Xevo G2-S QTof." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002277
 name: AutoSpec Premier
 def: "Waters AutoSpec Premier magnetic sector instrument." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -15054,12 +15208,14 @@ is_a: MS:1001800 ! LECO instrument model
 id: MS:1002279
 name: maXis 4G
 def: "Bruker Daltonics' maXis 4G: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1002280
 name: compact
 def: "Bruker Daltonics' compact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
@@ -15153,42 +15309,49 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1002295
 name: SCION SQ
 def: "Bruker Daltonics' SCION SQ: GC-single quadrupole." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1002293 ! Bruker Daltonics SCION series
 
 [Term]
 id: MS:1002296
 name: SCION TQ
 def: "Bruker Daltonics' SCION TQ: GC-triple quadrupole." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002293 ! Bruker Daltonics SCION series
 
 [Term]
 id: MS:1002297
 name: EVOQ Elite
 def: "Bruker Daltonics' EVOQ Elite: LC-triple quadrupole." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
 [Term]
 id: MS:1002298
 name: EVOQ Qube
 def: "Bruker Daltonics' EVOQ Qube: LC-triple quadrupole." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
 [Term]
 id: MS:1002299
 name: micrOTOF-Q III
 def: "Bruker Daltonics' micrOTOF-Q III: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1002300
 name: amaZon Speed ETD
 def: "Bruker Daltonics' amaZon Speed ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, ETD, PTR, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
 [Term]
 id: MS:1002301
 name: amaZon Speed
 def: "Bruker Daltonics' amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
 [Term]
@@ -15768,6 +15931,7 @@ is_a: MS:1001557 ! Shimadzu Corporation software
 id: MS:1002382
 name: Shimadzu MALDI-7090
 def: "Shimadzu MALDI-7090: MALDI-TOF-TOF." [PSI:PI]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
@@ -15999,24 +16163,28 @@ relationship: has_value_type xsd:boolean ! The allowed value-type for this CV te
 id: MS:1002416
 name: Orbitrap Fusion
 def: "Thermo Scientific Orbitrap Fusion." [PSI:PI]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002417
 name: Orbitrap Fusion ETD
 def: "Thermo Scientific Orbitrap Fusion with ETD." [PSI:PI]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002418
 name: TSQ Quantiva
 def: "Thermo Scientific TSQ Quantiva MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002419
 name: TSQ Endura
 def: "Thermo Scientific TSQ Endura MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -16728,6 +16896,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1002523
 name: Q Exactive HF
 def: "Thermo Scientific Q Exactive." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -16741,12 +16910,14 @@ is_a: MS:1001457 ! data processing software
 id: MS:1002525
 name: TSQ 8000 Evo
 def: "Thermo Scientific TSQ 8000 Evo MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002526
 name: Exactive Plus
 def: "Thermo Scientific Exactive Plus MS." [PSI:PI]
+is_a: MS:1003953 ! orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -16794,6 +16965,7 @@ is_a: MS:1000767 ! native spectrum identifier format
 id: MS:1002533
 name: TripleTOF 6600
 def: "SCIEX TripleTOF 6600, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -17099,114 +17271,133 @@ is_a: MS:1001040 ! intermediate analysis format
 id: MS:1002577
 name: 2000 QTRAP
 def: "SCIEX 2000 QTRAP." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002578
 name: 2500 QTRAP
 def: "SCIEX 2500 QTRAP." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002579
 name: 3500 QTRAP
 def: "SCIEX 3500 QTRAP." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002580
 name: QTRAP 4500
 def: "SCIEX QTRAP 4500." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002581
 name: QTRAP 6500
 def: "SCIEX QTRAP 6500." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002582
 name: QTRAP 6500+
 def: "SCIEX QTRAP 6500+." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002583
 name: TripleTOF 4600
 def: "SCIEX TripleTOF 4600 time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002584
 name: TripleTOF 5600+
 def: "SCIEX TripleTOF 5600+ time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002585
 name: API 100
 def: "Applied Biosystems/MDS SCIEX API 100 MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002586
 name: API 100LC
 def: "Applied Biosystems/MDS SCIEX API 100LC MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002587
 name: API 165
 def: "Applied Biosystems/MDS SCIEX API 165 MS." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002588
 name: API 300
 def: "Applied Biosystems/MDS SCIEX API 300 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002589
 name: API 350
 def: "Applied Biosystems/MDS SCIEX API 350 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002590
 name: API 365
 def: "Applied Biosystems/MDS SCIEX API 365 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002591
 name: Triple Quad 3500
 def: "SCIEX Triple Quad 3500." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002592
 name: Triple Quad 4500
 def: "SCIEX Triple Quad 4500." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002593
 name: Triple Quad 5500
 def: "SCIEX Triple Quad 5500." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002594
 name: Triple Quad 6500
 def: "SCIEX Triple Quad 6500." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1002595
 name: Triple Quad 6500+
 def: "SCIEX Triple Quad 6500+." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -17447,6 +17638,7 @@ relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV ter
 id: MS:1002634
 name: Q Exactive Plus
 def: "Thermo Scientific Q Exactive Plus." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -17676,12 +17868,14 @@ is_a: MS:1002479 ! regular expression
 id: MS:1002666
 name: impact II
 def: "Bruker Daltonics' impact II." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1002667
 name: impact HD
 def: "Bruker Daltonics' impact HD." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
@@ -17728,6 +17922,7 @@ is_a: MS:1000752 ! TOPP software
 id: MS:1002674
 name: X500R QTOF
 def: "SCIEX X500R QTOF, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -18085,36 +18280,42 @@ is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 id: MS:1002727
 name: MALDI SYNAPT G2-Si
 def: "Waters Corporation MALDI SYNAPT G2-Si orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002728
 name: Vion IMS QTof
 def: "Waters Corporation Vion IMS QTof orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002729
 name: Xevo G2-XS Tof
 def: "Waters Corporation Xevo G2 XS Tof orthogonal acceleration time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002730
 name: Xevo TQ-XS
 def: "Waters Corporation Xevo TQ-XS triple quadrupole mass spectrometer." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002731
 name: Xevo TQ-S micro
 def: "Waters Corporation Xevo TQ-S micro triple quadrupole mass spectrometer." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1002732
 name: Orbitrap Fusion Lumos
 def: "Thermo Scientific Orbitrap Fusion Lumos mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -18586,12 +18787,14 @@ is_a: MS:1000490 ! Agilent instrument model
 id: MS:1002804
 name: 7800 Quadrupole ICP-MS
 def: "The 7800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument combined with a Agilent quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
 id: MS:1002805
 name: 8800 Triple Quadrupole ICP-MS
 def: "The 8800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument combined with a Agilent quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000490 ! Agilent instrument model
 
 [Term]
@@ -18797,6 +19000,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1002835
 name: LTQ Orbitrap Classic
 def: "Thermo Fisher Scientific LTQ Orbitrap Classic." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -19056,24 +19260,28 @@ relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV ter
 id: MS:1002874
 name: TSQ Altis
 def: "Thermo Scientific TSQ Altis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002875
 name: TSQ Quantis
 def: "Thermo Scientific TSQ Quantis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002876
 name: TSQ 9000
 def: "Thermo Scientific TSQ 9000 Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002877
 name: Q Exactive HF-X
 def: "Thermo Scientific Q Exactive HF-X Hybrid Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -19854,18 +20062,21 @@ is_a: MS:1002333 ! conversion software
 id: MS:1002992
 name: Orbitrap Exploris GC-MS
 def: "Thermo Scientific Orbitrap Exploris GC-MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002993
 name: Q Exactive Focus
 def: "Q Exactive Focus Hybrid Quadrupole-Orbitrap Mass Spectrometer." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1002994
 name: Orbitrap Excedion Pro
 def: "Thermo Scientific Orbitrap Excedion Pro." [PSI:MS]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -19894,48 +20105,56 @@ relationship: has_value_type xsd:nonNegativeInteger ! The allowed value-type for
 id: MS:1002998
 name: LCMS-9030
 def: "Shimadzu Scientific Instruments LCMS-9030 Q-TOF MS." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1002999
 name: LCMS-8060
 def: "Shimadzu Scientific Instruments LCMS-8060 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003000
 name: LCMS-8050
 def: "Shimadzu Scientific Instruments LCMS-8050 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003001
 name: LCMS-8045
 def: "Shimadzu Scientific Instruments LCMS-8045 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003002
 name: LCMS-8040
 def: "Shimadzu Scientific Instruments LCMS-8040 MS." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003003
 name: LCMS-2020
 def: "Shimadzu Scientific Instruments LCMS-2020." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003004
 name: maXis II
 def: "Bruker Daltonics' maXis II." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1003005
 name: timsTOF Pro
 def: "Bruker Daltonics' timsTOF Pro." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -20096,12 +20315,14 @@ is_a: MS:1003025 ! named element
 id: MS:1003028
 name: Orbitrap Exploris 480
 def: "Thermo Scientific Orbitrap Exploris 480 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003029
 name: Orbitrap Eclipse
 def: "Thermo Scientific Orbitrap Eclipse mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -20528,18 +20749,21 @@ relationship: has_regexp MS:1001335 ! (?=K)
 id: MS:1003094
 name: Orbitrap Exploris 240
 def: "Thermo Scientific Orbitrap Exploris 240 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003095
 name: Orbitrap Exploris 120
 def: "Thermo Scientific Orbitrap Exploris 120 Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003096
 name: Orbitrap Velos Pro
 def: "Thermo Scientific LTQ Orbitrap Velos Pro, often just referred to as the Orbitrap Velos Pro." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 synonym: "LTQ Orbitrap Velos Pro" EXACT []
 
@@ -20648,6 +20872,7 @@ is_a: MS:1001139 ! quantitation software name
 id: MS:1003112
 name: Orbitrap ID-X
 def: "Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -20717,6 +20942,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1003122
 name: rapifleX
 def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
@@ -20729,6 +20955,7 @@ is_a: MS:1000122 ! Bruker Daltonics instrument model
 id: MS:1003124
 name: timsTOF fleX
 def: "Bruker Daltonics' timsTOF fleX" [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -20881,6 +21108,7 @@ relationship: has_units UO:0000221 ! dalton
 id: MS:1003144
 name: Triple Quad 7500
 def: "SCIEX Triple Quad 7500." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -20934,6 +21162,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1003152
 name: GCMS-QP2010SE
 def: "Shimadzu Scientific Instruments GCMS-QP2010SE." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
@@ -21160,18 +21389,21 @@ is_a: MS:1003181 ! combined dissociation method
 id: MS:1003183
 name: Synapt XS
 def: "Waters oa-ToF based Synapt XS." [PSI:PI]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003184
 name: SELECT SERIES Cyclic IMS
 def: "Waters oa-ToF based SELECT SERIES Cyclic IMS." [PSI:PI]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003185
 name: SELECT SERIES MRT
 def: "Waters oa-ToF based SELECT SERIES MRT." [PSI:PI]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -21481,18 +21713,21 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 id: MS:1003229
 name: timsTOF
 def: "Bruker Daltonics' timsTOF." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003230
 name: timsTOF Pro 2
 def: "Bruker Daltonics' timsTOF Pro 2." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003231
 name: timsTOF SCP
 def: "Bruker Daltonics' timsTOF SCP." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -21571,6 +21806,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1003245
 name: Q Exactive UHMR
 def: "Thermo Scientific Q Exactive UHMR (Ultra High Mass Range) Hybrid Quadrupole Orbitrap MS." [PSI:PI]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -21625,6 +21861,7 @@ relationship: has_units UO:0000189 ! count unit
 id: MS:1003252
 name: Xevo G2-XS QTof
 def: "Waters Corporation Xevo G2-XS QTof quadrupole time-of-flight mass spectrometer." [PSI:PI]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -21896,12 +22133,14 @@ relationship: has_regexp MS:1002505 ! regular expression for modification locali
 id: MS:1003292
 name: TSQ Altis Plus
 def: "Thermo Scientific TSQ Altis Plus Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003293
 name: ZenoTOF 7600
 def: "SCIEX ZenoTOF 7600." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -22334,6 +22573,7 @@ is_a: MS:1003350 ! mass spectrometry proteomics
 id: MS:1003356
 name: Orbitrap Ascend
 def: "Thermo Scientific Orbitrap Ascend mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:PI]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -22485,6 +22725,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003378
 name: Orbitrap Astral
 def: "Thermo Scientific Orbitrap Astral mass spectrometer contains three mass analyzers: a quadrupole analyzer, an Orbitrap analyzer, and the Astral analyzer." [PSI:MS]
+is_a: MS:1003771 ! quadrupole orbitrap astral instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -22498,12 +22739,14 @@ is_a: MS:1000084 ! time-of-flight
 id: MS:1003380
 name: Xevo G3 QTof
 def: "Waters Corporation Xevo G3 QTof quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003381
 name: ACQUITY RDa Detector
 def: "Waters Corporation RDa time-of-flight mass detector." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -22519,6 +22762,7 @@ is_a: MS:1001457 ! data processing software
 id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22604,6 +22848,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1003395
 name: Q Exactive GC Orbitrap
 def: "Q Exactive GC Orbitrap GC-MS/MS hybrid quadrupole Orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -22616,6 +22861,7 @@ is_a: MS:1003731 ! Agilent gas chromatography system model
 id: MS:1003397
 name: timsTOF fleX MALDI-2
 def: "Bruker Daltonics' timsTOF fleX MALDI-2." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22660,6 +22906,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 id: MS:1003404
 name: timsTOF HT
 def: "Bruker Daltonics' timsTOF HT." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22692,6 +22939,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 id: MS:1003409
 name: Stellar
 def: "Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter, a collision cell, and a quadrupole linear ion trap mass analyzer." [PSI:MS]
+is_a: MS:1003972 ! quadrupole ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -22706,12 +22954,14 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1003411
 name: Orbitrap IQ-X
 def: "Thermo Scientific Orbitrap IQ-X mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003412
 name: timsTOF Ultra 2
 def: "Bruker Daltonics timsTOF Ultra 2." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -22798,6 +23048,7 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 id: MS:1003423
 name: Orbitrap Exploris GC 240
 def: "Orbitrap Exploris GC 240 Mass Spectrometer." [PSI:MS]
+is_a: MS:1003769 ! quadrupole orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -22930,24 +23181,28 @@ is_a: MS:1003439 ! ion mobility frame representation
 id: MS:1003442
 name: Orbitrap Astral Zoom
 def: "Thermo Scientific Orbitrap Astral Zoom mass spectrometer contains three mass analyzers: a quadrupole analyzer, an Orbitrap analyzer, and an Astral analyzer." [PSI:PI]
+is_a: MS:1003771 ! quadrupole orbitrap astral instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003443
 name: ZenoTOF 8600
 def: "SCIEX ZenoTOF 8600 system." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003444
 name: ZenoTOF 7600+
 def: "SCIEX ZenoTOF 7600+ system." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003445
 name: SCIEX 7500+
 def: "SCIEX 7500+ system." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
@@ -22976,6 +23231,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 id: MS:1003449
 name: ISQ 7000
 def: "Thermo Scientific ISQ 7000 Single Quadrupole GC-MS System." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -23026,162 +23282,189 @@ is_a: MS:1000031 ! instrument model
 id: MS:1003456
 name: TripleTOF 6600+
 def: "SCIEX TripleTOF 6600+ triple quadrupole - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003457
 name: Triple Quad 5500+
 def: "SCIEX Triple Quad 5500+ triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003458
 name: Triple Quad 5500+ QTRAP Ready
 def: "SCIEX Triple Quad 5500+ QTRAP Ready quadrupole - linear ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003765 ! triple quadrupole linear ion trap instrument
 is_a: MS:1000121 ! SCIEX instrument model
 
 [Term]
 id: MS:1003459
 name: APEX-Qe
 def: "Bruker APEX-Qe FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
 [Term]
 id: MS:1003460
 name: autoflex speed TOF/TOF
 def: "Bruker autoflex speed TOF/TOF MALDI TOF/TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1003461
 name: esquire 3000
 def: "Bruker esquire 3000 ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
 [Term]
 id: MS:1003462
 name: maXis impact
 def: "Bruker maXis impact quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1003463
 name: maXis impact HD
 def: "Bruker maXis impact HD quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1003464
 name: maXis 3G
 def: "Bruker maXis 3G quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
 [Term]
 id: MS:1003465
 name: solariX XR
 def: "Bruker solariX XR FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001548 ! Bruker Daltonics solarix series
 
 [Term]
 id: MS:1003466
 name: amaZon SL
 def: "Bruker amaZon SL ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
 [Term]
 id: MS:1003467
 name: EVOQ DART-TQ+
 def: "Bruker EVOQ DART-TQ+ triple quadrupole mass spectrometer with Direct Analysis in Real Time (DART) ion source." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
 [Term]
 id: MS:1003468
 name: EVOQ LC-TQ
 def: "Bruker EVOQ LC-TQ triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
 [Term]
 id: MS:1003469
 name: EVOQ GC-TQ
 def: "Bruker EVOQ GC-TQ gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
 [Term]
 id: MS:1003470
 name: Toxtyper
 def: "Bruker Toxtyper ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
 [Term]
 id: MS:1003471
 name: impact II VIP
 def: "Bruker impact II VIP quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
 [Term]
 id: MS:1003472
 name: ecTOF
 def: "Bruker ecTOF gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
 [Term]
 id: MS:1003473
 name: autoflex maX
 def: "Bruker autoflex maX MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1003474
 name: rapifleX MALDI PharmaPulse
 def: "Bruker rapifleX MALDI PharmaPulse MALDI TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1003475
 name: smartfleX
 def: "Bruker smartfleX MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1003476
 name: neofleX
 def: "Bruker neofleX MALDI TOF/TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
 [Term]
 id: MS:1003477
 name: MALDI Biotyper
 def: "Bruker MALDI Biotyper MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
 [Term]
 id: MS:1003478
 name: scimaX
 def: "Bruker scimaX FT-ICR-MS mass spectrometer." [PSI:MS]
+is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
 [Term]
 id: MS:1003479
 name: timsMetabo
 def: "Bruker timsMetabo TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003480
 name: timsUltra AIP
 def: "Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003481
 name: timsOmni
 def: "Bruker timsOmni TIMS-Q-TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
 id: MS:1003482
 name: timsTOF MALDI PharmaPulse
 def: "Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
+is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
 [Term]
@@ -23204,30 +23487,35 @@ is_a: MS:1000489 ! Varian instrument model
 id: MS:1003485
 name: LCMS-8030
 def: "Shimadzu LCMS-8030 triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003486
 name: LCMS-8030 Plus
 def: "Shimadzu LCMS-8030 Plus triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003487
 name: GCMS-QP2010 Plus
 def: "Shimadzu GCMS-QP2010 Plus gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003488
 name: LCMS-8060NX
 def: "Shimadzu LCMS-8060NX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003489
 name: GCMS-TQ8050NX
 def: "Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 is_a: MS:1003733 ! gas chromatography mass spectrometry system
 
@@ -23235,144 +23523,168 @@ is_a: MS:1003733 ! gas chromatography mass spectrometry system
 id: MS:1003490
 name: GCMS-TQ8040NX
 def: "Shimadzu GCMS-TQ8040NX gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003491
 name: GCMS-TQ8040
 def: "Shimadzu GCMS-TQ8040 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003492
 name: GCMS-QP5000
 def: "Shimadzu GCMS-QP5000 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003493
 name: GCMS-QP2020
 def: "Shimadzu GCMS-QP2020 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003494
 name: GCMS-QP2010 Ultra
 def: "Shimadzu GCMS-QP2010 Ultra gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003495
 name: Velos Pro
 def: "Thermo Fisher Scientific Velos Pro ion trap - mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003496
 name: MALDI LTQ Orbitrap XL
 def: "Thermo Fisher Scientific MALDI LTQ Orbitrap XL linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003497
 name: MALDI LTQ Orbitrap Discovery
 def: "Thermo Fisher Scientific MALDI LTQ Orbitrap Discovery linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003498
 name: TSQ Quantum Access MAX
 def: "Thermo Fisher Scientific TSQ Quantum Access MAX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003499
 name: LTQ Orbitrap Velos/ETD
 def: "Thermo Fisher Scientific LTQ Orbitrap Velos/ETD linear ion trap - orbitrap mass spectrometer." [PSI:MS]
+is_a: MS:1003768 ! ion trap orbitrap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003500
 name: ISQ LT
 def: "Thermo Fisher Scientific ISQ LT gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003501
 name: ITQ
 def: "Thermo Fisher Scientific ITQ ion trap mass spectrometer." [PSI:MS]
+is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003502
 name: TSQ Quantum XLS
 def: "Thermo Fisher Scientific TSQ Quantum XLS gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003503
 name: TSQ 8000
 def: "Thermo Fisher Scientific TSQ 8000 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003504
 name: DeltaPlus IRMS
 def: "Thermo Fisher Scientific DeltaPlus IRMS isotope ratio mass spectrometer." [PSI:MS]
+is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
 id: MS:1003505
 name: ACQUITY QDa
 def: "Waters ACQUITY QDa quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003506
 name: LCT Premier
 def: "Waters LCT Premier time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003507
 name: Quattro Premier XE
 def: "Waters Quattro Premier XE triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003508
 name: Synapt G1 HDMS
 def: "Waters Synapt G1 HDMS quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003509
 name: Synapt G2-Si HDMS
 def: "Waters Synapt G2-Si HDMS quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003510
 name: Synapt G1
 def: "Waters Synapt G1 quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003511
 name: Synapt G2 XS QTOF
 def: "Waters Synapt G2 XS QTOF quadrupole - ion mobility - time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003512
 name: Xevo TQ Absolute
 def: "Waters Xevo TQ Absolute triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
 id: MS:1003513
 name: Xevo TQ Absolute XR
 def: "Waters Xevo TQ Absolute XR triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000126 ! Waters instrument model
 
 [Term]
@@ -23685,132 +23997,154 @@ is_a: MS:1003455 ! PerkinElmer instrument model
 id: MS:1003554
 name: ThermoQuest Voyager
 def: "Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000125 ! Thermo Finnigan instrument model
 
 [Term]
 id: MS:1003555
 name: AXIMA-LNR
 def: "Shimadzu AXIMA-LNR MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003556
 name: AXIMA-TOF²
 def: "Shimadzu AXIMA-TOF² MALDI TOF/TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003557
 name: AXIMA Resonance
 def: "Shimadzu AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn." [PSI:MS]
+is_a: MS:1003764 ! ion trap time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003558
 name: MALDI-8020
 def: "Shimadzu MALDI-8020 benchtop MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003559
 name: MALDI-8030
 def: "Shimadzu MALDI-8030 benchtop MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003560
 name: MALDI-8020 EasyCare
 def: "Shimadzu MALDI-8020 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003561
 name: MALDI-8030 EasyCare
 def: "Shimadzu MALDI-8030 EasyCare benchtop MALDI TOF mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000602 ! Shimadzu MALDI-TOF instrument model
 
 [Term]
 id: MS:1003562
 name: LCMS-2010
 def: "Shimadzu LCMS-2010 quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003563
 name: LCMS-2050
 def: "Shimadzu LCMS-2050 quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003564
 name: LCMS-8045RX
 def: "Shimadzu LCMS-8045RX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003565
 name: LCMS-8050RX
 def: "Shimadzu LCMS-8050RX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003566
 name: LCMS-8060RX
 def: "Shimadzu LCMS-8060RX triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003567
 name: LCMS-8065XE
 def: "Shimadzu LCMS-8065XE triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003568
 name: LCMS-9050
 def: "Shimadzu LCMS-9050 quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003569
 name: GCMS-QP5050A
 def: "Shimadzu GCMS-QP5050A gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003570
 name: GCMS-QP2010S
 def: "Shimadzu GCMS-QP2010S gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003571
 name: GCMS-QP2010
 def: "Shimadzu GCMS-QP2010 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003572
 name: GCMS-QP2020NX
 def: "Shimadzu GCMS-QP2020NX gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003573
 name: GCMS-QP2050
 def: "Shimadzu GCMS-QP2050 gas chromatograph - quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003574
 name: GCMS-TQ 8030
 def: "Shimadzu GCMS-TQ 8030 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
 id: MS:1003575
 name: GCMS-TQ 8050
 def: "Shimadzu GCMS-TQ 8050 gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000603 ! Shimadzu Scientific Instruments instrument model
 
 [Term]
@@ -25156,6 +25490,7 @@ synonym: "UPC2" RELATED []
 id: MS:1003800
 name: TSQ Certis
 def: "Thermo Scientific TSQ Certis Triple Quadrupole MS." [PSI:PI]
+is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1000494 ! Thermo Scientific instrument model
 
 [Term]
@@ -25180,12 +25515,14 @@ is_a: MS:1000531 ! software
 id: MS:1003804
 name: Ionoptika J105
 def: "Ionoptika J105 time-of-flight secondary ion mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003802 ! Ionoptika instrument model
 
 [Term]
 id: MS:1003805
 name: J Series III
 def: "Ionoptika J Series III time-of-flight secondary ion mass spectrometer." [PSI:MS]
+is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1003802 ! Ionoptika instrument model
 
 [Term]
@@ -25694,6 +26031,25 @@ def: "Thermo Scientific software for complex biotherapeutic characterization by 
 is_a: MS:1003961 ! Thermo Scientific software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003970
+name: ion mobility quadrupole time-of-flight instrument
+def: "An instrument that uses an ion mobility analyzer followed by a quadrupole mass filter and a time-of-flight mass analyzer as its primary means of mass analysis." [PSI:MS]
+synonym: "IMS-Q-TOF" EXACT []
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003971
+name: ion trap fourier transform ion cyclotron resonance instrument
+def: "An instrument that uses a linear ion trap coupled to a fourier transform ion cyclotron resonance mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003972
+name: quadrupole ion trap instrument
+def: "An instrument that uses a quadrupole mass filter followed by an ion trap mass analyzer as its primary means of mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
 
 [Term]
 id: MS:1003973
