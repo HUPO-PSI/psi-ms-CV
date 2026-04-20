@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.247
-date: 17:04:2026 12:00
+data-version: 4.1.248
+date: 20:04:2026 12:01
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -1068,14 +1068,14 @@ is_a: MS:1000031 ! instrument model
 [Term]
 id: MS:1000127
 name: centroid spectrum
-def: "Processing of profile data to produce spectra that contains discrete peaks of zero width. Often used to reduce the size of dataset." [PSI:MS]
+def: "A spectrum representation in which each peak is recorded as a single discrete data point at a distinct m/z value with a corresponding intensity." [PSI:MS]
 synonym: "Discrete Mass Spectrum" EXACT []
 is_a: MS:1000525 ! spectrum representation
 
 [Term]
 id: MS:1000128
 name: profile spectrum
-def: "A profile mass spectrum is created when data is recorded with ion current (counts per second) on one axis and mass/charge ratio on another axis." [PSI:MS]
+def: "A spectrum representation in which ion signal for each peak is recorded as a distribution of intensity values across the m/z range." [PSI:MS]
 synonym: "continuous mass spectrum" EXACT []
 synonym: "Continuum Mass Spectrum" EXACT []
 is_a: MS:1000525 ! spectrum representation
@@ -25668,6 +25668,12 @@ is_a: MS:1003213 ! mass spectrometry acquisition method
 relationship: part_of MS:1003905 ! targeted analysis
 
 [Term]
+id: MS:1003908
+name: centroid peak
+def: "A peak represented as a single discrete data point defined by a distinct m/z value and a corresponding intensity value." [PSI:MS]
+is_a: MS:1000231 ! peak
+
+[Term]
 id: MS:1003915
 name: two-dimensional gas chromatography
 def: "Comprehensive two-dimensional gas chromatography (GCxGC) is a multidimensional separation technique that utilizes two columns with different stationary phases connected by a modulator, which traps, focuses and reinjects fractions from the first column to the second. This approach leads to a 2D chromatogram offering higher peak capacity and separation power." [PSI:MS]
@@ -28360,7 +28366,7 @@ is_obsolete: true
 [Term]
 id: PEFF:0000015
 name: NumberOfEntries
-def: "PEFF keyword for the sumber of sequence entries in the database." [PSI:PEFF]
+def: "PEFF keyword for the number of sequence entries in the database." [PSI:PEFF]
 is_a: PEFF:0000002 ! PEFF file header section term
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
@@ -28521,7 +28527,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: PEFF:0001013
 name: ModRes
-def: "PEFF keyword for the modified residue without aPSI-MOD or UniMod identifier." [PSI:PEFF]
+def: "PEFF keyword for the modified residue without a PSI-MOD or UniMod identifier." [PSI:PEFF]
 is_a: PEFF:0000003 ! PEFF file sequence entry term
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
@@ -29248,4 +29254,3 @@ synonym: "A^[2]" RELATED []
 is_a: UO:0000047
 created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
-
