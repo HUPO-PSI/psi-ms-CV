@@ -1068,14 +1068,14 @@ is_a: MS:1000031 ! instrument model
 [Term]
 id: MS:1000127
 name: centroid spectrum
-def: "A spectrum representation in which each peak is recorded as a single discrete data point at a distinct m/z value with a corresponding intensity." [PSI:MS]
+def: "A spectrum representation in which each peak is recorded as a single discrete data point at a distinct coordinate value (e.g. m/z; wavelength; drift time) with a corresponding intensity." [PSI:MS]
 synonym: "Discrete Mass Spectrum" EXACT []
 is_a: MS:1000525 ! spectrum representation
 
 [Term]
 id: MS:1000128
 name: profile spectrum
-def: "A spectrum representation in which ion signal for each peak is recorded as a distribution of intensity values across the m/z range." [PSI:MS]
+def: "A spectrum representation in which ion signal for each peak is recorded as a distribution of intensity values across the coordinate range (e.g. m/z; wavelength; drift time)." [PSI:MS]
 synonym: "continuous mass spectrum" EXACT []
 synonym: "Continuum Mass Spectrum" EXACT []
 is_a: MS:1000525 ! spectrum representation
@@ -25670,7 +25670,7 @@ relationship: part_of MS:1003905 ! targeted analysis
 [Term]
 id: MS:1003908
 name: centroid peak
-def: "A peak represented as a single discrete data point defined by a distinct m/z value and a corresponding intensity value." [PSI:MS]
+def: "A peak represented as a single discrete data point defined by a distinct coordinate value (e.g. m/z; wavelength; drift time) and a corresponding intensity value." [PSI:MS]
 is_a: MS:1000231 ! peak
 
 [Term]
