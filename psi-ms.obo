@@ -28527,7 +28527,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: PEFF:0001013
 name: ModRes
-def: "PEFF keyword for the modified residue without a PSI-MOD or UniMod identifier." [PSI:PEFF]
+def: "PEFF keyword for the modified residue without a PSI-MOD or Unimod identifier." [PSI:PEFF]
 is_a: PEFF:0000003 ! PEFF file sequence entry term
 relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
