@@ -28296,6 +28296,13 @@ relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
 
 [Term]
+id: MS:4000216
+name: peak group 
+def: "a peak group is any collection of extracted ion traces that exhibit the same peak profile as they derive from the same precursor ion. For instance, extracted ion traces of the fragment ions of a peptide form a peak group as do isotopologues from one metabolite precursor ion" [PSI:MS]
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
