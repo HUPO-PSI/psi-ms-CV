@@ -28296,6 +28296,15 @@ relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
 
 [Term]
+id: MS:4000217
+name: retention time window target
+def: "The target of the retention time window." [PSI:MS]
+is_a: MS:1000915 ! retention time window attribute
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000031 ! minute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
 id: PEFF:0000001
 name: PEFF CV term
 def: "PSI Extended FASTA Format controlled vocabulary term." [PSI:PEFF]
