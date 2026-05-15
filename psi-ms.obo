@@ -26070,6 +26070,15 @@ def: "Proprietary binary data format with extension '.jpf', used by JEOL mass sp
 is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
+id: MS:1003976
+name: retention time window target
+def: "The reference retention time from which a retention time window is defined. The target may be derived from a predicted, expected, observed, or user-specified retention time." [PSI:MS]
+is_a: MS:1000915 ! retention time window attribute
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000031 ! minute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
@@ -28294,15 +28303,6 @@ is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
-
-[Term]
-id: MS:4000217
-name: retention time window target
-def: "The target of the retention time window." [PSI:MS]
-is_a: MS:1000915 ! retention time window attribute
-relationship: has_units UO:0000010 ! second
-relationship: has_units UO:0000031 ! minute
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0000001
