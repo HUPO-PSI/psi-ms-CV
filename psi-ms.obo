@@ -26070,6 +26070,13 @@ name: JEOL JPF format
 def: "Proprietary binary data format with extension '.jpf', used by JEOL mass spectrometry systems and associated data processing software to store mass spectral data." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
+
+[Term]
+id: MS:1003975
+name: peak group 
+def: "a peak group is any collection of extracted ion traces that mechanistically exhibit the same peak profile. XICs of ionized adducts such as [M+H]+ and [M+NH4]+ are correlated and thus form one peak group. The same holds true for XICs of CID or in-source fragments of a precursor ion. The XICs of isotopolgues of an analyte also form a peak group." [PSI:MS]
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
 [Term]
 id: MS:1003976
 name: retention time window target
@@ -26078,6 +26085,7 @@ is_a: MS:1000915 ! retention time window attribute
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:4000000
@@ -28304,13 +28312,6 @@ is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
-
-[Term]
-id: MS:4000216
-name: peak group 
-def: "a peak group is any collection of extracted ion traces that exhibit the same peak profile as they derive from the same precursor ion. For instance, extracted ion traces of the fragment ions of a peptide form a peak group as do isotopologues from one metabolite precursor ion" [PSI:MS]
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
-
 
 [Term]
 id: PEFF:0000001
