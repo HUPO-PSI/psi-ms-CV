@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.248
-date: 20:04:2026 12:01
-saved-by: Jonathan Hunter
+data-version: 4.1.249
+date: 01:06:2026 12:00
+saved-by: Jannick Kappelmann
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -28,6 +28,7 @@ remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
 remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
+remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -26068,6 +26069,15 @@ id: MS:1003974
 name: JEOL JPF format
 def: "Proprietary binary data format with extension '.jpf', used by JEOL mass spectrometry systems and associated data processing software to store mass spectral data." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1003976
+name: retention time window target
+def: "The reference retention time from which a retention time window is defined. The target may be derived from a predicted, expected, observed, or user-specified retention time." [PSI:MS]
+is_a: MS:1000915 ! retention time window attribute
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000031 ! minute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
