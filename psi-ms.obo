@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.249
+data-version: 4.1.250
 date: 01:06:2026 12:00
-saved-by: Jannick Kappelmann
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26078,6 +26078,13 @@ is_a: MS:1000915 ! retention time window attribute
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003977
+name: Monocle
+def: "A software program for converting Thermo Electron RAW file format to mzXML, mzML, or CSV with improved monoisotopic mass estimation. Monocle was originally developed at the Gygi Lab at Harvard Medical School." [DOI:10.1021/acs.jproteome.0c00563, https://github.com/gygilab/Monocle]
+synonym: "Monocle RAW converter" RELATED []
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: MS:4000000
