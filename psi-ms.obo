@@ -26073,9 +26073,9 @@ is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:1003975
-name: peak group 
-def: "a peak group is any collection of extracted ion traces that mechanistically exhibit the same peak profile. XICs of ionized adducts such as [M+H]+ and [M+NH4]+ are correlated and thus form one peak group. The same holds true for XICs of CID or in-source fragments of a precursor ion. The XICs of isotopolgues of an analyte also form a peak group." [PSI:MS]
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+name: peak group
+def: "A collection of co-eluting chromatographic peaks with matching profiles, derived from a single source analyte. Examples include: related product ion peaks of a single precursor; related peaks derived from different adducts, multimers or isotopologues of a given analyte; and related peaks derived from in-source fragmentation of a given analyte." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: MS:1003976
