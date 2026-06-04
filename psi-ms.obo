@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.250
-date: 03:06:2026 17:45
+date: 04:06:2026 12:46
 saved-by: Bruno Maestri Abrianos Becker
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -29266,27 +29266,27 @@ created_by: gkoutos
 creation_date: 2013-06-27T05:06:40Z
 
 [Term]
-id: MS:4000216
+id: MS:100398
 name: (?<=[^DE])(?=[AFILMV][^P])
 def: "Regular expression for Thermolysin." [https://enzyme.expasy.org/EC/3.4.24.27, DOI:10.1007/978-3-642-48380-6]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
-id: MS:4000217
+id: MS:100399
 name: Thermolysin
 def: "Thermostable extracellular metalloendopeptidase containing four calcium ions" [https://enzyme.expasy.org/EC/3.4.24.27, DOI:10.1007/978-3-642-48380-6]
 synonym: "Bacillus thermoproteolyticus neutral proteinase" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:4000216 ! (?<=[^DE])(?=[AFILMV][^P])
+relationship: has_regexp MS:100398 ! (?<=[^DE])(?=[AFILMV][^P])
 
 [Term]
-id: MS:4000218
+id: MS:100400
 name: (?=[AEFILTVWY])
 def: "Regular expression for peptidase K." [https://enzyme.expasy.org/EC/3.4.21.64, DOI:10.1007/978-3-642-48380-6]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
-id: MS:4000219
+id: MS:100401
 name: peptidase K
 def: "Peptidase from the mold Tritirachium album Limber" [https://enzyme.expasy.org/EC/3.4.21.64, DOI:10.1007/978-3-642-48380-6]
 synonym: "endopeptidase K" EXACT []
@@ -29294,17 +29294,17 @@ synomym: "proteinase K" EXACT []
 synonym: "Tritirachium album proteinase K" EXACT []
 synonym: "Tritirachium alkaline proteinase" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:4000218 ! (?=[AEFILTVWY])
+relationship: has_regexp MS:100400 ! (?=[AEFILTVWY])
 
 [Term]
-id: MS:4000220
+id: MS:100402
 name: (?<=N)(?=G)
 def: "Regular expression for hydroxylamine." [https://web.expasy.org/peptide_cutter/, DOI:10.1016/0076-6879(77)47016-2]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
-id: MS:4000221
+id: MS:100403
 name: hydroxylamine
 def: "NH2OH" [https://web.expasy.org/peptide_cutter/, DOI:10.1016/0076-6879(77)47016-2]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:4000220 ! (?<=N)(?=G)
+relationship: has_regexp MS:100402 ! (?<=N)(?=G)
