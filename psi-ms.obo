@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.250
-date: 04:06:2026 17:12
+date: 05:06:2026 10:00
 saved-by: Bruno Maestri Abrianos Becker
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -26082,46 +26082,46 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:1003978
 name: (?<=[^DE])(?=[AFILMV][^P])
-def: "Regular expression for Thermolysin." [https://enzyme.expasy.org/EC/3.4.24.27, DOI:10.1007/978-3-642-48380-6]
+def: "Regular expression for Thermolysin." [BRENDA:3.4.24.27, DOI:10.1007/978-3-642-48380-6]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
 id: MS:1003979
 name: Thermolysin
-def: "Thermostable extracellular metalloendopeptidase containing four calcium ions" [https://enzyme.expasy.org/EC/3.4.24.27, DOI:10.1007/978-3-642-48380-6]
+def: "Thermostable extracellular metalloendopeptidase containing four calcium ions" [BRENDA:3.4.24.27, DOI:10.1007/978-3-642-48380-6]
 synonym: "Bacillus thermoproteolyticus neutral proteinase" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:100398 ! (?<=[^DE])(?=[AFILMV][^P])
+relationship: has_regexp MS:1003978 ! (?<=[^DE])(?=[AFILMV][^P])
 
 [Term]
 id: MS:1003980
 name: (?=[AEFILTVWY])
-def: "Regular expression for peptidase K." [https://enzyme.expasy.org/EC/3.4.21.64, DOI:10.1007/978-3-642-48380-6]
+def: "Regular expression for peptidase K." [BRENDA:3.4.21.64, DOI:10.1007/978-3-642-48380-6]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
 id: MS:1003981
 name: peptidase K
-def: "Peptidase from the mold Tritirachium album Limber" [https://enzyme.expasy.org/EC/3.4.21.64, DOI:10.1007/978-3-642-48380-6]
+def: "Peptidase from the mold Tritirachium album Limber" [BRENDA:3.4.21.64, DOI:10.1007/978-3-642-48380-6]
 synonym: "endopeptidase K" EXACT []
 synomym: "proteinase K" EXACT []
 synonym: "Tritirachium album proteinase K" EXACT []
 synonym: "Tritirachium alkaline proteinase" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:100400 ! (?=[AEFILTVWY])
+relationship: has_regexp MS:1003980 ! (?=[AEFILTVWY])
 
 [Term]
 id: MS:1003982
 name: (?<=N)(?=G)
-def: "Regular expression for hydroxylamine." [https://web.expasy.org/peptide_cutter/, DOI:10.1016/0076-6879(77)47016-2]
+def: "Regular expression for hydroxylamine." [https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html#Hydro, DOI:10.1016/0076-6879(77)47016-2]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
 id: MS:1003983
 name: hydroxylamine
-def: "NH2OH" [https://web.expasy.org/peptide_cutter/, DOI:10.1016/0076-6879(77)47016-2]
+def: "NH2OH" [https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html#Hydro, DOI:10.1016/0076-6879(77)47016-2]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:100402 ! (?<=N)(?=G)
+relationship: has_regexp MS:1003982 ! (?<=N)(?=G)
 
 [Term]
 id: MS:4000000
