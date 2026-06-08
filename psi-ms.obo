@@ -26080,6 +26080,61 @@ relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003988
+name: Xevo MRT P10 
+def: "Waters Xevo MRT P10 quadrupole - multi-reflecting time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003763 ! quadrupole time-of-flight instrument
+
+[Term]
+id: MS:1003989
+name: Cyclic IMS P20
+def: "Waters Cyclic IMS P20 multipass cyclic ion mobility quadrupole time-of-flight mass spectrometer." [PSI:MS]
+is_a: MS:1000126 ! Waters instrument model
+is_a: MS:1003767 ! quadrupole ion mobility time-of-flight instrument
+
+[Term]
+id: MS:1003990
+name: Orbitrap Excedion
+def: "Thermo Scientific Orbitrap Excedion mass spectrometer." [PSI:MS]
+is_a: MS:1000494 ! Thermo Scientific instrument model
+is_a: MS:1003769 ! quadrupole orbitrap instrument
+
+[Term]
+id: MS:1003991
+name: novus V55
+def: "SCIEX novus V55 triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000121 ! SCIEX instrument model
+is_a: MS:1003762 ! triple quadrupole instrument
+
+[Term]
+id: MS:1003992
+name: 9500 Triple Quadrupole ICP-MS
+def: "Agilent 9500 Triple Quadrupole ICP-MS inductively coupled plasma triple quadrupole mass spectrometer." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+is_a: MS:1003762 ! triple quadrupole instrument
+
+[Term]
+id: MS:1003993
+name: InfinityLab Pro iQ
+def: "Agilent InfinityLab Pro iQ single quadrupole LC mass detector." [PSI:MS]
+is_a: MS:1000490 ! Agilent instrument model
+is_a: MS:1003950 ! quadrupole instrument
+
+[Term]
+id: MS:1003994
+name: ion mobility quadrupole FT-ICR instrument
+def: "Instrument class combining trapped ion mobility spectrometry (TIMS) with a quadrupole mass filter and fourier transform ion cyclotron resonance (magnetic resonance) mass analysis." [PSI:MS]
+is_a: MS:1003761 ! instrument class
+
+[Term]
+id: MS:1003995
+name: timsMRMS
+def: "Bruker timsMRMS instrument combining trapped ion mobility spectrometry with magnetic resonance (FT-ICR) mass spectrometry." [PSI:MS]
+is_a: MS:1000122 ! Bruker Daltonics instrument model
+is_a: MS:1003994 ! ion mobility quadrupole FT-ICR instrument
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
