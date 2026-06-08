@@ -26080,6 +26080,13 @@ relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003987
+name: Orbitrap Tribrid Apex
+def: "Thermo Scientific Orbitrap Tribrid Apex mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
