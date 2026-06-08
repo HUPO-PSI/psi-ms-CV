@@ -26291,6 +26291,12 @@ def: "Bruker ProteoScape is a GPU-powered platform delivering parallel computing
 is_a: MS:1001456 ! analysis software
 
 [Term]
+id: MS:1004001
+name: Stitch
+def: "Template-based assembly of PSMs for de novo protein sequencing." [PSI:MS, DOI:10.1021/acs.analchem.2c01300, DOI:10.1021/acs.jproteome.4c00188, https://github.com/snijderlab/stitch]
+is_a: MS:1001456 ! analysis software
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
