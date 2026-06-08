@@ -26080,6 +26080,29 @@ relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003984
+name: amino acid confidence level
+def: "The confidence level of the PSM assignment per amino acid, where 0 is not confident and 1 is maximally confident." [PSI:MS]
+is_a: MS:1002347 ! PSM-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003985
+name: token confidence level
+def: "The confidence level of the PSM assignment per token, so separately for each amino acid and modification, where 0 is not confident and 1 is maximally confident." [PSI:MS]
+is_a: MS:1002347 ! PSM-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003986
+name: protein sequence
+def: "The protein sequence of a protein in a database." [PSI:MS]
+is_a: MS:1000884 ! protein attribute
+relationship: has_value_type MS:1001344 ! AA sequence
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
