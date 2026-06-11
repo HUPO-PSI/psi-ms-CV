@@ -26080,6 +26080,13 @@ relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
+id: MS:1003977
+name: Monocle
+def: "A software program for converting Thermo Scientific RAW file format to mzXML, mzML, or CSV with improved monoisotopic mass estimation. Monocle was originally developed at the Gygi Lab at Harvard Medical School." [DOI:10.1021/acs.jproteome.0c00563, https://github.com/gygilab/Monocle]
+synonym: "Monocle RAW converter" RELATED []
+is_a: MS:1001457 ! data processing software
+
+[Term]
 id: MS:1003978
 name: (?<=[^DE])(?=[AFILMV][^P])
 def: "Regular expression for Thermolysin." [BRENDA:3.4.24.27, DOI:10.1007/978-3-642-48380-6]
