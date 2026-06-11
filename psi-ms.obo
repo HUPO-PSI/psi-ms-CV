@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.250
-date: 08:06:2026 12:00
+data-version: 4.1.254
+date: 05:06:2026 15:22
 saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -26070,6 +26070,13 @@ name: JEOL JPF format
 def: "Proprietary binary data format with extension '.jpf', used by JEOL mass spectrometry systems and associated data processing software to store mass spectral data." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
+
+[Term]
+id: MS:1003975
+name: peak group
+def: "A collection of co-eluting chromatographic peaks with matching profiles, derived from a single source analyte. Examples include: related product ion peaks of a single precursor; related peaks derived from different adducts, multimers or isotopologues of a given analyte; and related peaks derived from in-source fragmentation of a given analyte." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
 [Term]
 id: MS:1003976
 name: retention time window target
@@ -26079,9 +26086,68 @@ relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
+
+[Term]
+id: MS:1003977
+name: Monocle
+def: "A software program for converting Thermo Scientific RAW file format to mzXML, mzML, or CSV with improved monoisotopic mass estimation. Monocle was originally developed at the Gygi Lab at Harvard Medical School." [DOI:10.1021/acs.jproteome.0c00563, https://github.com/gygilab/Monocle]
+synonym: "Monocle RAW converter" RELATED []
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1003978
+name: (?<=[^DE])(?=[AFILMV][^P])
+def: "Regular expression for Thermolysin." [BRENDA:3.4.24.27, DOI:10.1007/978-3-642-48380-6]
+is_a: MS:1001180 ! Cleavage agent regular expression
+
+[Term]
+id: MS:1003979
+name: Thermolysin
+def: "Thermostable extracellular metalloendopeptidase containing four calcium ions" [BRENDA:3.4.24.27, DOI:10.1007/978-3-642-48380-6]
+synonym: "Bacillus thermoproteolyticus neutral proteinase" EXACT []
+is_a: MS:1001045 ! cleavage agent name
+relationship: has_regexp MS:1003978 ! (?<=[^DE])(?=[AFILMV][^P])
+
+[Term]
+id: MS:1003980
+name: (?=[AEFILTVWY])
+def: "Regular expression for peptidase K." [BRENDA:3.4.21.64, DOI:10.1007/978-3-642-48380-6]
+is_a: MS:1001180 ! Cleavage agent regular expression
+
+[Term]
+id: MS:1003981
+name: peptidase K
+def: "Peptidase from the mold Tritirachium album Limber" [BRENDA:3.4.21.64, DOI:10.1007/978-3-642-48380-6]
+synonym: "endopeptidase K" EXACT []
+synonym: "proteinase K" EXACT []
+synonym: "Tritirachium album proteinase K" EXACT []
+synonym: "Tritirachium alkaline proteinase" EXACT []
+is_a: MS:1001045 ! cleavage agent name
+relationship: has_regexp MS:1003980 ! (?=[AEFILTVWY])
+
+[Term]
+id: MS:1003982
+name: (?<=N)(?=G)
+def: "Regular expression for hydroxylamine." [https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html#Hydro, DOI:10.1016/0076-6879(77)47016-2]
+is_a: MS:1001180 ! Cleavage agent regular expression
+
+[Term]
+id: MS:1003983
+name: hydroxylamine
+def: "NH2OH" [https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html#Hydro, DOI:10.1016/0076-6879(77)47016-2]
+is_a: MS:1001045 ! cleavage agent name
+relationship: has_regexp MS:1003982 ! (?<=N)(?=G)
+
+[Term]
+id: MS:1003987
+name: Orbitrap Tribrid Apex
+def: "Thermo Scientific Orbitrap Tribrid Apex mass spectrometer with Tribrid architecture consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers." [PSI:MS]
+is_a: MS:1003770 ! quadrupole ion trap orbitrap instrument
+is_a: MS:1000494 ! Thermo Scientific instrument model
+
 [Term]
 id: MS:1003988
-name: Xevo MRT P10 
+name: Xevo MRT P10
 def: "Waters Xevo MRT P10 quadrupole - multi-reflecting time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000126 ! Waters instrument model
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
