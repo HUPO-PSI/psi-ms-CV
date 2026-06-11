@@ -26070,6 +26070,13 @@ name: JEOL JPF format
 def: "Proprietary binary data format with extension '.jpf', used by JEOL mass spectrometry systems and associated data processing software to store mass spectral data." [PSI:MS]
 is_a: MS:1000560 ! mass spectrometer file format
 
+
+[Term]
+id: MS:1003975
+name: peak group
+def: "A collection of co-eluting chromatographic peaks with matching profiles, derived from a single source analyte. Examples include: related product ion peaks of a single precursor; related peaks derived from different adducts, multimers or isotopologues of a given analyte; and related peaks derived from in-source fragmentation of a given analyte." [PSI:MS]
+relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
+
 [Term]
 id: MS:1003976
 name: retention time window target
@@ -26078,6 +26085,7 @@ is_a: MS:1000915 ! retention time window attribute
 relationship: has_units UO:0000010 ! second
 relationship: has_units UO:0000031 ! minute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:1003977
