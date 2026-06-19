@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.254
-date: 05:06:2026 15:22
-saved-by: Jonathan Hunter
+data-version: 4.1.255
+date: 11:06:2026 17:00
+saved-by: Douwe Schulte
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26137,6 +26137,29 @@ name: hydroxylamine
 def: "NH2OH" [https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html#Hydro, DOI:10.1016/0076-6879(77)47016-2]
 is_a: MS:1001045 ! cleavage agent name
 relationship: has_regexp MS:1003982 ! (?<=N)(?=G)
+
+[Term]
+id: MS:1003984
+name: amino acid confidence level
+def: "The confidence level of the PSM assignment per amino acid, where 0 is not confident and 1 is maximally confident." [PSI:MS]
+is_a: MS:1002347 ! PSM-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003985
+name: peptidoform token confidence level
+def: "The confidence level of the PSM assignment per peptidoform token, so separately for each amino acid and modification, where 0 is not confident and 1 is maximally confident." [PSI:MS]
+is_a: MS:1002347 ! PSM-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1003986
+name: protein sequence
+def: "The protein sequence of a protein in a database." [PSI:MS]
+is_a: MS:1000884 ! protein attribute
+relationship: has_value_type MS:1001344 ! AA sequence
 
 [Term]
 id: MS:1003987
