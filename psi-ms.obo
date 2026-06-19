@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.255
-date: 11:06:2026 17:00
+data-version: 4.1.256
+date: 11:06:2026 17:15
 saved-by: Douwe Schulte
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -4408,6 +4408,7 @@ is_a: MS:1001457 ! data processing software
 [Term]
 id: MS:1000601
 name: ProteinLynx Global Server
+synonym: "PLGS" EXACT []
 def: "Waters software for data analysis." [PSI:MS]
 is_a: MS:1000694 ! Waters software
 is_a: MS:1001456 ! analysis software
@@ -17438,6 +17439,7 @@ id: MS:1002601
 name: mzTab
 def: "Tabular result format for proteomics and metabolomics experiments." [PMID:24980485, http://www.psidev.info/mztab/]
 is_a: MS:1000914 ! tab delimited text format
+is_a: MS:1002130 ! identification file format
 
 [Term]
 id: MS:1002602
@@ -26222,6 +26224,103 @@ name: timsMRMS
 def: "Bruker timsMRMS instrument combining trapped ion mobility spectrometry with magnetic resonance (FT-ICR) mass spectrometry." [PSI:MS]
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 is_a: MS:1003994 ! ion mobility quadrupole FT-ICR instrument
+
+[Term]
+id: MS:1003996
+name: DeepNovo
+def: "DeepNovo is a deep-learning based de novo peptide sequencer for DDA." [PSI:MS, DOI:10.1073/pnas.1705691114, https://github.com/nh2tran/DeepNovo]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001949 ! BSI software
+
+[Term]
+id: MS:1003997
+name: DeepNovo-DIA
+def: "DeepNovo is a deep-learning based de novo peptide sequencer for DDA and DIA." [PSI:MS, DOI:10.1038/s41592-018-0260-3, https://github.com/nh2tran/DeepNovo-DIA]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001949 ! BSI software
+
+[Term]
+id: MS:1003998
+name: PointNovo
+def: "PointNovo is neural network based de novo peptide sequencing model." [PSI:MS, DOI:10.1038/s42256-021-00304-3, http://github.com/volpato30/PointNovo]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1003999
+name: PGPointNovo
+def: "PGPointNovo is a modification of PointNovo that allows parallel processing and a better optimization strategy." [PSI:MS, DOI:10.1093/bioadv/vbad057, https://github.com/shallFun4Learning/PGPointNovo]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004000
+name: BiATNovo
+def: "BiATNovo an attention based bidirectional de novo peptide sequencing software." [PSI:MS, DOI:10.1101/2023.05.11.540352, https://github.com/yangshu729/buaa-BiATnovo, https://github.com/yangshu729/BiATNovo-DDA]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004001
+name: NovoB
+def: "NovoB a transformer based bidirectional de novo peptide sequencing software." [PSI:MS, DOI:10.1371/journal.pcbi.1011892, https://github.com/ProteomeTeam/NovoB ]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004002
+name: PepNet
+def: "PepNet a convolutional neural network de novo peptide sequencing software." [PSI:MS, DOI:10.1038/s41467-023-43010-x, https://github.com/lkytal/pepnet ]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004003
+name: π-HelixNovo
+synonym: "pi-HelixNovo" EXACT []
+def: "π-HelixNovo a transformer based de novo peptide sequencing software." [PSI:MS, DOI:10.1093/bib/bbae021, https://github.com/PHOENIXcenter/pi-HelixNovo]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004004
+name: π-PrimeNovo
+synonym: "pi-PrimeNovo" EXACT []
+def: "π-PrimeNovo a non-autoregressive de novo peptide sequencing software." [PSI:MS, DOI:10.1038/s41467-024-55021-3, https://github.com/PHOENIXcenter/pi-PrimeNovo]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004005
+name: PowerNovo
+def: "PowerNovo a BERT and transformer ensemble de novo peptide sequencing software." [PSI:MS, DOI:10.1038/s41598-024-65861-0, https://github.com/protdb/PowerNovo]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004006
+name: pUniFind
+def: "pUniFind a open modification de novo peptide sequencing and rescoring software." [PSI:MS, DOI:10.1038/s42256-026-01234-8, https://github.com/pFindStudio/pUniFind]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004007
+name: Sage
+def: "A database search based peptide identification software with retention time prediction, quantification, rescoring, and false discovery rate control." [PSI:MS, DOI:10.1021/acs.jproteome.3c00486, https://github.com/lazear/sage]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001139 ! quantitation software name
+
+[Term]
+id: MS:1004008
+name: BiblioSpec Spectrum Sequence List
+def: "Tabular result format for proteomics and small molecule experiments, saved with extension '.ssl'." [PSI:MS, https://skyline.ms/wiki/home/software/BiblioSpec/page.view?name=BiblioSpec%20input%20and%20output%20file%20formats]
+is_a: MS:1000914 ! tab delimited text format
+is_a: MS:1002130 ! identification file format
+
+[Term]
+id: MS:1004009
+name: ProteoScape
+def: "Bruker ProteoScape is a GPU-powered platform delivering parallel computing capabilities and real-time database search results for bottom-up proteomics." [PSI:MS, https://www.bruker.com/en/products-and-solutions/mass-spectrometry/ms-software/proteoscape.html]
+is_a: MS:1001456 ! analysis software
+is_a: MS:1000692 ! Bruker software
+
+[Term]
+id: MS:1004010
+name: Stitch
+def: "Template-based assembly of PSMs for de novo protein sequencing." [PSI:MS, DOI:10.1021/acs.analchem.2c01300, DOI:10.1021/acs.jproteome.4c00188, https://github.com/snijderlab/stitch]
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:4000000
