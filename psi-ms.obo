@@ -8291,7 +8291,7 @@ id: MS:1001251
 name: Trypsin
 def: "Enzyme trypsin." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001176 ! (?<=[KR])(?!P)
+relationship: has_regexp MS:1001176 ! (?<=[KR])(?\!P)
 
 [Term]
 id: MS:1001252
@@ -8575,7 +8575,7 @@ def: "Endoproteinase Arg-C." [PSI:PI]
 synonym: "Trypsin/R" EXACT []
 synonym: "Clostripain" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001272 ! (?<=R)(?!P)
+relationship: has_regexp MS:1001272 ! (?<=R)(?\!P)
 
 [Term]
 id: MS:1001304
@@ -8596,7 +8596,7 @@ id: MS:1001306
 name: Chymotrypsin
 def: "Enzyme chymotrypsin." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001332 ! (?<=[FYWL])(?!P)
+relationship: has_regexp MS:1001332 ! (?<=[FYWL])(?\!P)
 
 [Term]
 id: MS:1001307
@@ -8618,7 +8618,7 @@ name: Lys-C
 def: "Endoproteinase Lys-C." [PSI:PI]
 synonym: "Trypsin/K" EXACT []
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001335 ! (?<=K)(?!P)
+relationship: has_regexp MS:1001335 ! (?<=K)(?\!P)
 
 [Term]
 id: MS:1001310
@@ -8639,7 +8639,7 @@ id: MS:1001312
 name: TrypChymo
 def: "Cleavage agent TrypChymo." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001338 ! (?<=[FYWLKR])(?!P)
+relationship: has_regexp MS:1001338 ! (?<=[FYWLKR])(?\!P)
 
 [Term]
 id: MS:1001313
@@ -8654,14 +8654,14 @@ id: MS:1001314
 name: V8-DE
 def: "Cleavage agent V8-DE." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001340 ! (?<=[BDEZ])(?!P)
+relationship: has_regexp MS:1001340 ! (?<=[BDEZ])(?\!P)
 
 [Term]
 id: MS:1001315
 name: V8-E
 def: "Cleavage agent V8-E." [PSI:PI]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001341 ! (?<=[EZ])(?!P)
+relationship: has_regexp MS:1001341 ! (?<=[EZ])(?\!P)
 
 [Term]
 id: MS:1001316
@@ -12784,14 +12784,14 @@ id: MS:1001915
 name: leukocyte elastase
 def: "Enzyme leukocyte elastase (EC 3.4.21.37)." [BRENDA:3.4.21.37]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001957 ! (?<=[ALIV])(?!P)
+relationship: has_regexp MS:1001957 ! (?<=[ALIV])(?\!P)
 
 [Term]
 id: MS:1001916
 name: proline endopeptidase
 def: "Enzyme proline endopeptidase (EC 3.4.21.26)." [BRENDA:3.4.21.26]
 is_a: MS:1001045 ! cleavage agent name
-relationship: has_regexp MS:1001958 ! (?<=[HKR]P)(?!P)
+relationship: has_regexp MS:1001958 ! (?<=[HKR]P)(?\!P)
 
 [Term]
 id: MS:1001917
@@ -12829,7 +12829,7 @@ name: Digital Object Identifier (DOI)
 def: "DOI unique identifier of a publication." [PSI:PI, http://dx.doi.org]
 synonym: "doi" EXACT []
 is_a: MS:1000878 ! external reference identifier
-relationship: has_regexp MS:1002480 ! (10[.][0-9]\{4,\}(?:[.][0-9]+)*/(?:(?![\"&\'<>])[^ \t\\r\n\\v\\f])+)
+relationship: has_regexp MS:1002480 ! (10[.][0-9]\\{4,\\}(?:[.][0-9]+)*/(?:(?\![\\"&\\'<>])[^ \\t\\r\\n\\v\\f])+)
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
@@ -13066,13 +13066,13 @@ is_a: MS:1001045 ! cleavage agent name
 
 [Term]
 id: MS:1001957
-name: (?<=[ALIV])(?!P)
+name: (?<=[ALIV])(?\!P)
 def: "Regular expression for leukocyte elastase." [PSI:PI]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
 [Term]
 id: MS:1001958
-name: (?<=[HKR]P)(?!P)
+name: (?<=[HKR]P)(?\!P)
 def: "Regular expression for proline endopeptidase." [PSI:PI]
 is_a: MS:1001180 ! Cleavage agent regular expression
 
@@ -14874,7 +14874,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 [Term]
 id: MS:1002231
 name: regular expressions for a GUID
-def: "([A-Fa-f0-9]\{8\}-([A-Fa-f0-9]\{4\}-)\{3\}[A-Fa-f0-9]\{12\})." [PSI:PI]
+def: "([A-Fa-f0-9]\\{8\\}-([A-Fa-f0-9]\\{4\\}-)\\{3\\}[A-Fa-f0-9]\\{12\\})." [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -16612,7 +16612,7 @@ relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrom
 [Term]
 id: MS:1002480
 name: regular expression for a digital object identifier (DOI)
-def: "(10[.][0-9]\{4,\}(?:[.][0-9]+)*/(?:(?![\"&\'<>])[^ \t\\r\n\\v\\f])+)." [PSI:PI, http://dx.doi.org/]
+def: "(10[.][0-9]\\{4,\\}(?:[.][0-9]+)*/(?:(?![\\\"&\\'<>])[^ \\t\\r\\n\\v\\f])+)." [PSI:PI, http://dx.doi.org/]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -16770,7 +16770,7 @@ relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 [Term]
 id: MS:1002505
 name: regular expression for modification localization scoring
-def: "(?<MOD_INDEX>[0-9]+):(?<SCORE>[01][.][0-9]+(?:[Ee][+\-]?[0-9]+)?):(?<POSITION>[0-9]+(?:[|][0-9]+)*):(?<PASS_THRESHOLD>true|false)" [PSI:PI]
+def: "(?<MOD_INDEX>[0-9]+):(?<SCORE>[01][.][0-9]+(?:[Ee][+\\-]?[0-9]+)?):(?<POSITION>[0-9]+(?:[|][0-9]+)*):(?<PASS_THRESHOLD>true|false)" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -18842,7 +18842,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1002812
 name: Regular expression for adduct ion formula
-def: "(\[[:digit:]{0,1}M([+][:digit:]{0,1}(H|K|(Na)|(Li)|(Cl)|(Br)|(NH3)|(NH4)|(CH3OH)|(IsoProp)|(DMSO)|(FA)|(Hac)|(TFA)|(NaCOOH)|(HCOOH)|(CF3COOH)|(ACN))){0,}([-][:digit:]{0,1}(H|(H2O)|(CH2)|(CH4)|(NH3)|(CO)|(CO2)|(COCH2)|(HCOOH)|(C2H4)|(C4H8)|(C3H2O3)|(C5H8O4)|(C6H10O4)|(C6H10O5)|(C6H8O6))){0,}\][:digit:]{0,1}[+-])." [PSI:PI]
+def: "(\\[[:digit:]{0,1}M([+][:digit:]{0,1}(H|K|(Na)|(Li)|(Cl)|(Br)|(NH3)|(NH4)|(CH3OH)|(IsoProp)|(DMSO)|(FA)|(Hac)|(TFA)|(NaCOOH)|(HCOOH)|(CF3COOH)|(ACN))){0,}([-][:digit:]{0,1}(H|(H2O)|(CH2)|(CH4)|(NH3)|(CO)|(CO2)|(COCH2)|(HCOOH)|(C2H4)|(C4H8)|(C3H2O3)|(C5H8O4)|(C6H10O4)|(C6H10O5)|(C6H8O6))){0,}\\][:digit:]{0,1}[+-])." [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -18850,7 +18850,7 @@ id: MS:1002813
 name: adduct ion formula
 def: "Adduct formation formula of the form M+X or M-X, as constrained by the provided regular expression." [PSI:MS]
 is_a: MS:1002809 ! adduct ion attribute
-relationship: has_regexp MS:1002812 ! (\[[:digit:]{0,1}M([+][:digit:]{0,1}(H|K|(Na)|(Li)|(Cl)|(Br)|(NH3)|(NH4)|(CH3OH)|(IsoProp)|(DMSO)|(FA)|(Hac)|(TFA)|(NaCOOH)|(HCOOH)|(CF3COOH)|(ACN))){0,}([-][:digit:]{0,1}(H|(H2O)|(CH2)|(CH4)|(NH3)|(CO)|(CO2)|(COCH2)|(HCOOH)|(C2H4)|(C4H8)|(C3H2O3)|(C5H8O4)|(C6H10O4)|(C6H10O5)|(C6H8O6))){0,}\][:digit:]{0,1}[+-])
+relationship: has_regexp MS:1002812 ! (\\[[:digit:]{0,1}M([+][:digit:]{0,1}(H|K|(Na)|(Li)|(Cl)|(Br)|(NH3)|(NH4)|(CH3OH)|(IsoProp)|(DMSO)|(FA)|(Hac)|(TFA)|(NaCOOH)|(HCOOH)|(CF3COOH)|(ACN))){0,}([-][:digit:]{0,1}(H|(H2O)|(CH2)|(CH4)|(NH3)|(CO)|(CO2)|(COCH2)|(HCOOH)|(C2H4)|(C4H8)|(C3H2O3)|(C5H8O4)|(C6H10O4)|(C6H10O5)|(C6H8O6))){0,}\\][:digit:]{0,1}[+-])
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
@@ -21546,7 +21546,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003206
 name: library creation log
-def: "String of logging information generated when the library was constructed from its constituent files. Multiple lines should be separated with escaped \n" [PSI:PI]
+def: "String of logging information generated when the library was constructed from its constituent files. Multiple lines should be separated with escaped \\n" [PSI:PI]
 is_a: MS:1003201 ! library provenance attribute
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
@@ -22820,7 +22820,7 @@ relationship: has_value_type xsd:string ! The allowed value-type for this CV ter
 [Term]
 id: MS:1003391
 name: crosslinker cleavage regular expression
-def: "^(?<NAME>[A-Za-z]):(?<MASS>[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+(\.[0-9]+)?)?):(?<PAIRS_WITH>[A-Za-z]+)$" [PSI:PI]
+def: "^(?<NAME>[A-Za-z]):(?<MASS>[+-]?[0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+(\\.[0-9]+)?)?):(?<PAIRS_WITH>[A-Za-z]+)$" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
@@ -25614,7 +25614,7 @@ is_a: MS:1003822 ! grid coordinate interpolation
 [Term]
 id: MS:1003825
 name: square root grid interpolation
-def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$" [PSI:MS]
+def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\\sqrt{m/z}$" [PSI:MS]
 is_a: MS:1003822 ! grid coordinate interpolation
 
 [Term]
