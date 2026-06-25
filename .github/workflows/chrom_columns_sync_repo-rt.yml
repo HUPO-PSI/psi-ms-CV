@@ -1,0 +1,102 @@
+name: chrom columns – sync from repo-rt
+
+# Polls the upstream repo-rt column database, regenerates psi-ms-columns.obo with
+# stable term IDs, and opens a PR when it changes. No PR is opened when the
+# regenerated module is identical to the committed one.
+#
+# Loop closure is cross-repo: the .github/repo-rt/psi-ms-column-ids.tsv mapping written
+# here is consumed by a repo-rt-side script (add_psi_ms_id.py) that writes the assigned
+# MS:IDs back into the catalog's psi_ms_id column. That back-propagation is a separate
+# repo-rt-repo step, so a newly minted id stays blank in the catalog for one cycle (the
+# generator treats a blank psi_ms_id as a new model, not a drift error).
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, Monday 06:00 UTC
+  workflow_dispatch: {}    # allow manual runs
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: chrom-columns-sync-repo-rt
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        # Pinned so a pandas/fastobo release cannot silently change generated output
+        # or validation behaviour between weekly runs.
+        run: python -m pip install "pandas==3.0.3" "fastobo==0.14.1"
+
+      - name: Download repo-rt column database
+        run: |
+          curl -fsSL --retry 3 --connect-timeout 30 --max-time 300 -o column_database.tsv \
+            https://raw.githubusercontent.com/michaelwitting/RepoRT/master/resources/column_database/column_database.tsv
+
+      - name: Regenerate psi-ms-columns.obo (stable IDs)
+        # Reads the committed psi-ms-columns.obo first to preserve existing IDs,
+        # then overwrites it; only new vendors/models get fresh IDs. Also rewrites
+        # the .github/repo-rt/psi-ms-column-ids.tsv mapping (the contract repo-rt joins
+        # on) and aborts if the catalog's psi_ms_id column drifts from the assigned IDs.
+        run: |
+          python scripts/chrom_columns/generate_psi_ms_columns.py \
+            --input column_database.tsv \
+            --output psi-ms-columns.obo \
+            --report sync-report.md
+
+      - name: Validate generated module
+        # fastobo.load + check_sorted do not catch duplicate ids (and the runner has
+        # no fastobo-validator), so assert id uniqueness and mapping consistency too.
+        run: |
+          python -c "import fastobo; fastobo.load('psi-ms-columns.obo')"
+          python scripts/check_sorted.py psi-ms-columns.obo
+          python scripts/chrom_columns/check_no_duplicate_ids.py psi-ms-columns.obo
+          python scripts/chrom_columns/check_column_mapping.py .github/repo-rt/psi-ms-column-ids.tsv psi-ms-columns.obo
+
+      - name: Build PR body
+        # Compose the PR body from a static intro plus the generator's data-quality
+        # report (within-model deviations to fix upstream + psi_ms_id renames), so a
+        # reviewer sees the flags without digging through the Actions log.
+        id: prbody
+        run: |
+          {
+            echo "body<<PRBODY_EOF"
+            echo 'Automated regeneration of `psi-ms-columns.obo` from the upstream'
+            echo '[repo-rt column database](https://github.com/michaelwitting/RepoRT/blob/master/resources/column_database/column_database.tsv).'
+            echo ''
+            echo 'Existing term IDs are preserved (read back from the committed module);'
+            echo 'only new vendors/models are appended with fresh IDs. Review the diff before merging.'
+            echo ''
+            echo '## Data-quality report'
+            echo ''
+            cat sync-report.md
+            echo 'PRBODY_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Remove generated scratch files
+        run: rm -f column_database.tsv sync-report.md
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
+          add-paths: |
+            psi-ms-columns.obo
+            .github/repo-rt/psi-ms-column-ids.tsv
+          branch: sync/repo-rt-column-models
+          delete-branch: true
+          commit-message: "Sync chromatographic column models from repo-rt"
+          title: "Sync chromatographic column models from repo-rt"
+          body: ${{ steps.prbody.outputs.body }}

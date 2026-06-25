@@ -1,0 +1,22 @@
+name: chrom columns – tests
+
+# Unit + integration tests for the column-model generator (scripts/chrom_columns/).
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        # Pinned to match the sync workflow so behaviour under test matches production.
+        run: python -m pip install "pandas==3.0.3" "fastobo==0.14.1" pytest
+      - name: Run tests
+        run: python -m pytest scripts/chrom_columns/ -q
