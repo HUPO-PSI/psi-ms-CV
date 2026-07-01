@@ -6,6 +6,7 @@ default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
 remark: coverage of namespace-id: MS:$sequence(7,4000000,4999999)$: Mass spectrometry quality control metrics
+remark: coverage of namespace-id: MS:$sequence(7,5000000,5999999)$: Chromatographic column models
 remark: namespace: MS
 remark: namespace: PEFF
 remark: coverage: Mass spectrometer output files and spectra interpretation
@@ -84,6 +85,14 @@ name: has_column
 [Typedef]
 id: has_optional_column
 name: has_optional_column
+
+[Typedef]
+id: has_separation_mode
+name: has_separation_mode
+
+[Typedef]
+id: usp_designation
+name: usp_designation
 
 [Term]
 id: NCIT:C25330
