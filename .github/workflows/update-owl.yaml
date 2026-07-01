@@ -33,7 +33,9 @@ jobs:
           wget -nv --no-check-certificate https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
           export JAVA_TOOL_OPTIONS=-Xmx6G
           # java -jar robot.jar -vvv template -p "PEFF: http://purl.obolibrary.org/obo/PEFF_" -i psi-ms.obo -t cv_template.tsv convert -f ofn -o psi-ms.owl
-          java -jar robot.jar convert -v -i tmp.obo -o psi-ms.owl --format owl
+          # Merge the chromatographic column module (MS:5000000 namespace) into the
+          # published OWL; its parent/typedef targets resolve against tmp.obo.
+          java -jar robot.jar merge -i tmp.obo -i psi-ms-columns.obo convert -v -o psi-ms.owl --format owl
           rm *robot.jar*
           rm *tmp.obo* *cv_template.tsv*
       - name: Create pull request

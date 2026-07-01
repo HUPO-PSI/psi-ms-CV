@@ -23,9 +23,8 @@ within-model disagreement is reported for upstream fixing (the clear majority is
 emitted meanwhile; a tie emits nothing for that field).
 
 References to MS:1000857, MS:1003920, MS:1003921 and the MS:1002271 technique
-terms are intended to resolve when this module is merged with psi-ms.obo (e.g.
-`robot merge`) — that merge step is not wired into the OWL build yet, so until it
-is, those targets are external and the module is not part of the published OWL.
+terms are external to this module and resolve against psi-ms.obo, with which it is
+merged (`robot merge`) in the update-owl.yaml build to produce the published OWL.
 
 IDs are stable across runs: existing terms keep their id (read back from the
 output file), and only genuinely new vendors/models get the next free id. This
@@ -91,7 +90,7 @@ saved-by: Jonathan Hunter
 default-namespace: MS
 ontology: ms-columns
 remark: Model-level chromatographic column terms (MS:5000000 namespace), generated from the repo-rt column database.
-remark: Intended to be merged with psi-ms.obo to build the published OWL (merge step not yet wired); its is_a / part_of / has_separation_mode targets (MS:1000857, MS:1003920, MS:1003921, and the MS:1002271 separation-technique terms) are defined in psi-ms.obo.
+remark: Merged with psi-ms.obo (via robot merge in update-owl.yaml) to build the published OWL; its is_a / part_of / has_separation_mode targets (MS:1000857, MS:1003920, MS:1003921, and the MS:1002271 separation-technique terms) are defined in psi-ms.obo.
 remark: coverage of namespace-id: MS:$sequence(7,5000000,5999999)$: Chromatographic column models
 
 [Typedef]
