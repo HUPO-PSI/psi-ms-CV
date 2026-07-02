@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.1.257
+data-version: 4.1.258
 date: 23:06:2026 22:00
 saved-by: Douwe Schulte
 default-namespace: MS
@@ -3808,6 +3808,10 @@ name: intensity array
 def: "A data array of intensity values." [PSI:MS]
 xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
+xref: binary-data-type:MS\:1003850 "64-bit unsigned integer"
+xref: binary-data-type:MS\:1003851 "32-bit unsigned integer"
+xref: binary-data-type:MS\:1000519 "32-bit integer"
+xref: binary-data-type:MS\:1000522 "64-bit integer"
 is_a: MS:1000513 ! binary data array
 relationship: has_units MS:1000131 ! number of detector counts
 relationship: has_units MS:1000132 ! percent of base peak
@@ -25623,6 +25627,32 @@ name: coordinate grid encoding
 def: "This array stores indices or spans into some form of coordinate space model rather than the coordinates themselves, and that grid is stored externally from this data array. The objective being that these coordinates are more compact to store than the raw coordinates themselves. The value of this parameter is the grid identifier, if there are multiple to choose from. A separate coordinate spacing model parameter will signify what form of coordinate space model is used." [PSI:MS]
 is_a: MS:1000572 ! binary data compression type
 relationship: has_value_type xsd:string ! The allowed valute-type for this CV term
+
+[Term]
+id: MS:1003850
+name: unsigned 64-bit integer
+def: "Unsigned 64-bit little-endian integer." [PSI:MS]
+is_a: MS:1000518 ! binary data type
+
+[Term]
+id: MS:1003851
+name: unsigned 32-bit integer
+def: "Unsigned 32-bit little-endian integer." [PSI:MS]
+is_a: MS:1000518 ! binary data type
+
+[Term]
+id: MS:1003852
+name: unsigned 8-bit integer
+def: "unsigned 8-bit little-endian integer." [PSI:MS]
+is_a: MS:1000518 ! binary data type
+
+[Term]
+id: MS:1003870
+name: index array
+def: "A data array whose values are index values for another collection or array." [PSI:MS]
+xref: binary-data-type:MS\:1003850 "unsigned 64-bit integer"
+xref: binary-data-type:MS\:1003851 "unsigned 32-bit integer"
+is_a: MS:1000513 ! binary data array
 
 [Term]
 id: MS:1003901
