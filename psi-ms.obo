@@ -3808,8 +3808,6 @@ name: intensity array
 def: "A data array of intensity values." [PSI:MS]
 xref: binary-data-type:MS\:1000521 "32-bit float"
 xref: binary-data-type:MS\:1000523 "64-bit float"
-xref: binary-data-type:MS\:1000519 "32-bit integer"
-xref: binary-data-type:MS\:1000522 "64-bit integer"
 is_a: MS:1000513 ! binary data array
 relationship: has_units MS:1000131 ! number of detector counts
 relationship: has_units MS:1000132 ! percent of base peak
