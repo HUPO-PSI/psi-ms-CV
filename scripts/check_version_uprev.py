@@ -12,7 +12,7 @@ from packaging import version
 
 version_pattern = re.compile(r"^data-version: (\S+)")
 
-REFERENCE_URL = "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo"
+REFERENCE_URL = "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms-core.obo"
 
 
 def get_checksum_and_version(stream):
@@ -52,7 +52,7 @@ def main(inpath, ref_url=REFERENCE_URL):
         else:
             print("New Version Is Greater. Good.")
     else:
-        print("No Change To psi-ms.obo w.r.t. Main Branch")
+        print("No Change To %s w.r.t. Main Branch" % (inpath, ))
     print("All Clear")
     sys.exit(0)
 

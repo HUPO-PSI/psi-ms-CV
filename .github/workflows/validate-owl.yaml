@@ -1,11 +1,15 @@
 name: OWL file validation
 
+# Fires only when psi-ms.owl changes. The job fetches the ontology from the master raw
+# URL (foundry.json's ontology_purl) rather than from the checkout, so any other trigger
+# validates the previous release's OWL: a check that cannot fail because of the change in
+# flight. That is why the pull_request trigger is gone and why the path filter is here --
+# without it the source and psi-ms.obo pushes each fired a full OLS4 build for nothing.
 on:
   push:
     branches: [master, dev, "debug/ols-validation"]
-
-  pull_request:
-    branches: [master, dev]
+    paths:
+      - "psi-ms.owl"
 
 jobs:
   build:

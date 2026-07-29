@@ -1,27 +1,32 @@
 name: release-on-tag
 
-# Controls when the action will run.
+# Publishes the release for a version tag, pushed by update-owl.yaml's tag job.
+#
+# The tag name is the version, so it is used directly. Re-deriving it by grepping
+# data-version out of the checkout let the two disagree: with `tags: "*"` any tag push ran
+# this job, and ncipollo creates a missing tag, so a stray tag could mint a release for a
+# version nobody pushed.
 on:
   push:
     tags:
-      - "*"
+      - "v*"
 
 jobs:
   make-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Extract version from OBO
-        run: |
-          CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
-          echo CV_VERSION=${CV_VERSION}
-          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
-          cp psi-ms.owl ms.owl
+      - uses: actions/checkout@v4
+
+      - name: Duplicate the OWL under the purl name
+        # OBO Foundry resolves purl.obolibrary.org/obo/ms.owl to a release asset called
+        # ms.owl, so the same file ships under both names.
+        run: cp psi-ms.owl ms.owl
+
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: v${{ env.CV_VERSION }}
-          name: Release v${{ env.CV_VERSION }}
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
           artifacts: "psi-ms.obo,*ms.owl"
           generateReleaseNotes: true
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
