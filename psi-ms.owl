@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.1.257/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.1.258/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:date>23:06:2026 22:00</oboInOwl:date>
@@ -79203,6 +79203,38 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>This array stores indices or spans into some form of coordinate space model rather than the coordinates themselves, and that grid is stored externally from this data array. The objective being that these coordinates are more compact to store than the raw coordinates themselves. The value of this parameter is the grid identifier, if there are multiple to choose from. A separate coordinate spacing model parameter will signify what form of coordinate space model is used.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003870 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003870">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000513"/>
+        <obo:IAO_0000115>A data array whose values are index values for another collection or array.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>binary-data-type:MS:1000519</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>binary-data-type:MS:1000522</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003870</oboInOwl:id>
+        <rdfs:label>index array</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003870"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A data array whose values are index values for another collection or array.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003870"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>binary-data-type:MS:1000519</owl:annotatedTarget>
+        <rdfs:label>32-bit integer</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003870"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>binary-data-type:MS:1000522</owl:annotatedTarget>
+        <rdfs:label>64-bit integer</rdfs:label>
     </owl:Axiom>
     
 
