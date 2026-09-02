@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.259
-date: 23:08:2026 12:00
+data-version: 4.1.260
+date: 02:09:2026 12:00
 saved-by: Fatemeh Mirzadeh Sarcheshmeh
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -6737,7 +6737,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 id: MS:1000928
 name: calibration spectrum
 def: "A spectrum derived from a special calibration source, rather than from the primary injected sample. A calibration spectrum is typically derived from a substance that can be used to correct systematic shift in m/z for spectra of the primary inject sample." [PSI:MS]
-is_a: MS:1000559 ! spectrum type
+is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1000929
@@ -28568,7 +28568,6 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 
-
 [Term]
 id: MS:4000217
 name: number of negative polarity MS1 spectra
@@ -28579,7 +28578,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
-
 
 [Term]
 id: MS:4000218
@@ -28592,7 +28590,6 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 
-
 [Term]
 id: MS:4000219
 name: number of negative polarity MS2 spectra
@@ -28603,7 +28600,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
-
 
 [Term]
 id: MS:4000220
@@ -28616,7 +28612,6 @@ relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 
-
 [Term]
 id: MS:4000221
 name: number of negative polarity MS3+ spectra
@@ -28627,7 +28622,6 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
-
 
 [Term]
 id: MS:4000222
@@ -28640,11 +28634,12 @@ relationship: has_metric_category MS:4000021 ! MS1 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000040 ! m/z
 relationship: has_value_concept STATO:0000035 ! range
-
+relationship: has_relation MS:1000528 ! lowest observed m/z
+relationship: has_relation MS:1000527 ! highest observed m/z
 
 [Term]
 id: MS:4000223
-name: MS2 fragment acquisition range above precursor median
+name: MS2 median acquisition range above precursor
 def: "The median m/z distance between the MS2 precursor m/z and the upper limit of its fragment scan window, taken across all MS2 spectra in a single MS run." [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -28653,11 +28648,10 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000040 ! m/z
 
-
 [Term]
 id: MS:4000224
-name: MS2 precursor isolation window width
-def: "The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run." [PSI:MS]
+name: MS2 precursor isolation window median width
+def: "The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run, measured as the distance from the lower to the upper isolation window bound, that is the sum of the isolation window lower offset (MS:1000828) and the isolation window upper offset (MS:1000829). The width is independent of the isolation window target m/z and remains defined if the target falls outside the window bounds." [PSI:MS]
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -28665,12 +28659,13 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units MS:1000040 ! m/z
-
+relationship: has_relation MS:1000828 ! isolation window lower offset
+relationship: has_relation MS:1000829 ! isolation window upper offset
 
 [Term]
 id: MS:4000225
 name: number of distinct precursor m/z values
-def: "The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 3 decimal places." [PSI:MS]
+def: "The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
 comment: Reads the selected ion m/z (data-dependent selection). Differs from number of distinct isolation target m/z values, which reads the isolation window target m/z (MS:1000827).
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -28678,12 +28673,12 @@ relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
-
+relationship: has_relation MS:1000744 ! selected ion m/z
 
 [Term]
 id: MS:4000226
 name: number of distinct isolation target m/z values
-def: "The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 3 decimal places." [PSI:MS]
+def: "The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
 comment: Reads the isolation window target m/z (the isolation scheme; fixed windows in DIA/PRM/SRM). See number of distinct precursor m/z values for the selected ion m/z counterpart; the two differ when isolation is offset from the selected ion or when a target is selected repeatedly.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -28692,6 +28687,7 @@ relationship: has_metric_category MS:4000022 ! MS2 metric
 relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
+relationship: has_relation MS:1000827 ! isolation window target m/z
 
 [Term]
 id: PEFF:0000001
