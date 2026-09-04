@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.259
-date: 23:06:2026 22:00
-saved-by: Joshua Klein
+data-version: 4.1.260
+date: 01:09:2026 11:55
+saved-by: Jonathan Hunter
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26329,6 +26329,20 @@ id: MS:1004010
 name: Stitch
 def: "Template-based assembly of PSMs for de novo protein sequencing." [PSI:MS, DOI:10.1021/acs.analchem.2c01300, DOI:10.1021/acs.jproteome.4c00188, https://github.com/snijderlab/stitch]
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004011
+name: KPOP dataset identifier
+def: "Dataset identifier issued by the KPOP repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+is_a: MS:1000878 ! external reference identifier
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004012
+name: KPOP dataset URI
+def: "URI that allows the access to one dataset in the KPOP repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+is_a: MS:1000878 ! external reference identifier
+relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
