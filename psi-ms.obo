@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.260
-date: 01:09:2026 11:55
-saved-by: Jonathan Hunter
+data-version: 4.1.261
+date: 07:09:2026 07:30
+saved-by: Patrick Boschmann
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -29,6 +29,7 @@ remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
 remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
+remark: creator: Patrick Boschmann <patrick.boschmann <-at-> uni-tuebingen.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -9278,6 +9279,7 @@ is_a: MS:1001249 ! search input details
 [Term]
 id: MS:1001412
 name: search tolerance plus value
+def: "Search tolerance above the theoretical value, given in relative or absolute units." [PSI:PI]
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
 relationship: has_units UO:0000169 ! parts per million
@@ -9288,6 +9290,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1001413
 name: search tolerance minus value
+def: "Search tolerance below the theoretical value, given in relative or absolute units." [PSI:PI]
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
 relationship: has_units UO:0000169 ! parts per million
@@ -28569,6 +28572,139 @@ is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
+
+[Term]
+id: MS:4000216
+name: imaging metric
+def: "QC metric related to a mass spectrometry imaging acquisition, in which each spectrum is associated with a spatial position on the sample." [PSI:MS]
+comment: Imaging metrics are frequently spatially resolved and reported as a matrix, where the row and column indices correspond to the pixel coordinates of the acquisition grid.
+is_a: MS:4000001 ! QC metric
+
+[Term]
+id: MS:4000217
+name: total ion current image
+def: "The total ion current (MS:1000285) of each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
+comment: The most general measure of signal level. Because the values retain their spatial arrangement, the metric additionally exposes spatially structured acquisition faults, such as intensity gradients across a long acquisition, dropped scan lines, or striping arising from the raster pattern. A value of 0 is distinct from null, which indicates a position that was not acquired.
+is_a: MS:4000006 ! matrix
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000218
+name: total ion current image quantiles
+def: "The first to n-th quantile of the total ion current (MS:1000285) values over all acquired spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: A compact summary of the signal level distribution. Not acquired positions are excluded from the calculation. A downward shift relative to comparable runs may indicate reduced ionisation efficiency, matrix application problems, or source contamination.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000219
+name: base peak fraction image
+def: "The base peak intensity (MS:1000505) of each spectrum divided by the total ion current (MS:1000285) of the same spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
+comment: Describes how far the signal of each spectrum is concentrated in a single peak, on a scale from close to 0 for a rich spectrum to 1 for a spectrum containing a single peak. High values over a region may indicate matrix crystal artefacts, salt clusters, or loss of analyte signal leaving only a dominant background ion. The metric is sensitive to the spectrum representation and values are not comparable between centroid and profile spectra, nor between different peak picking settings. Spectra with a total ion current of 0 are reported as null.
+is_a: MS:4000006 ! matrix
+is_a: MS:1001848 ! simple ratio of two values
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000505 ! base peak intensity
+
+[Term]
+id: MS:4000220
+name: base peak fraction image quantiles
+def: "The first to n-th quantile of the base peak fraction values over all acquired spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: A compact summary of the base peak fraction image (MS:4000219). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation. Values are not comparable between centroid and profile spectra.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+
+[Term]
+id: MS:4000221
+name: reference m/z error image
+def: "The relative deviation in parts per million between the observed m/z of a mass reference ion and its theoretical m/z, calculated as 1E6 x (observed m/z - theoretical m/z) / theoretical m/z, for each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. The theoretical m/z of the reference MUST be reported using QC reference m/z (MS:4000224). Positions that were not acquired, and positions in which the reference ion was not detected, are reported as null." [PSI:MS]
+comment: An imaging acquisition may run for many hours, during which the mass axis can drift substantially. Because acquisition order maps onto spatial position, such drift appears in this matrix as a spatial gradient or as discontinuities aligned with the raster pattern, information that a single mass accuracy value cannot convey. The metric is ID free: the reference is declared.
+is_a: MS:4000006 ! matrix
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000014 ! accuracy
+
+[Term]
+id: MS:4000222
+name: reference m/z error image quantiles
+def: "The first to n-th quantile of the reference m/z error values over all spectra of an imaging acquisition in which the mass reference ion was detected. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: A compact summary of the reference m/z error image (MS:4000221). A shift of the central quantiles away from zero indicates a systematic calibration offset, whereas a widening spread indicates drift or instability over the acquisition. Not acquired positions and positions in which the reference ion was not detected are excluded from the calculation.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+
+[Term]
+id: MS:4000223
+name: acquired pixel fraction
+def: "The number of spectra with unique pixel coordinates in an imaging acquisition divided by the number of positions of the smallest rectangular grid that encloses all acquired pixel coordinates." [PSI:MS]
+comment: A value of 1 indicates a fully populated rectangular acquisition. Values below 1 arise legitimately from acquisitions restricted to a non rectangular region of interest, and illegitimately from acquisitions that were aborted or that lost spectra during conversion. The metric is therefore dependent on experimental design. Only reports absent spectra.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000224
+name: QC reference m/z
+def: "The theoretical m/z of the mass reference ion used by a mass reference based QC metric." [PSI:MS]
+comment: Reported in the metadata of the runQuality or setQuality whose metrics it parameterises. REQUIRED for interpreting reference m/z error image (MS:4000221) and its quantiles (MS:4000222).
+is_a: MS:4000080 ! QC non-metric term
+
+[Term]
+id: MS:4000225
+name: duplicate pixel coordinate count
+def: "The number of distinct x/y/z pixel coordinates in a singular imaging acquisition at which more than one spectrum of the same type was recorded." [PSI:MS]
+comment: An imaging acquisition normally records at most one spectrum per pixel coordinate. A nonzero value may indicate an export or acquisition defect, such as a stage retrace or a conversion fault, and marks positions that no matrix metric can fully represent, since a matrix cell holds only one value. Multiple spectra of different types may occur in dual polarity or MS2 acquisition methods.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000226
+name: pixel grid dimensions
+def: "The dimensions, in pixels, of the smallest rectangular grid that encloses all acquired pixel coordinates of an imaging acquisition. A value pair represents the extent along x and y." [PSI:MS]
+comment: The values count pixel positions, not physical distance. A position is counted whether or not a spectrum was acquired at it.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+relationship: has_relation MS:4000223 ! acquired pixel fraction
 
 [Term]
 id: PEFF:0000001
