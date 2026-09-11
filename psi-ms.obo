@@ -22772,7 +22772,7 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 [Term]
 id: MS:1003384
 name: semantic version regexp
-def: "v?(\d+)\.(\d+)\.(\d+)(?:-(\S+))?" [PSI:PI]
+def: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
