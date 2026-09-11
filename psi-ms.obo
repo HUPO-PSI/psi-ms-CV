@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.261
-date: 02:09:2026 12:00
-saved-by: Fatemeh Mirzadeh Sarcheshmeh
+data-version: 4.1.262
+date: 11:09:2026 18:00
+saved-by: Douwe Schulte
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -22772,7 +22772,7 @@ is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 [Term]
 id: MS:1003384
 name: semantic version regexp
-def: "v?(\d+)\.(\d+)\.(\d+)(?:-(\S+))?" [PSI:PI]
+def: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$" [PSI:PI]
 is_a: MS:1002479 ! regular expression
 
 [Term]
