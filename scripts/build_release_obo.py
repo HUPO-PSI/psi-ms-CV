@@ -14,12 +14,13 @@ CORE_DEFAULT = "psi-ms-core.obo"
 FRAGMENT_DEFAULT = "psi-ms-columns.obo-fragment"
 OUTPUT_DEFAULT = "psi-ms.obo"
 
-MS_ID_LINE = re.compile(r"^id: MS:\S+$", re.M)
+MS_ID_LINE = re.compile(r"^id: MS:\S+$", re.MULTILINE)
 
 
 def check_fragment(fragment_text, fragment_path):
     """The fragment must be stanzas only. A header clause here would land mid-file and
-    every OBO parser would reject the result ('expected EOI, Comment, or TermClause')."""
+    every OBO parser would reject the result ('expected EOI, Comment, or TermClause').
+    Full OBO syntax validation is performed downstream by fastobo."""
     blocks = [b for b in fragment_text.split("\n\n") if b.strip()]
     if not blocks:
         raise ValueError(f"{fragment_path} is empty")
