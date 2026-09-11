@@ -10,13 +10,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.1.260/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.1.261/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>01:09:2026 11:55</oboInOwl:date>
+        <oboInOwl:date>02:09:2026 12:00</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Jonathan Hunter</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Fatemeh Mirzadeh Sarcheshmeh</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
         <rdfs:comment>To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
@@ -28,6 +28,7 @@
         <rdfs:comment>creator: Chris Bielow &lt;chris.bielow &lt;-at-&gt; fu-berlin.de&gt;</rdfs:comment>
         <rdfs:comment>creator: David Cox &lt;david.cox &lt;-at-&gt; sciex.com&gt;</rdfs:comment>
         <rdfs:comment>creator: Eric Deutsch &lt;edeutsch &lt;-at-&gt; systemsbiology.org&gt;</rdfs:comment>
+        <rdfs:comment>creator: Fatemeh Mirzadeh Sarcheshmeh &lt;fatemeh.mirzadehsarcheshmeh &lt;-at-&gt; uantwerpen.be&gt;</rdfs:comment>
         <rdfs:comment>creator: Fredrik Levander &lt;fredrik.levander &lt;-at-&gt; immun.lth.se&gt;</rdfs:comment>
         <rdfs:comment>creator: Gerhard Mayer &lt;mayerg97 &lt;-at-&gt; rub.de&gt;</rdfs:comment>
         <rdfs:comment>creator: Jannick Kappelmann &lt;jannick.kappelmann &lt;-at-&gt; gmail.com&gt;</rdfs:comment>
@@ -90645,6 +90646,590 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000215"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The fraction of identified peptides with corresponding number of missed cleavages after user-defined acceptance criteria are applied. The number of missed cleavages per peptide is given in the &apos;number of missed cleavages&apos; column, the respective fraction of such peptides identified in the &apos;fraction&apos; column. The highest &apos;missed cleavages&apos; row is to be interpreted as that number of missed cleavages or higher.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS1 spectra acquired in positive polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000216</oboInOwl:id>
+        <rdfs:label>number of positive polarity MS1 spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000216"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS1 spectra acquired in positive polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS1 spectra acquired in negative polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000217</oboInOwl:id>
+        <rdfs:label>number of negative polarity MS1 spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000217"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS1 spectra acquired in negative polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS2 spectra acquired in positive polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000218</oboInOwl:id>
+        <rdfs:label>number of positive polarity MS2 spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000218"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS2 spectra acquired in positive polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS2 spectra acquired in negative polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000219</oboInOwl:id>
+        <rdfs:label>number of negative polarity MS2 spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000219"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS2 spectra acquired in negative polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000220">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS3 and higher (MSn, n&gt;2) spectra acquired in positive polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000220</oboInOwl:id>
+        <rdfs:label>number of positive polarity MS3+ spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000220"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS3 and higher (MSn, n&gt;2) spectra acquired in positive polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of MS3 and higher (MSn, n&gt;2) spectra acquired in negative polarity in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000221</oboInOwl:id>
+        <rdfs:label>number of negative polarity MS3+ spectra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000221"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of MS3 and higher (MSn, n&gt;2) spectra acquired in negative polarity in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000527"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000528"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STATO_0000035"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The minimum and maximum m/z among detected peaks in MS1 spectra in a single MS run, reported as a [min, max] tuple.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000222</oboInOwl:id>
+        <rdfs:label>MS1 observed m/z bounds</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000222"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The minimum and maximum m/z among detected peaks in MS1 spectra in a single MS run, reported as a [min, max] tuple.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000223 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000223">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The median m/z distance between the MS2 precursor m/z and the upper limit of its fragment scan window, taken across all MS2 spectra in a single MS run.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000223</oboInOwl:id>
+        <rdfs:label>MS2 median acquisition range above precursor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000223"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The median m/z distance between the MS2 precursor m/z and the upper limit of its fragment scan window, taken across all MS2 spectra in a single MS run.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000828"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000829"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run, measured as the distance from the lower to the upper isolation window bound, that is the sum of the isolation window lower offset (MS:1000828) and the isolation window upper offset (MS:1000829). The width is independent of the isolation window target m/z and remains defined if the target falls outside the window bounds.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000224</oboInOwl:id>
+        <rdfs:label>MS2 precursor isolation window median width</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000224"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run, measured as the distance from the lower to the upper isolation window bound, that is the sum of the isolation window lower offset (MS:1000828) and the isolation window upper offset (MS:1000829). The width is independent of the isolation window target m/z and remains defined if the target falls outside the window bounds.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000744"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000225</oboInOwl:id>
+        <rdfs:comment>Reads the selected ion m/z (data-dependent selection). Differs from number of distinct isolation target m/z values, which reads the isolation window target m/z (MS:1000827).</rdfs:comment>
+        <rdfs:label>number of distinct precursor m/z values</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000225"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000226">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000827"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000226</oboInOwl:id>
+        <rdfs:comment>Reads the isolation window target m/z (the isolation scheme; fixed windows in DIA/PRM/SRM). See number of distinct precursor m/z values for the selected ion m/z counterpart; the two differ when isolation is offset from the selected ion or when a target is selected repeatedly.</rdfs:comment>
+        <rdfs:label>number of distinct isolation target m/z values</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000226"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
