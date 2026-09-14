@@ -28,6 +28,7 @@ remark: creator: David Cox <david.cox <-at-> sciex.com>
 remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
 remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
+remark: creator: Fatemeh Mirzadeh Sarcheshmeh <fatemeh.mirzadehsarcheshmeh <-at-> uantwerpen.be>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
 remark: creator: Patrick Boschmann <patrick.boschmann <-at-> uni-tuebingen.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
@@ -28575,41 +28576,173 @@ relationship: has_column UO:0000191 ! fraction
 
 [Term]
 id: MS:4000216
+name: number of positive polarity MS1 spectra
+def: "The number of MS1 spectra acquired in positive polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000217
+name: number of negative polarity MS1 spectra
+def: "The number of MS1 spectra acquired in negative polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000218
+name: number of positive polarity MS2 spectra
+def: "The number of MS2 spectra acquired in positive polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000219
+name: number of negative polarity MS2 spectra
+def: "The number of MS2 spectra acquired in negative polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000220
+name: number of positive polarity MS3+ spectra
+def: "The number of MS3 and higher (MSn, n>2) spectra acquired in positive polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000221
+name: number of negative polarity MS3+ spectra
+def: "The number of MS3 and higher (MSn, n>2) spectra acquired in negative polarity in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000222
+name: MS1 observed m/z bounds
+def: "The minimum and maximum m/z among detected peaks in MS1 spectra in a single MS run, reported as a [min, max] tuple." [PSI:MS]
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
+relationship: has_relation MS:1000528 ! lowest observed m/z
+relationship: has_relation MS:1000527 ! highest observed m/z
+
+[Term]
+id: MS:4000223
+name: MS2 median acquisition range above precursor
+def: "The median m/z distance between the MS2 precursor m/z and the upper limit of its fragment scan window, taken across all MS2 spectra in a single MS run." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+
+[Term]
+id: MS:4000224
+name: MS2 precursor isolation window median width
+def: "The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run, measured as the distance from the lower to the upper isolation window bound, that is the sum of the isolation window lower offset (MS:1000828) and the isolation window upper offset (MS:1000829). The width is independent of the isolation window target m/z and remains defined if the target falls outside the window bounds." [PSI:MS]
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_relation MS:1000828 ! isolation window lower offset
+relationship: has_relation MS:1000829 ! isolation window upper offset
+
+[Term]
+id: MS:4000225
+name: number of distinct precursor m/z values
+def: "The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
+comment: Reads the selected ion m/z (data-dependent selection). Differs from number of distinct isolation target m/z values, which reads the isolation window target m/z (MS:1000827).
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+relationship: has_relation MS:1000744 ! selected ion m/z
+
+[Term]
+id: MS:4000226
+name: number of distinct isolation target m/z values
+def: "The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
+comment: Reads the isolation window target m/z (the isolation scheme; fixed windows in DIA/PRM/SRM). See number of distinct precursor m/z values for the selected ion m/z counterpart; the two differ when isolation is offset from the selected ion or when a target is selected repeatedly.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+relationship: has_relation MS:1000827 ! isolation window target m/z
+
+[Term]
+id: MS:4000227
 name: imaging metric
 def: "QC metric related to a mass spectrometry imaging acquisition, in which each spectrum is associated with a spatial position on the sample." [PSI:MS]
 comment: Imaging metrics are frequently spatially resolved and reported as a matrix, where the row and column indices correspond to the pixel coordinates of the acquisition grid.
 is_a: MS:4000001 ! QC metric
 
 [Term]
-id: MS:4000217
+id: MS:4000228
 name: total ion current image
 def: "The total ion current (MS:1000285) of each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
 comment: The most general measure of signal level. Because the values retain their spatial arrangement, the metric additionally exposes spatially structured acquisition faults, such as intensity gradients across a long acquisition, dropped scan lines, or striping arising from the raster pattern. A value of 0 is distinct from null, which indicates a position that was not acquired.
 is_a: MS:4000006 ! matrix
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units MS:1000043 ! intensity unit
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_relation MS:1000285 ! total ion current
 
 [Term]
-id: MS:4000218
+id: MS:4000229
 name: total ion current image quantiles
 def: "The first to n-th quantile of the total ion current (MS:1000285) values over all acquired spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
 comment: A compact summary of the signal level distribution. Not acquired positions are excluded from the calculation. A downward shift relative to comparable runs may indicate reduced ionisation efficiency, matrix application problems, or source contamination.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units MS:1000043 ! intensity unit
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_relation MS:1000285 ! total ion current
-relationship: has_relation MS:4000217 ! total ion current image
+relationship: has_relation MS:4000228 ! total ion current image
 
 [Term]
-id: MS:4000219
+id: MS:4000230
 name: base peak fraction image
 def: "The base peak intensity (MS:1000505) of each centroid spectrum (MS:1000127) divided by the total ion current (MS:1000285) of the same spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
 comment: Describes how far the signal of each spectrum is concentrated in a single peak, on a scale from close to 0 for a rich spectrum to 1 for a spectrum containing a single peak. High values over a region may indicate matrix crystal artefacts, salt clusters, or loss of analyte signal leaving only a dominant background ion. Profile spectra are peak picked before calculation. Spectra with a total ion current of 0 are reported as null.
@@ -28617,97 +28750,97 @@ is_a: MS:4000006 ! matrix
 is_a: MS:1001848 ! simple ratio of two values
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_relation MS:1000505 ! base peak intensity
 
 [Term]
-id: MS:4000220
+id: MS:4000231
 name: base peak fraction image quantiles
-def: "The first to n-th quantile of the base peak fraction image (MS:4000219) values over all acquired centroid spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
-comment: A compact summary of the base peak fraction image (MS:4000219). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation.
+def: "The first to n-th quantile of the base peak fraction image (MS:4000230) values over all acquired centroid spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: A compact summary of the base peak fraction image (MS:4000230). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_relation MS:4000219 ! base peak fraction image
+relationship: has_relation MS:4000230 ! base peak fraction image
 
 [Term]
-id: MS:4000221
+id: MS:4000232
 name: reference m/z error image
-def: "The relative deviation in parts per million between the observed m/z of a mass reference ion and its theoretical m/z, calculated as 1E6 x (observed m/z - theoretical m/z) / theoretical m/z, for each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. The theoretical m/z of the reference MUST be reported using QC reference m/z (MS:4000224). Positions that were not acquired, and positions in which the reference ion was not detected, are reported as null." [PSI:MS]
+def: "The relative deviation in parts per million between the observed m/z of a mass reference ion and its theoretical m/z, calculated as 1E6 x (observed m/z - theoretical m/z) / theoretical m/z, for each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. The theoretical m/z of the reference MUST be reported using QC reference m/z (MS:4000235). Positions that were not acquired, and positions in which the reference ion was not detected, are reported as null." [PSI:MS]
 comment: An imaging acquisition may run for many hours, during which the mass axis can drift substantially. Because acquisition order maps onto spatial position, such drift appears in this matrix as a spatial gradient or as discontinuities aligned with the raster pattern, information that a single mass accuracy value cannot convey. The metric is ID free: the reference is declared.
 is_a: MS:4000006 ! matrix
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept MS:1000014 ! accuracy
 
 [Term]
-id: MS:4000222
+id: MS:4000233
 name: reference m/z error image quantiles
 def: "The first to n-th quantile of the reference m/z error values over all spectra of an imaging acquisition in which the mass reference ion was detected. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
-comment: A compact summary of the reference m/z error image (MS:4000221). A shift of the central quantiles away from zero indicates a systematic calibration offset, whereas a widening spread indicates drift or instability over the acquisition. Not acquired positions and positions in which the reference ion was not detected are excluded from the calculation.
+comment: A compact summary of the reference m/z error image (MS:4000232). A shift of the central quantiles away from zero indicates a systematic calibration offset, whereas a widening spread indicates drift or instability over the acquisition. Not acquired positions and positions in which the reference ion was not detected are excluded from the calculation.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
 relationship: has_metric_category MS:4000019 ! MS metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
-relationship: has_relation MS:4000221 ! reference m/z error image
+relationship: has_relation MS:4000232 ! reference m/z error image
 
 [Term]
-id: MS:4000223
+id: MS:4000234
 name: acquired pixel fraction
 def: "The number of spectra with unique pixel coordinates in an imaging acquisition divided by the number of positions of the smallest rectangular grid that encloses all acquired pixel coordinates." [PSI:MS]
 comment: A value of 1 indicates a fully populated rectangular acquisition. Values below 1 arise legitimately from acquisitions restricted to a non rectangular region of interest, and illegitimately from acquisitions that were aborted or that lost spectra during conversion. The metric is therefore dependent on experimental design. Only reports absent spectra.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
-id: MS:4000224
+id: MS:4000235
 name: QC reference m/z
 def: "The theoretical m/z of the mass reference ion used by a mass reference based QC metric." [PSI:MS]
-comment: Reported in the metadata of the runQuality or setQuality whose metrics it parameterises. REQUIRED for interpreting reference m/z error image (MS:4000221) and its quantiles (MS:4000222).
+comment: Reported in the metadata of the runQuality or setQuality whose metrics it parameterises. REQUIRED for interpreting reference m/z error image (MS:4000232) and its quantiles (MS:4000233).
 is_a: MS:4000080 ! QC non-metric term
 
 [Term]
-id: MS:4000225
+id: MS:4000236
 name: duplicate pixel coordinate count
 def: "The number of distinct x/y/z pixel coordinates in a singular imaging acquisition at which more than one spectrum of the same type was recorded." [PSI:MS]
 comment: An imaging acquisition normally records at most one spectrum per pixel coordinate. A nonzero value may indicate an export or acquisition defect, such as a stage retrace or a conversion fault, and marks positions that no matrix metric can fully represent, since a matrix cell holds only one value. Multiple spectra of different types may occur in dual polarity or MS2 acquisition methods.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000189 ! count unit
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
 
 [Term]
-id: MS:4000226
+id: MS:4000237
 name: pixel grid dimensions
 def: "The dimensions, in pixels, of the smallest rectangular grid that encloses all acquired pixel coordinates of an imaging acquisition. A value pair (X, Y) represents the extent along x and y, in that order." [PSI:MS]
 comment: Describes the bounding box of the acquisition. The values count pixel positions, not physical distance. A position is counted whether or not a spectrum was acquired at it.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000216 ! imaging metric
+relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000189 ! count unit
 relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
-relationship: has_relation MS:4000223 ! acquired pixel fraction
+relationship: has_relation MS:4000234 ! acquired pixel fraction
 
 [Term]
 id: PEFF:0000001
