@@ -1,7 +1,9 @@
 format-version: 1.2
-data-version: 4.1.261
-date: 02:09:2026 12:00
-saved-by: Fatemeh Mirzadeh Sarcheshmeh
+data-version: 4.1.262
+date: 14:09:2026 16:23
+saved-by: Jonathan Hunter
+subsetdef: unit_group_slim "unit group slim"
+subsetdef: unit_slim "unit slim"
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -149,7 +151,6 @@ synonym: "Property or Attribute" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P
 id: NCIT:C25404
 name: Action
 def: "A thing done." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
-subset: NCIT:C105763
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
 synonym: "Generic Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
