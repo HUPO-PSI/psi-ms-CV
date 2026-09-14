@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.1.262
-date: 07:09:2026 07:30
+date: 14:09:2026 09:00
 saved-by: Patrick Boschmann
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
@@ -28606,12 +28606,13 @@ relationship: has_units MS:1000043 ! intensity unit
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_relation MS:1000285 ! total ion current
+relationship: has_relation MS:4000217 ! total ion current image
 
 [Term]
 id: MS:4000219
 name: base peak fraction image
-def: "The base peak intensity (MS:1000505) of each spectrum divided by the total ion current (MS:1000285) of the same spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
-comment: Describes how far the signal of each spectrum is concentrated in a single peak, on a scale from close to 0 for a rich spectrum to 1 for a spectrum containing a single peak. High values over a region may indicate matrix crystal artefacts, salt clusters, or loss of analyte signal leaving only a dominant background ion. The metric is sensitive to the spectrum representation and values are not comparable between centroid and profile spectra, nor between different peak picking settings. Spectra with a total ion current of 0 are reported as null.
+def: "The base peak intensity (MS:1000505) of each centroid spectrum (MS:1000127) divided by the total ion current (MS:1000285) of the same spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
+comment: Describes how far the signal of each spectrum is concentrated in a single peak, on a scale from close to 0 for a rich spectrum to 1 for a spectrum containing a single peak. High values over a region may indicate matrix crystal artefacts, salt clusters, or loss of analyte signal leaving only a dominant background ion. Profile spectra are peak picked before calculation. Spectra with a total ion current of 0 are reported as null.
 is_a: MS:4000006 ! matrix
 is_a: MS:1001848 ! simple ratio of two values
 relationship: has_metric_category MS:4000009 ! ID free metric
@@ -28624,8 +28625,8 @@ relationship: has_relation MS:1000505 ! base peak intensity
 [Term]
 id: MS:4000220
 name: base peak fraction image quantiles
-def: "The first to n-th quantile of the base peak fraction values over all acquired spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
-comment: A compact summary of the base peak fraction image (MS:4000219). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation. Values are not comparable between centroid and profile spectra.
+def: "The first to n-th quantile of the base peak fraction image (MS:4000219) values over all acquired centroid spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+comment: A compact summary of the base peak fraction image (MS:4000219). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -28633,6 +28634,7 @@ relationship: has_metric_category MS:4000216 ! imaging metric
 relationship: has_units UO:0000191 ! fraction
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:4000219 ! base peak fraction image
 
 [Term]
 id: MS:4000221
@@ -28661,6 +28663,7 @@ relationship: has_metric_category MS:4000216 ! imaging metric
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:4000221 ! reference m/z error image
 
 [Term]
 id: MS:4000223
@@ -28696,8 +28699,8 @@ relationship: has_value_type xsd:integer ! The allowed value-type for this CV te
 [Term]
 id: MS:4000226
 name: pixel grid dimensions
-def: "The dimensions, in pixels, of the smallest rectangular grid that encloses all acquired pixel coordinates of an imaging acquisition. A value pair represents the extent along x and y." [PSI:MS]
-comment: The values count pixel positions, not physical distance. A position is counted whether or not a spectrum was acquired at it.
+def: "The dimensions, in pixels, of the smallest rectangular grid that encloses all acquired pixel coordinates of an imaging acquisition. A value pair (X, Y) represents the extent along x and y, in that order." [PSI:MS]
+comment: Describes the bounding box of the acquisition. The values count pixel positions, not physical distance. A position is counted whether or not a spectrum was acquired at it.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000012 ! single run based metric
