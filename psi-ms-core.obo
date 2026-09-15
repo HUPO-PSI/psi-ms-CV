@@ -4,6 +4,7 @@ date: 28:07:2026 15:14
 saved-by: Douwe Schulte
 default-namespace: MS
 subsetdef: columns "Chromatographic column models"
+subsetdef: core "Core community curated controlled vocabulary"
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
 remark: coverage of namespace-id: MS:$sequence(7,4000000,4999999)$: Mass spectrometry quality control metrics

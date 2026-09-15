@@ -27,6 +27,6 @@ jobs:
         with:
           tag: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          artifacts: "psi-ms.obo,*ms.owl"
+          artifacts: "psi-ms.obo,psi-ms-core.obo,*ms.owl"
           generateReleaseNotes: true
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
