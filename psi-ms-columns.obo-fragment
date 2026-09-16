@@ -3,455 +3,455 @@ id: MS:5000000
 name: ANPEL Laboratory Technologies Inc. chromatographic column model
 def: "Chromatographic column model manufactured by ANPEL Laboratory Technologies Inc." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000001
 name: Advanced Chromatography Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Advanced Chromatography Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000002
 name: Advanced Materials Technology chromatographic column model
 def: "Chromatographic column model manufactured by Advanced Materials Technology." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000003
 name: Agilent chromatographic column model
 def: "Chromatographic column model manufactured by Agilent." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000004
 name: Agilent Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Agilent Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000005
 name: Altmann Analytik chromatographic column model
 def: "Chromatographic column model manufactured by Altmann Analytik." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000006
 name: Analytical Sales & Services chromatographic column model
 def: "Chromatographic column model manufactured by Analytical Sales & Services." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000007
 name: Bischoff chromatographic column model
 def: "Chromatographic column model manufactured by Bischoff." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000008
 name: Bonna-Agela Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Bonna-Agela Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000009
 name: ChromaNik Technologies Inc. chromatographic column model
 def: "Chromatographic column model manufactured by ChromaNik Technologies Inc." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000010
 name: Chromatopak chromatographic column model
 def: "Chromatographic column model manufactured by Chromatopak." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000011
 name: Develosil chromatographic column model
 def: "Chromatographic column model manufactured by Develosil." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000012
 name: Dikma Technologies Inc. chromatographic column model
 def: "Chromatographic column model manufactured by Dikma Technologies Inc." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000013
 name: Dr. Maisch chromatographic column model
 def: "Chromatographic column model manufactured by Dr. Maisch." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000014
 name: ES Industries chromatographic column model
 def: "Chromatographic column model manufactured by ES Industries." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000015
 name: Eprogen / Promigen Life Sciences chromatographic column model
 def: "Chromatographic column model manufactured by Eprogen / Promigen Life Sciences." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000016
 name: FUJIFILM Wako Pure Chemical Corporation chromatographic column model
 def: "Chromatographic column model manufactured by FUJIFILM Wako Pure Chemical Corporation." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000017
 name: Fortis Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Fortis Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000018
 name: GL Sciences chromatographic column model
 def: "Chromatographic column model manufactured by GL Sciences." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000019
 name: Genius Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Genius Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000020
 name: Grace chromatographic column model
 def: "Chromatographic column model manufactured by Grace." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000021
 name: Grace Alltech chromatographic column model
 def: "Chromatographic column model manufactured by Grace Alltech." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000022
 name: Grace Grom chromatographic column model
 def: "Chromatographic column model manufactured by Grace Grom." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000023
 name: Grace Jones chromatographic column model
 def: "Chromatographic column model manufactured by Grace Jones." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000024
 name: Grace Vydac chromatographic column model
 def: "Chromatographic column model manufactured by Grace Vydac." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000025
 name: HILICON chromatographic column model
 def: "Chromatographic column model manufactured by HILICON." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000026
 name: Hamilton Company chromatographic column model
 def: "Chromatographic column model manufactured by Hamilton Company." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000027
 name: Hichrom chromatographic column model
 def: "Chromatographic column model manufactured by Hichrom." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000028
 name: Higgins Analytical chromatographic column model
 def: "Chromatographic column model manufactured by Higgins Analytical." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000029
 name: Hitachi High-Tech chromatographic column model
 def: "Chromatographic column model manufactured by Hitachi High-Tech." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000030
 name: Imtakt chromatographic column model
 def: "Chromatographic column model manufactured by Imtakt." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000031
 name: Interchim Technology chromatographic column model
 def: "Chromatographic column model manufactured by Interchim Technology." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000032
 name: KYA TECH Corporation chromatographic column model
 def: "Chromatographic column model manufactured by KYA TECH Corporation." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000033
 name: Knauer chromatographic column model
 def: "Chromatographic column model manufactured by Knauer." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000034
 name: Macherey-Nagel chromatographic column model
 def: "Chromatographic column model manufactured by Macherey-Nagel." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000035
 name: Merck chromatographic column model
 def: "Chromatographic column model manufactured by Merck." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000036
 name: Merck SeQuant chromatographic column model
 def: "Chromatographic column model manufactured by Merck SeQuant." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000037
 name: Merck Supelco chromatographic column model
 def: "Chromatographic column model manufactured by Merck Supelco." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000038
 name: MicroSolv Technology Corporation chromatographic column model
 def: "Chromatographic column model manufactured by MicroSolv Technology Corporation." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000039
 name: Nacalai Tesque chromatographic column model
 def: "Chromatographic column model manufactured by Nacalai Tesque." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000040
 name: Nanghavi Chromatography Solutions chromatographic column model
 def: "Chromatographic column model manufactured by Nanghavi Chromatography Solutions." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000041
 name: Nanologica chromatographic column model
 def: "Chromatographic column model manufactured by Nanologica." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000042
 name: Nomura Chemical chromatographic column model
 def: "Chromatographic column model manufactured by Nomura Chemical." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000043
 name: Nouryon-Kromasil chromatographic column model
 def: "Chromatographic column model manufactured by Nouryon-Kromasil." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000044
 name: Orochem chromatographic column model
 def: "Chromatographic column model manufactured by Orochem." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000045
 name: Osaka Soda (Shiseido) chromatographic column model
 def: "Chromatographic column model manufactured by Osaka Soda (Shiseido)." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000046
 name: Phase Analytical Technology, LLC chromatographic column model
 def: "Chromatographic column model manufactured by Phase Analytical Technology, LLC." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000047
 name: Phenomenex chromatographic column model
 def: "Chromatographic column model manufactured by Phenomenex." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000048
 name: Restek chromatographic column model
 def: "Chromatographic column model manufactured by Restek." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000049
 name: SEPSERV chromatographic column model
 def: "Chromatographic column model manufactured by SEPSERV." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000050
 name: SIELC Technologies chromatographic column model
 def: "Chromatographic column model manufactured by SIELC Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000051
 name: Sepax Technologies chromatographic column model
 def: "Chromatographic column model manufactured by Sepax Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000052
 name: Shimadzu chromatographic column model
 def: "Chromatographic column model manufactured by Shimadzu." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000053
 name: Shodex chromatographic column model
 def: "Chromatographic column model manufactured by Shodex." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000054
 name: Showa Denko chromatographic column model
 def: "Chromatographic column model manufactured by Showa Denko." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000055
 name: Thermo Scientific chromatographic column model
 def: "Chromatographic column model manufactured by Thermo Scientific." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000056
 name: Tosoh Bioscience chromatographic column model
 def: "Chromatographic column model manufactured by Tosoh Bioscience." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000057
 name: United Chemical Technologies chromatographic column model
 def: "Chromatographic column model manufactured by United Chemical Technologies." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000058
 name: VDS Optilab chromatographic column model
 def: "Chromatographic column model manufactured by VDS Optilab." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000059
 name: Waters chromatographic column model
 def: "Chromatographic column model manufactured by Waters." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000060
 name: Welch Materials chromatographic column model
 def: "Chromatographic column model manufactured by Welch Materials." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000061
 name: Wesley Technologies Inc. chromatographic column model
 def: "Chromatographic column model manufactured by Wesley Technologies Inc." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000062
 name: YMC chromatographic column model
 def: "Chromatographic column model manufactured by YMC." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000063
 name: ZirChrom chromatographic column model
 def: "Chromatographic column model manufactured by ZirChrom." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5000064
 name: Zodiac Life Sciences chromatographic column model
 def: "Chromatographic column model manufactured by Zodiac Life Sciences." [PSI:MS]
 subset: columns
-is_a: MS:1004011 ! chromatographic column model
+is_a: MS:1004013 ! chromatographic column model
 
 [Term]
 id: MS:5001000

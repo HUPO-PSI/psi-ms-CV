@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.258
-date: 28:07:2026 15:14
-saved-by: Douwe Schulte
+data-version: 4.1.262
+date: 16:09:2026 19:50
+saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models"
@@ -36,6 +36,7 @@ remark: creator: Jonathan Hunter <jhunter <-at-> ebi.ac.uk>
 remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
+remark: creator: Fatemeh Mirzadeh Sarcheshmeh <fatemeh.mirzadehsarcheshmeh <-at-> uantwerpen.be>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -7698,7 +7699,7 @@ id: MS:1000928
 name: calibration spectrum
 def: "A spectrum derived from a special calibration source, rather than from the primary injected sample. A calibration spectrum is typically derived from a substance that can be used to correct systematic shift in m/z for spectra of the primary inject sample." [PSI:MS]
 subset: core
-is_a: MS:1000559 ! spectrum type
+is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1000929
@@ -29345,6 +29346,15 @@ is_a: MS:1000572 ! binary data compression type
 relationship: has_value_type xsd:string ! The allowed valute-type for this CV term
 
 [Term]
+id: MS:1003870
+name: index array
+def: "A data array whose values are index values for another collection or array." [PSI:MS]
+subset: core
+xref: binary-data-type:MS\:1000519 "32-bit integer"
+xref: binary-data-type:MS\:1000522 "64-bit integer"
+is_a: MS:1000513 ! binary data array
+
+[Term]
 id: MS:1003901
 name: zero intensity point trimming
 def: "Apply an algorithm to remove excess zero intensity value data points from a spectrum. Data may be retained for interperatbility such as retaining only zeros that flank non-zero intensity value data points from a profile spectrum.." [PSI:MS]
@@ -30145,6 +30155,22 @@ is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:1004011
+name: KPOP dataset identifier
+def: "Dataset identifier issued by the KPOP repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+subset: core
+is_a: MS:1000878 ! external reference identifier
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004012
+name: KPOP dataset URI
+def: "URI that allows the access to one dataset in the KPOP repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
+subset: core
+is_a: MS:1000878 ! external reference identifier
+relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004013
 name: chromatographic column model
 def: "A specific chromatographic column product, identified by its manufacturer and product name." [PSI:MS]
 subset: columns
@@ -32573,6 +32599,149 @@ is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_column MS:1003044 ! number of missed cleavages
 relationship: has_column UO:0000191 ! fraction
+
+[Term]
+id: MS:4000216
+name: number of positive polarity MS1 spectra
+def: "The number of MS1 spectra acquired in positive polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000217
+name: number of negative polarity MS1 spectra
+def: "The number of MS1 spectra acquired in negative polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000218
+name: number of positive polarity MS2 spectra
+def: "The number of MS2 spectra acquired in positive polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000219
+name: number of negative polarity MS2 spectra
+def: "The number of MS2 spectra acquired in negative polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000220
+name: number of positive polarity MS3+ spectra
+def: "The number of MS3 and higher (MSn, n>2) spectra acquired in positive polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000221
+name: number of negative polarity MS3+ spectra
+def: "The number of MS3 and higher (MSn, n>2) spectra acquired in negative polarity in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000222
+name: MS1 observed m/z bounds
+def: "The minimum and maximum m/z among detected peaks in MS1 spectra in a single MS run, reported as a [min, max] tuple." [PSI:MS]
+subset: mzQC
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000021 ! MS1 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_concept STATO:0000035 ! range
+relationship: has_relation MS:1000528 ! lowest observed m/z
+relationship: has_relation MS:1000527 ! highest observed m/z
+
+[Term]
+id: MS:4000223
+name: MS2 median acquisition range above precursor
+def: "The median m/z distance between the MS2 precursor m/z and the upper limit of its fragment scan window, taken across all MS2 spectra in a single MS run." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+
+[Term]
+id: MS:4000224
+name: MS2 precursor isolation window median width
+def: "The median width of the precursor isolation window applied during MS2 fragmentation in a single MS run, measured as the distance from the lower to the upper isolation window bound, that is the sum of the isolation window lower offset (MS:1000828) and the isolation window upper offset (MS:1000829). The width is independent of the isolation window target m/z and remains defined if the target falls outside the window bounds." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_relation MS:1000828 ! isolation window lower offset
+relationship: has_relation MS:1000829 ! isolation window upper offset
+
+[Term]
+id: MS:4000225
+name: number of distinct precursor m/z values
+def: "The number of distinct selected ion m/z values (MS:1000744) recorded in MS2 scan headers in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
+subset: mzQC
+comment: Reads the selected ion m/z (data-dependent selection). Differs from number of distinct isolation target m/z values, which reads the isolation window target m/z (MS:1000827).
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+relationship: has_relation MS:1000744 ! selected ion m/z
+
+[Term]
+id: MS:4000226
+name: number of distinct isolation target m/z values
+def: "The number of distinct isolation window target m/z values (MS:1000827) programmed for fragmentation in a single MS run, where two values are considered identical if they agree after rounding to 2 decimal places." [PSI:MS]
+subset: mzQC
+comment: Reads the isolation window target m/z (the isolation scheme; fixed windows in DIA/PRM/SRM). See number of distinct precursor m/z values for the selected ion m/z counterpart; the two differ when isolation is offset from the selected ion or when a target is selected repeatedly.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000022 ! MS2 metric
+relationship: has_metric_category MS:1000792 ! isolation window attribute
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+relationship: has_relation MS:1000827 ! isolation window target m/z
 
 [Term]
 id: PEFF:0000001
