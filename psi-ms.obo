@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: 4.1.262
-date: 16:09:2026 19:50
+data-version: 4.2.000
+date: 18:09:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
-subsetdef: columns "PSI-MS Chromatographic column models"
+subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
 subsetdef: NCIT "NCI Thesaurus terms"
 subsetdef: mzQC "Mass spectrometry quality control terms"
 subsetdef: PEFF "PSI Extended FASTA Format terms"
@@ -30173,7 +30173,7 @@ relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV ter
 id: MS:1004013
 name: chromatographic column model
 def: "A specific chromatographic column product, identified by its manufacturer and product name." [PSI:MS]
-subset: columns
+subset: core
 is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1003920 ! chromatographic column
 
