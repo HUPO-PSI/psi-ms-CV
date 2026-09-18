@@ -7,10 +7,12 @@ The [Human Proteome Organization (HUPO)–Proteomics Standards Initiative (PSI)]
 
 ### OBO and OWL files
 
-The main files of this repository are the OBO and OWL files: 
+The vocabulary is maintained as two source files and released as two generated ones:
 
-- **psi-ms.obo**: This file is the main source of the PSI-MS CV terms. All changes should be made in the psi-ms.obo file including addintions, changes, etc.  
-- **psi-ms.owl**: This is a read-only file generate from the **psi-ms.obo** file. This file is used by multiple services including OLS, The OBO Foundry, etc. 
+- **psi-ms-core.obo**: This file is the main source of the PSI-MS CV terms. All hand-written changes should be made here, including additions and edits. It carries the `data-version` the release is stamped with, and declares every typedef and subset the vocabulary uses.
+- **psi-ms-columns.obo-fragment**: Chromatographic column models (MS:5000000–MS:5999999), derived from the [RepoRT column database](https://github.com/michaelwitting/RepoRT). Term stanzas only, with no header — it is not a standalone OBO document.
+- **psi-ms.obo**: This is a read-only release artefact built from the two above.
+- **psi-ms.owl**: This is a read-only release artefact generated from **psi-ms.obo**..
 
 > The [robot.jar tool](https://github.com/ontodev/robot/) is used to convert from obo format to owl. 
 
@@ -22,11 +24,11 @@ term, from proposing the term name and description to defining its relationships
 
 ### Submitting a new term 
 
-In order to submit a new term, please `fork` or make a new `branch` of this repository. Then, **you can add your CV term in the psi-ms.obo file**. Please do not modify the owl which will be auto-generate from the obo file. Finally, you can do a Pull Request to the main repo and a member of the HUPO-PSI CV group will review and merge the PR.  Alternatively, please open an issue and fill in whatever information you have and we will work with you to get it into the shape we need.
+In order to submit a new term, please `fork` or make a new `branch` of this repository. Then, **you can add your CV term in the psi-ms-core.obo file**. Please do not modify `psi-ms.obo` or `psi-ms.owl`, which are generated from it. Finally, you can do a Pull Request to the main repo and a member of the HUPO-PSI CV group will review and merge the PR.  Alternatively, please open an issue and fill in whatever information you have and we will work with you to get it into the shape we need.
 
 > If you're requesting multiple related terms, you can submit them in a single issue/pull request.
 
-Please keep in mind that when you change the psi-ms.obo file you must increase the version of the file, change the `date` and `data-version` headers, and add your name to the list of contributors. 
+Please keep in mind that when you change the psi-ms-core.obo file you must increase the version of the file, change the `date` and `data-version` headers, and add your name to the list of contributors. 
 
 ```obo
 format-version: 1.2
@@ -34,6 +36,8 @@ data-version: 4.1.155
 date: 03:06:2024 13:22
 saved-by: Eric Deutsch
 ```
+
+`psi-ms-columns.obo-fragment` is generated data — please do not edit it by hand.
 
 ### How to cite
 
