@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.1.261
-date: 02:09:2026 12:00
-saved-by: Fatemeh Mirzadeh Sarcheshmeh
+data-version: 4.1.262
+date: 18:09:2026 14:00
+saved-by: Douwe Schulte
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
@@ -26344,6 +26344,44 @@ name: KPOP dataset URI
 def: "URI that allows the access to one dataset in the KPOP repository. A dataset can refer to either a single sample as part of a study, or all samples that are part of the study corresponding to a publication." [PSI:PI]
 is_a: MS:1000878 ! external reference identifier
 relationship: has_value_type xsd:anyURI ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004013
+name: Lutefisk
+def: "Lutefisk is a program for the de novo interpretation of peptide CID spectra." [PSI:MS, DOI:10.1385/MB:22:3:301, DOI:10.1021/ac001196o, DOI:10.1385/1-59259-045-4:41, DOI:10.1002/(SICI)1097-0231(19970615)11:9<1067::AID-RCM953>3.0.CO;2-L, https://sourceforge.net/projects/lutefiskxp/, https://www.hairyfatguy.com/lutefisk/]
+is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004014
+name: Lutefisk:Pr(C)
+def: "The estimated probability of being correct. Pr(C) is calculated from an empirically-derived 2-order polynomial fit to a weighted average of the four other scores (Pevzscr, Quality, Intscr, and X-corr)." [PSI:MS, https://www.hairyfatguy.com/lutefisk/docs/]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004015
+name: Lutefisk:PevzScr
+def: "An adaptation of the ideas presented by Dancik et al (J. of Comput. Biol (1999) Vol 6, 327), which is a score that penalizes for the absence of expected ions and accounts for the possibility of random matches." [PSI:MS, DOI:10.1089/106652799318300, https://www.hairyfatguy.com/lutefisk/docs/]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004016
+name: Lutefisk:Quality
+def: "The percentage of the peptide mass that can be accounted for by a contiguous ion series." [PSI:MS, https://www.hairyfatguy.com/lutefisk/docs/]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004017
+name: Lutefisk:X-corr
+def: "The cross-correlation score that has been normalized by its auto-correlation score." [PSI:MS, https://www.hairyfatguy.com/lutefisk/docs/]
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
