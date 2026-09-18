@@ -53,20 +53,17 @@ jobs:
             **This PR is the manual review gate for the release chain.** Please review and merge it to continue the release process.
             Auto-merge workflow to be re-enabled once the release chain is fully tested and stable.
 
-      # Auto-merge is disabled, to introduce a temporary manual review gate for the release chain. 
-      # Once the release chain is fully tested and stable, auto-merge can be re-enabled.
-      #
-      # - name: Approve pull request
-      #   if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
-      #   uses: juliangruber/approve-pull-request-action@v1
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     number: ${{ steps.cpr.outputs.pull-request-number }}
-      #
-      # - name: Merge pull request
-      #   if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
-      #   uses: peter-evans/enable-pull-request-automerge@v3
-      #   with:
-      #     token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
-      #     pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
-      #     merge-method: squash
+      - name: Approve pull request
+        if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
+        uses: juliangruber/approve-pull-request-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ steps.cpr.outputs.pull-request-number }}
+
+      - name: Merge pull request
+        if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
