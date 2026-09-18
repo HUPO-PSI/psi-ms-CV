@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.1/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.2/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>18:09:2026 13:00</oboInOwl:date>
+        <oboInOwl:date>18:09:2026 12:00</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Jonathan Hunter</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Douwe Schulte</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
@@ -83017,6 +83017,159 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>binary-data-type:MS:1000522</owl:annotatedTarget>
         <rdfs:label>64-bit integer</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003871 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003871">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <obo:IAO_0000115>Lutefisk is a program for the de novo interpretation of peptide CID spectra.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003871</oboInOwl:id>
+        <rdfs:label>Lutefisk</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003871"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Lutefisk is a program for the de novo interpretation of peptide CID spectra.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.1002/(SICI)1097-0231(19970615)11:9&lt;1067::AID-RCM953&gt;3.0.CO;2-L</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1021/ac001196o</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1385/1-59259-045-4:41</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1385/MB:22:3:301</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://sourceforge.net/projects/lutefiskxp/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.hairyfatguy.com/lutefisk/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003872 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003872">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The estimated probability of being correct. Pr(C) is calculated from an empirically-derived 2-order polynomial fit to a weighted average of the four other scores (Pevzscr, Quality, Intscr, and X-corr).</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003872</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Lutefisk:Pr(C)</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003872"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The estimated probability of being correct. Pr(C) is calculated from an empirically-derived 2-order polynomial fit to a weighted average of the four other scores (Pevzscr, Quality, Intscr, and X-corr).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.hairyfatguy.com/lutefisk/docs/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003873 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003873">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An adaptation of the ideas presented by Dancik et al (J. of Comput. Biol (1999) Vol 6, 327), which is a score that penalizes for the absence of expected ions and accounts for the possibility of random matches.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003873</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Lutefisk:PevzScr</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003873"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An adaptation of the ideas presented by Dancik et al (J. of Comput. Biol (1999) Vol 6, 327), which is a score that penalizes for the absence of expected ions and accounts for the possibility of random matches.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.1089/106652799318300</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.hairyfatguy.com/lutefisk/docs/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003874 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003874">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The percentage of the peptide mass that can be accounted for by a contiguous ion series.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003874</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Lutefisk:Quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003874"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The percentage of the peptide mass that can be accounted for by a contiguous ion series.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.hairyfatguy.com/lutefisk/docs/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1003875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003875">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The cross-correlation score that has been normalized by its auto-correlation score.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1003875</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Lutefisk:X-corr</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003875"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The cross-correlation score that has been normalized by its auto-correlation score.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.hairyfatguy.com/lutefisk/docs/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
