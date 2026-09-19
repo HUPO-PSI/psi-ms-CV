@@ -34,29 +34,20 @@ jobs:
         fastobo-validator --duplicates psi-ms.obo
     - uses: actions/setup-python@v6
       with:
-          python-version: '3.10'
+          python-version: '3.12'
+    - name: Setup dependencies
+      run: |
+        python -m pip install packaging fastobo
     - name: Check sorting
       run: |
-        python -m pip install fastobo
         python scripts/check_sorted.py psi-ms-core.obo
         python scripts/check_sorted.py psi-ms-columns.obo-fragment
         python scripts/check_sorted.py psi-ms.obo
+        python scripts/check_subsets.py psi-ms-core.obo
 
-  # The committed psi-ms.obo is rebuilt after merge, so on a source PR it is one build
-  # behind and validating it proves nothing about the change under review. This builds
-  # what the PR *would* release and validates that instead, then throws it away.
-  build-release:
-    runs-on: ubuntu-latest
-    container:
-      image: obolibrary/odkfull
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v6
-      with:
-          python-version: '3.10'
     - name: Splice and validate the release OBO this PR would produce
       run: |
-        python -m pip install fastobo
         python scripts/build_release_obo.py --output /tmp/psi-ms.obo
         fastobo-validator --duplicates /tmp/psi-ms.obo
         python scripts/check_sorted.py /tmp/psi-ms.obo
+        python scripts/check_subsets.py /tmp/psi-ms.obo
