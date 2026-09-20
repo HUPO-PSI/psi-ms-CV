@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.2
-date: 18:09:2026 12:00
-saved-by: Douwe Schulte
+data-version: 4.2.3
+date: 20:09:2026 12:00
+saved-by: Chris Bielow
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -32784,6 +32784,147 @@ relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 relationship: has_relation MS:1000827 ! isolation window target m/z
+
+
+[Term]
+id: MS:4000238
+name: targeted compound name
+def: "The name of a targeted/expected compound, as chosen by the user or the software producing the metric (e.g., a trivial or a systematic name, but not a database identifier)." [PSI:MS]
+subset: mzQC
+comment: Used as the compound-identifying column of targeted compound table metrics, so that the set of compounds is defined by the data and not by the controlled vocabulary.
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000239
+name: targeted compound database identifier
+def: "The database identifier of a targeted/expected compound. The type of identifier should be given as a prefix, as in CHEBI:15882, to allow for unambiguous resolution, e.g., via identifiers.org." [PSI:MS]
+subset: mzQC
+comment: Complements MS:4000238 (targeted compound name) in targeted compound table metrics with an unambiguous, machine-readable identification of the compounds, e.g., by ChEBI, HMDB or PubChem Compound identifiers. Resolvable structure-based identifiers, such as InChI or InChIKey, are suitable as well, but SMILES strings are not, as they are not unique.
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000240
+name: targeted compound retention time deviation
+def: "The deviation of the observed from the expected retention time of a targeted/expected compound, calculated as observed minus expected retention time; positive values indicate a later elution than expected. The compound needs to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000241
+name: targeted compound intensity
+def: "The intensity of the chromatographic peak of a targeted/expected compound, e.g., its apex intensity or its integrated intensity (peak area). The same kind of intensity needs to be used for all compounds of a run and for all runs that are compared. The compound needs to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000242
+name: targeted compound retention time deviation quantiles
+def: "From the distribution of the deviations of the observed from the expected retention times (observed minus expected) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: A tight distribution close to zero indicates stable chromatography; a shifted Q2 indicates a systematic retention time drift, and a wide interquartile range (Q3-Q1) indicates compound-dependent deviations.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000243
+name: targeted compound signal-to-noise ratio quantiles
+def: "From the distribution of signal-to-noise ratios at the chromatographic peak apex of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware'). As compounds falling below the detection limit do not contribute, a loss of sensitivity may shift the quantiles less than expected; hence, they should be interpreted together with the metric 'number of detected targeted compounds'.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1001884 ! signal-to-noise ratio
+relationship: has_value_concept STATO:0000291 ! quantile
+
+[Term]
+id: MS:4000244
+name: targeted compound peak width at half-maximum quantiles
+def: "From the distribution of chromatographic peak full widths at half-maximum (FWHM) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Broadening peaks indicate a degrading chromatographic separation, e.g., due to column aging.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000086 ! full width at half-maximum
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000245
+name: targeted compound intensity mean
+def: "From the distribution of chromatographic peak apex intensities of a set of targeted/expected compounds (e.g., from a QC mix), the mean. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: A drop of the mean intensity across runs of the same method points to a loss of sensitivity, e.g., due to a contaminated ion source or a degrading sample. Note that the mean is dominated by the most intense compounds and that compounds falling below the detection limit do not contribute, which can mask a loss of sensitivity; hence, the mean should be interpreted together with the metric 'number of detected targeted compounds'.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000246
+name: targeted compound retention time deviations
+def: "The deviation of the observed from the expected retention time (observed minus expected) for each compound of a set of targeted/expected compounds (e.g., from a QC mix). The compounds are identified by the 'targeted compound name' and 'targeted compound database identifier' columns, and the corresponding deviations are given in the 'targeted compound retention time deviation' column. Compounds missing from the table are interpreted as not detected. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: In contrast to the aggregated MS:4000242, this metric retains the per-compound values, which makes it possible to see whether a retention time shift affects all compounds alike (e.g., due to a delayed injection) or only part of the retention time range (e.g., due to a changed oven temperature program).
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_column MS:4000238 ! targeted compound name
+relationship: has_column MS:4000239 ! targeted compound database identifier
+relationship: has_column MS:4000240 ! targeted compound retention time deviation
+
+[Term]
+id: MS:4000247
+name: targeted compound intensities
+def: "The intensity of the chromatographic peak of each compound of a set of targeted/expected compounds (e.g., from a QC mix). The compounds are identified by the 'targeted compound name' and 'targeted compound database identifier' columns, and the corresponding intensities are given in the 'targeted compound intensity' column. Compounds missing from the table are interpreted as not detected. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: In contrast to the aggregated MS:4000245 (the mean of the peak apex intensities), this metric retains the per-compound values, which makes it possible to distinguish a global loss of sensitivity from a loss affecting only compounds of a certain volatility, polarity or concentration.
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_column MS:4000238 ! targeted compound name
+relationship: has_column MS:4000239 ! targeted compound database identifier
+relationship: has_column MS:4000241 ! targeted compound intensity
+
+[Term]
+id: MS:4000248
+name: number of detected targeted compounds
+def: "The number of compounds of a set of targeted/expected compounds (e.g., from a QC mix) that are detected within the run. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Only comparable between runs using the same set of targeted compounds. A decrease across runs of the same method points to a loss of sensitivity, as the least abundant compounds are the first to fall below the detection limit. Complements the aggregated metrics MS:4000242 to MS:4000245, which consider detected compounds only, and equals the number of rows of the tables MS:4000246 and MS:4000247.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
 
 [Term]
 id: PEFF:0000001
