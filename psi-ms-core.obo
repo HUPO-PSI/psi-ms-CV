@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.2.2
+data-version: 4.2.3
 date: 18:09:2026 12:00
 saved-by: Douwe Schulte
 default-namespace: MS
@@ -30218,6 +30218,39 @@ def: "A specific chromatographic column product, identified by its manufacturer 
 subset: core
 is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1004014
+name: isolation window target ion mobility
+def: "The primary or reference ion mobility coordinate about which the isolation window is defined." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004015
+name: ion mobility isolation window lower offset
+def: "The extent of the isolation window below the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004016
+name: ion mobility isolation window upper offset
+def: "The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
