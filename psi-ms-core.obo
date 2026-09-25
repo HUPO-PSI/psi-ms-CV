@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.2
-date: 18:09:2026 12:00
-saved-by: Douwe Schulte
+data-version: 4.2.3
+date: 25:09:2026 12:00
+saved-by: Fatemeh Mirzadeh Sarcheshmeh
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -32618,6 +32618,10 @@ relationship: has_optional_column MS:4000072 ! observed mass accuracy
 relationship: has_optional_column MS:1000894 ! retention time
 relationship: has_optional_column MS:1000897 ! predicted retention time
 relationship: has_optional_column MS:1003251 ! count of identified spectra
+relationship: has_optional_column MS:1002412 ! total XIC area
+relationship: has_optional_column MS:4000245 ! chromatographic peak start time
+relationship: has_optional_column MS:4000246 ! chromatographic peak end time
+relationship: has_optional_column MS:4000247 ! chromatographic peak width at half maximum
 
 [Term]
 id: MS:4000214
@@ -32784,6 +32788,45 @@ relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 relationship: has_relation MS:1000827 ! isolation window target m/z
+
+[Term]
+id: MS:4000245
+name: chromatographic peak start time
+def: "The retention time at which the integration boundary of a chromatographic peak begins." [PSI:MS]
+subset: mzQC
+comment: Can describe the start of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000246
+name: chromatographic peak end time
+def: "The retention time at which the integration boundary of a chromatographic peak ends." [PSI:MS]
+subset: mzQC
+comment: Can describe the end of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000247
+name: chromatographic peak width at half maximum
+def: "The width of a chromatographic peak measured at half of its maximum height." [PSI:MS]
+subset: mzQC
+comment: Per peak counterpart of the distribution level metrics XIC-FWHM quantiles (MS:4000051) and targeted compound peak width at half-maximum quantiles (MS:4000244).
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000086 ! full width at half-maximum
+relationship: has_units UO:0000010 ! second
 
 [Term]
 id: PEFF:0000001
