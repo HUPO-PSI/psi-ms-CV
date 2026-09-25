@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.2
-date: 18:09:2026 12:00
-saved-by: Douwe Schulte
+data-version: 4.2.3
+date: 25:09:2026 13:00
+saved-by: Franziska Nicolaus
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -37,6 +37,7 @@ remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: creator: Fatemeh Mirzadeh Sarcheshmeh <fatemeh.mirzadehsarcheshmeh <-at-> uantwerpen.be>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
+remark: creator: Franziska Nicolaus <f.nicolaus <-at-> fz-juelich.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -30220,6 +30221,20 @@ is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1003920 ! chromatographic column
 
 [Term]
+id: MS:1004014
+name: MRMhub
+def: "Software for quantitative metabolomics and lipidomics using targeted mass spectrometry data, supporting peak integration, quantification, quality control, and signal correction workflows." [PSI:MS]
+is_a: MS:1002964 ! Lipidomics analysis software
+
+[Term]
+id: MS:1004015
+name: monitored feature identifier
+def: "Identifier of a monitored feature in a quantitative mass spectrometry dataset." [PSI:MS]
+comment: A feature represents a measured or monitored signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, a m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as 'PC 34:1', by its precursor m/z '760.5853', or by a precursor-to-fragment transition such as '760.5853>184.0733'
+is_a: MS:1001828 ! feature attribute
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
 id: MS:4000000
 name: PSI-MS CV Quality Control Vocabulary
 def: "PSI Quality Control controlled vocabulary term." [PSI:MS]
@@ -32784,6 +32799,102 @@ relationship: has_metric_category MS:1000792 ! isolation window attribute
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 relationship: has_units UO:0000189 ! count unit
 relationship: has_relation MS:1000827 ! isolation window target m/z
+
+[Term]
+id: MS:4000227
+name: concentration coefficient of variation
+def: "Coefficient of variation calculated as the standard deviation divided by the mean concentration." [PSI:MS]
+subset: mzQC
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000187 ! percent
+
+[Term]
+id: MS:4000228
+name: signal-to-blank ratio
+def: "Ratio between the median quantitative signal measured in study samples and the median quantitative signal measured in corresponding procedural blank samples." [PSI:MS]
+subset: mzQC
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000190 ! ratio
+
+[Term]
+id: MS:4000229
+name: coefficient of determination
+def: "Coefficient of determination (R²) obtained from a linear regression between quantitative signal and analyzed amount." [PSI:MS]
+subset: mzQC
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000564 ! coefficient of determination
+relationship: has_units UO:0000186 ! dimensionless unit
+
+[Term]
+id: MS:4000230
+name: normalized slope
+def: "Slope of the linear regression fitted between quantitative signal and analyzed amount, after normalization." [PSI:MS]
+subset: mzQC
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000186 ! dimensionless unit
+
+[Term]
+id: MS:4000231
+name: normalized intercept
+def: "Intercept of the linear regression fitted between quantitative signal and analyzed amount, after normalization." [PSI:MS]
+subset: mzQC
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000186 ! dimensionless unit
+
+[Term]
+id: MS:4000232
+name: pooled batch quality control concentration coefficient of variation
+def: "The coefficient of variation of quantified concentrations for each monitored feature measured in pooled Batch Quality Control (BQC) samples." [PSI:MS]
+subset: mzQC
+comment: BQC samples are pooled study samples repeatedly extracted and measured alongside the study samples, capturing process variability including sample preparation. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
+is_a: MS:4000005 ! table
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000010 ! quantification based metric
+relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000XX1 ! monitored feature identifier
+relationship: has_column MS:4000XX2 ! concentration coefficient of variation
+
+[Term]
+id: MS:4000233
+name: pooled technical quality control concentration coefficient of variation
+def: "The coefficient of variation of quantified concentrations for each monitored feature measured in pooled Technical Quality Control (TQC) samples." [PSI:MS]
+subset: mzQC
+comment: Technical Quality Control (TQC) samples are pooled extracts measured at regular intervals, capturing instrument variability. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
+is_a: MS:4000005 ! table
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000010 ! quantification based metric
+relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000XX1 ! monitored feature identifier
+relationship: has_column MS:4000XX2 ! concentration coefficient of variation
+
+[Term]
+id: MS:4000234
+name: median-based signal-to-blank ratio
+def: "Ratio between the median quantitative signal measured in study samples and the median quantitative signal measured in corresponding procedural blank samples for each monitored feature." [PSI:MS]
+subset: mzQC
+is_a: MS:4000005 ! tablerelationship: has_value_type xsd:float ! The allowed value-type for this CV termrelationship: has_metric_category MS:4000010 ! quantification based metric
+relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000XX1 ! monitored feature identifier
+relationship: has_column MS:4000XX3 ! signal-to-blank ratio
+
+[Term]
+id: MS:4000235
+name: response curve linearity
+def: "Linear regression parameters describing the relationship between quantitative signal and analyzed amount for each monitored feature in a dilution series." [PSI:MS]
+subset: mzQC
+is_a: MS:4000005 ! table
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_metric_category MS:4000010 ! quantification based metric
+relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000013 ! multiple runs based metric
+relationship: has_column MS:4000XX1 ! monitored feature identifier
+relationship: has_column MS:4000XX4! coefficient of determination
+relationship: has_column MS:4000XX5 ! normalized slope
+relationship: has_column MS:4000XX6 ! normalized intercept
+relationship: has_relation MS:1001816 ! dilution series, concentration X
 
 [Term]
 id: PEFF:0000001
