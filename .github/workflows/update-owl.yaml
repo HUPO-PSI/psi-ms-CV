@@ -1,8 +1,14 @@
 name: "Update OWL"
 
+# Fires on the built psi-ms.obo, not its sources -- a source push would convert the
+# pre-splice file. The two jobs are complements of the same guard: the psi-ms.obo push
+# generates the OWL, and the merge of that OWL comes back here to be tagged.
 on:
   push:
     branches: [master]
+    paths:
+      - "psi-ms.obo"
+      - "psi-ms.owl"
 
 jobs:
   generate-owl:
@@ -14,11 +20,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Extract version from OBO
-        run: |
-          CV_VERSION=`grep data-version psi-ms.obo | grep -oP "(\d+.\d+.\d+)"`
-          echo CV_VERSION=${CV_VERSION}
-          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
       - name: Generate OWL
         run: |
           # Replace the imports of the UO and PATO ontology .obo files with the equivalent .owl files
@@ -49,20 +50,68 @@ jobs:
           title: Update OWL file
           body: This automated PR updates the OWL file corresponding to the OBO file
       - name: Approve pull request
-        if: (steps.cpr.outputs.pull-request-operation == 'created' ||	steps.cpr.outputs.pull-request-operation == 'updated')
+        if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
         uses: juliangruber/approve-pull-request-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ steps.cpr.outputs.pull-request-number }}
       - name: Merge pull request
-        if: (steps.cpr.outputs.pull-request-operation == 'created' ||	steps.cpr.outputs.pull-request-operation == 'updated')
+        if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
+
+  # Tags the OWL merge commit, which is the first commit holding both the OBO and the OWL
+  # built from it. Tagging in generate-owl tagged the psi-ms.obo commit one earlier, and
+  # make-release-on-tag checks out the tag, so every release shipped the previous OWL.
+  tag:
+    if: ${{ contains(github.event.head_commit.message, 'Update OWL file') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # github-tag-action reads git history. custom_tag bypasses its bump calculation,
+          # which is why a shallow clone has worked, but it is documented as needing the
+          # full history and the guard below wants the tags anyway.
+          fetch-depth: 0
+
+      - name: Extract version from OBO
+        run: |
+          CV_VERSION=$(grep -m1 '^data-version:' psi-ms.obo | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          echo "CV_VERSION=${CV_VERSION}" >> $GITHUB_ENV
+
+      - name: Assert the OWL was built from this OBO
+        # The commit-message gate is what lands this job on the right commit. This turns the
+        # invariant that gate exists to protect into a hard failure instead of a silently
+        # wrong release: every release up to and including v4.1.257 would have failed here.
+        run: |
+          OWL_VERSION=$(grep -m1 'owl:versionIRI' psi-ms.owl | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+          echo "psi-ms.obo data-version: ${CV_VERSION}"
+          echo "psi-ms.owl versionIRI:   ${OWL_VERSION}"
+          if [ "${CV_VERSION}" != "${OWL_VERSION}" ]; then
+            echo "::error::psi-ms.owl is built from '${OWL_VERSION}', not '${CV_VERSION}' -- refusing to tag."
+            exit 1
+          fi
+
+      - name: Skip if already tagged
+        # Reachable whenever this job runs at an unchanged data-version -- a revert commit
+        # (whose subject still contains 'Update OWL file'), or a hand-edited psi-ms.owl that
+        # generate-owl regenerates and merges back under that same subject.
+        run: |
+          if git ls-remote --exit-code --tags origin "refs/tags/v${CV_VERSION}" >/dev/null 2>&1; then
+            echo "::notice::v${CV_VERSION} is already tagged; nothing to release."
+            echo "ALREADY_TAGGED=true" >> $GITHUB_ENV
+          fi
+
       - name: GitHub Tag
-        id: new_tag
+        if: env.ALREADY_TAGGED != 'true'
+        # The PAT is required: a tag pushed with GITHUB_TOKEN does not trigger further
+        # workflows, so make-release-on-tag would never fire.
         uses: mathieudutour/github-tag-action@v5.6
         with:
           github_token: ${{ secrets.PSI_MS_CV_GITHUB_TOKEN }}
