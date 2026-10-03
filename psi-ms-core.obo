@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.2
-date: 18:09:2026 12:00
-saved-by: Douwe Schulte
+data-version: 4.2.3
+date: 20:09:2026 12:00
+saved-by: Joshua Klein
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -29358,6 +29358,7 @@ is_a: MS:1000513 ! binary data array
 id: MS:1003871
 name: Lutefisk
 def: "Lutefisk is a program for the de novo interpretation of peptide CID spectra." [PSI:MS, DOI:10.1385/MB:22:3:301, DOI:10.1021/ac001196o, DOI:10.1385/1-59259-045-4:41, DOI:10.1002/(SICI)1097-0231(19970615)11:9<1067::AID-RCM953>3.0.CO;2-L, https://sourceforge.net/projects/lutefiskxp/, https://www.hairyfatguy.com/lutefisk/]
+subset: core
 is_a: MS:1001456 ! analysis software
 
 [Term]
