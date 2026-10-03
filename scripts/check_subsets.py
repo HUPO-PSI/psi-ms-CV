@@ -56,9 +56,9 @@ def main():
     cv = fastobo.load(path)
     failed = 0
     for term in cv:
-        if valid := check_term(term):
-            continue
         if isinstance(term.id, PrefixedIdent):
+            if valid := check_term(term):
+                continue
             subset = get_subset_for_id(term.id)
             if valid.clause_found:
                 for clause in find_clauses_of(term, SubsetClause):
