@@ -30221,7 +30221,7 @@ relationship: part_of MS:1003920 ! chromatographic column
 
 [Term]
 id: MS:1004014
-name: isolation window target ion mobility
+name: ion mobility isolation window target
 def: "The primary or reference ion mobility coordinate about which the isolation window is defined." [PSI:MS]
 subset: core
 is_a: MS:1000792 ! isolation window attribute
