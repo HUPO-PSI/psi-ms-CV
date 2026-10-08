@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.2.3
-date: 20:09:2026 07:00
+date: 08:10:2026 12:00
 saved-by: Patrick Boschmann
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
@@ -32870,6 +32870,7 @@ relationship: has_metric_category MS:4000227 ! imaging metric
 relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_relation MS:4000235 ! QC reference m/z
 
 [Term]
 id: MS:4000233
@@ -32886,6 +32887,7 @@ relationship: has_units UO:0000169 ! parts per million
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000291 ! quantile
 relationship: has_relation MS:4000232 ! reference m/z error image
+relationship: has_relation MS:4000235 ! QC reference m/z
 
 [Term]
 id: MS:4000234
@@ -32907,11 +32909,13 @@ def: "The theoretical m/z of the mass reference ion used by a mass reference bas
 subset: mzQC
 comment: Reported in the metadata of the runQuality or setQuality whose metrics it parameterises. REQUIRED for interpreting reference m/z error image (MS:4000232) and its quantiles (MS:4000233).
 is_a: MS:4000080 ! QC non-metric term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000236
 name: duplicate pixel coordinate count
-def: "The number of distinct x/y/z pixel coordinates in a singular imaging acquisition at which more than one spectrum of the same type was recorded." [PSI:MS]
+def: "The number of distinct x/y pixel coordinates in a singular imaging acquisition at which more than one spectrum of the same type was recorded." [PSI:MS]
 subset: mzQC
 comment: An imaging acquisition normally records at most one spectrum per pixel coordinate. A nonzero value may indicate an export or acquisition defect, such as a stage retrace or a conversion fault, and marks positions that no matrix metric can fully represent, since a matrix cell holds only one value. Multiple spectra of different types may occur in dual polarity or MS2 acquisition methods.
 is_a: MS:4000003 ! single value
