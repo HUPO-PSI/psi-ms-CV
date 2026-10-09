@@ -1,7 +1,7 @@
 format-version: 1.2
 data-version: 4.2.4
 date: 09:10:2026 12:00
-saved-by: Douwe Schulte
+saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
