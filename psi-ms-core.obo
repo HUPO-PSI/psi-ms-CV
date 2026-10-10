@@ -29310,7 +29310,7 @@ is_a: MS:1000499 ! spectrum attribute
 
 [Term]
 id: MS:1003821
-name: polynomial delta coordinate interpolation
+name: polynomial delta coordinate interpolation parameters
 def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. The parameters are encoded in ascending degree, following the previous example, $[c, b, a]$. There is no limit to the number of parameters." [PSI:MS]
 subset: core
 is_a: MS:1003820 ! coordinate spacing model
@@ -29325,7 +29325,7 @@ is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
 id: MS:1003824
-name: linear grid interpolation
+name: linear grid interpolation parameters
 def: "A grid model that uses linear interpolation to map grid indices $i$ to coordinates $x$. $x_i = (b + i * a) / c$ and $i_x = (x * c - b) / a$ where $a$ is the slope, $b$ is the intercept, and $c$ is a scaling factor. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1." [PSI:MS]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
@@ -29333,7 +29333,7 @@ relationship: has_value_type MS:1003813 ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1003825
-name: square root grid interpolation
+name: square root grid interpolation parameters
 def: "A grid model that uses linear interpolation to map grid indices $i$ to the coordinates $x$ with a square root transform. $x_i = (b + i * a)^2/c$ and $i_x = (\\sqrt{x * c} - b) / a$. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\\sqrt{m/z}$. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1." [PSI:MS]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
@@ -30223,7 +30223,7 @@ relationship: part_of MS:1003920 ! chromatographic column
 
 [Term]
 id: MS:1004030
-name: rustims-approximated Bruker timsTOF ion mobility grid model 2
+name: rustims-approximated Bruker timsTOF ion mobility grid model 2 parameters
 def: "A grid model that approximates Bruker's timsTOF ion mobility calibration model 2. $x_i = 1 / (c_6 + c_7 / (a * i + b))$ and $i_x = (c_7 / (1/x - c_6) - b) / a$ where $a$ is a slope, $b$ an intercept, and $c_6$ and $c_7$ are parameters fit during data acquisition. The parameters are encoded $[c_6, c_7, b, a]$." [https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp, https://github.com/theGreatHerrLebert/rustims]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
@@ -30231,7 +30231,7 @@ relationship: has_value_type MS:1003813 ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1004031
-name: rustims-approximated Bruker timsTOF m/z grid model 1 and 2
+name: rustims-approximated Bruker timsTOF m/z grid model 1 and 2 parameters
 def: "A grid model that approximates Bruker's timsTOF ion mobility calibration models for 1 or 2. $b$ is the intercept, $a$ is the slope, and $c_0$, $c_1^*$, $c_2$, $c_3$ and $c_4$ are parameters fit during data acquisition. The parameters are encoded $[c_0, c_1^*, c_2, c_3, c_4, a, b]$." [https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp, https://github.com/theGreatHerrLebert/rustims, USPTO:7851746-B2]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
