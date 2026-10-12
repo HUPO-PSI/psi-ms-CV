@@ -32978,7 +32978,7 @@ id: MS:4000241
 name: targeted compound retention time deviation quantiles
 def: "From the distribution of the deviations of the observed from the expected retention times (observed minus expected) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
 subset: mzQC
-comment: A tight distribution close to zero indicates stable chromatography; a shifted Q2 indicates a systematic retention time drift, and a wide interquartile range (Q3-Q1) indicates compound-dependent deviations.
+comment: A tight distribution close to zero indicates that all compounds within a run are close to their expected retention times; a shifted Q2 indicates a systematic retention time drift, and a wide interquartile range (Q3-Q1) indicates compound-dependent deviations.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
@@ -33006,7 +33006,7 @@ id: MS:4000243
 name: targeted compound peak width at half-maximum quantiles
 def: "From the distribution of chromatographic peak full widths at half-maximum (FWHM) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
 subset: mzQC
-comment: Broadening peaks indicate a degrading chromatographic separation, e.g., due to column aging.
+comment: Broadening peaks across runs indicate a degrading chromatographic separation, e.g., due to column aging.
 is_a: MS:4000004 ! n-tuple
 relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000012 ! single run based metric
