@@ -25,12 +25,8 @@ class CheckState:
 
 def check_term(term) -> CheckState:
     subset_for = get_subset_for_id(term.id)
-    for clause in term:
-        if isinstance(clause, SubsetClause):
-            if clause.raw_value() == subset_for:
-                return CheckState(True, True)
-            return CheckState(True, False)
-    return CheckState(False, False)
+    subsets = [c.raw_value() for c in find_clauses_of(term, SubsetClause)]
+    return CheckState(bool(subsets), subset_for in subsets)
 
 
 def get_subset_for_id(id: PrefixedIdent):
