@@ -30224,15 +30224,21 @@ relationship: part_of MS:1003920 ! chromatographic column
 id: MS:1004014
 name: MRMhub
 def: "Software for quantitative metabolomics and lipidomics using targeted mass spectrometry data, supporting peak integration, quantification, quality control, and signal correction workflows." [PSI:MS]
-is_a: MS:1002964 ! Lipidomics analysis software
+subset: core
+is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
 id: MS:1004015
-name: monitored feature identifier
-def: "Identifier of a monitored feature in a quantitative mass spectrometry dataset." [PSI:MS]
-comment: A feature represents a measured or monitored signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, a m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as 'PC 34:1', by its precursor m/z '760.5853', or by a precursor-to-fragment transition such as '760.5853>184.0733'
+name: targeted feature identifier
+def: "The name or identifier assigned to a targeted feature in a quantitative mass spectrometry dataset." [PSI:MS]
+comment: A feature represents a targeted measured signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, a m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as 'PC 34:1', by its precursor m/z '760.5853', or by a precursor-to-fragment transition such as '760.5853>184.0733'
+subset: core
 is_a: MS:1001828 ! feature attribute
+synonym: "TARGETED FEATURE NAME" EXACT []
+synonym: "TARGETED FEATURE ID" EXACT []
+relationship: has_relation MS:1001829 ! SRM transition ID
 relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
 
 [Term]
 id: MS:4000000
@@ -32802,25 +32808,29 @@ relationship: has_relation MS:1000827 ! isolation window target m/z
 
 [Term]
 id: MS:4000227
-name: concentration coefficient of variation
+name: coefficient of variation of concentration
 def: "Coefficient of variation calculated as the standard deviation divided by the mean concentration." [PSI:MS]
 subset: mzQC
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000187 ! percent
 
 [Term]
 id: MS:4000228
 name: signal-to-blank ratio
-def: "Ratio between the median quantitative signal measured in study samples and the median quantitative signal measured in corresponding procedural blank samples." [PSI:MS]
+def: "Ratio of quantitative signal measured in study samples to quantitative signal measured in corresponding blank samples." [PSI:MS]
+comment: Can be used to help assess detectability relative to background, and is not itself a limit of detection.
 subset: mzQC
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000190 ! ratio
 
 [Term]
 id: MS:4000229
 name: coefficient of determination
-def: "Coefficient of determination (R²) obtained from a linear regression between quantitative signal and analyzed amount." [PSI:MS]
+def: "Statistical measure of the proportion of variance in the observed values of a dependent variable accounted for by a model's predictions." [PSI:MS]
 subset: mzQC
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_value_concept STATO:0000564 ! coefficient of determination
 relationship: has_units UO:0000186 ! dimensionless unit
@@ -32828,72 +32838,72 @@ relationship: has_units UO:0000186 ! dimensionless unit
 [Term]
 id: MS:4000230
 name: normalized slope
-def: "Slope of the linear regression fitted between quantitative signal and analyzed amount, after normalization." [PSI:MS]
+def: "Slope of the linear regression fitted between quantitative signal and analyzed amount, after each variable has been scaled by dividing its values by the respective maximum value." [PSI:MS]
 subset: mzQC
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000186 ! dimensionless unit
 
 [Term]
 id: MS:4000231
 name: normalized intercept
-def: "Intercept of the linear regression fitted between quantitative signal and analyzed amount, after normalization." [PSI:MS]
+def: "Intercept of the linear regression between quantitative signal and analyzed amount after each variable has been scaled by dividing its values by the respective maximum value." [PSI:MS]
 subset: mzQC
+is_a: MS:4000003 ! single value
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000186 ! dimensionless unit
 
 [Term]
 id: MS:4000232
-name: pooled batch quality control concentration coefficient of variation
-def: "The coefficient of variation of quantified concentrations for each monitored feature measured in pooled Batch Quality Control (BQC) samples." [PSI:MS]
+name: pooled batch quality control coefficient of variation of concentration
+def: "The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Batch Quality Control (BQC) samples." [PSI:MS]
 subset: mzQC
 comment: BQC samples are pooled study samples repeatedly extracted and measured alongside the study samples, capturing process variability including sample preparation. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
 is_a: MS:4000005 ! table
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000010 ! quantification based metric
 relationship: has_metric_category MS:4000011 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:4000XX1 ! monitored feature identifier
-relationship: has_column MS:4000XX2 ! concentration coefficient of variation
+relationship: has_column MS:1004015 ! targeted feature identifier
+relationship: has_column MS:4000227 ! coefficient of variation of concentration
 
 [Term]
 id: MS:4000233
-name: pooled technical quality control concentration coefficient of variation
-def: "The coefficient of variation of quantified concentrations for each monitored feature measured in pooled Technical Quality Control (TQC) samples." [PSI:MS]
+name: pooled technical quality control coefficient of variation of concentration
+def: "The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Technical Quality Control (TQC) samples." [PSI:MS]
 subset: mzQC
 comment: Technical Quality Control (TQC) samples are pooled extracts measured at regular intervals, capturing instrument variability. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
 is_a: MS:4000005 ! table
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000010 ! quantification based metric
 relationship: has_metric_category MS:4000011 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:4000XX1 ! monitored feature identifier
-relationship: has_column MS:4000XX2 ! concentration coefficient of variation
+relationship: has_column MS:1004015 ! targeted feature identifier
+relationship: has_column MS:4000227 ! coefficient of variation of concentration
 
 [Term]
 id: MS:4000234
-name: median-based signal-to-blank ratio
-def: "Ratio between the median quantitative signal measured in study samples and the median quantitative signal measured in corresponding procedural blank samples for each monitored feature." [PSI:MS]
+name: median-based signal-to-blank ratio per feature
+def: "Table containing the ratio of median quantitative signal in study samples to median quantitative signal in corresponding procedural blank samples for each targeted feature." [PSI:MS]
 subset: mzQC
-is_a: MS:4000005 ! tablerelationship: has_value_type xsd:float ! The allowed value-type for this CV termrelationship: has_metric_category MS:4000010 ! quantification based metric
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000010 ! quantification based metric
 relationship: has_metric_category MS:4000011 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:4000XX1 ! monitored feature identifier
-relationship: has_column MS:4000XX3 ! signal-to-blank ratio
+relationship: has_column MS:1004015 ! targeted feature identifier
+relationship: has_column MS:4000228 ! signal-to-blank ratio
 
 [Term]
 id: MS:4000235
 name: response curve linearity
-def: "Linear regression parameters describing the relationship between quantitative signal and analyzed amount for each monitored feature in a dilution series." [PSI:MS]
+def: "Table containing the coefficient of determination, normalized slope, and normalized intercept of a linear regression between quantitative signal and analyzed amount for each targeted feature in a dilution series." [PSI:MS]
 subset: mzQC
 is_a: MS:4000005 ! table
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_metric_category MS:4000010 ! quantification based metric
 relationship: has_metric_category MS:4000011 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:4000XX1 ! monitored feature identifier
-relationship: has_column MS:4000XX4! coefficient of determination
-relationship: has_column MS:4000XX5 ! normalized slope
-relationship: has_column MS:4000XX6 ! normalized intercept
+relationship: has_column MS:1004015 ! targeted feature identifier
+relationship: has_column MS:4000229 ! coefficient of determination
+relationship: has_column MS:4000230 ! normalized slope
+relationship: has_column MS:4000231 ! normalized intercept
 relationship: has_relation MS:1001816 ! dilution series, concentration X
 
 [Term]
