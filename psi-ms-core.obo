@@ -32820,7 +32820,7 @@ id: MS:4000247
 name: chromatographic peak width at half maximum
 def: "The width of a chromatographic peak measured at half of its maximum height." [PSI:MS]
 subset: mzQC
-comment: Per peak counterpart of the distribution level metrics XIC-FWHM quantiles (MS:4000051) and targeted compound peak width at half-maximum quantiles (MS:4000244).
+comment: Per-peak counterpart of the distribution-level metrics XIC-FWHM quantiles (MS:4000051) and targeted compound peak width at half-maximum quantiles (MS:4000244). FWHM alone does not describe peak asymmetry or multi-modality. The standard conversion from FWHM to Gaussian standard deviation assumes a Gaussian peak shape. The method used to determine FWHM (e.g., from raw or smoothed data, or a fitted peak model) depends on the processing software. Consistent software and processing settings support comparisons over time.
 is_a: MS:4000003 ! single value
 relationship: has_metric_category MS:4000009 ! ID free metric
 relationship: has_metric_category MS:4000018 ! XIC metric
