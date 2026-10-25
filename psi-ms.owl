@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.6/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.8/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:date>14:10:2026 12:00</oboInOwl:date>
@@ -30,6 +30,7 @@
         <rdfs:comment>creator: Chris Bielow &lt;chris.bielow &lt;-at-&gt; fu-berlin.de&gt;</rdfs:comment>
         <rdfs:comment>creator: David Cox &lt;david.cox &lt;-at-&gt; sciex.com&gt;</rdfs:comment>
         <rdfs:comment>creator: Eric Deutsch &lt;edeutsch &lt;-at-&gt; systemsbiology.org&gt;</rdfs:comment>
+        <rdfs:comment>creator: Ethan Bass &lt;ethanbass &lt;-at-&gt; gmail.com&gt;</rdfs:comment>
         <rdfs:comment>creator: Fatemeh Mirzadeh Sarcheshmeh &lt;fatemeh.mirzadehsarcheshmeh &lt;-at-&gt; uantwerpen.be&gt;</rdfs:comment>
         <rdfs:comment>creator: Fredrik Levander &lt;fredrik.levander &lt;-at-&gt; immun.lth.se&gt;</rdfs:comment>
         <rdfs:comment>creator: Gerhard Mayer &lt;mayerg97 &lt;-at-&gt; rub.de&gt;</rdfs:comment>
@@ -85464,6 +85465,285 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004013"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A specific chromatographic column product, identified by its manufacturer and product name.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002814"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The primary or reference ion mobility coordinate about which the isolation window is defined.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004014</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>ion mobility isolation window target</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The primary or reference ion mobility coordinate about which the isolation window is defined.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002814"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The extent of the isolation window below the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004015</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>ion mobility isolation window lower offset</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The extent of the isolation window below the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002814"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004016</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>ion mobility isolation window upper offset</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002333"/>
+        <obo:IAO_0000115>CRAN package chromConverter for reading chromatography and mass spectrometry data files into R, and for exporting them to mzML and ANDI netCDF.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004032</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>chromConverter</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004032"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>CRAN package chromConverter for reading chromatography and mass spectrometry data files into R, and for exporting them to mzML and ANDI netCDF.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.5281/zenodo.6792521</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001455"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001457"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001557"/>
+        <obo:IAO_0000115>Shimadzu software for data acquisition, processing, and analysis for Shimadzu chromatography and mass spectrometry instruments.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004033</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>LabSolutions</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004033"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Shimadzu software for data acquisition, processing, and analysis for Shimadzu chromatography and mass spectrometry instruments.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001455"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001457"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004038"/>
+        <obo:IAO_0000115>Varian software for data acquisition, processing, and analysis for Varian mass spectrometers.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Varian MS Workstation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004034</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>MS Workstation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004034"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Varian software for data acquisition, processing, and analysis for Varian mass spectrometers.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000689"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001455"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001457"/>
+        <obo:IAO_0000115>Agilent software for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004035</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>ChemStation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Agilent software for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000689"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001455"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001457"/>
+        <obo:IAO_0000115>Agilent chromatography data system for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>OpenLabCDS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004036</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>OpenLab CDS</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004036"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Agilent chromatography data system for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001455"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001457"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001557"/>
+        <obo:IAO_0000115>Shimadzu software for data acquisition, processing, and analysis for Shimadzu gas chromatography-mass spectrometry instruments.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004037</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>GCMSsolution</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004037"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Shimadzu software for data acquisition, processing, and analysis for Shimadzu gas chromatography-mass spectrometry instruments.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000531"/>
+        <obo:IAO_0000115>Varian software for data acquisition and analysis.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004038</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Varian software</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004038"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Varian software for data acquisition and analysis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
