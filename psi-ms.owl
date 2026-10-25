@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.8/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.10/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:date>14:10:2026 12:00</oboInOwl:date>
@@ -82900,12 +82900,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003820">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000499"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Defines a model for calculating or correcting the spacing between points along a continuous dimension.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1003820</oboInOwl:id>
@@ -82925,16 +82919,22 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003821">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003820"/>
-        <obo:IAO_0000115>A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. It is assumed that the parameters are inferred from the value list and the number implies the polynomial degree.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. The parameters are encoded in ascending degree, following the previous example, $[c, b, a]$. There is no limit to the number of parameters.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1003821</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
-        <rdfs:label>polynomial delta coordinate interpolation</rdfs:label>
+        <rdfs:label>polynomial delta coordinate interpolation parameters</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003821"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. It is assumed that the parameters are inferred from the value list and the number implies the polynomial degree.</owl:annotatedTarget>
+        <owl:annotatedTarget>A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. The parameters are encoded in ascending degree, following the previous example, $[c, b, a]$. There is no limit to the number of parameters.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -82963,16 +82963,22 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003824">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003822"/>
-        <obo:IAO_0000115>A coordinate spacing model that uses linear interpolation to map grid indices to coordinates $x_i = f_x(b + i * a)$ where $f$ is some recalibration function.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A grid model that uses linear interpolation to map grid indices $i$ to coordinates $x$. $x_i = (b + i * a) / c$ and $i_x = (x * c - b) / a$ where $a$ is the slope, $b$ is the intercept, and $c$ is a scaling factor. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1003824</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
-        <rdfs:label>linear grid interpolation</rdfs:label>
+        <rdfs:label>linear grid interpolation parameters</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003824"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A coordinate spacing model that uses linear interpolation to map grid indices to coordinates $x_i = f_x(b + i * a)$ where $f$ is some recalibration function.</owl:annotatedTarget>
+        <owl:annotatedTarget>A grid model that uses linear interpolation to map grid indices $i$ to coordinates $x$. $x_i = (b + i * a) / c$ and $i_x = (x * c - b) / a$ where $a$ is the slope, $b$ is the intercept, and $c$ is a scaling factor. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -82982,16 +82988,22 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003825">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003822"/>
-        <obo:IAO_0000115>A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A grid model that uses linear interpolation to map grid indices $i$ to the coordinates $x$ with a square root transform. $x_i = (b + i * a)^2/c$ and $i_x = (\sqrt{x * c} - b) / a$. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1003825</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
-        <rdfs:label>square root grid interpolation</rdfs:label>
+        <rdfs:label>square root grid interpolation parameters</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1003825"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$</owl:annotatedTarget>
+        <owl:annotatedTarget>A grid model that uses linear interpolation to map grid indices $i$ to the coordinates $x$ with a square root transform. $x_i = (b + i * a)^2/c$ and $i_x = (\sqrt{x * c} - b) / a$. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\sqrt{m/z}$. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -85595,6 +85607,59 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003822"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A grid model that approximates Bruker&apos;s timsTOF ion mobility calibration model 2. $x_i = 1 / (c_6 + c_7 / (a * i + b))$ and $i_x = (c_7 / (1/x - c_6) - b) / a$ where $a$ is a slope, $b$ an intercept, and $c_6$ and $c_7$ are parameters fit during data acquisition. The parameters are encoded $[c_6, c_7, b, a]$.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004030</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>rustims-approximated Bruker timsTOF ion mobility grid model 2 parameters</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004030"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A grid model that approximates Bruker&apos;s timsTOF ion mobility calibration model 2. $x_i = 1 / (c_6 + c_7 / (a * i + b))$ and $i_x = (c_7 / (1/x - c_6) - b) / a$ where $a$ is a slope, $b$ an intercept, and $c_6$ and $c_7$ are parameters fit during data acquisition. The parameters are encoded $[c_6, c_7, b, a]$.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://github.com/theGreatHerrLebert/rustims</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003822"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003813"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A grid model that approximates Bruker&apos;s timsTOF ion mobility calibration models for 1 or 2. $b$ is the intercept, $a$ is the slope, and $c_0$, $c_1^*$, $c_2$, $c_3$ and $c_4$ are parameters fit during data acquisition. The parameters are encoded $[c_0, c_1^*, c_2, c_3, c_4, a, b]$.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004031</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>rustims-approximated Bruker timsTOF m/z grid model 1 and 2 parameters</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004031"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A grid model that approximates Bruker&apos;s timsTOF ion mobility calibration models for 1 or 2. $b$ is the intercept, $a$ is the slope, and $c_0$, $c_1^*$, $c_2$, $c_3$ and $c_4$ are parameters fit during data acquisition. The parameters are encoded $[c_0, c_1^*, c_2, c_3, c_4, a, b]$.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>USPTO:7851746-B2</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://github.com/theGreatHerrLebert/rustims</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
