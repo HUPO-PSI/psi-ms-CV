@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.10/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.11/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>14:10:2026 12:00</oboInOwl:date>
+        <oboInOwl:date>25:10:2026 12:00</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Joshua Klein</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Fatemeh Mirzadeh Sarcheshmeh</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
@@ -95173,6 +95173,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1003251"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -95180,6 +95186,24 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000072"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000245"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000246"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_optional_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000247"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Observed and expected characteristics for spiked in or reference peptides. The expected peptides are encoded by proforma peptidoform sequence (MS:1003169). The &apos;predicted retention time&apos; should be interpreted as the expected retention time of a reference measurement.</obo:IAO_0000115>
@@ -96982,6 +97006,156 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000247"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The number of compounds of a set of targeted/expected compounds (e.g., from a QC mix) that are detected within the run. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The retention time at which the integration boundary of a chromatographic peak begins.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000248</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>Can describe the start of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.</rdfs:comment>
+        <rdfs:label>chromatographic peak start time</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000248"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The retention time at which the integration boundary of a chromatographic peak begins.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The retention time at which the integration boundary of a chromatographic peak ends.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000249</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>Can describe the end of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.</rdfs:comment>
+        <rdfs:label>chromatographic peak end time</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000249"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The retention time at which the integration boundary of a chromatographic peak ends.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000250 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The width of a chromatographic peak measured at half of its maximum height.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000250</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>Per-peak counterpart of the distribution-level metrics XIC-FWHM quantiles (MS:4000051) and targeted compound peak width at half-maximum quantiles (MS:4000244). FWHM alone does not describe peak asymmetry or multi-modality. The standard conversion from FWHM to Gaussian standard deviation assumes a Gaussian peak shape. The method used to determine FWHM (e.g., from raw or smoothed data, or a fitted peak model) depends on the processing software.</rdfs:comment>
+        <rdfs:label>chromatographic peak width at half maximum</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000250"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The width of a chromatographic peak measured at half of its maximum height.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
