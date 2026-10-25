@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.2.6
+data-version: 4.2.8
 date: 14:10:2026 12:00
 saved-by: Joshua Klein
 default-namespace: MS
@@ -40,6 +40,7 @@ remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: creator: Fatemeh Mirzadeh Sarcheshmeh <fatemeh.mirzadehsarcheshmeh <-at-> uantwerpen.be>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
 remark: creator: Patrick Boschmann <patrick.boschmann <-at-> uni-tuebingen.de>
+remark: creator: Ethan Bass <ethanbass <-at-> gmail.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -30223,6 +30224,105 @@ def: "A specific chromatographic column product, identified by its manufacturer 
 subset: core
 is_a: MS:1000857 ! run attribute
 relationship: part_of MS:1003920 ! chromatographic column
+
+[Term]
+id: MS:1004014
+name: ion mobility isolation window target
+def: "The primary or reference ion mobility coordinate about which the isolation window is defined." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004015
+name: ion mobility isolation window lower offset
+def: "The extent of the isolation window below the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004016
+name: ion mobility isolation window upper offset
+def: "The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004032
+name: chromConverter
+def: "CRAN package chromConverter for reading chromatography and mass spectrometry data files into R, and for exporting them to mzML and ANDI netCDF." [DOI:10.5281/zenodo.6792521]
+subset: core
+is_a: MS:1002333 ! conversion software
+
+[Term]
+id: MS:1004033
+name: LabSolutions
+def: "Shimadzu software for data acquisition, processing, and analysis for Shimadzu chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1001557 ! Shimadzu Corporation software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004034
+name: MS Workstation
+def: "Varian software for data acquisition, processing, and analysis for Varian mass spectrometers." [PSI:MS]
+subset: core
+synonym: "Varian MS Workstation" EXACT []
+is_a: MS:1004038 ! Varian software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004035
+name: ChemStation
+def: "Agilent software for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1000689 ! Agilent software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004036
+name: OpenLab CDS
+def: "Agilent chromatography data system for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+synonym: "OpenLabCDS" EXACT []
+is_a: MS:1000689 ! Agilent software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004037
+name: GCMSsolution
+def: "Shimadzu software for data acquisition, processing, and analysis for Shimadzu gas chromatography-mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1001557 ! Shimadzu Corporation software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004038
+name: Varian software
+def: "Varian software for data acquisition and analysis." [PSI:MS]
+subset: core
+is_a: MS:1000531 ! software
 
 [Term]
 id: MS:4000000
