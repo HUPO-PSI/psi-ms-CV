@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.11/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.12/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>25:10:2026 12:00</oboInOwl:date>
+        <oboInOwl:date>26:10:2026 12:00</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Fatemeh Mirzadeh Sarcheshmeh</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Franziska Nicolaus</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
@@ -32,6 +32,7 @@
         <rdfs:comment>creator: Eric Deutsch &lt;edeutsch &lt;-at-&gt; systemsbiology.org&gt;</rdfs:comment>
         <rdfs:comment>creator: Ethan Bass &lt;ethanbass &lt;-at-&gt; gmail.com&gt;</rdfs:comment>
         <rdfs:comment>creator: Fatemeh Mirzadeh Sarcheshmeh &lt;fatemeh.mirzadehsarcheshmeh &lt;-at-&gt; uantwerpen.be&gt;</rdfs:comment>
+        <rdfs:comment>creator: Franziska Nicolaus &lt;f.nicolaus &lt;-at-&gt; fz-juelich.de&gt;</rdfs:comment>
         <rdfs:comment>creator: Fredrik Levander &lt;fredrik.levander &lt;-at-&gt; immun.lth.se&gt;</rdfs:comment>
         <rdfs:comment>creator: Gerhard Mayer &lt;mayerg97 &lt;-at-&gt; rub.de&gt;</rdfs:comment>
         <rdfs:comment>creator: Jannick Kappelmann &lt;jannick.kappelmann &lt;-at-&gt; gmail.com&gt;</rdfs:comment>
@@ -85814,6 +85815,59 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MS_1004039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002878"/>
+        <obo:IAO_0000115>Software for quantitative metabolomics and lipidomics using targeted mass spectrometry data, supporting peak integration, quantification, quality control, and signal correction workflows.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004039</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>MRMhub</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004039"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Software for quantitative metabolomics and lipidomics using targeted mass spectrometry data, supporting peak integration, quantification, quality control, and signal correction workflows.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001828"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1001829"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The name or identifier assigned to a targeted feature in a quantitative mass spectrometry dataset.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>TARGETED FEATURE ID</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TARGETED FEATURE NAME</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004040</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:comment>A feature represents a targeted measured signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, an m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as &apos;PC 34:1&apos;, by its precursor m/z &apos;760.5853&apos;, or by a precursor-to-fragment transition such as &apos;760.5853&gt;184.0733&apos;.</rdfs:comment>
+        <rdfs:label>targeted feature identifier</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The name or identifier assigned to a targeted feature in a quantitative mass spectrometry dataset.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MS_4000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000000">
@@ -97156,6 +97210,384 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000250"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The width of a chromatographic peak measured at half of its maximum height.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000187"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Coefficient of variation calculated as the standard deviation divided by the mean concentration.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000251</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>coefficient of variation of concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000251"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Coefficient of variation calculated as the standard deviation divided by the mean concentration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000190"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Ratio of quantitative signal measured in study samples to quantitative signal measured in corresponding blank samples.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000252</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>Can be used to help assess detectability relative to background, and is not itself a limit of detection.</rdfs:comment>
+        <rdfs:label>signal-to-blank ratio</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000252"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Ratio of quantitative signal measured in study samples to quantitative signal measured in corresponding blank samples.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STATO_0000564"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Statistical measure of the proportion of variance in the observed values of a dependent variable accounted for by a model&apos;s predictions.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000253</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>coefficient of determination</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000253"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Statistical measure of the proportion of variance in the observed values of a dependent variable accounted for by a model&apos;s predictions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Slope of the linear regression fitted between quantitative signal and analyzed amount, after each variable has been scaled by dividing its values by the respective maximum value.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000254</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>normalized slope</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000254"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Slope of the linear regression fitted between quantitative signal and analyzed amount, after each variable has been scaled by dividing its values by the respective maximum value.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000255 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000255">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Intercept of the linear regression between quantitative signal and analyzed amount after each variable has been scaled by dividing its values by the respective maximum value.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000255</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>normalized intercept</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000255"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Intercept of the linear regression between quantitative signal and analyzed amount after each variable has been scaled by dividing its values by the respective maximum value.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Batch Quality Control (BQC) samples.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000256</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>BQC samples are pooled study samples repeatedly extracted and measured alongside the study samples, capturing process variability including sample preparation. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).</rdfs:comment>
+        <rdfs:label>pooled batch quality control coefficient of variation of concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000256"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Batch Quality Control (BQC) samples.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Technical Quality Control (TQC) samples.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000257</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:comment>Technical Quality Control (TQC) samples are pooled extracts measured at regular intervals, capturing instrument variability. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).</rdfs:comment>
+        <rdfs:label>pooled technical quality control coefficient of variation of concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000257"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Technical Quality Control (TQC) samples.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000258">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000252"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Table containing the ratio of median quantitative signal in study samples to median quantitative signal in corresponding procedural blank samples for each targeted feature.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000258</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>median-based signal-to-blank ratio per feature</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000258"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Table containing the ratio of median quantitative signal in study samples to median quantitative signal in corresponding procedural blank samples for each targeted feature.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_4000259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000259">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000253"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000254"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_column"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000255"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_relation"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1001816"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Table containing the coefficient of determination, normalized slope, and normalized intercept of a linear regression between quantitative signal and analyzed amount for each targeted feature in a dilution series.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:4000259</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#mzQC"/>
+        <rdfs:label>response curve linearity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_4000259"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Table containing the coefficient of determination, normalized slope, and normalized intercept of a linear regression between quantitative signal and analyzed amount for each targeted feature in a dilution series.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -143473,6 +143905,12 @@
     <!-- http://purl.obolibrary.org/obo/STATO_0000401 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000401"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000564 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000564"/>
     
 
 
