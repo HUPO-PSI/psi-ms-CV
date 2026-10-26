@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.12
-date: 26:10:2026 12:00
-saved-by: Franziska Nicolaus
+data-version: 4.2.13
+date: 26:10:2026 14:00
+saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -89,6 +89,11 @@ name: has_metric_category
 [Typedef]
 id: has_value_concept
 name: has_value_concept
+
+[Typedef]
+id: has_relation
+name: has relation
+def: "'Entity A' has relation 'Entity B', where the value of A is computed from, summarises, or is otherwise directly associated with B, and neither is_a nor part_of applies. Used chiefly to link a QC metric to the measured quantity or data it is derived from, such as a total ion current metric to total ion current (MS:1000285)." []
 
 [Typedef]
 id: has_column
