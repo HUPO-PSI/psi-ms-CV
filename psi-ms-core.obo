@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.2.3
-date: 25:09:2026 13:00
+data-version: 4.2.12
+date: 26:10:2026 12:00
 saved-by: Franziska Nicolaus
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
@@ -9,6 +9,8 @@ subsetdef: NCIT "NCI Thesaurus terms"
 subsetdef: mzQC "Mass spectrometry quality control terms"
 subsetdef: PEFF "PSI Extended FASTA Format terms"
 subsetdef: UO "Unit Ontology terms"
+subsetdef: unit_group_slim "unit group slim"
+subsetdef: unit_slim "unit slim"
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 namespace-id-rule: * PEFF:$sequence(7,0,9999999)$
 remark: coverage of namespace-id: MS:$sequence(7,4000000,4999999)$: Mass spectrometry quality control metrics
@@ -37,6 +39,8 @@ remark: creator: Samuel Wein <sam <-at-> openms.de>
 remark: creator: Jeroen Van Goey <j.vangoey <-at-> instadeep.com>
 remark: creator: Fatemeh Mirzadeh Sarcheshmeh <fatemeh.mirzadehsarcheshmeh <-at-> uantwerpen.be>
 remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
+remark: creator: Patrick Boschmann <patrick.boschmann <-at-> uni-tuebingen.de>
+remark: creator: Ethan Bass <ethanbass <-at-> gmail.com>
 remark: creator: Franziska Nicolaus <f.nicolaus <-at-> fz-juelich.de>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
@@ -176,7 +180,6 @@ id: NCIT:C25404
 name: Action
 def: "A thing done." [] {http://purl.obolibrary.org/obo/NCIT_P378="NCI"}
 subset: NCIT
-subset: NCIT:C105763
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="PT", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
 synonym: "Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="caDSR"}
 synonym: "Generic Action" EXACT [] {http://purl.obolibrary.org/obo/NCIT_P383="SY", http://purl.obolibrary.org/obo/NCIT_P384="NCI"}
@@ -10623,6 +10626,7 @@ is_a: MS:1001249 ! search input details
 [Term]
 id: MS:1001412
 name: search tolerance plus value
+def: "Search tolerance above the theoretical value, given in relative or absolute units." [PSI:PI]
 subset: core
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
@@ -10634,6 +10638,7 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 [Term]
 id: MS:1001413
 name: search tolerance minus value
+def: "Search tolerance below the theoretical value, given in relative or absolute units." [PSI:PI]
 subset: core
 is_a: MS:1001411 ! search tolerance specification
 relationship: has_units UO:0000166 ! parts per notation unit
@@ -29308,14 +29313,14 @@ name: coordinate spacing model
 def: "Defines a model for calculating or correcting the spacing between points along a continuous dimension." [PSI:MS]
 subset: core
 is_a: MS:1000499 ! spectrum attribute
-relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003821
-name: polynomial delta coordinate interpolation
-def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. It is assumed that the parameters are inferred from the value list and the number implies the polynomial degree." [PSI:MS]
+name: polynomial delta coordinate interpolation parameters
+def: "A coordinate spacing model that predicts the next coordinate as a function of a low degree polynomial on the current coordinate, for instance a 2nd degree $x_{i + 1} = (a*x_i^2 + b*x_i + c) + x_i$. The parameters are encoded in ascending degree, following the previous example, $[c, b, a]$. There is no limit to the number of parameters." [PSI:MS]
 subset: core
 is_a: MS:1003820 ! coordinate spacing model
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003822
@@ -29326,17 +29331,19 @@ is_a: MS:1003820 ! coordinate spacing model
 
 [Term]
 id: MS:1003824
-name: linear grid interpolation
-def: "A coordinate spacing model that uses linear interpolation to map grid indices to coordinates $x_i = f_x(b + i * a)$ where $f$ is some recalibration function." [PSI:MS]
+name: linear grid interpolation parameters
+def: "A grid model that uses linear interpolation to map grid indices $i$ to coordinates $x$. $x_i = (b + i * a) / c$ and $i_x = (x * c - b) / a$ where $a$ is the slope, $b$ is the intercept, and $c$ is a scaling factor. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1." [PSI:MS]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003825
-name: square root grid interpolation
-def: "A coordinate spacing model that maps grid indices to coordinates $x_i = f_x((b + i * a)^2)$ where $f$ is some recalibration function. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\\sqrt{m/z}$" [PSI:MS]
+name: square root grid interpolation parameters
+def: "A grid model that uses linear interpolation to map grid indices $i$ to the coordinates $x$ with a square root transform. $x_i = (b + i * a)^2/c$ and $i_x = (\\sqrt{x * c} - b) / a$. The square root of the coordinate is linear with respect to the index. This mirrors the formula relating time-of-flight to m/z, $t = k\\sqrt{m/z}$. The parameters are encoded $[b, a, c]$. If $c$ is omitted, it is assumed to be 1." [PSI:MS]
 subset: core
 is_a: MS:1003822 ! grid coordinate interpolation
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1003826
@@ -29359,6 +29366,7 @@ is_a: MS:1000513 ! binary data array
 id: MS:1003871
 name: Lutefisk
 def: "Lutefisk is a program for the de novo interpretation of peptide CID spectra." [PSI:MS, DOI:10.1385/MB:22:3:301, DOI:10.1021/ac001196o, DOI:10.1385/1-59259-045-4:41, DOI:10.1002/(SICI)1097-0231(19970615)11:9<1067::AID-RCM953>3.0.CO;2-L, https://sourceforge.net/projects/lutefiskxp/, https://www.hairyfatguy.com/lutefisk/]
+subset: core
 is_a: MS:1001456 ! analysis software
 
 [Term]
@@ -30222,16 +30230,131 @@ relationship: part_of MS:1003920 ! chromatographic column
 
 [Term]
 id: MS:1004014
+name: ion mobility isolation window target
+def: "The primary or reference ion mobility coordinate about which the isolation window is defined." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004015
+name: ion mobility isolation window lower offset
+def: "The extent of the isolation window below the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004016
+name: ion mobility isolation window upper offset
+def: "The extent of the isolation window above the isolation window target ion mobility in the same units. The lower and upper offsets may be asymmetric about the target value." [PSI:MS]
+subset: core
+is_a: MS:1000792 ! isolation window attribute
+relationship: has_units MS:1002814 ! volt-second per square centimeter
+relationship: has_units UO:0000010 ! second
+relationship: has_units UO:0000028 ! millisecond
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004030
+name: rustims-approximated Bruker timsTOF ion mobility grid model 2 parameters
+def: "A grid model that approximates Bruker's timsTOF ion mobility calibration model 2. $x_i = 1 / (c_6 + c_7 / (a * i + b))$ and $i_x = (c_7 / (1/x - c_6) - b) / a$ where $a$ is a slope, $b$ an intercept, and $c_6$ and $c_7$ are parameters fit during data acquisition. The parameters are encoded $[c_6, c_7, b, a]$." [https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp, https://github.com/theGreatHerrLebert/rustims]
+subset: core
+is_a: MS:1003822 ! grid coordinate interpolation
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004031
+name: rustims-approximated Bruker timsTOF m/z grid model 1 and 2 parameters
+def: "A grid model that approximates Bruker's timsTOF ion mobility calibration models for 1 or 2. $b$ is the intercept, $a$ is the slope, and $c_0$, $c_1^*$, $c_2$, $c_3$ and $c_4$ are parameters fit during data acquisition. The parameters are encoded $[c_0, c_1^*, c_2, c_3, c_4, a, b]$." [https://data.code.gouv.fr/hosts/forgemia.inra.fr/repositories/pappso%2Fpappsomspp, https://github.com/theGreatHerrLebert/rustims, USPTO:7851746-B2]
+subset: core
+is_a: MS:1003822 ! grid coordinate interpolation
+relationship: has_value_type MS:1003813 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004032
+name: chromConverter
+def: "CRAN package chromConverter for reading chromatography and mass spectrometry data files into R, and for exporting them to mzML and ANDI netCDF." [DOI:10.5281/zenodo.6792521]
+subset: core
+is_a: MS:1002333 ! conversion software
+
+[Term]
+id: MS:1004033
+name: LabSolutions
+def: "Shimadzu software for data acquisition, processing, and analysis for Shimadzu chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1001557 ! Shimadzu Corporation software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004034
+name: MS Workstation
+def: "Varian software for data acquisition, processing, and analysis for Varian mass spectrometers." [PSI:MS]
+subset: core
+synonym: "Varian MS Workstation" EXACT []
+is_a: MS:1004038 ! Varian software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004035
+name: ChemStation
+def: "Agilent software for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1000689 ! Agilent software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004036
+name: OpenLab CDS
+def: "Agilent chromatography data system for data acquisition, processing, and analysis for Agilent chromatography and mass spectrometry instruments." [PSI:MS]
+subset: core
+synonym: "OpenLabCDS" EXACT []
+is_a: MS:1000689 ! Agilent software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004037
+name: GCMSsolution
+def: "Shimadzu software for data acquisition, processing, and analysis for Shimadzu gas chromatography-mass spectrometry instruments." [PSI:MS]
+subset: core
+is_a: MS:1001557 ! Shimadzu Corporation software
+is_a: MS:1001455 ! acquisition software
+is_a: MS:1001456 ! analysis software
+is_a: MS:1001457 ! data processing software
+
+[Term]
+id: MS:1004038
+name: Varian software
+def: "Varian software for data acquisition and analysis." [PSI:MS]
+subset: core
+is_a: MS:1000531 ! software
+
+[Term]
+id: MS:1004039
 name: MRMhub
 def: "Software for quantitative metabolomics and lipidomics using targeted mass spectrometry data, supporting peak integration, quantification, quality control, and signal correction workflows." [PSI:MS]
 subset: core
 is_a: MS:1002878 ! small molecule analysis software
 
 [Term]
-id: MS:1004015
+id: MS:1004040
 name: targeted feature identifier
 def: "The name or identifier assigned to a targeted feature in a quantitative mass spectrometry dataset." [PSI:MS]
-comment: A feature represents a targeted measured signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, a m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as 'PC 34:1', by its precursor m/z '760.5853', or by a precursor-to-fragment transition such as '760.5853>184.0733'
+comment: A feature represents a targeted measured signal that is distinguished from other signals in a mass spectrometry dataset. Its identifier may be based on an analyte annotation, an m/z value, a transition, or another method-specific identifier. For example, a lipid feature may be identified as 'PC 34:1', by its precursor m/z '760.5853', or by a precursor-to-fragment transition such as '760.5853>184.0733'.
 subset: core
 is_a: MS:1001828 ! feature attribute
 synonym: "TARGETED FEATURE NAME" EXACT []
@@ -32639,6 +32762,10 @@ relationship: has_optional_column MS:4000072 ! observed mass accuracy
 relationship: has_optional_column MS:1000894 ! retention time
 relationship: has_optional_column MS:1000897 ! predicted retention time
 relationship: has_optional_column MS:1003251 ! count of identified spectra
+relationship: has_optional_column MS:1002412 ! total XIC area
+relationship: has_optional_column MS:4000245 ! chromatographic peak start time
+relationship: has_optional_column MS:4000246 ! chromatographic peak end time
+relationship: has_optional_column MS:4000247 ! chromatographic peak width at half maximum
 
 [Term]
 id: MS:4000214
@@ -32808,6 +32935,326 @@ relationship: has_relation MS:1000827 ! isolation window target m/z
 
 [Term]
 id: MS:4000227
+name: imaging metric
+def: "QC metric related to a mass spectrometry imaging acquisition, in which each spectrum is associated with a spatial position on the sample." [PSI:MS]
+subset: mzQC
+comment: Imaging metrics are frequently spatially resolved and reported as a matrix, where the row and column indices correspond to the pixel coordinates of the acquisition grid.
+is_a: MS:4000001 ! QC metric
+
+[Term]
+id: MS:4000228
+name: total ion current image
+def: "The total ion current (MS:1000285) of each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
+subset: mzQC
+comment: The most general measure of signal level. Because the values retain their spatial arrangement, the metric additionally exposes spatially structured acquisition faults, such as intensity gradients across a long acquisition, dropped scan lines, or striping arising from the raster pattern. A value of 0 is distinct from null, which indicates a position that was not acquired.
+is_a: MS:4000006 ! matrix
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000285 ! total ion current
+
+[Term]
+id: MS:4000229
+name: total ion current image quantiles
+def: "The first to n-th quantile of the total ion current (MS:1000285) values over all acquired spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+subset: mzQC
+comment: A compact summary of the signal level distribution. Not acquired positions are excluded from the calculation. A downward shift relative to comparable runs may indicate reduced ionisation efficiency, matrix application problems, or source contamination.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units MS:1000043 ! intensity unit
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:1000285 ! total ion current
+relationship: has_relation MS:4000228 ! total ion current image
+
+[Term]
+id: MS:4000230
+name: base peak fraction image
+def: "The base peak intensity (MS:1000505) of each centroid spectrum (MS:1000127) divided by the total ion current (MS:1000285) of the same spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. Positions that were not acquired are reported as null." [PSI:MS]
+subset: mzQC
+comment: Describes how far the signal of each spectrum is concentrated in a single peak, on a scale from close to 0 for a rich spectrum to 1 for a spectrum containing a single peak. High values over a region may indicate matrix crystal artefacts, salt clusters, or loss of analyte signal leaving only a dominant background ion. Profile spectra are peak picked before calculation. Spectra with a total ion current of 0 are reported as null.
+is_a: MS:4000006 ! matrix
+is_a: MS:1001848 ! simple ratio of two values
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_relation MS:1000505 ! base peak intensity
+
+[Term]
+id: MS:4000231
+name: base peak fraction image quantiles
+def: "The first to n-th quantile of the base peak fraction image (MS:4000230) values over all acquired centroid spectra of an imaging acquisition. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+subset: mzQC
+comment: A compact summary of the base peak fraction image (MS:4000230). Not acquired positions and spectra with a total ion current of 0 are excluded from the calculation.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:4000230 ! base peak fraction image
+
+[Term]
+id: MS:4000232
+name: reference m/z error image
+def: "The relative deviation in parts per million between the observed m/z of a mass reference ion and its theoretical m/z, calculated as 1E6 x (observed m/z - theoretical m/z) / theoretical m/z, for each spectrum, arranged as a matrix in which the row and column indices correspond to the y and x pixel coordinates of the acquisition grid. The theoretical m/z of the reference MUST be reported using QC reference m/z (MS:4000235). Positions that were not acquired, and positions in which the reference ion was not detected, are reported as null." [PSI:MS]
+subset: mzQC
+comment: An imaging acquisition may run for many hours, during which the mass axis can drift substantially. Because acquisition order maps onto spatial position, such drift appears in this matrix as a spatial gradient or as discontinuities aligned with the raster pattern, information that a single mass accuracy value cannot convey. The metric is ID free: the reference is declared.
+is_a: MS:4000006 ! matrix
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000014 ! accuracy
+relationship: has_relation MS:4000235 ! QC reference m/z
+
+[Term]
+id: MS:4000233
+name: reference m/z error image quantiles
+def: "The first to n-th quantile of the reference m/z error values over all spectra of an imaging acquisition in which the mass reference ion was detected. A value triplet represents the quartiles Q1, Q2, Q3. The number of values in the tuple implies the quantile mode." [PSI:MS]
+subset: mzQC
+comment: A compact summary of the reference m/z error image (MS:4000232). A shift of the central quantiles away from zero indicates a systematic calibration offset, whereas a widening spread indicates drift or instability over the acquisition. Not acquired positions and positions in which the reference ion was not detected are excluded from the calculation.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000019 ! MS metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000169 ! parts per million
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_relation MS:4000232 ! reference m/z error image
+relationship: has_relation MS:4000235 ! QC reference m/z
+
+[Term]
+id: MS:4000234
+name: acquired pixel fraction
+def: "The number of spectra with unique pixel coordinates in an imaging acquisition divided by the number of positions of the smallest rectangular grid that encloses all acquired pixel coordinates." [PSI:MS]
+subset: mzQC
+comment: A value of 1 indicates a fully populated rectangular acquisition. Values below 1 arise legitimately from acquisitions restricted to a non rectangular region of interest, and illegitimately from acquisitions that were aborted or that lost spectra during conversion. The metric is therefore dependent on experimental design. Only reports absent spectra.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000191 ! fraction
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000235
+name: QC reference m/z
+def: "The theoretical m/z of the mass reference ion used by a mass reference based QC metric." [PSI:MS]
+subset: mzQC
+comment: Reported in the metadata of the runQuality or setQuality whose metrics it parameterises. REQUIRED for interpreting reference m/z error image (MS:4000232) and its quantiles (MS:4000233).
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_units MS:1000040 ! m/z
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000236
+name: duplicate pixel coordinate count
+def: "The number of distinct x/y pixel coordinates in a singular imaging acquisition at which more than one spectrum of the same type was recorded." [PSI:MS]
+subset: mzQC
+comment: An imaging acquisition normally records at most one spectrum per pixel coordinate. A nonzero value may indicate an export or acquisition defect, such as a stage retrace or a conversion fault, and marks positions that no matrix metric can fully represent, since a matrix cell holds only one value. Multiple spectra of different types may occur in dual polarity or MS2 acquisition methods.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000237
+name: pixel grid dimensions
+def: "The dimensions, in pixels, of the smallest rectangular grid that encloses all acquired pixel coordinates of an imaging acquisition. A value pair (X, Y) represents the extent along x and y, in that order." [PSI:MS]
+subset: mzQC
+comment: Describes the bounding box of the acquisition. The values count pixel positions, not physical distance. A position is counted whether or not a spectrum was acquired at it.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000227 ! imaging metric
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:integer ! The allowed value-type for this CV term
+relationship: has_relation MS:4000234 ! acquired pixel fraction
+
+[Term]
+id: MS:4000238
+name: targeted compound name
+def: "The name of a targeted/expected compound, as chosen by the user or the software producing the metric (e.g., a trivial or a systematic name, but not a database identifier)." [PSI:MS]
+subset: mzQC
+comment: Used as the compound-identifying column of targeted compound table metrics, so that the set of compounds is defined by the data and not by the controlled vocabulary.
+is_a: MS:4000080 ! QC non-metric term
+relationship: has_value_type xsd:string ! The allowed value-type for this CV term
+
+[Term]
+id: MS:4000239
+name: targeted compound retention time deviation
+def: "The deviation of the observed from the expected retention time of a targeted/expected compound, calculated as observed minus expected retention time; positive values indicate a later elution than expected. The compound needs to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000240
+name: targeted compound intensity
+def: "The intensity of the chromatographic peak of a targeted/expected compound, e.g., its apex intensity or its integrated intensity (peak area). The same kind of intensity needs to be used for all compounds of a run and for all runs that are compared. The compound needs to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000241
+name: targeted compound retention time deviation quantiles
+def: "From the distribution of the deviations of the observed from the expected retention times (observed minus expected) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: A tight distribution close to zero indicates that all compounds within a run are close to their expected retention times; a shifted Q2 indicates a systematic retention time drift, and a wide interquartile range (Q3-Q1) indicates compound-dependent deviations.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000242
+name: targeted compound signal-to-noise ratio quantiles
+def: "From the distribution of signal-to-noise ratios at the chromatographic peak apex of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Comparisons will likely only make local sense where the same method of S/N calculation is applied (or overall the same software to calculate this metric, see mzQC 'analysisSoftware'). As compounds falling below the detection limit do not contribute, a loss of sensitivity may shift the quantiles less than expected; hence, they should be interpreted together with the metric 'number of detected targeted compounds'.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1001884 ! signal-to-noise ratio
+relationship: has_value_concept STATO:0000291 ! quantile
+
+[Term]
+id: MS:4000243
+name: targeted compound peak width at half-maximum quantiles
+def: "From the distribution of chromatographic peak full widths at half-maximum (FWHM) of a set of targeted/expected compounds (e.g., from a QC mix), the quantiles. For example, a value triplet represents the quartiles Q1, Q2, Q3. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Broadening peaks across runs indicate a degrading chromatographic separation, e.g., due to column aging.
+is_a: MS:4000004 ! n-tuple
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000086 ! full width at half-maximum
+relationship: has_value_concept STATO:0000291 ! quantile
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000244
+name: targeted compound intensity mean
+def: "From the distribution of chromatographic peak intensities (see MS:4000240) of a set of targeted/expected compounds (e.g., from a QC mix), the mean. Only detected compounds contribute to the distribution. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: A drop of the mean intensity across runs of the same method points to a loss of sensitivity, e.g., due to a contaminated ion source or a degrading sample. Note that the mean is dominated by the most intense compounds and that compounds falling below the detection limit do not contribute, which can mask a loss of sensitivity; hence, the mean should be interpreted together with the metric 'number of detected targeted compounds'.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept STATO:0000401 ! sample mean
+relationship: has_units MS:1000043 ! intensity unit
+
+[Term]
+id: MS:4000245
+name: targeted compound retention time deviations
+def: "The deviation of the observed from the expected retention time (observed minus expected) for each compound of a set of targeted/expected compounds (e.g., from a QC mix). The compounds are identified by the 'targeted compound name' and 'external reference identifier' columns, and the corresponding deviations are given in the 'targeted compound retention time deviation' column. Compounds missing from the table are interpreted as not detected. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: In contrast to the aggregated MS:4000241, this metric retains the per-compound values, which makes it possible to see whether a retention time shift affects all compounds alike (e.g., due to a delayed injection) or only part of the retention time range (e.g., due to a changed oven temperature program).
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_column MS:4000238 ! targeted compound name
+relationship: has_column MS:1000878 ! external reference identifier
+relationship: has_column MS:4000239 ! targeted compound retention time deviation
+
+[Term]
+id: MS:4000246
+name: targeted compound intensities
+def: "The intensity of the chromatographic peak of each compound of a set of targeted/expected compounds (e.g., from a QC mix). The compounds are identified by the 'targeted compound name' and 'external reference identifier' columns, and the corresponding intensities are given in the 'targeted compound intensity' column. Compounds missing from the table are interpreted as not detected. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: In contrast to the aggregated MS:4000244 (the mean of the peak intensities), this metric retains the per-compound values, which makes it possible to distinguish a global loss of sensitivity from a loss affecting only compounds of a certain volatility, polarity or concentration.
+is_a: MS:4000005 ! table
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_metric_category MS:4000017 ! chromatogram metric
+relationship: has_column MS:4000238 ! targeted compound name
+relationship: has_column MS:1000878 ! external reference identifier
+relationship: has_column MS:4000240 ! targeted compound intensity
+
+[Term]
+id: MS:4000247
+name: number of detected targeted compounds
+def: "The number of compounds of a set of targeted/expected compounds (e.g., from a QC mix) that are detected within the run. The compounds need to be confidently identified, ideally by several characteristics (e.g., mass spectrum and retention time)." [PSI:MS]
+subset: mzQC
+comment: Only comparable between runs using the same set of targeted compounds. A decrease across runs of the same method points to a loss of sensitivity, as the least abundant compounds are the first to fall below the detection limit. Complements the aggregated metrics MS:4000241 to MS:4000244, which consider detected compounds only, and equals the number of rows of the tables MS:4000245 and MS:4000246.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000008 ! ID based metric
+relationship: has_metric_category MS:4000012 ! single run based metric
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+relationship: has_units UO:0000189 ! count unit
+
+[Term]
+id: MS:4000248
+name: chromatographic peak start time
+def: "The retention time at which the integration boundary of a chromatographic peak begins." [PSI:MS]
+subset: mzQC
+comment: Can describe the start of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000249
+name: chromatographic peak end time
+def: "The retention time at which the integration boundary of a chromatographic peak ends." [PSI:MS]
+subset: mzQC
+comment: Can describe the end of a chromatographic peak within a single run or of an RT-aligned peak, e.g. after alignment across multiple runs or to a reference.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000016 ! retention time metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000250
+name: chromatographic peak width at half maximum
+def: "The width of a chromatographic peak measured at half of its maximum height." [PSI:MS]
+subset: mzQC
+comment: Per-peak counterpart of the distribution-level metrics XIC-FWHM quantiles (MS:4000051) and targeted compound peak width at half-maximum quantiles (MS:4000244). FWHM alone does not describe peak asymmetry or multi-modality. The standard conversion from FWHM to Gaussian standard deviation assumes a Gaussian peak shape. The method used to determine FWHM (e.g., from raw or smoothed data, or a fitted peak model) depends on the processing software.
+is_a: MS:4000003 ! single value
+relationship: has_metric_category MS:4000009 ! ID free metric
+relationship: has_metric_category MS:4000018 ! XIC metric
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
+relationship: has_value_concept MS:1000086 ! full width at half-maximum
+relationship: has_units UO:0000010 ! second
+
+[Term]
+id: MS:4000251
 name: coefficient of variation of concentration
 def: "Coefficient of variation calculated as the standard deviation divided by the mean concentration." [PSI:MS]
 subset: mzQC
@@ -32816,7 +33263,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000187 ! percent
 
 [Term]
-id: MS:4000228
+id: MS:4000252
 name: signal-to-blank ratio
 def: "Ratio of quantitative signal measured in study samples to quantitative signal measured in corresponding blank samples." [PSI:MS]
 comment: Can be used to help assess detectability relative to background, and is not itself a limit of detection.
@@ -32826,7 +33273,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000190 ! ratio
 
 [Term]
-id: MS:4000229
+id: MS:4000253
 name: coefficient of determination
 def: "Statistical measure of the proportion of variance in the observed values of a dependent variable accounted for by a model's predictions." [PSI:MS]
 subset: mzQC
@@ -32836,7 +33283,7 @@ relationship: has_value_concept STATO:0000564 ! coefficient of determination
 relationship: has_units UO:0000186 ! dimensionless unit
 
 [Term]
-id: MS:4000230
+id: MS:4000254
 name: normalized slope
 def: "Slope of the linear regression fitted between quantitative signal and analyzed amount, after each variable has been scaled by dividing its values by the respective maximum value." [PSI:MS]
 subset: mzQC
@@ -32845,7 +33292,7 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000186 ! dimensionless unit
 
 [Term]
-id: MS:4000231
+id: MS:4000255
 name: normalized intercept
 def: "Intercept of the linear regression between quantitative signal and analyzed amount after each variable has been scaled by dividing its values by the respective maximum value." [PSI:MS]
 subset: mzQC
@@ -32854,56 +33301,56 @@ relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 relationship: has_units UO:0000186 ! dimensionless unit
 
 [Term]
-id: MS:4000232
+id: MS:4000256
 name: pooled batch quality control coefficient of variation of concentration
 def: "The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Batch Quality Control (BQC) samples." [PSI:MS]
 subset: mzQC
 comment: BQC samples are pooled study samples repeatedly extracted and measured alongside the study samples, capturing process variability including sample preparation. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000010 ! quantification based metric
-relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:1004015 ! targeted feature identifier
-relationship: has_column MS:4000227 ! coefficient of variation of concentration
+relationship: has_column MS:1004040 ! targeted feature identifier
+relationship: has_column MS:4000251 ! coefficient of variation of concentration
 
 [Term]
-id: MS:4000233
+id: MS:4000257
 name: pooled technical quality control coefficient of variation of concentration
 def: "The coefficient of variation of quantified concentrations for each targeted feature measured in pooled Technical Quality Control (TQC) samples." [PSI:MS]
 subset: mzQC
 comment: Technical Quality Control (TQC) samples are pooled extracts measured at regular intervals, capturing instrument variability. The QC sample type nomenclature follows MiDAR (https://slinghub.github.io/midar/articles/02_keydataids.html).
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000010 ! quantification based metric
-relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:1004015 ! targeted feature identifier
-relationship: has_column MS:4000227 ! coefficient of variation of concentration
+relationship: has_column MS:1004040 ! targeted feature identifier
+relationship: has_column MS:4000251 ! coefficient of variation of concentration
 
 [Term]
-id: MS:4000234
+id: MS:4000258
 name: median-based signal-to-blank ratio per feature
 def: "Table containing the ratio of median quantitative signal in study samples to median quantitative signal in corresponding procedural blank samples for each targeted feature." [PSI:MS]
 subset: mzQC
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000010 ! quantification based metric
-relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:1004015 ! targeted feature identifier
-relationship: has_column MS:4000228 ! signal-to-blank ratio
+relationship: has_column MS:1004040 ! targeted feature identifier
+relationship: has_column MS:4000252 ! signal-to-blank ratio
 
 [Term]
-id: MS:4000235
+id: MS:4000259
 name: response curve linearity
 def: "Table containing the coefficient of determination, normalized slope, and normalized intercept of a linear regression between quantitative signal and analyzed amount for each targeted feature in a dilution series." [PSI:MS]
 subset: mzQC
 is_a: MS:4000005 ! table
 relationship: has_metric_category MS:4000010 ! quantification based metric
-relationship: has_metric_category MS:4000011 ! ID based metric
+relationship: has_metric_category MS:4000008 ! ID based metric
 relationship: has_metric_category MS:4000013 ! multiple runs based metric
-relationship: has_column MS:1004015 ! targeted feature identifier
-relationship: has_column MS:4000229 ! coefficient of determination
-relationship: has_column MS:4000230 ! normalized slope
-relationship: has_column MS:4000231 ! normalized intercept
+relationship: has_column MS:1004040 ! targeted feature identifier
+relationship: has_column MS:4000253 ! coefficient of determination
+relationship: has_column MS:4000254 ! normalized slope
+relationship: has_column MS:4000255 ! normalized intercept
 relationship: has_relation MS:1001816 ! dilution series, concentration X
 
 [Term]
