@@ -71,6 +71,20 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import pandas as pd
+from fastobo.id import PrefixedIdent, UnprefixedIdent
+from fastobo.pv import LiteralPropertyValue
+from fastobo.syn import Synonym
+from fastobo.term import (
+    DefClause,
+    IsAClause,
+    NameClause,
+    PropertyValueClause,
+    RelationshipClause,
+    SubsetClause,
+    SynonymClause,
+    TermFrame,
+)
+from fastobo.xref import Xref, XrefList
 
 OUTPUT_DEFAULT = "psi-ms-columns.obo-fragment"
 INPUT_DEFAULT = ".jeh-local/column_database_fixed.tsv"
@@ -102,6 +116,8 @@ MIN_RETAIN_FRACTION = 0.5
 # whole column branch. `subsetdef: columns` is declared once, in psi-ms-core.obo -- the
 # fragment has no header to declare it in, and after the splice there is only one document.
 SUBSET = "columns"
+PSI_MS = PrefixedIdent("PSI", "MS")
+XSD_STRING = PrefixedIdent("xsd", "string")
 
 # Separation-mode key -> (technique term id, label, definition adjective).
 MODE_INFO = {
@@ -432,24 +448,6 @@ def with_period(sentence):
     return sentence if sentence.endswith(".") else sentence + "."
 
 
-def escape_def(text):
-    """Escape a value for an OBO quoted def: string (upstream names may contain " or \\)."""
-    return text.replace("\\", "\\\\").replace('"', '\\"')
-
-
-def escape_tag(text):
-    """Escape a value for an unquoted OBO tag line (name:). Three characters are
-    structural in an unquoted value and each silently truncates or mangles the name:
-    backslash is the escape character (a trailing one folds the next line into the name,
-    a mid-string one deletes a character), `!` starts a comment the parser discards to
-    end of line, and `{`/`}` open a trailing-modifier block. clean() already removes the
-    newlines and tabs that would also need escaping. Backslash is doubled first, so the
-    escapes introduced below are not themselves escaped."""
-    for char in "\\", "!", "{", "}":
-        text = text.replace(char, "\\" + char)
-    return text
-
-
 def leaf_definition(vendor, mode):
     if not mode:
         return with_period(
@@ -462,38 +460,74 @@ def leaf_definition(vendor, mode):
     )
 
 
-# --- stanza builders (return text, no trailing blank line) ------------------
+# --- stanza builders -----------------------------------------------------------
+#
+# Stanzas are built as fastobo frames and serialised by fastobo, so OBO escaping (of
+# `\`, `"`, `!` and `{`/`}` in names, definitions and literals) is the parser's own
+# rule rather than a hand-maintained copy of it. Builders return the stanza text with no
+# trailing newline.
 
 
-def vendor_stanza(vendor, vendor_id):
-    definition = with_period(f"Chromatographic column model manufactured by {vendor}")
-    lines = [
-        "[Term]",
-        f"id: {vendor_id}",
-        f"name: {escape_tag(vendor)} chromatographic column model",
-        f'def: "{escape_def(definition)}" [PSI:MS]',
-        f"subset: {SUBSET}",
-        f"is_a: {PARENT_ID} ! chromatographic column model",
-    ]
-    return "\n".join(lines)
+def ms(term_id):
+    prefix, local = term_id.split(":")
+    return PrefixedIdent(prefix, local)
 
 
-def leaf_stanza(leaf_id, vendor, vendor_id, label, mode, usp_literals):
-    lines = [
-        "[Term]",
-        f"id: {leaf_id}",
-        f"name: {escape_tag(label)}",
-        f'def: "{escape_def(leaf_definition(vendor, mode))}" [PSI:MS]',
-        f"subset: {SUBSET}",
-        f"is_a: {vendor_id} ! {vendor} chromatographic column model",
-        f"is_a: {LIQUID_COLUMN} ! liquid chromatographic column",
+def commented(clause, label):
+    """Attach the `! label` comment OBO tools print after a referenced id."""
+    clause.comment = label
+    return clause
+
+
+def term_text(term_id, clauses):
+    return str(TermFrame(ms(term_id), clauses)).rstrip("\n")
+
+
+def definition(text):
+    return DefClause(text, XrefList([Xref(PSI_MS)]))
+
+
+def synonym_clauses(synonyms):
+    return [SynonymClause(Synonym(name, "EXACT")) for name in synonyms]
+
+
+def vendor_stanza(vendor, vendor_id, synonyms=()):
+    return term_text(
+        vendor_id,
+        [
+            NameClause(f"{vendor} chromatographic column model"),
+            definition(with_period(f"Chromatographic column model manufactured by {vendor}")),
+            SubsetClause(UnprefixedIdent(SUBSET)),
+            *synonym_clauses(synonyms),
+            commented(IsAClause(ms(PARENT_ID)), REQUIRED_CORE_TERMS[PARENT_ID]),
+        ],
+    )
+
+
+def leaf_stanza(leaf_id, vendor, vendor_id, label, mode, usp_literals, synonyms=()):
+    clauses = [
+        NameClause(label),
+        definition(leaf_definition(vendor, mode)),
+        SubsetClause(UnprefixedIdent(SUBSET)),
+        *synonym_clauses(synonyms),
+        commented(IsAClause(ms(vendor_id)), f"{vendor} chromatographic column model"),
+        commented(IsAClause(ms(LIQUID_COLUMN)), REQUIRED_CORE_TERMS[LIQUID_COLUMN]),
     ]
     if mode:
         mode_id, mode_label, _ = MODE_INFO[mode]
-        lines.append(f"relationship: has_separation_mode {mode_id} ! {mode_label}")
-    for code in usp_literals:
-        lines.append(f'property_value: usp_designation "{escape_def(code)}" xsd:string')
-    return "\n".join(lines)
+        clauses.append(
+            commented(
+                RelationshipClause(UnprefixedIdent("has_separation_mode"), ms(mode_id)),
+                mode_label,
+            )
+        )
+    clauses += [
+        PropertyValueClause(
+            LiteralPropertyValue(UnprefixedIdent("usp_designation"), code, XSD_STRING)
+        )
+        for code in usp_literals
+    ]
+    return term_text(leaf_id, clauses)
 
 
 # --- cross-file reference check ----------------------------------------------
