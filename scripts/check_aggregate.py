@@ -2,7 +2,7 @@
 """Fail if the spliced release OBO has unresolved references or unnamed terms.
 
 The two source files cannot be checked for reference integrity on their own:
-psi-ms-columns.obo-fragment deliberately points at core terms (MS:1004011, MS:1003921
+psi-ms-columns.obo-fragment deliberately points at core terms (MS:1004013, MS:1003921
 and the separation-mode terms), so a per-file validator sees dangling ids it must
 tolerate. Nothing downstream closes the gap either -- the splice is a text insertion
 that cannot know a target is missing, and obo2owl then declares an unlabelled class,

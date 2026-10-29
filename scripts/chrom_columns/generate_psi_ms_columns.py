@@ -12,7 +12,7 @@ the MS:5000000 namespace:
         relationship: has_separation_mode ...               (when known)
         property_value: usp_designation "..." xsd:string    (per USP code)
 
-The branch parent (MS:1004011 chromatographic column model) lives in psi-ms-core.obo,
+The branch parent (MS:1004013 chromatographic column model) lives in psi-ms-core.obo,
 as do every typedef and the `columns` subsetdef these stanzas use. The fragment is
 deliberately not a standalone OBO document: scripts/build_release_obo.py splices it
 into psi-ms-core.obo to produce the psi-ms.obo release artefact, and a header clause
@@ -81,7 +81,7 @@ CORE_DEFAULT = "psi-ms-core.obo"
 # ID bands within the MS:5000000 namespace (kept separate so the file stays
 # grouped scaffold-then-leaves even as new terms are appended over time).
 # The vendor band opens at MS:5000000: that id previously held the branch parent,
-# which now lives in psi-ms-core.obo as MS:1004011. Id assignment is append-only:
+# which now lives in psi-ms-core.obo as MS:1004013. Id assignment is append-only:
 # retired keys keep their ledger rows, so max(used) covers every id ever minted and
 # a retired id is never handed to a different term. 5000000 is therefore only
 # reachable on a --reset-ids run, not by the next vendor to appear.
@@ -120,7 +120,7 @@ MODE_INFO = {
 # term they point at, which nothing downstream would flag.
 # The technique terms are derived from MODE_INFO rather than repeated, so a mode added
 # there cannot be left unchecked here.
-PARENT_ID = "MS:1004011"
+PARENT_ID = "MS:1004013"
 LIQUID_COLUMN = "MS:1003921"
 REQUIRED_CORE_TERMS = {
     PARENT_ID: "chromatographic column model",
