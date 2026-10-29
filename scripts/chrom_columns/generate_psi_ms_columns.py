@@ -64,7 +64,6 @@ Usage:
 
 import argparse
 import csv
-import io
 import os
 import re
 import sys
@@ -181,16 +180,17 @@ def read_catalog(tsv_path):
     """Load the pre-cleaned repo-rt catalog into a DataFrame, keeping every cell as
     a literal string. The catalog must be valid UTF-8 (names and USP codes are
     corrected upstream); a stray non-UTF-8 byte means the input skipped that fix,
-    so we abort rather than silently recover it. na_filter=False keeps 'NA' and
-    blanks as text; fillna covers cells missing from a short row.
+    so we abort rather than silently recover it.
 
-    An over-length row (more tab-separated fields than the header) ABORTS the run.
-    A TSV has no quoting, so a tab count is authoritative; pandas would otherwise
-    either treat the surplus field as a row index (silently shifting every column)
-    or drop/truncate the row, and a vanished or shifted model would silently lose its
-    stable id. Short rows are still tolerated (padded by fillna). index_col=False is
-    belt-and-braces against the index-shift heuristic, and quoting=QUOTE_NONE keeps a
-    stray double-quote from merging rows and matches the raw tab-count check above.
+    One csv.DictReader pass does the parsing. QUOTE_NONE because a TSV has no quoting:
+    the tab count is authoritative and a stray double-quote cannot merge rows. 'NA' and
+    blank cells stay text (DictReader never converts values), and a short row is padded
+    with "" (restval).
+
+    An over-length row (more tab-separated fields than the header) ABORTS the run:
+    DictReader collects the surplus fields under the None key, and dropping them would
+    shift or truncate the row, and a vanished or shifted model would silently lose its
+    stable id.
 
     Because QUOTE_NONE does no quote processing, a field an upstream export wrapped in
     double quotes (the CSV convention for a value containing a comma) keeps those quotes
@@ -201,35 +201,30 @@ def read_catalog(tsv_path):
     the file is not the tab-delimited catalog this reads, so a wrapped-quote cell in any
     required column ABORTS the run."""
     try:
-        text = Path(tsv_path).read_bytes().decode("utf-8")
+        with open(tsv_path, encoding="utf-8", newline="") as fh:
+            reader = csv.DictReader(
+                fh, delimiter="\t", quoting=csv.QUOTE_NONE, restval=""
+            )
+            rows, overlong = [], []
+            for row in reader:
+                if None in row:
+                    overlong.append(reader.line_num)
+                rows.append(row)
+            header = reader.fieldnames
     except UnicodeDecodeError as e:
         raise ValueError(
             f"{tsv_path} is not valid UTF-8 ({e}); the catalog must be pre-cleaned "
         )
-    lines = text.split("\n")
-    ncols = len(lines[0].split("\t")) if lines and lines[0] else 0
-    if ncols == 0:
+    if not header:
         raise ValueError(f"{tsv_path} is empty or has no header row")
-    overlong = [
-        i
-        for i, ln in enumerate(lines[1:], start=2)
-        if ln != "" and len(ln.split("\t")) > ncols
-    ]
     if overlong:
         raise ValueError(
             f"{tsv_path} has over-length row(s) at line(s) "
             f"{overlong[:10]}{' ...' if len(overlong) > 10 else ''} "
-            f"(more than {ncols} tab-separated fields); fix the field count upstream "
-            "rather than letting the row be dropped or shifted"
+            f"(more than {len(header)} tab-separated fields); fix the field count "
+            "upstream rather than letting the row be dropped or shifted"
         )
-    df = pd.read_csv(
-        io.StringIO(text),
-        sep="\t",
-        dtype=str,
-        na_filter=False,
-        index_col=False,
-        quoting=csv.QUOTE_NONE,
-    ).fillna("")
+    df = pd.DataFrame(rows, columns=header, dtype=str)
     missing = [c for c in REQUIRED_COLUMNS if c not in df.columns]
     if missing:
         raise ValueError(f"catalog is missing required columns: {missing}")
