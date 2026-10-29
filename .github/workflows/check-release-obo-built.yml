@@ -1,0 +1,40 @@
+name: "Check release OBO is built, not hand-edited"
+
+# psi-ms.obo is a build artefact: scripts/build_release_obo.py splices
+# psi-ms-columns.obo-fragment into psi-ms-core.obo, and build-release-obo.yml commits the
+# result. Any change to psi-ms.obo must therefore be byte-identical to a rebuild from the
+# sources in the same commit. A hand edit fails here, and would otherwise be silently
+# overwritten by the next rebuild. Edit psi-ms-core.obo (or regenerate the fragment)
+# instead. See HUPO-PSI/psi-ms-CV#561.
+#
+# Source-only PRs leave psi-ms.obo stale until the bot's update-release-obo PR lands, so
+# the check only fires when psi-ms.obo itself changes.
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "psi-ms.obo"
+  push:
+    branches: [master]
+    paths:
+      - "psi-ms.obo"
+
+jobs:
+  check-built:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild psi-ms.obo and compare with the committed file
+        run: |
+          python scripts/build_release_obo.py --output /tmp/psi-ms.obo
+          if ! diff -u psi-ms.obo /tmp/psi-ms.obo > /tmp/obo.diff; then
+            echo "::error file=psi-ms.obo::psi-ms.obo does not match a rebuild from psi-ms-core.obo + psi-ms-columns.obo-fragment. It is generated: edit psi-ms-core.obo instead, or run scripts/build_release_obo.py and commit its output."
+            head -n 200 /tmp/obo.diff
+            exit 1
+          fi
+          echo "psi-ms.obo matches the rebuild"

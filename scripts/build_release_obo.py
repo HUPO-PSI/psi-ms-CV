@@ -16,6 +16,15 @@ OUTPUT_DEFAULT = "psi-ms.obo"
 
 MS_ID_LINE = re.compile(r"^id: MS:\S+$", re.MULTILINE)
 
+# Stamped into the release header so anyone opening psi-ms.obo is told it is generated.
+# check-release-obo-built.yml fails any change to psi-ms.obo that a rebuild does not
+# reproduce, so a hand edit cannot merge either way.
+GENERATED_REMARK = (
+    "remark: GENERATED FILE, do not edit. psi-ms.obo is built by "
+    "scripts/build_release_obo.py from psi-ms-core.obo and psi-ms-columns.obo-fragment. "
+    "Edit psi-ms-core.obo instead."
+)
+
 
 def check_fragment(fragment_text, fragment_path):
     """The fragment must be stanzas only. A header clause here would land mid-file and
@@ -48,6 +57,18 @@ def splice(core_text, fragment_text):
     return core_text[:end + 1] + "\n" + body + "\n" + core_text[end + 1:]
 
 
+def stamp_generated(core_text):
+    """Add GENERATED_REMARK as the first remark of the header (or as its last line when
+    the header has no remarks)."""
+    header_end = core_text.find("\n[")
+    if header_end == -1:
+        raise ValueError("no stanza found in core; cannot locate the end of the header")
+    header = core_text[:header_end + 1]
+    at = header.find("\nremark: ")
+    at = header_end + 1 if at == -1 else at + 1
+    return core_text[:at] + GENERATED_REMARK + "\n" + core_text[at:]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--core", default=CORE_DEFAULT)
@@ -59,7 +80,7 @@ def main():
     fragment_text = open(args.fragment, encoding="utf-8").read()
 
     n_stanzas = check_fragment(fragment_text, args.fragment)
-    merged = splice(core_text, fragment_text)
+    merged = splice(stamp_generated(core_text), fragment_text)
     open(args.output, "w", encoding="utf-8").write(merged)
 
     print(f"wrote {args.output}: {args.core} + {n_stanzas} stanzas from {args.fragment} "

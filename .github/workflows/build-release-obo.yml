@@ -9,6 +9,7 @@ on:
     paths:
       - "psi-ms-core.obo"
       - "psi-ms-columns.obo-fragment"
+      - "scripts/build_release_obo.py"
   workflow_dispatch: {}
 
 jobs:
