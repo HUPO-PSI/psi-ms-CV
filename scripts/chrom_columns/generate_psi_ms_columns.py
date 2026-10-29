@@ -45,12 +45,17 @@ mirror is cross-validated against the ledger: a blank cell is a new model; a kno
 key whose mirror disagrees aborts the run; a new key whose rows carry the id of a
 key that has left the catalog is a mirror-proven rename, and the id is transferred
 to the new key; a new key carrying any other id (live or never minted) aborts. A
-rename consumes the old key's ledger row, so -- unlike a retirement -- reverting one
-upstream mints a second id for the same physical column.
+rename consumes the old key's ledger row; reverting it upstream is proven the same way,
+provided the psi_ms_id cell still carries the id.
+
+Names are display labels, so a term's name can change (a rename, or a collision
+suffix gained or lost) while its id does not. Every name a term has been published
+under is appended to .github/repo-rt/psi-ms-column-synonyms.tsv, the append-only
+SYNONYM LOG, and emitted as an EXACT synonym, so the old name still finds the term.
 --reset-ids ignores the committed ledger and assigns clean sequential ids (used once
 to mint the initial baseline; the mirror cross-check is skipped, having nothing to
 reconcile against). --allow-shrink acknowledges an intentional mass removal of
-models; --dry-run prints the report without writing either file. No flag ever moves
+models; --dry-run prints the report without writing any file. No flag ever moves
 or reuses an id.
 
 This fragment is versioned by Git and carries no data-version of its own; the release
@@ -70,6 +75,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import fastobo
 import pandas as pd
 from fastobo.id import PrefixedIdent, UnprefixedIdent
 from fastobo.pv import LiteralPropertyValue
@@ -89,6 +95,7 @@ from fastobo.xref import Xref, XrefList
 OUTPUT_DEFAULT = "psi-ms-columns.obo-fragment"
 INPUT_DEFAULT = ".jeh-local/column_database_fixed.tsv"
 MAPPING_DEFAULT = ".github/repo-rt/psi-ms-column-ids.tsv"
+SYNONYMS_DEFAULT = ".github/repo-rt/psi-ms-column-synonyms.tsv"
 CORE_DEFAULT = "psi-ms-core.obo"
 
 # ID bands within the MS:5000000 namespace (kept separate so the file stays
@@ -102,6 +109,7 @@ VENDOR_BAND = (5000000, 5000999)
 LEAF_BAND = (5001000, 5999999)
 
 LEDGER_HEADER = "company\tcolumn\tpsi_ms_id"
+SYNONYMS_HEADER = "psi_ms_id\tsynonym"
 
 
 def ms_num(ms_id):
@@ -612,11 +620,11 @@ def read_ledger(path: str) -> dict[tuple[str, str], str]:
     its old id. Identity lives here, not in the fragment: names there are display labels
     (escaped, collision-suffixed) and are never read back.
 
-    ponytail: a mirror-proven rename CONSUMES the old key's row (apply_mirror rebinds
-    it), so a rename reverted upstream mints a second id for the same physical column.
-    Retiring the old key instead needs a fourth ledger field, which is the cross-repo
-    contract repo-rt's add_psi_ms_id.py joins on -- add it there and here together, on
-    evidence that renames actually get reverted.
+    A mirror-proven rename rebinds the old key's row to the new key (apply_mirror), so
+    the id follows the physical column. A rename reverted upstream is proven the same
+    way, provided the catalog's psi_ms_id cell still carries the id, and the id moves
+    back. The name a term is published under can therefore change while its id does
+    not; every name it has been published under is kept as a synonym (read_synonyms).
     """
     if not os.path.exists(path):
         raise FileNotFoundError(
@@ -650,17 +658,58 @@ def read_ledger(path: str) -> dict[tuple[str, str], str]:
     return ledger
 
 
-def read_fragment_ids(path: str) -> set[str]:
-    """Set of term ids in the previously generated fragment. Liveness only -- which
-    ledger rows had a term last run, for the shrink floor and the retired/resurrected
-    report. Identity never comes from here; a missing fragment just means no
-    liveness info (the ids themselves are safe in the ledger)."""
+def read_synonyms(path: str, ledger: dict[tuple[str, str], str]) -> dict[str, set[str]]:
+    """Read the committed synonym log: {"MS:nnnnnnn": {former name, ...}}.
+
+    Labels are display-only, so a rename upstream or a model gaining or losing its
+    collision suffix changes a term's name but never its id. Every name a term has been
+    published under is appended here and emitted as an EXACT synonym, so a search for
+    the old name still finds the term. Rows are append-only, like the ledger, and kept
+    for retired ids too, so a resurrected term gets its synonyms back. A missing file
+    is an empty log."""
     if not os.path.exists(path):
-        return set()
+        return {}
+    known = set(ledger.values())
+    synonyms = defaultdict(set)
+    lines = Path(path).read_text(encoding="utf-8").split("\n")
+    if lines[0] != SYNONYMS_HEADER:
+        raise ValueError(f"{path}: header must be {SYNONYMS_HEADER!r}, got {lines[0]!r}")
+    for n, line in enumerate(lines[1:], start=2):
+        if line == "":
+            continue
+        fields = line.split("\t")
+        if len(fields) != 2 or not fields[1]:
+            raise ValueError(f"{path} line {n}: expected psi_ms_id<TAB>synonym")
+        ms_id, name = fields
+        if known and ms_id not in known:
+            raise ValueError(f"{path} line {n}: {ms_id} is not in the id ledger")
+        synonyms[ms_id].add(name)
+    return dict(synonyms)
+
+
+def render_synonyms(synonyms: dict[str, set[str]]) -> str:
+    lines = [SYNONYMS_HEADER]
+    lines += [
+        f"{ms_id}\t{name}"
+        for ms_id in sorted(synonyms, key=ms_num)
+        for name in sorted(synonyms[ms_id])
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def read_fragment_names(path: str) -> dict[str, str]:
+    """{id: name} for the terms in the previously generated fragment. Liveness (which
+    ledger rows had a term last run, for the shrink floor and the retired/resurrected
+    report) and the names each id was last published under (for the synonym log).
+    Identity never comes from here; a missing fragment just means no liveness info
+    (the ids themselves are safe in the ledger)."""
+    if not os.path.exists(path):
+        return {}
     return {
-        line[len("id: ") :].strip()
-        for line in Path(path).read_text(encoding="utf-8").splitlines()
-        if line.startswith("id: MS:")
+        str(frame.id): clause.name
+        for frame in fastobo.load(path)
+        for clause in frame
+        if isinstance(clause, NameClause)
     }
 
 
@@ -762,14 +811,21 @@ def render_ledger(ledger):
     return "\n".join(lines) + "\n"
 
 
-def build_columns_obo(models, ledger, prior_ids=frozenset(), allow_shrink=False):
-    """Return (obo_text, ledger_text, report). Terms are emitted in id order so the
-    file stays sorted and stable.
+def build_columns_obo(
+    models, ledger, prior_names=None, synonyms=None, allow_shrink=False
+):
+    """Return (obo_text, ledger_text, synonyms_text, report). Terms are emitted in id
+    order so the file stays sorted and stable.
 
     `ledger` is the committed (company, column) -> id map, the sole id authority; it
     is only ever extended (or rebound by a mirror-proven rename), never rewritten.
-    `prior_ids` are the ids present in the previously generated fragment -- liveness
-    only, feeding the shrink floor and the retired/resurrected report sections."""
+    `prior_names` maps the ids in the previously generated fragment to the names they
+    were published under: liveness for the shrink floor and the retired/resurrected
+    report sections, and the source of new synonyms when a name changes. `synonyms` is
+    the committed synonym log (read_synonyms); it is only ever extended."""
+    prior_names = prior_names or {}
+    prior_ids = set(prior_names)
+    synonyms = {i: set(names) for i, names in (synonyms or {}).items()}
     if not models:
         raise ValueError(
             "catalog produced 0 column models; refusing to write an empty module"
@@ -825,8 +881,23 @@ def build_columns_obo(models, ledger, prior_ids=frozenset(), allow_shrink=False)
     if dup_ids:
         raise ValueError(f"duplicate ids generated (corrupt id ledger?): {dup_ids}")
 
+    names = {vendor_id[v]: f"{v} chromatographic column model" for v in vendors}
+    names.update({leaf_ids[key]: label for key, label in labels.items()})
+    # A changed name is logged before it is overwritten. Without a prior fragment the
+    # rename report is the only evidence, and the old key's product is its best name.
+    former = {i: n for i, n in prior_names.items() if i in names}
+    for old_key, _, ms_id in renames:
+        former.setdefault(ms_id, old_key[1])
+    new_synonyms = sorted(
+        (ms_id, old) for ms_id, old in former.items()
+        if old != names[ms_id] and old not in synonyms.get(ms_id, ())
+    )
+    for ms_id, old in new_synonyms:
+        synonyms.setdefault(ms_id, set()).add(old)
+
     current = set(vendor_assign) | set(leaf_ids)
     report = {
+        "synonyms": new_synonyms,
         "deviations": [],
         "renames": renames,
         "minted": sorted((k, new_ledger[k]) for k in current if k not in ledger),
@@ -843,10 +914,13 @@ def build_columns_obo(models, ledger, prior_ids=frozenset(), allow_shrink=False)
         ),
     }
 
+    def emitted(ms_id):
+        return sorted(n for n in synonyms.get(ms_id, ()) if n != names[ms_id])
+
     stanzas = []
     for vendor in vendors:
         vid = vendor_id[vendor]
-        stanzas.append((ms_num(vid), vendor_stanza(vendor, vid)))
+        stanzas.append((ms_num(vid), vendor_stanza(vendor, vid, emitted(vid))))
 
     for (vendor, product), entry in models.items():
         mode, usp_literals, deviations = resolve_model(entry)
@@ -861,6 +935,7 @@ def build_columns_obo(models, ledger, prior_ids=frozenset(), allow_shrink=False)
                     labels[(vendor, product)],
                     mode,
                     usp_literals,
+                    emitted(lid),
                 ),
             )
         )
@@ -873,7 +948,7 @@ def build_columns_obo(models, ledger, prior_ids=frozenset(), allow_shrink=False)
 
     stanzas.sort(key=lambda pair: pair[0])
     body_block = "\n\n".join(text for _, text in stanzas) + "\n"
-    return body_block, render_ledger(new_ledger), report
+    return body_block, render_ledger(new_ledger), render_synonyms(synonyms), report
 
 
 def report_markdown(models, report):
@@ -903,6 +978,12 @@ def report_markdown(models, report):
             f"- `{key_str(old)}` → `{key_str(new)}` (keeps {i})"
             for old, new, i in report["renames"]
         ]
+        lines.append("")
+    if report["synonyms"]:
+        lines.append(
+            f"### Names changed (old name kept as a synonym) — {len(report['synonyms'])}"
+        )
+        lines += [f"- {i}: `{old}`" for i, old in report["synonyms"]]
         lines.append("")
     if report["retired"]:
         lines.append(
@@ -986,6 +1067,11 @@ def main():
         "minting and rewritten (also the repo-rt back-prop contract)",
     )
     parser.add_argument(
+        "--synonyms",
+        default=SYNONYMS_DEFAULT,
+        help="the synonym log: psi_ms_id -> former name TSV, read and extended",
+    )
+    parser.add_argument(
         "--reset-ids",
         action="store_true",
         help="ignore the committed id ledger and assign clean sequential ids",
@@ -1027,15 +1113,18 @@ def main():
     ledger = (
         {} if args.reset_ids else read_ledger(args.mapping)
     )  # read before we overwrite it
-    prior_ids = read_fragment_ids(
+    prior_names = read_fragment_names(
         args.output
-    )  # liveness only; identity is the ledger's
-    obo_text, ledger_text, report = build_columns_obo(
-        models, ledger, prior_ids, allow_shrink=args.allow_shrink
+    )  # liveness and former names only; identity is the ledger's
+    synonyms = {} if args.reset_ids else read_synonyms(args.synonyms, ledger)
+    obo_text, ledger_text, synonyms_text, report = build_columns_obo(
+        models, ledger, prior_names, synonyms, allow_shrink=args.allow_shrink
     )
 
     if args.dry_run:
-        print(f"dry run: {args.mapping} and {args.output} left untouched")
+        print(
+            f"dry run: {args.mapping}, {args.synonyms} and {args.output} left untouched"
+        )
     else:
         if os.path.dirname(args.mapping):
             os.makedirs(os.path.dirname(args.mapping), exist_ok=True)
@@ -1045,6 +1134,8 @@ def main():
         # the next run rebind published ids to different terms.
         write_atomic(args.mapping, ledger_text)
         print(f"wrote {args.mapping}")
+        write_atomic(args.synonyms, synonyms_text)
+        print(f"wrote {args.synonyms}")
         write_atomic(args.output, obo_text)
         print(f"wrote {args.output}")
 

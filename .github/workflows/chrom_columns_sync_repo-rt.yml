@@ -7,7 +7,9 @@ name: chrom columns – sync from repo-rt
 # Identity and ids live in the .github/repo-rt/psi-ms-column-ids.tsv LEDGER, keyed on
 # (company, column): the generator reads it before minting, keeps a row for every key
 # ever seen (a retired id is never reused; a returning model reclaims its id), and
-# rewrites it alongside the fragment. The fragment carries display labels only.
+# rewrites it alongside the fragment. The fragment carries display labels only; when a
+# label changes, the old one is appended to .github/repo-rt/psi-ms-column-synonyms.tsv
+# and emitted as a synonym.
 #
 # Loop closure is cross-repo: the same ledger is consumed by a repo-rt-side script
 # (add_psi_ms_id.py) that writes the assigned MS:IDs back into the catalog's psi_ms_id
@@ -61,6 +63,7 @@ jobs:
             --input column_database.tsv \
             --output psi-ms-columns.obo-fragment \
             --mapping .github/repo-rt/psi-ms-column-ids.tsv \
+            --synonyms .github/repo-rt/psi-ms-column-synonyms.tsv \
             --report sync-report.md
 
       - name: Validate generated fragment
@@ -152,6 +155,7 @@ jobs:
           add-paths: |
             psi-ms-columns.obo-fragment
             .github/repo-rt/psi-ms-column-ids.tsv
+            .github/repo-rt/psi-ms-column-synonyms.tsv
             psi-ms-core.obo
           branch: sync/repo-rt-column-models
           delete-branch: true
