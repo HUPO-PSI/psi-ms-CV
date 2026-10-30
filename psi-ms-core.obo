@@ -93,7 +93,7 @@ name: has_value_concept
 [Typedef]
 id: has_relation
 name: has relation
-def: "'Entity A' has relation 'Entity B', where the value of A is computed from, summarises, or is otherwise directly associated with B, and neither is_a nor part_of applies. Used chiefly to link a QC metric to the measured quantity or data it is derived from, such as a total ion current metric to total ion current (MS:1000285)." []
+def: "'Term A' has relation 'Term B', where the value of A is computed from, summarises, or is otherwise directly associated with B, and neither is_a nor part_of applies. Used chiefly to link a QC metric to the measured quantity or data it is derived from, such as a total ion current metric to total ion current (MS:1000285)." []
 
 [Typedef]
 id: has_column
