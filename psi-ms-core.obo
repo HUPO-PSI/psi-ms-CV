@@ -8844,6 +8844,7 @@ name: SEQUEST:deltacn
 def: "The SEQUEST result 'DeltaCn'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -10711,6 +10712,7 @@ name: SpectraST:delta
 def: "SpectraST normalised difference between dot product of top hit and runner-up." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -14420,6 +14422,7 @@ name: SQID:deltaScore
 def: "The SQID result 'deltaScore'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 
 [Term]
 id: MS:1001889
@@ -17182,7 +17185,6 @@ name: SEQUEST:sprank
 def: "The SEQUEST result 'SpRank'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004046 ! PSM-level rank
 relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
@@ -17191,6 +17193,7 @@ name: SEQUEST:deltacnstar
 def: "The SEQUEST result 'DeltaCnStar'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17215,6 +17218,7 @@ name: Comet:deltacn
 def: "The Comet result 'DeltaCn'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17223,6 +17227,7 @@ name: Comet:deltacnstar
 def: "The Comet result 'DeltaCnStar'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17239,7 +17244,6 @@ name: Comet:sprank
 def: "The Comet result 'SpRank'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004046 ! PSM-level rank
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17298,6 +17302,7 @@ name: Byonic:Delta Score
 def: "The drop in Byonic score from the top-scoring peptide to the next peptide with distinct sequence. In this computation, the same peptide with different modifications is not considered distinct." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -17307,6 +17312,7 @@ name: Byonic:DeltaMod Score
 def: "The drop in Byonic score from the top-scoring peptide to the next peptide different in any way, including placement of modifications. DeltaMod gives an indication of whether modifications are confidently localized; DeltaMod over 10.0 means that there is high likelihood that all modification placements are correct." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -19463,6 +19469,7 @@ name: ProLuCID:deltacn
 def: "The ProLuCID result 'DeltaCn'." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -21774,6 +21781,7 @@ name: ProteomeDiscoverer:Delta Score
 def: "The Delta Score reported by Proteome Discoverer version 2." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
@@ -26377,6 +26385,7 @@ name: Kojak:delta score
 def: "The difference between the top Kojak score and the next best Kojak score for a PSM." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -26505,6 +26514,7 @@ name: Andromeda:delta score
 def: "Score difference to the second best identified peptide with a different amino acid sequence." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -30415,16 +30425,17 @@ relationship: has_value_type xsd:double ! The allowed value-type for this CV ter
 
 [Term]
 id: MS:1004044
-name: X\!Tandem:delta hyperscore next
+name: Sage:delta hyperscore next
 def: "Difference between the hyperscore of this candidate and the next best candidate." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1004047 ! PSM-level delta score next
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1004045
-name: X\!Tandem:delta hyperscore best
+name: Sage:delta hyperscore best
 def: "Difference between the hyperscore of the best candidate (rank=1) and this candidate." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
@@ -30439,6 +30450,15 @@ subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:positiveInteger ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004047
+name: PSM-level delta score next
+def: "Difference between the score of this candidate and the next best candidate." [PSI:PI]
+subset: core
+is_a: MS:1001143 ! PSM-level search engine specific statistic
+relationship: has_order MS:1002108 ! higher score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
