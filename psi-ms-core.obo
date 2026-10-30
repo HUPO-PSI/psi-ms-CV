@@ -30272,6 +30272,7 @@ relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term[Term]
 
+[Term]
 id: MS:1004046
 name: Sage:Poisson score
 def: "Probability of matching exactly N peaks across all scored candidates (Pr(x=k))." [PSI:PI]
@@ -30281,6 +30282,7 @@ relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1004047
 name: Sage:discriminant score
 def: "Combined score from linear discriminant analysis, used for FDR (False Discovery Rate) calculation." [PSI:PI]
