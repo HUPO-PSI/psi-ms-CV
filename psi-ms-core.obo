@@ -30447,7 +30447,7 @@ id: MS:1004046
 name: PSM-level rank
 def: "The rank of this PSM relative to all other PSMs involving this spectrum, based on a specific propery." [PSI:PI]
 subset: core
-is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1002347 ! PSM-level identification statistic
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:positiveInteger ! The allowed value-type for this CV term
 
@@ -30456,7 +30456,7 @@ id: MS:1004047
 name: PSM-level delta score next
 def: "Difference between the score of this candidate and the next best candidate." [PSI:PI]
 subset: core
-is_a: MS:1001143 ! PSM-level search engine specific statistic
+is_a: MS:1002347 ! PSM-level identification statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
