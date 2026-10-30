@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.13/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.14/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:date>30:10:2026 12:00</oboInOwl:date>
@@ -1096,18 +1096,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000023">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The total width (i.e. not half for plus-or-minus) of the gate applied around a selected precursor ion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000023</oboInOwl:id>
@@ -1682,7 +1670,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
         <obo:IAO_0000115>OBSOLETE Energy units are represented in either eV or Joules.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000046</oboInOwl:id>
@@ -2642,7 +2629,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000095 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000019"/>
         <obo:IAO_0000115>OBSOLETE The mass scan is done in linear mode.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000095</oboInOwl:id>
@@ -4901,18 +4887,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000207 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000207">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE An experimentally determined mass that is can be to determine a unique elemental formula. For ions less than 200 u, a measurement with 5 ppm accuracy is sufficient to determine the elemental composition.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000207</oboInOwl:id>
@@ -4933,18 +4907,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000208 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000208">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The mass of an ion or molecule calculated using the average mass of each element weighted for its natural isotopic abundance.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000208</oboInOwl:id>
@@ -4965,18 +4927,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000209 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000209">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000266"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The minimum energy that must be imparted to an atom or molecule to produce a specified ion. The term appearance potential is not recommended.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>AE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -5018,12 +4968,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000211 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000211">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The total charge on an ion divided by the electron charge e. OBSOLETED 2009-10-27 since this was viewed as a duplication of 00041 charge state.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000211</oboInOwl:id>
@@ -5063,12 +5007,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000213 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000213">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The electron affinity of M is the minimum energy required for the process M- ? M + e where M- and M are in their ground rotational, vibrational and electronic states and the electron has zero kinetic energy.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>EA</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -5110,18 +5048,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000215 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000215">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The calculated mass of an ion or molecule containing a single isotope of each atom.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000215</oboInOwl:id>
@@ -5182,12 +5108,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000218 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000218">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The ratio of the number of ions formed to the number of electrons, molecules or photons used.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000218</oboInOwl:id>
@@ -5208,18 +5128,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000219 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000219">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000266"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The minimum energy required to remove an electron from an atom or molecule to produce a positive ion.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>IE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -5281,18 +5189,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000222 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000222">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The difference between the monoisotopic and nominal mass of a molecule or atom.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000222</oboInOwl:id>
@@ -5313,12 +5209,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000223 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000223">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The sum of the protons and neutrons in an atom, molecule or ion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000223</oboInOwl:id>
@@ -5370,18 +5260,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000225 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000225">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The mass of an ion or molecule calculated using the mass of the most abundant isotope of each element.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000225</oboInOwl:id>
@@ -5463,18 +5341,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000229 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000229">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The mass of an ion or molecule calculated using the mass of the most abundant isotope of each element rounded to the nearest integer value.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000229</oboInOwl:id>
@@ -5559,12 +5425,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000233 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000233">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The proton affinity of a species M is defined as the negative of the enthalpy change for the reaction M + H+ -&gt;[M+H]+, where all species are in their ground rotational, vibrational and electronic states.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>PA</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -5592,12 +5452,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000234 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000234">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE In a mass spectrum, the observed mass divided by the difference between two masses that can be separated. The method by which delta m was obtained and the mass at which the measurement was made should be reported.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000234</oboInOwl:id>
@@ -7834,7 +7688,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000343 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000343">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000294"/>
         <obo:IAO_0000115>OBSOLETE A mass spectrum recorded from any spectrometer in which the appropriate m/z separation scan function is set to record the product ion or ions of selected precursor ions.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000343</oboInOwl:id>
@@ -10205,12 +10058,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000460 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000460">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1001458"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Terms to describe units.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000460</oboInOwl:id>
@@ -11669,7 +11516,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000520 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000520">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000518"/>
         <obo:IAO_0000115>OBSOLETE Signed 16-bit float.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000520</oboInOwl:id>
@@ -13866,8 +13712,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000620 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000620">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000524"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000559"/>
         <obo:IAO_0000115>OBSOLETE Spectrum generated from a photodiode array detector (ultraviolet/visible spectrum).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000620</oboInOwl:id>
@@ -16773,7 +16617,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000760 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000760">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000752"/>
         <obo:IAO_0000115>OBSOLETE Corrects retention time distortions between maps.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000760</oboInOwl:id>
@@ -16813,7 +16656,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000762 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000762">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000752"/>
         <obo:IAO_0000115>OBSOLETE Removes noise from profile spectra by using different smoothing techniques.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000762</oboInOwl:id>
@@ -16834,7 +16676,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000763 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000763">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000752"/>
         <obo:IAO_0000115>OBSOLETE Finds mass spectrometric peaks in profile mass spectra.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000763</oboInOwl:id>
@@ -16874,7 +16715,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000765 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000765">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000752"/>
         <obo:IAO_0000115>OBSOLETE Applies a filter to peak spectra.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000765</oboInOwl:id>
@@ -17544,19 +17384,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000793">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The highest m/z being isolated in an isolation window.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000793</oboInOwl:id>
@@ -17577,19 +17404,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000794 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000794">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000792"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The lowest m/z being isolated in an isolation window.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000794</oboInOwl:id>
@@ -18783,19 +18597,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000843 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000843">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000841"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000018"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The distance between two peaks of the emitted laser beam.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000843</oboInOwl:id>
@@ -19447,7 +19248,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1000870 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1000870">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000121"/>
         <obo:IAO_0000115>OBSOLETE SCIEX or Applied Biosystems|MDS SCIEX QTRAP 4000.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1000870</oboInOwl:id>
@@ -21266,7 +21066,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001011"/>
         <obo:IAO_0000115>OBSOLETE: Use attribute in mzIdentML instead. Local file path of the search database from the search engine&apos;s point of view.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001014</oboInOwl:id>
@@ -21676,7 +21475,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001184"/>
         <obo:IAO_0000115>OBSOLETE: use attribute in mzIdentML instead. Date and time of the actual search run.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001035</oboInOwl:id>
@@ -21997,12 +21795,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001051 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001051">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE: use attribute independent in mzIdentML instead. Description of multiple enzyme digestion protocol, if any.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001051</oboInOwl:id>
@@ -22115,7 +21907,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001055"/>
         <obo:IAO_0000115>OBSOLETE: Tolerance on types.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001057</oboInOwl:id>
@@ -22198,7 +21989,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001055"/>
         <obo:IAO_0000115>OBSOLETE: replaced by MS:1000336 (neutral loss): Leave this to PSI-MOD.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1000336</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -22238,7 +22028,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001065 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001065">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001249"/>
         <obo:IAO_0000115>OBSOLETE: There is Phenyx:ScoringModel for Phenyx! Scoring model (more detailed granularity). TODO: add some child terms.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1001961</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -22653,7 +22442,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001089"/>
         <obo:IAO_0000115>OBSOLETE: The system used to indicate taxonomy. There should be an enumerated list of options: latin name, NCBI TaxID, common name, Swiss-Prot species ID (ex. RABIT from the full protein ID ALBU_RABIT).</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1001467</obo:IAO_0100001>
         <obo:IAO_0100001>MS:1001468</obo:IAO_0100001>
@@ -22677,7 +22465,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001091 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001091">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001045"/>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001091</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
@@ -23173,25 +22960,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001114 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001114">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001105"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000031"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Retention time of the spectrum from the source file.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001114</oboInOwl:id>
@@ -23539,13 +23307,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001130 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001130">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002737"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Peptide raw area.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001130</oboInOwl:id>
@@ -23691,13 +23452,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001136 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001136">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002738"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE P-value (protein diff from 1 randomly).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001136</oboInOwl:id>
@@ -23788,7 +23542,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001140 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001140">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001129"/>
         <obo:IAO_0000115>OBSOLETE Quantitation software version.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001140</oboInOwl:id>
@@ -24771,14 +24524,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001191 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001191">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001092"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001198"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Quality estimation by p-value.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001191</oboInOwl:id>
@@ -26497,7 +26242,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001284 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001284">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001450"/>
         <obo:IAO_0000115>OBSOLETE The name of the database, the search database was derived from.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001284</oboInOwl:id>
@@ -29381,13 +29125,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001414 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001414">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001405"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE: replaced by MS:1000797 (peak list scans): This term can hold the scans attribute from an MGF input file.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1000797</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -29408,13 +29145,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001415 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001415">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001405"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE: replaced by MS:1000798 (peak list raw scans): This term can hold the raw scans attribute from an MGF input file.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1000798</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -29435,13 +29165,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001416 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001416">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001405"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE: replaced by MS:1000796 (spectrum title): Holds the spectrum title from different input file formats, e.g. MGF TITLE.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:1000796</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -30756,7 +30479,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001474 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001474">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000810"/>
         <obo:IAO_0000115>OBSOLETE Representation of an array of the measurements of a series of monitored reactions versus time.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>CRM chromatogram</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -33447,13 +33169,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001601 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001601">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Name and location of the .raw file or files.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001601</oboInOwl:id>
@@ -33474,13 +33189,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001602 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001602">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Path and name of the .srf (SEQUEST Result Format) file.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001602</oboInOwl:id>
@@ -33501,13 +33209,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001603 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001603">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Ionization source (electro-, nano-, thermospray, electron impact, APCI, MALDI, FAB etc).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001603</oboInOwl:id>
@@ -33528,13 +33229,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001604 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001604">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Fragmentation method used (CID, MPD, ECD, PQD, ETD, HCD, Any).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001604</oboInOwl:id>
@@ -33580,13 +33274,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001606 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001606">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Type of mass spectrometer used (ITMS, FTMS, TOFMS, SQMS, TQMS, SectorMS).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001606</oboInOwl:id>
@@ -33682,13 +33369,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001610 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001610">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Level of the mass spectrum (MS2 ... MS10).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001610</oboInOwl:id>
@@ -33709,13 +33389,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001611 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001611">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Polarity mode (positive or negative).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001611</oboInOwl:id>
@@ -33786,13 +33459,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001614 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001614">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Scan type for the precursor ion (full, Single Ion Monitoring (SIM), Single Reaction Monitoring (SRM)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001614</oboInOwl:id>
@@ -34213,13 +33879,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001631 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001631">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Chromatographic window where precursors to be grouped must reside to be considered the same species.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001631</oboInOwl:id>
@@ -34290,13 +33949,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001634">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Highest mass-to-charge (mz) value for spectral peaks in the measured spectrum that are considered for Xtract.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001634</oboInOwl:id>
@@ -34342,13 +33994,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001636 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001636">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Lowest mass-to-charge (mz) value for spectral peaks in the measured spectrum that are considered for Xtract.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001636</oboInOwl:id>
@@ -34594,13 +34239,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001646 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001646">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Determines whether the Proteome Discoverer application searches an additional decoy database.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001646</oboInOwl:id>
@@ -34746,13 +34384,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001652 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001652">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Name of the user submitting the Mascot search.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001652</oboInOwl:id>
@@ -34798,13 +34429,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001654 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001654">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Specifies the enzyme reagent used for protein digestion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001654</oboInOwl:id>
@@ -34825,13 +34449,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001655 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001655">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Mass tolerance used for matching fragment peaks in Da or mmu.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001655</oboInOwl:id>
@@ -34927,13 +34544,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001659 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001659">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Mass window for which precursor ions are considered to be the same species.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001659</oboInOwl:id>
@@ -34979,13 +34589,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001661 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001661">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Database to use in the search (configured on the Mascot server).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001661</oboInOwl:id>
@@ -35081,13 +34684,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001665 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001665">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Limits searches to entries from a particular species or group of species.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001665</oboInOwl:id>
@@ -35108,13 +34704,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001666 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001666">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Use average mass for the precursor.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001666</oboInOwl:id>
@@ -35135,13 +34724,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001667 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001667">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002095"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Determines whether to use MudPIT or normal scoring.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001667</oboInOwl:id>
@@ -35512,13 +35094,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001682 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001682">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Determines whether the Proteome Discoverer application searches against a decoy database.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001682</oboInOwl:id>
@@ -35989,13 +35564,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001701 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001701">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Format of the exported spectra (dta, mgf or mzData).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001701</oboInOwl:id>
@@ -36466,13 +36034,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001720 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001720">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 1st dynamic post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001720</oboInOwl:id>
@@ -36493,13 +36054,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001721 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001721">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 2nd dynamic post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001721</oboInOwl:id>
@@ -36520,13 +36074,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001722 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001722">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 3rd dynamic post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001722</oboInOwl:id>
@@ -36547,13 +36094,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001723 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001723">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 4th dynamic post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001723</oboInOwl:id>
@@ -36824,13 +36364,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001734 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001734">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Sample organism (used for annotation purposes).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001734</oboInOwl:id>
@@ -36851,13 +36384,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001735 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001735">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Full path database name.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001735</oboInOwl:id>
@@ -36903,13 +36429,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001737 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001737">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE File type (if not pepXML).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001737</oboInOwl:id>
@@ -36930,13 +36449,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001738 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001738">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Input pepXML files.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001738</oboInOwl:id>
@@ -36957,13 +36469,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001739">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Input pepXML files (old).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001739</oboInOwl:id>
@@ -39206,13 +38711,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001845 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001845">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001805"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Area of MS1 peak (e.g. SILAC, 15N).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001845</oboInOwl:id>
@@ -39302,13 +38800,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001849 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001849">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002735"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Peptide quantification value calculated as sum of MatchedFeature quantification values.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001849</oboInOwl:id>
@@ -39928,14 +39419,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001874 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001874">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001153"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE A smoothing of the distribution of q-values calculated for PSMs from individual search engines, such that ordering of result quality is maintained and all FDRScore values are guaranteed to have a value &gt; 0.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001874</oboInOwl:id>
@@ -42138,19 +41621,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1001967 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001967">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002222"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The ion drift time of an MS2 product ion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001967</oboInOwl:id>
@@ -44850,13 +44320,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002078 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002078">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 1st static post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002078</oboInOwl:id>
@@ -44877,13 +44340,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002079">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 2nd static post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002079</oboInOwl:id>
@@ -45838,14 +45294,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002125 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002125">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001153"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE FDRScore values specifically obtained for distinct combinations of single, pairs or triplets of search engines making a given PSM, used for integrating results from these distinct pools.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002125</oboInOwl:id>
@@ -50279,13 +49727,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002330 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002330">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 3rd static post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002330</oboInOwl:id>
@@ -50306,13 +49747,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002331 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002331">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002101"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE ProteomeDiscoverer&apos;s 5th dynamic post-translational modification (PTM) input parameter.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002331</oboInOwl:id>
@@ -53279,8 +52713,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002455 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002455">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000336"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002473"/>
         <obo:IAO_0000115>OBSOLETE Neutral loss of water.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002455</oboInOwl:id>
@@ -53301,8 +52733,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002456 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002456">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000336"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002473"/>
         <obo:IAO_0000115>OBSOLETE Neutral loss of ammonia.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002456</oboInOwl:id>
@@ -53323,8 +52753,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002457 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002457">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000336"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002473"/>
         <obo:IAO_0000115>OBSOLETE Neutral loss of phosphoric acid.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002457</oboInOwl:id>
@@ -54299,7 +53727,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002499 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002499">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002358"/>
         <obo:IAO_0000115>OBSOLETE Peptide level score.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002499</oboInOwl:id>
@@ -57397,13 +56824,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002639 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002639">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002636"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE The overall start position on the chromosome to which a peptide has been mapped i.e. the position of the first base of the first codon, using a zero-based counting system.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002639</oboInOwl:id>
@@ -63107,13 +62527,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_1002897 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002897">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1000231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Identifies a peak when no de-isotoping has been performed. The value slot reports the isotopomer peak, e.g. &apos;2H&apos;, &apos;13C&apos;, &apos;15N&apos;, &apos;18O&apos;, &apos;31P&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1002897</oboInOwl:id>
@@ -86851,43 +86264,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000052 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000018"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STATO_0000105"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The log ratio of successive XIC height quartiles. The metric&apos;s value triplet represents the log ratios of XIC-height-Q2 to XIC-height-Q1, XIC-height-Q3 to XIC-height-Q2, XIC-height max to XIC-height-Q3.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000182</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -86992,43 +86368,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000054 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The interval when the respective quarter of the TIC accumulates divided by retention time duration.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000183</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -87078,43 +86417,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all MS1 events divided by retention time duration.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000184</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -87164,43 +86466,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000056 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all MS2 events divided by retention time duration.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000185</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -87250,43 +86515,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STATO_0000105"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The log ratios of successive TIC-change quartiles. The TIC changes are the list of MS1 total ion current (TIC) value changes from one to the next scan, produced when each MS1 TIC is subtracted from the preceding MS1 TIC. The metric&apos;s value triplet represents the log ratio of the TIC-change Q2 to Q1, Q3 to Q2, TIC-change-max to Q3</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000186</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -87329,43 +86557,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000058 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000021"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_concept"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STATO_0000105"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The log ratios of successive TIC quartiles. The metric&apos;s value triplet represents the log ratios of TIC-Q2 to TIC-Q1, TIC-Q3 to TIC-Q2, TIC-max to TIC-Q3.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000187</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -93183,43 +92374,6 @@
     <!-- http://purl.obolibrary.org/obo/MS_4000181 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_4000181">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_4000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000008"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_metric_category"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_4000022"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_units"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration.</obo:IAO_0000115>
         <obo:IAO_0100001>MS:4000188</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
@@ -142557,7 +141711,6 @@
     <!-- http://purl.obolibrary.org/obo/PEFF_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PEFF_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PEFF_0000002"/>
         <obo:IAO_0000115>OBSOLETE PEFF keyword for the database date (release or file date of the source) according to database provider.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PEFF:0000014</oboInOwl:id>
@@ -143091,19 +142244,6 @@
     <!-- http://purl.obolibrary.org/obo/PEFF_0001011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PEFF_0001011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PEFF_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_regexp"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PEFF_1002001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>OBSOLETE Sequence variation (substitution, insertion, deletion).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PEFF:0001011</oboInOwl:id>
