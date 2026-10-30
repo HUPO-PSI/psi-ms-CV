@@ -30394,6 +30394,7 @@ relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term[Term]
 
+[Term]
 id: MS:1004042
 name: Sage:Poisson score
 def: "Probability of matching exactly N peaks across all scored candidates (Pr(x=k))." [PSI:PI]
@@ -30403,6 +30404,7 @@ relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1004043
 name: Sage:discriminant score
 def: "Combined score from linear discriminant analysis, used for FDR (False Discovery Rate) calculation." [PSI:PI]
@@ -30411,6 +30413,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1004044
 name: X\!Tandem:delta hyperscore next
 def: "Difference between the hyperscore of this candidate and the next best candidate." [PSI:PI]
@@ -30419,6 +30422,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1004045
 name: X\!Tandem:delta hyperscore best
 def: "Difference between the hyperscore of the best candidate (rank=1) and this candidate." [PSI:PI]
@@ -30427,6 +30431,7 @@ is_a: MS:1001143 ! PSM-level search engine specific statistic
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
+[Term]
 id: MS:1004046
 name: PSM-level rank
 def: "The rank of this PSM relative to all other PSMs involving this spectrum, based on a specific propery." [PSI:PI]
