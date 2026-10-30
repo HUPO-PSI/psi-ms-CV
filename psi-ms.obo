@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: 4.2.13
+data-version: 4.2.14
 date: 30:10:2026 12:00
 saved-by: Jonathan Hunter
 default-namespace: MS
@@ -436,9 +436,7 @@ name: isolation width
 def: "OBSOLETE The total width (i.e. not half for plus-or-minus) of the gate applied around a selected precursor ion." [PSI:MS]
 subset: core
 comment: This former purgatory term was made obsolete.
-relationship: has_units MS:1000040 ! m/z
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000024
@@ -631,7 +629,6 @@ name: energy unit
 def: "OBSOLETE Energy units are represented in either eV or Joules." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was redundant with the Unit Ontology term energy unit (UO:0000111).
-is_a: UO:0000000 ! unit
 is_obsolete: true
 
 [Term]
@@ -998,7 +995,6 @@ name: linear
 def: "OBSOLETE The mass scan is done in linear mode." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was redundant with the Pato Ontology term linear (UO:0001199).
-is_a: MS:1000019 ! scan law
 is_obsolete: true
 
 [Term]
@@ -1888,9 +1884,7 @@ name: accurate mass
 def: "OBSOLETE An experimentally determined mass that is can be to determine a unique elemental formula. For ions less than 200 u, a measurement with 5 ppm accuracy is sufficient to determine the elemental composition." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000208
@@ -1898,9 +1892,7 @@ name: average mass
 def: "OBSOLETE The mass of an ion or molecule calculated using the average mass of each element weighted for its natural isotopic abundance." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000209
@@ -1909,9 +1901,7 @@ def: "OBSOLETE The minimum energy that must be imparted to an atom or molecule t
 subset: core
 synonym: "AE" EXACT []
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000266 ! electronvolt
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000210
@@ -1927,7 +1917,6 @@ name: OBSOLETE charge number
 def: "OBSOLETE The total charge on an ion divided by the electron charge e. OBSOLETED 2009-10-27 since this was viewed as a duplication of 00041 charge state." [PSI:MS]
 subset: core
 is_obsolete: true
-relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000212
@@ -1945,7 +1934,6 @@ subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
 synonym: "EA" EXACT []
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000214
@@ -1961,9 +1949,7 @@ name: exact mass
 def: "OBSOLETE The calculated mass of an ion or molecule containing a single isotope of each atom." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000216
@@ -1988,7 +1974,6 @@ def: "OBSOLETE The ratio of the number of ions formed to the number of electrons
 subset: core
 comment: This term was made obsolete because it was replaced by ionization efficiency (MS:1000392).
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000219
@@ -1997,9 +1982,7 @@ def: "OBSOLETE The minimum energy required to remove an electron from an atom or
 subset: core
 synonym: "IE" EXACT []
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000266 ! electronvolt
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000220
@@ -2023,9 +2006,7 @@ name: mass defect
 def: "OBSOLETE The difference between the monoisotopic and nominal mass of a molecule or atom." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000223
@@ -2034,7 +2015,6 @@ def: "OBSOLETE The sum of the protons and neutrons in an atom, molecule or ion."
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
 is_obsolete: true
-relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000224
@@ -2051,9 +2031,7 @@ name: monoisotopic mass
 def: "OBSOLETE The mass of an ion or molecule calculated using the mass of the most abundant isotope of each element." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000226
@@ -2086,9 +2064,7 @@ name: nominal mass
 def: "OBSOLETE The mass of an ion or molecule calculated using the mass of the most abundant isotope of each element rounded to the nearest integer value." [PSI:MS]
 subset: core
 comment: This child of the former purgatory term ion attribute was made obsolete.
-relationship: has_units UO:0000002 ! mass unit
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000230
@@ -2121,7 +2097,6 @@ subset: core
 synonym: "PA" EXACT [PSI:MS]
 comment: This child of the former purgatory term ion attribute was made obsolete.
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000234
@@ -2130,7 +2105,6 @@ def: "OBSOLETE In a mass spectrum, the observed mass divided by the difference b
 subset: core
 comment: This term was made obsolete because it was replaced by mass resolving power (MS:1000800).
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000235
@@ -3023,7 +2997,6 @@ name: product ion spectrum
 def: "OBSOLETE A mass spectrum recorded from any spectrometer in which the appropriate m/z separation scan function is set to record the product ion or ions of selected precursor ions." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was merged with MSn spectrum (MS:1000580).
-is_a: MS:1000294 ! mass spectrum
 is_obsolete: true
 
 [Term]
@@ -3925,7 +3898,6 @@ name: unit
 def: "OBSOLETE Terms to describe units." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was redundant with the Unit Ontology term unit (UO:0000000).
-relationship: part_of MS:1001458 ! spectrum generation information
 is_obsolete: true
 
 [Term]
@@ -4411,7 +4383,6 @@ id: MS:1000520
 name: 16-bit float
 def: "OBSOLETE Signed 16-bit float." [PSI:MS]
 subset: core
-is_a: MS:1000518 ! binary data type
 is_obsolete: true
 
 [Term]
@@ -5212,8 +5183,6 @@ name: PDA spectrum
 def: "OBSOLETE Spectrum generated from a photodiode array detector (ultraviolet/visible spectrum)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was replaced by absorption spectrum (MS:1000806).
-is_a: MS:1000524 ! data file content
-is_a: MS:1000559 ! spectrum type
 is_obsolete: true
 
 [Term]
@@ -6344,7 +6313,6 @@ name: MapAligner
 def: "OBSOLETE Corrects retention time distortions between maps." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP map aligner' (MS:1002147) branch.
-is_a: MS:1000752 ! TOPP software
 is_obsolete: true
 
 [Term]
@@ -6360,7 +6328,6 @@ name: NoiseFilter
 def: "OBSOLETE Removes noise from profile spectra by using different smoothing techniques." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP noise filter' (MS:1002131) branch.
-is_a: MS:1000752 ! TOPP software
 is_obsolete: true
 
 [Term]
@@ -6369,7 +6336,6 @@ name: PeakPicker
 def: "OBSOLETE Finds mass spectrometric peaks in profile mass spectra." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP peak picker' (MS:1002134) branch.
-is_a: MS:1000752 ! TOPP software
 is_obsolete: true
 
 [Term]
@@ -6385,7 +6351,6 @@ name: SpectraFilter
 def: "OBSOLETE Applies a filter to peak spectra." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP spectra filter' (MS:1002137) branch.
-is_a: MS:1000752 ! TOPP software
 is_obsolete: true
 
 [Term]
@@ -6614,10 +6579,7 @@ name: isolation window upper limit
 def: "OBSOLETE The highest m/z being isolated in an isolation window." [PSI:MS]
 subset: core
 comment: This term was obsoleted in favour of using a target, lower, upper offset scheme. See terms 1000827-1000829.
-is_a: MS:1000792 ! isolation window attribute
-relationship: has_units MS:1000040 ! m/z
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000794
@@ -6625,10 +6587,7 @@ name: isolation window lower limit
 def: "OBSOLETE The lowest m/z being isolated in an isolation window." [PSI:MS]
 subset: core
 comment: This term was obsoleted in favour of using a target, lower, upper offset scheme. See terms 1000827-1000829.
-is_a: MS:1000792 ! isolation window attribute
-relationship: has_units MS:1000040 ! m/z
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000795
@@ -7027,10 +6986,7 @@ name: wavelength
 def: "OBSOLETE The distance between two peaks of the emitted laser beam." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was redundant with the Pato Ontology term wavelength (UO:0001242).
-is_a: MS:1000841 ! laser attribute
-relationship: has_units UO:0000018 ! nanometer
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1000844
@@ -7247,7 +7203,6 @@ name: 4000 QTRAP
 def: "OBSOLETE SCIEX or Applied Biosystems|MDS SCIEX QTRAP 4000." [PSI:MS]
 subset: core
 comment: This term was obsoleted because was redundant to MS:1000139.
-is_a: MS:1000121 ! SCIEX instrument model
 is_obsolete: true
 
 [Term]
@@ -7851,7 +7806,6 @@ id: MS:1001014
 name: database local file path
 def: "OBSOLETE: Use attribute in mzIdentML instead. Local file path of the search database from the search engine's point of view." [PSI:PI]
 subset: core
-is_a: MS:1001011 ! search database details
 is_obsolete: true
 
 [Term]
@@ -7995,7 +7949,6 @@ id: MS:1001035
 name: date / time search performed
 def: "OBSOLETE: use attribute in mzIdentML instead. Date and time of the actual search run." [PSI:PI]
 subset: core
-is_a: MS:1001184 ! search statistics
 is_obsolete: true
 
 [Term]
@@ -8104,7 +8057,6 @@ name: multiple enzyme combination rules
 def: "OBSOLETE: use attribute independent in mzIdentML instead. Description of multiple enzyme digestion protocol, if any." [PSI:PI]
 subset: core
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001052
@@ -8141,7 +8093,6 @@ id: MS:1001057
 name: tolerance on types
 def: "OBSOLETE: Tolerance on types." [PSI:PI]
 subset: core
-is_a: MS:1001055 ! modification parameters
 is_obsolete: true
 
 [Term]
@@ -8171,7 +8122,6 @@ id: MS:1001061
 name: neutral loss
 def: "OBSOLETE: replaced by MS:1000336 (neutral loss): Leave this to PSI-MOD." [PSI:PI]
 subset: core
-is_a: MS:1001055 ! modification parameters
 is_obsolete: true
 replaced_by: MS:1000336
 
@@ -8188,7 +8138,6 @@ name: TODOscoring model
 def: "OBSOLETE: There is Phenyx:ScoringModel for Phenyx! Scoring model (more detailed granularity). TODO: add some child terms." [PSI:PI]
 subset: core
 comment: This term was made obsolete and is replaced by the term (MS:1001961).
-is_a: MS:1001249 ! search input details
 is_obsolete: true
 replaced_by: MS:1001961
 
@@ -8334,7 +8283,6 @@ id: MS:1001090
 name: taxonomy nomenclature
 def: "OBSOLETE: The system used to indicate taxonomy. There should be an enumerated list of options: latin name, NCBI TaxID, common name, Swiss-Prot species ID (ex. RABIT from the full protein ID ALBU_RABIT)." [PSI:PI]
 subset: core
-is_a: MS:1001089 ! molecule taxonomy
 is_obsolete: true
 replaced_by: MS:1001467
 replaced_by: MS:1001468
@@ -8345,7 +8293,6 @@ replaced_by: MS:1001470
 id: MS:1001091
 name: NoEnzyme
 subset: core
-is_a: MS:1001045 ! cleavage agent name
 comment: This term was made obsolete because it is ambiguous and is replaced by NoCleavage (MS:1001955) and unspecific cleavage (MS:1001956).
 is_obsolete: true
 
@@ -8522,11 +8469,7 @@ name: retention time(s)
 def: "OBSOLETE Retention time of the spectrum from the source file." [PSI:PI]
 subset: core
 comment: This term was made obsolete because scan start time (MS:1000016) should be used instead.
-is_a: MS:1001105 ! peptide sequence-level identification attribute
-relationship: has_units UO:0000010 ! second
-relationship: has_units UO:0000031 ! minute
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001115
@@ -8648,9 +8591,7 @@ name: peptide raw area
 def: "OBSOLETE Peptide raw area." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it is replaced by 'MS1 feature area' (MS:1001844).
-is_a: MS:1002737 ! peptide-level quantification datatype
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001131
@@ -8698,9 +8639,7 @@ name: p-value (protein diff from 1 randomly)
 def: "OBSOLETE P-value (protein diff from 1 randomly)." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it is replaced by 't-test p-value' (MS:1001855).
-is_a: MS:1002738 ! protein-level quantification datatype
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001137
@@ -8732,7 +8671,6 @@ name: quantitation software version
 def: "OBSOLETE Quantitation software version." [PSI:PI]
 subset: core
 comment: This term was made obsolete because part of mzQuantML schema.
-is_a: MS:1001129 ! quantification information
 is_obsolete: true
 
 [Term]
@@ -9074,10 +9012,7 @@ name: p-value
 def: "OBSOLETE Quality estimation by p-value." [PSI:PI]
 subset: core
 comment: This term was made obsolete because now is split into peptide and protein terms.
-is_a: MS:1001092 ! peptide sequence-level identification statistic
-is_a: MS:1001198 ! protein identification confidence metric
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001192
@@ -9675,7 +9610,6 @@ name: decoy DB derived from
 def: "OBSOLETE The name of the database, the search database was derived from." [PSI:PI]
 subset: core
 comment: This term was made obsolete, because a combination of database name, DB composition , decoy DB type , decoy DB generation algorithm, decoy DB accession regexp and decoy DB details suffices.
-is_a: MS:1001450 ! decoy DB details
 is_obsolete: true
 
 [Term]
@@ -10657,30 +10591,24 @@ id: MS:1001414
 name: MGF scans
 def: "OBSOLETE: replaced by MS:1000797 (peak list scans): This term can hold the scans attribute from an MGF input file." [PSI:PI]
 subset: core
-is_a: MS:1001405 ! spectrum identification result details
 is_obsolete: true
 replaced_by: MS:1000797
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001415
 name: MGF raw scans
 def: "OBSOLETE: replaced by MS:1000798 (peak list raw scans): This term can hold the raw scans attribute from an MGF input file." [PSI:PI]
 subset: core
-is_a: MS:1001405 ! spectrum identification result details
 is_obsolete: true
 replaced_by: MS:1000798
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001416
 name: spectrum title
 def: "OBSOLETE: replaced by MS:1000796 (spectrum title): Holds the spectrum title from different input file formats, e.g. MGF TITLE." [PSI:PI]
 subset: core
-is_a: MS:1001405 ! spectrum identification result details
 is_obsolete: true
 replaced_by: MS:1000796
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001417
@@ -11119,7 +11047,6 @@ def: "OBSOLETE Representation of an array of the measurements of a series of mon
 subset: core
 comment: This term was made obsolete because, by design, it can't be properly represented in mzML 1.1. CRM experiments must be represented in a spectrum-centric way.
 synonym: "CRM chromatogram" EXACT []
-is_a: MS:1000810 ! ion current chromatogram
 is_obsolete: true
 
 [Term]
@@ -12084,9 +12011,7 @@ name: ProteomeDiscoverer:Spectrum Files:Raw File names
 def: "OBSOLETE Name and location of the .raw file or files." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use one of the 'mass spectrometer file format' terms (MS:1000560) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001602
@@ -12094,9 +12019,7 @@ name: ProteomeDiscoverer:SRF File Selector:SRF File Path
 def: "OBSOLETE Path and name of the .srf (SEQUEST Result Format) file." [PSI:MS]
 subset: core
 comment: This term was made obsolete. Use attribute in mzIdentML / mzQuantML instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001603
@@ -12104,9 +12027,7 @@ name: ProteomeDiscoverer:Spectrum Selector:Ionization Source
 def: "OBSOLETE Ionization source (electro-, nano-, thermospray, electron impact, APCI, MALDI, FAB etc)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use one of the 'inlet type' (MS:1000007) or 'ionization type' (MS:1000008) terms instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001604
@@ -12114,9 +12035,7 @@ name: ProteomeDiscoverer:Activation Type
 def: "OBSOLETE Fragmentation method used (CID, MPD, ECD, PQD, ETD, HCD, Any)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use one of the 'ionization type' terms (MS:1000008) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001605
@@ -12132,9 +12051,7 @@ name: ProteomeDiscoverer:Mass Analyzer
 def: "OBSOLETE Type of mass spectrometer used (ITMS, FTMS, TOFMS, SQMS, TQMS, SectorMS)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use mass analyzer type (MS:1000443) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001607
@@ -12166,9 +12083,7 @@ name: ProteomeDiscoverer:MS Order
 def: "OBSOLETE Level of the mass spectrum (MS2 ... MS10)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use MS1 spectrum (MS:1000579) or MSn spectrum (MS:1000580) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001611
@@ -12176,9 +12091,7 @@ name: ProteomeDiscoverer:Polarity Mode
 def: "OBSOLETE Polarity mode (positive or negative)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use scan polarity (MS:1000465) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001612
@@ -12202,9 +12115,7 @@ name: ProteomeDiscoverer:Scan Type
 def: "OBSOLETE Scan type for the precursor ion (full, Single Ion Monitoring (SIM), Single Reaction Monitoring (SRM))." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use MS1 spectrum (MS:1000579), MSn spectrum (MS:1000580), CRM spectrum (MS:1000581), SIM spectrum (MS:1000582) or SRM spectrum (MS:1000583) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001615
@@ -12340,9 +12251,7 @@ name: ProteomeDiscoverer:Spectrum Grouper:Max RT Difference
 def: "OBSOLETE Chromatographic window where precursors to be grouped must reside to be considered the same species." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use retention time window width (MS:1001907) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001632
@@ -12366,9 +12275,7 @@ name: ProteomeDiscoverer:Xtract:Highest MZ
 def: "OBSOLETE Highest mass-to-charge (mz) value for spectral peaks in the measured spectrum that are considered for Xtract." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use scan window upper limit (MS:1000500) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001635
@@ -12384,9 +12291,7 @@ name: ProteomeDiscoverer:Xtract:Lowest MZ
 def: "OBSOLETE Lowest mass-to-charge (mz) value for spectral peaks in the measured spectrum that are considered for Xtract." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use scan window lower limit (MS:1000501) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001637
@@ -12466,9 +12371,7 @@ name: ProteomeDiscoverer:Mascot:Decoy Search
 def: "OBSOLETE Determines whether the Proteome Discoverer application searches an additional decoy database." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use quality estimation with decoy database (MS:1001194) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001647
@@ -12516,9 +12419,7 @@ name: ProteomeDiscoverer:Mascot:User Name
 def: "OBSOLETE Name of the user submitting the Mascot search." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use researcher (MS:1001271) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001653
@@ -12534,9 +12435,7 @@ name: ProteomeDiscoverer:Enzyme Name
 def: "OBSOLETE Specifies the enzyme reagent used for protein digestion." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use cleavage agent name (MS:1001045) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001655
@@ -12544,9 +12443,7 @@ name: ProteomeDiscoverer:Fragment Mass Tolerance
 def: "OBSOLETE Mass tolerance used for matching fragment peaks in Da or mmu." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use search tolerance minus value (MS:1001413) or search tolerance plus value (MS:1001412) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001656
@@ -12578,9 +12475,7 @@ name: ProteomeDiscoverer:Precursor Mass Tolerance
 def: "OBSOLETE Mass window for which precursor ions are considered to be the same species." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use search tolerance minus value (MS:1001413) or search tolerance plus value (MS:1001412) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001660
@@ -12596,9 +12491,7 @@ name: ProteomeDiscoverer:Protein Database
 def: "OBSOLETE Database to use in the search (configured on the Mascot server)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use database name (MS:1001013) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001662
@@ -12630,9 +12523,7 @@ name: ProteomeDiscoverer:Mascot:Taxonomy
 def: "OBSOLETE Limits searches to entries from a particular species or group of species." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use taxonomy: scientific name (MS:1001469) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001666
@@ -12640,9 +12531,7 @@ name: ProteomeDiscoverer:Use Average Precursor Mass
 def: "OBSOLETE Use average mass for the precursor." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use parent mass type average (MS:1001212) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001667
@@ -12650,9 +12539,7 @@ name: Mascot:use MudPIT scoring
 def: "OBSOLETE Determines whether to use MudPIT or normal scoring." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use Mascot:ProteinScoringMethod (MS:1001318) instead.
-is_a: MS:1002095 ! Mascot input parameter
 is_obsolete: true
-relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001668
@@ -12772,9 +12659,7 @@ name: ProteomeDiscoverer:Search Against Decoy Database
 def: "OBSOLETE Determines whether the Proteome Discoverer application searches against a decoy database." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use quality estimation with decoy database (MS:1001194) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:boolean ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001683
@@ -12926,9 +12811,7 @@ name: ProteomeDiscoverer:Spectrum Exporter:Export Format
 def: "OBSOLETE Format of the exported spectra (dta, mgf or mzData)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use one of the 'mass spectrometer file format' terms (MS:1000560) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001702
@@ -13080,9 +12963,7 @@ name: ProteomeDiscoverer:1. Dynamic Modification
 def: "OBSOLETE ProteomeDiscoverer's 1st dynamic post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Dynamic Modification (MS:1001644) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001721
@@ -13090,9 +12971,7 @@ name: ProteomeDiscoverer:2. Dynamic Modification
 def: "OBSOLETE ProteomeDiscoverer's 2nd dynamic post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Dynamic Modification (MS:1001644) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001722
@@ -13100,9 +12979,7 @@ name: ProteomeDiscoverer:3. Dynamic Modification
 def: "OBSOLETE ProteomeDiscoverer's 3rd dynamic post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Dynamic Modification (MS:1001644) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001723
@@ -13110,9 +12987,7 @@ name: ProteomeDiscoverer:4. Dynamic Modification
 def: "OBSOLETE ProteomeDiscoverer's 4th dynamic post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Dynamic Modification (MS:1001644) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001724
@@ -13200,9 +13075,7 @@ name: ProteomeDiscoverer:Organism
 def: "OBSOLETE Sample organism (used for annotation purposes)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use taxonomy: scientific name (MS:1001469) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001735
@@ -13210,9 +13083,7 @@ name: ProteomeDiscoverer:Reference Database
 def: "OBSOLETE Full path database name." [PSI:MS]
 subset: core
 comment: This term was made obsolete. Use attribute in mzIdentML / mzQuantML instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001736
@@ -13228,9 +13099,7 @@ name: ProteomeDiscoverer:Source file extension
 def: "OBSOLETE File type (if not pepXML)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use mass spectrometer file format (MS:1000560) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001738
@@ -13238,9 +13107,7 @@ name: ProteomeDiscoverer:Source Files
 def: "OBSOLETE Input pepXML files." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use pepXML file (MS:1001421) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001739
@@ -13248,9 +13115,7 @@ name: ProteomeDiscoverer:Source Files old
 def: "OBSOLETE Input pepXML files (old)." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it's recommended to use pepXML file (MS:1001421) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001740
@@ -14071,9 +13936,7 @@ name: peak area
 def: "OBSOLETE Area of MS1 peak (e.g. SILAC, 15N)." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it was a duplication of MS:1001844.
-is_a: MS:1001805 ! quantification datatype
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001846
@@ -14104,9 +13967,7 @@ name: sum of MatchedFeature values
 def: "OBSOLETE Peptide quantification value calculated as sum of MatchedFeature quantification values." [PSI:PI]
 subset: core
 comment: This term was made obsolete because the concept MatchedFeature was dropped.
-is_a: MS:1002735 ! feature-level quantification datatype
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001850
@@ -14305,10 +14166,7 @@ name: FDRScore
 def: "OBSOLETE A smoothing of the distribution of q-values calculated for PSMs from individual search engines, such that ordering of result quality is maintained and all FDRScore values are guaranteed to have a value > 0." [PMID:19253293]
 subset: core
 comment: This term was made obsolete because it was split into the more specific terms for PSM-level FDRScore (1002355), distinct peptide-level FDRScore (MS:1002360), protein-level FDRScore (MS:1002365) and protein group-level FDRScore (MS:1002374).
-is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1001153 ! search engine specific score
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001875
@@ -15039,11 +14897,8 @@ id: MS:1001967
 name: product ion drift time
 def: "OBSOLETE The ion drift time of an MS2 product ion." [PSI:MS]
 subset: core
-is_a: MS:1002222 ! SRM transition attribute
-relationship: has_units UO:0000028 ! millisecond
 comment: This term was made obsolete because it was replaced by ion mobility drift time (MS:1002476).
 is_obsolete: true
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1001968
@@ -15929,9 +15784,7 @@ name: ProteomeDiscoverer:1. Static Modification
 def: "OBSOLETE ProteomeDiscoverer's 1st static post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Static Modification (MS:1001645) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002079
@@ -15939,9 +15792,7 @@ name: ProteomeDiscoverer:2. Static Modification
 def: "OBSOLETE ProteomeDiscoverer's 2nd static post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Static Modification (MS:1001645) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002080
@@ -16271,10 +16122,7 @@ name: combined FDRScore
 def: "OBSOLETE FDRScore values specifically obtained for distinct combinations of single, pairs or triplets of search engines making a given PSM, used for integrating results from these distinct pools." [PMID:19253293]
 subset: core
 comment: This term was made obsolete because it was split into the more specific terms for PSM-level combined FDRScore (MS:1002356), distinct peptide-level combined FDRScore (MS:1002361), protein-level combined FDRScore (MS:1002366) and protein group-level combined FDRScore (MS:1002375).
-is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1001153 ! search engine specific score
 is_obsolete: true
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002126
@@ -17818,9 +17666,7 @@ name: ProteomeDiscoverer:3. Static Modification
 def: "OBSOLETE ProteomeDiscoverer's 3rd static post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Static Modification (MS:1001645) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002331
@@ -17828,9 +17674,7 @@ name: ProteomeDiscoverer:5. Dynamic Modification
 def: "OBSOLETE ProteomeDiscoverer's 5th dynamic post-translational modification (PTM) input parameter." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it's recommended to use ProteomeDiscoverer:Dynamic Modification (MS:1001644) instead.
-is_a: MS:1002101 ! ProteomeDiscoverer input parameter
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002332
@@ -18820,8 +18664,6 @@ name: H2O neutral loss
 def: "OBSOLETE Neutral loss of water." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value H2O.
-is_a: MS:1000336 ! neutral loss
-is_a: MS:1002473 ! ion series considered in search
 is_obsolete: true
 
 [Term]
@@ -18830,8 +18672,6 @@ name: NH3 neutral loss
 def: "OBSOLETE Neutral loss of ammonia." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value NH3.
-is_a: MS:1000336 ! neutral loss
-is_a: MS:1002473 ! ion series considered in search
 is_obsolete: true
 
 [Term]
@@ -18840,8 +18680,6 @@ name: H3PO4 neutral loss
 def: "OBSOLETE Neutral loss of phosphoric acid." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value H3PO4.
-is_a: MS:1000336 ! neutral loss
-is_a: MS:1002473 ! ion series considered in search
 is_obsolete: true
 
 [Term]
@@ -19169,7 +19007,6 @@ name: peptide level score
 def: "OBSOLETE Peptide level score." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it was never intended to go in the CV.
-is_a: MS:1002358 ! search engine specific peptide sequence-level identification statistic
 is_obsolete: true
 
 [Term]
@@ -20252,9 +20089,7 @@ name: peptide start on chromosome
 def: "OBSOLETE The overall start position on the chromosome to which a peptide has been mapped i.e. the position of the first base of the first codon, using a zero-based counting system." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it contains redundant info contained in term MS:1002643 - peptide start positions on chromosome.
-is_a: MS:1002636 ! proteogenomics attribute
 is_obsolete: true
-relationship: has_value_type xsd:int ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002640
@@ -22247,9 +22082,7 @@ name: isotopomer peak
 def: "OBSOLETE Identifies a peak when no de-isotoping has been performed. The value slot reports the isotopomer peak, e.g. '2H', '13C', '15N', '18O', '31P'." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it was replaced by the more exact terms MS:1002956 'isotopic ion MS peak', MS:1002957 'isotopomer MS peak' and MS:1002958 'isotopologue MS peak' instead.
-is_a: MS:1000231 ! peak
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: MS:1002898
@@ -30673,13 +30506,6 @@ subset: mzQC
 synonym: "XIC-Height-Q2" RELATED [PMID:24494671]
 synonym: "XIC-Height-Q3" RELATED [PMID:24494671]
 synonym: "XIC-Height-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000018 ! XIC metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
-relationship: has_units UO:0000191 ! fraction
 is_obsolete: true
 replaced_by: MS:4000182
 
@@ -30708,13 +30534,6 @@ synonym: "RT-TIC-Q1" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q2" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q3" RELATED [PMID:24494671]
 synonym: "RT-TIC-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_metric_category MS:4000017 ! chromatogram metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units UO:0000191 ! fraction
 is_obsolete: true
 replaced_by: MS:4000183
 
@@ -30728,13 +30547,6 @@ synonym: "RT-MS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MS-Q3" RELATED [PMID:24494671]
 synonym: "RT-MS-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units UO:0000191 ! fraction
 is_obsolete: true
 replaced_by: MS:4000184
 
@@ -30748,13 +30560,6 @@ synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units UO:0000191 ! fraction
 is_obsolete: true
 replaced_by: MS:4000185
 
@@ -30767,13 +30572,6 @@ comment: The metric informs about the dynamic range of the acquisition along the
 synonym: "MS1-TIC-Change-Q2" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Change-Q3" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Change-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000017 ! chromatogram metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 is_obsolete: true
 replaced_by: MS:4000186
 
@@ -30786,13 +30584,6 @@ comment: The metric informs about the dynamic range of the acquisition along the
 synonym: "MS1-TIC-Q2" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Q3" RELATED [PMID:24494671]
 synonym: "MS1-TIC-Q4" RELATED [PMID:24494671]
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000009 ! ID free metric
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000017 ! chromatogram metric
-relationship: has_metric_category MS:4000021 ! MS1 metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_value_concept STATO:0000105 ! log signal intensity ratio
 is_obsolete: true
 replaced_by: MS:4000187
 
@@ -32299,13 +32090,6 @@ name: obsolete identified MS2 quarter RT fraction
 def: "OBSOLETE. The interval used for acquisition of the first, second, third, and fourth quarter of all identified MS2 events divided by retention time duration." [PSI:MS]
 subset: mzQC
 comment: The metric informs about the dynamic range of the MS2 identification process along the chromatographic separation. For MS2 scans, the comparability of the values depends on the acquisition mode and settings to select ions for fragmentation.
-is_a: MS:4000004 ! n-tuple
-relationship: has_metric_category MS:4000012 ! single run based metric
-relationship: has_metric_category MS:4000008 ! ID based metric
-relationship: has_metric_category MS:4000022 ! MS2 metric
-relationship: has_metric_category MS:4000016 ! retention time metric
-relationship: has_value_type xsd:float ! The allowed value-type for this CV term
-relationship: has_units UO:0000191 ! fraction
 synonym: "RT-MSMS-Q1" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q2" RELATED [PMID:24494671]
 synonym: "RT-MSMS-Q3" RELATED [PMID:24494671]
@@ -50551,7 +50335,6 @@ name: DbDate
 def: "OBSOLETE PEFF keyword for the database date (release or file date of the source) according to database provider." [PSI:PEFF]
 subset: PEFF
 comment: This term was obsoleted.
-is_a: PEFF:0000002 ! PEFF file header section term
 is_obsolete: true
 
 [Term]
@@ -50723,10 +50506,7 @@ name: Variant
 def: "OBSOLETE Sequence variation (substitution, insertion, deletion)." [PSI:PEFF]
 subset: PEFF
 comment: This term was made obsolete in favor of VariantSimple and VariantComplex.
-is_a: PEFF:0000003 ! PEFF file sequence entry term
-relationship: has_regexp PEFF:1002001 ! regular expression for a value in a key-value pair of a PEFF description line describing one sequence position followed by one PEFF term name and one optional comment
 is_obsolete: true
-relationship: has_value_type xsd:string ! The allowed value-type for this CV term
 
 [Term]
 id: PEFF:0001012
