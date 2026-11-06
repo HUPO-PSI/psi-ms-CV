@@ -11,10 +11,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.14/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.15/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>30:10:2026 12:00</oboInOwl:date>
+        <oboInOwl:date>06:11:2026 16:30</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
         <oboInOwl:saved-by>Jonathan Hunter</oboInOwl:saved-by>
@@ -85281,6 +85281,109 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004040"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The name or identifier assigned to a targeted feature in a quantitative mass spectrometry dataset.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1003737"/>
+        <obo:IAO_0000115>A capillary electrophoresis (CE) system comprises a high-voltage power supply, a narrow-bore capillary filled with background electrolyte between inlet and outlet electrolyte reservoirs, a sample injection mechanism and an on-capillary or coupled detector, enabling separation of charged analytes by their electrophoretic mobility.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>CE system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004041</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>capillary electrophoresis system</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004041"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A capillary electrophoresis (CE) system comprises a high-voltage power supply, a narrow-bore capillary filled with background electrolyte between inlet and outlet electrolyte reservoirs, a sample injection mechanism and an on-capillary or coupled detector, enabling separation of charged analytes by their electrophoretic mobility.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004041"/>
+        <obo:IAO_0000115>Capillary electrophoresis system model name not including the vendor&apos;s name.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004042</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>capillary electrophoresis system model</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004042"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Capillary electrophoresis system model name not including the vendor&apos;s name.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004042"/>
+        <obo:IAO_0000115>Agilent Technologies capillary electrophoresis system model.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004043</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Agilent capillary electrophoresis system model</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004043"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Agilent Technologies capillary electrophoresis system model.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004043"/>
+        <obo:IAO_0000115>Agilent (originally Hewlett-Packard) 3D CE capillary electrophoresis system (G1600A) with integrated UV-visible diode-array detector.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Agilent CE</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Agilent Capillary Electrophoresis System</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>G1600A</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>G1600AX</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>HP 3D CE</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004044</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>3D CE</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004044"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Agilent (originally Hewlett-Packard) 3D CE capillary electrophoresis system (G1600A) with integrated UV-visible diode-array detector.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004043"/>
+        <obo:IAO_0000115>Agilent 7100 capillary electrophoresis system (G7100A) with integrated UV-visible diode-array detector, used standalone or as the separation front end of a CE-MS system.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>7100 Capillary Electrophoresis System</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>G7100A</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004045</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>7100 CE</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004045"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Agilent 7100 capillary electrophoresis system (G7100A) with integrated UV-visible diode-array detector, used standalone or as the separation front end of a CE-MS system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
