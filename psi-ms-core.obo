@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.2.15
-date: 02:11:2026 16:30
+date: 06:11:2026 16:30
 saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
@@ -30205,8 +30205,8 @@ id: MS:1004041
 name: capillary electrophoresis system
 def: "A capillary electrophoresis (CE) system comprises a high-voltage power supply, a narrow-bore capillary filled with background electrolyte between inlet and outlet electrolyte reservoirs, a sample injection mechanism and an on-capillary or coupled detector, enabling separation of charged analytes by their electrophoretic mobility." [PSI:MS]
 subset: core
-is_a: MS:1003737 ! separation system
 synonym: "CE system" EXACT []
+is_a: MS:1003737 ! separation system
 
 [Term]
 id: MS:1004042
@@ -30227,21 +30227,21 @@ id: MS:1004044
 name: 3D CE
 def: "Agilent (originally Hewlett-Packard) 3D CE capillary electrophoresis system (G1600A) with integrated UV-visible diode-array detector." [PSI:MS]
 subset: core
-is_a: MS:1004043 ! Agilent capillary electrophoresis system model
 synonym: "HP 3D CE" EXACT []
 synonym: "Agilent CE" EXACT []
 synonym: "Agilent Capillary Electrophoresis System" EXACT []
 synonym: "G1600A" EXACT []
 synonym: "G1600AX" EXACT []
+is_a: MS:1004043 ! Agilent capillary electrophoresis system model
 
 [Term]
 id: MS:1004045
 name: 7100 CE
 def: "Agilent 7100 capillary electrophoresis system (G7100A) with integrated UV-visible diode-array detector, used standalone or as the separation front end of a CE-MS system." [PSI:MS]
 subset: core
-is_a: MS:1004043 ! Agilent capillary electrophoresis system model
 synonym: "7100 Capillary Electrophoresis System" EXACT []
 synonym: "G7100A" EXACT []
+is_a: MS:1004043 ! Agilent capillary electrophoresis system model
 
 [Term]
 id: MS:4000000
