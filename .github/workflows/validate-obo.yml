@@ -40,6 +40,7 @@ jobs:
         python -m pip install packaging fastobo
     - name: Check sorting
       run: |
+        python -m unittest discover -s scripts -p 'test_annotate_replacements.py'
         python scripts/check_sorted.py psi-ms-core.obo
         python scripts/check_sorted.py psi-ms-columns.obo-fragment
         python scripts/check_sorted.py psi-ms.obo
