@@ -16,6 +16,25 @@ The vocabulary is maintained as two source files and released as two generated o
 
 > The [robot.jar tool](https://github.com/ontodev/robot/) is used to convert from obo format to owl. 
 
+### Machine-readable replacements
+
+Obsolete terms use OBO `replaced_by: MS:...` clauses for explicit replacement
+targets. ROBOT exports these as OWL annotations using
+`http://purl.obolibrary.org/obo/IAO_0100001` ("term replaced by"). Branch-wide
+suggestions and replacements requiring a particular value use `consider:`
+instead; the original comments retain their explanatory context.
+
+`python scripts/annotate_replacements.py` previews annotations inferred from
+comments containing "replaced by". Add `--write` to update `psi-ms-core.obo`.
+The script checks that targets exist and are not obsolete, preserves existing
+comments and annotations, and is safe to rerun. Unresolved comments are reported
+and prevent writing. The historical `MS:1000102` comment's malformed `MS:100205`
+accession is explicitly resolved to `MS:1000205` and reported, without editing
+the comment. Other malformed accessions require review rather than guessing.
+The historical targets of `MS:1000327` and `MS:1000364` were also obsoleted
+without recorded successors. The script reports these as skipped, leaving the
+terms obsolete without adding replacement links.
+
 ### Requesting a new term
 
 Anyone can request a new term be added to the controlled vocabulary by opening an issue or a pull
@@ -44,4 +63,3 @@ saved-by: Eric Deutsch
 When you use psi-ms.obo, please cite the following publication:
 
 >Mayer G, Montecchi-Palazzi L, Ovelleiro D, Jones AR, Binz PA, Deutsch EW, Chambers M, Kallhardt M, Levander F, Shofstahl J, Orchard S, Vizcaíno JA, Hermjakob H, Stephan C, Meyer HE, Eisenacher M; HUPO-PSI Group. The HUPO proteomics standards initiative- mass spectrometry controlled vocabulary. Database (Oxford). 2013 Mar 12;2013:bat009. doi: 10.1093/database/bat009. Print 2013.  [pdf](http://database.oxfordjournals.org/content/2013/bat009.full.pdf+html)
-

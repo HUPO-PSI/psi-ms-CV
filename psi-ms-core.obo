@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.15
-date: 06:11:2026 16:30
-saved-by: Jonathan Hunter
+data-version: 4.2.16
+date: 09:11:2026 13:39
+saved-by: Julianus Pfeuffer
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -42,6 +42,7 @@ remark: creator: Jannick Kappelmann <jannick.kappelmann <-at-> gmail.com>
 remark: creator: Patrick Boschmann <patrick.boschmann <-at-> uni-tuebingen.de>
 remark: creator: Ethan Bass <ethanbass <-at-> gmail.com>
 remark: creator: Franziska Nicolaus <f.nicolaus <-at-> fz-juelich.de>
+remark: creator: Julianus Pfeuffer <julianus.pfeuffer <-at-> pfizer.com>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group
 remark: When appropriate the definition and synonyms of a term are reported exactly as in the chapter 12 of IUPAC orange book. See http://www.iupac.org/projects/2003/2003-056-2-500.html and http://mass-spec.lsu.edu/msterms/index.php/Main_Page
 remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
@@ -321,6 +322,7 @@ def: "OBSOLETE Whether positive or negative ions are selected for analysis by th
 subset: core
 comment: This term was made obsolete because it was replaced by scan polarity (MS:1000465).
 is_obsolete: true
+replaced_by: MS:1000465
 
 [Term]
 id: MS:1000010
@@ -496,6 +498,7 @@ def: "OBSOLETE Name of instrument vendor." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was replaced by instrument model (MS:1000031).
 is_obsolete: true
+replaced_by: MS:1000031
 
 [Term]
 id: MS:1000031
@@ -821,6 +824,7 @@ subset: core
 comment: This term was made obsolete because it was replaced by electron ionization (MS:1000389).
 synonym: "EI" EXACT []
 is_obsolete: true
+replaced_by: MS:1000389
 
 [Term]
 id: MS:1000073
@@ -1052,6 +1056,7 @@ def: "OBSOLETE The operation of a mass spectrometer to monitor a single ion rath
 subset: core
 comment: This term was made obsolete because it was replaced by single ion monitoring (MS:100205).
 is_obsolete: true
+replaced_by: MS:1000205
 
 [Term]
 id: MS:1000103
@@ -1060,6 +1065,7 @@ def: "OBSOLETE This term is not recommended. See Selected Reaction Monitoring." 
 subset: core
 comment: This term was made obsolete because it was replaced by selected reaction monitoring (MS:1000206).
 is_obsolete: true
+replaced_by: MS:1000206
 
 [Term]
 id: MS:1000104
@@ -1974,6 +1980,7 @@ def: "OBSOLETE The ratio of the number of ions formed to the number of electrons
 subset: core
 comment: This term was made obsolete because it was replaced by ionization efficiency (MS:1000392).
 is_obsolete: true
+replaced_by: MS:1000392
 
 [Term]
 id: MS:1000219
@@ -2088,6 +2095,7 @@ def: "OBSOLETE The height or area of a peak in a mass spectrum." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was replaced by base peak intensity (MS:1000505).
 is_obsolete: true
+replaced_by: MS:1000505
 
 [Term]
 id: MS:1000233
@@ -2105,6 +2113,7 @@ def: "OBSOLETE In a mass spectrum, the observed mass divided by the difference b
 subset: core
 comment: This term was made obsolete because it was replaced by mass resolving power (MS:1000800).
 is_obsolete: true
+replaced_by: MS:1000800
 
 [Term]
 id: MS:1000235
@@ -2164,6 +2173,7 @@ subset: core
 comment: This term was made obsolete because it was replaced by atmospheric pressure photoionization (MS:1000382).
 synonym: "APPI" EXACT []
 is_obsolete: true
+replaced_by: MS:1000382
 
 [Term]
 id: MS:1000242
@@ -2494,6 +2504,7 @@ subset: core
 comment: This term was made obsolete because it was replaced by surface ionization (MS:1000406).
 synonym: "SI" EXACT []
 is_obsolete: true
+replaced_by: MS:1000406
 
 [Term]
 id: MS:1000281
@@ -2519,6 +2530,7 @@ subset: core
 comment: This term was made obsolete because it was replaced by spark ionization (MS:1000404).
 synonym: "SSMS" EXACT []
 is_obsolete: true
+replaced_by: MS:1000404
 
 [Term]
 id: MS:1000284
@@ -5184,6 +5196,7 @@ def: "OBSOLETE Spectrum generated from a photodiode array detector (ultraviolet/
 subset: core
 comment: This term was made obsolete because it was replaced by absorption spectrum (MS:1000806).
 is_obsolete: true
+replaced_by: MS:1000806
 
 [Term]
 id: MS:1000621
@@ -6314,6 +6327,7 @@ def: "OBSOLETE Corrects retention time distortions between maps." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP map aligner' (MS:1002147) branch.
 is_obsolete: true
+consider: MS:1002147
 
 [Term]
 id: MS:1000761
@@ -6329,6 +6343,7 @@ def: "OBSOLETE Removes noise from profile spectra by using different smoothing t
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP noise filter' (MS:1002131) branch.
 is_obsolete: true
+consider: MS:1002131
 
 [Term]
 id: MS:1000763
@@ -6337,6 +6352,7 @@ def: "OBSOLETE Finds mass spectrometric peaks in profile mass spectra." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP peak picker' (MS:1002134) branch.
 is_obsolete: true
+consider: MS:1002134
 
 [Term]
 id: MS:1000764
@@ -6352,6 +6368,7 @@ def: "OBSOLETE Applies a filter to peak spectra." [PSI:MS]
 subset: core
 comment: This term was made obsolete, because it is replaced by the terms under the 'TOPP spectra filter' (MS:1002137) branch.
 is_obsolete: true
+consider: MS:1002137
 
 [Term]
 id: MS:1000766
@@ -8295,6 +8312,8 @@ name: NoEnzyme
 subset: core
 comment: This term was made obsolete because it is ambiguous and is replaced by NoCleavage (MS:1001955) and unspecific cleavage (MS:1001956).
 is_obsolete: true
+replaced_by: MS:1001955
+replaced_by: MS:1001956
 
 [Term]
 id: MS:1001092
@@ -8592,6 +8611,7 @@ def: "OBSOLETE Peptide raw area." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it is replaced by 'MS1 feature area' (MS:1001844).
 is_obsolete: true
+replaced_by: MS:1001844
 
 [Term]
 id: MS:1001131
@@ -8640,6 +8660,7 @@ def: "OBSOLETE P-value (protein diff from 1 randomly)." [PSI:PI]
 subset: core
 comment: This term was made obsolete because it is replaced by 't-test p-value' (MS:1001855).
 is_obsolete: true
+replaced_by: MS:1001855
 
 [Term]
 id: MS:1001137
@@ -14899,6 +14920,7 @@ def: "OBSOLETE The ion drift time of an MS2 product ion." [PSI:MS]
 subset: core
 comment: This term was made obsolete because it was replaced by ion mobility drift time (MS:1002476).
 is_obsolete: true
+replaced_by: MS:1002476
 
 [Term]
 id: MS:1001968
@@ -18665,6 +18687,7 @@ def: "OBSOLETE Neutral loss of water." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value H2O.
 is_obsolete: true
+consider: MS:1000336
 
 [Term]
 id: MS:1002456
@@ -18673,6 +18696,7 @@ def: "OBSOLETE Neutral loss of ammonia." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value NH3.
 is_obsolete: true
+consider: MS:1000336
 
 [Term]
 id: MS:1002457
@@ -18681,6 +18705,7 @@ def: "OBSOLETE Neutral loss of phosphoric acid." [PSI:PI]
 subset: core
 comment: This term was obsoleted because it should be replaced by MS:1000336 with value H3PO4.
 is_obsolete: true
+consider: MS:1000336
 
 [Term]
 id: MS:1002458
@@ -22083,6 +22108,9 @@ def: "OBSOLETE Identifies a peak when no de-isotoping has been performed. The va
 subset: core
 comment: This term was obsoleted because it was replaced by the more exact terms MS:1002956 'isotopic ion MS peak', MS:1002957 'isotopomer MS peak' and MS:1002958 'isotopologue MS peak' instead.
 is_obsolete: true
+replaced_by: MS:1002956
+replaced_by: MS:1002957
+replaced_by: MS:1002958
 
 [Term]
 id: MS:1002898
