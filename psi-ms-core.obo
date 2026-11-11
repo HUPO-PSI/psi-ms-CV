@@ -11197,7 +11197,7 @@ name: percolator:PEP
 def: "Posterior error probability." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -14388,7 +14388,7 @@ name: MaxQuant:PEP
 def: "The data type PEP (posterior error probability) produced by MaxQuant." [PSI:MS]
 subset: core
 is_a: MS:1001805 ! quantification datatype
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -15628,7 +15628,7 @@ name: MS-GF:PEP
 def: "MS-GF posterior error probability." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -17175,7 +17175,7 @@ name: Byonic:PEP
 def: "Byonic posterior error probability." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_order MS:1002109 ! lower score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
@@ -22871,7 +22871,7 @@ name: Andromeda:PEP
 def: "Posterior error probability of the best identified peptide of the Andromeda search engine." [PSI:PI]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
@@ -23694,7 +23694,7 @@ name: MaxQuant-DIA PEP
 def: "PSM evidence PEP probability from MaxQuant-DIA algorithm." [PSI:MS]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -23787,7 +23787,7 @@ name: OpenMS:ConsensusID PEP
 def: "The OpenMS ConsesusID tool posterior error probability" [PSI:MS]
 subset: core
 is_a: MS:1001143 ! PSM-level search engine specific statistic
-is_a: MS:1004041 ! PSM-level posterior error probability
+is_a: MS:1004052 ! PSM-level posterior error probability
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
 
 [Term]
@@ -30274,13 +30274,6 @@ subset: core
 synonym: "7100 Capillary Electrophoresis System" EXACT []
 synonym: "G7100A" EXACT []
 is_a: MS:1004043 ! Agilent capillary electrophoresis system model
-name: PSM-level posterior error probability
-def: "Probability that the reported peptide ion is incorrect." [PSI:PI, DOI:10.1021/pr700739d]
-subset: core
-is_a: MS:1002347 ! PSM-level identification statistic
-relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
-relationship: has_order MS:1002109 ! lower score better
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term[Term]
 
 [Term]
 id: MS:1004046
@@ -30337,6 +30330,16 @@ subset: core
 is_a: MS:1002347 ! PSM-level identification statistic
 relationship: has_order MS:1002108 ! higher score better
 relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004052
+name: PSM-level posterior error probability
+def: "Probability that the reported peptide ion is incorrect." [PSI:PI, DOI:10.1021/pr700739d]
+subset: core
+is_a: MS:1002347 ! PSM-level identification statistic
+relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
+relationship: has_order MS:1002109 ! lower score better
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term[Term]
 
 [Term]
 id: MS:4000000
