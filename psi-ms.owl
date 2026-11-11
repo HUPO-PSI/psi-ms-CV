@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.15/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.17/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>06:11:2026 16:30</oboInOwl:date>
+        <oboInOwl:date>11:11:2026 13:00</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Jonathan Hunter</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Douwe Schulte</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
@@ -23853,6 +23853,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001156">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -24248,6 +24249,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001172">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -27239,6 +27241,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001328">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -27264,6 +27267,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001329">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002352"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -27289,6 +27293,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001330">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -29261,6 +29266,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001420">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -30863,6 +30869,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001493">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -39735,6 +39742,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001888">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <obo:IAO_0000115>The SQID result &apos;deltaScore&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
         <oboInOwl:id>MS:1001888</oboInOwl:id>
@@ -40048,6 +40056,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1001901">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001805"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -43559,6 +43568,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -43839,6 +43849,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002056">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -47877,6 +47888,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002250">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -47952,6 +47964,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002253">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -47977,6 +47990,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002254">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -48053,6 +48067,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001153"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -48203,6 +48218,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002263">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -48234,6 +48250,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002264">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -48265,6 +48282,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002265">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -54560,6 +54578,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002535">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -61140,6 +61159,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002834">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -64751,6 +64771,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1002995">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_domain"/>
@@ -67141,6 +67162,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003101">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -67397,6 +67419,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003113">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -67447,6 +67470,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003115">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002354"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -73269,6 +73293,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003358">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -73369,6 +73394,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003362">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -73444,6 +73470,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003365">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
@@ -74561,6 +74588,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003415">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001153"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -74654,6 +74682,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003418">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -74685,6 +74714,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003419">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -74748,6 +74778,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003421">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001153"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002353"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -75010,6 +75041,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1003433">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
@@ -85385,6 +85417,237 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Agilent 7100 capillary electrophoresis system (G7100A) with integrated UV-visible diode-array detector, used standalone or as the separation front end of a CE-MS system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_domain"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002305"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002109"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Probability of matching exactly N peaks across all scored candidates (Pr(x=k)).</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004046</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Sage:Poisson score</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004046"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Probability of matching exactly N peaks across all scored candidates (Pr(x=k)).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Combined score from linear discriminant analysis, used for FDR (False Discovery Rate) calculation.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004047</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Sage:discriminant score</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004047"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Combined score from linear discriminant analysis, used for FDR (False Discovery Rate) calculation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Difference between the hyperscore of this candidate and the next best candidate.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004048</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Sage:delta hyperscore next</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004048"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Difference between the hyperscore of this candidate and the next best candidate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001143"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002109"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Difference between the hyperscore of the best candidate (rank=1) and this candidate.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004049</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>Sage:delta hyperscore best</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004049"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Difference between the hyperscore of the best candidate (rank=1) and this candidate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002347"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002109"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The rank of this PSM relative to all other PSMs involving this spectrum, based on a specific propery.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004050</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>PSM-level rank</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The rank of this PSM relative to all other PSMs involving this spectrum, based on a specific propery.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002347"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Difference between the score of the best candidate and the next best candidate.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004051</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>PSM-level delta score</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004051"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Difference between the score of the best candidate and the next best candidate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1002347"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_domain"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002305"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_order"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MS_1002109"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ms#has_value_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Probability that the reported peptide ion is incorrect.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004052</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>PSM-level posterior error probability</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004052"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Probability that the reported peptide ion is incorrect.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.1021/pr700739d</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
