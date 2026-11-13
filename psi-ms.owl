@@ -19,6 +19,7 @@
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
         <oboInOwl:saved-by>Douwe Schulte</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
+        <rdfs:comment>GENERATED FILE, do not edit. This release is built by scripts/build_release_obo.py from psi-ms-core.obo and psi-ms-columns.obo-fragment. Edit psi-ms-core.obo instead.</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</rdfs:comment>
         <rdfs:comment>To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
