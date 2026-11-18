@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.2.18
-date: 18:11:2026 15:30
+date: 18:11:2026 15:47
 saved-by: Jonathan Hunter
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
@@ -1209,7 +1209,6 @@ id: MS:1000123
 name: IonSpec instrument model
 def: "IonSpec corporation instrument model." [PSI:MS]
 subset: core
-synonym: "Varian IonSpec instrument model" EXACT []
 is_a: MS:1000489 ! Varian instrument model
 
 [Term]
@@ -1355,7 +1354,7 @@ id: MS:1000141
 name: apex IV
 def: "Bruker Daltonics' apex IV: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics apex IV" EXACT []
+synonym: "Bruker apex IV" EXACT []
 is_a: MS:1003948 ! fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
@@ -1364,7 +1363,7 @@ id: MS:1000142
 name: apex Q
 def: "Bruker Daltonics' apex Q: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics apex Q" EXACT []
+synonym: "Bruker apex Q" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
@@ -1418,7 +1417,7 @@ id: MS:1000148
 name: autoflex II
 def: "Bruker Daltonics' autoflex II: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex II" EXACT []
+synonym: "Bruker autoflex II" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -1427,7 +1426,7 @@ id: MS:1000149
 name: autoflex TOF/TOF
 def: "Bruker Daltonics' autoflex TOF/TOF MS: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex TOF/TOF" EXACT []
+synonym: "Bruker autoflex TOF/TOF" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -1445,7 +1444,7 @@ id: MS:1000151
 name: BioTOF II
 def: "Bruker Daltonics' BioTOF II: ESI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics BioTOF II" EXACT []
+synonym: "Bruker BioTOF II" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
@@ -1454,7 +1453,7 @@ id: MS:1000152
 name: BioTOF-Q
 def: "Bruker Daltonics' BioTOF-Q: ESI Q-TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics BioTOF-Q" EXACT []
+synonym: "Bruker BioTOF-Q" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
@@ -1491,7 +1490,7 @@ id: MS:1000156
 name: esquire 4000
 def: "Bruker Daltonics' esquire 4000: linear ion trap, ESI, MALDI, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics esquire 4000" EXACT []
+synonym: "Bruker esquire 4000" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
@@ -1500,7 +1499,7 @@ id: MS:1000157
 name: esquire 6000
 def: "Bruker Daltonics' esquire 6000: linear ion trap, ESI, MALDI, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics esquire 6000" EXACT []
+synonym: "Bruker esquire 6000" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
@@ -1528,7 +1527,7 @@ id: MS:1000160
 name: HCT
 def: "Bruker Daltonics' HCT: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics HCT" EXACT []
+synonym: "Bruker HCT" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
@@ -1537,7 +1536,7 @@ id: MS:1000161
 name: HCTplus
 def: "Bruker Daltonics' HCTplus: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics HCTplus" EXACT []
+synonym: "Bruker HCTplus" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
@@ -1641,7 +1640,7 @@ id: MS:1000172
 name: MAT253
 def: "ThermoFinnigan MAT253 MS." [PSI:MS]
 subset: core
-synonym: "Finnigan MAT MAT253" EXACT []
+synonym: "Finnigan MAT253" EXACT []
 synonym: "Thermo Fisher Scientific MAT253" EXACT []
 is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
@@ -1651,7 +1650,7 @@ id: MS:1000173
 name: MAT900XP
 def: "ThermoFinnigan MAT900XP MS." [PSI:MS]
 subset: core
-synonym: "Finnigan MAT MAT900XP" EXACT []
+synonym: "Finnigan MAT900XP" EXACT []
 synonym: "Thermo Fisher Scientific MAT900XP" EXACT []
 is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
@@ -1661,7 +1660,7 @@ id: MS:1000174
 name: MAT900XP Trap
 def: "ThermoFinnigan MAT900XP Trap MS." [PSI:MS]
 subset: core
-synonym: "Finnigan MAT MAT900XP Trap" EXACT []
+synonym: "Finnigan MAT900XP Trap" EXACT []
 synonym: "Thermo Fisher Scientific MAT900XP Trap" EXACT []
 is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
@@ -1671,7 +1670,7 @@ id: MS:1000175
 name: MAT95XP
 def: "ThermoFinnigan MAT95XP MS." [PSI:MS]
 subset: core
-synonym: "Finnigan MAT MAT95XP" EXACT []
+synonym: "Finnigan MAT95XP" EXACT []
 synonym: "Thermo Fisher Scientific MAT95XP" EXACT []
 is_a: MS:1003949 ! magnetic sector instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
@@ -1681,7 +1680,7 @@ id: MS:1000176
 name: MAT95XP Trap
 def: "ThermoFinnigan MAT95XP Trap MS." [PSI:MS]
 subset: core
-synonym: "Finnigan MAT MAT95XP Trap" EXACT []
+synonym: "Finnigan MAT95XP Trap" EXACT []
 synonym: "Thermo Fisher Scientific MAT95XP Trap" EXACT []
 is_a: MS:1003947 ! magnetic sector ion trap instrument
 is_a: MS:1000493 ! Finnigan MAT instrument model
@@ -1691,7 +1690,7 @@ id: MS:1000177
 name: microflex
 def: "Bruker Daltonics' microflex: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics microflex" EXACT []
+synonym: "Bruker microflex" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -1700,7 +1699,7 @@ id: MS:1000178
 name: microTOF LC
 def: "Bruker Daltonics' microTOF LC: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics microTOF LC" EXACT []
+synonym: "Bruker microTOF LC" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -1747,7 +1746,7 @@ id: MS:1000183
 name: OmniFlex
 def: "Bruker Daltonics' OmniFlex: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics OmniFlex" EXACT []
+synonym: "Bruker OmniFlex" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -1912,7 +1911,7 @@ id: MS:1000201
 name: ultraflex
 def: "Bruker Daltonics' ultraflex: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics ultraflex" EXACT []
+synonym: "Bruker ultraflex" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -1921,7 +1920,7 @@ id: MS:1000202
 name: ultraflex TOF/TOF
 def: "Bruker Daltonics' ultraflex TOF/TOF: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics ultraflex TOF/TOF" EXACT []
+synonym: "Bruker ultraflex TOF/TOF" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -4259,7 +4258,6 @@ id: MS:1000493
 name: Finnigan MAT instrument model
 def: "Finnigan MAT instrument model." [PSI:MS]
 subset: core
-synonym: "Thermo Fisher Scientific Finnigan MAT instrument model" EXACT []
 is_a: MS:1000483 ! Thermo Fisher Scientific instrument model
 
 [Term]
@@ -5985,7 +5983,7 @@ id: MS:1000695
 name: apex ultra
 def: "Bruker Daltonics' apex ultra: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics apex ultra" EXACT []
+synonym: "Bruker apex ultra" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
@@ -5994,7 +5992,7 @@ id: MS:1000696
 name: autoflex III smartbeam
 def: "Bruker Daltonics' autoflex III smartbeam: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex III smartbeam" EXACT []
+synonym: "Bruker autoflex III smartbeam" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -6010,7 +6008,7 @@ id: MS:1000698
 name: HCTultra
 def: "Bruker Daltonics' HCTultra: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics HCTultra" EXACT []
+synonym: "Bruker HCTultra" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
@@ -6019,7 +6017,7 @@ id: MS:1000699
 name: HCTultra PTM
 def: "Bruker Daltonics' HCTultra PTM: ESI TOF, Nanospray, APCI, APPI, PTR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics HCTultra PTM" EXACT []
+synonym: "Bruker HCTultra PTM" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
@@ -6028,7 +6026,7 @@ id: MS:1000700
 name: HCTultra ETD II
 def: "Bruker Daltonics' HCTultra ETD II: ESI Q-TOF, Nanospray, APCI, APPI, ETD." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics HCTultra ETD II" EXACT []
+synonym: "Bruker HCTultra ETD II" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000697 ! Bruker Daltonics HCT Series
 
@@ -6037,7 +6035,7 @@ id: MS:1000701
 name: microflex LT
 def: "Bruker Daltonics' microflex LT: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics microflex LT" EXACT []
+synonym: "Bruker microflex LT" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -6046,7 +6044,7 @@ id: MS:1000702
 name: micrOTOF
 def: "Bruker Daltonics' micrOTOF: ESI TOF, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics micrOTOF" EXACT []
+synonym: "Bruker micrOTOF" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -6055,7 +6053,7 @@ id: MS:1000703
 name: micrOTOF-Q
 def: "Bruker Daltonics' micrOTOF-Q: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics micrOTOF-Q" EXACT []
+synonym: "Bruker micrOTOF-Q" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -6064,7 +6062,7 @@ id: MS:1000704
 name: micrOTOF-Q II
 def: "Bruker Daltonics' micrOTOF-Q II: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics micrOTOF-Q II" EXACT []
+synonym: "Bruker micrOTOF-Q II" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -6073,7 +6071,7 @@ id: MS:1000705
 name: ultraflex III TOF/TOF
 def: "Bruker Daltonics' ultraflex III TOF/TOF: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics ultraflex III TOF/TOF" EXACT []
+synonym: "Bruker ultraflex III TOF/TOF" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11750,7 +11748,7 @@ id: MS:1001537
 name: BioTOF
 def: "Bruker Daltonics' BioTOF: ESI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics BioTOF" EXACT []
+synonym: "Bruker BioTOF" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
@@ -11759,7 +11757,7 @@ id: MS:1001538
 name: BioTOF III
 def: "Bruker Daltonics' BioTOF III: ESI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics BioTOF III" EXACT []
+synonym: "Bruker BioTOF III" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
@@ -11768,7 +11766,7 @@ id: MS:1001539
 name: UltroTOF-Q
 def: "Bruker Daltonics' UltroTOF-Q: ESI Q-TOF (MALDI optional)." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics UltroTOF-Q" EXACT []
+synonym: "Bruker UltroTOF-Q" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001535 ! Bruker Daltonics BioTOF series
 
@@ -11777,7 +11775,7 @@ id: MS:1001540
 name: micrOTOF II
 def: "Bruker Daltonics' micrOTOF II: ESI TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics micrOTOF II" EXACT []
+synonym: "Bruker micrOTOF II" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -11786,7 +11784,7 @@ id: MS:1001541
 name: maXis
 def: "Bruker Daltonics' maXis: ESI Q-TOF, Nanospray, APCI, APPI." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis" EXACT []
+synonym: "Bruker maXis" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -11795,7 +11793,7 @@ id: MS:1001542
 name: amaZon ETD
 def: "Bruker Daltonics' amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, ETD, PTR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics amaZon ETD" EXACT []
+synonym: "Bruker amaZon ETD" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
@@ -11804,7 +11802,7 @@ id: MS:1001543
 name: microflex LRF
 def: "Bruker Daltonics' microflex LRF: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics microflex LRF" EXACT []
+synonym: "Bruker microflex LRF" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11813,7 +11811,7 @@ id: MS:1001544
 name: ultrafleXtreme
 def: "Bruker Daltonics' ultrafleXtreme: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics ultrafleXtreme" EXACT []
+synonym: "Bruker ultrafleXtreme" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11829,7 +11827,7 @@ id: MS:1001546
 name: amaZon X
 def: "Bruker Daltonics' amaZon X: ESI quadrupole ion trap, APCI, APPI, ETD, PTR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics amaZon X" EXACT []
+synonym: "Bruker amaZon X" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
@@ -11852,7 +11850,7 @@ id: MS:1001549
 name: solariX
 def: "Bruker Daltonics' solariX: ESI, MALDI, Qh-FT_ICR." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics solariX" EXACT []
+synonym: "Bruker solariX" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001548 ! Bruker Daltonics solarix series
 
@@ -11861,7 +11859,7 @@ id: MS:1001550
 name: microflex II
 def: "Bruker Daltonics' microflex II: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics microflex II" EXACT []
+synonym: "Bruker microflex II" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11870,7 +11868,7 @@ id: MS:1001553
 name: autoflex II TOF/TOF
 def: "Bruker Daltonics' autoflex II TOF/TOF: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex II TOF/TOF" EXACT []
+synonym: "Bruker autoflex II TOF/TOF" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11879,7 +11877,7 @@ id: MS:1001554
 name: autoflex III TOF/TOF smartbeam
 def: "Bruker Daltonics' autoflex III TOF/TOF smartbeam: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex III TOF/TOF smartbeam" EXACT []
+synonym: "Bruker autoflex III TOF/TOF smartbeam" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -11888,7 +11886,7 @@ id: MS:1001555
 name: autoflex
 def: "Bruker Daltonics' autoflex: MALDI TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex" EXACT []
+synonym: "Bruker autoflex" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -16063,7 +16061,7 @@ id: MS:1002077
 name: impact
 def: "Bruker Daltonics' impact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics impact" EXACT []
+synonym: "Bruker impact" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -17576,7 +17574,7 @@ id: MS:1002279
 name: maXis 4G
 def: "Bruker Daltonics' maXis 4G: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis 4G" EXACT []
+synonym: "Bruker maXis 4G" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -17585,7 +17583,7 @@ id: MS:1002280
 name: compact
 def: "Bruker Daltonics' compact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics compact" EXACT []
+synonym: "Bruker compact" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -17695,7 +17693,7 @@ id: MS:1002295
 name: SCION SQ
 def: "Bruker Daltonics' SCION SQ: GC-single quadrupole." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics SCION SQ" EXACT []
+synonym: "Bruker SCION SQ" EXACT []
 is_a: MS:1003950 ! quadrupole instrument
 is_a: MS:1002293 ! Bruker Daltonics SCION series
 
@@ -17704,7 +17702,7 @@ id: MS:1002296
 name: SCION TQ
 def: "Bruker Daltonics' SCION TQ: GC-triple quadrupole." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics SCION TQ" EXACT []
+synonym: "Bruker SCION TQ" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002293 ! Bruker Daltonics SCION series
 
@@ -17713,7 +17711,7 @@ id: MS:1002297
 name: EVOQ Elite
 def: "Bruker Daltonics' EVOQ Elite: LC-triple quadrupole." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics EVOQ Elite" EXACT []
+synonym: "Bruker EVOQ Elite" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
@@ -17722,7 +17720,7 @@ id: MS:1002298
 name: EVOQ Qube
 def: "Bruker Daltonics' EVOQ Qube: LC-triple quadrupole." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics EVOQ Qube" EXACT []
+synonym: "Bruker EVOQ Qube" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
@@ -17731,7 +17729,7 @@ id: MS:1002299
 name: micrOTOF-Q III
 def: "Bruker Daltonics' micrOTOF-Q III: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics micrOTOF-Q III" EXACT []
+synonym: "Bruker micrOTOF-Q III" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -17740,7 +17738,7 @@ id: MS:1002300
 name: amaZon Speed ETD
 def: "Bruker Daltonics' amaZon Speed ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, ETD, PTR, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics amaZon Speed ETD" EXACT []
+synonym: "Bruker amaZon Speed ETD" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
@@ -17749,7 +17747,7 @@ id: MS:1002301
 name: amaZon Speed
 def: "Bruker Daltonics' amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI, APPI, GC-APCI, CaptiveSpray." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics amaZon Speed" EXACT []
+synonym: "Bruker amaZon Speed" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
@@ -20660,7 +20658,7 @@ id: MS:1002666
 name: impact II
 def: "Bruker Daltonics' impact II." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics impact II" EXACT []
+synonym: "Bruker impact II" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -20669,7 +20667,7 @@ id: MS:1002667
 name: impact HD
 def: "Bruker Daltonics' impact HD." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics impact HD" EXACT []
+synonym: "Bruker impact HD" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -23332,7 +23330,7 @@ id: MS:1003004
 name: maXis II
 def: "Bruker Daltonics' maXis II." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis II" EXACT []
+synonym: "Bruker maXis II" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -23341,7 +23339,7 @@ id: MS:1003005
 name: timsTOF Pro
 def: "Bruker Daltonics' timsTOF Pro." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF Pro" EXACT []
+synonym: "Bruker timsTOF Pro" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -24262,7 +24260,7 @@ id: MS:1003122
 name: rapifleX
 def: "Bruker Daltonics' rapiflex: MALDI TOF/TOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics rapifleX" EXACT []
+synonym: "Bruker rapifleX" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -24278,7 +24276,7 @@ id: MS:1003124
 name: timsTOF fleX
 def: "Bruker Daltonics' timsTOF fleX" [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF fleX" EXACT []
+synonym: "Bruker timsTOF fleX" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -25146,7 +25144,7 @@ id: MS:1003229
 name: timsTOF
 def: "Bruker Daltonics' timsTOF." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF" EXACT []
+synonym: "Bruker timsTOF" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -25155,7 +25153,7 @@ id: MS:1003230
 name: timsTOF Pro 2
 def: "Bruker Daltonics' timsTOF Pro 2." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF Pro 2" EXACT []
+synonym: "Bruker timsTOF Pro 2" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -25164,7 +25162,7 @@ id: MS:1003231
 name: timsTOF SCP
 def: "Bruker Daltonics' timsTOF SCP." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF SCP" EXACT []
+synonym: "Bruker timsTOF SCP" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -26365,7 +26363,7 @@ id: MS:1003383
 name: timsTOF Ultra
 def: "Bruker Daltonics' timsTOF Ultra." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF Ultra" EXACT []
+synonym: "Bruker timsTOF Ultra" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -26482,7 +26480,7 @@ id: MS:1003397
 name: timsTOF fleX MALDI-2
 def: "Bruker Daltonics' timsTOF fleX MALDI-2." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF fleX MALDI-2" EXACT []
+synonym: "Bruker timsTOF fleX MALDI-2" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -26535,7 +26533,7 @@ id: MS:1003404
 name: timsTOF HT
 def: "Bruker Daltonics' timsTOF HT." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF HT" EXACT []
+synonym: "Bruker timsTOF HT" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -26603,7 +26601,7 @@ id: MS:1003412
 name: timsTOF Ultra 2
 def: "Bruker Daltonics timsTOF Ultra 2." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF Ultra 2" EXACT []
+synonym: "Bruker timsTOF Ultra 2" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -27008,7 +27006,7 @@ id: MS:1003459
 name: APEX-Qe
 def: "Bruker APEX-Qe FT-ICR-MS mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics APEX-Qe" EXACT []
+synonym: "Bruker APEX-Qe" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001556 ! Bruker Daltonics apex series
 
@@ -27017,7 +27015,7 @@ id: MS:1003460
 name: autoflex speed TOF/TOF
 def: "Bruker autoflex speed TOF/TOF MALDI TOF/TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex speed TOF/TOF" EXACT []
+synonym: "Bruker autoflex speed TOF/TOF" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -27026,7 +27024,7 @@ id: MS:1003461
 name: esquire 3000
 def: "Bruker esquire 3000 ion trap mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics esquire 3000" EXACT []
+synonym: "Bruker esquire 3000" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001533 ! Bruker Daltonics esquire series
 
@@ -27035,7 +27033,7 @@ id: MS:1003462
 name: maXis impact
 def: "Bruker maXis impact quadrupole time-of-flight mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis impact" EXACT []
+synonym: "Bruker maXis impact" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -27044,7 +27042,7 @@ id: MS:1003463
 name: maXis impact HD
 def: "Bruker maXis impact HD quadrupole time-of-flight mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis impact HD" EXACT []
+synonym: "Bruker maXis impact HD" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -27053,7 +27051,7 @@ id: MS:1003464
 name: maXis 3G
 def: "Bruker maXis 3G quadrupole time-of-flight mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics maXis 3G" EXACT []
+synonym: "Bruker maXis 3G" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001547 ! Bruker Daltonics maXis series
 
@@ -27062,7 +27060,7 @@ id: MS:1003465
 name: solariX XR
 def: "Bruker solariX XR FT-ICR-MS mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics solariX XR" EXACT []
+synonym: "Bruker solariX XR" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1001548 ! Bruker Daltonics solarix series
 
@@ -27071,7 +27069,7 @@ id: MS:1003466
 name: amaZon SL
 def: "Bruker amaZon SL ion trap mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics amaZon SL" EXACT []
+synonym: "Bruker amaZon SL" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1001545 ! Bruker Daltonics amaZon series
 
@@ -27080,7 +27078,7 @@ id: MS:1003467
 name: EVOQ DART-TQ+
 def: "Bruker EVOQ DART-TQ+ triple quadrupole mass spectrometer with Direct Analysis in Real Time (DART) ion source." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics EVOQ DART-TQ+" EXACT []
+synonym: "Bruker EVOQ DART-TQ+" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
@@ -27089,7 +27087,7 @@ id: MS:1003468
 name: EVOQ LC-TQ
 def: "Bruker EVOQ LC-TQ triple quadrupole mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics EVOQ LC-TQ" EXACT []
+synonym: "Bruker EVOQ LC-TQ" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
@@ -27098,7 +27096,7 @@ id: MS:1003469
 name: EVOQ GC-TQ
 def: "Bruker EVOQ GC-TQ gas chromatograph - triple quadrupole mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics EVOQ GC-TQ" EXACT []
+synonym: "Bruker EVOQ GC-TQ" EXACT []
 is_a: MS:1003762 ! triple quadrupole instrument
 is_a: MS:1002294 ! Bruker Daltonics EVOQ series
 
@@ -27107,7 +27105,7 @@ id: MS:1003470
 name: Toxtyper
 def: "Bruker Toxtyper ion trap mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics Toxtyper" EXACT []
+synonym: "Bruker Toxtyper" EXACT []
 is_a: MS:1003952 ! ion trap instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
@@ -27116,7 +27114,7 @@ id: MS:1003471
 name: impact II VIP
 def: "Bruker impact II VIP quadrupole time-of-flight mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics impact II VIP" EXACT []
+synonym: "Bruker impact II VIP" EXACT []
 is_a: MS:1003763 ! quadrupole time-of-flight instrument
 is_a: MS:1001536 ! Bruker Daltonics micrOTOF series
 
@@ -27125,7 +27123,7 @@ id: MS:1003472
 name: ecTOF
 def: "Bruker ecTOF gas chromatograph - time-of-flight mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics ecTOF" EXACT []
+synonym: "Bruker ecTOF" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
@@ -27134,7 +27132,7 @@ id: MS:1003473
 name: autoflex maX
 def: "Bruker autoflex maX MALDI TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics autoflex maX" EXACT []
+synonym: "Bruker autoflex maX" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -27143,7 +27141,7 @@ id: MS:1003474
 name: rapifleX MALDI PharmaPulse
 def: "Bruker rapifleX MALDI PharmaPulse MALDI TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics rapifleX MALDI PharmaPulse" EXACT []
+synonym: "Bruker rapifleX MALDI PharmaPulse" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -27152,7 +27150,7 @@ id: MS:1003475
 name: smartfleX
 def: "Bruker smartfleX MALDI TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics smartfleX" EXACT []
+synonym: "Bruker smartfleX" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -27161,7 +27159,7 @@ id: MS:1003476
 name: neofleX
 def: "Bruker neofleX MALDI TOF/TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics neofleX" EXACT []
+synonym: "Bruker neofleX" EXACT []
 is_a: MS:1003946 ! tandem time-of-flight instrument
 is_a: MS:1001534 ! Bruker Daltonics flex series
 
@@ -27170,7 +27168,7 @@ id: MS:1003477
 name: MALDI Biotyper
 def: "Bruker MALDI Biotyper MALDI TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics MALDI Biotyper" EXACT []
+synonym: "Bruker MALDI Biotyper" EXACT []
 is_a: MS:1003951 ! time-of-flight instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
@@ -27179,7 +27177,7 @@ id: MS:1003478
 name: scimaX
 def: "Bruker scimaX FT-ICR-MS mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics scimaX" EXACT []
+synonym: "Bruker scimaX" EXACT []
 is_a: MS:1003766 ! quadrupole fourier transform ion cyclotron resonance instrument
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 
@@ -27188,7 +27186,7 @@ id: MS:1003479
 name: timsMetabo
 def: "Bruker timsMetabo TIMS-Q-TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsMetabo" EXACT []
+synonym: "Bruker timsMetabo" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -27197,7 +27195,7 @@ id: MS:1003480
 name: timsUltra AIP
 def: "Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsUltra AIP" EXACT []
+synonym: "Bruker timsUltra AIP" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -27206,7 +27204,7 @@ id: MS:1003481
 name: timsOmni
 def: "Bruker timsOmni TIMS-Q-TOF mass spectrometer." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsOmni" EXACT []
+synonym: "Bruker timsOmni" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -27215,7 +27213,7 @@ id: MS:1003482
 name: timsTOF MALDI PharmaPulse
 def: "Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput screening (uHTS) capability." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsTOF MALDI PharmaPulse" EXACT []
+synonym: "Bruker timsTOF MALDI PharmaPulse" EXACT []
 is_a: MS:1003970 ! ion mobility quadrupole time-of-flight instrument
 is_a: MS:1003123 ! Bruker Daltonics timsTOF series
 
@@ -30646,7 +30644,7 @@ id: MS:1003995
 name: timsMRMS
 def: "Bruker timsMRMS instrument combining trapped ion mobility spectrometry with magnetic resonance (FT-ICR) mass spectrometry." [PSI:MS]
 subset: core
-synonym: "Bruker Daltonics timsMRMS" EXACT []
+synonym: "Bruker timsMRMS" EXACT []
 is_a: MS:1000122 ! Bruker Daltonics instrument model
 is_a: MS:1003994 ! ion mobility quadrupole FT-ICR instrument
 
