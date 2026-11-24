@@ -29228,6 +29228,7 @@ id: MS:1003827
 name: sublimation MALDI matrix preparation
 def: "Application of MALDI matrix to the sample by sublimation, in which solid matrix is heated under vacuum and deposits on the sample surface as a fine, solvent-free layer." [PSI:MS]
 synonym: "matrix sublimation" EXACT []
+subset: core
 is_a: MS:1000833 ! matrix application type
 
 [Term]
