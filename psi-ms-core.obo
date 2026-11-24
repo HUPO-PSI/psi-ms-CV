@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.16
-date: 06:11:2026 17:15
-saved-by: Douwe Schulte
+data-version: 4.2.17
+date: 23:11:2026 17:15
+saved-by: Joshua Klein
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -29222,6 +29222,13 @@ def: "This array stores indices or spans into some form of coordinate space mode
 subset: core
 is_a: MS:1000572 ! binary data compression type
 relationship: has_value_type xsd:string ! The allowed valute-type for this CV term
+
+[Term]
+id: MS:1003827
+name: sublimation MALDI matrix preparation
+def: "Application of MALDI matrix to the sample by sublimation, in which solid matrix is heated under vacuum and deposits on the sample surface as a fine, solvent-free layer." [PSI:MS]
+synonym: "matrix sublimation" EXACT []
+is_a: MS:1000833 ! matrix application type
 
 [Term]
 id: MS:1003870
