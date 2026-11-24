@@ -57,10 +57,7 @@ jobs:
           title: Update release OBO file
           body: |
             psi-ms.obo rebuilt from `psi-ms-core.obo` and `psi-ms-columns.obo-fragment`
-            by `scripts/build_release_obo.py`.
-
-            **This PR is the manual review gate for the release chain.** Please review and merge it to continue the release process.
-            Auto-merge workflow to be re-enabled once the release chain is fully tested and stable.
+            by `scripts/build_release_obo.py`. This PR is approved and merged automatically.
 
       - name: Approve pull request
         if: (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
