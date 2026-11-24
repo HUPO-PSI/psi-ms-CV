@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.17
-date: 11:11:2026 13:00
-saved-by: Douwe Schulte
+data-version: 4.2.18
+date: 19:11:2026 10:10
+saved-by: Justin Sing
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -30339,7 +30339,15 @@ subset: core
 is_a: MS:1002347 ! PSM-level identification statistic
 relationship: has_domain MS:1002305 ! value between 0 and 1 inclusive
 relationship: has_order MS:1002109 ! lower score better
-relationship: has_value_type xsd:double ! The allowed value-type for this CV term[Term]
+relationship: has_value_type xsd:double ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004053
+name: JMod
+synonym: "JMOD" EXACT []
+def: "Software for joint modeling of mass spectra in multiplexed data-independent acquisition proteomics." [PSI:MS, DOI:10.1101/2025.05.22.655512, https://github.com/ParallelSquared/JMod]
+subset: core
+is_a: MS:1001456 ! analysis software
 
 [Term]
 id: MS:4000000
