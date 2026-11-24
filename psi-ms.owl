@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ms.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.17/ms.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ms/4.2.18/ms.owl"/>
         <oboInOwl:NamespaceIdRule>* MS:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:NamespaceIdRule>* PEFF:$sequence(7,0,9999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date>11:11:2026 13:00</oboInOwl:date>
+        <oboInOwl:date>19:11:2026 10:10</oboInOwl:date>
         <oboInOwl:default-namespace>MS</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:saved-by>Douwe Schulte</oboInOwl:saved-by>
+        <oboInOwl:saved-by>Justin Sing</oboInOwl:saved-by>
         <rdfs:comment>For any queries contact psidev-ms-vocab@lists.sourceforge.net</rdfs:comment>
         <rdfs:comment>GENERATED FILE, do not edit. This release is built by scripts/build_release_obo.py from psi-ms-core.obo and psi-ms-columns.obo-fragment. Edit psi-ms-core.obo instead.</rdfs:comment>
         <rdfs:comment>The chromatographic column models (MS:5000000-MS:5999999) are derived from the RepoRT column database, https://github.com/michaelwitting/RepoRT. See Kretschmer F, Harrieder EM, Hoffmann MA, Boecker S, Witting M. RepoRT: a comprehensive repository for small molecule retention times. Nat Methods. 2024;21(2):153-155. PMID:38191934, doi:10.1038/s41592-023-02143-z</rdfs:comment>
@@ -85649,6 +85649,28 @@
         <owl:annotatedTarget>Probability that the reported peptide ion is incorrect.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>DOI:10.1021/pr700739d</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PSI:PI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MS_1004053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MS_1004053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MS_1001456"/>
+        <obo:IAO_0000115>Software for joint modeling of mass spectra in multiplexed data-independent acquisition proteomics.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>JMOD</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>MS</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>MS:1004053</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ms#core"/>
+        <rdfs:label>JMod</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MS_1004053"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Software for joint modeling of mass spectra in multiplexed data-independent acquisition proteomics.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.1101/2025.05.22.655512</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PSI:MS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://github.com/ParallelSquared/JMod</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
