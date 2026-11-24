@@ -28,7 +28,7 @@ In order to submit a new term, please `fork` or make a new `branch` of this repo
 
 > If you're requesting multiple related terms, you can submit them in a single issue/pull request.
 
-Please keep in mind that when you change the psi-ms-core.obo file you must increase the version of the file, change the `date` and `data-version` headers, and add your name to the list of contributors. 
+Please keep in mind that when you change the psi-ms-core.obo file you must increase the version of the file, change the `date` and `data-version` headers, and set `saved-by` to your name. 
 
 ```obo
 format-version: 1.2
