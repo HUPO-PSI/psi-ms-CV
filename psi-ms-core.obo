@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 4.2.19
-date: 27:11:2026 18:59
+date: 27:11:2026 20:07
 saved-by: Yasin El Abiead
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
@@ -30378,6 +30378,16 @@ synonym: "stepped normalized collision energy" EXACT []
 is_a: MS:1000510 ! precursor activation attribute
 relationship: has_units UO:0000187 ! percent
 relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004057
+name: normalized AGC target
+def: "The AGC target expressed as a percentage of the instrument's standard AGC target for that type of scan. The number of charges that 100% corresponds to depends on the instrument and the scan type." [PSI:MS]
+subset: core
+synonym: "normalised AGC target" EXACT []
+is_a: MS:1000503 ! scan attribute
+relationship: has_units UO:0000187 ! percent
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
