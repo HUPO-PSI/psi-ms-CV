@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: 4.2.18
-date: 19:11:2026 10:10
-saved-by: Justin Sing
+data-version: 4.2.19
+date: 27:11:2026 20:07
+saved-by: Yasin El Abiead
 default-namespace: MS
 subsetdef: core "Core community curated PSI-MS controlled vocabulary"
 subsetdef: columns "PSI-MS Chromatographic column models (from RepoRT)"
@@ -30348,6 +30348,46 @@ synonym: "JMOD" EXACT []
 def: "Software for joint modeling of mass spectra in multiplexed data-independent acquisition proteomics." [PSI:MS, DOI:10.1101/2025.05.22.655512, https://github.com/ParallelSquared/JMod]
 subset: core
 is_a: MS:1001456 ! analysis software
+
+[Term]
+id: MS:1004054
+name: AGC target
+def: "The number of charges that automatic gain control (AGC) aims to accumulate in an ion trapping device before the ions are analyzed. Accumulation stops when this target is reached or when the maximum injection time has elapsed, whichever comes first." [PSI:MS]
+subset: core
+synonym: "automatic gain control target" EXACT []
+is_a: MS:1000503 ! scan attribute
+relationship: has_units UO:0000189 ! count unit
+relationship: has_value_type xsd:int ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004055
+name: collision energy steps
+def: "The set of collision energies applied to the precursor ions of a single spectrum, whose fragment ions are recorded together in that spectrum (stepped collision energy)." [PSI:MS]
+subset: core
+synonym: "stepped collision energy" EXACT []
+is_a: MS:1000510 ! precursor activation attribute
+relationship: has_units UO:0000266 ! electronvolt
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004056
+name: percent collision energy steps
+def: "The set of normalized collision energies, in percent, applied to the precursor ions of a single spectrum, whose fragment ions are recorded together in that spectrum (stepped normalized collision energy)." [PSI:MS]
+subset: core
+synonym: "stepped normalized collision energy" EXACT []
+is_a: MS:1000510 ! precursor activation attribute
+relationship: has_units UO:0000187 ! percent
+relationship: has_value_type MS:1002713 ! The allowed value-type for this CV term
+
+[Term]
+id: MS:1004057
+name: normalized AGC target
+def: "The AGC target expressed as a percentage of the instrument's standard AGC target for that type of scan. The number of charges that 100% corresponds to depends on the instrument and the scan type." [PSI:MS]
+subset: core
+synonym: "normalised AGC target" EXACT []
+is_a: MS:1000503 ! scan attribute
+relationship: has_units UO:0000187 ! percent
+relationship: has_value_type xsd:float ! The allowed value-type for this CV term
 
 [Term]
 id: MS:4000000
